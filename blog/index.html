@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical Blog - Omar LYAHYAI | Cybersecurity tutorials, homelab guides, and automation workflows">
+    <meta name="keywords" content="cybersecurity, homelab, proxmox, docker, automation, technical tutorials">
+    <meta name="author" content="Omar LYAHYAI">
+    
+    <title>Technical Blog - Omar LYAHYAI</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="blog.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Prism.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="index-fr.html" class="lang-toggle" aria-label="Switch language">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Blog Hero Section -->
+        <section class="blog-hero" role="region" aria-label="Blog introduction">
+            <div class="hero-background">
+                <div class="matrix-effect"></div>
+            </div>
+            <div class="container">
+                <div class="blog-hero-content">
+                    <h1 class="blog-hero-title">
+                        <span class="typing-effect">Technical Blog</span>
+                    </h1>
+                    <p class="blog-hero-subtitle">
+                        Cybersecurity tutorials, homelab guides, and automation workflows
+                    </p>
+                    <div class="blog-search">
+                        <div class="search-container">
+                            <input type="text" id="blogSearch" placeholder="Search articles..." class="search-input">
+                            <button class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Categories Section -->
+        <section class="categories section" role="region" aria-label="Blog categories">
+            <div class="container">
+                <h2 class="section-title">Categories</h2>
+                <p class="section-subtitle">Explore technical content by topic</p>
+                
+                <div class="categories-grid">
+                    <!-- Infrastructure Category -->
+                    <article class="category-card" data-category="infrastructure">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Infrastructure</h3>
+                            <p>Proxmox VE, virtualization, system administration, and hardware setup guides.</p>
+                            <div class="category-stats">
+                                <span class="article-count">6 articles (5 FR, 1 EN)</span>
+                                <span class="category-link">
+                                    <a href="infrastructure.html">View All <i class="fas fa-arrow-right"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Network Security Category -->
+                    <article class="category-card" data-category="network_security">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Network Security</h3>
+                            <p>Firewall configuration, SSL/TLS, reverse proxies, and security best practices.</p>
+                            <div class="category-stats">
+                                <span class="article-count">7 articles (3 FR, 4 EN)</span>
+                                <span class="category-link">
+                                    <a href="network_security.html">View All <i class="fas fa-arrow-right"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Automation & AI Category -->
+                    <article class="category-card" data-category="automation_ai">
+                        <div class="category-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Automation & AI</h3>
+                            <p>AI workflows, automation scripts, MCP integration, and intelligent systems.</p>
+                            <div class="category-stats">
+                                <span class="article-count">6 articles (2 FR, 4 EN)</span>
+                                <span class="category-link">
+                                    <a href="automation_ai.html">View All <i class="fas fa-arrow-right"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Docker Services Category -->
+                    <article class="category-card" data-category="docker_services">
+                        <div class="category-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Docker Services</h3>
+                            <p>Container orchestration, Docker Compose, service deployment, and troubleshooting.</p>
+                            <div class="category-stats">
+                                <span class="article-count">3 articles (0 FR, 3 EN)</span>
+                                <span class="category-link">
+                                    <a href="docker_services.html">View All <i class="fas fa-arrow-right"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Reference Category -->
+                    <article class="category-card" data-category="reference">
+                        <div class="category-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Reference</h3>
+                            <p>Quick guides, configuration references, and technical documentation.</p>
+                            <div class="category-stats">
+                                <span class="article-count">4 articles (0 FR, 4 EN)</span>
+                                <span class="category-link">
+                                    <a href="reference.html">View All <i class="fas fa-arrow-right"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Remote Access Category -->
+                    <article class="category-card" data-category="remote_access">
+                        <div class="category-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Remote Access</h3>
+                            <p>VPN solutions, tunneling, remote desktop, and secure access methods.</p>
+                            <div class="category-stats">
+                                <span class="article-count">3 articles (1 FR, 2 EN)</span>
+                                <span class="category-link">
+                                    <a href="remote_access.html">View All <i class="fas fa-arrow-right"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Articles Section -->
+        <section class="featured-articles section" role="region" aria-label="Featured articles">
+            <div class="container">
+                <h2 class="section-title">Featured Articles</h2>
+                <p class="section-subtitle">Hand-picked tutorials and guides</p>
+                
+                <div class="featured-grid">
+                    <!-- Featured Article 1 -->
+                    <article class="featured-card">
+                        <div class="featured-meta">
+                            <span class="featured-category">Infrastructure</span>
+                            <span class="featured-date"><i class="far fa-calendar"></i> Oct 2025</span>
+                        </div>
+                        <h3>Building the Homelab Foundation: Proxmox VE Installation and Initial Configuration</h3>
+                        <p>Complete guide to setting up Proxmox VE for virtualization, including network configuration, storage setup, and initial VM deployment.</p>
+                        <div class="featured-tags">
+                            <span class="tag">Proxmox</span>
+                            <span class="tag">Virtualization</span>
+                            <span class="tag">Homelab</span>
+                        </div>
+                        <a href="../en/infrastructure/building-homelab-foundation-proxmox.html" class="featured-link">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <!-- Featured Article 2 -->
+                    <article class="featured-card">
+                        <div class="featured-meta">
+                            <span class="featured-category">Security</span>
+                            <span class="featured-date"><i class="far fa-calendar"></i> Oct 2025</span>
+                        </div>
+                        <h3>Building a Secure Lab: Kali Linux and pfSense Deployment</h3>
+                        <p>Step-by-step guide to creating an isolated penetration testing environment with Kali Linux and pfSense firewall for security research.</p>
+                        <div class="featured-tags">
+                            <span class="tag">Kali Linux</span>
+                            <span class="tag">pfSense</span>
+                            <span class="tag">Security</span>
+                        </div>
+                         <a href="../fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html" class="featured-link">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <!-- Featured Article 3 -->
+                    <article class="featured-card">
+                        <div class="featured-meta">
+                            <span class="featured-category">Automation</span>
+                            <span class="featured-date"><i class="far fa-calendar"></i> Oct 2025</span>
+                        </div>
+                        <h3>My AI-Powered Workflow: Integration of MCP, Docker and N8N for Obsidian</h3>
+                        <p>How I automated my documentation workflow using AI-powered tools, containerization, and workflow automation for enhanced productivity.</p>
+                        <div class="featured-tags">
+                            <span class="tag">MCP</span>
+                            <span class="tag">N8N</span>
+                            <span class="tag">AI</span>
+                        </div>
+                        <a href="../en/automation_ai/ai-powered-workflow-mcp-docker-n8n.html" class="featured-link">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <!-- Featured Article 4 -->
+                    <article class="featured-card">
+                        <div class="featured-meta">
+                            <span class="featured-category">Docker</span>
+                            <span class="featured-date"><i class="far fa-calendar"></i> Oct 2025</span>
+                        </div>
+                        <h3>My Docker Symphony: Orchestrating Services in My Homelab</h3>
+                        <p>Learn how to orchestrate multiple services using Docker Compose for efficient homelab management and service deployment.</p>
+                        <div class="featured-tags">
+                            <span class="tag">Docker</span>
+                            <span class="tag">Compose</span>
+                            <span class="tag">Orchestration</span>
+                        </div>
+                        <a href="../en/docker_services/my-docker-symphony-orchestrating-services-in-my-homelab.html" class="featured-link">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recent Articles Section -->
+        <section class="recent-articles section" role="region" aria-label="Recent articles">
+            <div class="container">
+                <h2 class="section-title">Recent Articles</h2>
+                <p class="section-subtitle">Latest technical tutorials and experiences</p>
+                
+                <div class="recent-grid">
+                    <!-- Recent articles will be dynamically loaded here -->
+                    <div class="loading-placeholder">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading recent articles...</p>
+                    </div>
+                </div>
+                
+                <div class="recent-cta">
+                    <a href="#" class="btn btn-primary" id="loadMoreBtn">Load More Articles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity Enthusiast</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="index.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Omar LYAHYAI. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>

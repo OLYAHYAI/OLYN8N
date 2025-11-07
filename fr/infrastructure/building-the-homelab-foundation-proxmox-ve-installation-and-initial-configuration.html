@@ -1,0 +1,193 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <meta name="description" content="Construire les fondations de votre homelab : Installation et configuration initiale de Proxmox VE - Tutoriel et guide technique">
+    <meta name="keywords" content="homelab, cybersécurité, tutoriel">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Construire les fondations de votre homelab : Installation et configuration initiale de Proxmox VE | Blog technique d'Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+
+    <link rel="preconnect" href="https:fonts.googleapis.com">
+    <link rel="preconnect" href="https:fonts.gstatic.com"
+crossorigin>
+    <link href="https:fonts.googleapis.com/css2?family=Fira+
+Code:wght@400;500;700&family=Roboto:wght@300;400;
+700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.
+com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.
+com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../../index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="../../index.html#home"
+class="nav-link">Accueil</a></li>
+                    <li><a href="../../index.html#about"
+class="nav-link">À propos</a></li>
+                    <li><a href="../../index.html#projects"
+class="nav-link">Projets</a></li>
+                    <li><a href="../../index.html#skills"
+class="nav-link">Compétences</a></li>
+                    <li><a href="../../blog/index.html"
+class="nav-link active">Blog</a></li>
+                    <li><a href="../../index.html#contact"
+class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="../fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html" class="lang-toggle"
+aria-label="Changer de langue">
+                        <span
+class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region"
+aria-label="En-tête de l'article">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb"
+aria-label="Fil d'Ariane">
+                        <a href="../../index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i
+class="fas fa-chevron-right"></i></span>
+                        <a href="../../blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i
+class="fas fa-chevron-right"></i></span>
+                        <a href="../../blog/infrastructure.
+html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i
+class="fas fa-chevron-right"></i></span>
+                        <span>Construire les fondations de votre homelab : Installation et configuration initiale de Proxmox VE</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Construire les fondations de votre homelab : Installation et configuration initiale de Proxmox VE</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-07</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>1 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab, cybersécurité, tutoriel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region"
+aria-label="Contenu de l'article">
+            <div class="container">
+                <div class="article-body">
+                    <p>Contenu non défini</p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="../../index.
+html#home">Accueil</a></li>
+                        <li><a href="../../index.
+html#about">À propos</a></li>
+                        <li><a href="../../index.
+html#projects">Projets</a></li>
+                        <li><a href="../../blog/index.
+html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Me contacter</h4>
+                    <div class="social-links">
+                        <a href="https:github.com/OLYAHYAI"
+target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https:ma.linkedin.
+com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.
+</p>
+                <p>Conçu avec <i class="fas fa-heart"></i> et
+<i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut de page">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/prism/1.
+29.0/components/prism-core.min.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/prism/1.
+29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
+```

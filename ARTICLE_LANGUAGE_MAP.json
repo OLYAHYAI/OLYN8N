@@ -1,0 +1,15 @@
+{
+  "articles/en/infrastructure/building-homelab-foundation-proxmox.html": "articles/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+  "articles/en/automation_ai/my-ai-companion-deploying-the-modular-copilot-platform-mcp-server.html": "articles/fr/automation_ai/Mon-Compagnon-IA-:-Déploiement-du-Serveur-de-la-Plateforme-Modulaire-Copilot-(MCP).html",
+  "articles/en/automation_ai/the-quest-for-fluid-notes-my-obsidian-livesync-configuration-and-triumphs.html": "articles/fr/automation_ai/La-Quête-des-Notes-Fluides-:-Ma-Configuration-et-Mes-Succès-avec-Obsidian-LiveSync.html",
+  "articles/en/automation_ai/ai-powered-workflow-mcp-docker-n8n.html": "articles/fr/automation_ai/my-ai-powered-workflow-integration-of-mcp-docker-and-n8n-for-obsidian.html",
+  "articles/en/docker_services/my-docker-symphony-orchestrating-services-in-my-homelab.html": "articles/fr/docker_services/Ma-Symphonie-Docker-:-Orchestrer-les-Services-dans-Mon-Homelab.html",
+  "articles/en/docker_services/taming-docker-compose-resolving-undefined-volume-errors.html": "articles/fr/docker_services/Maîtriser-Docker-Compose-:-Résoudre-les-erreurs-de-volume-indéfini.html",
+  "articles/en/docker_services/docker-compose-chronicles-overcoming-image-download-challenges.html": "articles/fr/docker_services/Chroniques-Docker-Compose-:-Surmonter-les-défis-de-téléchargement-d'images.html",
+  "articles/en/network_security/the-digital-guardian-of-my-homelab-setting-up-a-secure-reverse-proxy-with-https.html": "articles/fr/network_security/Le-Gardien-Numérique-de-Mon-Homelab-:-Mise-en-place-d'un-Proxy-Inverse-Sécurisé-avec-HTTPS.html",
+  "articles/en/network_security/network-architecture-prompt-dns-tls-and-reverse-proxies.html": "articles/fr/network_security/Architecture-Réseau-:-DNS,-TLS-et-Proxies-Inverses.html",
+  "articles/en/network_security/ssl-certificate-configuration-prompt-securing-your-homelab.html": "articles/fr/network_security/Invite-de-configuration-de-certificat-SSL-:-Sécuriser-votre-Homelab.html",
+  "articles/en/remote_access/the-twingate-connection-mystery-untangling-authentication-failures.html": "articles/fr/remote_access/Le-mystère-de-la-connexion-Twingate-:-Démêler-les-échecs-d'authentification.html",
+  "articles/en/reference/navigating-my-homelab-essential-urls-and-access-points.html": "articles/fr/reference/Naviguer-dans-mon-Homelab-:-URL-essentielles-et-points-d'accès.html",
+  "articles/en/reference/tracing-my-homelab-journey-a-roadmap-to-self-hosted-services.html": "articles/fr/reference/Tracer-Mon-Parcours-Homelab-:-Une-Feuille-de-Route-vers-les-Services-Auto-Hébergés.html"
+}

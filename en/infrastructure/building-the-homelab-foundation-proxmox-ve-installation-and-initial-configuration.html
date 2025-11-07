@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <meta name="description" content="Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration - Technical
+tutorial and guide">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration | Omar LYAHYAI Technical Blog</title>
+
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+
+    <link rel="preconnect" href="https:fonts.googleapis.com">
+    <link rel="preconnect" href="https:fonts.gstatic.com"
+crossorigin>
+    <link href="https:fonts.googleapis.com/css2?family=Fira+
+Code:wght@400;500;700&family=Roboto:wght@300;400;
+700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.
+com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.
+com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Skip to main
+content</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main
+navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="../../index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle
+navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="../../index.html#home"
+class="nav-link">Home</a></li>
+                    <li><a href="../../index.html#about"
+class="nav-link">About</a></li>
+                    <li><a href="../../index.html#projects"
+class="nav-link">Projects</a></li>
+                    <li><a href="../../index.html#skills"
+class="nav-link">Skills</a></li>
+                    <li><a href="../../blog/index.html"
+class="nav-link active">Blog</a></li>
+                    <li><a href="../../index.html#contact"
+class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="../../fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html" class="lang-toggle"
+aria-label="Change language">
+                        <span
+class="lang-current">EN</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region"
+aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb"
+aria-label="Breadcrumb">
+                        <a href="../../index.html">Home</a>
+                        <span class="breadcrumb-separator"><i
+class="fas fa-chevron-right"></i></span>
+                        <a href="../../blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i
+class="fas fa-chevron-right"></i></span>
+                        <a href="../../blog/infrastructure.
+html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i
+class="fas fa-chevron-right"></i></span>
+                        <span>Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-07</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>5 min read</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region"
+aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+NAMING CONVENTION:
+- For English articles: your-article-title.md
+- For French articles:  your-article-title-fr.md
+
+The workflow will automatically:
+- Detect language from filename
+- Generate title from filename
+- Add current date
+- Clean YAML for Pandoc processing
+-->
+<h2 id="informations-générales">General Information</h2>
+<ul>
+<li><strong>User</strong> : F4BLOX</li>
+<li><strong>Server Machine</strong> : Lenovo ThinkCentre M920q
+<ul>
+<li>CPU : Intel i5-8500T</li>
+<li>RAM : 16 Go</li>
+<li>Primary Disk : SSD 512 Go</li>
+<li>Secondary Disk : HDD 250 Go</li>
+</ul></li>
+<li><strong>Proxmox Server IP Address</strong> : 10.10.10.254</li>
+</ul>
+<hr />
+<h2 id="connexion-à-linterface-web-proxmox">1. ✅ Connecting to the Proxmox Web Interface</h2>
+<ul>
+<li>Access via browser to <code>https://10.10.10.254:8006</code></li>
+<li>Credentials : root
+<ul>
+<li>Username : <code>root</code></li>
+<li>Domain : <code>pam</code></li>
+<li>Password : defined during installation</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="connexion-ethernet-entre-routeur-et-serveur">2. 🔌 Ethernet Connection Between Router and Server</h2>
+<ul>
+<li>Direct connection via Ethernet cable</li>
+<li>Manual IP configuration :
+<ul>
+<li>PC1 : <code>192.168.1.1</code></li>
+<li>PC2 : <code>192.168.1.254</code></li>
+<li>Netmask : <code>255.255.255.0</code></li>
+</ul></li>
+<li>Objective : direct communication between the two machines</li>
+</ul>
+<hr />
+<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Checking Wi-Fi from the Command Line</h2>
+<ul>
+<li>Commands used :
+<ul>
+<li><code>ip a</code> → list network interfaces</li>
+<li><code>lspci | grep -i network</code> → detect network cards</li>
+<li><code>iw dev</code> → Wi-Fi interfaces</li>
+<li><code>lsusb</code> → USB devices (Wi-Fi dongle)</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="changement-dadresse-ip-du-serveur-proxmox">4. 🌐 Changing the Proxmox Server IP Address</h2>
+<ul>
+<li><p>File modified : <code>/etc/network/interfaces</code></p></li>
+<li><p>Configuration example :</p>
+<pre><code>auto vmbr0
+iface vmbr0 inet static
+    address 10.10.10.254
+    netmask 255.255.255.0
+    gateway 192.168.1.1
+    bridge_ports enp3s0
+    bridge_stp off
+    bridge_fd 0</code></pre></li>
+<li><p>Restarting the network :
+<code>systemctl restart networking</code></p></li>
+</ul>
+<hr />
+<h2 id="utilisation-dune-image-iso-depuis-le-laptop">5. 📦 Using an ISO Image from the Laptop</h2>
+<ul>
+<li>Methods :
+<ul>
+<li>Upload via web interface :
+<code>Datacenter &gt; Node &gt; local &gt; Content &gt; Upload</code></li>
+<li>SCP :
+<code>scp fichier.iso root@10.10.10.254:/var/lib/vz/template/iso/</code></li>
+</ul></li>
+<li>Objective : create a VM with a custom ISO image</li>
+</ul>
+<hr />
+<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Choosing LLMs Suited for the Machine</h2>
+<ul>
+<li>Recommended models :
+<ul>
+<li>Mistral 7B Q4</li>
+<li>Phi-2</li>
+<li>Gemma 2B</li>
+</ul></li>
+<li>Compatible tools :
+<ul>
+<li><code>Ollama</code></li>
+<li><code>llama.cpp</code></li>
+<li><code>MCP</code> via Docker</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installing Docker +
+MCP + LLM</h2>
+<ul>
+<li><p>Docker :</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt install docker.io</span></code></pre></div></li>
+<li><p>MCP :</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 3000:3000 ghcr.io/jmorganca/mcp:latest</span></code></pre></div></li>
+<li><p>Ollama :</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div></li>
+</ul>
+<hr />
+<h2 id="outils-de-prise-de-notes-recommandés">8. 📝 Recommended Note-Taking Tools</h2>
+<ul>
+<li><strong>Obsidian</strong> : local, markdown, links between notes</li>
+<li><strong>Joplin</strong> : open-source, synchronizable</li>
+<li><strong>Logseq / Trilium</strong> : Docker possible</li>
+<li><strong>Notion</strong> : cloud, project management</li>
+<li><strong>Markdown + Git</strong> : versioning technical notes</li>
+</ul>
+<hr />
+<h2 id="choix-dun-os-pour-gérer-le-réseau">9. 🔐 Choosing an OS for Network Management</h2>
+<ul>
+<li><strong>pfSense</strong> : firewall, VPN, DHCP, DNS, VLAN</li>
+<li><strong>OPNsense</strong> : modern alternative</li>
+<li><strong>VyOS</strong> : advanced CLI</li>
+<li><strong>Ubuntu Server</strong> : customizable with network tools</li>
+</ul>
+<hr />
+<h2 id="surveillance-et-limitation-du-trafic-avec-pfsense">10. 📊 Monitoring and Traffic Limiting with pfSense</h2>
+<ul>
+<li><strong>Monitoring</strong> :
+<ul>
+<li>Traffic Graphs</li>
+<li>Packet Capture</li>
+<li>IDS/IPS (Snort, Suricata)</li>
+</ul></li>
+<li><strong>Limiting</strong> :
+<ul>
+<li>Traffic Shaping (pipes, queues)</li>
+<li>Firewall rules</li>
+<li>Proxy Squid + SquidGuard</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Using a 250 GB HDD</h2>
+<ul>
+<li><p><strong>Recommended usage</strong> :</p>
+<ul>
+<li>Backups</li>
+<li>Logs</li>
+<li>ISO / LLM templates</li>
+</ul></li>
+<li><p><strong>Formatting</strong> :</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mkfs.ext4</span> /dev/sdX1</span></code></pre></div></li>
+<li><p><strong>Mounting</strong> :</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> /mnt/hdd250</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mount</span> /dev/sdX1 /mnt/hdd250</span></code></pre></div></li>
+<li><p><strong>Adding in Proxmox</strong> :</p>
+<ul>
+<li>Interface :
+<code>Datacenter &gt; Storage &gt; Add &gt; Directory</code></li>
+<li>Path : <code>/mnt/hdd250</code></li>
+<li>Content : backups, ISO, templates</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="fin-de-session">🔚 End of Session</h2>
+<ul>
+<li>All steps are ready to be documented in Obsidian.</li>
+<li>Proxmox Server IP Address : <code>10.10.10.254</code></li>
+</ul>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity
+Enthusiast</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../../index.
+html#home">Home</a></li>
+                        <li><a href="../../index.
+html#about">About</a></li>
+                        <li><a href="../../index.
+html#projects">Projects</a></li>
+                        <li><a href="../../blog/index.
+html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https:github.com/OLYAHYAI"
+target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https:ma.linkedin.
+com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. All rights reserved.
+</p>
+                <p>Built with <i class="fas fa-heart"></i> and
+<i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/prism/1.
+29.0/components/prism-core.min.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/prism/1.
+29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

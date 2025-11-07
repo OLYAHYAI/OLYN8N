@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Omar LYAHYAI - Pentester Portfolio | My journey to become a cybersecurity professional">
+    <meta name="keywords" content="pentesting, cybersecurity, ethical hacking, security researcher, homelab">
+    <meta name="author" content="Omar LYAHYAI">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Omar LYAHYAI - Pentester Portfolio">
+    <meta property="og:description" content="My journey to become a pentester">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <title>Omar LYAHYAI - Pentester Portfolio</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="index-fr.html" class="lang-toggle" aria-label="Changer de langue">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" role="region" aria-label="Introduction">
+            <div class="hero-background">
+                <div class="matrix-effect"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="typing-effect">My Journey to Become a Pentester</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Cybersecurity Enthusiast | Ethical Hacker | Homelab Builder
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Get in Touch
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about section" role="region" aria-label="About me">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">
+                            I'm Omar LYAHYAI, a passionate cybersecurity enthusiast on a journey to become a professional penetration tester.
+                        </p>
+                        <p>
+                            My homelab serves as my playground for learning advanced infrastructure, security testing, and automation. 
+                            I specialize in building secure environments using Proxmox, Docker, pfSense, and various security tools.
+                        </p>
+                        <p>
+                            Through hands-on experience with Kali Linux, network security, and AI-powered automation workflows, 
+                            I'm developing the skills needed to identify and remediate security vulnerabilities in real-world systems.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-server"></i>
+                            <h3>50+</h3>
+                            <p>Technical Docs</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>10+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-code"></i>
+                            <h3>5+</h3>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="projects section" role="region" aria-label="Projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Hands-on experience with infrastructure, security, and automation</p>
+                
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+                    <button class="filter-btn" data-filter="security">Security</button>
+                    <button class="filter-btn" data-filter="automation">Automation</button>
+                    <button class="filter-btn" data-filter="docker">Docker</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project Card 1: Homelab -->
+                    <article class="project-card" data-category="infrastructure">
+                        <div class="project-image">
+                            <img src="assets/images/proxmox-homelab.jpg" alt="Proxmox Homelab Setup">
+                            <div class="project-overlay">
+                                <a href="articles/en/infrastructure/building-homelab-foundation-proxmox.html" class="btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Proxmox Homelab Foundation</h3>
+                            <p>Complete virtualization environment with Proxmox VE, network configuration, and VM management.</p>
+                            <div class="project-tags">
+                                <span class="tag">Proxmox</span>
+                                <span class="tag">Virtualization</span>
+                                <span class="tag">Networking</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 2: Security Lab -->
+                    <article class="project-card" data-category="security">
+                        <div class="project-image">
+                            <img src="assets/images/security-lab.jpg" alt="Security Lab Setup">
+                            <div class="project-overlay">
+                                <a href="articles/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html" class="btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Security Lab: Kali Linux & pfSense</h3>
+                            <p>Isolated penetration testing environment with Kali Linux and pfSense firewall for security research.</p>
+                            <div class="project-tags">
+                                <span class="tag">Kali Linux</span>
+                                <span class="tag">pfSense</span>
+                                <span class="tag">Security</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 3: Docker Services -->
+                    <article class="project-card" data-category="docker">
+                        <div class="project-image">
+                            <img src="assets/images/docker-services.jpg" alt="Docker Services">
+                            <div class="project-overlay">
+                                <a href="articles/en/docker_services/my-docker-symphony-orchestrating-services-in-my-homelab.html" class="btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Docker Service Orchestration</h3>
+                            <p>Containerized services using Docker Compose for efficient homelab management.</p>
+                            <div class="project-tags">
+                                <span class="tag">Docker</span>
+                                <span class="tag">Compose</span>
+                                <span class="tag">DevOps</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 4: AI Automation -->
+                    <article class="project-card" data-category="automation">
+                        <div class="project-image">
+                            <img src="assets/images/ai-automation.jpg" alt="AI Automation Workflow">
+                            <div class="project-overlay">
+                                <a href="articles/en/automation_ai/ai-powered-workflow-mcp-docker-n8n.html" class="btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI-Powered Workflow Automation</h3>
+                            <p>Integration of MCP, Docker, and N8n for intelligent documentation and workflow automation.</p>
+                            <div class="project-tags">
+                                <span class="tag">N8n</span>
+                                <span class="tag">AI</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="skills section" role="region" aria-label="Skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Infrastructure</h3>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Proxmox VE</span>
+                            <span class="skill-badge">Linux</span>
+                            <span class="skill-badge">Ubuntu</span>
+                            <span class="skill-badge">Networking</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-shield-alt"></i> Security</h3>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Kali Linux</span>
+                            <span class="skill-badge">pfSense</span>
+                            <span class="skill-badge">SSL/TLS</span>
+                            <span class="skill-badge">Penetration Testing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fab fa-docker"></i> Docker</h3>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Docker</span>
+                            <span class="skill-badge">Docker Compose</span>
+                            <span class="skill-badge">Container Orchestration</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-robot"></i> Automation & AI</h3>
+                        <div class="skill-badges">
+                            <span class="skill-badge">N8n</span>
+                            <span class="skill-badge">MCP</span>
+                            <span class="skill-badge">AI Integration</span>
+                            <span class="skill-badge">Workflow Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Section -->
+        <section id="blog" class="blog section" role="region" aria-label="Blog">
+            <div class="container">
+                <h2 class="section-title">Latest Articles</h2>
+                <p class="section-subtitle">Technical tutorials and experiences</p>
+                
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> Nov 2025</span>
+                            <span class="blog-category">Infrastructure</span>
+                        </div>
+                        <h3>Building the Homelab Foundation: Proxmox VE Installation</h3>
+                        <p>Complete guide to setting up Proxmox VE for virtualization and homelab management...</p>
+                        <a href="en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> Nov 2025</span>
+                            <span class="blog-category">Security</span>
+                        </div>
+                        <h3>Building a Secure Lab: Kali Linux and pfSense Deployment</h3>
+                        <p>Step-by-step guide to creating an isolated security testing environment...</p>
+                        <a href="en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> Nov 2025</span>
+                            <span class="blog-category">Automation</span>
+                        </div>
+                        <h3>AI-Powered Workflow: Integration of MCP, Docker and N8N</h3>
+                        <p>How I automated my documentation workflow using AI and modern tools...</p>
+                        <a href="en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+                
+                <div class="blog-cta">
+                    <a href="blog/index.html" class="btn btn-primary">View All Articles</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact section" role="region" aria-label="Contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's connect and discuss cybersecurity</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:contact@olyahyai.com">contact@olyahyai.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">github.com/OLYAHYAI</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">ma.linkedin.com/in/lyahyai-omar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity Enthusiast</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Omar LYAHYAI. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
