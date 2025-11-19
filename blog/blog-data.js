@@ -1,7 +1,7 @@
 const blogData = {
     "articles": [
         {
-            "id": "docker-networking-troubleshooting-container-communication",
+            "id": "troubleshooting-pfsense-web-interface-access",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -9,10 +9,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html"
+            "url": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html"
         },
         {
-            "id": "docker-networking-troubleshooting-container-communication",
+            "id": "troubleshooting-pfsense-web-interface-access",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -20,10 +20,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
+            "url": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html"
         },
         {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -31,10 +31,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+            "url": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html"
         },
         {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -42,10 +42,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+            "url": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html"
         },
         {
-            "id": "a-roadmap-to-self-hosted-services",
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -53,10 +53,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html"
+            "url": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html"
         },
         {
-            "id": "a-roadmap-to-self-hosted-services",
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -64,10 +64,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html"
+            "url": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html"
         },
         {
-            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "id": "setting-up-secure-reverse-proxy-https",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -75,10 +75,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
+            "url": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html"
         },
         {
-            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "id": "setting-up-secure-reverse-proxy-https",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -86,10 +86,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
+            "url": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html"
         },
         {
-            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "id": "building-secure-homelab-network-vlans-architecture",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -97,10 +97,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
+            "url": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html"
         },
         {
-            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "id": "building-secure-homelab-network-vlans-architecture",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -108,7 +108,7 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
+            "url": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html"
         }
     ],
     "categories": {
