@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mise en place d'un Reverse Proxy Https Sécurisé - Tutoriel et guide technique">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Mise en place d'un Reverse Proxy Https Sécurisé | Blog Technique de Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/infrastructure/setting-up-secure-reverse-proxy-https.html" class="lang-toggle" aria-label="Changer la langue">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Mise en place d'un Reverse Proxy Https Sécurisé</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Mise en place d'un Reverse Proxy Https Sécurisé</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>7 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1
+id="the-digital-guardian-of-my-homelab-setting-up-a-secure-reverse-proxy-with-https">Le
+Gardien Numérique de Mon Homelab : Mise en place d'un Reverse Proxy
+Sécurisé avec HTTPS</h1>
+<h2 id="goals">Objectifs</h2>
+<ul>
+<li>Accéder à tous vos services web internes (Proxmox, N8N et bases de
+données) de manière sécurisée via des domaines HTTPS en utilisant un
+reverse proxy.</li>
+<li>Utiliser Let’s Encrypt pour des certificats SSL gratuits et
+automatisés.</li>
+</ul>
+<h2 id="why-use-a-reverse-proxy">Pourquoi utiliser un Reverse Proxy ?</h2>
+<p>Un reverse proxy agit comme une passerelle centralisée vers les
+services de votre homelab, offrant plusieurs avantages cruciaux :</p>
+<ul>
+<li><strong>Gestion SSL Unifiée</strong>: Point unique pour la gestion
+des certificats</li>
+<li><strong>Couche de Sécurité</strong>: Protection contre l'exposition
+directe des services</li>
+<li><strong>Domaines Personnalisés</strong>: URL propres au lieu de
+combinaisons IP:PORT</li>
+<li><strong>Équilibrage de Charge</strong>: Distribuer le trafic sur
+plusieurs serveurs backend</li>
+</ul>
+<h2 id="architecture-overview">Aperçu de l'Architecture</h2>
+<pre><code>Internet/LAN
+    ↓
+pfSense Firewall
+    ↓
+Nginx Proxy Manager (Reverse Proxy)
+    ↓
+├── Proxmox (192.168.x.x:8006)
+├── n8n (192.168.x.x:5678)
+├── Databases (192.168.x.x:XXXX)
+└── Other Services</code></pre>
+<h2 id="step-1-deploy-reverse-proxy-vmcontainer">Étape 1 : Déployer la
+VM/Conteneur du Reverse Proxy</h2>
+<h3 id="option-a-lightweight-vm">Option A : VM Légère</h3>
+<ul>
+<li>Créer une nouvelle VM sur Proxmox (Debian/Ubuntu recommandé)</li>
+<li>Allouer des ressources minimales : 1 CPU, 2 Go de RAM, 10 Go de
+stockage</li>
+<li>Installer Docker et Docker Compose</li>
+</ul>
+<h3 id="option-b-lxc-container-recommended">Option B : Conteneur LXC
+(Recommandé)</h3>
+<ul>
+<li>Utiliser les scripts d'assistance Proxmox pour un déploiement plus
+rapide</li>
+<li>Utilisation des ressources plus efficace</li>
+<li>Gestion plus simple</li>
+</ul>
+<h3 id="install-docker-and-docker-compose">Installer Docker et Docker
+Compose</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Update system</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade <span class="at">-y</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Docker</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://get.docker.com <span class="at">-o</span> get-docker.sh</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sh get-docker.sh</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Docker Compose</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install docker-compose <span class="at">-y</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Add user to docker group</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-aG</span> docker <span class="va">$USER</span></span></code></pre></div>
+<h2 id="step-2-install-nginx-proxy-manager">Étape 2 : Installer Nginx
+Proxy Manager</h2>
+<h3 id="docker-compose-configuration">Configuration Docker Compose</h3>
+<p>Créer <code>docker-compose.yml</code>:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3&#39;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">app</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;jc21/nginx-proxy-manager:latest&#39;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> nginx-proxy-manager</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&#39;80:80&#39;</span><span class="co">      # HTTP</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&#39;81:81&#39;</span><span class="co">      # Admin UI</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&#39;443:443&#39;</span><span class="co">    # HTTPS</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">DB_MYSQL_HOST</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;db&quot;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">DB_MYSQL_PORT</span><span class="kw">:</span><span class="at"> </span><span class="dv">3306</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">DB_MYSQL_USER</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;npm&quot;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">DB_MYSQL_PASSWORD</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;npm&quot;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">DB_MYSQL_NAME</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;npm&quot;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./data:/data</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./letsencrypt:/etc/letsencrypt</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">db</span><span class="kw">:</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;jc21/mariadb-aria:latest&#39;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> npm-database</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">MYSQL_ROOT_PASSWORD</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;npm&#39;</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">MYSQL_DATABASE</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;npm&#39;</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">MYSQL_USER</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;npm&#39;</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">MYSQL_PASSWORD</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;npm&#39;</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./data/mysql:/var/lib/mysql</span></span></code></pre></div>
+<h3 id="launch-nginx-proxy-manager">Lancer Nginx Proxy Manager</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span></code></pre></div>
+<h3 id="access-admin-ui">Accéder à l'Interface d'Administration</h3>
+<ul>
+<li>Naviguer vers : <code>http://&lt;proxy-vm-ip&gt;:81</code></li>
+<li>Identifiants par défaut :
+<ul>
+<li>E-mail : <code>admin@example.com</code></li>
+<li>Mot de passe : <code>changeme</code></li>
+</ul></li>
+<li><strong>Changez immédiatement ces identifiants après la première
+connexion !</strong></li>
+</ul>
+<h2 id="step-3-configure-internal-dns">Étape 3 : Configurer le DNS
+Interne</h2>
+<h3 id="using-pfsense-dns-resolver">Utilisation du Résolveur DNS
+pfSense</h3>
+<ol type="1">
+<li>Naviguer vers <strong>Services &gt; DNS Resolver</strong></li>
+<li>Activer le DNS Resolver s'il n'est pas déjà activé</li>
+<li>Sous <strong>Host Overrides</strong>, ajouter des entrées :
+<ul>
+<li><strong>Host</strong>: <code>proxmox</code>,
+<strong>Domain</strong>: <code>lab</code>, <strong>IP</strong>:
+<code>&lt;proxy-ip&gt;</code></li>
+<li><strong>Host</strong>: <code>n8n</code>,
+<strong>Domain</strong>: <code>lab</code>, <strong>IP</strong>:
+<code>&lt;proxy-ip&gt;</code></li>
+<li><strong>Host</strong>: <code>db</code>, <strong>Domain</strong>:
+<code>lab</code>, <strong>IP</strong>:
+<code>&lt;proxy-ip&gt;</code></li>
+</ul></li>
+</ol>
+<h3 id="alternative-local-hosts-file">Alternative : Fichier Hosts Local</h3>
+<p>À des fins de test, modifiez votre fichier local <code>/etc/hosts</code>:</p>
+<pre><code>&lt;proxy-ip&gt;  proxmox.lab
+&lt;proxy-ip&gt;  n8n.lab
+&lt;proxy-ip&gt;  db.lab</code></pre>
+<h2 id="step-4-add-services-as-proxy-hosts">Étape 4 : Ajouter des
+Services comme Hôtes Proxy</h2>
+<h3 id="in-nginx-proxy-manager-ui">Dans l'Interface Utilisateur de Nginx
+Proxy Manager</h3>
+<ol type="1">
+<li>Cliquer sur <strong>“Proxy Hosts”</strong> → <strong>“Add Proxy
+Host”</strong> (Ajouter Hôte Proxy)</li>
+<li><strong>Onglet Détails</strong>:
+<ul>
+<li><strong>Noms de Domaine</strong>: <code>n8n.lab</code></li>
+<li><strong>Schéma</strong>: <code>http</code></li>
+<li><strong>Nom d'hôte/IP de Redirection</strong>:
+<code>&lt;n8n-container-ip&gt;</code></li>
+<li><strong>Port de Redirection</strong>: <code>5678</code></li>
+<li><strong>Bloquer les Exploits Courants</strong>: ✓</li>
+<li><strong>Support Websockets</strong>: ✓ (important pour N8N)</li>
+</ul></li>
+<li>Répéter pour les autres services :
+<ul>
+<li>Proxmox: Port <code>8006</code>, Schéma <code>https</code></li>
+<li>Bases de données: Port variable, Schéma <code>http</code></li>
+</ul></li>
+</ol>
+<h2 id="step-5-request-ssl-certificates">Étape 5 : Demander des
+Certificats SSL</h2>
+<h3 id="enable-lets-encrypt">Activer Let’s Encrypt</h3>
+<ol type="1">
+<li>Dans l'entrée Hôte Proxy, allez à l'<strong>Onglet SSL</strong></li>
+<li>Sélectionner <strong>“Request a new SSL Certificate”</strong>
+(Demander un nouveau Certificat SSL)</li>
+<li>Options:
+<ul>
+<li><strong>Forcer SSL</strong>: ✓</li>
+<li><strong>Support HTTP/2</strong>: ✓</li>
+<li><strong>HSTS Activé</strong>: ✓ (recommandé)</li>
+<li><strong>E-mail pour Let’s Encrypt</strong>: Votre e-mail</li>
+</ul></li>
+<li>Cliquer sur <strong>Enregistrer</strong></li>
+</ol>
+<p>Let’s Encrypt va automatiquement: - Générer le certificat SSL -
+Configurer HTTPS - Configurer le renouvellement automatique (tous les 90
+jours)</p>
+<h3 id="dns-challenge-for-wildcard-certificates">Défi DNS (Pour les
+Certificats Wildcard)</h3>
+<p>Si vous possédez un domaine et souhaitez <code>*.yourdomain.com</code>:</p>
+<ol type="1">
+<li>Utiliser la méthode du défi DNS</li>
+<li>Configurer les identifiants du fournisseur DNS dans NPM</li>
+<li>Demander un certificat wildcard : <code>*.yourdomain.com</code></li>
+</ol>
+<h2 id="step-6-open-port-443-in-firewall">Étape 6 : Ouvrir le Port 443
+dans le Pare-feu</h2>
+<h3 id="pfsense-configuration">Configuration pfSense</h3>
+<ol type="1">
+<li>Naviguer vers <strong>Firewall &gt; NAT &gt; Port
+Forward</strong></li>
+<li>Créer une règle :
+<ul>
+<li><strong>Interface</strong>: WAN</li>
+<li><strong>Protocole</strong>: TCP</li>
+<li><strong>Plage de Ports de Destination</strong>: 443</li>
+<li><strong>IP Cible de Redirection</strong>:
+<code>&lt;proxy-vm-ip&gt;</code></li>
+<li><strong>Port Cible de Redirection</strong>: 443</li>
+<li><strong>Description</strong>: Reverse Proxy HTTPS</li>
+</ul></li>
+<li>Créer la règle de pare-feu correspondante si nécessaire</li>
+</ol>
+<h3 id="vmcontainer-firewall">Pare-feu VM/Conteneur</h3>
+<p>Si vous utilisez UFW:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 80/tcp</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 443/tcp</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 81/tcp  <span class="co"># Admin UI (restrict to LAN only!)</span></span></code></pre></div>
+<h2 id="step-7-test-access">Étape 7 : Tester l'Accès</h2>
+<h3 id="internal-testing">Test Interne</h3>
+<p>Depuis votre LAN:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-k</span> https://n8n.lab</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-k</span> https://proxmox.lab:8006</span></code></pre></div>
+<h3 id="browser-testing">Test via Navigateur</h3>
+<ol type="1">
+<li>Ouvrir le navigateur</li>
+<li>Naviguer vers <code>https://n8n.lab</code></li>
+<li>Vérifier :
+<ul>
+<li>✅ Certificat SSL valide (cadenas vert)</li>
+<li>✅ Le service se charge correctement</li>
+<li>✅ Aucun avertissement de certificat</li>
+</ul></li>
+</ol>
+<h2 id="security-hardening">Durcissement de la Sécurité</h2>
+<h3 id="restrict-admin-ui-access">Restreindre l'Accès à l'Interface
+d'Administration</h3>
+<ol type="1">
+<li><p>Dans Nginx Proxy Manager :</p>
+<ul>
+<li><strong>Access Lists</strong> (Listes d'Accès) → Créer nouveau</li>
+<li><strong>Autorisation</strong>: Exiger nom d'utilisateur/mot de
+passe</li>
+<li>Appliquer à l'hôte proxy de l'interface admin</li>
+</ul></li>
+<li><p>Règles de pare-feu :</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Allow admin UI only from LAN</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw deny 81/tcp</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow from 192.168.0.0/16 to any port 81</span></code></pre></div></li>
+</ol>
+<h3 id="enable-fail2ban">Activer Fail2Ban</h3>
+<p>Protéger contre les attaques par force brute :</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install fail2ban <span class="at">-y</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create NPM filter</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/fail2ban/filter.d/npm.conf</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode ini"><code class="sourceCode ini"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[Definition]</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">failregex </span><span class="ot">=</span><span class="st"> ^&lt;HOST&gt; .* &quot;(GET|POST|HEAD).*HTTP.*&quot; (4|5)\d\d</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">ignoreregex </span><span class="ot">=</span></span></code></pre></div>
+<h2 id="monitoring-and-maintenance">Surveillance et Maintenance</h2>
+<h3 id="check-certificate-expiry">Vérifier l'Expiration du Certificat</h3>
+<p>Nginx Proxy Manager renouvelle automatiquement les certificats 30
+jours avant leur expiration.</p>
+<p>Vérifier dans l'interface utilisateur : - <strong>SSL
+Certificates</strong> (Certificats SSL) → Vérifier les dates
+d'expiration</p>
+<h3 id="log-monitoring">Surveillance des Logs</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View NPM logs</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs <span class="at">-f</span> nginx-proxy-manager</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Access logs location</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ./data/logs</span></code></pre></div>
+<h3 id="performance-monitoring">Surveillance des Performances</h3>
+<p>Ajouter la surveillance avec : - Prometheus + Grafana - Uptime Kuma
+pour la disponibilité des services</p>
+<h2 id="common-issues-and-solutions">Problèmes Courants et Solutions</h2>
+<h3 id="issue-1-certificate-request-fails">Problème 1 : Échec de la
+Demande de Certificat</h3>
+<p><strong>Problème</strong>: Le défi Let’s Encrypt échoue</p>
+<p><strong>Solution</strong>: - Vérifier que le port 80 est accessible
+depuis internet - Vérifier la résolution DNS - Essayer le défi HTTP au
+lieu du DNS</p>
+<h3 id="issue-2-websocket-connection-fails">Problème 2 : Échec de la
+Connexion WebSocket</h3>
+<p><strong>Problème</strong>: Les fonctionnalités en temps réel ne
+fonctionnent pas (N8N, console Proxmox)</p>
+<p><strong>Solution</strong>: - Activer <strong>Websockets
+Support</strong> dans l'hôte proxy - Ajouter une configuration Nginx
+personnalisée:
+<code>nginx   proxy_set_header Upgrade $http_upgrade;   proxy_set_header Connection "upgrade";</code></p>
+<h3 id="issue-3-proxmox-webui-access-denied">Problème 3 : Accès au WebUI
+Proxmox Refusé</h3>
+<p><strong>Problème</strong>: Impossible d'accéder à Proxmox via le
+proxy</p>
+<p><strong>Solution</strong>: - Définir le <strong>Forward
+Scheme</strong> sur <code>https</code> - Ajouter des en-têtes
+personnalisés:
+<code>nginx   proxy_set_header Host $host;   proxy_set_header X-Real-IP $remote_addr;</code></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>La mise en place d'un reverse proxy avec Nginx Proxy Manager offre un
+accès centralisé et sécurisé à tous les services de votre homelab. La
+combinaison de certificats SSL automatisés, de domaines personnalisés et
+d'une gestion unifiée crée une infrastructure professionnelle à la fois
+sécurisée et facile à maintenir.</p>
+<p>Cette configuration sert de gardien numérique à votre homelab,
+protégeant les services tout en offrant un accès pratique. Avec une
+configuration adéquate et un durcissement de la sécurité, vous pouvez
+exposer certains services à Internet en toute sécurité tout en maintenant
+une protection robuste contre les accès non autorisés.</p>
+<p><em>Rappel : La sécurité est un processus continu. Mettez
+régulièrement à jour votre reverse proxy, surveillez les journaux et
+examinez les schémas d'accès.</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connecter</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

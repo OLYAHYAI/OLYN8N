@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dépannage de l'accès à l'interface Web de pfSense - Tutoriel et guide technique">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Dépannage de l'accès à l'interface Web de pfSense | Blog Technique d'Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html" class="lang-toggle" aria-label="Changer la langue">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Dépannage de l'accès à l'interface Web de pfSense</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Dépannage de l'accès à l'interface Web de pfSense</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>8 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1
+id="troubleshooting-pfsense-web-interface-access-a-step-by-step-guide">Dépannage
+de l'accès à l'interface Web de pfSense : Un guide étape par étape</h1>
+<h2 id="objective">Objectif</h2>
+<p>Accéder à l'interface Web de pfSense via l'interface WAN (par exemple,
+192.168.11.253) depuis un poste client (par exemple, 192.168.11.250).
+C'est une exigence courante lorsque pfSense est déployé en tant que VM
+ou lorsque vous avez besoin d'un accès de gestion depuis un segment
+réseau spécifique.</p>
+<h2 id="problem-overview">Aperçu du Problème</h2>
+<p>Par défaut, pfSense bloque l'accès à son interface Web depuis le côté
+WAN pour des raisons de sécurité. Ce tutoriel montre comment activer cet
+accès en toute sécurité si nécessaire.</p>
+<h2 id="symptoms">Symptômes</h2>
+<p><strong>Indicateurs d'erreur courants :</strong> - Impossible
+d'accéder à <code>https://192.168.11.253</code> depuis le client - Délai
+d'attente de connexion lors de la navigation vers l'IP WAN de pfSense -
+Les journaux du pare-feu affichent des connexions bloquées</p>
+<p><strong>Exemple d'entrée de journal :</strong></p>
+<pre><code>block in on em0 from 192.168.11.250 to 192.168.11.253 port 443</code></pre>
+<h2 id="security-warning">Avertissement de Sécurité</h2>
+<p>⚠️ <strong>Important :</strong> Autoriser l'accès WAN à l'interface
+graphique de pfSense est un risque de sécurité. N'activez cette option
+que temporairement pour le dépannage ou lorsque cela est absolument
+nécessaire. Restreignez toujours l'accès à des adresses IP spécifiques
+de confiance.</p>
+<h2 id="troubleshooting-steps">Étapes de Dépannage</h2>
+<h3 id="step-1-verify-gui-service-is-running">Étape 1 : Vérifier que le
+service de l'interface graphique est en cours d'exécution</h3>
+<p>Accédez à la console pfSense (via accès physique, IPMI ou console
+Proxmox) :</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pfSense console menu</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Option</span> 11<span class="er">)</span> <span class="ex">Restart</span> webConfigurator</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Wait for service to restart</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify it&#39;s listening</span></span></code></pre></div>
+<p><strong>Sortie Attendue :</strong></p>
+<pre><code>Restarting webConfigurator... done.</code></pre>
+<h3 id="step-2-verify-wan-interface-configuration">Étape 2 : Vérifier la
+Configuration de l'Interface WAN</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Option 8) Shell</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> a</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or from pfSense console menu:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Option 2) Set interface(s) IP address</span></span></code></pre></div>
+<p><strong>Vérifiez :</strong> - L'interface WAN (em0, vtnet0, etc.) a
+la bonne adresse IP - L'IP doit être <code>192.168.11.253</code> (ou
+votre IP WAN attendue) - L'état de l'interface affiche « UP » (Actif)</p>
+<h3 id="step-3-test-with-firewall-temporarily-disabled">Étape 3 : Tester
+avec le Pare-feu Temporairement Désactivé</h3>
+<p>⚠️ <strong>AVERTISSEMENT :</strong> Uniquement à des fins de test !</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disable pfSense firewall (from console shell)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pfctl</span> <span class="at">-d</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test access from client</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Open browser: https://192.168.11.253</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-enable firewall immediately after test</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">pfctl</span> <span class="at">-e</span></span></code></pre></div>
+<p><strong>Si cela fonctionne :</strong> Le problème provient des règles
+de pare-feu (passez à l'Étape 4) <strong>Si cela ne fonctionne pas :</strong>
+Le problème concerne le service Web ou la connectivité réseau</p>
+<h3 id="step-4-add-temporary-firewall-rule-via-shell">Étape 4 : Ajouter
+une Règle de Pare-feu Temporaire via le Shell</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access pfSense shell (Option 8)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add temporary pass rule for your IP</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;pass in quick on em0 proto tcp from 192.168.11.250 to 192.168.11.253 port 443 keep state&quot;</span> <span class="kw">|</span> <span class="ex">pfctl</span> <span class="at">-f</span> <span class="at">-</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace &#39;em0&#39; with your actual WAN interface name</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace IP addresses with your actual values</span></span></code></pre></div>
+<p><strong>Testez à nouveau l'accès :</strong>
+<code>https://192.168.11.253</code></p>
+<p><strong>Si succès :</strong> La règle de pare-feu est la solution,
+rendez-la persistante (Étape 5)</p>
+<h3 id="step-5-create-persistent-firewall-rule-via-web-interface">Étape
+5 : Créer une Règle de Pare-feu Persistante via l'Interface Web</h3>
+<p>Une fois que vous pouvez accéder à l'interface Web :</p>
+<ol type="1">
+<li><p><strong>Naviguer vers les Règles de Pare-feu :</strong></p>
+<pre><code>Firewall → Rules → WAN → Add (bouton flèche vers le haut)</code></pre></li>
+<li><p><strong>Configurer la Règle :</strong></p>
+<ul>
+<li><strong>Action :</strong> Pass (Autoriser)</li>
+<li><strong>Interface :</strong> WAN</li>
+<li><strong>Famille d'adresses :</strong> IPv4</li>
+<li><strong>Protocole :</strong> TCP</li>
+<li><strong>Source :</strong>
+<ul>
+<li>Type : Hôte unique ou alias</li>
+<li>Adresse : <code>192.168.11.250</code> (votre PC de gestion)</li>
+</ul></li>
+<li><strong>Destination :</strong>
+<ul>
+<li>Type : Adresse WAN</li>
+<li>Port : HTTPS (443)</li>
+</ul></li>
+<li><strong>Description :</strong> Autoriser l'accès à l'interface
+graphique depuis le PC de gestion</li>
+<li><strong>Journalisation (Log) :</strong> ✓ (optionnel, pour la
+surveillance)</li>
+</ul></li>
+<li><p><strong>Options Avancées (Recommandées) :</strong></p>
+<ul>
+<li>Gateway : <em>default</em></li>
+<li>Schedule : Aucun (ou créez un calendrier pour un accès basé sur le
+temps)</li>
+</ul></li>
+<li><p><strong>Sauvegarder et Appliquer les Changements</strong></p></li>
+</ol>
+<h3 id="step-6-verify-web-service-is-listening">Étape 6 : Vérifier que
+le Service Web Écoute</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From pfSense shell</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sockstat</span> <span class="at">-4</span> <span class="kw">|</span> <span class="fu">grep</span> :443</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output:</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># nginx    12345 root    6u  IPv4 0x... TCP *:443 (LISTEN)</span></span></code></pre></div>
+<p><strong>Si le service n'écoute pas :</strong></p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Restart web service</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/etc/rc.restart_webgui</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or from console menu</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Option</span> 11<span class="er">)</span> <span class="ex">Restart</span> webConfigurator</span></code></pre></div>
+<h2 id="default-credentials">Identifiants par Défaut</h2>
+<p><strong>Identifiants par défaut pfSense :</strong> -
+<strong>Nom d'utilisateur :</strong> <code>admin</code> -
+<strong>Mot de passe :</strong> <code>pfsense</code></p>
+<p><strong>Si les identifiants sont oubliés :</strong></p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From pfSense console</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Option</span> 3<span class="er">)</span> <span class="ex">Reset</span> webConfigurator password</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Follow prompts to reset admin password</span></span></code></pre></div>
+<h2 id="security-best-practices">Meilleures Pratiques de Sécurité</h2>
+<h3 id="restrict-access-by-ip-address">1. Restreindre l'Accès par Adresse
+IP</h3>
+<p>Autorisez uniquement des adresses IP de confiance spécifiques à
+accéder à l'interface WAN :</p>
+<pre><code>Firewall → Rules → WAN
+Source: Single host → 192.168.11.250
+NOT: Any (insecure!)</code></pre>
+<h3 id="use-ssh-key-authentication">2. Utiliser l'Authentification par
+Clé SSH</h3>
+<p>Au lieu de l'accès Web, envisagez le SSH :</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From client</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> admin@192.168.11.253</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># pfSense console appears</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># More secure than web interface</span></span></code></pre></div>
+<h3 id="implement-multi-factor-authentication">3. Mettre en Œuvre
+l'Authentification Multi-Facteurs (MFA)</h3>
+<pre><code>System → User Manager → Users → admin
+→ Edit → &quot;2FA&quot; section
+→ Enable Google Authenticator or other TOTP</code></pre>
+<h3 id="change-default-port">4. Changer le Port par Défaut</h3>
+<pre><code>System → Advanced → Admin Access
+HTTPS Port: 8443 (instead of 443)
+
+# Access via: https://192.168.11.253:8443</code></pre>
+<h3 id="use-aliases-for-management">5. Utiliser des Alias pour la
+Gestion</h3>
+<p>Créez un alias de pare-feu pour les adresses IP de gestion :</p>
+<pre><code>Firewall → Aliases → IP
+Name: mgmt_workstations
+Type: Host(s)
+IP: 192.168.11.250
+Description: Authorized management PCs
+
+# Use in firewall rules instead of individual IPs</code></pre>
+<h2 id="advanced-troubleshooting">Dépannage Avancé</h2>
+<h3 id="issue-1-rule-added-but-still-blocked">Problème 1 : Règle Ajoutée
+mais Toujours Bloquée</h3>
+<p><strong>Vérifier l'ordre des règles :</strong> - Les règles sont
+traitées de haut en bas - Assurez-vous que la règle d'autorisation (pass
+rule) est AU-DESSUS de toute règle de blocage - Déplacez la règle vers
+le haut si nécessaire</p>
+<p><strong>Vérifier que la règle est sur la bonne interface :</strong> -
+Les règles WAN s'appliquent au trafic entrant dans l'interface WAN - Les
+règles LAN s'appliquent au trafic entrant dans l'interface LAN</p>
+<h3 id="issue-2-https-certificate-warnings">Problème 2 : Avertissements
+de Certificat HTTPS</h3>
+<p><strong>Problème :</strong> Le navigateur affiche un avertissement de
+sécurité</p>
+<p><strong>Solution :</strong></p>
+<pre><code>System → Cert Manager → Certificates
+→ Add (create self-signed certificate)
+
+System → Advanced → Admin Access
+→ SSL Certificate: Select your certificate</code></pre>
+<h3 id="issue-3-connection-timeout-not-blocked">Problème 3 : Délai
+d'Attente de Connexion (Non Bloqué)</h3>
+<p><strong>Causes possibles :</strong> 1. Problèmes de MTU 2. Routage
+asymétrique 3. Table d'états pleine</p>
+<p><strong>Solutions :</strong></p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check state table</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pfctl</span> <span class="at">-s</span> state <span class="kw">|</span> <span class="fu">grep</span> 192.168.11.250</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Increase state table size</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">System</span> → Advanced → Firewall <span class="kw">&amp;</span> <span class="ex">NAT</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Maximum</span> table entries: 200000 <span class="er">(</span><span class="ex">default:</span> 400000<span class="kw">)</span></span></code></pre></div>
+<h3 id="issue-4-access-works-then-stops">Problème 4 : L'Accès Fonctionne
+Puis S'Arrête</h3>
+<p><strong>Vérifier le délai d'expiration de la session :</strong></p>
+<pre><code>System → Advanced → Admin Access
+Session timeout: 240 (default, in minutes)
+
+# Increase if needed for long admin sessions</code></pre>
+<h2 id="monitoring-and-logging">Surveillance et Journalisation</h2>
+<h3 id="enable-logging-for-wan-access">Activer la Journalisation pour
+l'Accès WAN</h3>
+<pre><code>Firewall → Rules → WAN → Edit rule
+Log packets matched: ✓
+
+# View logs:
+Status → System Logs → Firewall
+Filter by: WAN, 443, your IP</code></pre>
+<h3 id="create-alert-for-wan-access">Créer une Alerte pour l'Accès WAN</h3>
+<pre><code>System → Advanced → Notifications
+→ Add notification
+Type: Email
+Event: Firewall block/pass on WAN
+
+# Get notified of access attempts</code></pre>
+<h2 id="alternative-access-methods">Méthodes d'Accès Alternatives</h2>
+<h3 id="option-1-vpn-access">Option 1 : Accès VPN</h3>
+<p>Plus sécurisé que l'accès direct par WAN :</p>
+<pre><code>VPN → OpenVPN → Wizards
+→ Configure OpenVPN server
+→ Connect via VPN first
+→ Access GUI via LAN interface (more secure)</code></pre>
+<h3 id="option-2-cloudflare-tunnel">Option 2 : Tunnel Cloudflare</h3>
+<p>Accès Zero-Trust sans exposition des ports :</p>
+<pre><code>Install cloudflared on pfSense
+Create tunnel to pfSense GUI
+Access via: https://pfsense.yourdomain.com
+No firewall rules needed on WAN</code></pre>
+<h3 id="option-3-ssh-tunneling">Option 3 : Tunneling SSH</h3>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create SSH tunnel from client</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> 8443:localhost:443 admin@192.168.11.253</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Access GUI via tunnel</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="ex">https://localhost:8443</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># More secure than direct web access</span></span></code></pre></div>
+<h2 id="complete-checklist">Liste de Contrôle Complète</h2>
+<p><strong>Étapes de Diagnostic :</strong> - [ ] Vérifier que le service
+web pfSense est en cours d'exécution - [ ] Confirmer que l'interface
+WAN possède la bonne IP - [ ] Tester avec le pare-feu temporairement
+désactivé - [ ] Vérifier les journaux du pare-feu pour les connexions
+bloquées - [ ] Vérifier que le service écoute sur le port 443</p>
+<p><strong>Étapes de Sécurité :</strong> - [ ] Restreindre l'IP source
+au poste de gestion uniquement - [ ] Utiliser un mot de passe fort (pas
+celui par défaut) - [ ] Activer la 2FA pour le compte admin - [ ]
+Envisager d'utiliser un port non standard - [ ] Activer la journalisation
+des tentatives d'accès - [ ] Examiner régulièrement les journaux du
+pare-feu</p>
+<p><strong>Post-Configuration :</strong> - [ ] Tester l'accès depuis
+l'IP autorisée - [ ] Vérifier que l'accès est refusé depuis d'autres IPs
+- [ ] Documenter la règle de pare-feu dans votre wiki homelab - [ ]
+Mettre un rappel dans le calendrier pour réviser les règles d'accès
+mensuellement</p>
+<h2 id="additional-notes">Notes Additionnelles</h2>
+<h3 id="why-pfsense-blocks-wan-access-by-default">Pourquoi pfSense Bloque
+l'Accès WAN par Défaut</h3>
+<p><strong>Justification de Sécurité :</strong> - L'interface WAN fait
+face à des réseaux non fiables (Internet) - L'interface Web est une cible
+d'attaque de grande valeur - Le blocage par défaut empêche l'accès non
+autorisé - Force une approche d'autorisation explicite (allowlist)</p>
+<h3 id="when-to-allow-wan-access">Quand Autoriser l'Accès WAN</h3>
+<p><strong>Cas d'Utilisation Légitimes :</strong> - pfSense déployé en
+tant que VM (WAN = réseau homelab) - Gestion depuis un réseau admin isolé
+- Dépannage temporaire (désactiver ensuite) - Environnement de laboratoire
+contrôlé</p>
+<p><strong>NON Recommandé :</strong> - pfSense WAN connecté directement
+à Internet - Aucune restriction IP (toute source) - Environnements de
+production sans 2FA</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>L'accès à l'interface Web de pfSense via WAN nécessite une
+configuration minutieuse du pare-feu. Respectez toujours le principe du
+moindre privilège : n'autorisez que des adresses IP de confiance
+spécifiques, activez la journalisation et envisagez des méthodes d'accès
+alternatives comme le VPN ou le tunneling SSH pour une sécurité
+renforcée.</p>
+<p><strong>Points Clés à Retenir :</strong> - Le blocage WAN par défaut
+est une fonctionnalité de sécurité intentionnelle - Utilisez des
+restrictions IP, jamais « toute source » - Activez la 2FA et une
+authentification forte - Envisagez le VPN/tunnel pour une utilisation en
+production - Surveillez et journalisez toutes les tentatives d'accès WAN
+- Documentez votre configuration</p>
+<p><em>Pour les déploiements en production, utilisez toujours des
+solutions VPN ou Zero-Trust au lieu d'un accès WAN direct.</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connecter</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
