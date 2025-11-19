@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le voyage d'apprentissage des VLANs et de la conscience réseau - Tutoriel et guide technique">
+    <meta name="keywords" content="homelab, cybersecurity, tutorial">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Le voyage d'apprentissage des VLANs et de la conscience réseau | Blog Technique d'Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Ouvrir/Fermer la navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/infrastructure/network-consciousness-vlan-learning-journey.html" class="lang-toggle" aria-label="Changer la langue">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="En-tête de l'article">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Le voyage d'apprentissage des VLANs et de la conscience réseau</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Le voyage d'apprentissage des VLANs et de la conscience réseau</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>10 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab, cybersecurity, tutorial</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Contenu de l'article">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1 id="network-consciousness---ongoing-thoughts-learning-log">Conscience
+Réseau - Réflexions &amp; Journal d'Apprentissage Continu</h1>
+<h2 id="project-overview">Aperçu du Projet</h2>
+<p><strong>Date de Début :</strong> 29 octobre 2025
+<strong>Objectif :</strong> Documenter le processus de construction d'une
+architecture réseau homelab sécurisée avec des VLANs et des stratégies
+avancées de segmentation.
+<strong>Statut :</strong> En Cours</p>
+<hr />
+<h2 id="session-1-initial-architecture-design-vlan-philosophy">Session
+1 : Conception de l'Architecture Initiale &amp; Philosophie des VLANs</h2>
+<h3 id="key-insights">Points Clés</h3>
+<ol type="1">
+<li><strong>Les VLANs ne sont pas Magiques</strong> - Elles sont un
+outil, pas une solution complète. Elles fonctionnent mieux lorsqu'elles
+sont combinées avec :
+<ul>
+<li>Des règles de pare-feu appropriées (refus par défaut)</li>
+<li>Des audits de sécurité réguliers</li>
+<li>La surveillance et les alertes</li>
+<li>L'éducation des employés/utilisateurs (en entreprise) ou la
+discipline personnelle (en homelab)</li>
+</ul></li>
+<li><strong>Le Principe du "Refus Par Défaut" (Default Deny)</strong> -
+Au lieu d'ouvrir tout et de fermer le mauvais trafic, nous :
+<ul>
+<li>Refusons tout par défaut</li>
+<li>Mettons sur liste blanche le trafic spécifique autorisé</li>
+<li>Ceci inverse la posture de sécurité de « ouvert sauf bloqué » à
+« fermé sauf autorisé »</li>
+</ul></li>
+<li><strong>Problème Concret :</strong> Le réseau plat initial
+entraînait :
+<ul>
+<li>Aucune visibilité sur les schémas de communication des
+appareils</li>
+<li>Les appareils compromis pouvaient atteindre des données
+sensibles</li>
+<li>Aucune frontière naturelle entre les domaines de sécurité</li>
+<li>Difficulté à diagnostiquer ce qui devrait/ne devrait pas
+fonctionner</li>
+</ul></li>
+</ol>
+<h3 id="architectural-decisions-made">Décisions Architecturales
+Prises</h3>
+<ul>
+<li><strong>5 VLANs plutôt que 20+ :</strong> Commencer simplement plutôt
+que de sur-concevoir</li>
+<li><strong>pfSense Choice :</strong> Nécessitait un pare-feu
+transparent, open-source et prenant en charge les VLANs</li>
+<li><strong>Managed Switch Requirement :</strong> Les
+commutateurs non managés ne peuvent pas comprendre le marquage VLAN
+(VLAN tagging)</li>
+<li><strong>Wireless Integration :</strong> SSID distincts par domaine
+de sécurité, et non un seul réseau</li>
+</ul>
+<h3 id="concerns-notes">Préoccupations &amp; Notes</h3>
+<ul>
+<li>⚠️ <strong>VLAN Hopping Risk :</strong> Attaques par
+double-tagging possibles si elles ne sont pas défendues</li>
+<li>⚠️ <strong>Configuration Complexity :</strong> Une faute de
+frappe dans une règle de pare-feu peut casser tout un segment</li>
+<li>⚠️ <strong>Performance Overhead :</strong> Minimale en homelab,
+mais le routage entre VLANs ajoute de la latence</li>
+<li>⚠️ <strong>Legacy Device Compatibility :</strong> Les
+anciens appareils IoT pourraient ne pas prendre en charge correctement le
+marquage VLAN</li>
+</ul>
+<hr />
+<h2 id="session-2-deep-dive---firewall-rule-philosophy">Session 2 :
+Analyse Approfondie - Philosophie des Règles de Pare-feu</h2>
+<h3 id="rules-analysis">Analyse des Règles</h3>
+<p><strong>VLAN IoT (Le plus Restrictif) :</strong> - Uniquement DNS/NTP
+sortant - Pourquoi ? - Les appareils IoT effectuent souvent des mises à
+jour automatiques vers le cloud - En limitant uniquement au DNS/NTP,
+nous prévenons l'exfiltration - Nous contrôlons leur comportement de
+« téléphone maison » (phone home)</p>
+<ul>
+<li>Accès spécifique au serveur - Pourquoi ?
+<ul>
+<li>Si l'IoT needs à accéder à des services, le rendre explicite</li>
+<li>Ceci empêche une ampoule compromise d'accéder à votre
+base de données</li>
+</ul></li>
+</ul>
+<p><strong>Server VLAN (Restriction Modérée) :</strong> -
+Communication interne de serveur à serveur - Pourquoi ? - Les pods
+Kubernetes peuvent avoir besoin de communiquer entre eux - Les bases de
+données ont besoin d'un accès client - Mais les clients externes sont
+restreints</p>
+<ul>
+<li>Accès Internet contrôlé - Pourquoi ?
+<ul>
+<li>Mises à jour de serveurs (apt, docker pull, etc.)</li>
+<li>Appels API vers des services externes</li>
+<li>Mais enregistrement/surveillance des connexions
+sortantes</li>
+</ul></li>
+</ul>
+<p><strong>Trusted VLAN (Le plus Permissif) :</strong> - Les
+appareils personnels obtiennent un accès large - Pourquoi ? - Les
+utilisateurs ne devraient pas être constamment bloqués par le
+pare-feu - Mais toujours isolés des réseaux non fiables - Peuvent
+accéder directement à Internet sans restrictions</p>
+<h3 id="critical-realization">Prise de Conscience Critique</h3>
+<p>Les règles de pare-feu ne servent pas seulement à bloquer le mauvais
+trafic, elles servent à <strong>appliquer des frontières de
+confiance</strong>. Chaque VLAN représente un niveau de confiance, et
+les règles appliquent ce à quoi ce niveau de confiance peut
+accéder.</p>
+<hr />
+<h2 id="session-3-implementation-gotchas-solutions">Session 3 : Pièges
+de l'Implémentation &amp; Solutions</h2>
+<h3 id="problem-1-switch-vlan-1-native-configuration">Problème #1 :
+Configuration Native du VLAN 1 du Commutateur</h3>
+<p><strong>Problème :</strong> Le VLAN 1 est spécial—il s'agit du VLAN
+de gestion par défaut <strong>Pourquoi c'est important :</strong> Une
+mauvaise configuration peut vous empêcher d'accéder à la gestion des
+appareils <strong>Solution :</strong> Garder le VLAN 1 inutilisé ou
+dédié uniquement à l'accès de gestion des appareils</p>
+<h3 id="problem-2-wifi-ap-integration">Problème #2 : Intégration des
+Points d'Accès WiFi (AP)</h3>
+<p><strong>Problème :</strong> Comment les AP WiFi grand public gèrent
+les VLANs? <strong>Solution :</strong> Tous ne le font pas aussi bien -
+APs d'entreprise (UniFi, Omada, Aruba) : Excellent support VLAN - APs
+grand public : Support VLAN limité ou inexistant - Solution de contournement : Utiliser la
+fonctionnalité de réseau invité de l'AP pour une isolation
+approximative</p>
+<h3 id="problem-3-dhcp-scopes-per-vlan">Problème #3 : Étendues DHCP Par
+VLAN</h3>
+<p><strong>Problème :</strong> Chaque VLAN a besoin de sa propre étendue
+DHCP <strong>Solution :</strong> pfSense peut exécuter DHCP pour
+plusieurs VLANs - VLAN 30: 10.0.30.100-200 (IoT) - VLAN 50: 10.0.50.100-200 (Trusted) -
+Prévient les conflits d'IP, permet l'isolation</p>
+<h3 id="problem-4-dns-per-vlan">Problème #4 : DNS Par VLAN ?</h3>
+<p><strong>Question :</strong> Chaque VLAN devrait-il avoir un DNS
+différent ? <strong>Approche actuelle :</strong> DNS unique (10.0.0.1 sur
+le pare-feu), mais pourrait faire : - DNS en liste noire pour le VLAN
+IoT (empêcher les C&amp;C de malware) - Filtrage de contenu pour le
+réseau invité - DNS séparé pour le VLAN soucieux de la
+confidentialité</p>
+<hr />
+<h2 id="session-4-security-threats-mitigations">Session 4 : Menaces de
+Sécurité &amp; Atténuations</h2>
+<h3 id="threat-vlan-hopping-802.1q-double-tagging">Menace : VLAN
+Hopping (Double Tagging 802.1Q)</h3>
+<p><strong>Comment ça marche :</strong></p>
+<pre><code>Attacker sends packet with two VLAN tags:
+[outer: VLAN 30] [inner: VLAN 20]
+Switch removes outer tag (still in VLAN 30)
+Next device sees inner tag and processes as VLAN 20</code></pre>
+<p><strong>Atténuation :</strong> 1. Désactiver le trunking des ports
+du commutateur sur les ports d'accès 2. Définir les ports d'accès sur
+un VLAN spécifique (pas en mode trunk) 3. Maintenir le firmware à jour
+4. Surveiller les transitions VLAN inhabituelles</p>
+<h3 id="threat-arp-spoofing-within-vlan">Menace : Usurpation d'ARP (ARP
+Spoofing) au sein du VLAN</h3>
+<p><strong>Comment ça marche :</strong> Un attaquant envoie de fausses
+réponses ARP pour rediriger le trafic <strong>Atténuation :</strong> -
+Activer le DHCP snooping - Activer l'Inspection ARP Dynamique (DAI) -
+Entrées ARP statiques pour les appareils critiques</p>
+<h3 id="threat-rogue-dhcp-server">Menace : Serveur DHCP Pirate (Rogue
+DHCP Server)</h3>
+<p><strong>How it works:</strong> Un attaquant exécute un serveur DHCP
+et donne aux clients une mauvaise passerelle
+<strong>Atténuation :</strong> - Le DHCP snooping identifie et bloque
+les DHCP pirates - Faire confiance uniquement aux ports DHCP
+autorisés - Surveiller l'activité DHCP inattendue</p>
+<h3 id="threat-legitimate-device-compromise">Menace : Compromission
+d'un Appareil Légitime</h3>
+<p><strong>Comment ça marche :</strong> Un attaquant prend le contrôle
+d'un appareil IoT, l'utilise pour scanner le réseau
+<strong>Atténuation :</strong> C'est ce que les VLANs empêchent
+réellement - L'appareil compromis est piégé dans son VLAN - Les règles
+de pare-feu l'empêchent d'atteindre d'autres réseaux - La segmentation
+limite le rayon d'impact (blast radius)</p>
+<hr />
+<h2 id="session-5-monitoring-visibility">Session 5 : Surveillance
+&amp; Visibilité</h2>
+<h3 id="what-should-we-monitor">Que Devrions-Nous Surveiller ?</h3>
+<ol type="1">
+<li><strong>VLAN Transitions</strong>
+<ul>
+<li>Quels appareils envoient/reçoivent sur plusieurs VLANs ?</li>
+<li>Normalement, seuls les appareils de pare-feu devraient faire
+cela</li>
+<li>Alerter sur une activité inter-VLAN inattendue</li>
+</ul></li>
+<li><strong>Déclenchements de Règles de Pare-feu (Firewall Rule Hits)</strong>
+<ul>
+<li>Quelles règles sont déclenchées ?</li>
+<li>Attendu : IoT essayant d'atteindre des destinations non
+mises sur liste blanche</li>
+<li>Inattendu : Appareils de confiance essayant d'atteindre des
+serveurs restreints</li>
+</ul></li>
+<li><strong>Requêtes DNS</strong>
+<ul>
+<li>Quels domaines les appareils IoT essaient-ils
+d'atteindre ?</li>
+<li>Peut détecter la communication C&amp;C</li>
+<li>Peut optimiser les règles de pare-feu en fonction de
+l'utilisation réelle</li>
+</ul></li>
+<li><strong>Bande Passante par VLAN</strong>
+<ul>
+<li>Tendances normales : Augmentation progressive</li>
+<li>Tendances suspectes : Transferts soudains et importants</li>
+<li>Indicateurs d'exfiltration de données</li>
+</ul></li>
+</ol>
+<h3 id="tools-to-use">Outils à Utiliser</h3>
+<ul>
+<li><strong>pfSense native :</strong> Logs dans
+<code>/var/log/filter.log</code></li>
+<li><strong>Prometheus :</strong> Collecter des métriques de pfSense</li>
+<li><strong>Grafana :</strong> Visualiser les modèles de trafic
+réseau</li>
+<li><strong>Tcpdump :</strong> Inspection approfondie des paquets si
+nécessaire</li>
+</ul>
+<hr />
+<h2 id="session-6-common-mistakes-to-avoid">Session 6 : Erreurs
+Courantes à Éviter</h2>
+<h3 id="mistake-1-too-many-vlans-too-soon">Erreur #1 : Trop de VLANs
+Trop Tôt</h3>
+<p>❌ Créer 20 VLANs pour chaque cas d'utilisation possible ✅ Commencer
+avec 3 à 5, ajouter au besoin</p>
+<p><strong>Pourquoi :</strong> Plus de VLANs = plus de règles = plus
+d'endroits pour faire des erreurs</p>
+<h3 id="mistake-2-forgetting-about-management-access">Erreur #2 :
+Oublier l'Accès de Gestion</h3>
+<p>❌ Créer un VLAN de gestion, puis être incapable d'accéder au
+pare-feu ✅ Toujours garder l'accès de gestion clair et documenté</p>
+<p><strong>Pourquoi :</strong> Vous ALLEZ vous retrouver bloqué si
+vous n'êtes pas prudent. La réinitialisation physique est
+douloureuse.</p>
+<h3 id="mistake-3-assuming-firewall-rules-just-work">Erreur #3 :
+Supposer que les Règles de Pare-feu « Fonctionnent Juste »</h3>
+<p>❌ Écrire des règles complexes sans tester ✅ Commencer par « autoriser
+tout », surveiller, puis restreindre progressivement</p>
+<p><strong>Pourquoi :</strong> Les règles interagissent de manière
+complexe. Tester d'abord dans un environnement à faible impact.</p>
+<h3 id="mistake-4-not-documenting-vlan-allocation">Erreur #4 : Ne Pas
+Documenter l'Allocation VLAN</h3>
+<p>❌ Créer des VLANs oralement, sans trace écrite ✅ Conserver une
+feuille de calcul : ID VLAN, Nom, Plage IP, Objectif, Règles</p>
+<p><strong>Pourquoi :</strong> Vous oublierez d'ici le mois prochain.
+Votre futur moi en aura besoin.</p>
+<h3 id="mistake-5-ignoring-physical-security">Erreur #5 : Ignorer la
+Sécurité Physique</h3>
+<p>❌ Supposer que les VLANs empêchent les attaques physiques ✅ Sécuriser
+l'accès physique au commutateur et la gestion des câbles</p>
+<p><strong>Why:</strong> Anyone with physical access can bypass VLANs
+using port mirroring or ARP spoofing tools</p>
+<hr />
+<h2 id="session-7-cost-benefit-analysis">Session 7 : Analyse
+Coûts-Avantages</h2>
+<h3 id="investment-required">Investissement Requis</h3>
+<table>
+<thead>
+<tr>
+<th>Composant</th>
+<th>Coût</th>
+<th>Nécessité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commutateur Managé</td>
+<td>$200-600</td>
+<td>CRITIQUE</td>
+</tr>
+<tr>
+<td>pfSense Hardware</td>
+<td>$150-400</td>
+<td>CRITIQUE</td>
+</tr>
+<tr>
+<td>AP WiFi d'Entreprise</td>
+<td>$100-300</td>
+<td>RECOMMANDÉ</td>
+</tr>
+<tr>
+<td>Outils de Surveillance</td>
+<td>Gratuit-$500</td>
+<td>OPTIONNEL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$450-1800</strong></td>
+<td><strong>Haute valeur</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="benefit-time-saved">Avantage : Temps Économisé</h3>
+<ul>
+<li>Configuration initiale : 6-8 heures</li>
+<li>Maintenance mensuelle : 30 minutes</li>
+<li>Dépannage : Plus rapide grâce à des frontières réseau claires</li>
+</ul>
+<h3 id="benefit-security-improvement">Avantage : Amélioration de la
+Sécurité</h3>
+<ul>
+<li><strong>Avant :</strong> Un appareil compromis = accès complet au
+réseau</li>
+<li><strong>Après :</strong> Un appareil compromis = isolé dans son
+VLAN, bloqué des ressources sensibles</li>
+</ul>
+<h3 id="benefit-learning">Avantage : Apprentissage</h3>
+<ul>
+<li>Compréhension approfondie des protocoles réseau</li>
+<li>Connaissances pratiques en sécurité</li>
+<li>Confiance dans votre infrastructure</li>
+</ul>
+<hr />
+<h2 id="session-8-future-enhancements-to-explore">Session 8 :
+Améliorations Futures à Explorer</h2>
+<h3 id="short-term-next-3-months">Court terme (3 prochains mois)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Implémenter la journalisation
+centralisée (Splunk/ELK)</label></li>
+<li><label><input type="checkbox" />Configurer Prometheus/Grafana pour
+les métriques</label></li>
+<li><label><input type="checkbox" />Créer des règles d'alerte
+automatisées pour le trafic suspect</label></li>
+<li><label><input type="checkbox" />Documenter l'allocation IP/MAC dans
+tous les VLANs</label></li>
+<li><label><input type="checkbox" />Tester le basculement : Que se
+passe-t-il si le pare-feu tombe en panne ?</label></li>
+</ul>
+<h3 id="medium-term-3-6-months">Moyen terme (3-6 mois)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Implémenter la détection
+d'intrusion (Suricata)</label></li>
+<li><label><input type="checkbox" />Ajouter la documentation de
+segmentation réseau au portfolio</label></li>
+<li><label><input type="checkbox" />Créer une automatisation pour le
+test des règles</label></li>
+<li><label><input type="checkbox" />Expérimenter la
+micro-segmentation (basée sur l'hôte)</label></li>
+<li><label><input type="checkbox" />Réseau de caméras de sécurité (VLAN
+11 séparé)</label></li>
+</ul>
+<h3 id="long-term-6-12-months">Long terme (6-12 mois)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Architecture de réseau
+Zero-trust</label></li>
+<li><label><input type="checkbox" />Implémenter le contrôle d'accès
+réseau (NAC)</label></li>
+<li><label><input type="checkbox" />Segmentation du réseau de
+conteneurs (Kubernetes)</label></li>
+<li><label><input type="checkbox" />Segmentation multisite (laboratoire
++ clusters raspberry pi)</label></li>
+<li><label><input type="checkbox" />Cadre de conformité (CIS
+benchmarks)</label></li>
+</ul>
+<hr />
+<h2 id="session-9-portfolio-angle---why-this-matters">Session 9 :
+Perspective Portfolio - Pourquoi C'est Important</h2>
+<h3 id="for-hiring-managers">Pour les Responsables du Recrutement</h3>
+<p>Ce projet VLAN démontre : 1. <strong>Pensée Sécuritaire</strong> -
+Non seulement construire, mais sécuriser 2. <strong>Pensée
+Systémique</strong> - Comprendre comment les composants
+interagissent 3. <strong>Souci du Détail</strong> - Les règles de
+pare-feu exigent de la précision 4. <strong>Résolution de
+Problèmes</strong> - Dépanner les problèmes réseau 5.
+<strong>Documentation</strong> - Essentiel pour les systèmes de
+production</p>
+<h3 id="for-engineers-reviewing-code">Pour les Ingénieurs Examinant le
+Code</h3>
+<p>« Ils comprennent l'isolation réseau et peuvent probablement apprécier
+la défense en profondeur dans l'architecture logicielle
+également »</p>
+<h3 id="for-sredevops-perspective">Pour la Perspective SRE/DevOps</h3>
+<ul>
+<li>Cette personne comprend l'isolation de
+l'infrastructure</li>
+<li>Peut probablement bien architecturer les politiques réseau
+Kubernetes</li>
+<li>Pense aux frontières de sécurité tôt, et non comme une
+arrière-pensée</li>
+</ul>
+<hr />
+<h2 id="session-10-lessons-observations">Session 10 : Leçons &amp;
+Observations</h2>
+<h3 id="what-went-well">Ce Qui s'est Bien Passé</h3>
+<p>✅ Choisir pfSense tôt a permis d'éviter de changer plus tard ✅
+Commencer avec le principe du « refus par défaut » a très bien
+fonctionné ✅ La documentation (ce fichier !) est inestimable ✅ Tester
+les règles individuellement avant le déploiement final</p>
+<h3 id="what-was-harder-than-expected">Ce Qui Était Plus Difficile Que
+Prévu</h3>
+<p>❌ Déterminer l'étendue DHCP (scoping) sur les VLANs ❌ Comprendre la
+commutation VLAN (switching) par rapport aux concepts de routage ❌
+L'intégration WiFi (la plupart des APs ont un support VLAN limité) ❌ La
+configuration de la surveillance et de la visibilité</p>
+<h3 id="key-takeaways">Points Clés à Retenir</h3>
+<ol type="1">
+<li><strong>La segmentation concerne la confiance, pas seulement le
+blocage</strong></li>
+<li><strong>La documentation est aussi importante que la
+configuration</strong></li>
+<li><strong>La sécurité réseau est une pratique continue, pas une
+configuration unique</strong></li>
+<li><strong>La surveillance est PLUS importante que les règles de
+pare-feu (vous ne pouvez pas sécuriser ce que vous ne
+voyez pas)</strong></li>
+<li><strong>Restez simple, puis ajoutez de la complexité avec
+précaution</strong></li>
+</ol>
+<hr />
+<h2 id="notes-for-future-self">Notes pour mon Futur Moi</h2>
+<p>Lorsque tu es frustré parce qu'une règle de pare-feu ne fonctionne
+pas : 1. Vérifie d'abord les logs du pare-feu 2. Vérifie le marquage
+VLAN sur le commutateur 3. Confirme l'étendue DHCP pour ce VLAN 4. Utilise tcpdump pour voir le trafic réel 5. Dors dessus, les
+solutions viennent quand tu ne regardes pas le problème</p>
+<p>Tu gères ça. Le fait que tu documentes ce processus signifie que tu
+développes une réelle expertise, pas seulement que tu cliques sur des
+boutons.</p>
+<hr />
+<p><strong>Dernière Mise à Jour :</strong> 29 octobre 2025
+<strong>Prochaine Révision :</strong> 12 novembre 2025 (2 semaines pour
+implémenter les retours)</p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connecter</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut de page">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

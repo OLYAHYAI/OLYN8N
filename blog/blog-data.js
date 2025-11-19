@@ -1,114 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting Pfsense Web Interface Access",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+            "url": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html"
         },
         {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting Pfsense Web Interface Access",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+            "url": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html"
         },
         {
-            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
-            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing N8n Workflows Deep Dive Dns Tls",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html"
+            "url": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html"
         },
         {
-            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
-            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing N8n Workflows Deep Dive Dns Tls",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html"
+            "url": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html"
         },
         {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
+            "url": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html"
         },
         {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
+            "url": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html"
         },
         {
-            "id": "hdd-ssd-health-monitoring-analysis-guide",
-            "title": "Hdd Ssd Health Monitoring Analysis Guide",
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "Setting Up Secure Reverse Proxy Https",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html"
+            "url": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html"
         },
         {
-            "id": "hdd-ssd-health-monitoring-analysis-guide",
-            "title": "Hdd Ssd Health Monitoring Analysis Guide",
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "Setting Up Secure Reverse Proxy Https",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html"
+            "url": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html"
         },
         {
-            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
-            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building Secure Homelab Network Vlans Architecture",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
+            "url": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html"
         },
         {
-            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
-            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building Secure Homelab Network Vlans Architecture",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
+            "url": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html"
         }
     ],
     "categories": {
