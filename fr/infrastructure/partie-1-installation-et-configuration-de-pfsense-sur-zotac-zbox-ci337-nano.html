@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano - Technical tutorial and guide">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano | Omar LYAHYAI Technical Blog</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="/index.html#about" class="nav-link">About</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">EN</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Home</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>11 min read</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: en or fr
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+EXAMPLES OF VALID TAGS:
+- tags: homelab
+- tags: pfsense
+- tags: networking
+- tags: cybersecurity
+
+The workflow will:
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h2 id="partie-1-installation-et-configuration-initiale">Partie 1:
+Installation et Configuration Initiale</h2>
+<hr />
+<h2 id="contexte-du-projet">1. Contexte du Projet</h2>
+<h3 id="objectifs">1.1 Objectifs</h3>
+<p>Nous avons entrepris l’installation d’une solution de pare-feu dédié
+pour un environnement homelab, avec pour objectif de mettre en place une
+infrastructure réseau segmentée et sécurisée. Cette première phase
+consiste à déployer pfSense comme appliance de sécurité dédiée,
+distincte de l’infrastructure de virtualisation existante.</p>
+<h3 id="matériel-utilisé">1.2 Matériel Utilisé</h3>
+<p><strong>Mini PC</strong>: Zotac ZBOX CI337 nano</p>
+<ul>
+<li><strong>Processeur</strong>: Intel N100 (4 cœurs, jusqu’à 3.4
+GHz)</li>
+<li><strong>Mémoire</strong>: 8 GB DDR5</li>
+<li><strong>Stockage</strong>: 128 GB SSD</li>
+<li><strong>Interfaces réseau</strong>: 2x Realtek PCIe Gigabit
+Ethernet</li>
+<li><strong>WiFi</strong>: Intel CNVi Wi-Fi 6 AX101 (détecté mais non
+utilisé)</li>
+<li><strong>Mode de démarrage</strong>: Pure UEFI (Secure Boot
+désactivé)</li>
+</ul>
+<p><strong>Coût d’acquisition</strong>: 85€</p>
+<hr />
+<h2 id="installation-du-système-dexploitation">2. Installation du
+Système d’Exploitation</h2>
+<h3 id="préparation">2.1 Préparation</h3>
+<p>Nous avons téléchargé pfSense 2.8.1 Community Edition depuis le site
+officiel de Netgate. L’image ISO a été gravée sur une clé USB bootable
+pour procéder à l’installation sur le système cible.</p>
+<h3 id="configuration-bios">2.2 Configuration BIOS</h3>
+<p>Avant l’installation, nous avons configuré le BIOS du Zotac ZBOX avec
+les paramètres suivants:</p>
+<ul>
+<li><strong>Secure Boot</strong>: Désactivé</li>
+<li><strong>Boot Mode</strong>: Pure UEFI</li>
+<li><strong>Boot Order</strong>: Clé USB en priorité</li>
+</ul>
+<h3 id="processus-dinstallation">2.3 Processus d’Installation</h3>
+<p>Nous avons démarré le système sur la clé USB d’installation et suivi
+la procédure standard:</p>
+<ol type="1">
+<li><strong>Acceptation de la licence</strong>: Nous avons accepté les
+termes de la licence pfSense CE</li>
+<li><strong>Mode d’installation</strong>: Sélection de “Install
+pfSense”</li>
+<li><strong>Disposition clavier</strong>: Configuration en AZERTY
+français (optionnel)</li>
+<li><strong>Partitionnement</strong>: Choix de “Auto (ZFS)” pour une
+installation moderne et performante</li>
+<li><strong>Configuration RAID</strong>: Sélection de “Stripe” (pas de
+redondance - disque unique)</li>
+<li><strong>Média d’installation</strong>: Sélection du SSD de 128 GB
+comme support d’installation</li>
+<li><strong>Confirmation</strong>: Validation du formatage et lancement
+de l’installation</li>
+</ol>
+<p>L’installation s’est déroulée sans incident et le système a redémarré
+automatiquement une fois terminée.</p>
+<hr />
+<h2 id="configuration-initiale-des-interfaces-réseau">3. Configuration
+Initiale des Interfaces Réseau</h2>
+<h3 id="assignation-des-interfaces">3.1 Assignation des Interfaces</h3>
+<p>Au premier démarrage, nous avons accédé au menu console de pfSense
+pour procéder à l’assignation des interfaces réseau.</p>
+<p><strong>Option 1 du menu</strong>: Assign Interfaces</p>
+<p>Nous avons configuré les interfaces comme suit:</p>
+<ul>
+<li><strong>WAN (re1)</strong>: Interface connectée au routeur principal
+(box Internet)</li>
+<li><strong>LAN (re0)</strong>: Interface pour le réseau interne</li>
+</ul>
+<h3 id="configuration-ip-temporaire-du-wan">3.2 Configuration IP
+Temporaire du WAN</h3>
+<p>Dans le cadre de notre configuration homelab, nous avons opté pour
+une architecture temporaire permettant l’accès au WebGUI via l’interface
+WAN, le temps de finaliser la configuration avant la mise en
+production.</p>
+<p><strong>Option 2 du menu</strong>: Set interface(s) IP address</p>
+<p><strong>Configuration WAN</strong>:</p>
+<ul>
+<li><strong>Mode</strong>: IP statique (non-DHCP)</li>
+<li><strong>Adresse IPv4</strong>: IP fixe dans le subnet du réseau
+existant</li>
+<li><strong>Masque</strong>: /24</li>
+<li><strong>Passerelle</strong>: Adresse du routeur principal</li>
+</ul>
+<p><strong>Configuration LAN</strong>:</p>
+<ul>
+<li><strong>Adresse IPv4</strong>: Subnet dédié pour le futur réseau
+interne</li>
+<li><strong>Masque</strong>: /24</li>
+<li><strong>Serveur DHCP</strong>: Activé avec plage définie</li>
+</ul>
+<hr />
+<h2 id="accès-à-linterface-web">4. Accès à l’Interface Web</h2>
+<h3 id="problématique-initiale">4.1 Problématique Initiale</h3>
+<p>Lors de la première tentative d’accès au WebGUI, nous avons rencontré
+un problème courant: les règles automatiques de pfSense bloquaient
+l’accès depuis l’interface WAN en raison de la protection “Block Private
+Networks” activée par défaut.</p>
+<h3 id="résolution-via-configuration-manuelle">4.2 Résolution via
+Configuration Manuelle</h3>
+<p>Nous avons résolu cette limitation en éditant directement le fichier
+de configuration:</p>
+<p><strong>Via console (Option 8 - Shell)</strong>:</p>
+<p>Installation de l’éditeur nano pour plus de confort pkg update pkg
+install nano</p>
+<p>Édition du fichier de configuration nano /cf/conf/config.xml</p>
+<p>text</p>
+<p>Nous avons supprimé les directives <code>&lt;blockpriv/&gt;</code> et
+<code>&lt;blockbogons/&gt;</code> dans la section WAN, puis rechargé la
+configuration:</p>
+<p>/etc/rc.reload_all</p>
+<p>text</p>
+<h3 id="connexion-au-webgui">4.3 Connexion au WebGUI</h3>
+<p>Après application des modifications, nous avons pu accéder à
+l’interface web via un navigateur en HTTPS depuis le réseau
+existant.</p>
+<p><strong>Identifiants par défaut</strong>:</p>
+<ul>
+<li>Utilisateur: <code>admin</code></li>
+<li>Mot de passe: <code>pfsense</code></li>
+</ul>
+<hr />
+<h2 id="configuration-de-sécurité-de-base">5. Configuration de Sécurité
+de Base</h2>
+<h3 id="modification-du-mot-de-passe-administrateur">5.1 Modification du
+Mot de Passe Administrateur</h3>
+<p>La première action de sécurité effectuée a été le changement du mot
+de passe par défaut.</p>
+<p><strong>Navigation</strong>: System &gt; User Manager &gt; Users &gt;
+admin</p>
+<p>Nous avons défini un mot de passe robuste respectant les critères de
+complexité.</p>
+<h3 id="activation-de-ssh-optionnel">5.2 Activation de SSH
+(Optionnel)</h3>
+<p>Pour faciliter la maintenance à distance, nous avons activé l’accès
+SSH.</p>
+<p><strong>Navigation</strong>: System &gt; Advanced &gt; Admin
+Access</p>
+<ul>
+<li><strong>Enable Secure Shell</strong>: Activé</li>
+</ul>
+<hr />
+<h2 id="installation-des-drivers-critiques">6. Installation des Drivers
+Critiques</h2>
+<h3 id="problématique-des-cartes-realtek">6.1 Problématique des Cartes
+Realtek</h3>
+<p>Les cartes réseau Realtek, bien que détectées par FreeBSD,
+nécessitent un driver spécifique pour garantir une stabilité optimale.
+Le driver générique peut entraîner des déconnexions ou des pertes de
+performances.</p>
+<h3 id="installation-de-realtek-re-kmod">6.2 Installation de
+realtek-re-kmod</h3>
+<p>Nous avons procédé à l’installation du package
+<code>realtek-re-kmod</code> via l’interface Diagnostics &gt; Command
+Prompt:</p>
+<p>Installation du driver Realtek optimisé pkg install
+realtek-re-kmod</p>
+<p>Chargement immédiat du module kldload if_re</p>
+<p>Configuration du chargement automatique au démarrage echo
+‘if_re_load=“YES”’ &gt;&gt; /boot/loader.conf.local</p>
+<p>Vérification du chargement kldstat | grep if_re</p>
+<p>text</p>
+<p>Nous avons ensuite redémarré le système via <strong>Diagnostics &gt;
+Reboot</strong> pour appliquer définitivement les modifications.</p>
+<h3 id="vérification-post-installation">6.3 Vérification
+Post-Installation</h3>
+<p>Après redémarrage, nous avons vérifié l’état des interfaces
+réseau:</p>
+<p>Vérification de l’état des interfaces ifconfig re0 ifconfig re1</p>
+<p>Vérification des statistiques d’erreurs netstat -i</p>
+<p>text</p>
+<p><strong>Résultats obtenus</strong>:</p>
+<ul>
+<li><strong>re0 (LAN)</strong>: Status “no carrier” (normal, aucun câble
+connecté)</li>
+<li><strong>re1 (WAN)</strong>: Status “active”, vitesse 1000baseT
+full-duplex</li>
+<li><strong>Erreurs d’interface (Ierrs/Oerrs)</strong>: 0 sur les deux
+interfaces</li>
+<li><strong>Interruptions MSI-X</strong>: Activées et
+fonctionnelles</li>
+</ul>
+<p>La configuration matérielle est validée comme parfaitement
+opérationnelle.</p>
+<hr />
+<h2 id="vérification-du-matériel-wifi">7. Vérification du Matériel
+WiFi</h2>
+<h3 id="identification-de-la-carte">7.1 Identification de la Carte</h3>
+<p>Nous avons procédé à l’identification complète du matériel réseau
+installé:</p>
+<p>Liste détaillée des périphériques PCI réseau pciconf -lvcb | grep
+-A10 “network”</p>
+<p>text</p>
+<p><strong>Résultats</strong>:</p>
+<ul>
+<li><strong>WiFi</strong>: Intel CNVi Wi-Fi 6 AX101 détecté</li>
+<li><strong>Ethernet 1</strong>: Realtek PCIe GbE (re0)</li>
+<li><strong>Ethernet 2</strong>: Realtek PCIe GbE (re1)</li>
+</ul>
+<h3 id="limitations-freebsd">7.2 Limitations FreeBSD</h3>
+<p>La carte WiFi Intel AX101, bien que détectée par le système, n’est
+<strong>pas exploitable</strong> sous pfSense/FreeBSD pour les raisons
+suivantes:</p>
+<ul>
+<li>Driver <code>iwlwifi</code> retiré des versions récentes de
+pfSense</li>
+<li>Support expérimental uniquement en mode client (pas de mode AP)</li>
+<li>Performances limitées même en cas de fonctionnement</li>
+</ul>
+<p><strong>Décision technique</strong>: Nous avons décidé d’utiliser un
+access point WiFi externe dédié qui sera connecté au port LAN de
+pfSense, offrant de meilleures performances et une gestion
+centralisée.</p>
+<hr />
+<h2 id="installation-des-packages-essentiels">8. Installation des
+Packages Essentiels</h2>
+<h3 id="mise-à-jour-du-système">8.1 Mise à Jour du Système</h3>
+<p>Avant d’installer des packages tiers, nous avons vérifié les mises à
+jour système disponibles via <strong>System &gt; Update</strong>.</p>
+<h3 id="installation-des-packages-de-sécurité">8.2 Installation des
+Packages de Sécurité</h3>
+<p><strong>Navigation</strong>: System &gt; Package Manager &gt;
+Available Packages</p>
+<p>Nous avons installé les packages suivants par ordre de priorité:</p>
+<p><strong>1. pfBlockerNG-devel</strong> (Filtrage DNS et blocage
+IP)</p>
+<ul>
+<li>Protection contre les publicités, malwares et trackers</li>
+<li>Blocage d’adresses IP malveillantes</li>
+<li>Mode DNSBL pour filtrage DNS</li>
+</ul>
+<p><strong>2. Suricata</strong> (IDS/IPS)</p>
+<ul>
+<li>Système de détection et prévention d’intrusions</li>
+<li>Mode IPS inline sur l’interface WAN</li>
+<li>Règles ET Open (Emerging Threats)</li>
+</ul>
+<p><strong>3. WireGuard</strong> (VPN moderne)</p>
+<ul>
+<li>Protocole VPN haute performance</li>
+<li>Chiffrement moderne</li>
+<li>Configuration simplifiée</li>
+</ul>
+<p><strong>4. ACME</strong> (Certificats SSL automatiques)</p>
+<ul>
+<li>Intégration Let’s Encrypt</li>
+<li>Renouvellement automatique des certificats</li>
+</ul>
+<p><strong>5. ntopng</strong> (Monitoring réseau)</p>
+<ul>
+<li>Analyse du trafic en temps réel</li>
+<li>Statistiques détaillées par hôte/protocole</li>
+</ul>
+<p><strong>6. iftop</strong> (Monitoring bande passante)</p>
+<ul>
+<li>Installation via console: <code>pkg install iftop</code></li>
+<li>Monitoring temps réel de la bande passante</li>
+</ul>
+<h3 id="désactivation-des-offloads-matériels">8.3 Désactivation des
+Offloads Matériels</h3>
+<p><strong>Prérequis critique pour Suricata</strong>: Nous avons
+désactivé les offloads matériels pour garantir l’inspection complète des
+paquets.</p>
+<p><strong>Navigation</strong>: System &gt; Advanced &gt; Networking</p>
+<p>Options désactivées:</p>
+<ul>
+<li>Hardware Checksum Offloading</li>
+<li>Hardware TCP Segmentation Offloading</li>
+<li>Hardware Large Receive Offloading</li>
+</ul>
+<p><strong>Redémarrage système requis</strong> après cette
+modification.</p>
+<hr />
+<h2 id="état-de-la-configuration-actuelle">9. État de la Configuration
+Actuelle</h2>
+<h3 id="architecture-réseau-temporaire">9.1 Architecture Réseau
+Temporaire</h3>
+<p>Internet ↓ Box/Routeur Principal ↓ [WAN - re1] pfSense ZBOX [LAN -
+re0] ↓ (Non connecté - future expansion)</p>
+<p>text</p>
+<h3 id="services-actifs">9.2 Services Actifs</h3>
+<ul>
+<li>✅ Pare-feu pfSense opérationnel</li>
+<li>✅ Drivers Realtek installés et validés</li>
+<li>✅ Accès WebGUI fonctionnel</li>
+<li>✅ SSH activé pour maintenance distante</li>
+<li>✅ Packages de sécurité installés</li>
+</ul>
+<h3 id="prochaines-étapes-partie-2">9.3 Prochaines Étapes (Partie
+2)</h3>
+<p>La suite de la configuration comprendra:</p>
+<ol type="1">
+<li>Configuration détaillée de pfBlockerNG-devel</li>
+<li>Paramétrage de Suricata IDS/IPS</li>
+<li>Mise en place des VLANs réseau</li>
+<li>Configuration WireGuard VPN</li>
+<li>Intégration d’un access point WiFi externe</li>
+<li>Déploiement d’un switch manageable avec support VLAN</li>
+<li>Migration vers l’architecture réseau finale</li>
+</ol>
+<hr />
+<h2 id="optimisations-et-bonnes-pratiques">10. Optimisations et Bonnes
+Pratiques</h2>
+<h3 id="optimisation-intel-n100">10.1 Optimisation Intel N100</h3>
+<p>Le processeur Intel N100 peut présenter des limitations de fréquence
+CPU. Nous recommandons de vérifier les paramètres suivants dans le
+BIOS:</p>
+<ul>
+<li><strong>PL1 (Power Limit 1)</strong>: 10-12W (au lieu de 6W par
+défaut)</li>
+<li><strong>PL2 (Power Limit 2)</strong>: 25-30W</li>
+<li><strong>CPU Turbo</strong>: Activé</li>
+</ul>
+<h3 id="surveillance-système">10.2 Surveillance Système</h3>
+<p>Commandes utiles pour le monitoring:</p>
+<p>Charge CPU et mémoire top</p>
+<p>Fréquence CPU en temps réel sysctl dev.cpu | grep freq</p>
+<p>État des interfaces ifconfig -a</p>
+<p>Statistiques réseau netstat -i</p>
+<p>text</p>
+<h3 id="sauvegardes">10.3 Sauvegardes</h3>
+<p>Nous recommandons d’effectuer des sauvegardes régulières de la
+configuration:</p>
+<p><strong>Navigation</strong>: Diagnostics &gt; Backup &amp;
+Restore</p>
+<ul>
+<li>Export de la configuration au format XML</li>
+<li>Sauvegarde après chaque modification majeure</li>
+</ul>
+<hr />
+<h2 id="conclusion-de-la-partie-1">Conclusion de la Partie 1</h2>
+<p>Nous avons réussi à déployer avec succès une instance pfSense 2.8.1
+sur un mini PC Zotac ZBOX CI337 nano. Le système est maintenant
+opérationnel avec:</p>
+<ul>
+<li>Deux interfaces Gigabit Ethernet pleinement fonctionnelles</li>
+<li>Drivers matériels optimisés (Realtek)</li>
+<li>Suite de packages de sécurité installée</li>
+<li>Configuration de base sécurisée</li>
+</ul>
+<p>L’architecture actuelle permet l’accès et la configuration via
+l’interface web, tout en préservant la possibilité de migrer vers une
+architecture de production segmentée avec VLANs. La validation
+matérielle confirme l’absence d’erreurs réseau et des performances
+optimales sur les deux interfaces Ethernet.</p>
+<p><strong>Investissement total</strong>: 85€ pour le matériel<br />
+<strong>Temps d’installation</strong>: ~2 heures (installation +
+configuration + optimisations)<br />
+<strong>Statut</strong>: ✅ Opérationnel et prêt pour la configuration
+avancée</p>
+<hr />
+<p><em>Document rédigé dans le cadre d’un projet homelab de segmentation
+réseau et sécurisation d’infrastructure.</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity Enthusiast</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#projects">Projects</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

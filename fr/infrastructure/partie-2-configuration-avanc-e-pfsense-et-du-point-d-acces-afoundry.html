@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry - Technical tutorial and guide">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry | Omar LYAHYAI Technical Blog</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="/index.html#about" class="nav-link">About</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">EN</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Home</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>17 min read</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: en or fr
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+EXAMPLES OF VALID TAGS:
+- tags: homelab
+- tags: pfsense
+- tags: networking
+- tags: cybersecurity
+
+The workflow will:
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: en or fr
+- tags: keyword1, keyword2
+- description: "Short summary" (KEEP QUOTES)
+
+RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use status: published (for website) or draft (work only)
+❌ DON'T: Remove quotes from title/date/description
+❌ DON'T: Use special characters without quotes
+
+The workflow will:
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE USAGE:
+1. Press Alt+E in Obsidian to apply this template
+2. Update the frontmatter:
+   - title: "Your article title (keep quotes)"
+   - date: "Update if needed (YYYY-MM-DD format)"
+   - category: infrastructure | network_security | automation_ai | reference | docker_services | remote_access
+   - status: published (ready for website) | draft (work in progress)
+   - language: en (English) | fr (French) - workflow will detect but you can specify
+   - tags: Comma-separated relevant tags
+   - description: "Short summary (keep quotes if contains special chars)"
+
+3. Write your content below
+
+IMPORTANT:
+- Keep all quotes around text values with special characters
+- Date format must be "YYYY-MM-DD" with quotes
+- Status must be "published" for workflow to generate HTML
+- Language will be auto-detected from content but you can set it manually
+
+WORKFLOW BEHAVIOR:
+- Detects language from content (overrides if wrong in large files >5000 chars)
+- Generates bilingual versions (EN + FR)
+- Creates HTML with full navigation
+- Preserves images and links
+-->
+<!-- 
+NAMING CONVENTION:
+- For English articles: your-article-title.md
+- For French articles:  your-article-title-fr.md
+
+The workflow will automatically:
+- Detect language from filename
+- Generate title from filename
+- Add current date
+- Clean YAML for Pandoc processing
+-->
+<h2 id="partie-2-configuration-avancée-et-access-point-wifi">Partie 2:
+Configuration Avancée et Access Point WiFi</h2>
+<hr />
+<h2 id="contexte-de-la-partie-2">1. Contexte de la Partie 2</h2>
+<h3 id="rappel-architecture-partie-1">1.1 Rappel Architecture Partie
+1</h3>
+<p>À l’issue de la Partie 1, nous disposions d’une infrastructure
+pfSense fonctionnelle avec: - pfSense 2.8.1 installé et opérationnel -
+Drivers Realtek optimisés (realtek-re-kmod) - Packages de sécurité
+installés (pfBlockerNG, Suricata, WireGuard, ACME, ntopng) - Accès
+temporaire via interface WAN pour configuration initiale</p>
+<h3 id="objectifs-partie-2">1.2 Objectifs Partie 2</h3>
+<p>Cette seconde phase vise à: 1. Déployer un access point WiFi
+professionnel (Afoundry EW1200) 2. Migrer vers l’architecture réseau
+finale avec segmentation LAN 3. Configurer pfBlockerNG pour le blocage
+de publicités et malwares 4. Optimiser les performances WiFi dual-band
+5. Sécuriser l’infrastructure complète</p>
+<hr />
+<h2 id="matériel-ajouté">2. Matériel Ajouté</h2>
+<h3 id="access-point-afoundry-ew1200">2.1 Access Point Afoundry
+EW1200</h3>
+<p><strong>Spécifications</strong>: - <strong>Modèle</strong>: Afoundry
+EW1200 - <strong>WiFi</strong>: Dual-band AC1200 (300 Mbps @ 2.4GHz +
+867 Mbps @ 5GHz) - <strong>Support VLAN</strong>: 802.1Q natif (jusqu’à
+8 SSID) - <strong>Alimentation</strong>: PoE 802.3af/at ou adaptateur
+secteur - <strong>Interfaces</strong>: 1x Gigabit Ethernet RJ45 -
+<strong>Mode</strong>: True Access Point (pas de routeur/NAT)</p>
+<p><strong>Coût d’acquisition</strong>: 300 dirhams marocains (~27€)</p>
+<h3 id="avantages-par-rapport-à-un-routeur-converti">2.2 Avantages par
+Rapport à un Routeur Converti</h3>
+<p>Contrairement aux routeurs ADSL reconvertis (TD-W8960N), l’EW1200
+offre: - Support VLAN natif pour segmentation réseau future - WiFi 5 GHz
+(802.11ac) pour meilleures performances - Mode Access Point dédié sans
+configuration NAT/DHCP à désactiver - Multiple SSID pour réseaux WiFi
+séparés (LAN/IoT/Guest) - Performances stables en environnement
+professionnel</p>
+<hr />
+<h2 id="installation-de-laccess-point">3. Installation de l’Access
+Point</h2>
+<h3 id="phase-de-configuration-initiale">3.1 Phase de Configuration
+Initiale</h3>
+<p>Nous avons procédé à une configuration isolée de l’EW1200 avant
+intégration à pfSense.</p>
+<p><strong>Étape 1: Connexion directe laptop → EW1200</strong></p>
+<p>Nous avons configuré temporairement le laptop avec une IP statique
+dans le subnet par défaut de l’AP: IP Laptop: Subnet par défaut de l’AP
+Masque: /24 Passerelle: IP par défaut de l’AP</p>
+<p>text</p>
+<p><strong>Accès interface web</strong>: IP par défaut du
+constructeur</p>
+<p><strong>Étape 2: Configuration réseau de l’AP</strong></p>
+<p>Nous avons reconfiguré l’adresse IP de l’EW1200 pour l’intégrer au
+réseau LAN de pfSense: IP Address Mode: Static IP IP Address: [IP fixe
+dans subnet LAN pfSense] Subnet Mask: /24 Default Gateway: [IP LAN
+pfSense] Primary DNS: [IP LAN pfSense]</p>
+<p>text</p>
+<p>Après sauvegarde, l’AP redémarre et devient accessible sur sa
+nouvelle adresse.</p>
+<p><strong>Étape 3: Configuration WiFi dual-band</strong></p>
+<p><strong>Bande 2.4 GHz</strong> (portée maximale): Enable Wireless: ✓
+SSID: Homelab_2G Channel: Auto (canaux recommandés: 1, 6, 11) Channel
+Width: 20 MHz (meilleure portée) Transmit Power: High Security Mode:
+WPA2-PSK Encryption: AES Password: [Mot de passe sécurisé min 12
+caractères]</p>
+<p>text</p>
+<p><strong>Bande 5 GHz</strong> (performances maximales): Enable
+Wireless: ✓ SSID: Homelab_5G Channel: Auto (canaux recommandés: 36, 40,
+44, 48) Channel Width: 40 MHz ou 80 MHz Transmit Power: High Security
+Mode: WPA2-PSK Encryption: AES Password: [Même mot de passe que 2.4
+GHz]</p>
+<p>text</p>
+<p><strong>Étape 4: Mode Access Point</strong></p>
+<p>Nous avons vérifié que l’EW1200 est configuré en mode Access Point
+pur: Operation Mode: Access Point (AP Mode) DHCP Server: Disabled NAT:
+Disabled Firewall: Disabled</p>
+<p>text</p>
+<h3 id="intégration-à-linfrastructure-pfsense">3.2 Intégration à
+l’Infrastructure pfSense</h3>
+<p><strong>Câblage physique</strong>: pfSense [Interface LAN] ─── Câble
+Ethernet ─── [Port LAN] EW1200</p>
+<p>text</p>
+<p><strong>Important</strong>: Utilisation exclusive du port LAN de
+l’access point, pas de port WAN/DSL.</p>
+<p><strong>Vérification interface pfSense</strong>:</p>
+<p>Nous avons contrôlé l’état de l’interface LAN via <strong>Status &gt;
+Interfaces</strong>: Interface: LAN (re0) Status: active (UP) IPv4
+Address: [IP LAN pfSense]/24 Link: 1000baseT full-duplex</p>
+<p>text</p>
+<hr />
+<h2 id="tests-et-validation">4. Tests et Validation</h2>
+<h3 id="connectivité-wifi">4.1 Connectivité WiFi</h3>
+<p><strong>Test 1: Connexion clients</strong></p>
+<p>Nous avons connecté plusieurs appareils aux réseaux WiFi: - Laptop →
+Homelab_5G - Smartphone → Homelab_2G - Tablette → Homelab_5G</p>
+<p>Tous les clients ont obtenu automatiquement une adresse IP via le
+serveur DHCP de pfSense.</p>
+<p><strong>Test 2: Vérification adressage</strong></p>
+<p>Commande de vérification sur les clients: Windows ipconfig</p>
+<p>Linux/Mac ifconfig ip addr show</p>
+<p>text</p>
+<p>Résultats attendus: IPv4 Address: [Plage DHCP LAN pfSense] Subnet
+Mask: 255.255.255.0 Default Gateway: [IP LAN pfSense] DNS Servers: [IP
+LAN pfSense]</p>
+<p>text</p>
+<p><strong>Test 3: Latence et performance</strong></p>
+<p>Tests de connectivité depuis les clients WiFi: Ping pfSense (latence
+&lt; 5ms attendue) ping [IP LAN pfSense]</p>
+<p>Ping access point (latence &lt; 2ms attendue) ping [IP EW1200]</p>
+<p>Ping Internet ping 8.8.8.8</p>
+<p>Résolution DNS ping google.com</p>
+<p>text</p>
+<h3 id="vérifications-pfsense">4.2 Vérifications pfSense</h3>
+<p><strong>DHCP Leases actifs</strong>:</p>
+<p>Via <strong>Status &gt; DHCP Leases</strong>, nous avons vérifié la
+présence de tous les clients WiFi avec leurs adresses MAC, hostnames et
+durée de bail.</p>
+<p><strong>États de connexions</strong>:</p>
+<p>Via <strong>Diagnostics &gt; States</strong>, nous avons confirmé les
+connexions actives des clients WiFi (filtrage par subnet LAN).</p>
+<p><strong>Statistiques interface LAN</strong>:</p>
+<p>Commande console pour vérifier l’interface: ifconfig re0</p>
+<p>text</p>
+<p>Vérifications effectuées: - Status: active - Vitesse: 1000baseT
+full-duplex - Erreurs (Ierrs/Oerrs): 0 - Interruptions MSI-X:
+fonctionnelles</p>
+<hr />
+<h2 id="configuration-pfblockerng-adblock-intégré">5. Configuration
+pfBlockerNG (AdBlock Intégré)</h2>
+<h3 id="introduction-au-blocage-dns">5.1 Introduction au Blocage
+DNS</h3>
+<p>pfBlockerNG est la solution <strong>native</strong> de pfSense pour
+bloquer publicités, trackers et malwares. Il fonctionne via
+<strong>DNSBL (DNS Blocklist)</strong>, en interceptant les requêtes DNS
+vers des domaines malveillants avant qu’elles n’atteignent Internet.</p>
+<p><strong>Avantages vs solutions externes</strong>: - Pas besoin de
+Pi-hole ou serveur AdBlock séparé - Intégration native avec DNS Resolver
+(Unbound) - Blocage au niveau réseau (tous les clients protégés
+automatiquement) - Pas de modification nécessaire sur les clients -
+Support HTTPS (pas de man-in-the-middle)</p>
+<h3 id="configuration-initiale-dnsbl">5.2 Configuration Initiale
+DNSBL</h3>
+<p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt; DNSBL</p>
+<p><strong>Activation DNSBL</strong>: ☑ Enable DNSBL DNSBL Mode: Unbound
+mode (recommandé) DNSBL VIP: [IP virtuelle créée automatiquement]</p>
+<p>text</p>
+<p><strong>Mode Unbound</strong>: Intégration avec le DNS Resolver de
+pfSense pour inspection transparente des requêtes.</p>
+<p><strong>Paramètres avancés</strong>: DNSBL Blocking Mode: Unbound
+Python Mode Enable Logging: ✓ (pour analyse trafic bloqué) SafeSearch: ✓
+(force SafeSearch sur moteurs de recherche) Python: ✓ Enable (requis
+pour certaines fonctionnalités)</p>
+<p>text</p>
+<p>Sauvegarde de la configuration.</p>
+<h3 id="activation-des-listes-de-blocage">5.3 Activation des Listes de
+Blocage</h3>
+<p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt; Feeds</p>
+<p>pfBlockerNG propose des listes pré-configurées de domaines et IPs
+malveillants.</p>
+<p><strong>Catégories activées</strong>:</p>
+<p><strong>1. Ads (Publicités)</strong>: - Steven Black - EasyList -
+Energized Basic</p>
+<p><strong>2. Malicious (Malwares et menaces)</strong>: - URLhaus
+Malware - Phishing Army - Threat Intel</p>
+<p><strong>3. Tracking (Trackers et analytics)</strong>: - EasyPrivacy -
+Disconnect Tracking</p>
+<p><strong>4. Social (Réseaux sociaux - optionnel)</strong>: - Facebook
+- Twitter/X - TikTok (selon besoins utilisateur)</p>
+<p><strong>Configuration pour chaque feed</strong>: State: ON Action:
+Unbound Update Frequency: Once a day (via CRON)</p>
+<p>text</p>
+<h3 id="création-de-listes-personnalisées">5.4 Création de Listes
+Personnalisées</h3>
+<p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt; DNSBL
+&gt; DNSBL Groups</p>
+<p>Nous avons créé un groupe personnalisé pour ajouter des domaines
+spécifiques:</p>
+<p><strong>Groupe: Custom_Blocklist</strong> DNS Group Name:
+Custom_Blocklist Description: Domaines personnalisés à bloquer DNSBL: ON
+Custom Domain List: [Domaines manuels à bloquer]</p>
+<p>text</p>
+<p><strong>Exemple domaines personnalisés</strong>: doubleclick.net
+googleadservices.com facebook.com (si blocage réseau social
+souhaité)</p>
+<p>text</p>
+<h3 id="mise-à-jour-et-activation">5.5 Mise à Jour et Activation</h3>
+<p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt;
+Update</p>
+<p>Lancement de la première synchronisation des listes: Clic sur “Run” →
+Reload ALL</p>
+<p>text</p>
+<p>Cette opération télécharge toutes les listes activées et les charge
+dans Unbound. Durée: 2-5 minutes selon nombre de listes.</p>
+<p><strong>Vérification logs</strong>:</p>
+<p>Les logs confirment le téléchargement et le parsing de chaque liste
+avec nombre de domaines bloqués.</p>
+<h3 id="configuration-automatique-cron">5.6 Configuration Automatique
+(CRON)</h3>
+<p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt; General
+&gt; CRON Settings</p>
+<p>Configuration des mises à jour automatiques: Update Frequency: Once a
+day Update Hour: 03:00 (heure creuse) Force Update on Reload: ✓</p>
+<p>text</p>
+<p>pfBlockerNG mettra à jour les listes quotidiennement sans
+intervention manuelle.</p>
+<hr />
+<h2 id="optimisations-wifi">6. Optimisations WiFi</h2>
+<h3 id="positionnement-physique-de-lap">6.1 Positionnement Physique de
+l’AP</h3>
+<p><strong>Placement optimal</strong>: - <strong>Hauteur</strong>: 2-2.5
+mètres du sol (fixation murale ou plafond) -
+<strong>Centralisation</strong>: Au centre de la zone de couverture
+souhaitée - <strong>Éviter</strong>: Murs béton armé, micro-ondes,
+babyphones, boîtiers métalliques</p>
+<p><strong>Orientation antennes</strong> (si externes): - Verticales
+pour propagation horizontale omnidirectionnelle</p>
+<h3 id="optimisations-5-ghz">6.2 Optimisations 5 GHz</h3>
+<p><strong>Paramètres avancés EW1200</strong>: Channel Width: 80 MHz
+(meilleur débit vs 40 MHz) Beamforming: Enable (focus signal vers
+clients) LDPC: Enable (correction erreurs avancée) Short GI: Enable
+(intervalle garde réduit, +10% débit) Legacy Rates: Disable (force
+802.11ac minimum)</p>
+<p>text</p>
+<h3 id="optimisations-2.4-ghz">6.3 Optimisations 2.4 GHz</h3>
+<p><strong>Paramètres portée maximale</strong>: Channel Width: 20 MHz
+(meilleure portée que 40 MHz) Transmit Power: 100% (puissance maximale)
+Channel: Fixe sur 1, 6 ou 11 (évite overlapping) Legacy Support: 802.11n
+minimum (pas de b/g)</p>
+<p>text</p>
+<h3 id="sécurité-wifi-renforcée">6.4 Sécurité WiFi Renforcée</h3>
+<p><strong>Paramètres de chiffrement</strong>: WPA Version: WPA2-PSK
+uniquement (pas de WPA/WPA2 mixed) Encryption: AES exclusivement (jamais
+TKIP) Group Key Rekey: 3600 secondes PMF (Protected Management Frames):
+Enable si disponible WPS: Disable (faille de sécurité connue)</p>
+<p>text</p>
+<h3 id="fonctionnalités-avancées">6.5 Fonctionnalités Avancées</h3>
+<p><strong>Fast Roaming</strong> (si plusieurs APs futurs): 802.11r
+(Fast Transition): Enable 802.11k (Radio Resource Management): Enable
+802.11v (BSS Transition Management): Enable</p>
+<p>text</p>
+<p><strong>Client Isolation</strong>: AP Isolation: Disable (permet
+communication inter-clients)</p>
+<p>text</p>
+<p>Activation uniquement pour réseaux Guest/IoT dans architecture VLAN
+future.</p>
+<hr />
+<h2 id="surveillance-et-maintenance">7. Surveillance et Maintenance</h2>
+<h3 id="monitoring-pfblockerng">7.1 Monitoring pfBlockerNG</h3>
+<p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt;
+Reports</p>
+<p><strong>Statistiques disponibles</strong>: - Top domaines bloqués
+(publicités les plus fréquentes) - Clients générant le plus de requêtes
+bloquées - Tendances temporelles (heures de pic) - Pourcentage de
+requêtes bloquées vs totales</p>
+<p><strong>Alertes recommandées</strong>:</p>
+<p>Configuration d’alertes email si nombre de domaines bloqués anormal
+(potentiel malware).</p>
+<h3 id="monitoring-wifi-via-ntopng">7.2 Monitoring WiFi via ntopng</h3>
+<p><strong>Navigation</strong>: Diagnostics &gt; ntopng</p>
+<p><strong>Métriques surveillées</strong>: - Bande passante utilisée par
+client WiFi - Top talkers (clients consommant le plus) - Protocoles
+utilisés (HTTP, HTTPS, DNS, etc.) - Alertes débit anormal</p>
+<h3 id="logs-système">7.3 Logs Système</h3>
+<p><strong>Logs critiques à surveiller</strong>:</p>
+<p><strong>System &gt; Logs &gt; System</strong>: - Redémarrages
+inattendus - Erreurs kernel</p>
+<p><strong>System &gt; Logs &gt; Firewall</strong>: - Tentatives de
+connexion bloquées - Scans de ports</p>
+<p><strong>Services &gt; DNS Resolver &gt; Logs</strong>: - Requêtes DNS
+bloquées par pfBlockerNG - Erreurs résolution DNS</p>
+<h3 id="commandes-de-diagnostic">7.4 Commandes de Diagnostic</h3>
+<p><strong>Via Diagnostics &gt; Command Prompt</strong>:</p>
+<p>État pfBlockerNG pfctl -t pfB_PRI1_v4 -T show</p>
+<p>Statistiques DNS bloqué pfctl -s rules | grep DNSBL</p>
+<p>Clients DHCP WiFi cat /var/dhcpd/var/db/dhcpd.leases | grep lease</p>
+<p>Performance WiFi (via AP - connexion SSH si disponible) iwinfo wlan0
+info</p>
+<p>text</p>
+<hr />
+<h2 id="sauvegardes-et-documentation">8. Sauvegardes et
+Documentation</h2>
+<h3 id="sauvegarde-configuration-pfsense">8.1 Sauvegarde Configuration
+pfSense</h3>
+<p><strong>Automatisation recommandée</strong>:</p>
+<p><strong>Navigation</strong>: Diagnostics &gt; Backup &amp;
+Restore</p>
+<p><strong>Configuration sauvegarde automatique</strong>: ☑ Enable
+Automatic Configuration Backups Backup Count: 30 (30 dernières
+configurations)</p>
+<p>text</p>
+<p><strong>Sauvegarde manuelle</strong>: - Effectuée après chaque
+modification majeure - Format: XML - Stockage: Cloud backup externe +
+local</p>
+<h3 id="sauvegarde-configuration-ew1200">8.2 Sauvegarde Configuration
+EW1200</h3>
+<p><strong>Via interface web AP</strong>:</p>
+<p>Exportation de la configuration complète au format propriétaire.
+Stockage identique aux backups pfSense.</p>
+<h3 id="documentation-réseau">8.3 Documentation Réseau</h3>
+<p><strong>Fichiers maintenus</strong>: -
+<strong>network_diagram.md</strong>: Schéma architecture complète -
+<strong>ip_allocation.md</strong>: Tableau allocation IPs statiques -
+<strong>wifi_config.md</strong>: Paramètres WiFi (SSID, channels,
+sécurité) - <strong>changelog.md</strong>: Historique modifications
+configuration</p>
+<hr />
+<h2 id="architecture-réseau-finale">9. Architecture Réseau Finale</h2>
+<h3 id="schéma-complet">9.1 Schéma Complet</h3>
+<p>Internet (FAI) ↓ ┌─────────────┐ │ Box ISP │ └──────┬──────┘ │
+┌──────▼────────────────┐ │ Zotac ZBOX CI337 │ │ pfSense 2.8.1 │ │ │ │
+WAN (re1): DHCP ISP │ │ LAN (re0): [Subnet] │ │ │ │ Services: │ │ -
+Firewall │ │ - DHCP Server │ │ - DNS Resolver │ │ - pfBlockerNG DNSBL │
+│ - Suricata IDS │ └──────┬────────────────┘ │ ┌──────▼────────────────┐
+│ Afoundry EW1200 │ │ Access Point │ │ │ │ 2.4GHz: Homelab_2G │ │ 5GHz:
+Homelab_5G │ └───────────────────────┘ │ WiFi ↓
+┌─────────────────────────────┐ │ Clients Réseau │ │ - Laptops │ │ -
+Smartphones │ │ - Tablettes │ │ - IoT (protégés pfBlockerNG)│
+└─────────────────────────────┘</p>
+<p>text</p>
+<h3 id="flux-de-trafic">9.2 Flux de Trafic</h3>
+<p><strong>Navigation Web depuis client WiFi</strong>: Client WiFi → DNS
+Request → pfSense (Unbound)</p>
+<p>pfSense → pfBlockerNG DNSBL Check</p>
+<p>Si domaine bloqué: Retour IP VIP (page bloc)</p>
+<p>Si domaine légitime: Forward au DNS upstream</p>
+<p>Résolution DNS → Retour IP au client</p>
+<p>Client → HTTP/HTTPS Request → pfSense Firewall</p>
+<p>pfSense → Suricata IPS Inspection</p>
+<p>Trafic autorisé → Forward vers WAN → Internet</p>
+<p>text</p>
+<hr />
+<h2 id="performances-et-statistiques">10. Performances et
+Statistiques</h2>
+<h3 id="métriques-obtenues">10.1 Métriques Obtenues</h3>
+<p><strong>Latence WiFi</strong> (ping vers pfSense): - 2.4 GHz: 2-5 ms
+- 5 GHz: 1-3 ms</p>
+<p><strong>Débit WiFi</strong> (tests iperf3): - 2.4 GHz: 80-120 Mbps
+réels - 5 GHz: 300-500 Mbps réels (selon distance et obstacles)</p>
+<p><strong>Blocage publicitaire</strong>: - Requêtes DNS bloquées:
+20-40% du trafic total - Domaines uniques bloqués: 500k-1M+ selon listes
+activées</p>
+<p><strong>Charge CPU pfSense</strong> (avec Suricata + pfBlockerNG): -
+Idle: 10-20% - Navigation web standard: 25-35% - Téléchargement saturé:
+40-60%</p>
+<h3 id="consommation-électrique">10.2 Consommation Électrique</h3>
+<p><strong>Mesures obtenues</strong>: - pfSense Zotac CI337: 15-25W -
+EW1200 (via adaptateur): 10-12W - <strong>Total infrastructure</strong>:
+~35-40W (24/7)</p>
+<p><strong>Coût électrique annuel</strong> (à 0.15€/kWh): 40W × 24h ×
+365j / 1000 × 0.15€ = ~52€/an</p>
+<p>text</p>
+<hr />
+<h2 id="troubleshooting-courants">11. Troubleshooting Courants</h2>
+<h3 id="problème-pas-daccès-internet-depuis-wifi">11.1 Problème: Pas
+d’accès Internet depuis WiFi</h3>
+<p><strong>Vérifications</strong>: 1. Clients obtiennent IP DHCP
+correcte ? 2. Passerelle configurée = IP pfSense ? 3. DNS configuré = IP
+pfSense ? 4. Règle firewall LAN → Any existe ? 5. Interface WAN pfSense
+fonctionnelle ?</p>
+<p><strong>Solution typique</strong>: - Vérifier <strong>Firewall &gt;
+Rules &gt; LAN</strong> : Règle “Default allow LAN to any” active</p>
+<h3 id="problème-sites-légitimes-bloqués-par-pfblockerng">11.2 Problème:
+Sites légitimes bloqués par pfBlockerNG</h3>
+<p><strong>Diagnostic</strong>:</p>
+<p>Consulter <strong>Firewall &gt; pfBlockerNG &gt; Reports</strong>
+pour identifier domaine bloqué.</p>
+<p><strong>Solutions</strong>: 1. Ajouter domaine à whitelist:
+<strong>DNSBL &gt; DNSBL Whitelist</strong> 2. Désactiver temporairement
+feed trop agressif 3. Créer exception par client (alias IP)</p>
+<h3 id="problème-wifi-5-ghz-invisible">11.3 Problème: WiFi 5 GHz
+invisible</h3>
+<p><strong>Causes fréquentes</strong>: - Channel DFS occupé (36-48 safe,
+52+ peuvent être bloqués) - Région mal configurée (certains channels
+interdits) - Device client incompatible 802.11ac</p>
+<p><strong>Solutions</strong>: - Fixer channel 5 GHz sur 36 ou 40 -
+Vérifier région = Morocco ou Europe - Tester avec autre client
+compatible 5 GHz</p>
+<h3 id="problème-déconnexions-wifi-fréquentes">11.4 Problème:
+Déconnexions WiFi fréquentes</h3>
+<p><strong>Optimisations</strong>: 1. Réduire Transmit Power si trop
+forte (paradoxalement) 2. Fixer channels (éviter Auto) 3. Désactiver
+Power Saving sur clients 4. Firmware update EW1200 si disponible 5.
+Vérifier interférences (app WiFi Analyzer)</p>
+<hr />
+<h2 id="sécurité-renforcée">12. Sécurité Renforcée</h2>
+<h3 id="règles-firewall-strictes">12.1 Règles Firewall Strictes</h3>
+<p><strong>Philosophie</strong>: Deny by default, allow
+explicitement.</p>
+<p><strong>Règle anti-lockout automatique</strong>: - pfSense crée
+automatiquement règle permettant accès WebGUI depuis LAN</p>
+<p><strong>Règles personnalisées créées</strong>: LAN → pfSense (port
+443/80): Allow (WebGUI)</p>
+<p>LAN → pfSense (port 53): Allow (DNS)</p>
+<p>LAN → Any (Internet): Allow</p>
+<p>LAN → WAN address: Block (évite accès direct box)</p>
+<p>text</p>
+<h3 id="prévention-intrusions-suricata">12.2 Prévention Intrusions
+(Suricata)</h3>
+<p><strong>Configuration minimale active</strong>: - Interface WAN: Mode
+IPS inline (bloque attaques) - Règles ET Open: Activées (signatures
+courantes) - Logging: Enable pour analyse post-incident</p>
+<p><strong>Categories activées</strong>: - emerging-attack_response -
+emerging-dos - emerging-exploit - emerging-malware - emerging-scan</p>
+<h3 id="mises-à-jour-automatiques">12.3 Mises à Jour Automatiques</h3>
+<p><strong>pfSense</strong>: - Vérification hebdomadaire disponibilité
+updates - Mise à jour manuelle après lecture changelog</p>
+<p><strong>pfBlockerNG</strong>: - Listes DNSBL: Update automatique
+quotidien (03h) - Listes IP: Update automatique quotidien (03h)</p>
+<p><strong>Suricata</strong>: - Règles ET Open: Update automatique
+quotidien</p>
+<hr />
+<h2 id="évolutions-futures-préparées">13. Évolutions Futures
+Préparées</h2>
+<h3 id="support-vlans-intégré">13.1 Support VLANs Intégré</h3>
+<p>L’EW1200 supporte nativement les VLANs 802.1Q, permettant la
+segmentation future: - VLAN 10: LAN principal (existant) - VLAN 30: IoT
+(objets connectés isolés) - VLAN 99: Guest (invités sans accès LAN)</p>
+<p><strong>Configuration future</strong>: Multiple SSID sur EW1200 avec
+VLAN tagging vers switch managed.</p>
+<h3 id="haute-disponibilité-ha">13.2 Haute Disponibilité (HA)</h3>
+<p><strong>Préparation CARP</strong> (Common Address Redundancy
+Protocol): - Possibilité future d’ajouter second pfSense en HA - IP
+virtuelle partagée entre les deux - Failover automatique si panne
+primaire</p>
+<h3 id="vpn-site-to-site">13.3 VPN Site-to-Site</h3>
+<p><strong>WireGuard déjà installé</strong>: - Configuration future pour
+connecter sites distants - Ou accès nomade sécurisé (road warrior)</p>
+<hr />
+<h2 id="conclusion-partie-2">Conclusion Partie 2</h2>
+<p>Nous avons réussi à déployer une infrastructure WiFi professionnelle
+avec access point dual-band performant, intégré à pfSense. Le système de
+blocage de publicités et malwares via pfBlockerNG est opérationnel,
+protégeant automatiquement tous les clients du réseau sans configuration
+individuelle.</p>
+<p>L’architecture actuelle offre: - <strong>Sécurité renforcée</strong>:
+Firewall pfSense + IDS Suricata + AdBlock pfBlockerNG -
+<strong>Performances optimales</strong>: WiFi AC dual-band 1200 Mbps
+théorique - <strong>Évolutivité</strong>: Support VLAN natif pour
+segmentation future - <strong>Stabilité</strong>: Drivers optimisés,
+matériel professionnel - <strong>Monitoring complet</strong>: ntopng +
+logs centralisés</p>
+<p><strong>Investissement total cumulé</strong>: 85€ (pfSense) + 27€
+(EW1200) = <strong>112€</strong> <strong>Temps configuration Partie
+2</strong>: ~2-3 heures <strong>Statut</strong>: ✅ Production-ready
+avec protection avancée</p>
+<hr />
+<p><em>Document rédigé dans le cadre d’un projet homelab de segmentation
+réseau et sécurisation d’infrastructure avec blocage publicitaire
+intégré.</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity Enthusiast</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#projects">Projects</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

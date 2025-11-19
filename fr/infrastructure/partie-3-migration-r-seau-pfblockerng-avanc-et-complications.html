@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications - Technical tutorial and guide">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications | Omar LYAHYAI Technical Blog</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="/index.html#about" class="nav-link">About</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">EN</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Home</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>9 min read</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: en or fr
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+EXAMPLES OF VALID TAGS:
+- tags: homelab
+- tags: pfsense
+- tags: networking
+- tags: cybersecurity
+
+The workflow will:
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: en or fr
+- tags: keyword1, keyword2
+- description: "Short summary" (KEEP QUOTES)
+
+RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use status: published (for website) or draft (work only)
+❌ DON'T: Remove quotes from title/date/description
+❌ DON'T: Use special characters without quotes
+
+The workflow will:
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<!-- 
+TEMPLATE USAGE:
+1. Press Alt+E in Obsidian to apply this template
+2. Update the frontmatter:
+   - title: "Your article title (keep quotes)"
+   - date: "Update if needed (YYYY-MM-DD format)"
+   - category: infrastructure | network_security | automation_ai | reference | docker_services | remote_access
+   - status: published (ready for website) | draft (work in progress)
+   - language: en (English) | fr (French) - workflow will detect but you can specify
+   - tags: Comma-separated relevant tags
+   - description: "Short summary (keep quotes if contains special chars)"
+
+3. Write your content below
+
+IMPORTANT:
+- Keep all quotes around text values with special characters
+- Date format must be "YYYY-MM-DD" with quotes
+- Status must be "published" for workflow to generate HTML
+- Language will be auto-detected from content but you can set it manually
+
+WORKFLOW BEHAVIOR:
+- Detects language from content (overrides if wrong in large files >5000 chars)
+- Generates bilingual versions (EN + FR)
+- Creates HTML with full navigation
+- Preserves images and links
+-->
+<!-- 
+NAMING CONVENTION:
+- For English articles: your-article-title.md
+- For French articles:  your-article-title-fr.md
+
+The workflow will automatically:
+- Detect language from filename
+- Generate title from filename
+- Add current date
+- Clean YAML for Pandoc processing
+-->
+<hr />
+<h2 id="contexte">Contexte</h2>
+<p>Cette partie décrit la migration complète de l’infrastructure réseau
+Proxmox/VMs vers le sous-réseau pfSense, la configuration avancée du
+filtrage IP/DNS avec pfBlockerNG, la gestion des complications
+techniques et les solutions trouvées pour chaque problème, en gardant
+toutes les adresses IP réelles masquées.</p>
+<hr />
+<h2 id="étapes-réalisées">Étapes réalisées</h2>
+<h3 id="sauvegarde-et-préparation">1. Sauvegarde et Préparation</h3>
+<ul>
+<li>Sauvegarde manuelle du fichier de configuration pfSense
+<code>.xml</code> avant toute migration.</li>
+<li>Inventaire et documentation des adresses IP existantes.</li>
+<li>Arrêt des services critiques sur les VMs (ex. n8n) avant
+modification réseau.</li>
+</ul>
+<hr />
+<h3 id="configuration-avancée-pfblockerng">2. Configuration avancée
+pfBlockerNG</h3>
+<ul>
+<li><strong>Blocage IPs (Inbound Only) :</strong>
+<ul>
+<li>Activation pfBlockerNG uniquement sur l’interface WAN, action
+Block.</li>
+<li>Ajout d’un ensemble PRI1 avec 9 sources reconnues (FeodoTracker,
+CINSArmy, ET, ISC, Spamhaus, Blocklist.de, URLhaus…).</li>
+<li>Problème : création automatique de règles sur LAN → blocage
+réseau.</li>
+<li><strong>Solution :</strong> Suppression du LAN/outbound dans la
+config générale, suppression manuelle des règles sur LAN. Seules les
+règles sur WAN (inbound) sont gardées.</li>
+</ul></li>
+<li><strong>Blocage GeoIP :</strong>
+<ul>
+<li>Désactivé pour tous les pays, choix d’analyser les logs plusieurs
+jours avant tout blocage géolocalisé.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="mise-en-place-dnsbl-retours-dexpérience">3. Mise en place DNSBL
+&amp; Retours d’expérience</h3>
+<ul>
+<li><strong>Problème : choix d’IP DNSBL VIP</strong>
+<ul>
+<li>Essai avec plusieurs IPs dans le sous-réseau LAN rejeté par
+pfBlockerNG (“Address must be in an isolated Range”).</li>
+<li>Tentative avec une IP hors /24 (échec: pas routée).</li>
+<li><strong>Solution temporaire :</strong> Utilisation de 127.0.0.1
+(loopback) comme VIP DNSBL → accepté par pfBlockerNG et fonctionnel dans
+ce contexte.</li>
+</ul></li>
+<li><strong>Groupes DNSBL configurés :</strong>
+<ul>
+<li>Ads_Basic (StevenBlack hosts)</li>
+<li>Ads_EasyList (format compatible seulement, pas le easyprivacy.txt
+original)</li>
+<li>Malware (URLhaus)</li>
+<li>Phishing (Phishing Army)</li>
+</ul></li>
+<li><strong>Problème whitelist DNSBL :</strong>
+<ul>
+<li>Impossible de trouver la whitelist “globale” classique.</li>
+<li><strong>Dépannage :</strong> Ajout d’exceptions (Microsoft, Ubuntu,
+Docker, Cloudflare…) directement dans chaque groupe via la section
+“Custom Domain Whitelist”.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="migration-proxmox-vms-vers-le-nouveau-lan">4. Migration Proxmox
++ VMs vers le nouveau LAN</h3>
+<ul>
+<li><strong>Orchestration étape par étape :</strong>
+<ol type="1">
+<li>Migration du host Proxmox en premier (modification
+interfaces/bridge/gateway/dns).</li>
+<li>Reconnexion via nouvelle IP, contrôle de l’accès Web.</li>
+<li>Migration successive des VMs. Pour les VMs Ubuntu avec Netplan,
+passage en DHCP4 (puis attribution statique via mapping pfSense pour
+production).</li>
+</ol></li>
+<li><strong>Tests principaux :</strong>
+<ul>
+<li>Ping gateway pfSense</li>
+<li>Test DNS, résolution externe, apt update, docker pull…</li>
+<li>Valider que toutes les règles pfBlockerNG n’empêchent ni les repos
+Linux, ni Docker, ni npm.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="cas-particulier-n8n-docker-cloudflare-tunnel">5. Cas particulier
+n8n / Docker / Cloudflare Tunnel</h3>
+<ul>
+<li><strong>Problème 1 : n8n inaccessible après migration</strong>
+<ul>
+<li>Origine : Docker n8n bind par défaut sur 443 et un nom de domaine,
+n’écoute pas sur 0.0.0.0, ni en HTTP sur 5678.</li>
+<li><strong>Solution :</strong> Refonte du
+<code>docker-compose.yml</code> pour forcer le bind sur 0.0.0.0:5678,
+abandon du SSL côté Docker (géré par Cloudflare), reboot safe via
+<code>docker-compose down/up</code> (données conservées via volume
+Docker).</li>
+</ul></li>
+<li><strong>Problème 2 : Cloudflare Tunnel</strong>
+<ul>
+<li>Origine : tunnel pointait sur IP/port obsolète, et tunnel était
+encore paramétré en HTTPS.</li>
+<li><strong>Solution :</strong> Modification de la config Tunnel pour
+HTTP, nouvelle IP VM, désactivation noTLSVerify inutile.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="tests-post-migration">6. Tests post-migration</h3>
+<ul>
+<li><strong>Accessibilité</strong> :
+<ul>
+<li>Accès LAN sur tous les services (n8n, Proxmox, WebGUI pfSense,
+AP).</li>
+<li>Accès externe n8n via Cloudflare Tunnel.</li>
+</ul></li>
+<li><strong>Blocage pfBlockerNG</strong> :
+<ul>
+<li>Log/alertes, requêtes DNS bloquées (~35% en moyenne), pas de
+faux-positifs critiques (dank à whitelist incrémentale).</li>
+<li>Tests ping/dns/réseau OK pour toutes les VMs et hôtes LAN.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="complications-et-solutions">Complications et solutions</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 34%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr>
+<th>Problème rencontré</th>
+<th>Symptôme</th>
+<th>Solution appliquée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Règle pfBlockerNG sur LAN</td>
+<td>LAN bloqué, perte accès</td>
+<td>Suppression Outbound LAN, règles supprimées manuellement</td>
+</tr>
+<tr>
+<td>DNSBL VIP refusée dans LAN /24</td>
+<td>Erreur “isolated range”, ping page bloc KO</td>
+<td>VIP mis à 127.0.0.1 (temporaire, fonctionne)</td>
+</tr>
+<tr>
+<td>easyprivacy.txt incompatible</td>
+<td>Erreur invalid URL</td>
+<td>Substitution par sources compatibles domaines</td>
+</tr>
+<tr>
+<td>Pas de whitelist globale DNSBL</td>
+<td>Incapacité whitelister worldwide</td>
+<td>Whitelists ajoutées dans chaque groupe</td>
+</tr>
+<tr>
+<td>n8n / Docker pas accessible</td>
+<td>Aucun container n’écoute sur 5678</td>
+<td>ports fixés, HTTP activé, SSL désactivé local</td>
+</tr>
+<tr>
+<td>Tunnel Cloudflare non routé</td>
+<td>HTTPS KO, mauvaise destination interne</td>
+<td>Area HTTP, update URL/IP cible dans dashboard tunnel</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="schéma-technique-masqué">Schéma technique (masqué)</h2>
+<p>[Internet] – [Box/FAI] – [pfSense][LAN] – [EW1200 AP] ==Wifi==
+[Clients]</p>
+<p>[Proxmox Host]–[VMs: n8n, autres]</p>
+<p>[Tunnel Cloudflare]</p>
+<p>text</p>
+<hr />
+<h2 id="metrics-post-migration">Metrics post-migration</h2>
+<ul>
+<li>Taux de requêtes DNS bloquées : ≈ 35%</li>
+<li>Aucun downtime notable (&gt;15 min) sur les services critiques</li>
+<li>pfBlockerNG IPv4 : ~30 à 50k IPs bloquées actives</li>
+<li>Temps total (Partie 3) : ≈ 3-4h</li>
+<li>Aucun faux positif bloquant la production (seulement
+pubs/trackers)</li>
+</ul>
+<hr />
+<h2 id="prochaines-étapes-proposées">Prochaines étapes proposées</h2>
+<ul>
+<li>Surveillance quotidienne logs pfBlockerNG</li>
+<li>Validation charge/latence sur le long terme</li>
+<li>Documentation des prochaines migrations (VLAN, segmentation
+IOT/Prod)</li>
+<li>Étendre l’usage du monitoring (Grafana, Prometheus, etc.)</li>
+</ul>
+<hr />
+<p><em>Rédigé au format Markdown, partie 3 du projet homelab personalisé
+pfsense/proxmox/cloudflare, IPs et credentials volontairement
+masqués.</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity Enthusiast</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#projects">Projects</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

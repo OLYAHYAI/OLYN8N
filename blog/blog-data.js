@@ -1,114 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
+            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html"
         },
         {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
+            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
         },
         {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
+            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
+            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html"
+            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html"
+            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Mcp Configuration Guide Yaml Setup",
+            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "title": "Building A Secure Lab: Kali Linux And Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html"
+            "url": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
         },
         {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Mcp Configuration Guide Yaml Setup",
+            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "title": "Building A Secure Lab: Kali Linux And Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html"
+            "url": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
         },
         {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto Sync To Github Website",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html"
+            "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         },
         {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto Sync To Github Website",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html"
+            "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         }
     ],
     "categories": {
