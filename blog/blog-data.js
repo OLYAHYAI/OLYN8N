@@ -1,7 +1,7 @@
 const blogData = {
     "articles": [
         {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
+            "id": "docker-networking-troubleshooting-container-communication",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -9,10 +9,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
+            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html"
         },
         {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
+            "id": "docker-networking-troubleshooting-container-communication",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -20,95 +20,7 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
-        },
-        {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
-        },
-        {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
-        },
-        {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html"
-        },
-        {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html"
-        },
-        {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
-        },
-        {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
-        },
-        {
-            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
-        },
-        {
-            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
+            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
         }
     ],
     "categories": {

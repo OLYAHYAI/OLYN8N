@@ -1,6 +1,6 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-19T12:04:48.229Z",
-  "totalArticles": 10,
+  "lastUpdated": "2025-11-19T12:30:42.761Z",
+  "totalArticles": 2,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
@@ -9,7 +9,7 @@ var ARTICLE_INDEX={
       "articles": {
         "en": [
           {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
+            "id": "docker-networking-troubleshooting-container-communication",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -20,98 +20,18 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-            "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-            "filePath": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-            "filePath": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "network-consciousness-vlan-learning-journey",
-            "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
-            "filePath": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-            "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
             "status": "published"
           }
         ],
         "fr": [
           {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
+            "id": "docker-networking-troubleshooting-container-communication",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -122,89 +42,9 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-            "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-            "filePath": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-            "filePath": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "network-consciousness-vlan-learning-journey",
-            "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
-            "filePath": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-            "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -212,7 +52,7 @@ var ARTICLE_INDEX={
           }
         ]
       },
-      "total": 10
+      "total": 2
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -266,12 +106,12 @@ var ARTICLE_INDEX={
     }
   },
   "languages": {
-    "en": 5,
-    "fr": 5
+    "en": 1,
+    "fr": 1
   },
   "articles": [
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "id": "docker-networking-troubleshooting-container-communication",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -282,16 +122,16 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "id": "docker-networking-troubleshooting-container-communication",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -302,169 +142,9 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "filePath": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "filePath": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "network-consciousness-vlan-learning-journey",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "network-consciousness-vlan-learning-journey",
-      "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "filePath": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "network-consciousness-vlan-learning-journey",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "network-consciousness-vlan-learning-journey",
-      "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "filePath": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -474,9 +154,9 @@ var ARTICLE_INDEX={
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -523,7 +203,7 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "id": "docker-networking-troubleshooting-container-communication",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -534,16 +214,16 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "id": "docker-networking-troubleshooting-container-communication",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -554,169 +234,9 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "filePath": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "filePath": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "network-consciousness-vlan-learning-journey",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "network-consciousness-vlan-learning-journey",
-      "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "filePath": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "network-consciousness-vlan-learning-journey",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "network-consciousness-vlan-learning-journey",
-      "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "filePath": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,7 +245,7 @@ var ARTICLE_INDEX={
   ],
   "featuredArticles": [
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "id": "docker-networking-troubleshooting-container-communication",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -736,9 +256,9 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +267,8 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "en/infrastructure/network-consciousness-vlan-learning-journey": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "fr/infrastructure/network-consciousness-vlan-learning-journey": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
-      "en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
+      "en/infrastructure/docker-networking-troubleshooting-container-communication": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "fr/infrastructure/docker-networking-troubleshooting-container-communication": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +298,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-19T12:04:48.230Z",
+  "generatedAt": "2025-11-19T12:30:42.762Z",
   "version": "1.0"
 };
