@@ -1,5 +1,5 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-19T10:51:49.653Z",
+  "lastUpdated": "2025-11-19T11:06:45.852Z",
   "totalArticles": 10,
   "categories": {
     "infrastructure": {
@@ -27,10 +27,212 @@ var ARTICLE_INDEX={
       "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "troubleshooting-pfsense-web-interface-access",
+            "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+            "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+            "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "setting-up-secure-reverse-proxy-https",
+            "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+            "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-homelab-network-vlans-architecture",
+            "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+            "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "troubleshooting-pfsense-web-interface-access",
+            "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+            "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+            "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "setting-up-secure-reverse-proxy-https",
+            "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+            "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-homelab-network-vlans-architecture",
+            "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+            "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 10
     },
     "remote_access": {
       "name": "Remote Access",
@@ -47,212 +249,10 @@ var ARTICLE_INDEX={
       "description": "Quick guides configuration reference",
       "icon": "fas fa-book",
       "articles": {
-        "en": [
-          {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
-            "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-            "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-            "filePath": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "url": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-            "filePath": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "network-consciousness-vlan-learning-journey",
-            "url": "/en/reference/network-consciousness-vlan-learning-journey.html",
-            "filePath": "/en/reference/network-consciousness-vlan-learning-journey.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "certifications",
-            "title": "Professional Certifications",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "certifications",
-            "url": "/en/reference/certifications.html",
-            "filePath": "/en/reference/certifications.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "url": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "filePath": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
-            "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-            "url": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-            "filePath": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "url": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-            "filePath": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "network-consciousness-vlan-learning-journey",
-            "url": "/fr/reference/network-consciousness-vlan-learning-journey.html",
-            "filePath": "/fr/reference/network-consciousness-vlan-learning-journey.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "certifications",
-            "title": "Professional Certifications",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "certifications",
-            "url": "/fr/reference/certifications.html",
-            "filePath": "/fr/reference/certifications.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "url": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "filePath": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 10
+      "total": 0
     },
     "docker_services": {
       "name": "Docker Services",
@@ -271,200 +271,200 @@ var ARTICLE_INDEX={
   },
   "articles": [
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
-      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
-      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "url": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "filePath": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+      "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "url": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "filePath": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+      "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "network-consciousness-vlan-learning-journey",
-      "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "network-consciousness-vlan-learning-journey",
-      "url": "/en/reference/network-consciousness-vlan-learning-journey.html",
-      "filePath": "/en/reference/network-consciousness-vlan-learning-journey.html",
+      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "network-consciousness-vlan-learning-journey",
-      "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "network-consciousness-vlan-learning-journey",
-      "url": "/fr/reference/network-consciousness-vlan-learning-journey.html",
-      "filePath": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "certifications",
-      "title": "Professional Certifications",
+      "id": "setting-up-secure-reverse-proxy-https",
+      "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/en/reference/certifications.html",
-      "filePath": "/en/reference/certifications.html",
+      "slug": "setting-up-secure-reverse-proxy-https",
+      "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "certifications",
-      "title": "Professional Certifications",
+      "id": "setting-up-secure-reverse-proxy-https",
+      "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/fr/reference/certifications.html",
-      "filePath": "/fr/reference/certifications.html",
+      "slug": "setting-up-secure-reverse-proxy-https",
+      "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+      "id": "building-secure-homelab-network-vlans-architecture",
+      "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "slug": "building-secure-homelab-network-vlans-architecture",
+      "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+      "id": "building-secure-homelab-network-vlans-architecture",
+      "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "slug": "building-secure-homelab-network-vlans-architecture",
+      "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -490,9 +490,9 @@ var ARTICLE_INDEX={
     },
     "network_security": {
       "name": "Network Security",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 10,
+      "en": 5,
+      "fr": 5,
       "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt"
     },
@@ -506,9 +506,9 @@ var ARTICLE_INDEX={
     },
     "reference": {
       "name": "Reference",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "Quick guides configuration reference",
       "icon": "fas fa-book"
     },
@@ -523,200 +523,200 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
-      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
-      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "url": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "filePath": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+      "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
-      "url": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "filePath": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+      "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "network-consciousness-vlan-learning-journey",
-      "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "network-consciousness-vlan-learning-journey",
-      "url": "/en/reference/network-consciousness-vlan-learning-journey.html",
-      "filePath": "/en/reference/network-consciousness-vlan-learning-journey.html",
+      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "network-consciousness-vlan-learning-journey",
-      "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "network-consciousness-vlan-learning-journey",
-      "url": "/fr/reference/network-consciousness-vlan-learning-journey.html",
-      "filePath": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "certifications",
-      "title": "Professional Certifications",
+      "id": "setting-up-secure-reverse-proxy-https",
+      "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/en/reference/certifications.html",
-      "filePath": "/en/reference/certifications.html",
+      "slug": "setting-up-secure-reverse-proxy-https",
+      "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "certifications",
-      "title": "Professional Certifications",
+      "id": "setting-up-secure-reverse-proxy-https",
+      "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/fr/reference/certifications.html",
-      "filePath": "/fr/reference/certifications.html",
+      "slug": "setting-up-secure-reverse-proxy-https",
+      "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+      "id": "building-secure-homelab-network-vlans-architecture",
+      "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "slug": "building-secure-homelab-network-vlans-architecture",
+      "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+      "id": "building-secure-homelab-network-vlans-architecture",
+      "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "slug": "building-secure-homelab-network-vlans-architecture",
+      "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,20 +725,20 @@ var ARTICLE_INDEX={
   ],
   "featuredArticles": [
     {
-      "id": "ssl-certificate-configuration-prompt-securing-homelab",
-      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
-      "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "filePath": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +747,16 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/reference/ssl-certificate-configuration-prompt-securing-homelab": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "fr/reference/ssl-certificate-configuration-prompt-securing-homelab": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
-      "en/reference/network-architecture-prompt-dns-tls-reverse-proxies": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "fr/reference/network-architecture-prompt-dns-tls-reverse-proxies": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
-      "en/reference/network-consciousness-vlan-learning-journey": "/en/reference/network-consciousness-vlan-learning-journey.html",
-      "fr/reference/network-consciousness-vlan-learning-journey": "/fr/reference/network-consciousness-vlan-learning-journey.html",
-      "en/reference/certifications": "/en/reference/certifications.html",
-      "fr/reference/certifications": "/fr/reference/certifications.html",
-      "en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
+      "en/network_security/troubleshooting-pfsense-web-interface-access": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "fr/network_security/troubleshooting-pfsense-web-interface-access": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "en/network_security/securing-n8n-workflows-deep-dive-dns-tls": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "fr/network_security/securing-n8n-workflows-deep-dive-dns-tls": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "en/network_security/ssl-certificate-saga-local-dns-nginx-homelab": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "en/network_security/setting-up-secure-reverse-proxy-https": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "fr/network_security/setting-up-secure-reverse-proxy-https": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "en/network_security/building-secure-homelab-network-vlans-architecture": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "fr/network_security/building-secure-homelab-network-vlans-architecture": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +786,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-19T10:51:49.657Z",
+  "generatedAt": "2025-11-19T11:06:45.853Z",
   "version": "1.0"
 };

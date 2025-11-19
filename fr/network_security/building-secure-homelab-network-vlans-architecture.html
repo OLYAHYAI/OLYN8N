@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Construction d'un réseau Homelab sécurisé avec des VLANs et une architecture intelligente - Tutoriel technique et guide">
+    <meta name="description" content="Construction d'un réseau Homelab sécurisé avec des VLANs et une architecture intelligente - Tutoriel et guide technique">
     <meta name="keywords" content="vlan network-security pfsense segmentation firewall iot kubernetes wifi">
     <meta name="author" content="Omar LYAHYAI">
 
-    <title>Construire un réseau Homelab sécurisé avec des VLANs et une architecture intelligente | Blog Technique d'Omar LYAHYAI</title>
+    <title>Construction d'un réseau Homelab sécurisé avec des VLANs et une architecture intelligente | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -34,13 +34,13 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
                 <ul class="nav-menu">
                     <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
-                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À Propos</a></li>
                     <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
                     <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
                     <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/network_security/building-secure-homelab-network-vlans-architecture.html" class="lang-toggle" aria-label="Changer de langue">
+                    <a href="/fr/network_security/building-secure-homelab-network-vlans-architecture.html" class="lang-toggle" aria-label="Change language">
                         <span class="lang-current">FR</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -58,21 +58,21 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="En-tête de l'article">
+        <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/network_security.html">Sécurité Réseau</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Construire un réseau Homelab sécurisé avec des VLANs et une architecture intelligente</span>
+                        <span>Construction d'un réseau Homelab sécurisé avec des VLANs et une architecture intelligente</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Construire un réseau Homelab sécurisé avec des VLANs et une architecture intelligente</h1>
+                <h1 class="article-title">Construction d'un réseau Homelab sécurisé avec des VLANs et une architecture intelligente</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -95,40 +95,35 @@
             </div>
         </section>
 
-        <section class="article-content" role="region" aria-label="Contenu de l'article">
+        <section class="article-content" role="region" aria-label="Article content">
             <div class="container">
                 <div class="article-body">
                     <h1
-id="building-a-secure-homelab-network-with-vlans-and-smart-architecture">Construire
-un réseau Homelab sécurisé avec des VLANs et une architecture intelligente</h1>
+id="building-a-secure-homelab-network-with-vlans-and-smart-architecture">Construction
+d'un réseau Homelab sécurisé avec des VLANs et une architecture intelligente</h1>
 <h2
 id="the-journey-begins-why-my-homelab-needed-a-security-overhaul">Le
 début du voyage : Pourquoi mon Homelab avait besoin d'une refonte de sécurité</h2>
-<p>Lorsque j'ai mis en place mon homelab pour la première fois, comme la plupart des passionnés, j'ai tout branché sur le même commutateur réseau et je n'y ai plus pensé. Mon cluster Kubernetes, mes appareils de maison intelligente, mes serveurs multimédia et mes caméras de sécurité vivaient tous sur le même sous-réseau—une véritable bombe à retardement en matière de vulnérabilités de sécurité. Un seul appareil IoT compromis aurait pu signifier un accès instantané à l'ensemble de mon réseau. C'est à ce moment-là que j'ai réalisé que je devais concevoir quelque chose de mieux.</p>
-<p>Voici l'histoire de la façon dont j'ai transformé mon réseau domestique chaotique en une infrastructure segmentée et sécurisée utilisant des VLANs (Virtual Local Area
-Networks) et une architecture réfléchie—tout en apprenant ce que signifie réellement concevoir la sécurité à la maison.</p>
+<p>Lorsque j'ai configuré mon homelab pour la première fois, comme la plupart des passionnés, j'ai tout branché sur le même commutateur réseau et je n'y ai plus pensé. Mon cluster Kubernetes, mes appareils domestiques intelligents, mes serveurs multimédias et mes caméras de sécurité vivaient tous sur le même sous-réseau—une bombe à retardement de vulnérabilités de sécurité. Un seul appareil IoT compromis aurait pu signifier un accès instantané à l'ensemble de mon réseau. C'est à ce moment-là que j'ai réalisé que je devais concevoir quelque chose de mieux.</p>
+<p>Voici l'histoire de la façon dont j'ai transformé mon réseau domestique chaotique en une infrastructure segmentée et sécurisée à l'aide de VLANs (Virtual Local Area Networks) et d'une architecture réfléchie, tout en apprenant ce que signifie réellement concevoir la sécurité à la maison.</p>
 <hr />
 <h2
 id="part-1-understanding-the-problem---why-network-segmentation-matters">Partie
-1 : Comprendre le problème - Pourquoi la segmentation du réseau est essentielle</h2>
+1 : Comprendre le problème - Pourquoi la segmentation réseau est cruciale</h2>
 <h3 id="the-flat-network-nightmare">Le cauchemar du réseau plat</h3>
-<p>Imaginez que toute votre maison soit un seul grand couloir. Le système de sécurité de la porte d'entrée, votre ordinateur personnel, le réfrigérateur intelligent de la cuisine et votre serveur contenant toutes vos photos et documents se trouvent tous dans le même couloir, sans aucun mur entre eux.</p>
-<p>Si quelqu'un (ou quelque chose) compromet un appareil de votre réseau, il a un chemin clair vers tout le reste. C'est exactement ce qui se produit avec un réseau plat et non segmenté.</p>
-<p><strong>Les risques réels :</strong> - <strong>Les appareils IoT compromis</strong> (comme une ampoule intelligente piratée) peuvent analyser et exploiter d'autres appareils - <strong>Les attaques de l'homme du milieu (MITM)</strong> se produisent lorsque quelqu'un intercepte le trafic entre les appareils - <strong>Mouvement latéral</strong> - Un attaquant accède à un appareil, puis pivote vers des systèmes sensibles - <strong>Exfiltration de données</strong> - Des fichiers sensibles sont volés par des logiciels malveillants ou des attaquants à votre insu</p>
+<p>Imaginez que toute votre maison soit un grand couloir unique. Le système de sécurité de la porte d'entrée, votre ordinateur personnel, le réfrigérateur intelligent de la cuisine et votre serveur contenant toutes vos photos et documents se trouvent tous dans ce même couloir, sans murs entre eux.</p>
+<p>Si quelqu'un (ou quelque chose) compromet n'importe quel appareil sur votre réseau, il a un chemin clair vers tout le reste. C'est exactement ce qui se passe avec un réseau plat et non segmenté.</p>
+<p><strong>Les risques réels :</strong> - Les <strong>appareils IoT compromis</strong> (comme une ampoule intelligente piratée) peuvent scanner et exploiter d'autres appareils - Les <strong>attaques Man-in-the-Middle (MITM)</strong> se produisent lorsque quelqu'un intercepte le trafic entre les appareils - Le <strong>mouvement latéral</strong> - Un attaquant obtient l'accès à un appareil, puis pivote vers des systèmes sensibles - L'<strong>exfiltration de données</strong> - Les fichiers sensibles sont volés par des logiciels malveillants ou des attaquants à votre insu</p>
 <h3 id="the-vlan-solution">La solution VLAN</h3>
-<p>Les VLANs sont comme la construction de murs dans ce couloir. Ils créent des réseaux séparés qui apparaissent comme des sous-réseaux distincts, même s'ils partagent la même infrastructure réseau physique. Considérez-le comme ceci :</p>
+<p>Les VLANs sont comme des murs que l'on construit dans ce couloir. Ils créent des réseaux séparés qui apparaissent comme des sous-réseaux distincts, même s'ils partagent la même infrastructure réseau physique. Considérez cela comme suit :</p>
 <ul>
-<li><strong>VLAN 10 (Gestion)</strong>: Votre infrastructure réseau,
-caméras et outils d'administration - hautement restreint</li>
-<li><strong>VLAN 20 (Serveurs)</strong>: Services de production comme
-Kubernetes, bases de données, stockage de fichiers</li>
-<li><strong>VLAN 30 (IoT/Maison Intelligente)</strong>: Ampoules intelligentes, thermostats et caméras - non fiables par défaut</li>
-<li><strong>VLAN 40 (Invités)</strong>: Appareils des visiteurs - complètement
-isolés</li>
-<li><strong>VLAN 50 (Travail/Personnel)</strong>: Vos PC, ordinateurs portables et
-appareils de confiance</li>
+<li><strong>VLAN 10 (Gestion)</strong> : Votre infrastructure réseau, caméras et outils d'administration - très restreint</li>
+<li><strong>VLAN 20 (Serveurs)</strong> : Services de production comme Kubernetes, bases de données, stockage de fichiers</li>
+<li><strong>VLAN 30 (IoT/Maison Intelligente)</strong> : Ampoules intelligentes, thermostats et caméras - non fiables par défaut</li>
+<li><strong>VLAN 40 (Invités)</strong> : Appareils des visiteurs - complètement isolés</li>
+<li><strong>VLAN 50 (Travail/Personnel)</strong> : Vos PC, ordinateurs portables et appareils de confiance</li>
 </ul>
-<p>Avec les VLANs, même si quelqu'un compromet votre réseau IoT, il ne peut pas accéder directement à votre infrastructure de serveur. Il se heurte à une règle de pare-feu au lieu d'une connexion ouverte.</p>
+<p>Avec les VLANs, même si quelqu'un compromet votre réseau IoT, il ne peut pas accéder directement à votre infrastructure de serveurs. Il rencontre une règle de pare-feu au lieu d'une connexion ouverte.</p>
 <hr />
 <h2
 id="part-2-my-network-architecture---a-story-of-thoughtful-design">Partie
@@ -140,103 +135,107 @@ id="part-2-my-network-architecture---a-story-of-thoughtful-design">Partie
    ↓
 [Managed Switch with VLAN Support]
    ↓
-├─ VLAN 10 (Management) → Network monitoring, SSH access points
-├─ VLAN 20 (Servers) → Kubernetes, databases, services
-├─ VLAN 30 (IoT) → Smart home devices, restricted access
-├─ VLAN 40 (Guests) → Isolated visitor network
-└─ VLAN 50 (Trusted) → Personal computers, laptops</code></pre>
-<p><strong>Composant clé : Le commutateur géré (Managed Switch)</strong></p>
-<p>Le commutateur est votre point de segmentation. Il comprend les VLANs et peut étiqueter (taguer) le trafic de manière appropriée. J'utilise un commutateur qui prend en charge : - L'étiquetage VLAN (802.1Q) - Les ports d'accès et de jonction (trunk) - La QoS de base pour la priorisation du trafic - La configuration gérée (pas seulement du plug-and-play)</p>
+├─ VLAN 10 (Management) → Surveillance réseau, points d'accès SSH
+├─ VLAN 20 (Servers) → Kubernetes, bases de données, services
+├─ VLAN 30 (IoT) → Appareils domestiques intelligents, accès restreint
+├─ VLAN 40 (Guests) → Réseau invité isolé
+└─ VLAN 50 (Trusted) → Ordinateurs personnels, ordinateurs portables</code></pre>
+<p><strong>Composant Clé : Le Commutateur Géré (Managed Switch)</strong></p>
+<p>Le commutateur est votre point de segmentation. Il comprend les VLANs et peut
+étiqueter le trafic de manière appropriée. J'utilise un commutateur qui prend en charge : - L'étiquetage VLAN (802.1Q) - Les ports d'accès et trunk - La QoS de base pour la priorisation du trafic - La configuration gérée (pas seulement plug-and-play)</p>
 <p><strong>Pourquoi pfSense comme pare-feu :</strong></p>
-<p>J'ai choisi pfSense parce que : 1. <strong>Conscient des VLANs</strong> - Il
-comprend l'étiquetage VLAN et peut acheminer le trafic entre eux 2. <strong>Règles de pare-feu par VLAN</strong> - Je peux créer des règles granulaires comme « IoT ne peut atteindre que le DNS et des serveurs spécifiques » 3. <strong>Open source</strong> - Transparence totale sur les règles de sécurité 4. <strong>Piloté par la communauté</strong> - Constamment mis à jour avec des correctifs de sécurité</p>
+<p>J'ai choisi pfSense parce que : 1. <strong>Compatible VLAN</strong> - Il
+comprend l'étiquetage VLAN et peut acheminer le trafic entre eux 2. <strong>Règles de pare-feu par VLAN</strong> - Je peux créer des règles granulaires comme « IoT ne peut atteindre que DNS et des serveurs spécifiques » 3. <strong>Open source</strong> - Transparence totale dans les règles de sécurité 4. <strong>Piloté par la communauté</strong> - Constamment mis à jour avec des correctifs de sécurité</p>
 <hr />
-<h2 id="part-3-setting-up-vlans---the-implementation">Partie 3 : Mise en place des VLANs - L'implémentation</h2>
+<h2 id="part-3-setting-up-vlans---the-implementation">Partie 3 : Configuration
+des VLANs - L'implémentation</h2>
 <h3 id="step-1-configure-the-switch">Étape 1 : Configurer le commutateur</h3>
 <p>Sur votre commutateur géré, vous devez :</p>
 <ol type="1">
-<li><p><strong>Créer des ID de VLAN</strong> (non étiquetés) :</p>
+<li><p><strong>Créer les ID VLAN</strong> (non étiquetés) :</p>
 <pre><code>VLAN 10 - Management (10.0.10.0/24)
 VLAN 20 - Servers (10.0.20.0/24)
 VLAN 30 - IoT (10.0.30.0/24)
 VLAN 40 - Guests (10.0.40.0/24)
 VLAN 50 - Trusted (10.0.50.0/24)</code></pre></li>
-<li><p><strong>Configurer les ports comme accès ou jonction (trunk) :</strong></p>
+<li><p><strong>Configurer les ports en accès ou trunk :</strong></p>
 <ul>
-<li><strong>Ports d'accès</strong> (connexion à des appareils classiques) :
+<li><strong>Ports d'accès</strong> (connexion aux appareils réguliers) :
 <ul>
 <li>Port 1 → VLAN 30 (appareil IoT)</li>
 <li>Port 2 → VLAN 50 (Votre ordinateur portable)</li>
-<li>Port 3 → VLAN 40 (AP WiFi Invité)</li>
+<li>Port 3 → VLAN 40 (Point d'accès WiFi Invité)</li>
 </ul></li>
-<li><strong>Ports de jonction (trunk)</strong> (connexion à d'autres commutateurs/pare-feu) :
+<li><strong>Ports Trunk</strong> (connexion à d'autres commutateurs/pare-feu) :
 <ul>
 <li>Port 24 → Se connecte à pfSense (transporte tous les VLANs)</li>
 </ul></li>
 </ul></li>
-<li><p><strong>Définir le VLAN 1 comme natif</strong> (le trafic non étiqueté utilise par défaut le VLAN 1)</p></li>
+<li><p><strong>Définir VLAN 1 comme natif</strong> (le trafic non étiqueté utilise par défaut le VLAN 1)</p></li>
 </ol>
 <h3 id="step-2-configure-pfsense-for-vlan-routing">Étape 2 : Configurer
 pfSense pour le routage VLAN</h3>
 <p>Dans pfSense, créez des interfaces virtuelles pour chaque VLAN :</p>
 <pre><code>Interfaces → Assignments
-- VLAN 10 (em0.10) → OPT1 (Management)
-- VLAN 20 (em0.20) → OPT2 (Servers)
+- VLAN 10 (em0.10) → OPT1 (Gestion)
+- VLAN 20 (em0.20) → OPT2 (Serveurs)
 - VLAN 30 (em0.30) → OPT3 (IoT)
-- VLAN 40 (em0.40) → OPT4 (Guests)
-- VLAN 50 (em0.50) → OPT5 (Trusted)</code></pre>
+- VLAN 40 (em0.40) → OPT4 (Invités)
+- VLAN 50 (em0.50) → OPT5 (Fiable)</code></pre>
 <p>Attribuez des adresses IP à chaque interface :</p>
 <pre><code>Management:  10.0.10.1/24
 Servers:     10.0.20.1/24
 IoT:         10.0.30.1/24
 Guests:      10.0.40.1/24
 Trusted:     10.0.50.1/24</code></pre>
-<h3 id="step-3-create-firewall-rules">Étape 3 : Créer des règles de pare-feu</h3>
-<p>Voici maintenant la magie—les règles qui appliquent réellement la sécurité :</p>
-<p><strong>Règles du VLAN IoT</strong> (les plus restrictives) :</p>
-<pre><code>- Autoriser : IoT → DNS (53)
-- Autoriser : IoT → NTP (123)
-- Autoriser : IoT → Serveur spécifique (par exemple, Home Assistant sur VLAN 50)
-- Refuser : IoT → Tout autre réseau (par défaut)
-- Refuser : IoT → Internet (pas de sortie directe)</code></pre>
-<p><strong>Règles du VLAN Serveur</strong> :</p>
-<pre><code>- Autoriser : Serveurs ↔ Serveurs (communication interne)
-- Autoriser : Serveurs → Internet (sorties gérées)
-- Autoriser : Fiable → Serveurs (accès sélectif)
-- Refuser : IoT → Serveurs (isolation complète)</code></pre>
-<p><strong>Règles du VLAN Fiable</strong> :</p>
-<pre><code>- Autoriser : Fiable → Tous les VLANs (les appareils utilisateurs ont besoin de flexibilité)
-- Autoriser : Fiable → Internet
-- Refuser : Non fiable → Fiable</code></pre>
-<p><strong>Règles du VLAN Invité</strong> :</p>
-<pre><code>- Autoriser : Invités → Internet uniquement
-- Autoriser : Invités → Services publics (par exemple, Plex, HomeAssistant)
-- Refuser : Invités → Tout réseau interne</code></pre>
+<h3 id="step-3-create-firewall-rules">Étape 3 : Créer les règles de pare-feu</h3>
+<p>Place à la magie : les règles qui appliquent réellement la sécurité :</p>
+<p><strong>Règles VLAN IoT</strong> (les plus restrictives) :</p>
+<pre><code>- Allow: IoT → DNS (53)
+- Allow: IoT → NTP (123)
+- Allow: IoT → Specific server (e.g., Home Assistant on VLAN 50)
+- Deny: IoT → Any other network (default)
+- Deny: IoT → Internet (no direct outbound)</code></pre>
+<p><strong>Règles VLAN Serveurs</strong> :</p>
+<pre><code>- Allow: Servers ↔ Servers (internal communication)
+- Allow: Servers → Internet (managed outbound)
+- Allow: Trusted → Servers (selective access)
+- Deny: IoT → Servers (complete isolation)</code></pre>
+<p><strong>Règles VLAN Fiables (Trusted)</strong> :</p>
+<pre><code>- Allow: Trusted → All VLANs (user devices need flexibility)
+- Allow: Trusted → Internet
+- Deny: Untrusted → Trusted</code></pre>
+<p><strong>Règles VLAN Invités</strong> :</p>
+<pre><code>- Allow: Guests → Internet only
+- Allow: Guests → Public services (e.g., Plex, HomeAssistant)
+- Deny: Guests → Any internal network</code></pre>
 <hr />
-<h2 id="part-4-the-security-benefits-ive-realized">Partie 4 : Les avantages de sécurité que j'ai constatés</h2>
-<h3 id="real-world-protection">Protection en situation réelle</h3>
-<p>Après la mise en œuvre de cette architecture, voici ce qui a changé :</p>
+<h2 id="part-4-the-security-benefits-ive-realized">Partie 4 : Les
+avantages de sécurité que j'ai réalisés</h2>
+<h3 id="real-world-protection">Protection en environnement réel</h3>
+<p>Après avoir mis en œuvre cette architecture, voici ce qui a changé :</p>
 <ol type="1">
 <li><p><strong>Réduction de la surface d'attaque</strong> : Même si ma caméra de sécurité est compromise, elle est piégée dans le VLAN 30. Elle ne peut pas atteindre les données de mon serveur, mon ordinateur portable de travail ou mes fichiers personnels.</p></li>
-<li><p><strong>Prêt pour la conformité</strong> : Si jamais je dois réussir des audits de sécurité, je dispose d'une segmentation réseau documentée.</p></li>
-<li><p><strong>Isolation des services</strong> : Les pannes de mon cluster Kubernetes n'affectent pas les appareils IoT. Une application mal configurée dans le VLAN 20 ne perturbe pas l'automatisation de la maison intelligente dans le VLAN 30.</p></li>
-<li><p><strong>Visibilité</strong> : Les logs pfSense me montrent exactement qui parle à qui. Un appareil IoT suspect tentant d'atteindre des réseaux internes est immédiatement enregistré.</p></li>
-<li><p><strong>Confiance des invités</strong> : Je peux donner le WiFi aux invités (VLAN 40) sans craindre qu'ils ne tombent sur les données de mon serveur.</p></li>
+<li><p><strong>Prêt pour la conformité</strong> : Si jamais j'ai besoin de passer des audits de sécurité, j'ai une segmentation réseau documentée.</p></li>
+<li><p><strong>Isolation des services</strong> : Les défaillances de mon cluster Kubernetes n'affectent pas les appareils IoT. Une application mal configurée dans le VLAN 20 ne perturbe pas l'automatisation de la maison intelligente dans le VLAN 30.</p></li>
+<li><p><strong>Visibilité</strong> : Les logs de pfSense me montrent exactement qui parle à qui. Un appareil IoT suspect tentant d'atteindre des réseaux internes est immédiatement enregistré.</p></li>
+<li><p><strong>Confiance envers les invités</strong> : Je peux donner le WiFi aux invités (VLAN 40) sans craindre qu'ils ne tombent sur les données de mon serveur.</p></li>
 </ol>
 <hr />
-<h2 id="part-5-advanced-techniques-and-lessons-learned">Partie 5 : Techniques avancées et leçons apprises</h2>
+<h2 id="part-5-advanced-techniques-and-lessons-learned">Partie 5 : Techniques
+avancées et leçons apprises</h2>
 <h3 id="vlan-hopping---a-real-threat-i-defended-against">Saut de VLAN (VLAN Hopping) -
-Une menace réelle contre laquelle je me suis défendu</h3>
-<p>Lorsque j'ai mis en place les VLANs pour la première fois, je pensais que les règles de pare-feu seules me protégeraient. Faux. Un attaquant pourrait potentiellement « sauter » entre les VLANs en utilisant : - <strong>Double étiquetage 802.1Q</strong> : Envoi de paquets spécialement conçus - <strong>Exploitation du commutateur</strong> : Listes de contrôle d'accès (ACLs) du commutateur mal configurées</p>
-<p><strong>Ma défense :</strong> 1. Maintenir tous les firmwares des commutateurs à jour 2. Désactiver les ports inutilisés (définis en mode d'accès sur un VLAN mort) 3. Protéger l'accès de gestion avec des identifiants forts 4. Mettre en œuvre le DHCP snooping et l'inspection ARP 5. Audits de sécurité réguliers des configurations VLAN</p>
-<h3 id="wifi-integration---bridging-physical-and-wireless">Intégration WiFi - Relier le physique et le sans fil</h3>
-<p>Mes points d'accès WiFi (APs) sont dans le VLAN 40 (Invités), VLAN 50 (Personnel) et VLAN 30 (IoT). Chaque SSID est configuré pour étiqueter le trafic de manière appropriée :</p>
-<pre><code>SSID &quot;HomeNetwork&quot; → Étiqueté VLAN 50 (WPA3, mot de passe fort)
-SSID &quot;IoT-Devices&quot; → Étiqueté VLAN 30 (WPA2, mot de passe unique)
-SSID &quot;Guests&quot; → Étiqueté VLAN 40 (WPA2, mot de passe partagé)</code></pre>
-<p>Le point d'accès n'a pas besoin de comprendre les VLANs en profondeur—il lui suffit d'étiqueter le trafic avec le bon ID de VLAN en fonction du SSID auquel l'appareil se connecte.</p>
-<h3 id="monitoring-and-logging">Surveillance et journalisation</h3>
-<p>J'ai configuré la surveillance des tables d'état de pfSense :</p>
+Une menace réelle dont je me suis défendu</h3>
+<p>Lorsque j'ai configuré les VLANs pour la première fois, je pensais que les règles du pare-feu suffiraient à me protéger. Faux. Un attaquant pourrait potentiellement "sauter" entre les VLANs en utilisant : - Le <strong>double étiquetage 802.1Q</strong> : Envoi de paquets spécialement conçus - L'<strong>exploitation du commutateur</strong> : ACLs du commutateur mal configurées</p>
+<p><strong>Ma défense :</strong> 1. Maintenir à jour tous les firmwares du commutateur 2. Désactiver les ports inutilisés (définis en mode accès sur un VLAN mort) 3. Protéger l'accès de gestion avec des identifiants forts 4. Mettre en œuvre le DHCP snooping et l'inspection ARP 5. Audits de sécurité réguliers des configurations VLAN</p>
+<h3 id="wifi-integration---bridging-physical-and-wireless">Intégration WiFi - Faire le pont entre le physique et le sans fil</h3>
+<p>Mes points d'accès WiFi sont dans le VLAN 40 (Invités), le VLAN 50 (Personnel) et le VLAN 30 (IoT). Chaque SSID est configuré pour étiqueter le trafic de manière appropriée :</p>
+<pre><code>SSID &quot;HomeNetwork&quot; → Tagged VLAN 50 (WPA3, strong password)
+SSID &quot;IoT-Devices&quot; → Tagged VLAN 30 (WPA2, unique password)
+SSID &quot;Guests&quot; → Tagged VLAN 40 (WPA2, shared password)</code></pre>
+<p>Le point d'accès n'a pas besoin de comprendre profondément les VLANs – il doit simplement étiqueter le trafic avec le bon ID VLAN en fonction du SSID auquel l'appareil se connecte.</p>
+<h3 id="monitoring-and-logging">Surveillance et journalisation (Logging)</h3>
+<p>J'ai configuré la surveillance des tables d'état pfSense :</p>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Monitor active connections</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pfctl</span> <span class="at">-s</span> states</span>
@@ -246,57 +245,69 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href=
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Count traffic between VLANs</span></span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ex">tcpdump</span> <span class="at">-i</span> em0 vlan 10 and vlan 30</span></code></pre></div>
-<p>Modèles suspects que je surveille : - Appareils IoT initiant des connexions vers des serveurs (ils ne devraient que répondre aux requêtes) - Transferts de données importants depuis des réseaux de confiance - Connexions à des ports inhabituels - Tout trafic des invités vers des réseaux internes</p>
+<p>Modèles suspects que je surveille : - Appareils IoT initiant des connexions vers des serveurs (ils ne devraient répondre qu'aux requêtes) - Transferts de données importants depuis des réseaux fiables - Connexions à des ports inhabituels - Tout trafic des invités vers des réseaux internes</p>
 <hr />
 <h2 id="part-6-cost-and-practical-considerations">Partie 6 : Coûts et
 considérations pratiques</h2>
 <h3 id="hardware-requirements">Exigences matérielles</h3>
 <p><strong>Ce dont vous aurez besoin :</strong> - <strong>Commutateur géré (Managed switch)</strong>
 avec support VLAN : 200 à 600 USD selon le nombre de ports -
-<strong>Matériel compatible pfSense</strong> : 150 à 400 $ (ou réutiliser un ancien
-PC) - <strong>Points d'accès WiFi (APs) avec étiquetage VLAN</strong> : 100 à 300 $ par AP
+<strong>Matériel compatible pfSense</strong> : 150 à 400 USD (ou réutiliser un vieux PC) -
+<strong>Points d'accès WiFi avec étiquetage VLAN</strong> : 100 à 300 USD par AP
 (UniFi, TP-Link Omada)</p>
-<p><strong>Facultatif mais recommandé :</strong> - Outil de surveillance réseau (Zabbix, Prometheus) - Serveur de journalisation dédié - Système de détection d'intrusion (Suricata)</p>
-<h3 id="complexity-vs.-security-trade-off">Compromis entre complexité et
-sécurité</h3>
-<p>Les VLANs ajoutent une certaine complexité, mais elle est gérable : - La configuration initiale prend 4 à 8 heures - Gestion mensuelle : 30 minutes - Dépannage : Les VLANs sont parfois blâmés pour des problèmes qui se trouvent en réalité ailleurs (j'y suis passé)</p>
+<p><strong>Facultatif mais recommandé :</strong> - Outil de surveillance réseau
+(Zabbix, Prometheus) - Serveur de journalisation dédié - Système de détection d'intrusion (Suricata)</p>
+<h3 id="complexity-vs.-security-trade-off">Compromis Complexité vs. Sécurité</h3>
+<p>Les VLANs ajoutent une certaine complexité, mais elle est gérable : - La configuration initiale prend 4 à 8 heures - Gestion mensuelle : 30 minutes - Dépannage : Les VLANs sont parfois blâmés pour des problèmes qui se situent en réalité ailleurs (j'en ai fait l'expérience)</p>
 <hr />
-<h2 id="part-7-lessons-i-wish-id-known-earlier">Partie 7 : Leçons que
-j'aurais aimé connaître plus tôt</h2>
+<h2 id="part-7-lessons-i-wish-id-known-earlier">Partie 7 : Leçons que j'aurais
+aimé connaître plus tôt</h2>
 <ol type="1">
-<li><p><strong>Tout documenter</strong> - Conservez un schéma des ID de VLAN, des plages IP et des règles de pare-feu. Votre futur moi vous remerciera.</p></li>
-<li><p><strong>Commencez simplement, développez progressivement</strong> - Ne créez pas 20 VLANs dès le premier jour. Commencez par 3-4 et ajoutez-en au besoin.</p></li>
-<li><p><strong>Tester les règles avant de les appliquer</strong> - Configurez d'abord la journalisation, puis passez progressivement de « Tout autoriser » à « Tout refuser sauf... »</p></li>
-<li><p><strong>Le VLAN 1 est spécial</strong> - Gardez-le inutilisé ou utilisé uniquement pour la gestion. N'y mettez pas d'appareils de production.</p></li>
-<li><p><strong>L'accès au VLAN de gestion est critique</strong> - Si vous vous enfermez hors de votre VLAN de gestion, vous aurez besoin d'un accès physique pour récupérer. J'ai appris cela à la dure.</p></li>
-<li><p><strong>Tous les appareils ne supportent pas bien les VLANs</strong> - Certains anciens appareils IoT ne comprennent pas l'étiquetage VLAN. Prévoyez un réseau non segmenté de secours pour les appareils hérités si nécessaire.</p></li>
+<li><p><strong>Documentez tout</strong> - Conservez un schéma des ID VLAN, des plages IP et des règles de pare-feu. Votre futur moi vous en remerciera.</p></li>
+<li><p><strong>Commencez simple, développez progressivement</strong> - Ne créez pas 20
+VLANs le premier jour. Commencez par 3-4 et ajoutez-en au besoin.</p></li>
+<li><p><strong>Testez les règles avant de les appliquer</strong> - Configurez d'abord la journalisation, puis passez progressivement de "Autoriser tout" à "Refuser tout sauf..."</p></li>
+<li><p><strong>Le VLAN 1 est spécial</strong> - Gardez-le inutilisé ou utilisé uniquement
+pour la gestion. N'y mettez pas d'appareils de production.</p></li>
+<li><p><strong>L'accès au VLAN de gestion est critique</strong> - Si vous vous verrouillez hors de votre VLAN de gestion, vous aurez besoin d'un accès physique pour récupérer. J'ai appris cela à la dure.</p></li>
+<li><p><strong>Tous les appareils ne prennent pas bien en charge les VLANs</strong> - Certains anciens appareils IoT ne comprennent pas l'étiquetage VLAN. Maintenez un réseau de secours non segmenté pour les appareils hérités si nécessaire.</p></li>
 </ol>
 <hr />
 <h2 id="conclusion-from-chaos-to-architecture">Conclusion : Du chaos à
 l'architecture</h2>
-<p>Ce qui a commencé comme un réseau plat où tout était connecté à un seul commutateur s'est transformé en une infrastructure segmentée de manière réfléchie. Chaque appareil vit désormais dans son propre quartier avec des règles claires sur qui peut rendre visite à qui.</p>
-<p>L'amélioration de la sécurité est significative. La complexité opérationnelle ? En fait, elle est minimale une fois que vous comprenez les concepts.</p>
-<p>Si vous construisez un homelab aujourd'hui, je vous recommande fortement de commencer par la segmentation VLAN dès le premier jour. C'est comme construire avec des murs dès le départ au lieu d'essayer de les ajouter plus tard.</p>
-<p>Cette architecture n'est pas seulement une question de sécurité—il s'agit d'avoir confiance en votre réseau. Lorsque vous comprenez le flux de trafic et que vous avez des règles explicites pour chaque segment, vous pouvez vous détendre en sachant qu'un appareil IoT compromis n'est pas une menace pour l'ensemble de votre infrastructure.</p>
+<p>Ce qui a commencé comme un réseau plat avec tout connecté à un seul
+commutateur s'est transformé en une infrastructure segmentée et réfléchie. Chaque
+appareil vit désormais dans son propre quartier avec des règles claires sur qui peut
+visiter qui.</p>
+<p>L'amélioration de la sécurité est significative. La complexité opérationnelle ?
+Elle est en fait minimale une fois que vous comprenez les concepts.</p>
+<p>Si vous construisez un homelab aujourd'hui, je vous recommande vivement de commencer par
+la segmentation VLAN dès le premier jour. C'est comme construire avec des murs dès
+le départ au lieu d'essayer de les ajouter plus tard.</p>
+<p>Cette architecture n'est pas seulement une question de sécurité : il s'agit d'avoir
+confiance dans votre réseau. Lorsque vous comprenez le flux de trafic et
+que vous avez des règles explicites pour chaque segment, vous pouvez vous
+détendre, sachant qu'un appareil IoT compromis ne représente pas une menace pour
+l'ensemble de votre infrastructure.</p>
 <hr />
-<h2 id="quick-reference-my-final-configuration">Référence rapide : Ma
-configuration finale</h2>
+<h2 id="quick-reference-my-final-configuration">Référence Rapide : Ma
+Configuration Finale</h2>
 <pre><code>┌─────────────────────────────────────────────────────────┐
-│                  CONCEPTION DU RÉSEAU HOMELAB           │
+│                  HOMELAB NETWORK DESIGN                 │
 ├─────────────────────────────────────────────────────────┤
-│ VLAN 10: Gestion       (10.0.10.0/24) - CRITIQUE        │
-│ VLAN 20: Serveurs      (10.0.20.0/24) - SERVICES DE BASE│
-│ VLAN 30: IoT/Intelligent (10.0.30.0/24) - NON FIABLE    │
-│ VLAN 40: Invités       (10.0.40.0/24) - ISOLÉ           │
-│ VLAN 50: Fiable/Travail (10.0.50.0/24) - PERSONNEL      │
+│ VLAN 10: Management    (10.0.10.0/24) - CRITIQUE        │
+│ VLAN 20: Servers       (10.0.20.0/24) - SERVICES CLES   │
+│ VLAN 30: IoT/Smart     (10.0.30.0/24) - NON FIABLE      │
+│ VLAN 40: Guests        (10.0.40.0/24) - ISOLE           │
+│ VLAN 50: Trusted/Work  (10.0.50.0/24) - PERSONNEL       │
 └─────────────────────────────────────────────────────────┘
 
-Règles de trafic (Par défaut : REFUSER)
-├─ Fiable ↔ Tous (accès flexible)
-├─ Serveurs ↔ Serveurs + accès contrôlé
-├─ Gestion → Tous (accès admin)
+Traffic Rules (Default: DENY)
+├─ Trusted ↔ All (accès flexible)
+├─ Servers ↔ Servers + accès contrôlé
+├─ Management → All (accès admin)
 ├─ IoT → DNS, NTP, services spécifiques uniquement
-└─ Invités → Internet uniquement</code></pre>
+└─ Guests → Internet uniquement</code></pre>
 <p>Construisez intelligemment. Segmentez intentionnellement. Dormez tranquille en sachant que votre réseau est sécurisé.</p>
                 </div>
 
@@ -311,14 +322,14 @@ Règles de trafic (Par défaut : REFUSER)
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en formation | Passionné de cybersécurité</p>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Liens rapides</h4>
+                    <h4>Liens Rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
-                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#about">À Propos</a></li>
                         <li><a href="/index.html#projects">Projets</a></li>
                         <li><a href="/blog/index.html">Blog</a></li>
                     </ul>
@@ -357,4 +368,3 @@ Règles de trafic (Par défaut : REFUSER)
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
-```

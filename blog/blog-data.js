@@ -1,114 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
-            "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html"
+            "url": "../en/network_security/troubleshooting-pfsense-web-interface-access.html"
         },
         {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
-            "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html"
+            "url": "../fr/network_security/troubleshooting-pfsense-web-interface-access.html"
         },
         {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html"
+            "url": "../en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html"
         },
         {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html"
+            "url": "../fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html"
         },
         {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/en/reference/network-consciousness-vlan-learning-journey.html"
+            "url": "../en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html"
         },
         {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/fr/reference/network-consciousness-vlan-learning-journey.html"
+            "url": "../fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html"
         },
         {
-            "id": "certifications",
-            "title": "Professional Certifications",
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/en/reference/certifications.html"
+            "url": "../en/network_security/setting-up-secure-reverse-proxy-https.html"
         },
         {
-            "id": "certifications",
-            "title": "Professional Certifications",
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/fr/reference/certifications.html"
+            "url": "../fr/network_security/setting-up-secure-reverse-proxy-https.html"
         },
         {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
+            "url": "../en/network_security/building-secure-homelab-network-vlans-architecture.html"
         },
         {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-19",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
+            "url": "../fr/network_security/building-secure-homelab-network-vlans-architecture.html"
         }
     ],
     "categories": {
