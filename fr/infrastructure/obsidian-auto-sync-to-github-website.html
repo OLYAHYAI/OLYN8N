@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Titre de votre article ici - Tutoriel et guide technique">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Titre de votre article ici | Blog technique d'Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/infrastructure/obsidian-auto-sync-to-github-website.html" class="lang-toggle" aria-label="Changer de langue">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="En-tête de l'article">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Titre de votre article ici</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Titre de votre article ici</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>3 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Contenu de l'article">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1 id="mode-opératoire-obsidian-auto-sync-system">🔄 Mode Opératoire:
+Système de Synchronisation Automatique Obsidian</h1>
+<h2 id="overview">📋 Aperçu</h2>
+<p><strong>Objectif :</strong> Synchroniser automatiquement les modifications de la documentation Obsidian vers GitHub et les déployer sur le site web en direct.</p>
+<p><strong>Flux :</strong></p>
+<pre><code>Edit in Obsidian → Auto-detect (5s) → Git Commit → Push to GitHub → Jekyll Build → Live Website</code></pre>
+<p><strong>Temps total :</strong> ~2-3 minutes entre la modification et le déploiement en direct</p>
+<hr />
+<h2 id="current-implementation-option-1-file-watcher-git">🎯 Implémentation Actuelle : Option 1 (Moniteur de Fichiers + Git)</h2>
+<h3 id="system-architecture">Architecture du Système</h3>
+<pre><code>┌─────────────────┐
+│  Obsidian Edit  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────────────┐
+│  inotify File Watcher   │
+│  (systemd service)      │
+└────────┬────────────────┘
+         │ (5 second debounce)
+         ▼
+┌─────────────────────────┐
+│  auto-sync-to-github.sh │
+│  - Detect changes       │
+│  - Git add              │
+│  - Git commit           │
+│  - Git push             │
+└────────┬────────────────┘
+         │
+         ▼
+┌─────────────────────────┐
+│  GitHub Repository      │
+│  OLYAHYAI/Portfolio     │
+└────────┬────────────────┘
+         │
+         ▼
+┌─────────────────────────┐
+│  GitHub Actions         │
+│  (.github/workflows/)   │
+└────────┬────────────────┘
+         │
+         ▼
+┌─────────────────────────┐
+│  Jekyll Build           │
+│  (Auto-triggered)       │
+└────────┬────────────────┘
+         │
+         ▼
+┌─────────────────────────┐
+│  GitHub Pages Deploy    │
+│  https://olyahyai.      │
+│  github.io/Portfolio/   │
+└─────────────────────────┘</code></pre>
+<hr />
+<h2 id="installation-procedure">🚀 Procédure d'Installation</h2>
+<h3 id="prerequisites">Prérequis</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />Système Linux Ubuntu/Debian</label></li>
+<li><label><input type="checkbox" checked="" />Git installé</label></li>
+<li><label><input type="checkbox" checked="" />Obsidian avec les coffres ProjectEN et ProjectFR_new</label></li>
+<li><label><input type="checkbox" checked="" />Compte GitHub (OLYAHYAI)</label></li>
+<li><label><input type="checkbox" checked="" />Dépôt :
+OLYAHYAI/Portfolio</label></li>
+</ul>
+<h3 id="step-1-git-authentication-one-time">Étape 1 : Authentification Git (UNE FOIS)</h3>
+<p><strong>Choisissez UNE méthode :</strong></p>
+<h4 id="option-a-github-cli-recommended">Option A : GitHub CLI (Recommandé)</h4>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div>
+<h4 id="option-b-ssh-key-most-secure">Option B : Clé SSH (La plus Sécurisée)</h4>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">&quot;your@email.com&quot;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to: https://github.com/settings/keys</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/f4blox/Desktop/Gemini/opencode/openproject/OpenProject</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-url origin git@github.com:OLYAHYAI/Portfolio.git</span></code></pre></div>
+<h4 id="option-c-credential-helper">Option C : Assistant d'Identification</h4>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper store</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/f4blox/Desktop/Gemini/opencode/openproject/OpenProject</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div>
+<h3 id="step-2-install-auto-sync">Étape 2 : Installer la Synchronisation Automatique</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/f4blox/Desktop/Gemini/opencode/scripts</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./setup-auto-sync.sh</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable obsidian-github-sync</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start obsidian-github-sync</span></code></pre></div>
+<h3 id="step-3-enable-github-pages">Étape 3 : Activer GitHub Pages</h3>
+<ol type="1">
+<li>Visiter : https://github.com/OLYAHYAI/Portfolio/settings/pages</li>
+<li>Source : main / (root)</li>
+<li>Sauvegarder</li>
+</ol>
+<hr />
+<h2 id="daily-operations">🔧 Opérations Quotidiennes</h2>
+<p><strong>Utilisation Normale :</strong> 1. Modifier dans Obsidian 2. Sauvegarder (Ctrl+S)
+3. Synchronisation automatique en 5 secondes 4. Mise en ligne en ~2 minutes</p>
+<p><strong>Synchronisation Manuelle :</strong></p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/f4blox/Desktop/Gemini/opencode/scripts/sync-now.sh</span></span></code></pre></div>
+<p><strong>Surveillance :</strong></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl status obsidian-github-sync</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> journalctl <span class="at">-u</span> obsidian-github-sync <span class="at">-f</span></span></code></pre></div>
+<hr />
+<h2 id="future-options-documented">🔮 Options Futures (Documentées)</h2>
+<h3 id="option-2-mcp-n8n-ai-workflows">Option 2 : MCP + N8N (Flux de Travail IA)</h3>
+<ul>
+<li>Messages de commit assistés par IA</li>
+<li>Validation du contenu</li>
+<li>Intégration multi-services</li>
+<li>Configuration : 30-60 min</li>
+</ul>
+<h3 id="option-6-claude-content-enhancement">Option 6 : Claude + Amélioration du Contenu</h3>
+<ul>
+<li>Contrôle qualité par IA</li>
+<li>Correction automatique de la grammaire/orthographe</li>
+<li>Commits intelligents</li>
+<li>Vérification de la confidentialité</li>
+<li>Optimisation SEO</li>
+<li>Traduction automatique AN ↔︎ FR</li>
+<li>Configuration : 1-2 heures</li>
+</ul>
+<p><strong>Documentation :</strong>
+<code>/opencode/conscience/updates/action-35-sync-options-analysis.md</code></p>
+<hr />
+<h2 id="resources">📚 Ressources</h2>
+<ul>
+<li>Scripts : <code>/opencode/scripts/</code></li>
+<li>Conscience : <code>/opencode/conscience/</code></li>
+<li>Site Web : https://olyahyai.github.io/Portfolio/</li>
+<li>Dépôt : https://github.com/OLYAHYAI/Portfolio</li>
+</ul>
+<hr />
+<p><strong>Dernière Mise à Jour :</strong> 2025-10-29 <strong>Version :</strong>
+1.0 <strong>Statut :</strong> Prêt pour le déploiement</p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Se Connecter</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

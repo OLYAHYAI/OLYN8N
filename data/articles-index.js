@@ -1,5 +1,5 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-19T11:06:45.852Z",
+  "lastUpdated": "2025-11-19T11:51:03.143Z",
   "totalArticles": 10,
   "categories": {
     "infrastructure": {
@@ -7,10 +7,212 @@ var ARTICLE_INDEX={
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "a-roadmap-to-self-hosted-services",
+            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "url": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+            "filePath": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+            "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "a-roadmap-to-self-hosted-services",
+            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "url": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+            "filePath": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+            "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 10
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -27,212 +229,10 @@ var ARTICLE_INDEX={
       "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt",
       "articles": {
-        "en": [
-          {
-            "id": "troubleshooting-pfsense-web-interface-access",
-            "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "troubleshooting-pfsense-web-interface-access",
-            "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-            "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
-            "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-            "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "setting-up-secure-reverse-proxy-https",
-            "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "setting-up-secure-reverse-proxy-https",
-            "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-            "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "building-secure-homelab-network-vlans-architecture",
-            "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-secure-homelab-network-vlans-architecture",
-            "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-            "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "troubleshooting-pfsense-web-interface-access",
-            "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "troubleshooting-pfsense-web-interface-access",
-            "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-            "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
-            "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-            "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "setting-up-secure-reverse-proxy-https",
-            "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "setting-up-secure-reverse-proxy-https",
-            "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-            "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "building-secure-homelab-network-vlans-architecture",
-            "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-secure-homelab-network-vlans-architecture",
-            "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
-            "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 10
+      "total": 0
     },
     "remote_access": {
       "name": "Remote Access",
@@ -271,200 +271,200 @@ var ARTICLE_INDEX={
   },
   "articles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
-      "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
-      "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
-      "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
+      "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+      "url": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "slug": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+      "url": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
-      "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
+      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+      "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+      "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-secure-homelab-network-vlans-architecture",
-      "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
+      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-secure-homelab-network-vlans-architecture",
-      "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
-      "description": "",
-      "excerpt": "",
-      "category": "network_security",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "network_security"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+      "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+      "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -474,9 +474,9 @@ var ARTICLE_INDEX={
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 10,
+      "en": 5,
+      "fr": 5,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -490,9 +490,9 @@ var ARTICLE_INDEX={
     },
     "network_security": {
       "name": "Network Security",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt"
     },
@@ -523,200 +523,200 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
-      "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
-      "title": "Securing My n8n Workflows: A Deep Dive into DNS and TLS",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "title": "The SSL Certificate Saga: Local DNS, Nginx and My Homelab",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
-      "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
+      "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+      "url": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "slug": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+      "url": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
-      "title": "The Digital Guardian of My Homelab: Setting Up a Secure Reverse Proxy with HTTPS",
+      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+      "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+      "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-secure-homelab-network-vlans-architecture",
-      "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
+      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-secure-homelab-network-vlans-architecture",
-      "title": "Building a Secure Homelab Network with VLANs and Smart Architecture",
-      "description": "",
-      "excerpt": "",
-      "category": "network_security",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "network_security"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+      "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+      "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,20 +725,20 @@ var ARTICLE_INDEX={
   ],
   "featuredArticles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting pfSense Web Interface Access: A Step-by-Step Guide",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-19",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +747,16 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/network_security/troubleshooting-pfsense-web-interface-access": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "fr/network_security/troubleshooting-pfsense-web-interface-access": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "en/network_security/securing-n8n-workflows-deep-dive-dns-tls": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "fr/network_security/securing-n8n-workflows-deep-dive-dns-tls": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "en/network_security/ssl-certificate-saga-local-dns-nginx-homelab": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "en/network_security/setting-up-secure-reverse-proxy-https": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-      "fr/network_security/setting-up-secure-reverse-proxy-https": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-      "en/network_security/building-secure-homelab-network-vlans-architecture": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "fr/network_security/building-secure-homelab-network-vlans-architecture": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html"
+      "en/infrastructure/docker-networking-troubleshooting-container-communication": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "fr/infrastructure/docker-networking-troubleshooting-container-communication": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "en/infrastructure/a-roadmap-to-self-hosted-services": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+      "en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
+      "fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+      "en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +786,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-19T11:06:45.853Z",
+  "generatedAt": "2025-11-19T11:51:03.145Z",
   "version": "1.0"
 };
