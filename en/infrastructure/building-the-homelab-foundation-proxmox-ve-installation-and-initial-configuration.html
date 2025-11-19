@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -129,28 +129,27 @@ The workflow will:
 <ul>
 <li>CPU : Intel i5-8500T</li>
 <li>RAM : 16 GB</li>
-<li>Primary Drive : 512 GB SSD</li>
-<li>Secondary Drive : 250 GB HDD</li>
+<li>Primary Disk : 512 GB SSD</li>
+<li>Secondary Disk : 250 GB HDD</li>
 </ul></li>
 <li><strong>Proxmox Server IP Address</strong> : 10.10.10.254</li>
 </ul>
 <hr />
-<h2 id="connexion-à-linterface-web-proxmox">1. ✅ Connecting to the
-Proxmox Web Interface</h2>
+<h2 id="connexion-à-linterface-web-proxmox">1. ✅ Connecting to the Proxmox Web Interface</h2>
 <ul>
 <li>Access via browser at <code>https://10.10.10.254:8006</code></li>
 <li>Credentials : root
 <ul>
 <li>User : <code>root</code></li>
-<li>Realm : <code>pam</code></li>
+<li>Domain : <code>pam</code></li>
 <li>Password : defined during installation</li>
 </ul></li>
 </ul>
 <hr />
-<h2 id="connexion-ethernet-entre-routeur-et-serveur">2. 🔌 Ethernet Connection Between Router and Server</h2>
+<h2 id="connexion-ethernet-entre-routeur-et-serveur">2. 🔌 Ethernet Connection between Router and Server</h2>
 <ul>
 <li>Direct connection via Ethernet cable</li>
-<li>Manual IP Configuration :
+<li>Manual IP configuration :
 <ul>
 <li>PC1 : <code>192.168.1.1</code></li>
 <li>PC2 : <code>192.168.1.254</code></li>
@@ -159,7 +158,7 @@ Proxmox Web Interface</h2>
 <li>Objective : direct communication between the two machines</li>
 </ul>
 <hr />
-<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Command Line Wi-Fi Verification</h2>
+<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Wi-Fi Verification using Command Line</h2>
 <ul>
 <li>Commands used :
 <ul>
@@ -198,15 +197,15 @@ iface vmbr0 inet static
 <li>Objective : create a VM with a custom ISO image</li>
 </ul>
 <hr />
-<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Choosing LLMs Suitable for the Machine</h2>
+<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Selecting LLMs suitable for the Machine</h2>
 <ul>
-<li>Recommended Models :
+<li>Recommended models :
 <ul>
 <li>Mistral 7B Q4</li>
 <li>Phi-2</li>
 <li>Gemma 2B</li>
 </ul></li>
-<li>Compatible Tools :
+<li>Compatible tools :
 <ul>
 <li><code>Ollama</code></li>
 <li><code>llama.cpp</code></li>
@@ -214,8 +213,7 @@ iface vmbr0 inet static
 </ul></li>
 </ul>
 <hr />
-<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installation of Docker +
-MCP + LLM</h2>
+<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installation of Docker + MCP + LLM</h2>
 <ul>
 <li><p>Docker :</p>
 <div class="sourceCode" id="cb2"><pre
@@ -230,11 +228,11 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <hr />
 <h2 id="outils-de-prise-de-notes-recommandés">8. 📝 Recommended Note-Taking Tools</h2>
 <ul>
-<li><strong>Obsidian</strong> : local, markdown, links between notes</li>
+<li><strong>Obsidian</strong> : local, Markdown, links between notes</li>
 <li><strong>Joplin</strong> : open-source, synchronizable</li>
 <li><strong>Logseq / Trilium</strong> : Docker possible</li>
 <li><strong>Notion</strong> : cloud, project management</li>
-<li><strong>Markdown + Git</strong> : version control for technical notes</li>
+<li><strong>Markdown + Git</strong> : technical note versioning</li>
 </ul>
 <hr />
 <h2 id="choix-dun-os-pour-gérer-le-réseau">9. 🔐 Choosing an OS for Network Management</h2>
@@ -253,21 +251,21 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <li>Packet Capture</li>
 <li>IDS/IPS (Snort, Suricata)</li>
 </ul></li>
-<li><strong>Limitation</strong> :
+<li><strong>Limiting</strong> :
 <ul>
 <li>Traffic Shaping (pipes, queues)</li>
-<li>Firewall Rules</li>
+<li>Firewall rules</li>
 <li>Proxy Squid + SquidGuard</li>
 </ul></li>
 </ul>
 <hr />
-<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Using a Hard Disk Drive (250 GB HDD)</h2>
+<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Using a Hard Disk Drive (250 GB)</h2>
 <ul>
 <li><p><strong>Recommended Usage</strong> :</p>
 <ul>
 <li>Backups</li>
 <li>Logs</li>
-<li>ISOs / LLM templates</li>
+<li>ISO / LLM templates</li>
 </ul></li>
 <li><p><strong>Formatting</strong> :</p>
 <div class="sourceCode" id="cb5"><pre
@@ -276,7 +274,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> /mnt/hdd250</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mount</span> /dev/sdX1 /mnt/hdd250</span></code></pre></div></li>
-<li><p><strong>Adding in Proxmox</strong> :</p>
+<li><p><strong>Adding to Proxmox</strong> :</p>
 <ul>
 <li>Interface :
 <code>Datacenter &gt; Storage &gt; Add &gt; Directory</code></li>
@@ -288,7 +286,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <h2 id="fin-de-session">🔚 End of Session</h2>
 <ul>
 <li>All steps are ready to be documented in Obsidian.</li>
-<li>Proxmox Server IP Address : <code>10.10.10.254</code></li>
+<li>Proxmox server IP Address : <code>10.10.10.254</code></li>
 </ul>
                 </div>
 
@@ -349,3 +347,4 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
+```
