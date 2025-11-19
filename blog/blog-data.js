@@ -1,114 +1,48 @@
 const blogData = {
     "articles": [
         {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "title": "AI Kali Adventures LLM Testing and Proxmox Debugging",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
+            "url": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html"
         },
         {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "title": "AI Kali Adventures LLM Testing and Proxmox Debugging",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
+            "url": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html"
         },
         {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
+            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+            "title": "Unlocking Remote Access Cloudflare Tunnel and Proxmox",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
+            "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
         },
         {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
+            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+            "title": "Unlocking Remote Access Cloudflare Tunnel and Proxmox",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
-        },
-        {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html"
-        },
-        {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html"
-        },
-        {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "MCP Configuration Guide YAML Setup and Best Practices",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html"
-        },
-        {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "MCP Configuration Guide YAML Setup and Best Practices",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html"
-        },
-        {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto-Sync to GitHub Website Automation",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html"
-        },
-        {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto-Sync to GitHub Website Automation",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html"
+            "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
         }
     ],
     "categories": {
