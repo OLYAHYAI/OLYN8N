@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Titre de votre article ici - Tutoriel et guide technique">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Titre de votre article ici | Blog technique d'Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/infrastructure/automating-website-deployment-github-cloudflare-pages.html" class="lang-toggle" aria-label="Changer de langue">
+                        <span class="lang-current">EN</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Titre de votre article ici</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Titre de votre article ici</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>5 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1
+id="automating-website-deployment-with-github-and-cloudflare-pages">Automatisation
+du déploiement de sites web avec GitHub et Cloudflare Pages</h1>
+<h2 id="introduction-to-cicd-for-static-sites">Introduction au CI/CD pour
+les sites statiques</h2>
+<p>Dans le monde du développement web moderne, l'automatisation n'est pas seulement un luxe, c'est une nécessité. Lors de la création de mon site web de portfolio de pentester, j'ai mis en œuvre un pipeline CI/CD rationalisé qui transforme les commits de code en déploiements en direct. Cet article explore les stratégies d'automatisation innovantes que j'ai utilisées avec GitHub et Cloudflare Pages.</p>
+<h2 id="why-cloudflare-pages">Pourquoi Cloudflare Pages ?</h2>
+<h3 id="performance-advantages">Avantages en termes de performance</h3>
+<ul>
+<li><strong>Global CDN</strong>: Livraison instantanée de contenu dans le monde entier</li>
+<li><strong>Edge Computing</strong>: Latence réduite grâce à une infrastructure distribuée</li>
+<li><strong>Automatic HTTPS</strong>: Certificats SSL gérés automatiquement</li>
+<li><strong>Configuration Zéro</strong>: Aucune gestion de serveur requise</li>
+</ul>
+<h3 id="developer-experience">Expérience Développeur</h3>
+<ul>
+<li><strong>Intégration Git</strong>: Déploiement direct à partir des dépôts</li>
+<li><strong>Déploiements de prévisualisation</strong>: Tester les modifications avant la mise en ligne</li>
+<li><strong>Analytiques</strong>: Surveillance des performances intégrée</li>
+<li><strong>Rentable</strong>: Niveau gratuit généreux pour les projets personnels</li>
+</ul>
+<h2 id="github-integration-setup">Configuration de l'intégration GitHub</h2>
+<h3 id="repository-structure">Structure du dépôt</h3>
+<pre><code>portfolio-website/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── src/
+│   ├── index.html
+│   ├── assets/
+│   └── blog/
+├── scripts/
+│   └── push-website.sh
+└── README.md</code></pre>
+<h3 id="github-actions-workflow">Workflow GitHub Actions</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Deploy to Cloudflare Pages</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> main </span><span class="kw">]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pull_request</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> main </span><span class="kw">]</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">deploy</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Checkout</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Deploy to Cloudflare Pages</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> cloudflare/pages-action@v1</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">apiToken</span><span class="kw">:</span><span class="at"> ${{ secrets.CLOUDFLARE_API_TOKEN }}</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">accountId</span><span class="kw">:</span><span class="at"> ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">projectName</span><span class="kw">:</span><span class="at"> portfolio</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">directory</span><span class="kw">:</span><span class="at"> src</span></span></code></pre></div>
+<h2 id="custom-push-scripts">Scripts de Push Personnalisés</h2>
+<h3 id="push-website.sh-innovation">Innovation push-website.sh</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-euo</span> pipefail</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Automated commit message generation</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">generate_commit_message()</span> <span class="kw">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">CHANGED_FILES</span><span class="op">=</span><span class="va">$(</span><span class="fu">git</span> status <span class="at">--porcelain</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{print $2}&#39;</span><span class="va">)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Intelligent categorization</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">BLOG_POSTS</span><span class="op">=</span><span class="va">()</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="va">STYLES</span><span class="op">=</span><span class="va">()</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="va">SCRIPTS</span><span class="op">=</span><span class="va">()</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="va">TRANSLATIONS</span><span class="op">=</span><span class="va">()</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> file <span class="kw">in</span> <span class="va">$CHANGED_FILES</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="va">$file</span> <span class="kw">in</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            <span class="ss">_posts/</span><span class="pp">*</span><span class="kw">)</span> <span class="va">BLOG_POSTS</span><span class="op">+=</span><span class="va">(</span><span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span><span class="va">)</span> <span class="cf">;;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>            <span class="pp">*</span><span class="ss">.css</span><span class="kw">|</span><span class="ss">assets/css/</span><span class="pp">*</span><span class="kw">)</span> <span class="va">STYLES</span><span class="op">+=</span><span class="va">(</span><span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span><span class="va">)</span> <span class="cf">;;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>            <span class="pp">*</span><span class="ss">.js</span><span class="kw">|</span><span class="ss">assets/js/</span><span class="pp">*</span><span class="kw">)</span> <span class="va">SCRIPTS</span><span class="op">+=</span><span class="va">(</span><span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span><span class="va">)</span> <span class="cf">;;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>            <span class="pp">*</span><span class="ss">[Ff][Rr]</span><span class="pp">*</span><span class="kw">)</span> <span class="va">TRANSLATIONS</span><span class="op">+=</span><span class="va">(</span><span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span><span class="va">)</span> <span class="cf">;;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">esac</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dynamic message generation</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">[[</span> <span class="va">${</span><span class="op">#</span><span class="va">BLOG_POSTS</span><span class="op">[@]</span><span class="va">}</span> <span class="ot">-gt</span> 0 <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Add new article: </span><span class="va">$(</span><span class="fu">basename</span> <span class="st">&quot;</span><span class="va">${BLOG_POSTS</span><span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="va">}</span><span class="st">&quot;</span> .md<span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="kw">[[</span> <span class="va">${</span><span class="op">#</span><span class="va">STYLES</span><span class="op">[@]</span><span class="va">}</span> <span class="ot">-gt</span> 0 <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Update styles: </span><span class="va">$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">${STYLES</span><span class="op">[@]</span><span class="va">}</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s/ /, /g&#39;</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Update website: </span><span class="va">$(</span><span class="fu">date</span> <span class="st">&#39;+%Y-%m-%d %H:%M&#39;</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div>
+<h3 id="script-features">Fonctionnalités du script</h3>
+<ul>
+<li><strong>Commits intelligents</strong>: Catégorise automatiquement les
+modifications</li>
+<li><strong>Vérifications de sécurité</strong>: Valide l'état du dépôt</li>
+<li><strong>Journalisation</strong>: Historique de push complet</li>
+<li><strong>Gestion des erreurs</strong>: Gestion élégante des échecs</li>
+</ul>
+<h2 id="deployment-workflow">Flux de travail de déploiement</h2>
+<h3 id="manual-deployment-process">Processus de déploiement manuel</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Make changes</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /path/to/website</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Stage changes</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Push with automation</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">./scripts/push-website.sh</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Monitor deployment</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Check Cloudflare Pages dashboard</span></span></code></pre></div>
+<h3 id="automated-triggers">Déclencheurs Automatisés</h3>
+<ul>
+<li><strong>Push vers Main</strong>: Déploiement immédiat</li>
+<li><strong>Pull Requests</strong>: Déploiements de prévisualisation</li>
+<li><strong>Builds Planifiés</strong>: Vérifications de performance nocturnes</li>
+</ul>
+<h2 id="domain-configuration">Configuration du Domaine</h2>
+<h3 id="custom-domain-setup">Configuration de Domaine Personnalisé</h3>
+<pre><code>DNS Configuration pour olyhome.site:
+CNAME portfolio.olyhome.site → [Cloudflare Pages URL]</code></pre>
+<h3 id="ssl-and-security">SSL et Sécurité</h3>
+<ul>
+<li><strong>HTTPS Automatique</strong>: Cloudflare gère les
+certificats</li>
+<li><strong>En-têtes de Sécurité</strong>: Protection intégrée</li>
+<li><strong>Protection DDoS</strong>: Atténuation de niveau entreprise</li>
+</ul>
+<h2 id="monitoring-and-maintenance">Surveillance et Maintenance</h2>
+<h3 id="performance-monitoring">Surveillance des Performances</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Intégration analytique de base</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;load&#39;</span><span class="op">,</span> <span class="kw">function</span>() {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Suivi des pages vues</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Surveillance des métriques de performance</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Journalisation des interactions utilisateur</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<h3 id="health-checks">Vérifications d'État</h3>
+<ul>
+<li><strong>Surveillance de disponibilité (Uptime)</strong>: Surveillance de service externe</li>
+<li><strong>Tests de Performance</strong>: Intégration Lighthouse CI</li>
+<li><strong>Suivi des Erreurs</strong>: Sentry pour les erreurs JavaScript</li>
+</ul>
+<h2 id="lessons-learned">Leçons Apprises</h2>
+<h3 id="automation-benefits">Avantages de l'Automatisation</h3>
+<ol type="1">
+<li><strong>Cohérence</strong>: Élimine les erreurs de déploiement manuelles</li>
+<li><strong>Vitesse</strong>: Les déploiements instantanés réduisent les cycles de rétroaction</li>
+<li><strong>Fiabilité</strong>: Les tests automatisés préviennent les régressions</li>
+<li><strong>Évolutivité</strong>: Facile à étendre pour de futures fonctionnalités</li>
+</ol>
+<h3 id="challenges-overcome">Défis Relevés</h3>
+<ul>
+<li><strong>Complexité de la configuration initiale</strong>: Rationalisée grâce à la documentation</li>
+<li><strong>Gestion des branches</strong>: Lignes directrices claires du flux de travail</li>
+<li><strong>Stratégie de retour arrière (Rollback)</strong>: Procédures de récupération basées sur Git</li>
+</ul>
+<h3 id="future-improvements">Améliorations Futures</h3>
+<ul>
+<li><strong>Automatisation du Contenu</strong>: Synchronisation Obsidian → GitHub → Site Web</li>
+<li><strong>Tests A/B</strong>: Implémentation de drapeaux de fonctionnalité (Feature flags)</li>
+<li><strong>Budgets de Performance</strong>: Portes de performance automatisées</li>
+</ul>
+<h2 id="technical-implementation-details">Détails d'Implémentation Technique</h2>
+<h3 id="build-optimization">Optimisation de la Construction (Build)</h3>
+<ul>
+<li><strong>Minification des Actifs</strong>: Compression automatique CSS/JS</li>
+<li><strong>Optimisation des Images</strong>: Conversion WebP et chargement paresseux (lazy loading)</li>
+<li><strong>Stratégie de Mise en Cache</strong>: Mise en cache agressive pour les actifs statiques</li>
+</ul>
+<h3 id="security-considerations">Considérations de Sécurité</h3>
+<ul>
+<li><strong>Analyse des Dépendances</strong>: Vérifications de vulnérabilité automatisées</li>
+<li><strong>Contrôle d'Accès</strong>: Paramètres de dépôt protégés</li>
+<li><strong>Journalisation d'Audit</strong>: Journaux de déploiement complets</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>La mise en œuvre du déploiement automatisé avec GitHub et Cloudflare Pages a transformé mon flux de travail de développement, le faisant passer de manuel et sujet aux erreurs à rationalisé et fiable. La combinaison de scripts intelligents, de pipelines CI/CD et d'infrastructure cloud a créé un système robuste qui prend en charge l'itération rapide et le déploiement professionnel.</p>
+<p>Cette base d'automatisation sert non seulement mon portfolio actuel, mais fournit également une plateforme évolutive pour les futurs projets web. Les leçons apprises ici éclaireront mon approche DevOps et l'automatisation de l'infrastructure dans toutes mes initiatives homelab.</p>
+<p><em>Site web du portfolio : <a
+href="https://olyhome.site">olyhome.site</a></em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connecter</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut de page">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
