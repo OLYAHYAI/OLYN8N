@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Titre de votre article ici - Tutoriel et guide technique">
+    <meta name="description" content="Votre Titre d'Article Ici - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Titre de votre article ici | Blog technique d'Omar LYAHYAI</title>
+    <title>Votre Titre d'Article Ici | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html" class="lang-toggle" aria-label="Change language">
+                    <a href="/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html" class="lang-toggle" aria-label="Changer de langue">
                         <span class="lang-current">FR</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -58,21 +58,21 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="Article header">
+        <section class="article-header" role="region" aria-label="En-tête de l'article">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Titre de votre article ici</span>
+                        <span>Votre Titre d'Article Ici</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Titre de votre article ici</h1>
+                <h1 class="article-title">Votre Titre d'Article Ici</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -81,7 +81,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="far fa-clock"></i>
-                        <span>9 min de lecture</span>
+                        <span>Lecture de 9 min</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-folder"></i>
@@ -95,7 +95,7 @@
             </div>
         </section>
 
-        <section class="article-content" role="region" aria-label="Article content">
+        <section class="article-content" role="region" aria-label="Contenu de l'article">
             <div class="container">
                 <div class="article-body">
                     <!-- 
@@ -123,81 +123,73 @@ The workflow will:
 - Preserve images and links
 -->
 <h1 id="my-ai-and-kali-adventures-llm-testing-and-proxmox-debugging">Mes
-aventures avec l'IA et Kali : Tests de LLM et débogage Proxmox</h1>
-<h2 id="session-overview">Aperçu de la session</h2>
-<p>Cette session a combiné deux défis fascinants de homelab : tester le
-déploiement local d'un LLM (Large Language Model) sur du matériel limité,
-et déboguer une machine virtuelle Kali Linux récalcitrante qui refusait
-de démarrer sur Proxmox. Ces deux problèmes ont apporté de précieuses
-leçons sur la gestion des ressources et le dépannage de la
-virtualisation.</p>
-<h2 id="part-1-local-llm-testing-on-consumer-hardware">Partie 1 : Test
-d'un LLM local sur du matériel grand public</h2>
-<h3 id="the-goal">L'objectif</h3>
-<p>Exécuter des LLM open source localement sur un ThinkPad E14 Gen 2
-pour : - Une assistance IA préservant la confidentialité - Un accès hors
-ligne aux capacités de l'IA - Apprendre sur la quantification et
-l'optimisation des LLM - L'assistance à la complétion de code et au
-développement</p>
-<h3 id="hardware-constraints">Contraintes matérielles</h3>
-<p><strong>Spécifications du ThinkPad E14 Gen 2 :</strong> -
-<strong>CPU</strong> : Intel i5-1135G7 (4 cœurs, 8 threads) -
-<strong>RAM</strong> : 16 Go DDR4 - <strong>Stockage</strong> : 256 Go
-SSD - <strong>GPU</strong> : Intel Iris Xe (intégrée, support Vulkan) -
-<strong>Limitations</strong> : Pas de GPU dédié, RAM limitée</p>
-<h3 id="llm-model-evaluation">Évaluation des modèles LLM</h3>
+Aventures avec l'IA et Kali : Tests LLM et Débogage Proxmox</h1>
+<h2 id="session-overview">Aperçu de la Session</h2>
+<p>Cette session a combiné deux défis fascinants de homelab : tester le déploiement local d'un LLM (Large Language Model) sur du matériel limité, et déboguer une VM récalcitrante de Kali Linux qui refusait de démarrer sur Proxmox. Les deux problèmes nous ont enseigné de précieuses leçons sur la gestion des ressources et le dépannage de la virtualisation.</p>
+<h2 id="part-1-local-llm-testing-on-consumer-hardware">Partie 1 : Test de LLM Local sur Matériel Grand Public</h2>
+<h3 id="the-goal">L'Objectif</h3>
+<p>Exécuter des LLM open-source localement sur un ThinkPad E14 Gen 2 pour : <ul>
+<li>Une assistance IA préservant la confidentialité</li>
+<li>Un accès hors ligne aux capacités de l'IA</li>
+<li>Apprendre la quantification et l'optimisation des LLM</li>
+<li>L'achèvement de code et le soutien au développement</li>
+</ul></p>
+<h3 id="hardware-constraints">Contraintes Matérielles</h3>
+<p><strong>Spécifications ThinkPad E14 Gen 2 :</strong> -
+<strong>CPU</strong>: Intel i5-1135G7 (4 cœurs, 8 threads) -
+<strong>RAM</strong>: 16 GB DDR4 - <strong>Stockage</strong>: 256 GB SSD
+- <strong>GPU</strong>: Intel Iris Xe (intégré, support Vulkan) -
+<strong>Limitations</strong>: Pas de GPU dédié, RAM limitée</p>
+<h3 id="llm-model-evaluation">Évaluation du Modèle LLM</h3>
 <h4 id="attempt-1-gpt-oss-20b">Tentative 1 : GPT-OSS-20B</h4>
-<p><strong>Spécifications du modèle :</strong> -
-<strong>Taille</strong> : 21 milliards de paramètres -
-<strong>Quantification</strong> : 4 bits (Q4) - <strong>Taille du
-fichier</strong> : ~12 Go - <strong>Licence</strong> : Apache 2.0
-(utilisation commerciale autorisée)</p>
-<p><strong>Évaluation de la compatibilité :</strong></p>
-<pre><code>Exigences du modèle :
-├── VRAM : ~8 Go (GPU)
-├── RAM système : ~16 Go minimum
-├── Stockage : 12 Go pour le modèle
-└── Performance : GPU dédié recommandé
+<p><strong>Spécifications du Modèle :</strong> - <strong>Taille</strong>: 21
+milliards de paramètres - <strong>Quantification</strong>: 4-bit (Q4) -
+<strong>Taille du Fichier</strong>: ~12 GB - <strong>Licence</strong>: Apache
+2.0 (utilisation commerciale autorisée)</p>
+<p><strong>Évaluation de la Compatibilité :</strong></p>
+<pre><code>Model Requirements:
+├── VRAM: ~8 GB (GPU)
+├── System RAM: ~16 GB minimum
+├── Storage: 12 GB for model
+└── Performance: Dedicated GPU recommended
 
-Ressources disponibles :
-├── VRAM : ~2 Go (partagée avec le système)
-├── RAM système : 16 Go (mais l'OS nécessite ~4 Go)
-├── Stockage : 256 Go (suffisant)
-└── GPU : Iris Xe intégrée</code></pre>
-<p><strong>Résultat</strong> : ❌ <strong>Incompatible</strong></p>
-<p><strong>Raisons :</strong> 1. <strong>RAM insuffisante</strong> : Le
-modèle consommerait ~12 Go, ne laissant que 4 Go pour l'OS. 2. <strong>Pas
-de GPU dédié</strong> : Iris Xe ne peut pas gérer efficacement un modèle
-de 20 milliards de paramètres. 3. <strong>Performance</strong> : Des
-ralentissements extrêmes seraient observés (10+ secondes par token). 4.
-<strong>Risque de crash système</strong> : Probabilité d'erreurs de
-mémoire insuffisante.</p>
+Available Resources:
+├── VRAM: ~2 GB (shared with system)
+├── System RAM: 16 GB (but OS needs ~4 GB)
+├── Storage: 256 GB (adequate)
+└── GPU: Integrated Iris Xe</code></pre>
+<p><strong>Résultat</strong>: ❌ <strong>Incompatible</strong></p>
+<p><strong>Raisons:</strong> 1. <strong>RAM Insuffisante</strong>: Le modèle
+consommerait ~12 GB, ne laissant que 4 GB pour l'OS 2. <strong>Pas de GPU
+Dédié</strong>: Iris Xe ne peut pas gérer efficacement un modèle à 20
+milliards de paramètres 3. <strong>Performance</strong>: Entraînerait des
+ralentissements extrêmes (10+ secondes par token) 4. <strong>Risque de Plantage du
+Système</strong>: Erreurs de mémoire saturée probables</p>
 <h4 id="attempt-2-mistral-7b-q4">Tentative 2 : Mistral 7B (Q4)</h4>
-<p><strong>Options de modèles découvertes :</strong> 1.
-<strong>mistral-7b-ielts-evaluator-q4</strong> (spécialisé pour
-l'évaluation IELTS) 2. <strong>Mistral-7B-Instruct-v0.1-Q4_K_M</strong>
-(usage général) ✓ <strong>Recommandé</strong></p>
-<p><strong>Spécifications du modèle :</strong> -
-<strong>Taille</strong> : 7 milliards de paramètres -
-<strong>Quantification</strong> : Q4_K_M (4 bits avec précision mixte) -
-<strong>Taille du fichier</strong> : ~4.3 Go -
-<strong>Performance</strong> : Optimisé pour l'inférence CPU</p>
-<p><strong>Évaluation de la compatibilité :</strong></p>
-<pre><code>Exigences du modèle :
-├── RAM : ~6 Go (modèle + surcharge)
-├── Stockage : 4.3 Go
-├── CPU : Multi-cœurs (4+ cœurs recommandés)
-└── Accélération : AVX2, Vulkan optionnel
+<p><strong>Options de Modèle Découvertes :</strong> 1.
+<strong>mistral-7b-ielts-evaluator-q4</strong> (spécialisé pour l'évaluation IELTS) 2.
+<strong>Mistral-7B-Instruct-v0.1-Q4_K_M</strong> (usage général) ✓
+<strong>Recommandé</strong></p>
+<p><strong>Spécifications du Modèle :</strong> - <strong>Taille</strong>: 7
+milliards de paramètres - <strong>Quantification</strong>: Q4_K_M (4-bit avec
+précision mixte) - <strong>Taille du Fichier</strong>: ~4.3 GB -
+<strong>Performance</strong>: Optimisé pour l'inférence CPU</p>
+<p><strong>Évaluation de la Compatibilité :</strong></p>
+<pre><code>Model Requirements:
+├── RAM: ~6 GB (model + overhead)
+├── Storage: 4.3 GB
+├── CPU: Multi-core (4+ cores recommended)
+└── Acceleration: AVX2, Vulkan optional
 
-Ressources disponibles :
-├── RAM : 16 Go ✓
-├── Stockage : 256 Go ✓
-├── CPU : i5-1135G7 (4 cœurs) ✓
-└── Accélération : AVX2 ✓, Vulkan ✓</code></pre>
-<p><strong>Résultat</strong> : ✅ <strong>Compatible</strong></p>
-<p><strong>Performance attendue :</strong> - Tokens par seconde : 2-5
-(CPU) - Temps de réponse : 10-30 secondes pour une requête typique -
-Utilisation mémoire : ~6 Go pendant l'inférence</p>
+Available Resources:
+├── RAM: 16 GB ✓
+├── Storage: 256 GB ✓
+├── CPU: i5-1135G7 (4 cores) ✓
+└── Acceleration: AVX2 ✓, Vulkan ✓</code></pre>
+<p><strong>Résultat</strong>: ✅ <strong>Compatible</strong></p>
+<p><strong>Performance Attendue :</strong> - Tokens par seconde: 2-5 (CPU)
+- Temps de réponse: 10-30 secondes pour une requête typique - Utilisation
+de la mémoire: ~6 GB pendant l'inférence</p>
 <h3 id="llm-deployment-with-lm-studio">Déploiement du LLM avec LM
 Studio</h3>
 <h4 id="installation">Installation</h4>
@@ -210,53 +202,48 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Run</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">./lmstudio.AppImage</span></span></code></pre></div>
-<h4 id="configuration-for-low-resource-systems">Configuration pour les
-systèmes à faibles ressources</h4>
-<p><strong>Paramètres → Inférence (Inference) :</strong> -
-<strong>Longueur du contexte (Context Length)</strong> : 2048 (réduire à
-partir de 4096 pour une inférence plus rapide) - <strong>Déchargement
-GPU (GPU Offload)</strong> : 0 couches (CPU uniquement sur GPU intégré) -
-<strong>Threads</strong> : 6 (laisser 2 cœurs pour le système) -
-<strong>Taille de lot (Batch Size)</strong> : 8 (plus bas = plus lent
-mais plus stable) - <strong>Utiliser mlock (Use mlock)</strong> : ✓
-(maintenir le modèle en RAM, éviter le swapping)</p>
-<p><strong>Paramètres → Modèle (Model) :</strong> -
-<strong>Température (Temperature)</strong> : 0.7 - <strong>Top P</strong>
-: 0.9 - <strong>Pénalité de répétition (Repeat Penalty)</strong> : 1.1</p>
-<h3 id="alternative-llm-options-for-constrained-hardware">Options de LLM
-alternatives pour le matériel contraint</h3>
+<h4 id="configuration-for-low-resource-systems">Configuration pour
+les Systèmes à Faibles Ressources</h4>
+<p><strong>Paramètres → Inférence :</strong> - <strong>Longueur du
+Contexte</strong>: 2048 (réduire à partir de 4096 pour une inférence plus rapide) -
+<strong>Déchargement GPU (GPU Offload)</strong>: 0 couches (CPU
+uniquement sur GPU intégré) - <strong>Threads</strong>: 6 (laisser 2 cœurs
+pour le système) - <strong>Taille du Lot (Batch
+Size)</strong>: 8 (plus bas = plus lent mais plus stable) - <strong>Utiliser
+mlock</strong>: ✓ (garder le modèle en RAM, éviter le swapping)</p>
+<p><strong>Paramètres → Modèle :</strong> - <strong>Température</strong>:
+0.7 - <strong>Top P</strong>: 0.9 - <strong>Pénalité de
+Répétition</strong>: 1.1</p>
+<h3 id="alternative-llm-options-for-constrained-hardware">Options
+LLM Alternatives pour Matériel Restreint</h3>
 <h4 id="tinyllama-1.1b-ultra-lightweight">TinyLlama 1.1B
-(Ultra-léger)</h4>
-<p><strong>Spécifications :</strong> - Taille : 1,1 milliard de
-paramètres - Taille du fichier : ~700 Mo (Q4) - Utilisation de la RAM :
-~2 Go - Performance : 10-20 tokens/sec sur CPU</p>
-<p><strong>Cas d'utilisation :</strong> - Complétion de code - Chat
-simple - Prototypage rapide</p>
-<p><strong>Installation :</strong></p>
+(Ultra-Léger)</h4>
+<p><strong>Spécifications:</strong> - Taille: 1.1 milliard de paramètres -
+Taille du Fichier: ~700 MB (Q4) - Utilisation de la RAM: ~2 GB - Performance: 10-20
+tokens/sec sur CPU</p>
+<p><strong>Cas d'Utilisation :</strong> - Achèvement de code - Chat simple - Prototypage rapide</p>
+<p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In LM Studio, search for:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">TinyLlama-1.1B-Chat-v1.0-Q4_K_M</span></span></code></pre></div>
 <h4 id="phi-2-2.7b---microsoft">Phi-2 (2.7B) - Microsoft</h4>
-<p><strong>Spécifications :</strong> - Taille : 2,7 milliards de
-paramètres - Taille du fichier : ~1.6 Go (Q4) - Utilisation de la RAM :
-~3 Go - Performance : 5-10 tokens/sec</p>
-<p><strong>Avantages :</strong> - Entraîné sur des données de code et de
-raisonnement de haute qualité - Excellent pour les tâches de
-programmation - Architecture efficace</p>
-<p><strong>Installation :</strong></p>
+<p><strong>Spécifications:</strong> - Taille: 2.7 milliards de paramètres -
+Taille du Fichier: ~1.6 GB (Q4) - Utilisation de la RAM: ~3 GB - Performance: 5-10
+tokens/sec</p>
+<p><strong>Avantages:</strong> - Entraîné sur des données de code et de raisonnement de haute qualité - Excellent pour les tâches de programmation - Architecture efficace</p>
+<p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In LM Studio:</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">microsoft/phi-2-Q4_K_M</span></span></code></pre></div>
-<h3 id="performance-optimization-techniques">Techniques d'optimisation
-des performances</h3>
-<h4 id="use-quantization">1. Utiliser la quantification</h4>
+<h3 id="performance-optimization-techniques">Techniques d'Optimisation des Performances</h3>
+<h4 id="use-quantization">1. Utiliser la Quantification</h4>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Quantization levels (from most to least compressed):</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Q2_K</span>   <span class="co"># 2-bit: Fastest, lowest quality</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Q4_K_M</span> <span class="co"># 4-bit: Balanced (recommended)</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Q5_K_M</span> <span class="co"># 5-bit: Better quality, slower</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Q8_0</span>   <span class="co"># 8-bit: Best quality, slowest</span></span></code></pre></div>
-<h4 id="optimize-cpu-inference">2. Optimiser l'inférence CPU</h4>
+<h4 id="optimize-cpu-inference">2. Optimiser l'Inférence CPU</h4>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable AVX2 acceleration</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">OMP_NUM_THREADS</span><span class="op">=</span>6</span>
@@ -267,8 +254,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">--mlock</span> <span class="dt">\</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">-ngl</span> 0 <span class="dt">\</span></span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">--ctx-size</span> 2048</span></code></pre></div>
-<h4 id="monitor-resource-usage">3. Surveiller l'utilisation des
-ressources</h4>
+<h4 id="monitor-resource-usage">3. Surveiller l'Utilisation des Ressources</h4>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install monitoring tools</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install htop nvtop</span>
@@ -276,64 +262,52 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Monitor during inference</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">htop</span>  <span class="co"># CPU and RAM</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">watch</span> <span class="at">-n</span> 1 free <span class="at">-h</span>  <span class="co"># Memory usage</span></span></code></pre></div>
-<h2 id="part-2-proxmox-vm-debugging---kali-linux-boot-failure">Partie 2
-: Débogage de VM Proxmox - Échec de démarrage de Kali Linux</h2>
-<h3 id="the-error">L'erreur</h3>
+<h2 id="part-2-proxmox-vm-debugging---kali-linux-boot-failure">Partie 2 :
+Débogage de la VM Proxmox - Échec de Démarrage de Kali Linux</h2>
+<h3 id="the-error">L'Erreur</h3>
 <pre><code>Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)</code></pre>
-<h3 id="problem-analysis">Analyse du problème</h3>
-<p>Cette erreur sibylline indique que le noyau ne parvient pas à trouver
-ou à monter le système de fichiers racine. Les causes courantes dans les
-environnements virtualisés sont :</p>
+<h3 id="problem-analysis">Analyse du Problème</h3>
+<p>Cette erreur énigmatique indique que le noyau ne parvient pas à trouver ou à monter le système de fichiers racine. Les causes courantes dans les environnements virtualisés sont :</p>
 <ol type="1">
-<li><strong>Mauvaise configuration GRUB</strong> : Mauvais paramètre
-<code>root=</code></li>
-<li><strong>Partition EFI manquante</strong> : Démarrage UEFI sans
-disque EFI</li>
-<li><strong>Contrôleur de disque incompatible</strong> : Type de
-contrôleur SCSI incorrect</li>
-<li><strong>Initramfs corrompu</strong> : Pilotes manquants dans le
-disque initial en RAM (initial ramdisk)</li>
+<li><strong>Erreur de Configuration GRUB</strong>: Mauvais paramètre <code>root=</code></li>
+<li><strong>Partition EFI Manquante</strong>: Démarrage UEFI sans disque EFI</li>
+<li><strong>Contrôleur de Disque Incompatible</strong>: Mauvais type de contrôleur SCSI</li>
+<li><strong>Initramfs Corrompu</strong>: Pilotes manquants dans l'initial ramdisk</li>
 </ol>
-<h3 id="debugging-process">Processus de débogage</h3>
-<h4 id="step-1-verify-bios-type">Étape 1 : Vérifier le type de BIOS</h4>
-<p><strong>Configuration initiale :</strong> - BIOS : SeaBIOS (BIOS
-hérité) - Type de machine : i440fx - Disque : SCSI avec iothread
-activé</p>
-<p><strong>Avertissement rencontré :</strong></p>
+<h3 id="debugging-process">Processus de Débogage</h3>
+<h4 id="step-1-verify-bios-type">Étape 1 : Vérifier le Type de BIOS</h4>
+<p><strong>Configuration Initiale :</strong> - BIOS: SeaBIOS (BIOS hérité)
+- Type de Machine: i440fx - Disque: SCSI avec iothread activé</p>
+<p><strong>Avertissement Rencontré :</strong></p>
 <pre><code>WARN: iothread is only valid with virtio disk or virtio-scsi-single controller, ignoring</code></pre>
-<p><strong>Problème</strong> : Le type de contrôleur SCSI ne supporte
-pas iothread, mais l'avertissement a été ignoré lors de la création de
-la VM.</p>
-<h4 id="step-2-try-ovmf-uefi-boot">Étape 2 : Essayer le démarrage OVMF
-(UEFI)</h4>
-<p><strong>Modifications apportées :</strong> 1. BIOS : SeaBIOS →
-<strong>OVMF (UEFI)</strong> 2. Ajout d'un <strong>disque EFI</strong>
-via Hardware → Add → EFI Disk 3. Type de machine : i440fx →
-<strong>q35</strong> (chipset moderne)</p>
-<p><strong>Résultat</strong> : ❌ Échec du démarrage</p>
-<p><strong>Analyse</strong> : OVMF nécessite une disposition de
-partition spécifique et un chargeur de démarrage EFI installé pendant
-l'installation de l'OS. Changer le type de BIOS après l'installation ne
-fonctionne pas.</p>
-<h4 id="step-3-fix-scsi-controller">Étape 3 : Corriger le contrôleur
-SCSI</h4>
-<p><strong>Cause première identifiée :</strong></p>
-<p>L'avertissement concernant iothread était critique : - iothread
-nécessite le contrôleur <strong>VirtIO SCSI Single</strong> - La VM
-utilisait le contrôleur <strong>SCSI</strong> standard - Le noyau ne
-pouvait pas communiquer correctement avec le disque</p>
+<p><strong>Problème</strong>: Le type de contrôleur SCSI ne prend pas en charge
+iothread, mais l'avertissement a été ignoré lors de la création de la VM.</p>
+<h4 id="step-2-try-ovmf-uefi-boot">Étape 2 : Essayer le Démarrage OVMF (UEFI)</h4>
+<p><strong>Modifications Apportées :</strong> 1. BIOS: SeaBIOS → <strong>OVMF
+(UEFI)</strong> 2. Ajout du <strong>Disque EFI</strong> via Hardware → Add →
+EFI Disk 3. Type de Machine: i440fx → <strong>q35</strong> (chipset moderne)</p>
+<p><strong>Résultat</strong>: ❌ Échec du démarrage</p>
+<p><strong>Analyse</strong>: OVMF nécessite une disposition de partition spécifique
+et un chargeur de démarrage EFI installés pendant l'installation de l'OS.
+Changer le type de BIOS après l'installation ne fonctionne pas.</p>
+<h4 id="step-3-fix-scsi-controller">Étape 3 : Correction du Contrôleur SCSI</h4>
+<p><strong>Cause Première Identifiée :</strong></p>
+<p>L'avertissement concernant iothread était critique : - iothread nécessite le
+contrôleur <strong>VirtIO SCSI Single</strong> - La VM utilisait un contrôleur
+<strong>SCSI</strong> standard - Le noyau ne pouvait pas communiquer correctement
+avec le disque</p>
 <p><strong>Résolution :</strong></p>
 <ol type="1">
 <li><p>Éteindre la VM</p></li>
 <li><p>Retirer le disque existant</p></li>
-<li><p>Ajouter le disque avec la configuration correcte :</p>
+<li><p>Ajouter un disque avec la configuration correcte :</p>
 <ul>
-<li>Bus/Device : <strong>SCSI</strong></li>
-<li>Stockage : local-lvm</li>
-<li>Contrôleur SCSI : <strong>VirtIO SCSI Single</strong></li>
-<li>iothread : ✓</li>
+<li>Bus/Périphérique: <strong>SCSI</strong></li>
+<li>Stockage: local-lvm</li>
+<li>Contrôleur SCSI: <strong>VirtIO SCSI Single</strong></li>
+<li>iothread: ✓</li>
 </ul></li>
-<li><p>Mettre à jour la configuration de la VM :</p>
+<li><p>Mettre à jour la Configuration de la VM :</p>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit VM config</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> /etc/pve/qemu-server/101.conf</span>
@@ -345,9 +319,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href=
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ex">scsi0:</span> local-lvm:vm-101-disk-0,iothread=1</span></code></pre></div></li>
 <li><p>Redémarrer la VM</p></li>
 </ol>
-<p><strong>Résultat</strong> : ✅ <strong>Démarrage réussi !</strong></p>
-<h3 id="final-working-configuration">Configuration fonctionnelle
-finale</h3>
+<p><strong>Résultat</strong>: ✅ <strong>Démarrage Réussi !</strong></p>
+<h3 id="final-working-configuration">Configuration Finale Fonctionnelle</h3>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/pve/qemu-server/101.conf</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -368,105 +341,80 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="ex">smbios1:</span> uuid=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</span>
 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="ex">sockets:</span> 1</span>
 <span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="ex">vmgenid:</span> XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</span></code></pre></div>
-<h3 id="key-lessons-from-debugging">Leçons clés du débogage</h3>
+<h3 id="key-lessons-from-debugging">Leçons Clés du Débogage</h3>
 <ol type="1">
-<li><strong>Lire attentivement les avertissements</strong> : L'avertissement
-iothread était l'indice critique.</li>
-<li><strong>L'importance du type de BIOS</strong> : Impossible de
-basculer entre SeaBIOS et OVMF après l'installation.</li>
-<li><strong>Compatibilité du contrôleur</strong> : VirtIO SCSI Single
-est requis pour les fonctionnalités avancées.</li>
-<li><strong>Type de machine</strong> : q35 pour le matériel moderne,
-i440fx pour la compatibilité.</li>
+<li><strong>Lire Attentivement les Avertissements</strong>: L'avertissement iothread était l'indice crucial</li>
+<li><strong>Le Type de BIOS est Important</strong>: Impossible de basculer entre SeaBIOS et OVMF après l'installation</li>
+<li><strong>Compatibilité du Contrôleur</strong>: VirtIO SCSI Single requis pour les fonctionnalités avancées</li>
+<li><strong>Type de Machine</strong>: q35 pour le matériel moderne, i440fx pour la compatibilité</li>
 </ol>
-<h2 id="recommendations-for-similar-setups">Recommandations pour des
-configurations similaires</h2>
-<h3 id="for-llm-testing-on-limited-hardware">Pour les tests LLM sur
-matériel limité :</h3>
-<p><strong>Modèles recommandés (par cas d'utilisation) :</strong></p>
-<pre><code>Tâches légères (2-4 Go de RAM disponible) :
-├── TinyLlama 1.1B (~700 Mo, rapide)
-└── Phi-2 2.7B (~1.6 Go, bon pour le code)
+<h2 id="recommendations-for-similar-setups">Recommandations pour les Configurations Similaires</h2>
+<h3 id="for-llm-testing-on-limited-hardware">Pour les Tests LLM sur Matériel Limité :</h3>
+<p><strong>Modèles Recommandés (par cas d'utilisation):</strong></p>
+<pre><code>Light Tasks (2-4 GB RAM available):
+├── TinyLlama 1.1B (~700 MB, rapide)
+└── Phi-2 2.7B (~1.6 GB, bon pour le code)
 
-Tâches moyennes (6-8 Go de RAM disponible) :
-├── Mistral 7B Q4 (~4.3 Go, équilibré)
-├── Llama 2 7B Q4 (~3.8 Go, usage général)
-└── CodeLlama 7B Q4 (~4.3 Go, axé sur le codage)
+Medium Tasks (6-8 GB RAM available):
+├── Mistral 7B Q4 (~4.3 GB, équilibré)
+├── Llama 2 7B Q4 (~3.8 GB, usage général)
+└── CodeLlama 7B Q4 (~4.3 GB, axé sur le codage)
 
-Tâches lourdes (12+ Go de RAM disponible) :
+Heavy Tasks (12+ GB RAM available):
 └── Mettre à niveau le matériel ou utiliser des services cloud</code></pre>
-<p><strong>Liste de contrôle d'optimisation :</strong> - [ ] Utiliser la
-quantification Q4 pour le meilleur équilibre taille/qualité - [ ] Activer
-l'accélération CPU AVX2 - [ ] Définir la longueur du contexte à 2048 pour
-une inférence plus rapide - [ ] Utiliser 75 % des threads CPU disponibles
-- [ ] Surveiller l'utilisation de la RAM avec <code>htop</code> - [ ]
-Envisager un SSD externe si le stockage est limité</p>
-<h3 id="for-proxmox-vm-configuration">Pour la configuration de VM
-Proxmox :</h3>
-<p><strong>Meilleures pratiques :</strong></p>
-<pre><code>SeaBIOS (Démarrage Hérité) :
-├── Machine : i440fx
-├── Contrôleur SCSI : VirtIO SCSI Single
-├── Disque : SCSI avec iothread=1
-└── Utiliser pour : Linux, OS plus anciens
+<p><strong>Liste de Contrôle d'Optimisation :</strong> - [ ] Utiliser la quantification Q4
+pour le meilleur équilibre taille/qualité - [ ] Activer l'accélération CPU
+AVX2 - [ ] Définir la longueur du contexte à 2048 pour une inférence plus
+rapide - [ ] Utiliser 75% des threads CPU disponibles - [ ] Surveiller
+l'utilisation de la RAM avec <code>htop</code> - [ ] Envisager un SSD externe si le
+stockage est limité</p>
+<h3 id="for-proxmox-vm-configuration">Pour la Configuration de VM Proxmox :</h3>
+<p><strong>Meilleures Pratiques :</strong></p>
+<pre><code>SeaBIOS (Démarrage Hérité):
+├── Machine: i440fx
+├── Contrôleur SCSI: VirtIO SCSI Single
+├── Disque: SCSI avec iothread=1
+└── Utiliser pour: Linux, OS plus anciens
 
-OVMF (Démarrage UEFI) :
-├── Machine : q35
-├── Ajouter un disque EFI pendant la création de la VM
-├── Contrôleur SCSI : VirtIO SCSI Single
-└── Utiliser pour : OS modernes, Windows, démarrage sécurisé</code></pre>
-<p><strong>Flux de travail de dépannage :</strong></p>
+OVMF (Démarrage UEFI):
+├── Machine: q35
+├── Ajouter un Disque EFI lors de la création de la VM
+├── Contrôleur SCSI: VirtIO SCSI Single
+└── Utiliser pour: OS modernes, Windows, démarrage sécurisé</code></pre>
+<p><strong>Flux de Travail de Dépannage :</strong></p>
 <ol type="1">
-<li><strong>Vérifier les avertissements Proxmox</strong> : Ne pas
-ignorer le texte jaune dans les journaux.</li>
-<li><strong>Vérifier la compatibilité du contrôleur</strong> : Faire
-correspondre le contrôleur aux fonctionnalités.</li>
-<li><strong>Tester l'ordre de démarrage</strong> : S'assurer que le
-disque est le premier dans la séquence de démarrage.</li>
-<li><strong>Vérifier la configuration GRUB</strong> : Vérifier le
-paramètre root= dans la console de la VM.</li>
-<li><strong>Utiliser les instantanés (Snapshots)</strong> : Avant
-d'apporter des modifications majeures à la configuration.</li>
+<li><strong>Vérifier les Avertissements Proxmox</strong>: Ne pas ignorer le texte jaune dans les journaux</li>
+<li><strong>Vérifier la Compatibilité du Contrôleur</strong>: Faire correspondre le contrôleur aux fonctionnalités</li>
+<li><strong>Tester l'Ordre de Démarrage</strong>: S'assurer que le disque est premier dans la séquence de démarrage</li>
+<li><strong>Vérifier la Configuration GRUB</strong>: Vérifier le paramètre root= dans la console VM</li>
+<li><strong>Utiliser les Instantanés (Snapshots)</strong>: Avant d'apporter des modifications majeures à la configuration</li>
 </ol>
-<h2 id="tools-and-resources">Outils et ressources</h2>
+<h2 id="tools-and-resources">Outils et Ressources</h2>
 <h3 id="llm-tools">Outils LLM :</h3>
 <ul>
-<li><strong>LM Studio</strong> : Interface graphique conviviale pour la
-gestion des modèles.</li>
-<li><strong>llama.cpp</strong> : Moteur d'inférence en ligne de
-commande.</li>
-<li><strong>Ollama</strong> : Déploiement LLM basé sur Docker.</li>
-<li><strong>Jan AI</strong> : Alternative légère à LM Studio.</li>
+<li><strong>LM Studio</strong>: GUI conviviale pour la gestion de modèles</li>
+<li><strong>llama.cpp</strong>: Moteur d'inférence en ligne de commande</li>
+<li><strong>Ollama</strong>: Déploiement LLM basé sur Docker</li>
+<li><strong>Jan AI</strong>: Alternative légère à LM Studio</li>
 </ul>
 <h3 id="proxmox-debugging">Débogage Proxmox :</h3>
 <ul>
-<li><strong>Journaux système</strong> : <code>/var/log/pve/tasks/</code>
-</li>
-<li><strong>Journaux VM</strong> : <code>/var/log/qemu-server/</code>
-</li>
-<li><strong>Configuration</strong> :
+<li><strong>Journaux Système</strong>: <code>/var/log/pve/tasks/</code></li>
+<li><strong>Journaux VM</strong>: <code>/var/log/qemu-server/</code></li>
+<li><strong>Configuration</strong>:
 <code>/etc/pve/qemu-server/</code></li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>Cette session a démontré deux compétences cruciales en homelab :</p>
 <ol type="1">
-<li><strong>Évaluation des ressources</strong> : Comprendre les
-limites matérielles et choisir des solutions appropriées (modèles 7B vs
-modèles 20B).</li>
-<li><strong>Débogage systématique</strong> : Suivre les messages
-d'erreur et les avertissements pour identifier les causes profondes
-(iothread + compatibilité du contrôleur).</li>
+<li><strong>Évaluation des Ressources</strong>: Comprendre les limitations matérielles et choisir des solutions appropriées (modèles 7B vs modèles 20B)</li>
+<li><strong>Débogage Systématique</strong>: Suivre les messages d'erreur et les avertissements pour identifier les causes profondes (iothread + compatibilité du contrôleur)</li>
 </ol>
-<p>Les deux défis ont renforcé l'importance de : - Lire la
-documentation de manière approfondie - Surveiller les contraintes de
-ressources - Tester de manière incrémentielle - Documenter les
-configurations</p>
-<p>La VM Kali fonctionnelle et la configuration LLM opérationnelle
-fournissent une base solide pour de futures recherches en sécurité et des
-travaux de développement assistés par l'IA.</p>
-<p><em>Prochaines étapes : Intégrer Mistral 7B aux flux de travail de
-codage et déployer des VM vulnérables pour la pratique des pentests avec
-Kali.</em></p>
+<p>Les deux défis ont renforcé l'importance de : - Lire la documentation en détail -
+Surveiller les contraintes de ressources - Tester de manière incrémentielle -
+Documenter les configurations</p>
+<p>La VM Kali fonctionnelle et la configuration LLM opérationnelle offrent une base solide pour la future recherche en sécurité et le travail de développement assisté par l'IA.</p>
+<p><em>Prochaines étapes : Intégrer Mistral 7B aux flux de travail de codage et déployer des VM vulnérables pour la pratique du pentesting avec Kali.</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -516,7 +464,7 @@ Kali.</em></p>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>
 

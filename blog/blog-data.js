@@ -1,28 +1,6 @@
 const blogData = {
     "articles": [
         {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
-        },
-        {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
-        },
-        {
             "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
             "title": "Your Article Title Here",
             "excerpt": "",
@@ -89,7 +67,7 @@ const blogData = {
             "url": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html"
         },
         {
-            "id": "obsidian-auto-sync-to-github-website",
+            "id": "automating-website-deployment-github-cloudflare-pages",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -97,10 +75,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html"
+            "url": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html"
         },
         {
-            "id": "obsidian-auto-sync-to-github-website",
+            "id": "automating-website-deployment-github-cloudflare-pages",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -108,7 +86,29 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html"
+            "url": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html"
+        },
+        {
+            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html"
+        },
+        {
+            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html"
         }
     ],
     "categories": {
