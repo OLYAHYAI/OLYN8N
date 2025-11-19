@@ -1,5 +1,5 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-19T13:18:06.485Z",
+  "lastUpdated": "2025-11-19T14:06:46.945Z",
   "totalArticles": 10,
   "categories": {
     "infrastructure": {
@@ -9,8 +9,28 @@ var ARTICLE_INDEX={
       "articles": {
         "en": [
           {
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
+            "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+            "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "filePath": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
             "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Your Article Title Here",
+            "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -25,12 +45,12 @@ var ARTICLE_INDEX={
             "filePath": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
             "wordCount": 1000,
             "readingTime": 5,
-            "featured": true,
+            "featured": false,
             "status": "published"
           },
           {
             "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Your Article Title Here",
+            "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -50,7 +70,7 @@ var ARTICLE_INDEX={
           },
           {
             "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Your Article Title Here",
+            "title": "MCP Configuration Guide YAML Setup and Best Practices",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -69,8 +89,8 @@ var ARTICLE_INDEX={
             "status": "published"
           },
           {
-            "id": "automating-website-deployment-github-cloudflare-pages",
-            "title": "Your Article Title Here",
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Obsidian Auto-Sync to GitHub Website Automation",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -80,29 +100,9 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "automating-website-deployment-github-cloudflare-pages",
-            "url": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-            "filePath": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "url": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-            "filePath": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+            "slug": "obsidian-auto-sync-to-github-website",
+            "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+            "filePath": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -111,8 +111,28 @@ var ARTICLE_INDEX={
         ],
         "fr": [
           {
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
+            "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+            "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "filePath": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
             "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Your Article Title Here",
+            "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -132,7 +152,7 @@ var ARTICLE_INDEX={
           },
           {
             "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Your Article Title Here",
+            "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -152,7 +172,7 @@ var ARTICLE_INDEX={
           },
           {
             "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Your Article Title Here",
+            "title": "MCP Configuration Guide YAML Setup and Best Practices",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -171,8 +191,8 @@ var ARTICLE_INDEX={
             "status": "published"
           },
           {
-            "id": "automating-website-deployment-github-cloudflare-pages",
-            "title": "Your Article Title Here",
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Obsidian Auto-Sync to GitHub Website Automation",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -182,29 +202,9 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "automating-website-deployment-github-cloudflare-pages",
-            "url": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-            "filePath": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "title": "Your Article Title Here",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "url": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-            "filePath": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+            "slug": "obsidian-auto-sync-to-github-website",
+            "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
+            "filePath": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -271,8 +271,48 @@ var ARTICLE_INDEX={
   },
   "articles": [
     {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
       "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Your Article Title Here",
+      "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -287,12 +327,12 @@ var ARTICLE_INDEX={
       "filePath": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": true,
+      "featured": false,
       "status": "published"
     },
     {
       "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Your Article Title Here",
+      "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -312,7 +352,7 @@ var ARTICLE_INDEX={
     },
     {
       "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Your Article Title Here",
+      "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -332,7 +372,7 @@ var ARTICLE_INDEX={
     },
     {
       "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Your Article Title Here",
+      "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -352,7 +392,7 @@ var ARTICLE_INDEX={
     },
     {
       "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Your Article Title Here",
+      "title": "MCP Configuration Guide YAML Setup and Best Practices",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -372,7 +412,7 @@ var ARTICLE_INDEX={
     },
     {
       "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Your Article Title Here",
+      "title": "MCP Configuration Guide YAML Setup and Best Practices",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -391,8 +431,8 @@ var ARTICLE_INDEX={
       "status": "published"
     },
     {
-      "id": "automating-website-deployment-github-cloudflare-pages",
-      "title": "Your Article Title Here",
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Obsidian Auto-Sync to GitHub Website Automation",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -402,17 +442,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "automating-website-deployment-github-cloudflare-pages",
-      "url": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-      "filePath": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "automating-website-deployment-github-cloudflare-pages",
-      "title": "Your Article Title Here",
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Obsidian Auto-Sync to GitHub Website Automation",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -422,49 +462,9 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "automating-website-deployment-github-cloudflare-pages",
-      "url": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-      "filePath": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -523,8 +523,48 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
       "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Your Article Title Here",
+      "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -539,12 +579,12 @@ var ARTICLE_INDEX={
       "filePath": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": true,
+      "featured": false,
       "status": "published"
     },
     {
       "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Your Article Title Here",
+      "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -564,7 +604,7 @@ var ARTICLE_INDEX={
     },
     {
       "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Your Article Title Here",
+      "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -584,7 +624,7 @@ var ARTICLE_INDEX={
     },
     {
       "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Your Article Title Here",
+      "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -604,7 +644,7 @@ var ARTICLE_INDEX={
     },
     {
       "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Your Article Title Here",
+      "title": "MCP Configuration Guide YAML Setup and Best Practices",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -624,7 +664,7 @@ var ARTICLE_INDEX={
     },
     {
       "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Your Article Title Here",
+      "title": "MCP Configuration Guide YAML Setup and Best Practices",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -643,8 +683,8 @@ var ARTICLE_INDEX={
       "status": "published"
     },
     {
-      "id": "automating-website-deployment-github-cloudflare-pages",
-      "title": "Your Article Title Here",
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Obsidian Auto-Sync to GitHub Website Automation",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -654,17 +694,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "automating-website-deployment-github-cloudflare-pages",
-      "url": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-      "filePath": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "automating-website-deployment-github-cloudflare-pages",
-      "title": "Your Article Title Here",
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Obsidian Auto-Sync to GitHub Website Automation",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -674,49 +714,9 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "automating-website-deployment-github-cloudflare-pages",
-      "url": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-      "filePath": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Your Article Title Here",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,8 +725,8 @@ var ARTICLE_INDEX={
   ],
   "featuredArticles": [
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Your Article Title Here",
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -736,9 +736,9 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +747,16 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
+      "en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
       "en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
       "fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
       "en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
       "fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
       "en/infrastructure/mcp-configuration-guide-yaml-setup": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html",
       "fr/infrastructure/mcp-configuration-guide-yaml-setup": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html",
-      "en/infrastructure/automating-website-deployment-github-cloudflare-pages": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-      "fr/infrastructure/automating-website-deployment-github-cloudflare-pages": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html",
-      "en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html"
+      "en/infrastructure/obsidian-auto-sync-to-github-website": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "fr/infrastructure/obsidian-auto-sync-to-github-website": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +786,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-19T13:18:06.486Z",
+  "generatedAt": "2025-11-19T14:06:46.946Z",
   "version": "1.0"
 };

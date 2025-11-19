@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Votre titre d'article ici - Tutoriel et guide technique">
+    <meta name="description" content="Débloquer l'accès à distance Cloudflare Tunnel et Proxmox - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Votre titre d'article ici | Blog Technique d'Omar LYAHYAI</title>
+    <title>Débloquer l'accès à distance Cloudflare Tunnel et Proxmox | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -34,13 +34,13 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
                 <ul class="nav-menu">
                     <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
-                    <li><a href="/index.html#about" class="nav-link">À Propos</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
                     <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
                     <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
                     <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Votre titre d'article ici</span>
+                        <span>Débloquer l'accès à distance Cloudflare Tunnel et Proxmox</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Votre titre d'article ici</h1>
+                <h1 class="article-title">Débloquer l'accès à distance Cloudflare Tunnel et Proxmox</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -123,23 +123,22 @@ The workflow will:
 - Preserve images and links
 -->
 <h1
-id="unlocking-remote-access-my-journey-with-cloudflare-tunnel-and-proxmox">Déverrouiller
-l'Accès à Distance : Mon Expérience avec Cloudflare Tunnel et Proxmox</h1>
-<h2 id="project-goal">Objectif du Projet</h2>
+id="unlocking-remote-access-my-journey-with-cloudflare-tunnel-and-proxmox">Débloquer
+l'accès à distance : Mon expérience avec Cloudflare Tunnel et Proxmox</h1>
+<h2 id="project-goal">Objectif du projet</h2>
 <p>Établir un accès à distance sécurisé à l'interface web de Proxmox VE via un
 sous-domaine public (<code>proxmox.olyhome.site</code>) en utilisant Cloudflare Tunnel,
-éliminant ainsi la nécessité d'exposer directement des ports sur Internet.</p>
+éliminant ainsi la nécessité d'exposer des ports directement à Internet.</p>
 <h2 id="why-cloudflare-tunnel">Pourquoi Cloudflare Tunnel ?</h2>
-<h3 id="traditional-remote-access-problems">Problèmes d'Accès à Distance
-Traditionnel</h3>
-<p><strong>Approche par redirection de ports :</strong> - ❌ Expose les services
+<h3 id="traditional-remote-access-problems">Problèmes d'accès à distance traditionnels</h3>
+<p><strong>Approche par redirection de ports (Port Forwarding):</strong> - ❌ Expose les services
 directement à Internet - ❌ Nécessite une IP statique ou un DNS dynamique - ❌
 Vulnérable aux attaques de balayage de ports - ❌ Gestion complexe du pare-feu</p>
 <p><strong>Avantages de Cloudflare Tunnel :</strong> - ✅ Aucun port exposé
 sur le pare-feu - ✅ Protection DDoS intégrée - ✅ Certificats SSL gratuits -
 ✅ Fonctionne avec des IP dynamiques - ✅ Contrôle d'accès via Cloudflare Zero
 Trust</p>
-<h2 id="infrastructure-overview">Vue d'ensemble de l'infrastructure</h2>
+<h2 id="infrastructure-overview">Aperçu de l'infrastructure</h2>
 <pre><code>Internet Users
     ↓
 Cloudflare Edge Network
@@ -147,29 +146,29 @@ Cloudflare Edge Network
 Cloudflare Tunnel (cloudflared)
     ↓
 Proxmox Host (192.168.11.254:8006)</code></pre>
-<h2 id="setup-process">Processus d'installation</h2>
+<h2 id="setup-process">Processus de configuration</h2>
 <h3 id="step-1-prerequisites">Étape 1 : Prérequis</h3>
 <p><strong>Exigences :</strong> - Nom de domaine (ex. : olyhome.site) -
 Compte Cloudflare (le niveau gratuit est suffisant) - Proxmox VE installé et
 accessible sur le LAN - Système Linux pour exécuter cloudflared</p>
-<h3 id="step-2-configure-domain-in-cloudflare">Étape 2 : Configuration du domaine
+<h3 id="step-2-configure-domain-in-cloudflare">Étape 2 : Configurer le domaine
 dans Cloudflare</h3>
 <ol type="1">
-<li><strong>Ajouter un site à Cloudflare :</strong>
+<li><strong>Ajouter le site à Cloudflare :</strong>
 <ul>
 <li>Connectez-vous au tableau de bord Cloudflare</li>
 <li>Cliquez sur « Add a Site » (Ajouter un site)</li>
 <li>Entrez le domaine : <code>olyhome.site</code></li>
 <li>Choisissez le plan Gratuit</li>
 </ul></li>
-<li><strong>Mettre à jour les serveurs de noms :</strong>
+<li><strong>Mettre à jour les serveurs de noms (Nameservers) :</strong>
 <ul>
 <li>Copiez les serveurs de noms Cloudflare</li>
 <li>Mettez-les à jour auprès du registraire de domaine (Hostinger, Namecheap, etc.)</li>
 <li>Attendez la propagation (jusqu'à 24 heures)</li>
 </ul></li>
 </ol>
-<h3 id="step-3-create-cloudflare-tunnel">Étape 3 : Créer un Cloudflare
+<h3 id="step-3-create-cloudflare-tunnel">Étape 3 : Créer le Cloudflare
 Tunnel</h3>
 <p><strong>Via le tableau de bord Cloudflare :</strong></p>
 <ol type="1">
@@ -180,10 +179,10 @@ Tunnel</h3>
 <li>Nom du tunnel : <code>proxmox-tunnel</code></li>
 <li>Cliquez sur <strong>Save tunnel</strong> (Enregistrer le tunnel)</li>
 </ol>
-<p><strong>Copiez le jeton du tunnel</strong> - nécessaire pour
+<p><strong>Copiez le jeton du tunnel</strong> – nécessaire pour
 l'installation de cloudflared.</p>
-<h3 id="step-4-install-cloudflared-on-proxmox-host">Étape 4 : Installation
-de cloudflared sur l'hôte Proxmox</h3>
+<h3 id="step-4-install-cloudflared-on-proxmox-host">Étape 4 : Installer
+cloudflared sur l'hôte Proxmox</h3>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download cloudflared</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb</span>
@@ -193,8 +192,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify installation</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">cloudflared</span> <span class="at">--version</span></span></code></pre></div>
-<h3 id="step-5-configure-tunnel">Étape 5 : Configuration du Tunnel</h3>
-<p><strong>Création du fichier de configuration :</strong></p>
+<h3 id="step-5-configure-tunnel">Étape 5 : Configurer le tunnel</h3>
+<p><strong>Créer un fichier de configuration :</strong></p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create config directory</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> /etc/cloudflared</span>
@@ -233,7 +232,7 @@ Configurer le nom d'hôte public dans Cloudflare</h3>
 </ul></li>
 <li>Cliquez sur <strong>Save</strong> (Enregistrer)</li>
 </ol>
-<h3 id="step-7-start-cloudflare-tunnel">Étape 7 : Démarrer Cloudflare
+<h3 id="step-7-start-cloudflare-tunnel">Étape 7 : Démarrer le Cloudflare
 Tunnel</h3>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test configuration</span></span>
@@ -250,24 +249,25 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Check status</span></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl status cloudflared</span></code></pre></div>
-<h3 id="step-8-configure-ssl-for-proxmox-optional">Étape 8 : Configurer le SSL
+<h3 id="step-8-configure-ssl-for-proxmox-optional">Étape 8 : Configurer SSL
 pour Proxmox (Facultatif)</h3>
-<p><strong>Pour un SSL correct sans avertissements, obtenez un certificat Let’s Encrypt :</strong></p>
+<p><strong>Pour un SSL approprié sans avertissements, obtenez un certificat Let’s Encrypt
+:</strong></p>
 <ol type="1">
-<li><strong>Dans l'interface utilisateur de Proxmox :</strong>
+<li><strong>Dans l'interface utilisateur Proxmox :</strong>
 <ul>
 <li>Naviguez vers <strong>Datacenter</strong> → <strong>ACME</strong></li>
 <li>Ajouter un compte : Let’s Encrypt</li>
 <li>Ajouter le plugin DNS Challenge (Cloudflare)</li>
 </ul></li>
-<li><strong>Ajouter un jeton API Cloudflare :</strong>
+<li><strong>Ajouter le jeton d'API Cloudflare :</strong>
 <ul>
 <li>Le jeton nécessite la permission Zone:DNS:Edit</li>
 <li>Ajouter à la configuration ACME de Proxmox</li>
 </ul></li>
 <li><strong>Demander un certificat :</strong>
 <ul>
-<li>Node → System → Certificates</li>
+<li>Node → System → Certificates (Certificats)</li>
 <li>Ajouter : ACME</li>
 <li>Domaine : <code>proxmox.olyhome.site</code></li>
 <li>Challenge : DNS</li>
@@ -275,13 +275,12 @@ pour Proxmox (Facultatif)</h3>
 </ul></li>
 </ol>
 <h2 id="issues-encountered-and-solutions">Problèmes rencontrés et
-Solutions</h2>
-<h3 id="issue-1-tunnel-shows-down-status">Problème 1 : Le tunnel affiche l'état « DOWN »
+solutions</h2>
+<h3 id="issue-1-tunnel-shows-down-status">Problème 1 : Le tunnel indique le statut “DOWN”
 (Hors service)</h3>
 <p><strong>Problème :</strong> Le tableau de bord Cloudflare affiche le statut du tunnel comme
-DOWN avec l'erreur 1033.</p>
-<p><strong>Cause :</strong> Le tunnel n'est pas correctement connecté au réseau
-Cloudflare edge.</p>
+DOWN avec l'Erreur 1033.</p>
+<p><strong>Cause :</strong> Le tunnel n'est pas correctement connecté à la périphérie (edge) Cloudflare.</p>
 <p><strong>Solution :</strong></p>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check cloudflared service status</span></span>
@@ -299,8 +298,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="
 </h3>
 <p><strong>Problème :</strong> L'accès à
 <code>https://proxmox.olyhome.site</code> renvoie une erreur 502.</p>
-<p><strong>Causes :</strong> 1. Le service Proxmox n'est pas en cours d'exécution 2. URL de
-service incorrecte dans la configuration 3. Problèmes de vérification TLS</p>
+<p><strong>Causes :</strong> 1. Le service Proxmox n'est pas en cours d'exécution 2. URL
+de service incorrecte dans la configuration 3. Problèmes de vérification TLS</p>
 <p><strong>Solutions :</strong></p>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Verify Proxmox is running</span></span>
@@ -315,11 +314,11 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Restart cloudflared</span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart cloudflared</span></code></pre></div>
-<h3 id="issue-3-network-connectivity-lost-after-reboot">Problème 3 : Perte de
-connectivité réseau après le redémarrage</h3>
-<p><strong>Problème :</strong> Proxmox perd sa connectivité réseau après le
-redémarrage du système, le ping échoue.</p>
-<p><strong>Cause :</strong> La passerelle n'est pas appliquée correctement à partir de
+<h3 id="issue-3-network-connectivity-lost-after-reboot">Problème 3 :
+Perte de connectivité réseau après le redémarrage</h3>
+<p><strong>Problème :</strong> Proxmox perd la connectivité réseau après le redémarrage du
+système, le ping échoue.</p>
+<p><strong>Cause :</strong> La passerelle (gateway) n'est pas appliquée correctement à partir de
 <code>/etc/network/interfaces</code>.</p>
 <p><strong>Solution :</strong></p>
 <div class="sourceCode" id="cb9"><pre
@@ -339,10 +338,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-fd</span> 0</span></code></pre></div>
 <h3 id="issue-4-cloudflared-not-starting-automatically">Problème 4 :
 cloudflared ne démarre pas automatiquement</h3>
-<p><strong>Problème :</strong> Le tunnel fonctionne lorsqu'il est exécuté
-manuellement mais ne démarre pas au démarrage du système.</p>
-<p><strong>Cause :</strong> Le service a été lancé avec
-<code>--token</code> au lieu de <code>--config</code>.</p>
+<p><strong>Problème :</strong> Le tunnel fonctionne lorsqu'il est exécuté manuellement mais
+ne démarre pas au démarrage du système.</p>
+<p><strong>Cause :</strong> Le service a été lancé avec <code>--token</code> au lieu de
+<code>--config</code>.</p>
 <p><strong>Solution :</strong></p>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uninstall existing service</span></span>
@@ -361,19 +360,19 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href=
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl daemon-reload</span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable cloudflared</span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart cloudflared</span></code></pre></div>
-<h3 id="issue-5-tls-strict-mode-blocking-access">Problème 5 : Le mode Strict
+<h3 id="issue-5-tls-strict-mode-blocking-access">Problème 5 : Le mode strict
 TLS bloque l'accès</h3>
-<p><strong>Problème :</strong> Le mode SSL/TLS de Cloudflare défini sur « Full
-(Strict) » bloque l'accès en raison du certificat auto-signé.</p>
+<p><strong>Problème :</strong> Le mode SSL/TLS de Cloudflare est défini sur « Full
+(Strict) » et bloque l'accès en raison d'un certificat auto-signé.</p>
 <p><strong>Solution :</strong></p>
-<p><strong>Option A : Changer le mode SSL Cloudflare (Correction rapide) :</strong> 1.
-Tableau de bord Cloudflare → SSL/TLS 2. Changer le mode de <strong>Full
+<p><strong>Option A : Modifier le mode SSL Cloudflare (Correction rapide) :</strong> 1.
+Tableau de bord Cloudflare → SSL/TLS 2. Changez le mode de <strong>Full
 (Strict)</strong> à <strong>Full</strong> 3. Cela autorise les certificats auto-signés</p>
 <p><strong>Option B : Installer un certificat valide (Correction appropriée) :</strong> 1.
-Utiliser Proxmox ACME avec le défi DNS Cloudflare 2. Obtenir un certificat Let’s Encrypt
-3. Garder le mode <strong>Full (Strict)</strong> pour une meilleure
+Utilisez Proxmox ACME avec le challenge DNS Cloudflare 2. Obtenez un
+certificat Let’s Encrypt 3. Conservez le mode <strong>Full (Strict)</strong> pour une meilleure
 sécurité</p>
-<h2 id="verification-and-testing">Vérification et Tests</h2>
+<h2 id="verification-and-testing">Vérification et tests</h2>
 <h3 id="test-external-access">Tester l'accès externe</h3>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From external network (mobile data, different ISP)</span></span>
@@ -398,11 +397,12 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 <h3 id="monitor-cloudflare-dashboard">Surveiller le tableau de bord Cloudflare</h3>
 <ol type="1">
 <li>Zero Trust → Access → Tunnels</li>
-<li>Vérifier que le tunnel affiche l'état <strong>« Healthy »</strong> (Fonctionnel)</li>
-<li>Consulter les <strong>Metrics</strong> (Métriques) pour les statistiques de trafic</li>
+<li>Vérifiez que le tunnel affiche le statut <strong>« Healthy »</strong> (Fonctionnel)</li>
+<li>Consultez les <strong>Metrics</strong> (Métriques) pour les statistiques de trafic</li>
 </ol>
-<h2 id="security-considerations">Considérations de Sécurité</h2>
-<h3 id="enable-cloudflare-access-policies">1. Activer les politiques d'accès Cloudflare</h3>
+<h2 id="security-considerations">Considérations de sécurité</h2>
+<h3 id="enable-cloudflare-access-policies">1. Activer les politiques Cloudflare Access
+</h3>
 <p>Ajouter une couche d'authentification :</p>
 <ol type="1">
 <li><strong>Zero Trust</strong> → <strong>Access</strong> →
@@ -420,17 +420,16 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 ├── Include: Country is Morocco (or your country)
 ├── Exclude: Known VPN IP ranges
 └── Require: Email verification</code></pre>
-<h3 id="enable-audit-logs">3. Activer les journaux d'audit</h3>
-<p>Suivre toutes les tentatives d'accès : - Zero Trust → Logs → Access - Examiner
-les tentatives de connexion - Surveiller les activités suspectes</p>
-<h3 id="use-strong-proxmox-authentication">4. Utiliser une authentification Proxmox
-Forte</h3>
+<h3 id="enable-audit-logs">3. Activer les journaux d'audit (Audit Logs)</h3>
+<p>Suivre toutes les tentatives d'accès : - Zero Trust → Logs → Access -
+Examiner les tentatives de connexion - Surveiller toute activité suspecte</p>
+<h3 id="use-strong-proxmox-authentication">4. Utiliser une authentification Proxmox forte</h3>
 <div class="sourceCode" id="cb14"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable 2FA in Proxmox</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Datacenter → Permissions → Users</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit user → Add TFA</span></span></code></pre></div>
-<h2 id="performance-optimization">Optimisation des Performances</h2>
-<h3 id="reduce-latency">Réduire la Latence</h3>
+<h2 id="performance-optimization">Optimisation des performances</h2>
+<h3 id="reduce-latency">Réduire la latence</h3>
 <div class="sourceCode" id="cb15"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In config.yml, add:</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">originRequest</span><span class="kw">:</span></span>
@@ -438,10 +437,10 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb15-1"><a href=
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">connectTimeout</span><span class="kw">:</span><span class="at"> 10s</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">httpHostHeader</span><span class="kw">:</span><span class="at"> proxmox.olyhome.site</span></span></code></pre></div>
 <h3 id="enable-http2">Activer HTTP/2</h3>
-<p>Cloudflare utilise automatiquement HTTP/2 entre le client et le point
-edge, ce qui améliore les performances.</p>
-<h2 id="monitoring-and-maintenance">Surveillance et Maintenance</h2>
-<h3 id="regular-health-checks">Vérifications de santé régulières</h3>
+<p>Cloudflare utilise automatiquement HTTP/2 entre le client et la périphérie,
+ce qui améliore les performances.</p>
+<h2 id="monitoring-and-maintenance">Surveillance et maintenance</h2>
+<h3 id="regular-health-checks">Vérifications de l'état régulières</h3>
 <div class="sourceCode" id="cb16"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create monitoring script</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
@@ -457,7 +456,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href=
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to crontab</span></span>
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="fu">crontab</span> <span class="at">-e</span></span>
 <span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co"># */5 * * * * /root/check-tunnel.sh</span></span></code></pre></div>
-<h3 id="backup-configuration">Sauvegarde de la Configuration</h3>
+<h3 id="backup-configuration">Sauvegarde de la configuration</h3>
 <div class="sourceCode" id="cb17"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Backup tunnel config</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> tar czf cloudflared-backup-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d<span class="va">)</span>.tar.gz <span class="dt">\</span></span>
@@ -474,17 +473,13 @@ Twingate pour l'accès Zero Trust</h2>
 ├── Client-side encryption
 └── Better for multiple services</code></pre>
 <h2 id="conclusion">Conclusion</h2>
-<p>Cloudflare Tunnel offre un accès à distance sécurisé et sans configuration
-à Proxmox sans exposer les ports. La configuration nécessite un effort initial
-mais aboutit à une solution robuste, prête pour la production.</p>
-<p><strong>Résultats Finaux :</strong> - ✅ Accès sécurisé à
-<code>https://proxmox.olyhome.site</code> - ✅ Aucun port exposé sur
-le pare-feu - ✅ Certificats SSL gratuits - ✅ Redémarrage automatique du tunnel au
-démarrage - ✅ Protection DDoS incluse</p>
-<p><strong>Prochaines étapes :</strong> - Ajouter d'autres services au tunnel (N8N,
-bases de données, etc.) - Implémenter Cloudflare Access pour l'authentification - Mettre
-en place la surveillance et les alertes - Documenter les procédures de reprise après sinistre</p>
-<p><em>Rapport généré : 2025-10-27 14:35</em></p>
+<p>Cloudflare Tunnel offre un accès à distance sécurisé et sans configuration à
+Proxmox sans exposer les ports. La configuration nécessite un effort initial
+mais aboutit à une solution robuste et prête pour la production.</p>
+<p><strong>Résultats finaux :</strong> - ✅ Accès sécurisé à
+<code>https://proxmox.olyhome.site</code> - ✅ Aucun port exposé sur le pare-feu - ✅ Certificats SSL gratuits - ✅ Redémarrage automatique du tunnel au démarrage - ✅ Protection DDoS incluse</p>
+<p><strong>Prochaines étapes :</strong> - Ajouter plus de services au tunnel (N8N, bases de données, etc.) - Implémenter Cloudflare Access pour l'authentification - Mettre en place la surveillance et les alertes - Documenter les procédures de reprise après sinistre</p>
+<p><em>Rapport généré: 2025-10-27 14:35</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -498,21 +493,21 @@ en place la surveillance et les alertes - Documenter les procédures de reprise 
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Liens Rapides</h4>
+                    <h4>Liens rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
-                        <li><a href="/index.html#about">À Propos</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
                         <li><a href="/index.html#projects">Projets</a></li>
                         <li><a href="/blog/index.html">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connexion</h4>
+                    <h4>Connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>

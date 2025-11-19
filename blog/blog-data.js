@@ -1,8 +1,30 @@
 const blogData = {
     "articles": [
         {
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
+            "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
+        },
+        {
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
+            "title": "The Quest for Fluid Notes My Obsidian LiveSync Configuration and Triumphs",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
+        },
+        {
             "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Your Article Title Here",
+            "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
@@ -13,7 +35,7 @@ const blogData = {
         },
         {
             "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Your Article Title Here",
+            "title": "My AI-Powered Workflow Integration of MCP Docker and N8N for Obsidian",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
@@ -24,7 +46,7 @@ const blogData = {
         },
         {
             "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Your Article Title Here",
+            "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
@@ -35,7 +57,7 @@ const blogData = {
         },
         {
             "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Your Article Title Here",
+            "title": "Building My Pentester Portfolio Website A Multi-Agent Collaboration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
@@ -46,7 +68,7 @@ const blogData = {
         },
         {
             "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Your Article Title Here",
+            "title": "MCP Configuration Guide YAML Setup and Best Practices",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
@@ -57,7 +79,7 @@ const blogData = {
         },
         {
             "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Your Article Title Here",
+            "title": "MCP Configuration Guide YAML Setup and Best Practices",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
@@ -67,48 +89,26 @@ const blogData = {
             "url": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html"
         },
         {
-            "id": "automating-website-deployment-github-cloudflare-pages",
-            "title": "Your Article Title Here",
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Obsidian Auto-Sync to GitHub Website Automation",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/automating-website-deployment-github-cloudflare-pages.html"
+            "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html"
         },
         {
-            "id": "automating-website-deployment-github-cloudflare-pages",
-            "title": "Your Article Title Here",
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Obsidian Auto-Sync to GitHub Website Automation",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/automating-website-deployment-github-cloudflare-pages.html"
-        },
-        {
-            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html"
-        },
-        {
-            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "title": "Your Article Title Here",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-19",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/ai-kali-adventures-llm-testing-proxmox-debugging.html"
+            "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html"
         }
     ],
     "categories": {
