@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-19T12:02:19.246Z",
+  "lastUpdated": "2025-11-19T12:04:48.229Z",
   "totalArticles": 10,
   "categories": {
     "infrastructure": {
@@ -9,7 +9,7 @@
       "articles": {
         "en": [
           {
-            "id": "troubleshooting-pfsense-web-interface-access",
+            "id": "ssl-certificate-configuration-prompt-securing-homelab",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -20,16 +20,16 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "troubleshooting-pfsense-web-interface-access",
-            "url": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-            "filePath": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
+            "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+            "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+            "filePath": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
             "status": "published"
           },
           {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -40,16 +40,16 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-            "url": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "filePath": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+            "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
+            "filePath": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "id": "network-consciousness-vlan-learning-journey",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -60,16 +60,16 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "url": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "filePath": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "slug": "network-consciousness-vlan-learning-journey",
+            "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
+            "filePath": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "setting-up-secure-reverse-proxy-https",
+            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -80,16 +80,16 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "setting-up-secure-reverse-proxy-https",
-            "url": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html",
-            "filePath": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html",
+            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+            "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+            "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "building-secure-homelab-network-vlans-architecture",
+            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -100,9 +100,9 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "building-secure-homelab-network-vlans-architecture",
-            "url": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html",
-            "filePath": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html",
+            "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+            "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+            "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -111,7 +111,7 @@
         ],
         "fr": [
           {
-            "id": "troubleshooting-pfsense-web-interface-access",
+            "id": "ssl-certificate-configuration-prompt-securing-homelab",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -122,16 +122,16 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "troubleshooting-pfsense-web-interface-access",
-            "url": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-            "filePath": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html",
+            "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+            "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+            "filePath": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -142,16 +142,16 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-            "url": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "filePath": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+            "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
+            "filePath": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "id": "network-consciousness-vlan-learning-journey",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -162,16 +162,16 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "url": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "filePath": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "slug": "network-consciousness-vlan-learning-journey",
+            "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
+            "filePath": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "setting-up-secure-reverse-proxy-https",
+            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -182,16 +182,16 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "setting-up-secure-reverse-proxy-https",
-            "url": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html",
-            "filePath": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html",
+            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+            "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+            "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "building-secure-homelab-network-vlans-architecture",
+            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -202,9 +202,9 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "building-secure-homelab-network-vlans-architecture",
-            "url": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html",
-            "filePath": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html",
+            "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+            "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+            "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -271,7 +271,7 @@
   },
   "articles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -282,16 +282,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -302,16 +302,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -322,16 +322,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "filePath": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -342,16 +342,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "filePath": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "id": "network-consciousness-vlan-learning-journey",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -362,16 +362,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "network-consciousness-vlan-learning-journey",
+      "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
+      "filePath": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "id": "network-consciousness-vlan-learning-journey",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -382,16 +382,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "network-consciousness-vlan-learning-journey",
+      "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
+      "filePath": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
+      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -402,16 +402,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html",
+      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
+      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -422,16 +422,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html",
+      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-secure-homelab-network-vlans-architecture",
+      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -442,16 +442,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html",
+      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+      "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-secure-homelab-network-vlans-architecture",
+      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -462,9 +462,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html",
+      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+      "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -523,7 +523,7 @@
   },
   "recentArticles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -534,16 +534,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -554,16 +554,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -574,16 +574,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "filePath": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -594,16 +594,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "filePath": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "id": "network-consciousness-vlan-learning-journey",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -614,16 +614,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "network-consciousness-vlan-learning-journey",
+      "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
+      "filePath": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "id": "network-consciousness-vlan-learning-journey",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -634,16 +634,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "network-consciousness-vlan-learning-journey",
+      "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
+      "filePath": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
+      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -654,16 +654,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html",
+      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
+      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -674,16 +674,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html",
+      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-secure-homelab-network-vlans-architecture",
+      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -694,16 +694,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html",
+      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+      "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-secure-homelab-network-vlans-architecture",
+      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -714,9 +714,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html",
+      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+      "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,7 +725,7 @@
   ],
   "featuredArticles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -736,9 +736,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +747,16 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/troubleshooting-pfsense-web-interface-access": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-      "fr/infrastructure/troubleshooting-pfsense-web-interface-access": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html",
-      "en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "en/infrastructure/setting-up-secure-reverse-proxy-https": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html",
-      "fr/infrastructure/setting-up-secure-reverse-proxy-https": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html",
-      "en/infrastructure/building-secure-homelab-network-vlans-architecture": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html",
-      "fr/infrastructure/building-secure-homelab-network-vlans-architecture": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html"
+      "en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "en/infrastructure/network-consciousness-vlan-learning-journey": "/en/infrastructure/network-consciousness-vlan-learning-journey.html",
+      "fr/infrastructure/network-consciousness-vlan-learning-journey": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html",
+      "en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +786,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-19T12:02:19.247Z",
+  "generatedAt": "2025-11-19T12:04:48.230Z",
   "version": "1.0"
 }

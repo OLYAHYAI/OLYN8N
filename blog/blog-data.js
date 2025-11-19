@@ -1,7 +1,7 @@
 const blogData = {
     "articles": [
         {
-            "id": "troubleshooting-pfsense-web-interface-access",
+            "id": "ssl-certificate-configuration-prompt-securing-homelab",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -9,10 +9,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/troubleshooting-pfsense-web-interface-access.html"
+            "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
         },
         {
-            "id": "troubleshooting-pfsense-web-interface-access",
+            "id": "ssl-certificate-configuration-prompt-securing-homelab",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -20,10 +20,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/troubleshooting-pfsense-web-interface-access.html"
+            "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
         },
         {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -31,10 +31,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html"
+            "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
         },
         {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -42,10 +42,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/securing-n8n-workflows-deep-dive-dns-tls.html"
+            "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
         },
         {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "id": "network-consciousness-vlan-learning-journey",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -53,10 +53,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html"
+            "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html"
         },
         {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "id": "network-consciousness-vlan-learning-journey",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -64,10 +64,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/ssl-certificate-saga-local-dns-nginx-homelab.html"
+            "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html"
         },
         {
-            "id": "setting-up-secure-reverse-proxy-https",
+            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -75,10 +75,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/setting-up-secure-reverse-proxy-https.html"
+            "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
         },
         {
-            "id": "setting-up-secure-reverse-proxy-https",
+            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -86,10 +86,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/setting-up-secure-reverse-proxy-https.html"
+            "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
         },
         {
-            "id": "building-secure-homelab-network-vlans-architecture",
+            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -97,10 +97,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/building-secure-homelab-network-vlans-architecture.html"
+            "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
         },
         {
-            "id": "building-secure-homelab-network-vlans-architecture",
+            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -108,7 +108,7 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/building-secure-homelab-network-vlans-architecture.html"
+            "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
         }
     ],
     "categories": {
