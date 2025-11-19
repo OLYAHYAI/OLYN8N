@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tracing My Homelab Journey: A Roadmap to Self-Hosted Services - Technical tutorial and guide">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="Omar LYAHYAI">
+
+    <title>Tracing My Homelab Journey: A Roadmap to Self-Hosted Services | Omar LYAHYAI Technical Blog</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="/index.html#about" class="nav-link">About</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Home</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/reference.html">Reference</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Tracing My Homelab Journey: A Roadmap to Self-Hosted Services</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Tracing My Homelab Journey: A Roadmap to Self-Hosted Services</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-10-24</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>7 min read</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Reference</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <h1 id="homelab-overview">Homelab Overview</h1>
+<p>You are managing your homelab using Proxmox with VMs for Ubuntu,
+Kali, and pfSense. Your main goals include hosting your own services,
+automating workflows, and connecting everything securely with
+Twingate.</p>
+<h2 id="infrastructure-components">Infrastructure Components</h2>
+<h3 id="proxmox-ve-hypervisor">Proxmox VE (Hypervisor)</h3>
+<ul>
+<li><strong>Purpose</strong>: Virtualization platform for all
+services</li>
+<li><strong>Hardware</strong>: Dedicated server or powerful
+workstation</li>
+<li><strong>VMs Hosted</strong>:
+<ul>
+<li>Ubuntu Server (primary services)</li>
+<li>Kali Linux (penetration testing)</li>
+<li>pfSense (firewall and routing)</li>
+</ul></li>
+</ul>
+<h3 id="ubuntu-vm-services-host">Ubuntu VM (Services Host)</h3>
+<ul>
+<li><strong>Role</strong>: Main application server</li>
+<li><strong>Services</strong>:
+<ul>
+<li>Obsidian sync (CouchDB)</li>
+<li>n8n automation platform</li>
+<li>Docker containers</li>
+<li>Database servers</li>
+</ul></li>
+</ul>
+<h3 id="pfsense-vm-network-security">pfSense VM (Network Security)</h3>
+<ul>
+<li><strong>Role</strong>: Firewall and network gateway</li>
+<li><strong>Features</strong>:
+<ul>
+<li>VLAN management</li>
+<li>VPN server</li>
+<li>DNS resolver</li>
+<li>Traffic monitoring</li>
+</ul></li>
+</ul>
+<h3 id="twingate-secure-remote-access">Twingate (Secure Remote
+Access)</h3>
+<ul>
+<li><strong>Purpose</strong>: Zero-trust network access</li>
+<li><strong>Benefits</strong>: Secure remote access without exposing
+ports</li>
+</ul>
+<h2 id="obsidian-setup">Obsidian Setup</h2>
+<h3 id="self-hosted-sync-solution">Self-Hosted Sync Solution</h3>
+<ul>
+<li>Obsidian is being self-hosted using CouchDB</li>
+<li>Running on the Ubuntu VM</li>
+<li>Connected using <strong>Obsidian LiveSync</strong> plugin</li>
+<li>Secure remote access managed via <strong>Twingate</strong></li>
+</ul>
+<h3 id="why-self-host-obsidian-sync">Why Self-Host Obsidian Sync?</h3>
+<ol type="1">
+<li><strong>Data Sovereignty</strong>: Full control over your notes</li>
+<li><strong>Privacy</strong>: No third-party access to sensitive
+information</li>
+<li><strong>Cost</strong>: Free alternative to Obsidian Sync
+subscription</li>
+<li><strong>Learning</strong>: Hands-on experience with database
+management</li>
+</ol>
+<h2 id="step-by-step-setup-plan">Step-by-Step Setup Plan</h2>
+<h3 id="phase-1-server-preparation">Phase 1: Server Preparation</h3>
+<h4 id="update-and-secure-ubuntu-vm">1. Update and Secure Ubuntu VM</h4>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># System updates</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade <span class="at">-y</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install essential tools</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="at">-y</span> curl wget git vim ufw</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure firewall</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw default deny incoming</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw default allow outgoing</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow ssh</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw enable</span></code></pre></div>
+<h4 id="install-docker-and-docker-compose">2. Install Docker and Docker
+Compose</h4>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Docker</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://get.docker.com <span class="at">-o</span> get-docker.sh</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sh get-docker.sh</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Docker Compose</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install docker-compose <span class="at">-y</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Add user to docker group</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-aG</span> docker <span class="va">$USER</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">newgrp</span> docker</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify installation</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> <span class="at">--version</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> <span class="at">--version</span></span></code></pre></div>
+<h4 id="create-service-directories">3. Create Service Directories</h4>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create organized directory structure</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/services/<span class="dt">{obsidian-sync</span><span class="op">,</span><span class="dt">n8n</span><span class="op">,</span><span class="dt">backups}</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/services</span></code></pre></div>
+<h3 id="phase-2-deploy-couchdb-for-obsidian-sync">Phase 2: Deploy
+CouchDB for Obsidian Sync</h3>
+<h4 id="create-docker-compose-configuration">1. Create Docker Compose
+Configuration</h4>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/services/obsidian-sync</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> docker-compose.yml</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3.8&#39;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">couchdb</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> couchdb:latest</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> couchdb-for-obsidian</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> COUCHDB_USER=admin</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> COUCHDB_PASSWORD=your_secure_password_here</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./data:/opt/couchdb/data</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./config:/opt/couchdb/etc/local.d</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> 5984:5984</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> homelab</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">homelab</span><span class="kw">:</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">driver</span><span class="kw">:</span><span class="at"> bridge</span></span></code></pre></div>
+<h4 id="launch-couchdb">2. Launch CouchDB</h4>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start CouchDB</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify it&#39;s running</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps <span class="kw">|</span> <span class="fu">grep</span> couchdb</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check logs</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs <span class="at">-f</span> couchdb-for-obsidian</span></code></pre></div>
+<h4 id="configure-couchdb">3. Configure CouchDB</h4>
+<ol type="1">
+<li>Open CouchDB dashboard:
+<code>http://&lt;ubuntu-vm-ip&gt;:5984/_utils</code></li>
+<li>Login with credentials from docker-compose.yml</li>
+<li>Create database named <strong>obsidian</strong></li>
+<li>Enable CORS if accessing from different origins</li>
+</ol>
+<h4 id="connect-obsidian-desktop">4. Connect Obsidian Desktop</h4>
+<ol type="1">
+<li>Install <strong>Self-Hosted LiveSync</strong> plugin in
+Obsidian</li>
+<li>Configure plugin settings:
+<ul>
+<li><strong>Remote Database URL</strong>:
+<code>http://&lt;ubuntu-vm-ip&gt;:5984/obsidian</code></li>
+<li><strong>Username</strong>: <code>admin</code></li>
+<li><strong>Password</strong>: Your CouchDB password</li>
+</ul></li>
+<li>Initialize sync and test</li>
+</ol>
+<h3 id="phase-3-install-and-configure-n8n">Phase 3: Install and
+Configure n8n</h3>
+<h4 id="create-n8n-directory-and-configuration">1. Create n8n Directory
+and Configuration</h4>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/services/n8n</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> docker-compose.yml</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3&#39;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">n8n</span><span class="kw">:</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> n8nio/n8n:latest</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> n8n-automation</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> GENERIC_TIMEZONE=Europe/Paris</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> N8N_BASIC_AUTH_ACTIVE=true</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> N8N_BASIC_AUTH_USER=admin</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> N8N_BASIC_AUTH_PASSWORD=secure_password</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> N8N_HOST=n8n.lab</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> N8N_PORT=5678</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> N8N_PROTOCOL=https</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> WEBHOOK_URL=https://n8n.lab/</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> 5678:5678</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./data:/home/node/.n8n</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./local-files:/files</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> homelab</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">homelab</span><span class="kw">:</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+<h4 id="launch-n8n">2. Launch n8n</h4>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start n8n</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check status</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs <span class="at">-f</span> n8n-automation</span></code></pre></div>
+<h4 id="access-n8n-interface">3. Access n8n Interface</h4>
+<ul>
+<li>Navigate to: <code>http://&lt;ubuntu-vm-ip&gt;:5678</code></li>
+<li>Login with credentials from docker-compose.yml</li>
+<li>Complete initial setup wizard</li>
+</ul>
+<h3 id="phase-4-automate-backups-with-n8n">Phase 4: Automate Backups
+with n8n</h3>
+<h4 id="backup-strategy">Backup Strategy</h4>
+<ol type="1">
+<li><strong>Daily Backups</strong>: Obsidian vault and CouchDB data</li>
+<li><strong>Weekly Backups</strong>: Full system configuration</li>
+<li><strong>Monthly Archives</strong>: Long-term storage</li>
+</ol>
+<h4 id="create-backup-workflow-in-n8n">Create Backup Workflow in
+n8n</h4>
+<h5 id="workflow-components">Workflow Components:</h5>
+<ol type="1">
+<li><p><strong>Schedule Trigger</strong> (Cron Node)</p>
+<ul>
+<li><strong>Schedule</strong>: Every Sunday at 2:00 AM</li>
+<li><strong>Expression</strong>: <code>0 2 * * 0</code></li>
+</ul></li>
+<li><p><strong>Create Backup</strong> (Execute Command Node)</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">BACKUP_DIR</span><span class="op">=</span><span class="st">&quot;/backups/obsidian&quot;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="va">DATE</span><span class="op">=</span><span class="va">$(</span><span class="fu">date</span> +%Y-%m-%d_%H-%M-%S<span class="va">)</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create backup directory</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="va">$BACKUP_DIR</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Backup Obsidian vault</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> czf <span class="va">$BACKUP_DIR</span>/obsidian-vault_<span class="va">$DATE</span>.tar.gz /path/to/obsidian-vault</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Backup CouchDB data</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> czf <span class="va">$BACKUP_DIR</span>/couchdb-data_<span class="va">$DATE</span>.tar.gz ~/services/obsidian-sync/data</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only last 4 weeks of backups</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">$BACKUP_DIR</span> <span class="at">-name</span> <span class="st">&quot;*.tar.gz&quot;</span> <span class="at">-mtime</span> +28 <span class="at">-delete</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Backup completed: </span><span class="va">$DATE</span><span class="st">&quot;</span></span></code></pre></div></li>
+<li><p><strong>Verify Backup</strong> (Execute Command Node)</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if backup file exists and has reasonable size</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="va">LATEST_BACKUP</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="at">-t</span> /backups/obsidian/<span class="pp">*</span>.tar.gz <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span><span class="va">)</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="va">SIZE</span><span class="op">=</span><span class="va">$(</span><span class="fu">stat</span> <span class="at">-f%z</span> <span class="st">&quot;</span><span class="va">$LATEST_BACKUP</span><span class="st">&quot;</span> <span class="dv">2</span><span class="op">&gt;</span>/dev/null <span class="kw">||</span> <span class="fu">stat</span> <span class="at">-c%s</span> <span class="st">&quot;</span><span class="va">$LATEST_BACKUP</span><span class="st">&quot;</span><span class="va">)</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$SIZE</span> <span class="ot">-gt</span> 1024 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;Backup successful: </span><span class="va">$LATEST_BACKUP</span><span class="st"> (</span><span class="va">$SIZE</span><span class="st"> bytes)&quot;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">exit</span> 0</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;Backup failed or too small!&quot;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">exit</span> 1</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div></li>
+<li><p><strong>Send Notification</strong> (HTTP Request Node or
+Telegram)</p>
+<ul>
+<li>On success: “✅ Backup completed successfully”</li>
+<li>On failure: “❌ Backup failed! Please check logs”</li>
+</ul></li>
+</ol>
+<h3 id="phase-5-remote-access-and-security">Phase 5: Remote Access and
+Security</h3>
+<h4 id="install-twingate">Install Twingate</h4>
+<ol type="1">
+<li><strong>Create Twingate Account</strong>
+<ul>
+<li>Sign up at <a href="https://www.twingate.com">twingate.com</a></li>
+<li>Create new network</li>
+</ul></li>
+<li><strong>Deploy Twingate Connector</strong></li>
+</ol>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and install Twingate connector</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> https://binaries.twingate.com/connector/setup.sh <span class="kw">|</span> <span class="fu">sudo</span> bash</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure connector</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> twingate-connector setup</span></code></pre></div>
+<ol start="3" type="1">
+<li><strong>Configure Resources</strong>
+<ul>
+<li>Add Ubuntu VM services</li>
+<li>Add Proxmox web interface</li>
+<li>Add n8n automation platform</li>
+</ul></li>
+</ol>
+<h4 id="alternative-cloudflare-tunnel">Alternative: Cloudflare
+Tunnel</h4>
+<p>For HTTPS access without port forwarding:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install cloudflared</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> cloudflared-linux-amd64.deb</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Authenticate</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="ex">cloudflared</span> tunnel login</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create tunnel</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="ex">cloudflared</span> tunnel create homelab</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure tunnel</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.cloudflared/config.yml</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tunnel</span><span class="kw">:</span><span class="at"> &lt;tunnel-id&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">credentials-file</span><span class="kw">:</span><span class="at"> /root/.cloudflared/&lt;tunnel-id&gt;.json</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ingress</span><span class="kw">:</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">hostname</span><span class="kw">:</span><span class="at"> n8n.yourdomain.com</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">service</span><span class="kw">:</span><span class="at"> http://localhost:5678</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">hostname</span><span class="kw">:</span><span class="at"> couchdb.yourdomain.com</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">service</span><span class="kw">:</span><span class="at"> http://localhost:5984</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">service</span><span class="kw">:</span><span class="at"> http_status:404</span></span></code></pre></div>
+<h2 id="weekend-action-plan">Weekend Action Plan</h2>
+<h3 id="saturday-schedule">Saturday Schedule</h3>
+<h4 id="morning-2-3-hours">Morning (2-3 hours)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox" />Proxmox maintenance and
+updates</label></li>
+<li><label><input type="checkbox" />Ubuntu VM system
+updates</label></li>
+<li><label><input type="checkbox" />Install Docker and Docker
+Compose</label></li>
+<li><label><input type="checkbox" />Create service
+directories</label></li>
+</ul>
+<h4 id="afternoon-2-3-hours">Afternoon (2-3 hours)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox" />Deploy CouchDB
+container</label></li>
+<li><label><input type="checkbox" />Configure CouchDB
+database</label></li>
+<li><label><input type="checkbox" />Test CouchDB connection from
+browser</label></li>
+<li><label><input type="checkbox" />Install Obsidian LiveSync
+plugin</label></li>
+</ul>
+<h4 id="evening-1-2-hours">Evening (1-2 hours)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox" />Connect Obsidian desktop to
+CouchDB</label></li>
+<li><label><input type="checkbox" />Test sync functionality</label></li>
+<li><label><input type="checkbox" />Document setup steps in
+Obsidian</label></li>
+</ul>
+<h3 id="sunday-schedule">Sunday Schedule</h3>
+<h4 id="morning-2-3-hours-1">Morning (2-3 hours)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox" />Deploy n8n container</label></li>
+<li><label><input type="checkbox" />Configure n8n basic
+authentication</label></li>
+<li><label><input type="checkbox" />Explore n8n interface and
+templates</label></li>
+</ul>
+<h4 id="afternoon-2-3-hours-1">Afternoon (2-3 hours)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox" />Create first backup automation
+workflow</label></li>
+<li><label><input type="checkbox" />Test backup manually</label></li>
+<li><label><input type="checkbox" />Set up backup schedule</label></li>
+</ul>
+<h4 id="evening-1-2-hours-1">Evening (1-2 hours)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox" />Install and configure
+Twingate</label></li>
+<li><label><input type="checkbox" />Test remote access from
+phone/laptop</label></li>
+<li><label><input type="checkbox" />Document entire setup in
+Obsidian</label></li>
+</ul>
+<h2 id="end-goal-complete-self-hosted-environment">End Goal: Complete
+Self-Hosted Environment</h2>
+<p>By Monday, you’ll have:</p>
+<h3 id="infrastructure">✅ Infrastructure</h3>
+<ul>
+<li>Proxmox hypervisor with organized VMs</li>
+<li>Secure network with pfSense firewall</li>
+<li>Docker-based service architecture</li>
+</ul>
+<h3 id="core-services">✅ Core Services</h3>
+<ul>
+<li>Self-hosted Obsidian sync (CouchDB)</li>
+<li>n8n automation platform</li>
+<li>Automated backup system</li>
+</ul>
+<h3 id="security">✅ Security</h3>
+<ul>
+<li>Secure remote access (Twingate)</li>
+<li>Encrypted connections (HTTPS/SSL)</li>
+<li>Regular automated backups</li>
+</ul>
+<h3 id="automation">✅ Automation</h3>
+<ul>
+<li>Weekly backup automation</li>
+<li>Notification system for monitoring</li>
+<li>Workflow foundation for future projects</li>
+</ul>
+<h2 id="next-steps-and-future-enhancements">Next Steps and Future
+Enhancements</h2>
+<h3 id="short-term-1-2-weeks">Short Term (1-2 weeks)</h3>
+<ul>
+<li>Add reverse proxy (Nginx Proxy Manager)</li>
+<li>Configure custom domain names</li>
+<li>Set up monitoring (Uptime Kuma)</li>
+</ul>
+<h3 id="medium-term-1-2-months">Medium Term (1-2 months)</h3>
+<ul>
+<li>Add more automation workflows</li>
+<li>Implement log aggregation (Loki + Grafana)</li>
+<li>Create disaster recovery plan</li>
+</ul>
+<h3 id="long-term-3-6-months">Long Term (3-6 months)</h3>
+<ul>
+<li>Expand homelab with additional services</li>
+<li>Implement GitOps for infrastructure as code</li>
+<li>Create comprehensive documentation</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>This roadmap provides a clear path from initial setup to a fully
+functional, self-hosted homelab environment. By following this phased
+approach, you’ll build a solid foundation for automation, security, and
+continuous learning.</p>
+<p>The key to success is steady, incremental progress. Start with the
+basics, ensure each component works correctly, and gradually add
+complexity. Document everything in Obsidian, and don’t hesitate to
+experiment and learn from failures.</p>
+<p><em>Your homelab journey is a marathon, not a sprint. Enjoy the
+process!</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity Enthusiast</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#projects">Projects</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Omar LYAHYAI. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

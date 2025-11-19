@@ -1,62 +1,20 @@
 {
-  "lastUpdated": "2025-11-07T16:31:42.737Z",
-  "totalArticles": 2,
+  "lastUpdated": "2025-11-19T10:51:49.653Z",
+  "totalArticles": 10,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
-      "description": "Proxmox VE virtualization system administration and hardware setup guides",
+      "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
-        "en": [
-          {
-            "id": "test",
-            "title": "Untitled Article",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-07",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "test",
-            "url": "/en/infrastructure/test.html",
-            "filePath": "/en/infrastructure/test.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "test",
-            "title": "Untitled Article",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-07",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "test",
-            "url": "/fr/infrastructure/test.html",
-            "filePath": "/fr/infrastructure/test.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 2
+      "total": 0
     },
     "automation_ai": {
       "name": "Automation & AI",
-      "description": "AI workflows automation scripts MCP integration and intelligent systems",
+      "description": "AI workflows automation scripts MCP integration",
       "icon": "fas fa-robot",
       "articles": {
         "en": [],
@@ -66,7 +24,7 @@
     },
     "network_security": {
       "name": "Network Security",
-      "description": "Firewall configuration SSL/TLS reverse proxies and security best practices",
+      "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt",
       "articles": {
         "en": [],
@@ -76,7 +34,7 @@
     },
     "remote_access": {
       "name": "Remote Access",
-      "description": "VPN solutions tunneling remote desktop and secure access methods",
+      "description": "VPN tunneling remote desktop secure access",
       "icon": "fas fa-network-wired",
       "articles": {
         "en": [],
@@ -86,17 +44,219 @@
     },
     "reference": {
       "name": "Reference",
-      "description": "Quick guides configuration reference and technical documentation",
+      "description": "Quick guides configuration reference",
       "icon": "fas fa-book",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "ssl-certificate-configuration-prompt-securing-homelab",
+            "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+            "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+            "filePath": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
+            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
+            "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+            "url": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+            "filePath": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "network-consciousness-vlan-learning-journey",
+            "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "network-consciousness-vlan-learning-journey",
+            "url": "/en/reference/network-consciousness-vlan-learning-journey.html",
+            "filePath": "/en/reference/network-consciousness-vlan-learning-journey.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "certifications",
+            "title": "Professional Certifications",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "certifications",
+            "url": "/en/reference/certifications.html",
+            "filePath": "/en/reference/certifications.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+            "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+            "url": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+            "filePath": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "ssl-certificate-configuration-prompt-securing-homelab",
+            "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+            "url": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+            "filePath": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
+            "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+            "url": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+            "filePath": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "network-consciousness-vlan-learning-journey",
+            "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "network-consciousness-vlan-learning-journey",
+            "url": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+            "filePath": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "certifications",
+            "title": "Professional Certifications",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "certifications",
+            "url": "/fr/reference/certifications.html",
+            "filePath": "/fr/reference/certifications.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+            "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+            "url": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+            "filePath": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 10
     },
     "docker_services": {
       "name": "Docker Services",
-      "description": "Container orchestration Docker Compose service deployment and troubleshooting",
+      "description": "Container orchestration Docker Compose",
       "icon": "fab fa-docker",
       "articles": {
         "en": [],
@@ -106,45 +266,205 @@
     }
   },
   "languages": {
-    "en": 1,
-    "fr": 1
+    "en": 5,
+    "fr": 5
   },
   "articles": [
     {
-      "id": "test",
-      "title": "Untitled Article",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "en",
-      "date": "2025-11-07",
+      "date": "2025-11-19",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "test",
-      "url": "/en/infrastructure/test.html",
-      "filePath": "/en/infrastructure/test.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "test",
-      "title": "Untitled Article",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "fr",
-      "date": "2025-11-07",
+      "date": "2025-11-19",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "test",
-      "url": "/fr/infrastructure/test.html",
-      "filePath": "/fr/infrastructure/test.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "url": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "filePath": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "url": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "filePath": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "network-consciousness-vlan-learning-journey",
+      "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "network-consciousness-vlan-learning-journey",
+      "url": "/en/reference/network-consciousness-vlan-learning-journey.html",
+      "filePath": "/en/reference/network-consciousness-vlan-learning-journey.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "network-consciousness-vlan-learning-journey",
+      "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "network-consciousness-vlan-learning-journey",
+      "url": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+      "filePath": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "certifications",
+      "title": "Professional Certifications",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "certifications",
+      "url": "/en/reference/certifications.html",
+      "filePath": "/en/reference/certifications.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "certifications",
+      "title": "Professional Certifications",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "certifications",
+      "url": "/fr/reference/certifications.html",
+      "filePath": "/fr/reference/certifications.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "url": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "filePath": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "url": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "filePath": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -154,10 +474,10 @@
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 2,
-      "en": 1,
-      "fr": 1,
-      "description": "Proxmox VE virtualization system administration and hardware setup guides",
+      "total": 0,
+      "en": 0,
+      "fr": 0,
+      "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
     "automation_ai": {
@@ -165,7 +485,7 @@
       "total": 0,
       "en": 0,
       "fr": 0,
-      "description": "AI workflows automation scripts MCP integration and intelligent systems",
+      "description": "AI workflows automation scripts MCP integration",
       "icon": "fas fa-robot"
     },
     "network_security": {
@@ -173,7 +493,7 @@
       "total": 0,
       "en": 0,
       "fr": 0,
-      "description": "Firewall configuration SSL/TLS reverse proxies and security best practices",
+      "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt"
     },
     "remote_access": {
@@ -181,15 +501,15 @@
       "total": 0,
       "en": 0,
       "fr": 0,
-      "description": "VPN solutions tunneling remote desktop and secure access methods",
+      "description": "VPN tunneling remote desktop secure access",
       "icon": "fas fa-network-wired"
     },
     "reference": {
       "name": "Reference",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
-      "description": "Quick guides configuration reference and technical documentation",
+      "total": 10,
+      "en": 5,
+      "fr": 5,
+      "description": "Quick guides configuration reference",
       "icon": "fas fa-book"
     },
     "docker_services": {
@@ -197,46 +517,206 @@
       "total": 0,
       "en": 0,
       "fr": 0,
-      "description": "Container orchestration Docker Compose service deployment and troubleshooting",
+      "description": "Container orchestration Docker Compose",
       "icon": "fab fa-docker"
     }
   },
   "recentArticles": [
     {
-      "id": "test",
-      "title": "Untitled Article",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "en",
-      "date": "2025-11-07",
+      "date": "2025-11-19",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "test",
-      "url": "/en/infrastructure/test.html",
-      "filePath": "/en/infrastructure/test.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "test",
-      "title": "Untitled Article",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "fr",
-      "date": "2025-11-07",
+      "date": "2025-11-19",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "test",
-      "url": "/fr/infrastructure/test.html",
-      "filePath": "/fr/infrastructure/test.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "url": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "filePath": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "title": "Network Architecture Prompt: DNS, TLS and Reverse Proxies",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "network-architecture-prompt-dns-tls-reverse-proxies",
+      "url": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "filePath": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "network-consciousness-vlan-learning-journey",
+      "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "network-consciousness-vlan-learning-journey",
+      "url": "/en/reference/network-consciousness-vlan-learning-journey.html",
+      "filePath": "/en/reference/network-consciousness-vlan-learning-journey.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "network-consciousness-vlan-learning-journey",
+      "title": "Network Consciousness: A Learning Journey Through VLAN Architecture and Security",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "network-consciousness-vlan-learning-journey",
+      "url": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+      "filePath": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "certifications",
+      "title": "Professional Certifications",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "certifications",
+      "url": "/en/reference/certifications.html",
+      "filePath": "/en/reference/certifications.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "certifications",
+      "title": "Professional Certifications",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "certifications",
+      "url": "/fr/reference/certifications.html",
+      "filePath": "/fr/reference/certifications.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "url": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "filePath": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "title": "Tracing My Homelab Journey: A Roadmap to Self-Hosted Services",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+      "url": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "filePath": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -245,20 +725,20 @@
   ],
   "featuredArticles": [
     {
-      "id": "test",
-      "title": "Untitled Article",
+      "id": "ssl-certificate-configuration-prompt-securing-homelab",
+      "title": "SSL Certificate Configuration Prompt: Securing Your Homelab",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "en",
-      "date": "2025-11-07",
+      "date": "2025-11-19",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "test",
-      "url": "/en/infrastructure/test.html",
-      "filePath": "/en/infrastructure/test.html",
+      "slug": "ssl-certificate-configuration-prompt-securing-homelab",
+      "url": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "filePath": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -267,8 +747,16 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/test": "/en/infrastructure/test.html",
-      "fr/infrastructure/test": "/fr/infrastructure/test.html"
+      "en/reference/ssl-certificate-configuration-prompt-securing-homelab": "/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "fr/reference/ssl-certificate-configuration-prompt-securing-homelab": "/fr/reference/ssl-certificate-configuration-prompt-securing-homelab.html",
+      "en/reference/network-architecture-prompt-dns-tls-reverse-proxies": "/en/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "fr/reference/network-architecture-prompt-dns-tls-reverse-proxies": "/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html",
+      "en/reference/network-consciousness-vlan-learning-journey": "/en/reference/network-consciousness-vlan-learning-journey.html",
+      "fr/reference/network-consciousness-vlan-learning-journey": "/fr/reference/network-consciousness-vlan-learning-journey.html",
+      "en/reference/certifications": "/en/reference/certifications.html",
+      "fr/reference/certifications": "/fr/reference/certifications.html",
+      "en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services": "/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services": "/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -298,6 +786,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-07T16:31:42.738Z",
+  "generatedAt": "2025-11-19T10:51:49.657Z",
   "version": "1.0"
 }

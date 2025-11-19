@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Architecture Réseau : DNS, TLS et Proxies Inverses - Tutoriel et guide technique">
+    <meta name="keywords" content="réseaux">
+    <meta name="author" content="Omar LYAHYAI">
+
+    <title>Architecture Réseau : DNS, TLS et Proxies Inverses | Blog Technique d'Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/reference/network-architecture-prompt-dns-tls-reverse-proxies.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/reference.html">Référence</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Architecture Réseau : DNS, TLS et Proxies Inverses</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Architecture Réseau : DNS, TLS et Proxies Inverses</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-10-26</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>3 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Référence</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>réseaux</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <h1 id="network-architecture-prompt-dns-tls-and-reverse-proxies">Architecture
+Réseau : DNS, TLS et Proxies Inverses</h1>
+<h2 id="purpose">Objectif</h2>
+<p>Ce guide de référence fournit des modèles architecturaux pour l'implémentation
+d'un accès réseau sécurisé dans les environnements homelab en utilisant le DNS, les certificats TLS
+et les proxies inverses.</p>
+<h2 id="architecture-pattern-secure-internal-services">Modèle
+Architectural : Services Internes Sécurisés</h2>
+<h3 id="layer-1-network-segmentation">Couche 1 : Segmentation Réseau</h3>
+<pre><code>Internet → WAN → pfSense → LAN (Internal Services)
+                     ↓
+              Reverse Proxy (Nginx Proxy Manager)
+                     ↓
+         ┌───────────┼───────────┐
+         ↓           ↓           ↓
+    Proxmox        n8n      Databases
+  (192.168.1.10) (.20)       (.30)</code></pre>
+<h3 id="layer-2-dns-resolution">Couche 2 : Résolution DNS</h3>
+<p><strong>Option A: Domaine Public + Split DNS</strong></p>
+<pre><code>External: proxmox.yourdomain.com → Public IP → Cloudflare Tunnel
+Internal: proxmox.lab.local → 192.168.1.100 (Reverse Proxy)</code></pre>
+<p><strong>Option B: DNS Local Uniquement</strong></p>
+<pre><code>All Clients: proxmox.local → 192.168.1.100 (pfSense DNS Resolver)</code></pre>
+<h3 id="layer-3-tls-termination">Couche 3 : Terminaison TLS</h3>
+<p><strong>Proxy Inverse (Nginx Proxy Manager)</strong></p>
+<pre><code>Client (HTTPS) → Nginx Proxy Manager → Backend (HTTP/HTTPS)
+              ↓
+      Let&#39;s Encrypt or Self-Signed Cert</code></pre>
+<h2 id="implementation-checklist">Liste de Vérification de l'Implémentation</h2>
+<h3 id="dns-configuration">Configuration DNS</h3>
+<p><strong>Résolveur DNS pfSense :</strong></p>
+<pre><code>Services → DNS Resolver → Host Overrides
+- proxmox.lab → 192.168.1.100
+- n8n.lab → 192.168.1.100
+- db.lab → 192.168.1.100</code></pre>
+<h3 id="reverse-proxy-setup">Configuration du Proxy Inverse</h3>
+<p><strong>Nginx Proxy Manager :</strong></p>
+<pre><code>Proxy Hosts:
+1. proxmox.lab → https://192.168.1.10:8006
+2. n8n.lab → http://192.168.1.20:5678 (WebSockets: ON)
+3. db.lab → http://192.168.1.30:5432</code></pre>
+<h3 id="ssl-certificate-options">Options de Certificat SSL</h3>
+<p><strong>Option 1: Let’s Encrypt (DNS Challenge)</strong> - Nécessite
+un domaine public - Utilise l'API Cloudflare - Renouvellement automatique tous les 90 jours</p>
+<p><strong>Option 2: Auto-signé (mkcert)</strong> - Installation d'une CA locale
+requise - Aucune dépendance externe - Renouvellement manuel</p>
+<p><strong>Option 3: Cloudflare Origin Certificate</strong> - Certificats gratuits
+de 15 ans - Uniquement pour les domaines sous proxy Cloudflare - Reconnu par le Edge Cloudflare</p>
+<h2 id="security-layers">Couches de Sécurité</h2>
+<h3 id="network-layer">1. Couche Réseau</h3>
+<ul>
+<li>Règles de pare-feu pfSense</li>
+<li>Segmentation VLAN</li>
+<li>Restrictions de ports</li>
+</ul>
+<h3 id="transport-layer">2. Couche Transport</h3>
+<ul>
+<li>Chiffrement TLS 1.3</li>
+<li>Suites de chiffrement robustes</li>
+<li>HTTP Strict Transport Security (HSTS)</li>
+</ul>
+<h3 id="application-layer">3. Couche Application</h3>
+<ul>
+<li>Authentification (HTTP Basic Auth, OAuth)</li>
+<li>Listes de contrôle d'accès</li>
+<li>Limitation de débit (Rate limiting)</li>
+</ul>
+<h2 id="common-patterns">Modèles Courants</h2>
+<h3 id="pattern-1-development-services">Modèle 1 : Services de Développement</h3>
+<pre><code>Local DNS: service.lab
+Certificate: Self-signed (mkcert)
+Access: LAN only
+Backend: HTTP</code></pre>
+<h3 id="pattern-2-production-services">Modèle 2 : Services de Production</h3>
+<pre><code>Public DNS: service.yourdomain.com
+Certificate: Let&#39;s Encrypt
+Access: Internet (with authentication)
+Backend: HTTPS (validated)</code></pre>
+<h3 id="pattern-3-hybrid-approach">Modèle 3 : Approche Hybride</h3>
+<pre><code>Internal: service.lab (mkcert, LAN)
+External: service.yourdomain.com (Let&#39;s Encrypt, Cloudflare Tunnel)
+Backend: Same service, different access paths</code></pre>
+<h2 id="quick-commands-reference">Référence Rapide des Commandes</h2>
+<h3 id="test-dns-resolution">Tester la Résolution DNS</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nslookup</span> proxmox.lab</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dig</span> proxmox.lab +short</span></code></pre></div>
+<h3 id="test-tls-certificate">Tester le Certificat TLS</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> s_client <span class="at">-connect</span> proxmox.lab:443 <span class="at">-servername</span> proxmox.lab</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-vI</span> https://proxmox.lab</span></code></pre></div>
+<h3 id="verify-proxy-configuration">Vérifier la Configuration du Proxy</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-H</span> <span class="st">&quot;Host: proxmox.lab&quot;</span> http://192.168.1.100</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-I</span> https://proxmox.lab</span></code></pre></div>
+<h2 id="decision-matrix">Matrice de Décision</h2>
+<table>
+<thead>
+<tr>
+<th>Cas d'utilisation</th>
+<th>DNS</th>
+<th>Certificat</th>
+<th>Proxy Inverse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dev/Test</td>
+<td>Local (.lab)</td>
+<td>Auto-signé</td>
+<td>Facultatif</td>
+</tr>
+<tr>
+<td>Prod Interne</td>
+<td>Local (.lab)</td>
+<td>mkcert</td>
+<td>Requis</td>
+</tr>
+<tr>
+<td>Accès Externe</td>
+<td>Public (.com)</td>
+<td>Let’s Encrypt</td>
+<td>Requis</td>
+</tr>
+<tr>
+<td>Données Sensibles</td>
+<td>Local uniquement</td>
+<td>mkcert</td>
+<td>Requis + Auth</td>
+</tr>
+</tbody>
+</table>
+<h2 id="best-practices">Bonnes Pratiques</h2>
+<ol type="1">
+<li><strong>Toujours utiliser HTTPS</strong> pour les interfaces web</li>
+<li><strong>Mettre en œuvre une défense en profondeur</strong> (pare-feu + proxy +
+auth)</li>
+<li><strong>Utiliser des mots de passe robustes</strong> ou une authentification par clé</li>
+<li><strong>Surveiller régulièrement les journaux d'accès</strong></li>
+<li><strong>Maintenir les certificats à jour</strong> (renouvellement auto)</li>
+<li><strong>Documenter votre architecture</strong> dans des diagrammes</li>
+<li><strong>Tester les procédures de reprise après sinistre</strong></li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Une architecture réseau appropriée avec DNS, TLS et des proxies inverses
+permet de créer une infrastructure homelab sécurisée et gérable.
+Choisissez les modèles en fonction de vos exigences de sécurité et de vos besoins d'accès.</p>
+<p><em>Pour une implémentation détaillée, consultez les articles connexes sur Nginx Proxy
+Manager et la configuration de pfSense.</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connexion</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Omar LYAHYAI. Tous droits réservés.</p>
+                <p>Conçu avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
