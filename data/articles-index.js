@@ -1,5 +1,5 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-19T13:11:38.449Z",
+  "lastUpdated": "2025-11-19T13:18:06.485Z",
   "totalArticles": 10,
   "categories": {
     "infrastructure": {
@@ -786,6 +786,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-19T13:11:38.450Z",
+  "generatedAt": "2025-11-19T13:18:06.486Z",
   "version": "1.0"
 };

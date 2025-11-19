@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Votre titre d'article ici - Tutoriel et guide technique">
+    <meta name="description" content="Guide de configuration MCP : Mise en place YAML et meilleures pratiques - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Votre titre d'article ici | Blog Technique d'Omar LYAHYAI</title>
+    <title>Guide de configuration MCP : Mise en place YAML et meilleures pratiques | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/infrastructure/mcp-configuration-guide-yaml-setup.html" class="lang-toggle" aria-label="Changer de langue">
-                        <span class="lang-current">FR</span>
+                    <a href="/en/infrastructure/mcp-configuration-guide-yaml-setup.html" class="lang-toggle" aria-label="Changer la langue">
+                        <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -58,7 +58,7 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="En-tête de l'article">
+        <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
                     <nav class="breadcrumb" aria-label="Fil d'Ariane">
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Votre titre d'article ici</span>
+                        <span>Guide de configuration MCP : Mise en place YAML et meilleures pratiques</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Votre titre d'article ici</h1>
+                <h1 class="article-title">Guide de configuration MCP : Mise en place YAML et meilleures pratiques</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -122,11 +122,11 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="mcp-configuration-guide-yaml-setup-and-configuration">Guide de Configuration MCP : Mise en place et Configuration YAML</h1>
+<h1 id="mcp-configuration-guide-yaml-setup-and-configuration">Guide de configuration MCP : Mise en place et configuration YAML</h1>
 <h2 id="what-is-mcp">Qu'est-ce que MCP ?</h2>
-<p>La <strong>Modular Copilot Platform (MCP)</strong> est un framework permettant de déployer et de gérer des assistants IA dotés de capacités modulaires. Elle vous permet de créer des flux de travail IA personnalisés avec des outils et des intégrations spécialisés.</p>
-<h2 id="basic-yaml-configuration">Configuration YAML de Base</h2>
-<h3 id="minimal-configuration">Configuration Minimale</h3>
+<p>La <strong>Modular Copilot Platform (MCP)</strong> est un framework destiné au déploiement et à la gestion d'assistants IA dotés de capacités modulaires. Il vous permet de créer des flux de travail IA personnalisés avec des outils et des intégrations spécialisés.</p>
+<h2 id="basic-yaml-configuration">Configuration YAML de base</h2>
+<h3 id="minimal-configuration">Configuration minimale</h3>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mcp-config.yml</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;1.0&quot;</span></span>
@@ -144,15 +144,16 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> filesystem</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> web_search</span></span></code></pre></div>
-<h3 id="configuration-breakdown">Analyse de la Configuration</h3>
-<p><strong>Paramètres du Serveur :</strong></p>
+<h3 id="configuration-breakdown">Analyse de la configuration</h3>
+<p>Paramètres du Serveur :</p>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">server</span><span class="kw">:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">host</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;0.0.0.0&quot;</span><span class="co">        # Listen on all interfaces</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="dv">5000</span><span class="co">             # API port</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">workers</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span><span class="co">             # Number of worker processes</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">timeout</span><span class="kw">:</span><span class="at"> </span><span class="dv">120</span><span class="co">           # Request timeout (seconds)</span></span></code></pre></div>
-<p><strong>Configuration des Modèles :</strong></p>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">timeout</span><span class="kw">:</span><span class="at"> </span><span class="dv">120</span><span class="co">           # Request timeout (seconds)</span></span>
+</code></pre></div>
+<p>Configuration du Modèle :</p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">models</span><span class="kw">:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;code-assistant&quot;</span></span>
@@ -161,7 +162,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">temperature</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.3</span><span class="co">      # Lower = more deterministic</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">max_tokens</span><span class="kw">:</span><span class="at"> </span><span class="dv">2048</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">context_window</span><span class="kw">:</span><span class="at"> </span><span class="dv">4096</span></span></code></pre></div>
-<p><strong>Outils et Capacités :</strong></p>
+<p>Outils et Capacités :</p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;filesystem&quot;</span></span>
@@ -209,7 +210,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="fu">volumes</span><span class="kw">:</span></span>
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ollama_data</span><span class="kw">:</span></span></code></pre></div>
-<h3 id="deployment-commands">Commandes de Déploiement</h3>
+<h3 id="deployment-commands">Commandes de déploiement</h3>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start services</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span>
@@ -256,7 +257,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;http://n8n:5678/webhook/mcp&quot;</span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">headers</span><span class="kw">:</span></span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">Authorization</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Bearer ${N8N_TOKEN}&quot;</span></span></code></pre></div>
-<h3 id="environment-variables">Variables d'Environnement</h3>
+<h3 id="environment-variables">Environment Variables</h3>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .env file</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="va">MCP_LOG_LEVEL</span><span class="op">=</span>INFO</span>
@@ -265,7 +266,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="va">SEARCH_API_KEY</span><span class="op">=</span>...</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="va">N8N_TOKEN</span><span class="op">=</span>...</span></code></pre></div>
 <h2 id="integration-examples">Exemples d'Intégration</h2>
-<h3 id="with-n8n">Avec N8N</h3>
+<h3 id="with-n8n">Avec n8n</h3>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// n8n HTTP Request Node</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>{</span>
@@ -305,7 +306,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb12-1"><a href=
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;bearer&quot;</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">tokens</span><span class="kw">:</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;${MCP_API_TOKEN}&quot;</span></span></code></pre></div>
-<h3 id="rate-limiting">2. Limitation de Débit (Rate Limiting)</h3>
+<h3 id="rate-limiting">2. Rate Limiting</h3>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">server</span><span class="kw">:</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">rate_limit</span><span class="kw">:</span></span>
@@ -320,4 +321,95 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href=
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">security</span><span class="kw">:</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">read_only</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">allowed_extensions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;.md&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;.txt&quot;</span><span class="kw">]</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">max_file_size</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;10MB&quot;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">max_file_size</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;10MB&quot;</span></span></code></pre></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Problèmes Courants</h3>
+<p>MCP ne démarre pas :</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check logs</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs mcp-server</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Validate config</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec mcp-server python <span class="at">-c</span> <span class="st">&quot;import yaml; yaml.safe_load(open(&#39;/app/config/mcp-config.yml&#39;))&quot;</span></span></code></pre></div>
+<p>Le modèle ne se charge pas :</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull model manually</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec ollama ollama pull mistral:7b</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check available models</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec ollama ollama list</span></code></pre></div>
+<p>Connexion refusée :</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if services are running</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test connectivity</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://localhost:5000/health</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://localhost:11434/api/version</span></code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+<p>MCP offre un framework flexible pour l'intégration d'IA. Une configuration YAML appropriée est essentielle pour un déploiement fiable. Commencez par la configuration de base, puis ajoutez progressivement des outils et des modèles selon vos besoins.</p>
+<p><strong>Points Clés :</strong> - Utilisez des variables d'environnement pour les secrets - Commencez par une configuration minimale - Testez chaque outil avant de l'activer - Surveillez l'utilisation des ressources - Maintenez les configurations sous contrôle de version</p>
+<p><em>Pour plus d'informations : <a
+href="https://github.com/modularcopilot/mcp">MCP GitHub</a></em>
+<!-- Touched: Wed Nov 19 13:33:27 +01 2025 -->
+<!-- Touched: Wed Nov 19 14:03:35 +01 2025 -->
+<!-- Touched: Wed Nov 19 15:04:19 +01 2025 --></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en formation | Passionné de Cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Se Connecter</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Conçu avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut de page">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Titre de votre article ici - Tutoriel et guide technique">
+    <meta name="description" content="Automatisation de la synchronisation automatique d'Obsidian vers un site web GitHub - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Titre de votre article ici | Blog Technique d'Omar LYAHYAI</title>
+    <title>Automatisation de la synchronisation automatique d'Obsidian vers un site web GitHub | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/infrastructure/obsidian-auto-sync-to-github-website.html" class="lang-toggle" aria-label="Change language">
-                        <span class="lang-current">FR</span>
+                    <a href="/fr/infrastructure/obsidian-auto-sync-to-github-website.html" class="lang-toggle" aria-label="Changer la langue">
+                        <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -58,21 +58,21 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="Article header">
+        <section class="article-header" role="region" aria-label="En-tête de l'article">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Titre de votre article ici</span>
+                        <span>Automatisation de la synchronisation automatique d'Obsidian vers un site web GitHub</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Titre de votre article ici</h1>
+                <h1 class="article-title">Automatisation de la synchronisation automatique d'Obsidian vers un site web GitHub</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -95,7 +95,7 @@
             </div>
         </section>
 
-        <section class="article-content" role="region" aria-label="Article content">
+        <section class="article-content" role="region" aria-label="Contenu de l'article">
             <div class="container">
                 <div class="article-body">
                     <!-- 
@@ -123,30 +123,29 @@ The workflow will:
 - Preserve images and links
 -->
 <h1 id="mode-opératoire-obsidian-auto-sync-system">🔄 Mode Opératoire:
-Système d'Auto-Synchronisation Obsidian</h1>
+Obsidian Auto-Sync System</h1>
 <h2 id="overview">📋 Aperçu</h2>
-<p><strong>Objectif :</strong> Synchroniser automatiquement les modifications de la documentation Obsidian vers GitHub et déployer sur le site web en production.</p>
+<p><strong>Objectif :</strong> Synchroniser automatiquement les modifications de la documentation Obsidian vers GitHub et déployer sur le site web en ligne.</p>
 <p><strong>Flux :</strong></p>
 <pre><code>Edit in Obsidian → Auto-detect (5s) → Git Commit → Push to GitHub → Jekyll Build → Live Website</code></pre>
-<p><strong>Temps Total :</strong> ~2-3 minutes entre la modification et le déploiement en direct</p>
+<p><strong>Temps total :</strong> ~2-3 minutes entre la modification et le déploiement en ligne</p>
 <hr />
-<h2 id="current-implementation-option-1-file-watcher-git">🎯 Implémentation
-Actuelle : Option 1 (Surveillance de Fichiers + Git)</h2>
-<h3 id="system-architecture">Architecture du Système</h3>
+<h2 id="current-implementation-option-1-file-watcher-git">🎯 Mise en œuvre actuelle : Option 1 (Moniteur de Fichiers + Git)</h2>
+<h3 id="system-architecture">Architecture du système</h3>
 <pre><code>┌─────────────────┐
-│  Obsidian Edit  │
+│ Modification Obsidian  │
 └────────┬────────┘
          │
          ▼
 ┌─────────────────────────┐
-│  inotify File Watcher   │
-│  (systemd service)      │
+│  Moniteur de Fichiers inotify   │
+│  (service systemd)      │
 └────────┬────────────────┘
          │ (5 second debounce)
          ▼
 ┌─────────────────────────┐
 │  auto-sync-to-github.sh │
-│  - Detect changes       │
+│  - Détecter les changements       │
 │  - Git add              │
 │  - Git commit           │
 │  - Git push             │
@@ -154,78 +153,73 @@ Actuelle : Option 1 (Surveillance de Fichiers + Git)</h2>
          │
          ▼
 ┌─────────────────────────┐
-│  GitHub Repository      │
+│  Dépôt GitHub      │
 │  OLYAHYAI/Portfolio     │
 └────────┬────────────────┘
          │
          ▼
 ┌─────────────────────────┐
-│  GitHub Actions         │
+│  Actions GitHub         │
 │  (.github/workflows/)   │
 └────────┬────────────────┘
          │
          ▼
 ┌─────────────────────────┐
-│  Jekyll Build           │
-│  (Auto-triggered)       │
+│  Compilation Jekyll           │
+│  (Déclenchement automatique)       │
 └────────┬────────────────┘
          │
          ▼
 ┌─────────────────────────┐
-│  GitHub Pages Deploy    │
+│  Déploiement GitHub Pages    │
 │  https://olyahyai.      │
 │  github.io/Portfolio/   │
 └─────────────────────────┘</code></pre>
 <hr />
-<h2 id="installation-procedure">🚀 Procédure d'Installation</h2>
+<h2 id="installation-procedure">🚀 Procédure d'installation</h2>
 <h3 id="prerequisites">Prérequis</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="" />Système Linux Ubuntu/Debian</label></li>
 <li><label><input type="checkbox" checked="" />Git installé</label></li>
-<li><label><input type="checkbox" checked="" />Obsidian avec les coffres ProjectEN
-et ProjectFR_new</label></li>
-<li><label><input type="checkbox" checked="" />Compte GitHub
-(OLYAHYAI)</label></li>
+<li><label><input type="checkbox" checked="" />Obsidian avec les coffres ProjectEN et ProjectFR_new</label></li>
+<li><label><input type="checkbox" checked="" />Compte GitHub (OLYAHYAI)</label></li>
 <li><label><input type="checkbox" checked="" />Dépôt :
 OLYAHYAI/Portfolio</label></li>
 </ul>
-<h3 id="step-1-git-authentication-one-time">Étape 1 : Authentification Git
-(UNE SEULE FOIS)</h3>
+<h3 id="step-1-git-authentication-one-time">Étape 1 : Authentification Git (UNE FOIS)</h3>
 <p><strong>Choisissez UNE méthode :</strong></p>
-<h4 id="option-a-github-cli-recommended">Option A : GitHub CLI
-(Recommandé)</h4>
+<h4 id="option-a-github-cli-recommended">Option A : CLI GitHub (Recommandé)</h4>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div>
-<h4 id="option-b-ssh-key-most-secure">Option B : Clé SSH (La plus
-Sécurisée)</h4>
+<h4 id="option-b-ssh-key-most-secure">Option B : Clé SSH (La plus sécurisée)</h4>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">&quot;your@email.com&quot;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to: https://github.com/settings/keys</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/f4blox/Desktop/Gemini/opencode/openproject/OpenProject</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-url origin git@github.com:OLYAHYAI/Portfolio.git</span></code></pre></div>
-<h4 id="option-c-credential-helper">Option C : Aide aux Identifiants (Credential Helper)</h4>
+<h4 id="option-c-credential-helper">Option C : Assistant d'identification</h4>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper store</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/f4blox/Desktop/Gemini/opencode/openproject/OpenProject</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div>
-<h3 id="step-2-install-auto-sync">Étape 2 : Installation de l'Auto-Synchronisation</h3>
+<h3 id="step-2-install-auto-sync">Étape 2 : Installer l'Auto-Sync</h3>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/f4blox/Desktop/Gemini/opencode/scripts</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./setup-auto-sync.sh</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable obsidian-github-sync</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start obsidian-github-sync</span></code></pre></div>
-<h3 id="step-3-enable-github-pages">Étape 3 : Activation de GitHub Pages</h3>
+<h3 id="step-3-enable-github-pages">Étape 3 : Activer GitHub Pages</h3>
 <ol type="1">
 <li>Visiter : https://github.com/OLYAHYAI/Portfolio/settings/pages</li>
-<li>Source : main / (root)</li>
-<li>Sauvegarder</li>
+<li>Source : main / (racine)</li>
+<li>Enregistrer</li>
 </ol>
 <hr />
-<h2 id="daily-operations">🔧 Opérations Quotidiennes</h2>
-<p><strong>Utilisation Normale :</strong> 1. Modifier dans Obsidian 2. Sauvegarder (Ctrl+S)
+<h2 id="daily-operations">🔧 Opérations quotidiennes</h2>
+<p><strong>Utilisation normale :</strong> 1. Modifier dans Obsidian 2. Sauvegarder (Ctrl+S)
 3. Synchronisation automatique en 5 secondes 4. En ligne en ~2 minutes</p>
-<p><strong>Synchronisation Manuelle :</strong></p>
+<p><strong>Synchronisation manuelle :</strong></p>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/f4blox/Desktop/Gemini/opencode/scripts/sync-now.sh</span></span></code></pre></div>
 <p><strong>Surveillance :</strong></p>
@@ -233,24 +227,23 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl status obsidian-github-sync</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> journalctl <span class="at">-u</span> obsidian-github-sync <span class="at">-f</span></span></code></pre></div>
 <hr />
-<h2 id="future-options-documented">🔮 Options Futures (Documentées)</h2>
-<h3 id="option-2-mcp-n8n-ai-workflows">Option 2 : MCP + N8N (Workflows
-IA)</h3>
+<h2 id="future-options-documented">🔮 Options futures (Documentées)</h2>
+<h3 id="option-2-mcp-n8n-ai-workflows">Option 2 : MCP + N8N (Workflows IA)</h3>
 <ul>
 <li>Messages de commit assistés par IA</li>
-<li>Validation de contenu</li>
+<li>Validation du contenu</li>
 <li>Intégration multi-services</li>
-<li>Configuration : 30-60 min</li>
+<li>Installation : 30-60 min</li>
 </ul>
 <h3 id="option-6-claude-content-enhancement">Option 6 : Claude + Amélioration du Contenu</h3>
 <ul>
 <li>Contrôle qualité par IA</li>
 <li>Correction automatique de la grammaire/orthographe</li>
 <li>Commits intelligents</li>
-<li>Vérification de la confidentialité (Privacy checking)</li>
+<li>Vérification de la confidentialité</li>
 <li>Optimisation SEO</li>
 <li>Traduction automatique EN ↔︎ FR</li>
-<li>Configuration : 1-2 heures</li>
+<li>Installation : 1-2 heures</li>
 </ul>
 <p><strong>Documentation :</strong>
 <code>/opencode/conscience/updates/action-35-sync-options-analysis.md</code></p>
@@ -263,10 +256,11 @@ IA)</h3>
 <li>Dépôt : https://github.com/OLYAHYAI/Portfolio</li>
 </ul>
 <hr />
-<p><strong>Dernière Mise à Jour :</strong> 2025-10-29 <strong>Version :</strong>
-1.0 <strong>Statut :</strong> Prêt au déploiement
+<p><strong>Dernière mise à jour :</strong> 2025-10-29 <strong>Version :</strong>
+1.0 <strong>Statut :</strong> Prêt pour le déploiement
 <!-- Touched: Wed Nov 19 13:33:27 +01 2025 -->
-<!-- Touched: Wed Nov 19 14:03:35 +01 2025 --></p>
+<!-- Touched: Wed Nov 19 14:03:35 +01 2025 -->
+<!-- Touched: Wed Nov 19 15:04:19 +01 2025 --></p>
                 </div>
 
                 <div class="article-navigation">
@@ -280,11 +274,11 @@ IA)</h3>
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Liens Rapides</h4>
+                    <h4>Liens rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
                         <li><a href="/index.html#about">À propos</a></li>
@@ -294,7 +288,7 @@ IA)</h3>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connecter</h4>
+                    <h4>Se connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -316,7 +310,7 @@ IA)</h3>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Retour en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 
