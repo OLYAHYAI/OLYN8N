@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-11-19T12:30:42.761Z",
-  "totalArticles": 2,
+  "lastUpdated": "2025-11-19T12:37:10.295Z",
+  "totalArticles": 10,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
@@ -9,7 +9,7 @@
       "articles": {
         "en": [
           {
-            "id": "docker-networking-troubleshooting-container-communication",
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -20,18 +20,98 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "docker-networking-troubleshooting-container-communication",
-            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-            "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+            "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "filePath": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
+            "status": "published"
+          },
+          {
+            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "url": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+            "filePath": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "multi-agent-ai-collaboration-building-portfolio-website",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+            "url": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+            "filePath": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "mcp-configuration-guide-yaml-setup",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "mcp-configuration-guide-yaml-setup",
+            "url": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html",
+            "filePath": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "obsidian-auto-sync-to-github-website",
+            "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+            "filePath": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
             "status": "published"
           }
         ],
         "fr": [
           {
-            "id": "docker-networking-troubleshooting-container-communication",
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
             "title": "Your Article Title Here",
             "description": "",
             "excerpt": "",
@@ -42,9 +122,89 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "docker-networking-troubleshooting-container-communication",
-            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
-            "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+            "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "filePath": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "url": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+            "filePath": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "multi-agent-ai-collaboration-building-portfolio-website",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+            "url": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+            "filePath": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "mcp-configuration-guide-yaml-setup",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "mcp-configuration-guide-yaml-setup",
+            "url": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html",
+            "filePath": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Your Article Title Here",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-19",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "obsidian-auto-sync-to-github-website",
+            "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
+            "filePath": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -52,7 +212,7 @@
           }
         ]
       },
-      "total": 2
+      "total": 10
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -106,12 +266,12 @@
     }
   },
   "languages": {
-    "en": 1,
-    "fr": 1
+    "en": 5,
+    "fr": 5
   },
   "articles": [
     {
-      "id": "docker-networking-troubleshooting-container-communication",
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -122,16 +282,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "docker-networking-troubleshooting-container-communication",
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -142,9 +302,169 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "url": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "filePath": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "url": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "filePath": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "multi-agent-ai-collaboration-building-portfolio-website",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+      "url": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "filePath": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "multi-agent-ai-collaboration-building-portfolio-website",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+      "url": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "filePath": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "mcp-configuration-guide-yaml-setup",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "mcp-configuration-guide-yaml-setup",
+      "url": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "filePath": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "mcp-configuration-guide-yaml-setup",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "mcp-configuration-guide-yaml-setup",
+      "url": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "filePath": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -154,9 +474,9 @@
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 2,
-      "en": 1,
-      "fr": 1,
+      "total": 10,
+      "en": 5,
+      "fr": 5,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -203,7 +523,7 @@
   },
   "recentArticles": [
     {
-      "id": "docker-networking-troubleshooting-container-communication",
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -214,16 +534,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "docker-networking-troubleshooting-container-communication",
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -234,18 +554,16 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
-    }
-  ],
-  "featuredArticles": [
+    },
     {
-      "id": "docker-networking-troubleshooting-container-communication",
+      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
       "title": "Your Article Title Here",
       "description": "",
       "excerpt": "",
@@ -256,9 +574,171 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "url": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "filePath": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "url": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "filePath": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "multi-agent-ai-collaboration-building-portfolio-website",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+      "url": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "filePath": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "multi-agent-ai-collaboration-building-portfolio-website",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+      "url": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "filePath": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "mcp-configuration-guide-yaml-setup",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "mcp-configuration-guide-yaml-setup",
+      "url": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "filePath": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "mcp-configuration-guide-yaml-setup",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "mcp-configuration-guide-yaml-setup",
+      "url": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "filePath": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    }
+  ],
+  "featuredArticles": [
+    {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "Your Article Title Here",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-19",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -267,8 +747,16 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/docker-networking-troubleshooting-container-communication": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "fr/infrastructure/docker-networking-troubleshooting-container-communication": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
+      "en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "en/infrastructure/mcp-configuration-guide-yaml-setup": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "fr/infrastructure/mcp-configuration-guide-yaml-setup": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html",
+      "en/infrastructure/obsidian-auto-sync-to-github-website": "/en/infrastructure/obsidian-auto-sync-to-github-website.html",
+      "fr/infrastructure/obsidian-auto-sync-to-github-website": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -298,6 +786,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-19T12:30:42.762Z",
+  "generatedAt": "2025-11-19T12:37:10.296Z",
   "version": "1.0"
 }

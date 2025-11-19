@@ -1,7 +1,7 @@
 const blogData = {
     "articles": [
         {
-            "id": "docker-networking-troubleshooting-container-communication",
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -9,10 +9,10 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html"
+            "url": "/en/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
         },
         {
-            "id": "docker-networking-troubleshooting-container-communication",
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
             "title": "Your Article Title Here",
             "excerpt": "",
             "category": "infrastructure",
@@ -20,7 +20,95 @@ const blogData = {
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
+            "url": "/fr/infrastructure/quest-fluid-notes-obsidian-livesync-configuration.html"
+        },
+        {
+            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/en/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
+        },
+        {
+            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/fr/infrastructure/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
+        },
+        {
+            "id": "multi-agent-ai-collaboration-building-portfolio-website",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/en/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html"
+        },
+        {
+            "id": "multi-agent-ai-collaboration-building-portfolio-website",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/fr/infrastructure/multi-agent-ai-collaboration-building-portfolio-website.html"
+        },
+        {
+            "id": "mcp-configuration-guide-yaml-setup",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/en/infrastructure/mcp-configuration-guide-yaml-setup.html"
+        },
+        {
+            "id": "mcp-configuration-guide-yaml-setup",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/fr/infrastructure/mcp-configuration-guide-yaml-setup.html"
+        },
+        {
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/en/infrastructure/obsidian-auto-sync-to-github-website.html"
+        },
+        {
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Your Article Title Here",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-19",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "/fr/infrastructure/obsidian-auto-sync-to-github-website.html"
         }
     ],
     "categories": {
