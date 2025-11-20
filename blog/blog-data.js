@@ -1,114 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+            "url": "../en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
         },
         {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+            "url": "../fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
         },
         {
-            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
-            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html"
+            "url": "../en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
         },
         {
-            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
-            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html"
+            "url": "../fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
         },
         {
-            "id": "hdd-ssd-health-monitoring-analysis-guide",
-            "title": "Hdd Ssd Health Monitoring Analysis Guide",
+            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
+            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html"
+            "url": "../fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
         },
         {
-            "id": "hdd-ssd-health-monitoring-analysis-guide",
-            "title": "Hdd Ssd Health Monitoring Analysis Guide",
+            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
+            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html"
+            "url": "../en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
         },
         {
-            "id": "getting-proxmox-pfsense-back-online-network-rescue",
-            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+            "id": "roadmap-infrastructure",
+            "title": "Roadmap Infrastructure",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
+            "url": "../fr/infrastructure/roadmap-infrastructure.html"
         },
         {
-            "id": "getting-proxmox-pfsense-back-online-network-rescue",
-            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+            "id": "roadmap-infrastructure",
+            "title": "Roadmap Infrastructure",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
+            "url": "../en/infrastructure/roadmap-infrastructure.html"
         },
         {
-            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
-            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+            "id": "proxmox-ve-initial-setup-session-notes",
+            "title": "Proxmox Ve Initial Setup Session Notes",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
+            "url": "../en/infrastructure/proxmox-ve-initial-setup-session-notes.html"
         },
         {
-            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
-            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+            "id": "proxmox-ve-initial-setup-session-notes",
+            "title": "Proxmox Ve Initial Setup Session Notes",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
+            "url": "../fr/infrastructure/proxmox-ve-initial-setup-session-notes.html"
         }
     ],
     "categories": {
