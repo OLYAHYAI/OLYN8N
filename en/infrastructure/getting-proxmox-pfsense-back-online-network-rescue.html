@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Getting Proxmox Pfsense Back Online Network Rescue - Technical tutorial and guide">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Getting Proxmox Pfsense Back Online Network Rescue | Omar LYAHYAI Technical Blog</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="/index.html#about" class="nav-link">About</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Home</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Getting Proxmox Pfsense Back Online Network Rescue</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Getting Proxmox Pfsense Back Online Network Rescue</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>5 min min read</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1 id="my-network-rescue-getting-proxmox-and-pfsense-back-online">My
+Network Rescue: Getting Proxmox and pfSense Back Online</h1>
+<h2 id="the-problem">The Problem</h2>
+<p>After changing the IP address on my Proxmox server, the web UI became
+completely inaccessible. This is a common scenario when reconfiguring
+homelab networks, and understanding the resolution process is critical
+for any infrastructure administrator.</p>
+<h2 id="initial-symptoms">Initial Symptoms</h2>
+<ul>
+<li>❌ Proxmox web interface unreachable at new IP</li>
+<li>❌ Cannot ping Proxmox server from network</li>
+<li>❌ SSH connections timeout</li>
+<li>❌ VMs running but unable to communicate</li>
+</ul>
+<h2 id="root-cause-analysis">Root Cause Analysis</h2>
+<p>When changing network configuration on Proxmox, several services and
+configurations need to be updated simultaneously. Missing any one of
+these can result in complete loss of connectivity.</p>
+<h2 id="network-architecture-goal">Network Architecture Goal</h2>
+<h3 id="target-configuration">Target Configuration:</h3>
+<pre><code>Internet
+    ↓
+Router (192.168.11.1)
+    ↓
+Proxmox Host (192.168.11.254) - vmbr0
+    ↓
+pfSense VM
+├── WAN (192.168.11.253) - vmbr0
+└── LAN (192.168.1.1) - vmbr1
+    ↓
+Internal VMs (192.168.1.x)</code></pre>
+<h3 id="key-principles">Key Principles:</h3>
+<ul>
+<li><strong>Proxmox</strong>: Bridge to external network (vmbr0)</li>
+<li><strong>pfSense WAN</strong>: Same network as Proxmox for internet
+access</li>
+<li><strong>pfSense LAN</strong>: Separate internal network for VM
+isolation</li>
+<li><strong>Other VMs</strong>: Connected to vmbr1, behind pfSense
+firewall</li>
+</ul>
+<h2 id="resolution-steps">Resolution Steps</h2>
+<h3 id="step-1-verify-network-interfaces">Step 1: Verify Network
+Interfaces</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check all network interfaces</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> a</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output should show:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - lo: loopback interface (127.0.0.1)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - enp3s0: physical ethernet interface</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - vmbr0: bridge interface with IP 192.168.11.254</span></span></code></pre></div>
+<h3 id="step-2-restart-network-services">Step 2: Restart Network
+Services</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Restart networking service</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> restart networking</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If that fails, try reloading</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> reload networking</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify service status</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> status networking</span></code></pre></div>
+<h3 id="step-3-restart-proxmox-web-proxy">Step 3: Restart Proxmox Web
+Proxy</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Restart the Proxmox web interface service</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> restart pveproxy</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if it&#39;s running</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> status pveproxy</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify it&#39;s listening on port 8006</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ss</span> <span class="at">-tlnp</span> <span class="kw">|</span> <span class="fu">grep</span> 8006</span></code></pre></div>
+<h3 id="step-4-manually-bring-up-network-interface">Step 4: Manually
+Bring Up Network Interface</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If interface is down, bring it up manually</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> link set enp3s0 up</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify interface status</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> link show enp3s0</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Should show: state UP</span></span></code></pre></div>
+<h3 id="step-5-check-routing-table">Step 5: Check Routing Table</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View routing table</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> route show</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output:</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># default via 192.168.11.1 dev vmbr0</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 192.168.11.0/24 dev vmbr0 proto kernel scope link src 192.168.11.254</span></span></code></pre></div>
+<p>If default route is missing:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add default gateway manually</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> route add default via 192.168.11.1 dev vmbr0</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Make persistent in /etc/network/interfaces</span></span></code></pre></div>
+<h2 id="proper-network-configuration">Proper Network Configuration</h2>
+<h3
+id="etcnetworkinterfaces---recommended-setup"><code>/etc/network/interfaces</code>
+- Recommended Setup</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Loopback interface</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">auto</span> lo</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> lo inet loopback</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Physical interface (no IP - used by bridge)</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">auto</span> enp3s0</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> enp3s0 inet manual</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Bridge for external network (management + WAN)</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="ex">auto</span> vmbr0</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> vmbr0 inet static</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">address</span> 192.168.11.254/24</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="ex">gateway</span> 192.168.11.1</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-ports</span> enp3s0</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-stp</span> off</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-fd</span> 0</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-vlan-aware</span> yes</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-vids</span> 2-4094</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Optional: DNS servers</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="ex">dns-nameservers</span> 8.8.8.8 8.8.4.4</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Bridge for internal network (pfSense LAN)</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="ex">auto</span> vmbr1</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> vmbr1 inet manual</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-ports</span> none</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-stp</span> off</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-fd</span> 0</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-vlan-aware</span> yes</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-vids</span> 2-4094</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># No IP address - this is for VMs only</span></span></code></pre></div>
+<h3 id="important-configuration-notes">Important Configuration
+Notes:</h3>
+<ol type="1">
+<li><strong>Physical Interface</strong> (<code>enp3s0</code>):
+<ul>
+<li>Set to <code>inet manual</code></li>
+<li>No IP address assigned directly</li>
+<li>Used by bridge (<code>vmbr0</code>)</li>
+</ul></li>
+<li><strong>Management Bridge</strong> (<code>vmbr0</code>):
+<ul>
+<li>Has IP address for Proxmox web access</li>
+<li>Connected to physical interface</li>
+<li>Provides internet access to pfSense WAN</li>
+</ul></li>
+<li><strong>Internal Bridge</strong> (<code>vmbr1</code>):
+<ul>
+<li>No IP address (<code>inet manual</code>)</li>
+<li>Not connected to physical interface
+(<code>bridge-ports none</code>)</li>
+<li>Used exclusively by VMs</li>
+<li>pfSense manages this network</li>
+</ul></li>
+</ol>
+<h2 id="pfsense-network-configuration">pfSense Network
+Configuration</h2>
+<h3 id="interface-assignments-in-proxmox">Interface Assignments in
+Proxmox</h3>
+<p>When creating/configuring pfSense VM:</p>
+<h4 id="wan-interface">WAN Interface:</h4>
+<ul>
+<li><strong>Bridge</strong>: vmbr0</li>
+<li><strong>Purpose</strong>: Internet access</li>
+<li><strong>IP Assignment</strong>: Static (192.168.11.253) or DHCP from
+router</li>
+</ul>
+<h4 id="lan-interface">LAN Interface:</h4>
+<ul>
+<li><strong>Bridge</strong>: vmbr1</li>
+<li><strong>Purpose</strong>: Internal VM network</li>
+<li><strong>IP Assignment</strong>: Static (192.168.1.1/24 typical)</li>
+</ul>
+<h3 id="pfsense-interface-configuration">pfSense Interface
+Configuration</h3>
+<p>Access pfSense console in Proxmox:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Option 1) Assign Interfaces</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># WAN -&gt; vtnet0 (or em0) -&gt; vmbr0</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># LAN -&gt; vtnet1 (or em1) -&gt; vmbr1</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Option 2) Set interface(s) IP address</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># WAN: 192.168.11.253 / 24</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Gateway: 192.168.11.1</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># LAN: 192.168.1.1 / 24</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># No gateway needed (LAN side)</span></span></code></pre></div>
+<h2 id="network-separation-best-practices">Network Separation Best
+Practices</h2>
+<h3 id="why-separate-wan-and-lan">Why Separate WAN and LAN?</h3>
+<ol type="1">
+<li><strong>Security Isolation</strong>: Internal VMs protected by
+pfSense firewall</li>
+<li><strong>Network Control</strong>: pfSense manages DHCP, DNS, routing
+for internal network</li>
+<li><strong>Traffic Management</strong>: Apply firewall rules and
+traffic shaping</li>
+<li><strong>VLAN Support</strong>: Easily add VLANs for network
+segmentation</li>
+</ol>
+<h3 id="critical-rules">Critical Rules:</h3>
+<ul>
+<li>❌ <strong>NEVER</strong> use same bridge for WAN and LAN</li>
+<li>✓ <strong>ALWAYS</strong> assign WAN to vmbr0 (external
+connectivity)</li>
+<li>✓ <strong>ALWAYS</strong> assign LAN to vmbr1 (internal
+isolation)</li>
+<li>✓ <strong>ALWAYS</strong> connect other VMs to vmbr1 (behind
+firewall)</li>
+</ul>
+<h3 id="example-vm-network-configuration">Example VM Network
+Configuration:</h3>
+<pre><code>VM: Ubuntu Server
+├── Network Device
+│   ├── Bridge: vmbr1
+│   ├── Model: VirtIO
+│   └── VLAN Tag: (optional)
+└── IP Configuration
+    ├── Address: 192.168.1.10 (DHCP from pfSense)
+    ├── Gateway: 192.168.1.1 (pfSense LAN)
+    └── DNS: 192.168.1.1 (pfSense DNS Resolver)</code></pre>
+<h2 id="verification-and-testing">Verification and Testing</h2>
+<h3 id="test-proxmox-connectivity">Test Proxmox Connectivity</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From another computer on network</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 192.168.11.254</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test web interface</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-k</span> https://192.168.11.254:8006</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Access in browser</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ex">https://192.168.11.254:8006</span></span></code></pre></div>
+<h3 id="test-pfsense-wan">Test pfSense WAN</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From Proxmox host</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 192.168.11.253</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># From pfSense console</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Diagnostics → Ping</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Target: 8.8.8.8 (verify internet connectivity)</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Source: WAN interface</span></span></code></pre></div>
+<h3 id="test-pfsense-lan">Test pfSense LAN</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From a VM on vmbr1</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 192.168.1.1</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify DHCP</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Should receive IP in 192.168.1.x range</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Test internet access through pfSense</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 8.8.8.8</span></code></pre></div>
+<h2 id="troubleshooting-checklist">Troubleshooting Checklist</h2>
+<h3 id="proxmox-not-accessible">Proxmox Not Accessible:</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Verify
+<code>/etc/network/interfaces</code> syntax</label></li>
+<li><label><input type="checkbox" />Check interface is UP:
+<code>ip link show</code></label></li>
+<li><label><input type="checkbox" />Verify IP address assigned:
+<code>ip addr show vmbr0</code></label></li>
+<li><label><input type="checkbox" />Check default route:
+<code>ip route show</code></label></li>
+<li><label><input type="checkbox" />Restart networking:
+<code>systemctl restart networking</code></label></li>
+<li><label><input type="checkbox" />Restart pveproxy:
+<code>systemctl restart pveproxy</code></label></li>
+<li><label><input type="checkbox" />Check firewall rules:
+<code>iptables -L -n</code></label></li>
+</ul>
+<h3 id="pfsense-wan-not-working">pfSense WAN Not Working:</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Verify WAN interface assigned to
+vmbr0</label></li>
+<li><label><input type="checkbox" />Check WAN IP address in correct
+subnet</label></li>
+<li><label><input type="checkbox" />Verify gateway is reachable:
+<code>ping 192.168.11.1</code></label></li>
+<li><label><input type="checkbox" />Check pfSense WAN interface is
+enabled</label></li>
+<li><label><input type="checkbox" />Review pfSense WAN firewall
+rules</label></li>
+<li><label><input type="checkbox" />Verify NAT outbound
+rules</label></li>
+</ul>
+<h3 id="internal-vms-no-internet">Internal VMs No Internet:</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Verify VMs connected to
+vmbr1</label></li>
+<li><label><input type="checkbox" />Check VMs receive DHCP from
+pfSense</label></li>
+<li><label><input type="checkbox" />Verify pfSense LAN interface is
+UP</label></li>
+<li><label><input type="checkbox" />Test connectivity to pfSense LAN
+IP</label></li>
+<li><label><input type="checkbox" />Check pfSense NAT is
+enabled</label></li>
+<li><label><input type="checkbox" />Review pfSense LAN firewall rules
+(should allow outbound)</label></li>
+</ul>
+<h2 id="prevention-for-future-changes">Prevention for Future
+Changes</h2>
+<h3 id="document-current-configuration">1. Document Current
+Configuration</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save current network configuration</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /etc/network/interfaces /etc/network/interfaces.backup</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Document IP addresses</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> addr show <span class="op">&gt;</span> /root/network-config-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d<span class="va">)</span>.txt</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Save routing table</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> route show <span class="op">&gt;</span> /root/routes-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d<span class="va">)</span>.txt</span></code></pre></div>
+<h3 id="test-before-rebooting">2. Test Before Rebooting</h3>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply changes without reboot</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ifreload</span> <span class="at">-a</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test connectivity</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 192.168.11.1</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># If working, make permanent</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co"># If not, restore from backup</span></span></code></pre></div>
+<h3 id="keep-console-access">3. Keep Console Access</h3>
+<ul>
+<li>Always have physical/IPMI access to server</li>
+<li>Don’t make network changes remotely without fallback</li>
+<li>Use Proxmox console for VMs, not SSH only</li>
+</ul>
+<h3 id="use-configuration-management">4. Use Configuration
+Management</h3>
+<p>Consider using: - Ansible for automated configuration - Git for
+version control of configs - Documentation in Obsidian/wiki</p>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<h3 id="what-went-wrong">What Went Wrong:</h3>
+<ol type="1">
+<li><strong>Incomplete Configuration</strong>: Changed IP without
+updating gateway</li>
+<li><strong>Service Dependencies</strong>: Didn’t restart pveproxy after
+network changes</li>
+<li><strong>Interface State</strong>: Physical interface wasn’t brought
+up properly</li>
+</ol>
+<h3 id="what-worked">What Worked:</h3>
+<ol type="1">
+<li><strong>Systematic Debugging</strong>: Check interfaces → services →
+routing</li>
+<li><strong>Proper Bridge Configuration</strong>: Separate bridges for
+WAN/LAN</li>
+<li><strong>Documentation</strong>: Having reference configs saved
+recovery time</li>
+</ol>
+<h3 id="best-practices-going-forward">Best Practices Going Forward:</h3>
+<ol type="1">
+<li><strong>Plan Changes</strong>: Document intended configuration
+before making changes</li>
+<li><strong>Test Incrementally</strong>: Make one change at a time,
+verify before proceeding</li>
+<li><strong>Keep Backups</strong>: Always have configuration backups
+before major changes</li>
+<li><strong>Use Proper Tools</strong>: <code>ifreload</code> instead of
+full reboots when possible</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Network configuration issues in Proxmox can seem daunting, but
+systematic troubleshooting resolves most problems quickly. The key
+lessons:</p>
+<ul>
+<li><strong>Understand bridge architecture</strong>: Physical interface
+→ vmbr0 (external) + vmbr1 (internal)</li>
+<li><strong>Separate WAN and LAN</strong>: pfSense requires distinct
+networks for proper firewall function</li>
+<li><strong>Service dependencies</strong>: Network changes require
+service restarts</li>
+<li><strong>Documentation saves time</strong>: Backed-up configs
+accelerate recovery</li>
+</ul>
+<p>This experience reinforced the importance of understanding
+infrastructure fundamentals. When things break, systematic debugging and
+proper architecture knowledge lead to quick resolution.</p>
+<p><em>Next time: I’ll use Ansible to manage Proxmox network
+configuration and avoid manual errors entirely.</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity Enthusiast</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#projects">Projects</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

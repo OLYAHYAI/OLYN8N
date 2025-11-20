@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notes de session de configuration initiale de Proxmox VE - Tutoriel et guide technique">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Notes de session de configuration initiale de Proxmox VE | Blog Technique d'Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html" class="lang-toggle" aria-label="Changer la langue">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/infrastructure.html">Infrastructure</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Notes de session de configuration initiale de Proxmox VE</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Notes de session de configuration initiale de Proxmox VE</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>5 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1
+id="homelab-session-notes-proxmox-ve-initial-setup-and-network-configuration">Notes de
+session Homelab : Configuration initiale et réseau de Proxmox VE</h1>
+<h2 id="session-overview">Aperçu de la session</h2>
+<p><strong>Date :</strong> 22 octobre 2025 <strong>Objectif :</strong>
+Installation de Proxmox VE, configuration réseau et préparation initiale
+de la VM <strong>Matériel :</strong> Lenovo ThinkCentre M920q</p>
+<h2 id="hardware-specifications">Spécifications Matérielles</h2>
+<h3 id="server-details">Détails du serveur</h3>
+<p><strong>Modèle :</strong> Lenovo ThinkCentre M920q (Format Ultra
+Compact)</p>
+<p><strong>Spécifications :</strong> - <strong>CPU :</strong> Intel
+i5-8500T (6 cœurs, cache 9 Mo, TDP 35W) - <strong>RAM :</strong> 16 Go
+DDR4 - <strong>Stockage Principal :</strong> SSD 512 Go (NVMe ou SATA) -
+<strong>Stockage Secondaire :</strong> HDD 250 Go (pour les
+sauvegardes/images ISO) - <strong>Réseau :</strong> Gigabit Ethernet
+(enp3s0) - <strong>Format :</strong> 1.0L ultra-compact</p>
+<p><strong>Pourquoi ce matériel :</strong> - Faible consommation
+d'énergie (TDP de 35 W idéal pour un fonctionnement 24/7) - Format
+compact (parfait pour un homelab) - RAM suffisante pour plusieurs VM -
+Double stockage pour la séparation système/données - Excellent rapport
+prix/performance sur le marché de l'occasion</p>
+<h3 id="network-configuration">Configuration Réseau</h3>
+<p><strong>IP de l'hôte Proxmox :</strong> <code>192.168.11.254</code>
+<strong>Passerelle/Routeur :</strong> <code>192.168.11.1</code>
+<strong>Masque de sous-réseau :</strong> <code>255.255.255.0</code> (/24)
+<strong>Réseau :</strong> 192.168.11.0/24</p>
+<h2 id="step-1-accessing-proxmox-web-interface">Étape 1 : Accès à
+l'interface web de Proxmox</h2>
+<h3 id="initial-access">Accès initial</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From web browser on local network</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://192.168.11.254:8006</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Login credentials</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Username:</span> root</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Domain:</span> pam <span class="er">(</span><span class="ex">Linux</span> PAM authentication<span class="kw">)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Password:</span> [set during installation]</span></code></pre></div>
+<h3 id="first-login-checklist">Liste de vérification après la première
+connexion</h3>
+<p><strong>Vérifier :</strong> - [ ] L'interface web se charge (ignorer
+l'avertissement SSL pour le certificat auto-signé) - [ ] La connexion
+avec les identifiants root est possible - [ ] Le tableau de bord affiche
+correctement les ressources du serveur - [ ] L'interface réseau affiche
+la bonne adresse IP</p>
+<h3 id="post-login-configuration">Configuration après la connexion</h3>
+<p><strong>Désactiver le dépôt Enterprise (si vous utilisez la version
+gratuite) :</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SSH into Proxmox</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> root@192.168.11.254</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit sources list</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> /etc/apt/sources.list.d/pve-enterprise.list</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Comment out enterprise repo</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># deb https://enterprise.proxmox.com/debian/pve bullseye pve-enterprise</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Add no-subscription repository</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription&quot;</span> <span class="op">&gt;</span> /etc/apt/sources.list.d/pve-no-subscription.list</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Update</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> update</span></code></pre></div>
+<h2 id="step-2-direct-ethernet-connection">Étape 2 : Connexion Ethernet
+Directe</h2>
+<h3 id="physical-setup">Configuration physique</h3>
+<p><strong>Topologie :</strong></p>
+<pre><code>Laptop (192.168.11.1)
+    ↓ Ethernet Cable
+Proxmox Server (192.168.11.254)</code></pre>
+<h3 id="manual-ip-configuration">Configuration IP Manuelle</h3>
+<p><strong>Sur l'ordinateur portable (en supposant Linux) :</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assign static IP to ethernet interface</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ip addr add 192.168.11.1/24 dev eth0</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ip link set eth0 up</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Test connectivity</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 192.168.11.254</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected: replies from 192.168.11.254</span></span></code></pre></div>
+<p><strong>Objectif :</strong> - Connexion de gestion directe - Aucune
+dépendance vis-à-vis du routeur/DHCP - Utile pour le dépannage des
+problèmes réseau - Simule un réseau de laboratoire isolé</p>
+<h2 id="step-3-wireless-network-verification">Étape 3 : Vérification du
+réseau sans fil</h2>
+<h3 id="check-available-interfaces">Vérifier les interfaces
+disponibles</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List all network interfaces</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> a</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output includes:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># lo: loopback</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># enp3s0: ethernet (primary)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># wlp0s20f3: wireless (if present)</span></span></code></pre></div>
+<h3 id="detect-network-hardware">Détecter le matériel réseau</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List PCI network devices</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lspci</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-i</span> network</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output:</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 00:1f.6 Ethernet controller: Intel Corporation...</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># (May show wireless if available)</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Check wireless interfaces</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ex">iw</span> dev</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># List USB devices (for USB WiFi adapters)</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="ex">lsusb</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-i</span> wireless</span></code></pre></div>
+<h3 id="wifi-configuration-if-applicable">Configuration WiFi (si
+applicable)</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install wireless tools</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install wpasupplicant wireless-tools <span class="at">-y</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Scan for networks</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">iwlist</span> scan</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure wpa_supplicant</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">wpa_passphrase</span> <span class="st">&quot;SSID&quot;</span> <span class="st">&quot;password&quot;</span> <span class="op">&gt;&gt;</span> /etc/wpa_supplicant/wpa_supplicant.conf</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Connect</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="ex">wpa_supplicant</span> <span class="at">-B</span> <span class="at">-i</span> wlp0s20f3 <span class="at">-c</span> /etc/wpa_supplicant/wpa_supplicant.conf</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="ex">dhclient</span> wlp0s20f3</span></code></pre></div>
+<p><strong>Note :</strong> L'utilisation du WiFi sur l'hôte Proxmox n'est
+généralement pas recommandée pour le pontage réseau des VM.</p>
+<h2 id="step-4-changing-proxmox-ip-address">Étape 4 : Modification de
+l'adresse IP de Proxmox</h2>
+<h3 id="edit-network-configuration">Modifier la configuration réseau</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit network interfaces file</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> /etc/network/interfaces</span></code></pre></div>
+<p><strong>Exemple de configuration :</strong></p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Loopback interface</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">auto</span> lo</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> lo inet loopback</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Primary network interface</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ex">auto</span> enp3s0</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> enp3s0 inet manual</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Bridge for VMs (management network)</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="ex">auto</span> vmbr0</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> vmbr0 inet static</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">address</span> 192.168.11.254/24</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="ex">gateway</span> 192.168.11.1</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-ports</span> enp3s0</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-stp</span> off</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-fd</span> 0</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-vlan-aware</span> yes</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># DNS servers</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="ex">dns-nameservers</span> 8.8.8.8 8.8.4.4</span></code></pre></div>
+<h3 id="apply-network-changes">Appliquer les modifications réseau</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Restart networking service</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> restart networking</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 2: Reload interfaces (no disruption to VMs)</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ifreload</span> <span class="at">-a</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 3: Full reboot (safest)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ex">reboot</span></span></code></pre></div>
+<h3 id="verify-new-configuration">Vérifier la nouvelle configuration</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check IP address</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> addr show vmbr0</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test gateway</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 192.168.11.1</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Test internet</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 8.8.8.8</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> google.com</span></code></pre></div>
+<h2 id="step-5-uploading-iso-images">Étape 5 : Téléchargement des images
+ISO</h2>
+<h3 id="method-1-web-interface-upload">Méthode 1 : Téléchargement via
+l'interface web</h3>
+<p><strong>Via l'interface utilisateur Proxmox :</strong></p>
+<ol type="1">
+<li>Naviguer vers : <strong>Datacenter → Node → local (storage) →
+Content</strong></li>
+<li>Cliquer sur <strong>Upload</strong> (Télécharger)</li>
+<li>Sélectionner <strong>ISO image</strong> (Image ISO)</li>
+<li>Choisir le fichier depuis l'ordinateur local</li>
+<li>Cliquer sur <strong>Upload</strong> (Télécharger)</li>
+</ol>
+<p><strong>Avantages :</strong> - Convivial - Pas besoin de ligne de
+commande - Barre de progression visuelle</p>
+<p><strong>Inconvénients :</strong> - Lent pour les fichiers volumineux
+- Nécessite une connexion réseau stable - Dépend du navigateur</p>
+<h3 id="method-2-scp-secure-copy">Méthode 2 : SCP (Secure Copy)</h3>
+<p><strong>Depuis l'ordinateur portable/poste de travail :</strong></p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Upload single ISO</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> /path/to/file.iso root@192.168.11.254:/var/lib/vz/template/iso/</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Upload multiple ISOs</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="pp">*</span>.iso root@192.168.11.254:/var/lib/vz/template/iso/</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># With progress meter</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">--progress</span> <span class="at">-avz</span> file.iso root@192.168.11.254:/var/lib/vz/template/iso/</span></code></pre></div>
+<p><strong>Avantages :</strong> - Plus rapide pour les fichiers
+volumineux - Peut reprendre les transferts interrompus (avec rsync) -
+Scriptable</p>
+<p><strong>Inconvénients :</strong> - Nécessite un accès SSH -
+Nécessite des connaissances en ligne de commande</p>
+<h3 id="method-3-direct-download-on-proxmox">Méthode 3 :
+Téléchargement direct sur Proxmox</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SSH into Proxmox</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> root@192.168.11.254</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Navigate to ISO directory</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /var/lib/vz/template/iso/</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Download directly</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://releases.ubuntu.com/22.04/ubuntu-22.04.3-live-server-amd64.iso</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Or with aria2 (faster, multi-connection)</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="ex">aria2c</span> <span class="at">-x</span> 16 https://releases.ubuntu.com/22.04/ubuntu-22.04.3-live-server-amd64.iso</span></code></pre></div>
+<p><strong>Avantages :</strong> - Méthode la plus rapide - Pas de
+surcoût de transfert - Directement depuis la source</p>
+<p><strong>Inconvénients :</strong> - Nécessite Internet sur l'hôte
+Proxmox - Utilise la bande passante de Proxmox</p>
+<h2 id="step-6-llm-model-selection">Étape 6 : Sélection du modèle LLM</h2>
+<h3 id="recommended-models-for-16gb-ram">Modèles recommandés pour 16 Go
+de RAM</h3>
+<p><strong>Niveau 1 : Léger (2-4 Go de RAM)</strong></p>
+<p><strong>Mistral 7B Q4 :</strong> - Taille : ~4,3 Go - Performance :
+Excellent usage général - Cas d'utilisation : Code, chat, requêtes
+générales</p>
+<p><strong>Phi-2 (2.7B) :</strong> - Taille : ~1,6 Go - Performance :
+Rapide, bon pour le codage - Cas d'utilisation : Complétion de code,
+requêtes rapides</p>
+<p><strong>Gemma 2B :</strong> - Taille : ~1,4 Go - Performance : Très
+rapide - Cas d'utilisation : Tâches légères, tests</p>
+<h3 id="compatible-tools">Outils compatibles</h3>
+<p><strong>Ollama :</strong></p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Ollama</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull model</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ollama</span> pull mistral:7b</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Run model</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ollama</span> run mistral:7b</span></code></pre></div>
+<p><strong>llama.cpp :</strong></p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build from source</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/ggerganov/llama.cpp</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> llama.cpp</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Run model</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="ex">./main</span> <span class="at">-m</span> models/mistral-7b-q4.gguf <span class="at">-p</span> <span class="st">&quot;Your prompt here&quot;</span></span>
+</code></pre></div>
+<p><strong>MCP via Docker :</strong></p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3.8&#39;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mcp</span><span class="kw">:</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> modularcopilot/mcp:latest</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;5000:5000&quot;</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./models:/models</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> MODEL_PATH=/models/mistral-7b-q4.gguf</span></span></code></pre></div>
+<h2 id="step-7-docker-mcp-llm-installation">Étape 7 : Installation de
+Docker + MCP + LLM</h2>
+<h3 id="install-docker">Installer Docker</h3>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Update system</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt</span> upgrade <span class="at">-y</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install dependencies</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install <span class="at">-y</span> apt-transport-https ca-certificates curl gnupg lsb-release</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Docker GPG key</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://download.docker.com/linux/debian/gpg <span class="kw">|</span> <span class="ex">gpg</span> <span class="at">--dearmor</span> <span class="at">-o</span> /usr/share/keyrings/docker-archive-keyring.gpg</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Docker repository</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian </span><span class="va">$(</span><span class="ex">lsb_release</span> <span class="at">-cs</span><span class="va">)</span><span class="st"> stable&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> /etc/apt/sources.list.d/docker.list <span class="op">&gt;</span> /dev/null</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Docker</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> update</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install <span class="at">-y</span> docker-ce docker-ce-cli containerd.io</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify installation</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> <span class="at">--version</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run hello-world</span></code></pre></div>
+<h3 id="deploy-mcp">Déployer MCP</h3>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull MCP image</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull ghcr.io/modularcopilot/mcp:latest</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run MCP container</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="dt">\</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">--name</span> mcp <span class="dt">\</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">-p</span> 5000:5000 <span class="dt">\</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">-v</span> <span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span>/mcp_data:/app/data <span class="dt">\</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  ghcr.io/modularcopilot/mcp:latest</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Check logs</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs <span class="at">-f</span> mcp</span></code></pre></div>
+<h3 id="install-ollama-for-llm-management">Installer Ollama pour la
+gestion des LLM</h3>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Ollama</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull models</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ollama</span> pull mistral:7b</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="ex">ollama</span> pull phi</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co"># List installed models</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="ex">ollama</span> list</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Run model</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="ex">ollama</span> run mistral:7b</span></code></pre></div>
+<h2 id="step-8-note-taking-tools-recommendations">Étape 8 :
+Recommandations d'outils de prise de notes</h2>
+<h3 id="obsidian-recommended">Obsidian (Recommandé)</h3>
+<p><strong>Avantages :</strong> - Fichiers Markdown locaux - Fonction de
+liaison et vue graphique puissantes - Écosystème de plugins étendu -
+Synchronisation auto-hébergée possible (CouchDB)</p>
+<p><strong>Configuration :</strong></p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install CouchDB for sync</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="dt">\</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--name</span> couchdb <span class="dt">\</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-e</span> COUCHDB_USER=admin <span class="dt">\</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">-e</span> COUCHDB_PASSWORD=password <span class="dt">\</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">-p</span> 5984:5984 <span class="dt">\</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  couchdb:latest</span></code></pre></div>
+<h3 id="joplin">Joplin</h3>
+<p><strong>Avantages :</strong> - Open source - Synchronisation
+intégrée (plusieurs backends) - Support Markdown - Multiplateforme</p>
+<p><strong>Installation :</strong></p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Via AppImage</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/laurent22/joplin/releases/download/v2.13.8/Joplin-2.13.8.AppImage</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x Joplin-2.13.8.AppImage</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="ex">./Joplin-2.13.8.AppImage</span></span></code></pre></div>
+<h3 id="logseq-trilium-docker">Logseq / Trilium (Docker)</h3>
+<p><strong>Logseq :</strong></p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3&#39;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">logseq</span><span class="kw">:</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> ghcr.io/logseq/logseq:latest</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;3000:3000&quot;</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./notes:/data</span></span>
+</code></pre></div>
+<h3 id="markdown-git-developer-approach">Markdown + Git (Approche
+Développeur)</h3>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create notes repository</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/notes <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ~/notes</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Version control all notes</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Update notes&quot;</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Sync to remote</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:username/notes.git</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div>
+<h2 id="session-summary">Résumé de la session</h2>
+<p><strong>Tâches Complétées :</strong> - ✅ Accès à l'interface web
+Proxmox configuré - ✅ Connexion Ethernet directe établie - ✅ Interfaces
+réseau vérifiées - ✅ Adresse IP de Proxmox modifiée - ✅ Méthodes de
+téléchargement ISO documentées - ✅ Modèles LLM identifiés pour le
+matériel - ✅ Docker + MCP installation planifiée - ✅ Solutions de prise
+de notes évaluées</p>
+<p><strong>Prochaines étapes :</strong> 1. Créer la première VM
+(pfSense ou Ubuntu) 2. Configurer les ponts réseau (vmbr1 pour l'interne)
+3. Déployer la pile LLM (Ollama + modèle choisi) 4. Configurer Obsidian
+avec synchronisation auto-hébergée 5. Créer des snapshots de VM pour la
+sauvegarde</p>
+<h2 id="notes-and-best-practices">Notes et Bonnes Pratiques</h2>
+<h3 id="network-configuration-1">Configuration Réseau</h3>
+<ul>
+<li>Toujours utiliser le pontage réseau (vmbr0) pour la gestion des VM</li>
+<li>Créer un pont séparé (vmbr1) pour les réseaux VM isolés</li>
+<li>Documenter les allocations IP dans le carnet de notes homelab</li>
+<li>Tester la connectivité de la passerelle après les changements d'IP</li>
+</ul>
+<h3 id="storage-management">Gestion du Stockage</h3>
+<ul>
+<li>Utiliser le SSD pour le système Proxmox et les disques VM</li>
+<li>Utiliser le HDD pour les sauvegardes et le stockage ISO</li>
+<li>Activer le thin provisioning pour une utilisation efficace de l'espace</li>
+<li>Faire des snapshots réguliers avant les changements majeurs</li>
+</ul>
+<h3 id="security">Sécurité</h3>
+<ul>
+<li>Changer immédiatement les mots de passe par défaut</li>
+<li>Désactiver le dépôt Enterprise pour éviter les erreurs de mise à jour</li>
+<li>Maintenir Proxmox à jour
+(<code>apt update &amp;&amp; apt upgrade</code>)</li>
+<li>Utiliser des clés SSH au lieu de mots de passe lorsque cela est
+possible</li>
+<li>Envisager la 2FA pour l'interface web Proxmox</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>La configuration initiale de Proxmox est terminée avec une
+configuration réseau fonctionnelle, prête pour le déploiement des VM. Le
+matériel s'avère capable de prendre en charge les services homelab
+prévus, y compris le déploiement LLM et les applications
+conteneurisées.</p>
+<p><strong>Enseignement clé :</strong> Le PC de petit format
+(ThinkCentre M920q) offre une excellente base de homelab avec une faible
+consommation d'énergie et des performances suffisantes pour plusieurs
+VM.</p>
+<p><em>Durée de la session : ~2 heures, y compris la documentation</em></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Se Connecter</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut de page">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
