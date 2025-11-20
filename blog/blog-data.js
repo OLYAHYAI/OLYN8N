@@ -1,48 +1,26 @@
 const blogData = {
     "articles": [
         {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
+            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html"
         },
         {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
-        },
-        {
-            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
-        },
-        {
-            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
+            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
         }
     ],
     "categories": {

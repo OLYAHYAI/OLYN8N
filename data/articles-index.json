@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-11-20T00:11:56.461Z",
-  "totalArticles": 4,
+  "lastUpdated": "2025-11-20T21:35:39.624Z",
+  "totalArticles": 2,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
@@ -9,8 +9,8 @@
       "articles": {
         "en": [
           {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -20,39 +20,19 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-            "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
             "status": "published"
           }
         ],
         "fr": [
           {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -62,29 +42,9 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-            "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-            "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -92,7 +52,7 @@
           }
         ]
       },
-      "total": 4
+      "total": 2
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -146,13 +106,13 @@
     }
   },
   "languages": {
-    "en": 2,
-    "fr": 2
+    "en": 1,
+    "fr": 1
   },
   "articles": [
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -162,17 +122,17 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -182,49 +142,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -234,9 +154,9 @@
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 4,
-      "en": 2,
-      "fr": 2,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -283,8 +203,8 @@
   },
   "recentArticles": [
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -294,17 +214,17 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -314,49 +234,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "filePath": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "unlocking-remote-access-cloudflare-tunnel-proxmox",
-      "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "filePath": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -365,8 +245,8 @@
   ],
   "featuredArticles": [
     {
-      "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -376,9 +256,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-      "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "filePath": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -387,10 +267,8 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html",
-      "en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html",
-      "fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
+      "en/infrastructure/docker-networking-troubleshooting-container-communication": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "fr/infrastructure/docker-networking-troubleshooting-container-communication": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -420,6 +298,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-20T00:11:56.461Z",
+  "generatedAt": "2025-11-20T21:35:39.624Z",
   "version": "1.0"
 }
