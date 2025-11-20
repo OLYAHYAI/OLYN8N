@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Feuille de route pour les services auto-hébergés - Tutoriel et guide technique">
+    <meta name="description" content="Une feuille de route pour les services auto-hébergés - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Feuille de route pour les services auto-hébergés | Blog technique d'Omar LYAHYAI</title>
+    <title>Une feuille de route pour les services auto-hébergés | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/infrastructure/a-roadmap-to-self-hosted-services.html" class="lang-toggle" aria-label="Change language">
+                    <a href="/fr/infrastructure/a-roadmap-to-self-hosted-services.html" class="lang-toggle" aria-label="Changer la langue">
                         <span class="lang-current">FR</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Feuille de route pour les services auto-hébergés</span>
+                        <span>Une feuille de route pour les services auto-hébergés</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Feuille de route pour les services auto-hébergés</h1>
+                <h1 class="article-title">Une feuille de route pour les services auto-hébergés</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -122,17 +122,17 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="homelab-overview">Vue d'ensemble du Homelab</h1>
-<p>Vous gérez votre homelab en utilisant Proxmox avec des machines virtuelles (VM) pour Ubuntu,
-Kali Linux et pfSense. Vos objectifs principaux incluent l'hébergement de vos propres services,
-l'automatisation des flux de travail et la connexion sécurisée de l'ensemble avec
+<h1 id="homelab-overview">Aperçu de l'Homelab</h1>
+<p>Vous gérez votre homelab en utilisant Proxmox avec des VM pour Ubuntu,
+Kali, et pfSense. Vos objectifs principaux incluent l'hébergement de vos propres services,
+l'automatisation des flux de travail, et la connexion sécurisée de l'ensemble avec
 Twingate.</p>
 <h1 id="obsidian-setup">Configuration d'Obsidian</h1>
 <ul>
-<li>Obsidian est auto-hébergé en utilisant CouchDB.</li>
+<li>Obsidian est auto-hébergé à l'aide de CouchDB.</li>
 <li>Vous l'exécuterez sur la VM Ubuntu et vous vous y connecterez en utilisant
 <strong>Obsidian LiveSync</strong>.</li>
-<li>L'accès distant sécurisé est géré via <strong>Twingate</strong>.</li>
+<li>L'accès à distance sécurisé est géré via <strong>Twingate</strong>.</li>
 </ul>
 <h1 id="step-by-step-setup-plan">Plan de configuration étape par étape</h1>
 <h2 id="phase-1-server-preparation">Phase 1 : Préparation du serveur</h2>
@@ -165,7 +165,8 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./config:/opt/couchdb/etc/local.d</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> 5984:5984</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span></code></pre></div></li>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+</code></pre></div></li>
 <li><p>Lancer CouchDB :</p>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose up <span class="at">-d</span></span></code></pre></div></li>
@@ -174,10 +175,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="
 <li><p>Connectez-vous avec vos identifiants et créez la base de données
 <strong>obsidian</strong>.</p></li>
 <li><p>Dans Obsidian, installez le plugin <em>Self-Hosted LiveSync</em> et
-connectez-vous à CouchDB.</p></li>
+connectez-le à CouchDB.</p></li>
 </ol>
 <h2 id="phase-3-install-and-configure-n8n">Phase 3 : Installation et
-configuration de N8N</h2>
+configuration de n8n</h2>
 <ol type="1">
 <li><p>Se déplacer vers le répertoire <strong>n8n</strong> :</p>
 <div class="sourceCode" id="cb6"><pre
@@ -215,21 +216,21 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 l'API Telegram ou Discord.</p></li>
 </ul></li>
 </ol>
-<h2 id="phase-5-remote-access-and-security">Phase 5 : Accès distant et
+<h2 id="phase-5-remote-access-and-security">Phase 5 : Accès à distance et
 sécurité</h2>
 <ol type="1">
-<li>Installer et lier votre serveur à votre compte Twingate.</li>
-<li>Accéder à vos tableaux de bord n8n et CouchDB à distance de manière
+<li>Installez et liez votre serveur à votre compte Twingate.</li>
+<li>Accédez à vos tableaux de bord n8n et CouchDB à distance de manière
 sécurisée.</li>
-<li>Configurer des tunnels HTTPS si nécessaire (étape optionnelle utilisant Pinggy ou
+<li>Configurez des tunnels HTTPS si nécessaire (étape optionnelle utilisant Pinggy ou
 Cloudflare Tunnel).</li>
 </ol>
-<h1 id="weekend-action-plan">Plan d'action pour le week-end</h1>
+<h1 id="weekend-action-plan">Plan d'action du week-end</h1>
 <h3 id="saturday">Samedi</h3>
 <ul>
 <li>Maintenance Proxmox et mises à jour Ubuntu.</li>
 <li>Installer Docker et déployer CouchDB.</li>
-<li>Tester la connexion CouchDB avec Obsidian (version desktop).</li>
+<li>Tester la connexion CouchDB avec l'application de bureau Obsidian.</li>
 </ul>
 <h3 id="sunday">Dimanche</h3>
 <ul>
@@ -238,9 +239,8 @@ Cloudflare Tunnel).</li>
 <li>Documenter votre configuration directement dans Obsidian.</li>
 </ul>
 <h1 id="end-goal">Objectif Final</h1>
-<p>D’ici lundi, vous aurez : - Un système de synchronisation Obsidian auto-hébergé
-(CouchDB) - L'automatisation n8n pour les sauvegardes hebdomadaires - Un flux de travail distant sécurisé
-utilisant Twingate —</p>
+<p>D'ici lundi, vous aurez : - Un système de synchronisation Obsidian auto-hébergé
+(CouchDB) - Une automatisation n8n pour les sauvegardes hebdomadaires - Un flux de travail sécurisé à distance utilisant Twingate —</p>
                 </div>
 
                 <div class="article-navigation">
@@ -254,11 +254,11 @@ utilisant Twingate —</p>
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en formation | Passionné de cybersécurité</p>
+                    <p>Pentester en formation | Passionné de Cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Liens rapides</h4>
+                    <h4>Liens Rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
                         <li><a href="/index.html#about">À propos</a></li>
@@ -268,7 +268,7 @@ utilisant Twingate —</p>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connecter</h4>
+                    <h4>Se connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>

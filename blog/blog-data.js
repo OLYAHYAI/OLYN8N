@@ -1,114 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
-            "title": "Ssl Certificate Configuration Prompt Securing Homelab",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
+            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
-            "title": "Ssl Certificate Configuration Prompt Securing Homelab",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
+            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Network Architecture Prompt Dns Tls Reverse Proxies",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
+            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Network Architecture Prompt Dns Tls Reverse Proxies",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
+            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Network Consciousness Vlan Learning Journey",
+            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "title": "Building A Secure Lab: Kali Linux And Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html"
+            "url": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
         },
         {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Network Consciousness Vlan Learning Journey",
+            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
+            "title": "Building A Secure Lab: Kali Linux And Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html"
+            "url": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
         },
         {
-            "id": "certifications",
-            "title": "Google Cybersecurity Professional Certificate",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/certifications.html"
+            "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         },
         {
-            "id": "certifications",
-            "title": "Google Cybersecurity Professional Certificate",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/certifications.html"
+            "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         },
         {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
+            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
+            "url": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
         },
         {
-            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
-            "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
+            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
+            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-19",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
+            "url": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
         }
     ],
     "categories": {
