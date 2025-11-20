@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guide d'analyse et de surveillance de l'état de santé des disques HDD/SSD - Tutoriel et guide technique">
+    <meta name="description" content="Guide d'analyse et de surveillance de la santé des disques durs (HDD) et SSD - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Guide d'analyse et de surveillance de l'état de santé des disques HDD/SSD | Blog Technique Omar LYAHYAI</title>
+    <title>Guide d'analyse et de surveillance de la santé des disques HDD/SSD | Blog Technique Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -49,7 +49,7 @@
 
                 <div class="nav-actions">
                     <a href="/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html" class="lang-toggle" aria-label="Changer de langue">
-                        <span class="lang-current">EN</span>
+                        <span class="lang-current">FR</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Guide d'analyse et de surveillance de l'état de santé des disques HDD/SSD</span>
+                        <span>Guide d'analyse et de surveillance de la santé des disques HDD/SSD</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Guide d'analyse et de surveillance de l'état de santé des disques HDD/SSD</h1>
+                <h1 class="article-title">Guide d'analyse et de surveillance de la santé des disques HDD/SSD</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -81,7 +81,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="far fa-clock"></i>
-                        <span>8 min de lecture</span>
+                        <span>5 min de lecture</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-folder"></i>
@@ -122,9 +122,10 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="hddssd-health-monitoring-and-analysis-guide">Guide de surveillance et d'analyse de l'état de santé des disques HDD/SSD</h1>
-<p><strong>Mots-clés :</strong> #storage #hardware #maintenance #smart</p>
-<h2 id="quick-health-check-commands">Commandes rapides de vérification de l'état de santé</h2>
+<h1 id="hddssd-health-monitoring-and-analysis-guide">Guide de
+surveillance et d'analyse de la santé des disques HDD/SSD</h1>
+<p><strong>Tags:</strong> #storage #hardware #maintenance #smart</p>
+<h2 id="quick-health-check-commands">Commandes de vérification rapide de la santé</h2>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic disk information</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lsblk</span></span>
@@ -143,7 +144,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ex">iostat</span> <span class="at">-x</span> 1</span></code></pre></div>
 <hr />
 <h2 id="understanding-smart-attributes">Comprendre les attributs SMART</h2>
-<h3 id="critical-attributes-to-monitor">Attributs critiques à surveiller</h3>
+<h3 id="critical-attributes-to-monitor">Attributs critiques à
+surveiller</h3>
 <table>
 <colgroup>
 <col style="width: 25%" />
@@ -173,15 +175,16 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 <td>&gt;0 = Avertissement<br>&gt;10 = Critique</td>
 </tr>
 <tr>
+<tr>
 <td><strong>Offline_Uncorrectable</strong></td>
 <td>198</td>
-<td style="text-align: right;">Secteurs qui ne peuvent pas être lus</td>
+<td style="text-align: right;">Secteurs illisibles</td>
 <td>&gt;0 = Avertissement<br>&gt;10 = Critique</td>
 </tr>
 <tr>
 <td><strong>Reported_Uncorrect</strong></td>
 <td>187</td>
-<td style="text-align: right;">Erreurs non corrigeables</td>
+<td style="text-align: right;">Erreurs irrécupérables</td>
 <td>&gt;0 = Avertissement<br>&gt;100 = Critique</td>
 </tr>
 <tr>
@@ -193,7 +196,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 <tr>
 <td><strong>Spin_Retry_Count</strong></td>
 <td>10</td>
-<td style="text-align: right;">Tentatives de rotation (spin-up) échouées</td>
+<td style="text-align: right;">Tentatives de démarrage échouées</td>
 <td>&gt;0 = Avertissement</td>
 </tr>
 <tr>
@@ -205,10 +208,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 </tbody>
 </table>
 <h3 id="health-status-interpretation">Interprétation de l'état de santé</h3>
-<p><strong>RÉUSSI (PASSED):</strong> - Tous les attributs sont dans les seuils - Ne signifie pas que le disque est sain, juste qu'il n'est pas encore en panne</p>
-<p><strong>ÉCHEC (FAILING):</strong> - Un ou plusieurs attributs sont sous le seuil - <strong>REMPLACEZ IMMÉDIATEMENT</strong></p>
+<p>✅ <strong>RÉUSSI (PASSED):</strong> - Tous les attributs sont dans les seuils - Ne signifie pas que le disque est sain, juste qu'il n'est pas encore défaillant</p>
+<p>❌ <strong>ÉCHEC (FAILING):</strong> - Un ou plusieurs attributs sont sous le seuil - <strong>REMPLACER IMMÉDIATEMENT</strong></p>
 <hr />
-<h2 id="step-by-step-disk-health-analysis">Analyse de l'état de santé du disque étape par étape</h2>
+<h2 id="step-by-step-disk-health-analysis">Analyse étape par étape de la santé du disque</h2>
 <h3 id="step-1-check-if-disk-is-detected">Étape 1 : Vérifier si le disque est détecté</h3>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List all disks</span></span>
@@ -217,8 +220,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output shows disk name, size, type</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Example:</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># sda     8:0    0  250G  0 disk</span></span></code></pre></div>
-<p><strong>Si le disque n'apparaît pas :</strong> - Vérifiez la connexion physique - Vérifiez les paramètres BIOS/UEFI - Essayez un autre port/câble SATA</p>
-<h3 id="step-2-quick-smart-health-check">Étape 2 : Vérification rapide de l'état de santé SMART</h3>
+<p><strong>Si le disque n'apparaît pas :</strong> - Vérifiez la connexion physique - Vérifiez les paramètres BIOS/UEFI - Essayez un autre câble/port SATA</p>
+<h3 id="step-2-quick-smart-health-check">Étape 2 : Vérification rapide de la santé SMART</h3>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Quick health check</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">smartctl</span> <span class="at">-H</span> /dev/sda</span></code></pre></div>
@@ -227,7 +230,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 <pre><code>SMART overall-health self-assessment test result: PASSED</code></pre>
 <ul>
 <li>Le disque a réussi le test de santé de base</li>
-<li>Poursuivre l'analyse détaillée</li>
+<li>Passez à l'analyse détaillée</li>
 </ul>
 <p>❌ <strong>ÉCHEC (FAILING):</strong></p>
 <pre><code>SMART overall-health self-assessment test result: FAILED</code></pre>
@@ -241,7 +244,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 <li>Disque très ancien ou boîtier USB bloquant SMART</li>
 <li>Utilisez d'autres méthodes de diagnostic</li>
 </ul>
-<h3 id="step-3-detailed-smart-analysis">Étape 3 : Analyse SMART détaillée</h3>
+<h3 id="step-3-detailed-smart-analysis">Étape 3 : Analyse détaillée SMART</h3>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get full SMART report</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">smartctl</span> <span class="at">-a</span> /dev/sda <span class="op">&gt;</span> /tmp/smart_report_<span class="va">$(</span><span class="fu">date</span> +%Y%m%d<span class="va">)</span>.txt</span>
@@ -257,7 +260,7 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Rotation Rate:    5400 rpm</code></pre>
 <ul>
 <li>Notez le modèle et l'âge</li>
-<li>Les disques durs d'ordinateur portable (Momentus) s'usent plus vite que les disques durs de bureau</li>
+<li>Les disques durs d'ordinateur portable (Momentus) s'usent plus rapidement que les disques de bureau</li>
 <li>5400 RPM est lent (disque d'ordinateur portable)</li>
 </ul>
 <h4 id="b.-smart-attributes-table">B. Tableau des attributs SMART</h4>
@@ -266,8 +269,8 @@ Rotation Rate:    5400 rpm</code></pre>
 197 Current_Pending_Sector  099   078   000    Old_age   -           33
 198 Offline_Uncorrectable   099   078   000    Old_age   -           33
 187 Reported_Uncorrect      001   001   000    Old_age   -           1582</code></pre>
-<p><strong>Comment lire :</strong> - <strong>VALUE</strong> : Valeur normalisée actuelle (100 = neuf, 0 = pire) - <strong>WORST</strong> : Valeur la plus basse jamais enregistrée - <strong>THRESH</strong> : Seuil - si VALUE < THRESH, l'attribut a échoué - <strong>RAW_VALUE</strong> : Compte réel (c'est ce qui compte !)</p>
-<p><strong>Signaux d'alarme :</strong> - Reallocated_Sector_Ct RAW &gt; 100 - Current_Pending_Sector RAW &gt; 0 - Reported_Uncorrect RAW &gt; 100 - Toute valeur WHEN_FAILED affichant « FAILING_NOW »</p>
+<p><strong>Comment lire :</strong> - <strong>VALUE</strong> : Valeur normalisée actuelle (100 = neuf, 0 = pire) - <strong>WORST</strong> : Valeur la plus basse jamais enregistrée - <strong>THRESH</strong> : Seuil - si VALUE < THRESH, l'attribut a échoué - <strong>RAW_VALUE</strong> : Compteur réel (c'est ce qui compte !)</p>
+<p><strong>Signaux d'alarme :</strong> - Reallocated_Sector_Ct RAW > 100 - Current_Pending_Sector RAW > 0 - Reported_Uncorrect RAW > 100 - Tout champ WHEN_FAILED affichant « FAILING_NOW »</p>
 <h3 id="step-4-check-system-logs-for-disk-errors">Étape 4 : Vérifier les journaux système pour les erreurs de disque</h3>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check dmesg for disk errors</span></span>
@@ -278,7 +281,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href=
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DID_BAD_TARGET - Disk not responding</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sd</span> 0:0:0:0: <span class="pp">[</span><span class="ss">sda</span><span class="pp">]</span> FAILED Result: hostbyte=DID_BAD_TARGET</span></code></pre></div>
-<p>→ Défaillance du disque/contrôleur, problème de câble, ou disque mort</p>
+<p>→ Défaillance du disque/contrôleur, problème de câble ou disque mort</p>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Medium Error - Unrecoverable read error</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sd</span> 0:0:0:0: <span class="pp">[</span><span class="ss">sda</span><span class="pp">]</span> Sense Key : Medium Error</span>
@@ -305,18 +308,18 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href=
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Check status</span></span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="ex">smartctl</span> <span class="at">-a</span> /dev/sda <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-A</span> 10 <span class="st">&quot;Self-test execution status&quot;</span></span></code></pre></div>
-<p><strong>Résultats des tests :</strong></p>
-<p>✅ <strong>Terminé sans erreur :</strong> - Le disque a réussi tous les tests - Continuez de surveiller régulièrement</p>
-<p>⚠️<strong>Terminé : l'élément de lecture du test a échoué :</strong> - Secteurs défectueux trouvés pendant le test - Envisagez le remplacement</p>
-<p>❌ <strong>Avorté par l'hôte / interrompu :</strong> - Le test n'a pas pu se terminer - Problèmes de disque graves</p>
+<p><strong>Résultats du test :</strong></p>
+<p>✅ <strong>Terminé sans erreur :</strong> - Le disque a réussi tous les tests - Continuez à surveiller régulièrement</p>
+<p>⚠️<strong>Terminé : échec de l'élément de lecture du test :</strong> - Secteurs défectueux détectés pendant le test - Envisager le remplacement</p>
+<p>❌ <strong>Abandonné par l'hôte / interrompu :</strong> - Le test n'a pas pu se terminer - Problèmes de disque graves</p>
 <hr />
-<h2 id="health-assessment-decision-matrix">Matrice de décision d'évaluation de l'état de santé</h2>
+<h2 id="health-assessment-decision-matrix">Matrice de décision d'évaluation de la santé</h2>
 <h3 id="when-to-keep-using-disk">Quand continuer à utiliser le disque</h3>
-<p>✅ Toutes les conditions doivent être vraies : - Statut SMART : RÉUSSI - Secteurs réalloués : 0-10 - Secteurs en attente : 0 - Erreurs non corrigeables : 0 - Nombre d'erreurs : &lt; 100 - Aucune erreur dans les journaux système - Auto-tests réussis - Performance normale</p>
-<h3 id="when-to-monitor-closely-weekly">Quand surveiller attentivement (hebdomadaire)</h3>
-<p>⚠️ L'une des conditions suivantes : - Secteurs réalloués : 11-100 - Secteurs en attente : 1-5 - Erreurs non corrigeables : 1-10 - Nombre d'erreurs : 100-500 - Erreurs d'E/S occasionnelles - Performance dégradée de 10-20%</p>
+<p>✅ Toutes les conditions doivent être remplies : - Statut SMART : PASSED (RÉUSSI) - Secteurs réalloués : 0-10 - Secteurs en attente : 0 - Erreurs irrécupérables : 0 - Compteur d'erreurs : < 100 - Pas d'erreurs dans les journaux système - Auto-tests réussis - Performance normale</p>
+<h3 id="when-to-monitor-closely-weekly">Quand surveiller de près (hebdomadaire)</h3>
+<p>⚠️ L'une de ces conditions : - Secteurs réalloués : 11-100 - Secteurs en attente : 1-5 - Erreurs irrécupérables : 1-10 - Compteur d'erreurs : 100-500 - Erreurs d'E/S occasionnelles - Performance dégradée de 10-20 %</p>
 <h3 id="when-to-replace-immediately">Quand remplacer immédiatement</h3>
-<p>❌ L'une des conditions suivantes : - Statut SMART : ÉCHEC - Secteurs réalloués : &gt; 100 - Secteurs en attente : &gt; 5 - Erreurs non corrigeables : &gt; 10 - Nombre d'erreurs : &gt; 500 - Erreurs DID_BAD_TARGET fréquentes - Impossible de monter le système de fichiers - Performance dégradée de &gt; 20% - Bruits de cliquetis/grincements</p>
+<p>❌ L'une de ces conditions : - Statut SMART : FAILED (ÉCHEC) - Secteurs réalloués : > 100 - Secteurs en attente : > 5 - Erreurs irrécupérables : > 10 - Compteur d'erreurs : > 500 - Erreurs DID_BAD_TARGET fréquentes - Impossible de monter le système de fichiers - Performance dégradée de > 20 % - Bruits de cliquetis/grincements</p>
 <hr />
 <h2 id="automated-monitoring-script">Script de surveillance automatisé</h2>
 <div class="sourceCode" id="cb15"><pre
@@ -349,23 +352,23 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href=
 <span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    <span class="va">PENDING</span><span class="op">=</span><span class="va">$(</span><span class="ex">smartctl</span> <span class="at">-A</span> <span class="va">$DISK</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;Current_Pending&quot;</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{print $10}&#39;</span><span class="va">)</span></span>
 <span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    <span class="va">UNCORRECTABLE</span><span class="op">=</span><span class="va">$(</span><span class="ex">smartctl</span> <span class="at">-A</span> <span class="va">$DISK</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;Offline_Uncorrectable&quot;</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{print $10}&#39;</span><span class="va">)</span></span>
 <span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;  Secteurs réalloués: </span><span class="va">$REALLOCATED</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> <span class="va">$LOG_FILE</span></span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;  Secteurs en attente: </span><span class="va">$PENDING</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> <span class="va">$LOG_FILE</span></span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;  Secteurs non corrigeables: </span><span class="va">$UNCORRECTABLE</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> <span class="va">$LOG_FILE</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;  Reallocated sectors: </span><span class="va">$REALLOCATED</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> <span class="va">$LOG_FILE</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;  Pending sectors: </span><span class="va">$PENDING</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> <span class="va">$LOG_FILE</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;  Uncorrectable sectors: </span><span class="va">$UNCORRECTABLE</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> <span class="va">$LOG_FILE</span></span>
 <span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alert conditions</span></span>
 <span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">$HEALTH</span><span class="st">&quot;</span> <span class="ot">!=</span> <span class="st">&quot;PASSED&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;ALERTE : La vérification de l&#39;état de santé du </span><span class="va">$DISK</span><span class="st"> a ÉCHOUÉ !&quot;</span> <span class="kw">|</span> <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;CRITIQUE: Défaillance du disque&quot;</span> <span class="va">$ALERT_EMAIL</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;ALERT: </span><span class="va">$DISK</span><span class="st"> health check FAILED!&quot;</span> <span class="kw">|</span> <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;CRITICAL: Disk Failure&quot;</span> <span class="va">$ALERT_EMAIL</span></span>
 <span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
 <span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">${REALLOCATED</span><span class="op">:-</span>0<span class="va">}</span><span class="st">&quot;</span> <span class="ot">-gt</span> 100 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;ALERTE : </span><span class="va">$DISK</span><span class="st"> a </span><span class="va">$REALLOCATED</span><span class="st"> secteurs réalloués !&quot;</span> <span class="kw">|</span> <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;AVERTISSEMENT: Dégradation du disque&quot;</span> <span class="va">$ALERT_EMAIL</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;ALERT: </span><span class="va">$DISK</span><span class="st"> has </span><span class="va">$REALLOCATED</span><span class="st"> reallocated sectors!&quot;</span> <span class="kw">|</span> <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;WARNING: Disk Degradation&quot;</span> <span class="va">$ALERT_EMAIL</span></span>
 <span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
 <span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">${PENDING</span><span class="op">:-</span>0<span class="va">}</span><span class="st">&quot;</span> <span class="ot">-gt</span> 0 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;ALERTE : </span><span class="va">$DISK</span><span class="st"> a </span><span class="va">$PENDING</span><span class="st"> secteurs en attente !&quot;</span> <span class="kw">|</span> <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;AVERTISSEMENT: Erreurs disque&quot;</span> <span class="va">$ALERT_EMAIL</span></span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;ALERT: </span><span class="va">$DISK</span><span class="st"> has </span><span class="va">$PENDING</span><span class="st"> pending sectors!&quot;</span> <span class="kw">|</span> <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;WARNING: Disk Errors&quot;</span> <span class="va">$ALERT_EMAIL</span></span>
 <span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
-<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>    
 <span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> <span class="va">$LOG_FILE</span></span>
 <span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
 <span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a></span>
@@ -386,7 +389,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href=
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> disk <span class="kw">in</span> /dev/sd<span class="pp">?</span> /dev/nvme<span class="pp">?</span>n<span class="pp">?</span><span class="kw">;</span> <span class="cf">do</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">[</span> <span class="ot">-e</span> <span class="st">&quot;</span><span class="va">$disk</span><span class="st">&quot;</span> <span class="bu">]</span> <span class="kw">||</span> <span class="cf">continue</span></span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">smartctl</span> <span class="at">-H</span> <span class="va">$disk</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> PASSED <span class="kw">||</span> <span class="dt">\</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;ATTENTION : la vérification de l&#39;état de santé de </span><span class="va">$disk</span><span class="st"> a échoué !&quot;</span> <span class="kw">|</span> <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;Alerte Disque&quot;</span> root</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;WARNING: </span><span class="va">$disk</span><span class="st"> health check failed!&quot;</span> <span class="kw">|</span> <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;Disk Alert&quot;</span> root</span>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div>
 <h3 id="weekly-manual">Hebdomadaire (Manuel)</h3>
 <div class="sourceCode" id="cb18"><pre
@@ -423,42 +426,42 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href=
 </thead>
 <tbody>
 <tr>
-<td>HDD grand public</td>
+<td>Consumer HDD</td>
 <td>3-5 ans</td>
-<td>Usage, température, qualité</td>
+<td>Utilisation, température, qualité</td>
 </tr>
 <tr>
-<td>HDD d'entreprise</td>
+<td>Enterprise HDD</td>
 <td>5-7 ans</td>
 <td>Conçu pour une utilisation 24/7</td>
 </tr>
 <tr>
-<td>SSD grand public</td>
+<td>Consumer SSD</td>
 <td>5-10 ans</td>
 <td>Cycles d'écriture, TBW</td>
 </tr>
 <tr>
-<td>SSD d'entreprise</td>
+<td>Enterprise SSD</td>
 <td>5-10+ ans</td>
 <td>Endurance supérieure</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Signes avant-coureurs de l'âge :</strong> - 5+ ans → Surveillez attentivement - 7+ ans → Planifiez le remplacement - 10+ ans → Remplacez de manière proactive</p>
+<p><strong>Signes d'avertissement liés à l'âge :</strong> - 5+ ans → Surveiller de près - 7+ ans → Planifier le remplacement - 10+ ans → Remplacer de manière proactive</p>
 <hr />
 <h2 id="key-takeaways">Points clés à retenir</h2>
 <ol type="1">
-<li><strong>Surveillez régulièrement</strong> - Les données SMART prédisent 70 % des défaillances</li>
-<li><strong>Agissez sur les avertissements</strong> - N'attendez pas la panne complète</li>
-<li><strong>Les sauvegardes sont essentielles</strong> - Le RAID n'est pas une sauvegarde</li>
-<li><strong>Remplacez de manière proactive</strong> - Les disques anciens finiront par tomber en panne</li>
+<li><strong>Surveiller régulièrement</strong> - Les données SMART prédisent 70 % des défaillances</li>
+<li><strong>Agir suite aux avertissements</strong> - N'attendez pas la défaillance complète</li>
+<li><strong>Les sauvegardes sont cruciales</strong> - Le RAID n'est pas une sauvegarde</li>
+<li><strong>Remplacer de manière proactive</strong> - Les disques anciens finiront par tomber en panne</li>
 <li><strong>Testez vos sauvegardes</strong> - Vérifiez que vous pouvez restaurer</li>
-<li><strong>Documentez tout</strong> - Conservez des journaux de maintenance</li>
+<li><strong>Documentez tout</strong> - Tenez des journaux de maintenance</li>
 </ol>
 <hr />
 <p><strong>Dernière mise à jour :</strong> 2025-10-30<br />
-<strong>Statut :</strong> Remplacement de disque en attente<br />
-<strong>Priorité :</strong> ÉLEVÉE - Aucun stockage de sauvegarde actif</p>
+<strong>Statut :</strong> Remplacement du disque en attente<br />
+<strong>Priorité :</strong> ÉLEVÉE - Pas de stockage de sauvegarde actif</p>
                 </div>
 
                 <div class="article-navigation">
@@ -486,7 +489,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href=
                 </div>
 
                 <div class="footer-social">
-                    <h4>Contactez-moi</h4>
+                    <h4>Connexion</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -508,7 +511,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href=
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>
 

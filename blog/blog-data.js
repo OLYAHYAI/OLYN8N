@@ -1,28 +1,6 @@
 const blogData = {
     "articles": [
         {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
-        },
-        {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
-        },
-        {
             "id": "building-secure-lab-kali-linux-pfsense-deployment",
             "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
@@ -43,28 +21,6 @@ const blogData = {
                 "infrastructure"
             ],
             "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
-        },
-        {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
-        },
-        {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
         },
         {
             "id": "a-roadmap-to-self-hosted-services",
@@ -89,26 +45,48 @@ const blogData = {
             "url": "../fr/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+            "url": "../fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         },
         {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+            "url": "../en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
+        },
+        {
+            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
+            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-20",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
+        },
+        {
+            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
+            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-20",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
         }
     ],
     "categories": {
