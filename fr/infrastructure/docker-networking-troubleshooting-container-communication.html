@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dépannage du réseau Docker et de la communication entre conteneurs - Tutoriel et guide technique">
+    <meta name="description" content="Dépannage réseau Docker : Communication entre conteneurs - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Dépannage du réseau Docker et de la communication entre conteneurs | Blog technique d'Omar LYAHYAI</title>
+    <title>Dépannage réseau Docker : Communication entre conteneurs | Blog Technique Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Dépannage du réseau Docker et de la communication entre conteneurs</span>
+                        <span>Dépannage réseau Docker : Communication entre conteneurs</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Dépannage du réseau Docker et de la communication entre conteneurs</h1>
+                <h1 class="article-title">Dépannage réseau Docker : Communication entre conteneurs</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -81,7 +81,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="far fa-clock"></i>
-                        <span>Lecture de 2 min</span>
+                        <span>5 min de lecture</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-folder"></i>
@@ -123,13 +123,12 @@ The workflow will:
 - Preserve images and links
 -->
 <h1
-id="docker-networking-troubleshooting-container-communication-and-port-conflicts">Dépannage du réseau Docker : communication entre conteneurs et conflits de ports</h1>
+id="docker-networking-troubleshooting-container-communication-and-port-conflicts">Dépannage réseau Docker : Communication entre conteneurs et conflits de ports</h1>
 <h2 id="common-docker-networking-challenges">Défis courants liés au réseau Docker</h2>
-<p>Lors du déploiement de conteneurs Docker dans un environnement homelab, les problèmes de mise en réseau sont parmi les plus fréquents. Ce guide présente des approches de dépannage systématiques pour la communication entre conteneurs, les conflits de ports et les permissions de volumes.</p>
-<h2 id="key-takeaways">Points clés</h2>
-<p>Les problèmes de réseau Docker se répartissent généralement en trois catégories : 1.
-<strong>Isolation du réseau</strong> – Les conteneurs sur des réseaux différents ne peuvent pas communiquer 2. <strong>Conflits de ports</strong> – Plusieurs services tentent d'utiliser les mêmes ports 3. <strong>Problèmes de permissions</strong> – Montage de volumes avec une propriété (ownership) incorrecte</p>
-<p>Tous ces problèmes se résolvent facilement grâce à une configuration appropriée et des commandes de diagnostic.</p>
+<p>Lors du déploiement de conteneurs Docker dans un environnement homelab, les problèmes de réseau figurent parmi les difficultés les plus fréquemment rencontrées. Ce guide couvre les approches de dépannage systématique pour la communication entre conteneurs, les conflits de ports et les permissions de volumes.</p>
+<h2 id="key-takeaways">Points clés à retenir</h2>
+<p>Les problèmes de réseau Docker se répartissent généralement en trois catégories : 1. <strong>Isolation du réseau</strong> - Les conteneurs sur différents réseaux ne peuvent pas communiquer 2. <strong>Conflits de ports</strong> - Plusieurs services tentent d'utiliser les mêmes ports 3. <strong>Problèmes de permissions</strong> - Montages de volumes avec une propriété incorrecte</p>
+<p>Tous sont facilement résolus grâce à une configuration appropriée et des commandes de diagnostic.</p>
 <p><em>Pour un guide de dépannage complet avec exemples et solutions, consultez la documentation complète.</em></p>
                 </div>
 
@@ -144,7 +143,7 @@ id="docker-networking-troubleshooting-container-communication-and-port-conflicts
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en formation | Passionné de cybersécurité</p>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
@@ -158,7 +157,7 @@ id="docker-networking-troubleshooting-container-communication-and-port-conflicts
                 </div>
 
                 <div class="footer-social">
-                    <h4>Se connecter</h4>
+                    <h4>Restons connectés</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>

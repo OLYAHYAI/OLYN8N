@@ -1,72 +1,6 @@
 const blogData = {
     "articles": [
         {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
-            "title": "Ssl Certificate Configuration Prompt Securing Homelab",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
-        },
-        {
-            "id": "ssl-certificate-configuration-prompt-securing-homelab",
-            "title": "Ssl Certificate Configuration Prompt Securing Homelab",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
-        },
-        {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Network Architecture Prompt Dns Tls Reverse Proxies",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
-        },
-        {
-            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
-            "title": "Network Architecture Prompt Dns Tls Reverse Proxies",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
-        },
-        {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Network Consciousness Vlan Learning Journey",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html"
-        },
-        {
-            "id": "network-consciousness-vlan-learning-journey",
-            "title": "Network Consciousness Vlan Learning Journey",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html"
-        },
-        {
             "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
             "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
             "excerpt": "",
@@ -89,26 +23,26 @@ const blogData = {
             "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
         },
         {
-            "id": "n8n-automation-roadmap-llm-enhanced-publishing",
-            "title": "N8n Automation Roadmap Llm Enhanced Publishing",
+            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+            "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/n8n-automation-roadmap-llm-enhanced-publishing.html"
+            "url": "/en/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
         },
         {
-            "id": "n8n-automation-roadmap-llm-enhanced-publishing",
-            "title": "N8n Automation Roadmap Llm Enhanced Publishing",
+            "id": "unlocking-remote-access-cloudflare-tunnel-proxmox",
+            "title": "Unlocking Remote Access Cloudflare Tunnel Proxmox",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/n8n-automation-roadmap-llm-enhanced-publishing.html"
+            "url": "/fr/infrastructure/unlocking-remote-access-cloudflare-tunnel-proxmox.html"
         }
     ],
     "categories": {
