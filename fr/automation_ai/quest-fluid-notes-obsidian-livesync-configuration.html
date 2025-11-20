@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configuration LiveSync Obsidian pour Quest Fluid Notes - Tutoriel et guide technique">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Configuration LiveSync Obsidian pour Quest Fluid Notes | Blog Technique Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html" class="lang-toggle" aria-label="Changer de langue">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/automation_ai.html">Automatisation & IA</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Configuration LiveSync Obsidian pour Quest Fluid Notes</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Configuration LiveSync Obsidian pour Quest Fluid Notes</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>Lecture de 5 min</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Automatisation & IA</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1
+id="the-quest-for-fluid-notes-my-obsidian-livesync-configuration-and-triumphs">La
+Quête de Notes Fluides : Ma Configuration LiveSync Obsidian et Mes Succès</h1>
+<h2 id="overview">Aperçu</h2>
+<p>Ce document résume la configuration, les problèmes rencontrés et les
+solutions mises en œuvre lors du déploiement de LiveSync auto-hébergé
+pour Obsidian, utilisant Docker et CouchDB. La construction d'une
+solution de synchronisation auto-hébergée offre une souveraineté totale
+sur les données tout en évitant les coûts d'abonnement.</p>
+<h2 id="why-self-host-obsidian-sync">Pourquoi auto-héberger la synchronisation Obsidian ?</h2>
+<h3 id="advantages-of-self-hosting">Avantages de l'auto-hébergement</h3>
+<p><strong>Souveraineté des données :</strong> - Contrôle total de vos
+notes et pièces jointes - Aucun accès tiers aux informations sensibles -
+Conformité aux politiques de données personnelles/d'entreprise -
+Contrôle géographique du stockage des données</p>
+<p><strong>Économies :</strong> - Synchronisation Obsidian : $8/mois =
+$96/an - Auto-hébergé : Configuration unique, coûts d'hébergement minimes -
+ROI : Amorti en 2-3 mois</p>
+<p><strong>Opportunités d'apprentissage :</strong> - Expérience pratique
+avec Docker - Compétences en gestion de base de données - Pratique de la
+configuration réseau - Dépannage de systèmes réels</p>
+<p><strong>Flexibilité :</strong> - Stratégies de sauvegarde
+personnalisées - Stockage illimité (limité uniquement par votre serveur)
+- Intégration à l'infrastructure homelab existante - Options de
+configuration avancées</p>
+<h2 id="setup-goals">Objectifs de configuration</h2>
+<h3 id="primary-objectives">Objectifs Principaux</h3>
+<ul>
+<li>✅ Activer la synchronisation sécurisée et efficace des coffres
+Obsidian sur tous les appareils</li>
+<li>✅ Utiliser CouchDB conteneurisé par Docker comme base de données
+backend</li>
+<li>✅ Mettre en œuvre le Chiffrement de Bout en Bout (E2EE) version 2
+pour la sécurité des données</li>
+<li>✅ Gérer gracieusement la sensibilité à la casse du système de
+fichiers multi-OS</li>
+</ul>
+<h3 id="target-architecture">Architecture Cible</h3>
+<pre><code>Devices (Windows/Linux/Android/iOS)
+    ↓
+Obsidian App + LiveSync Plugin
+    ↓
+HTTPS/Internet
+    ↓
+CouchDB (Docker Container)
+    ├── Database: obsidian
+    ├── Port: 5984
+    └── Storage: Persistent volume</code></pre>
+<h2 id="initial-setup">Configuration Initiale</h2>
+<h3 id="step-1-deploy-couchdb-with-docker">Étape 1 : Déployer CouchDB avec
+Docker</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># docker-compose.yml</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3.8&#39;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">couchdb</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> couchdb:latest</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> couchdb-for-obsidian</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> COUCHDB_USER=admin</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> COUCHDB_PASSWORD=your_secure_password_here</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./data:/opt/couchdb/data</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./config:/opt/couchdb/etc/local.d</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;5984:5984&quot;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> obsidian-sync</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">obsidian-sync</span><span class="kw">:</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">driver</span><span class="kw">:</span><span class="at"> bridge</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Deploy CouchDB</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify it&#39;s running</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps <span class="kw">|</span> <span class="fu">grep</span> couchdb</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check logs</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs <span class="at">-f</span> couchdb-for-obsidian</span></code></pre></div>
+<h3 id="step-2-create-obsidian-database">Étape 2 : Créer la Base de
+Données Obsidian</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accéder à l'interface web de CouchDB</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Naviguer vers: http://&lt;server-ip&gt;:5984/_utils</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Se connecter avec les identifiants de docker-compose.yml</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Cliquer sur &quot;Create Database&quot;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Nom de la base de données : obsidian</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Partitionnée : Non</span></span></code></pre></div>
+<h3 id="step-3-install-livesync-plugin-in-obsidian">Étape 3 : Installer
+le Plugin LiveSync dans Obsidian</h3>
+<ol type="1">
+<li>Ouvrir Obsidian</li>
+<li>Paramètres → Plugins Communautaires → Parcourir</li>
+<li>Rechercher : “Self-hosted LiveSync”</li>
+<li>Installer et Activer</li>
+<li>Configurer le plugin :
+<ul>
+<li>URL de la Base de Données Distante :
+<code>http://&lt;server-ip&gt;:5984/obsidian</code></li>
+<li>Nom d'utilisateur : <code>admin</code></li>
+<li>Mot de passe : Votre mot de passe CouchDB</li>
+<li>Nom de l'appareil : <code>laptop-primary</code> (ou nom
+descriptif)</li>
+</ul></li>
+</ol>
+<h2 id="key-issues-resolutions">Problèmes Clés et Résolutions</h2>
+<h3 id="issue-1-missing-docker-compose">Problème 1 : Docker Compose
+Manquant</h3>
+<p><strong>Problème :</strong> La commande <code>docker-compose</code>
+introuvable lors de la gestion des conteneurs Docker.</p>
+<p><strong>Symptômes :</strong></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> docker-compose up <span class="at">-d</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bash:</span> docker-compose: command not found</span></code></pre></div>
+<p><strong>Résolution :</strong></p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer Docker Compose sur Ubuntu</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> curl <span class="at">-L</span> <span class="st">&quot;https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-s</span><span class="va">)</span><span class="st">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="st">&quot;</span> <span class="at">-o</span> /usr/local/bin/docker-compose</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Définir les permissions d'exécution</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod +x /usr/local/bin/docker-compose</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'installation</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> <span class="at">--version</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternative : Utiliser docker compose (plugin V2)</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose version</span></code></pre></div>
+<h3 id="issue-2-cors-configuration-for-couchdb">Problème 2 :
+Configuration CORS pour CouchDB</h3>
+<p><strong>Problème :</strong> L'API native fetch a échoué avec une
+erreur CORS pendant LiveSync.</p>
+<p><strong>Message d'erreur :</strong></p>
+<pre><code>Access to fetch at &#39;http://server-ip:5984/obsidian&#39; from origin &#39;app://obsidian.md&#39; 
+has been blocked by CORS policy: No &#39;Access-Control-Allow-Origin&#39; header is present.</code></pre>
+<p><strong>Résolution :</strong></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accéder au conteneur CouchDB</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec <span class="at">-it</span> couchdb-for-obsidian bash</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Modifier la configuration local.ini</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> /opt/couchdb/etc/local.d/local.ini</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter la configuration CORS :</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ex">[httpd]</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="ex">enable_cors</span> = true</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="ex">[cors]</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="ex">origins</span> = <span class="pp">*</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="ex">credentials</span> = true</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="ex">methods</span> = GET, PUT, POST, HEAD, DELETE</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="ex">headers</span> = accept, authorization, content-type, origin, referer</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Quitter le conteneur</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Redémarrer CouchDB</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> restart couchdb-for-obsidian</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les en-têtes CORS</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-I</span> http://localhost:5984/obsidian</span></code></pre></div>
+<h3 id="issue-3-configuration-mismatch---chunk-size">Problème 3 :
+Incohérence de Configuration - Taille des Morceaux (Chunk Size)</h3>
+<p><strong>Problème :</strong> Le client LiveSync local a signalé une
+incohérence de <code>customChunkSize</code> (local 60 vs distant 0).</p>
+<p><strong>Erreur dans Obsidian :</strong></p>
+<pre><code>Configuration mismatch detected:
+- Local chunk size: 60
+- Remote chunk size: 0
+This may cause sync issues.</code></pre>
+<p><strong>Résolution :</strong></p>
+<ol type="1">
+<li><strong>Dans les Paramètres Obsidian → Self-hosted LiveSync :</strong>
+<ul>
+<li>Faire défiler jusqu'à <strong>Paramètres Avancés</strong></li>
+<li>Définir la <strong>Taille Personnalisée des Morceaux (Custom Chunk
+Size)</strong> : <code>60</code></li>
+<li>Cliquer sur <strong>Enregistrer</strong></li>
+</ul></li>
+<li><strong>Accepter l'Invite de Mise à Jour Distante :</strong>
+<ul>
+<li>Lorsque vous êtes invité : « Incohérence de configuration, accepter
+les paramètres distants ? »</li>
+<li>Cliquer sur <strong>« Utiliser les paramètres locaux »</strong>
+(préféré)</li>
+<li>Ou cliquer sur <strong>« Utiliser les paramètres distants »</strong>
+si la source distante est fiable</li>
+</ul></li>
+<li><strong>Vérifier la Cohérence sur Tous les Appareils :</strong>
+<ul>
+<li>Répéter sur chaque appareil</li>
+<li>S'assurer que tous utilisent la même taille de morceaux (60
+recommandé)</li>
+</ul></li>
+</ol>
+<p><strong>Pourquoi 60 ?</strong> - Équilibre entre efficacité et
+compatibilité - Fonctionne bien dans la plupart des conditions réseau -
+Recommandé par la documentation LiveSync</p>
+<h3 id="issue-4-filename-case-sensitivity">Problème 4 : Sensibilité à la
+Casse des Noms de Fichier</h3>
+<p><strong>Problème :</strong> Conflits de synchronisation potentiels
+dus à la sensibilité à la casse des noms de fichiers entre les appareils
+Linux, Windows, et Android.</p>
+<p><strong>Scénario :</strong></p>
+<pre><code>Linux: Creates &quot;MyNote.md&quot; and &quot;mynote.md&quot; (two different files)
+Windows: Sees only one file (case-insensitive filesystem)
+Result: Sync conflict!</code></pre>
+<p><strong>Résolution :</strong></p>
+<p><strong>Dans les Paramètres LiveSync Obsidian :</strong></p>
+<pre><code>Settings → Self-hosted LiveSync → Advanced
+
+handleFilenameCaseSensitive:
+- Définir sur FALSE si la synchronisation se fait avec Windows/macOS/Android
+- Définir sur TRUE uniquement si TOUS les clients utilisent des systèmes de fichiers sensibles à la casse</code></pre>
+<p><strong>Meilleure Pratique :</strong> - Utiliser une convention de
+nommage cohérente (par exemple, tout en minuscules) - Éviter de créer
+des fichiers dont les noms ne diffèrent que par la casse - Documenter
+votre convention de nommage dans le coffre</p>
+<h3 id="issue-5-end-to-end-encryption-algorithm-update">Problème 5 :
+Mise à Jour de l'Algorithme de Chiffrement de Bout en Bout</h3>
+<p><strong>Problème :</strong> Ancienne version E2EE détectée avec des
+vulnérabilités connues.</p>
+<p><strong>Message d'avertissement :</strong></p>
+<pre><code>You are using E2EE v1 which has known security issues.
+Please upgrade to E2EE v2 for improved security.</code></pre>
+<p><strong>Résolution :</strong></p>
+<ol type="1">
+<li><p><strong>Sauvegarder Votre Coffre :</strong></p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer une sauvegarde avant la mise à niveau</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-czf</span> obsidian-backup-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d<span class="va">)</span>.tar.gz ~/path/to/vault</span></code></pre></div></li>
+<li><p><strong>Mettre à Niveau vers E2EE v2 :</strong></p>
+<ul>
+<li>Paramètres → Self-hosted LiveSync → Chiffrement</li>
+<li>Cliquer sur <strong>“Upgrade to E2EE v2”</strong></li>
+<li>Confirmer la mise à niveau</li>
+<li><strong>Nouveau mot de passe requis</strong> - sauvegarder en toute
+sécurité !</li>
+</ul></li>
+<li><p><strong>Mettre à Jour Tous les Clients :</strong></p>
+<ul>
+<li>S'assurer que tous les appareils exécutent le plugin LiveSync
+version 0.25.0+</li>
+<li>Mettre à jour le plugin sur chaque appareil</li>
+<li>Saisir le nouveau mot de passe E2EE v2</li>
+</ul></li>
+</ol>
+<p><strong>Améliorations de Sécurité en v2 :</strong> - Algorithmes de
+chiffrement plus robustes - Dérivation de clé améliorée - Meilleure
+protection contre les attaques par force brute</p>
+<h3 id="issue-6-vault-rebuild-confirmation">Problème 6 : Confirmation de
+Reconstruction du Coffre</h3>
+<p><strong>Problème :</strong> Reconstruction des métadonnées de
+synchronisation requise en raison d'une corruption de la base de données
+distante ou de modifications de configuration.</p>
+<p><strong>Quand Cela Se Produit :</strong> - Après des mises à jour
+majeures de plugins - Après la restauration de la base de données - Après
+avoir modifié les paramètres de chiffrement - Après avoir résolu des
+conflits de synchronisation</p>
+<p><strong>Résolution :</strong></p>
+<ol type="1">
+<li><p><strong>Sauvegarder l'État Actuel :</strong></p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exporter le coffre</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> ~/vault ~/vault-backup-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d<span class="va">)</span></span></code></pre></div></li>
+<li><p><strong>Confirmer la Reconstruction dans LiveSync :</strong></p>
+<ul>
+<li>Paramètres → Self-hosted LiveSync</li>
+<li>Cliquer sur <strong>“Rebuild database”</strong> (Reconstruire la
+base de données)</li>
+<li>Confirmer : “Are you sure?” (Êtes-vous sûr ?)</li>
+<li>Attendre que le processus se termine (cela peut prendre plusieurs
+minutes)</li>
+</ul></li>
+<li><p><strong>Vérifier le Succès de la Reconstruction :</strong></p>
+<ul>
+<li>Vérifier l'indicateur d'état de synchronisation (devrait être
+vert)</li>
+<li>Effectuer un changement de test sur un appareil</li>
+<li>Vérifier la synchronisation vers d'autres appareils</li>
+</ul></li>
+</ol>
+<p><strong>Ce que Fait la Reconstruction :</strong> - Recrée les
+métadonnées de synchronisation locales - Réindexe tous les fichiers -
+Résout les incohérences - NE supprime PAS vos notes (opération sûre)</p>
+<h3 id="issue-7-connectivity-issues-with-couchdb">Problème 7 :
+Problèmes de Connectivité avec CouchDB</h3>
+<p><strong>Problème :</strong> Messages
+<code>Could not connect to server</code> (Impossible de se connecter au
+serveur) pendant les tentatives de synchronisation.</p>
+<p><strong>Causes Possibles :</strong> 1. Le conteneur CouchDB n'est
+pas en cours d'exécution 2. Le pare-feu réseau bloque le port 5984 3.
+URL incorrecte dans les paramètres LiveSync 4. Problèmes de certificat
+(si utilisation de HTTPS)</p>
+<p><strong>Résolution :</strong></p>
+<p><strong>Vérifier l'État du Conteneur :</strong></p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier si le conteneur est en cours d'exécution</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps <span class="kw">|</span> <span class="fu">grep</span> couchdb</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># S'il n'est pas en cours, le démarrer</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> start couchdb-for-obsidian</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les journaux pour les erreurs</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs <span class="at">--tail</span> 50 couchdb-for-obsidian</span></code></pre></div>
+<p><strong>Vérifier la Connectivité Réseau :</strong></p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester depuis la machine cliente</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://<span class="op">&lt;</span>server-ip<span class="op">&gt;</span>:5984</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Réponse attendue :</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># {&quot;couchdb&quot;:&quot;Welcome&quot;,&quot;version&quot;:&quot;3.x.x&quot;}</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester l'accès à la base de données</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://<span class="op">&lt;</span>server-ip<span class="op">&gt;</span>:5984/obsidian</span></code></pre></div>
+<p><strong>Vérifier les Paramètres du Pare-feu :</strong></p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sur le serveur, autoriser le port 5984</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 5984/tcp</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sur pfSense:</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Firewall → Rules → LAN → Ajouter</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Autoriser TCP 5984 vers l'IP du serveur CouchDB</span></span></code></pre></div>
+<p><strong>Vérifier la Configuration de l'URL LiveSync :</strong> -
+Paramètres → Self-hosted LiveSync - URL de la Base de Données Distante :
+<code>http://&lt;server-ip&gt;:5984/obsidian</code> - S'assurer qu'il
+N'y A PAS de barre oblique finale - Nom d'utilisateur et mot de passe
+corrects</p>
+<h2 id="step-by-step-workflow-summary">Résumé du Flux de Travail Étape
+par Étape</h2>
+<h3 id="complete-setup-checklist">Liste de Contrôle de Configuration
+Complète</h3>
+<ol type="1">
+<li><strong>Préparation du Serveur :</strong>
+<ul class="task-list">
+<li><label><input type="checkbox" />Installer Docker et Docker
+Compose</label></li>
+<li><label><input type="checkbox" />Créer docker-compose.yml pour
+CouchDB</label></li>
+<li><label><input type="checkbox" />Déployer le conteneur
+CouchDB</label></li>
+<li><label><input type="checkbox" />Vérifier l'accès à CouchDB sur le
+port 5984</label></li>
+</ul></li>
+<li><strong>Configuration de la Base de Données :</strong>
+<ul class="task-list">
+<li><label><input type="checkbox" />Accéder à l'interface utilisateur
+web de CouchDB (<code>http://&lt;ip&gt;:5984/_utils</code>)</label></li>
+<li><label><input type="checkbox" />Créer la base de données nommée
+“obsidian”</label></li>
+<li><label><input type="checkbox" />Configurer CORS dans
+local.ini</label></li>
+<li><label><input type="checkbox" />Redémarrer le conteneur
+CouchDB</label></li>
+</ul></li>
+<li><strong>Configuration du Plugin LiveSync :</strong>
+<ul class="task-list">
+<li><label><input type="checkbox" />Installer le plugin Self-hosted
+LiveSync dans Obsidian</label></li>
+<li><label><input type="checkbox" />Configurer l'URL de la base de
+données distante</label></li>
+<li><label><input type="checkbox" />Définir le nom d'utilisateur et le
+mot de passe</label></li>
+<li><label><input type="checkbox" />Définir customChunkSize =
+60</label></li>
+<li><label><input type="checkbox" />Configurer la sensibilité à la
+casse (FALSE pour OS mixtes)</label></li>
+<li><label><input type="checkbox" />Mettre à niveau vers E2EE v2</label></li>
+</ul></li>
+<li><strong>Synchronisation Initiale :</strong>
+<ul class="task-list">
+<li><label><input type="checkbox" />Cliquer sur “Start sync” (Démarrer
+la synchronisation) dans les paramètres du plugin</label></li>
+<li><label><input type="checkbox" />Attendre le téléchargement initial
+(peut prendre du temps pour les grands coffres)</label></li>
+<li><label><input type="checkbox" />Vérifier que l'état de
+synchronisation affiche une coche verte</label></li>
+</ul></li>
+<li><strong>Configuration Multi-Appareil :</strong>
+<ul class="task-list">
+<li><label><input type="checkbox" />Installer Obsidian sur le second
+appareil</label></li>
+<li><label><input type="checkbox" />Installer le plugin LiveSync</label></li>
+<li><label><input type="checkbox" />Utiliser la MÊME configuration (URL,
+identifiants, taille des morceaux)</label></li>
+<li><label><input type="checkbox" />Choisir “Fetch from remote”
+(Récupérer à distance) pour la première synchronisation</label></li>
+<li><label><input type="checkbox" />Vérifier que les fichiers
+apparaissent</label></li>
+</ul></li>
+<li><strong>Maintenance Continue :</strong>
+<ul class="task-list">
+<li><label><input type="checkbox" />Surveiller régulièrement l'état de
+la synchronisation</label></li>
+<li><label><input type="checkbox" />Examiner les journaux CouchDB
+chaque semaine</label></li>
+<li><label><input type="checkbox" />Sauvegarder la base de données
+mensuellement</label></li>
+<li><label><input type="checkbox" />Mettre à jour le plugin LiveSync
+lorsque disponible</label></li>
+<li><label><input type="checkbox" />Tester la procédure de récupération
+périodiquement</label></li>
+</ul></li>
+</ol>
+<h2 id="performance-optimization">Optimisation des Performances</h2>
+<h3 id="recommended-settings">Paramètres Recommandés</h3>
+<pre><code>LiveSync Settings:
+
+Mode de Synchronisation : Automatic
+Intervalle de Synchronisation : 30 seconds (équilibre réactivité et batterie)
+Taille du Lot (Batch Size) : 50 (par défaut, augmenter pour une synchronisation plus rapide)
+Taille des Morceaux (Chunk Size) : 60 (pour la compatibilité)
+Délai d'attente (Timeout) : 120 seconds
+
+Avancé:
+- Compresser la base de données : Yes
+- Utiliser la synchronisation par morceaux : Yes
+- Vérifier la somme de contrôle (checksum) : Yes (plus lent mais plus sûr)</code></pre>
+<h3 id="database-maintenance">Maintenance de la Base de Données</h3>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compacter la base de données (réduit la taille)</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST http://admin:password@localhost:5984/obsidian/_compact <span class="dt">\</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">-H</span> <span class="st">&quot;Content-Type: application/json&quot;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher les statistiques de la base de données</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://admin:password@localhost:5984/obsidian</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarder la base de données</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> GET http://admin:password@localhost:5984/obsidian/_all_docs<span class="pp">?</span>include_docs=true <span class="dt">\</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>     <span class="op">&gt;</span> obsidian-backup-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d<span class="va">)</span>.json</span></code></pre></div>
+<h2 id="security-best-practices">Meilleures Pratiques de Sécurité</h2>
+<h3 id="use-https-for-remote-access">1. Utiliser HTTPS pour l'Accès à
+Distance</h3>
+<pre class="nginx"><code># Nginx reverse proxy configuration
+server {
+    listen 443 ssl;
+    server_name sync.yourdomain.com;
+
+    ssl_certificate /path/to/cert.pem;
+    ssl_certificate_key /path/to/key.pem;
+
+    location / {
+        proxy_pass http://localhost:5984;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}</code></pre>
+<h3 id="restrict-access-by-ip">2. Restreindre l'Accès par IP</h3>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dans local.ini de CouchDB</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[httpd]</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="ex">bind_address</span> = 192.168.1.100  <span class="co"># Accepter uniquement les connexions provenant d'une IP spécifique</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ou utiliser un pare-feu</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow from 192.168.1.0/24 to any port 5984</span></code></pre></div>
+<h3 id="enable-e2ee-v2">3. Activer E2EE v2</h3>
+<ul>
+<li>Toujours utiliser le Chiffrement de Bout en Bout</li>
+<li>Utiliser une phrase de passe forte (20+ caractères)</li>
+<li>Stocker la phrase de passe dans un gestionnaire de mots de passe</li>
+<li>Ne pas partager la phrase de passe de manière non sécurisée</li>
+</ul>
+<h2 id="troubleshooting-tips">Conseils de Dépannage</h2>
+<h3 id="sync-not-working">La Synchronisation Ne Fonctionne Pas</h3>
+<ol type="1">
+<li>Vérifier l'indicateur d'état de synchronisation dans Obsidian</li>
+<li>Examiner les journaux LiveSync (Paramètres → Afficher le journal)</li>
+<li>Vérifier la connectivité réseau à CouchDB</li>
+<li>Vérifier les journaux du conteneur CouchDB</li>
+<li>Reconstruire la base de données en cas de problèmes persistants</li>
+</ol>
+<h3 id="conflicts-appearing">Apparition de Conflits</h3>
+<ol type="1">
+<li>Examiner les fichiers de conflit dans le dossier
+<code>.conflicts/</code></li>
+<li>Résoudre manuellement les conflits</li>
+<li>Supprimer les fichiers de conflit résolus</li>
+<li>Envisager d'ajuster l'intervalle de synchronisation</li>
+</ol>
+<h3 id="high-cpumemory-usage">Utilisation Élevée du CPU/Mémoire</h3>
+<ol type="1">
+<li>Réduire la fréquence de synchronisation</li>
+<li>Compacter la base de données CouchDB</li>
+<li>Limiter la taille du coffre (séparer les fichiers multimédias
+volumineux)</li>
+<li>Mettre à niveau le matériel du serveur si nécessaire</li>
+</ol>
+<h2 id="references">Références</h2>
+<ul>
+<li><a
+href="https://dev.to/lightningdev123/how-to-set-up-a-self-hosted-obsidian-sync-server-hcn">Guide
+de Configuration LiveSync Auto-hébergé pour Obsidian</a></li>
+<li><a
+href="https://docs.couchdb.org/en/stable/config/index.html">Documentation
+de Configuration CouchDB</a></li>
+<li><a href="https://github.com/vrtmrz/obsidian-livesync">GitHub
+Officiel de LiveSync Obsidian</a></li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>Maintenez la cohérence de la configuration entre les appareils et
+appliquez les mises à jour rapidement pour garantir une synchronisation
+sécurisée et fiable de votre coffre Obsidian. Des sauvegardes régulières
+du coffre et de la base de données CouchDB sont essentielles pour la
+reprise après sinistre.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>L'auto-hébergement de la synchronisation Obsidian avec CouchDB offre
+un contrôle total sur vos notes tout en réduisant les coûts d'abonnement.
+La configuration initiale demande de la minutie, mais une fois
+correctement établie, elle assure une synchronisation fiable et chiffrée
+sur tous vos appareils.</p>
+<p><strong>Points Clés à Retenir :</strong> - La configuration CORS est
+essentielle pour l'accès web - Une taille de morceaux cohérente prévient
+les erreurs de synchronisation - E2EE v2 offre une sécurité robuste - Une
+maintenance régulière de la base de données assure les performances - Des
+sauvegardes adéquates préviennent la perte de données</p>
+<p><em>Document créé : 2025-10-25</em>
+<!-- Touched: Wed Nov 19 13:33:27 +01 2025 -->
+<!-- Touched: Wed Nov 19 14:03:35 +01 2025 -->
+<!-- Touched: Wed Nov 19 15:04:19 +01 2025 --></p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Accueil</a></li>
+                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#projects">Projets</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connecter</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

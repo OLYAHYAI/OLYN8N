@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-20T21:53:18.123Z",
+  "lastUpdated": "2025-11-20T21:59:19.307Z",
   "totalArticles": 2,
   "categories": {
     "infrastructure": {
@@ -7,52 +7,10 @@
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
-        "en": [
-          {
-            "id": "docker-networking-troubleshooting-container-communication",
-            "title": "Docker Networking Troubleshooting Container Communication",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "docker-networking-troubleshooting-container-communication",
-            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-            "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "docker-networking-troubleshooting-container-communication",
-            "title": "Docker Networking Troubleshooting Container Communication",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "docker-networking-troubleshooting-container-communication",
-            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
-            "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 2
+      "total": 0
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -99,10 +57,52 @@
       "description": "Container orchestration Docker Compose",
       "icon": "fab fa-docker",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
+            "description": "",
+            "excerpt": "",
+            "category": "docker_services",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "docker_services"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
+            "description": "",
+            "excerpt": "",
+            "category": "docker_services",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "docker_services"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 2
     }
   },
   "languages": {
@@ -115,16 +115,16 @@
       "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "docker_services",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
       "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -135,16 +135,16 @@
       "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "docker_services",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
       "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "url": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -154,9 +154,9 @@
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 2,
-      "en": 1,
-      "fr": 1,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -194,9 +194,9 @@
     },
     "docker_services": {
       "name": "Docker Services",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "Container orchestration Docker Compose",
       "icon": "fab fa-docker"
     }
@@ -207,16 +207,16 @@
       "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "docker_services",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
       "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -227,16 +227,16 @@
       "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "docker_services",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
       "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "url": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -249,16 +249,16 @@
       "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "docker_services",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
       "slug": "docker-networking-troubleshooting-container-communication",
-      "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "filePath": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
+      "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -267,8 +267,8 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/docker-networking-troubleshooting-container-communication": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html",
-      "fr/infrastructure/docker-networking-troubleshooting-container-communication": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
+      "en/docker_services/docker-networking-troubleshooting-container-communication": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "fr/docker_services/docker-networking-troubleshooting-container-communication": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -298,6 +298,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-20T21:53:18.124Z",
+  "generatedAt": "2025-11-20T21:59:19.307Z",
   "version": "1.0"
 }

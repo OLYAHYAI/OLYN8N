@@ -4,23 +4,23 @@ const blogData = {
             "id": "docker-networking-troubleshooting-container-communication",
             "title": "Docker Networking Troubleshooting Container Communication",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "docker_services",
             "date": "2025-11-20",
             "tags": [
-                "infrastructure"
+                "docker_services"
             ],
-            "url": "/en/infrastructure/docker-networking-troubleshooting-container-communication.html"
+            "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html"
         },
         {
             "id": "docker-networking-troubleshooting-container-communication",
             "title": "Docker Networking Troubleshooting Container Communication",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "docker_services",
             "date": "2025-11-20",
             "tags": [
-                "infrastructure"
+                "docker_services"
             ],
-            "url": "/fr/infrastructure/docker-networking-troubleshooting-container-communication.html"
+            "url": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html"
         }
     ],
     "categories": {
