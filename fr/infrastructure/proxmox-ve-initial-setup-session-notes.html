@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Notes de session de configuration initiale de Proxmox VE | Blog Technique d'Omar LYAHYAI</title>
+    <title>Notes de session de configuration initiale de Proxmox VE | Blog technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html" class="lang-toggle" aria-label="Changer la langue">
-                        <span class="lang-current">FR</span>
+                    <a href="/en/infrastructure/proxmox-ve-initial-setup-session-notes.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -123,34 +123,33 @@ The workflow will:
 - Preserve images and links
 -->
 <h1
-id="homelab-session-notes-proxmox-ve-initial-setup-and-network-configuration">Notes de
-session Homelab : Configuration initiale et réseau de Proxmox VE</h1>
+id="homelab-session-notes-proxmox-ve-initial-setup-and-network-configuration">Notes
+de session Homelab : Configuration initiale et réseau de Proxmox VE</h1>
 <h2 id="session-overview">Aperçu de la session</h2>
 <p><strong>Date :</strong> 22 octobre 2025 <strong>Objectif :</strong>
 Installation de Proxmox VE, configuration réseau et préparation initiale
 de la VM <strong>Matériel :</strong> Lenovo ThinkCentre M920q</p>
-<h2 id="hardware-specifications">Spécifications Matérielles</h2>
+<h2 id="hardware-specifications">Spécifications matérielles</h2>
 <h3 id="server-details">Détails du serveur</h3>
-<p><strong>Modèle :</strong> Lenovo ThinkCentre M920q (Format Ultra
-Compact)</p>
+<p><strong>Modèle :</strong> Lenovo ThinkCentre M920q (Petit format)</p>
 <p><strong>Spécifications :</strong> - <strong>CPU :</strong> Intel
-i5-8500T (6 cœurs, cache 9 Mo, TDP 35W) - <strong>RAM :</strong> 16 Go
-DDR4 - <strong>Stockage Principal :</strong> SSD 512 Go (NVMe ou SATA) -
-<strong>Stockage Secondaire :</strong> HDD 250 Go (pour les
-sauvegardes/images ISO) - <strong>Réseau :</strong> Gigabit Ethernet
-(enp3s0) - <strong>Format :</strong> 1.0L ultra-compact</p>
+i5-8500T (6 cœurs, 9 Mo de cache, 35 W TDP) - <strong>RAM :</strong> 16
+Go DDR4 - <strong>Stockage primaire :</strong> SSD 512 Go (NVMe ou SATA)
+- <strong>Stockage secondaire :</strong> HDD 250 Go (pour les sauvegardes/stockage
+ISO) - <strong>Réseau :</strong> Gigabit Ethernet (enp3s0) - <strong>Facteur
+de forme :</strong> Ultra-compact 1.0L</p>
 <p><strong>Pourquoi ce matériel :</strong> - Faible consommation
-d'énergie (TDP de 35 W idéal pour un fonctionnement 24/7) - Format
-compact (parfait pour un homelab) - RAM suffisante pour plusieurs VM -
-Double stockage pour la séparation système/données - Excellent rapport
-prix/performance sur le marché de l'occasion</p>
-<h3 id="network-configuration">Configuration Réseau</h3>
+électrique (35 W TDP idéal pour un fonctionnement 24/7) - Facteur de
+forme compact (parfait pour le homelab) - RAM suffisante pour plusieurs
+VM - Double stockage pour la séparation système/données - Excellent
+rapport prix/performance sur le marché de l'occasion</p>
+<h3 id="network-configuration">Configuration réseau</h3>
 <p><strong>IP de l'hôte Proxmox :</strong> <code>192.168.11.254</code>
 <strong>Passerelle/Routeur :</strong> <code>192.168.11.1</code>
-<strong>Masque de sous-réseau :</strong> <code>255.255.255.0</code> (/24)
-<strong>Réseau :</strong> 192.168.11.0/24</p>
+<strong>Masque de sous-réseau :</strong> <code>255.255.255.0</code>
+(/24) <strong>Réseau :</strong> 192.168.11.0/24</p>
 <h2 id="step-1-accessing-proxmox-web-interface">Étape 1 : Accès à
-l'interface web de Proxmox</h2>
+l'interface web Proxmox</h2>
 <h3 id="initial-access">Accès initial</h3>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From web browser on local network</span></span>
@@ -160,14 +159,14 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Username:</span> root</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Domain:</span> pam <span class="er">(</span><span class="ex">Linux</span> PAM authentication<span class="kw">)</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Password:</span> [set during installation]</span></code></pre></div>
-<h3 id="first-login-checklist">Liste de vérification après la première
+<h3 id="first-login-checklist">Liste de vérification de la première
 connexion</h3>
 <p><strong>Vérifier :</strong> - [ ] L'interface web se charge (ignorer
-l'avertissement SSL pour le certificat auto-signé) - [ ] La connexion
-avec les identifiants root est possible - [ ] Le tableau de bord affiche
+l'avertissement SSL pour le certificat auto-signé) - [ ] Possibilité de
+se connecter avec les identifiants root - [ ] Le tableau de bord affiche
 correctement les ressources du serveur - [ ] L'interface réseau affiche
-la bonne adresse IP</p>
-<h3 id="post-login-configuration">Configuration après la connexion</h3>
+la bonne IP</p>
+<h3 id="post-login-configuration">Configuration après connexion</h3>
 <p><strong>Désactiver le dépôt Enterprise (si vous utilisez la version
 gratuite) :</strong></p>
 <div class="sourceCode" id="cb2"><pre
@@ -186,13 +185,13 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Update</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> update</span></code></pre></div>
 <h2 id="step-2-direct-ethernet-connection">Étape 2 : Connexion Ethernet
-Directe</h2>
+directe</h2>
 <h3 id="physical-setup">Configuration physique</h3>
 <p><strong>Topologie :</strong></p>
 <pre><code>Laptop (192.168.11.1)
-    ↓ Ethernet Cable
+    ↓ Câble Ethernet
 Proxmox Server (192.168.11.254)</code></pre>
-<h3 id="manual-ip-configuration">Configuration IP Manuelle</h3>
+<h3 id="manual-ip-configuration">Configuration IP manuelle</h3>
 <p><strong>Sur l'ordinateur portable (en supposant Linux) :</strong></p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assign static IP to ethernet interface</span></span>
@@ -204,12 +203,11 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected: replies from 192.168.11.254</span></span></code></pre></div>
 <p><strong>Objectif :</strong> - Connexion de gestion directe - Aucune
-dépendance vis-à-vis du routeur/DHCP - Utile pour le dépannage des
-problèmes réseau - Simule un réseau de laboratoire isolé</p>
+dépendance au routeur/DHCP - Utile pour le dépannage des problèmes réseau
+- Simule un réseau de laboratoire isolé</p>
 <h2 id="step-3-wireless-network-verification">Étape 3 : Vérification du
 réseau sans fil</h2>
-<h3 id="check-available-interfaces">Vérifier les interfaces
-disponibles</h3>
+<h3 id="check-available-interfaces">Vérifier les interfaces disponibles</h3>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List all network interfaces</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> a</span>
@@ -247,10 +245,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Connect</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="ex">wpa_supplicant</span> <span class="at">-B</span> <span class="at">-i</span> wlp0s20f3 <span class="at">-c</span> /etc/wpa_supplicant/wpa_supplicant.conf</span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="ex">dhclient</span> wlp0s20f3</span></code></pre></div>
-<p><strong>Note :</strong> L'utilisation du WiFi sur l'hôte Proxmox n'est
-généralement pas recommandée pour le pontage réseau des VM.</p>
-<h2 id="step-4-changing-proxmox-ip-address">Étape 4 : Modification de
-l'adresse IP de Proxmox</h2>
+<p><strong>Remarque :</strong> Le WiFi sur l'hôte Proxmox n'est
+généralement pas recommandé pour le pontage réseau des VM.</p>
+<h2 id="step-4-changing-proxmox-ip-address">Étape 4 : Changer l'adresse
+IP de Proxmox</h2>
 <h3 id="edit-network-configuration">Modifier la configuration réseau</h3>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit network interfaces file</span></span>
@@ -276,7 +274,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 <span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">bridge-vlan-aware</span> yes</span>
 <span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># DNS servers</span></span>
 <span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="ex">dns-nameservers</span> 8.8.8.8 8.8.4.4</span></code></pre></div>
-<h3 id="apply-network-changes">Appliquer les modifications réseau</h3>
+<h3 id="apply-network-changes">Appliquer les changements réseau</h3>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Restart networking service</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> restart networking</span>
@@ -305,10 +303,10 @@ l'interface web</h3>
 <ol type="1">
 <li>Naviguer vers : <strong>Datacenter → Node → local (storage) →
 Content</strong></li>
-<li>Cliquer sur <strong>Upload</strong> (Télécharger)</li>
-<li>Sélectionner <strong>ISO image</strong> (Image ISO)</li>
-<li>Choisir le fichier depuis l'ordinateur local</li>
-<li>Cliquer sur <strong>Upload</strong> (Télécharger)</li>
+<li>Cliquer sur <strong>Upload (Télécharger)</strong></li>
+<li>Sélectionner <strong>ISO image</strong></li>
+<li>Choisir un fichier depuis l'ordinateur local</li>
+<li>Cliquer sur <strong>Upload (Télécharger)</strong></li>
 </ol>
 <p><strong>Avantages :</strong> - Convivial - Pas besoin de ligne de
 commande - Barre de progression visuelle</p>
@@ -328,10 +326,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 <p><strong>Avantages :</strong> - Plus rapide pour les fichiers
 volumineux - Peut reprendre les transferts interrompus (avec rsync) -
 Scriptable</p>
-<p><strong>Inconvénients :</strong> - Nécessite un accès SSH -
-Nécessite des connaissances en ligne de commande</p>
-<h3 id="method-3-direct-download-on-proxmox">Méthode 3 :
-Téléchargement direct sur Proxmox</h3>
+<p><strong>Inconvénients :</strong> - Nécessite un accès SSH - Nécessite
+des connaissances en ligne de commande</p>
+<h3 id="method-3-direct-download-on-proxmox">Méthode 3 : Téléchargement
+direct sur Proxmox</h3>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SSH into Proxmox</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> root@192.168.11.254</span>
@@ -352,13 +350,13 @@ Proxmox - Utilise la bande passante de Proxmox</p>
 <h3 id="recommended-models-for-16gb-ram">Modèles recommandés pour 16 Go
 de RAM</h3>
 <p><strong>Niveau 1 : Léger (2-4 Go de RAM)</strong></p>
-<p><strong>Mistral 7B Q4 :</strong> - Taille : ~4,3 Go - Performance :
+<p><strong>Mistral 7B Q4 :</strong> - Taille : ~4.3 Go - Performance :
 Excellent usage général - Cas d'utilisation : Code, chat, requêtes
 générales</p>
-<p><strong>Phi-2 (2.7B) :</strong> - Taille : ~1,6 Go - Performance :
+<p><strong>Phi-2 (2.7B) :</strong> - Taille : ~1.6 Go - Performance :
 Rapide, bon pour le codage - Cas d'utilisation : Complétion de code,
 requêtes rapides</p>
-<p><strong>Gemma 2B :</strong> - Taille : ~1,4 Go - Performance : Très
+<p><strong>Gemma 2B :</strong> - Taille : ~1.4 Go - Performance : Très
 rapide - Cas d'utilisation : Tâches légères, tests</p>
 <h3 id="compatible-tools">Outils compatibles</h3>
 <p><strong>Ollama :</strong></p>
@@ -379,8 +377,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href=
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Run model</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="ex">./main</span> <span class="at">-m</span> models/mistral-7b-q4.gguf <span class="at">-p</span> <span class="st">&quot;Your prompt here&quot;</span></span>
-</code></pre></div>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="ex">./main</span> <span class="at">-m</span> models/mistral-7b-q4.gguf <span class="at">-p</span> <span class="st">&quot;Your prompt here&quot;</span></span></code></pre></div>
 <p><strong>MCP via Docker :</strong></p>
 <div class="sourceCode" id="cb16"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3.8&#39;</span></span>
@@ -448,8 +445,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href=
 <h2 id="step-8-note-taking-tools-recommendations">Étape 8 :
 Recommandations d'outils de prise de notes</h2>
 <h3 id="obsidian-recommended">Obsidian (Recommandé)</h3>
-<p><strong>Avantages :</strong> - Fichiers Markdown locaux - Fonction de
-liaison et vue graphique puissantes - Écosystème de plugins étendu -
+<p><strong>Avantages :</strong> - Fichiers markdown locaux - Liaison
+puissante et vue graphique - Écosystème de plugins étendu -
 Synchronisation auto-hébergée possible (CouchDB)</p>
 <p><strong>Configuration :</strong></p>
 <div class="sourceCode" id="cb20"><pre
@@ -462,7 +459,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href=
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  couchdb:latest</span></code></pre></div>
 <h3 id="joplin">Joplin</h3>
 <p><strong>Avantages :</strong> - Open source - Synchronisation
-intégrée (plusieurs backends) - Support Markdown - Multiplateforme</p>
+intégrée (multiples backends) - Support Markdown - Multiplateforme</p>
 <p><strong>Installation :</strong></p>
 <div class="sourceCode" id="cb21"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Via AppImage</span></span>
@@ -479,8 +476,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb22-1"><a href=
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;3000:3000&quot;</span></span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./notes:/data</span></span>
-</code></pre></div>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./notes:/data</span></span></code></pre></div>
 <h3 id="markdown-git-developer-approach">Markdown + Git (Approche
 Développeur)</h3>
 <div class="sourceCode" id="cb23"><pre
@@ -496,53 +492,52 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href=
 <span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:username/notes.git</span>
 <span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div>
 <h2 id="session-summary">Résumé de la session</h2>
-<p><strong>Tâches Complétées :</strong> - ✅ Accès à l'interface web
+<p><strong>Tâches accomplies :</strong> - ✅ Accès à l'interface web
 Proxmox configuré - ✅ Connexion Ethernet directe établie - ✅ Interfaces
-réseau vérifiées - ✅ Adresse IP de Proxmox modifiée - ✅ Méthodes de
-téléchargement ISO documentées - ✅ Modèles LLM identifiés pour le
-matériel - ✅ Docker + MCP installation planifiée - ✅ Solutions de prise
+réseau vérifiées - ✅ Adresse IP de Proxmox changée - ✅ Méthodes de
+téléchargement d'ISO documentées - ✅ Modèles LLM identifiés pour le
+matériel - ✅ Installation Docker + MCP planifiée - ✅ Solutions de prise
 de notes évaluées</p>
-<p><strong>Prochaines étapes :</strong> 1. Créer la première VM
-(pfSense ou Ubuntu) 2. Configurer les ponts réseau (vmbr1 pour l'interne)
-3. Déployer la pile LLM (Ollama + modèle choisi) 4. Configurer Obsidian
+<p><strong>Prochaines étapes :</strong> 1. Créer la première VM (pfSense
+ou Ubuntu) 2. Configurer les ponts réseau (vmbr1 pour l'interne) 3.
+Déployer la pile LLM (Ollama + modèle choisi) 4. Mettre en place Obsidian
 avec synchronisation auto-hébergée 5. Créer des snapshots de VM pour la
 sauvegarde</p>
-<h2 id="notes-and-best-practices">Notes et Bonnes Pratiques</h2>
-<h3 id="network-configuration-1">Configuration Réseau</h3>
+<h2 id="notes-and-best-practices">Notes et meilleures pratiques</h2>
+<h3 id="network-configuration-1">Configuration réseau</h3>
 <ul>
 <li>Toujours utiliser le pontage réseau (vmbr0) pour la gestion des VM</li>
 <li>Créer un pont séparé (vmbr1) pour les réseaux VM isolés</li>
-<li>Documenter les allocations IP dans le carnet de notes homelab</li>
+<li>Documenter les allocations IP dans le carnet homelab</li>
 <li>Tester la connectivité de la passerelle après les changements d'IP</li>
 </ul>
-<h3 id="storage-management">Gestion du Stockage</h3>
+<h3 id="storage-management">Gestion du stockage</h3>
 <ul>
 <li>Utiliser le SSD pour le système Proxmox et les disques VM</li>
 <li>Utiliser le HDD pour les sauvegardes et le stockage ISO</li>
-<li>Activer le thin provisioning pour une utilisation efficace de l'espace</li>
-<li>Faire des snapshots réguliers avant les changements majeurs</li>
+<li>Activer le thin provisioning pour une utilisation efficace de
+l'espace</li>
+<li>Snapshots réguliers avant les changements majeurs</li>
 </ul>
 <h3 id="security">Sécurité</h3>
 <ul>
 <li>Changer immédiatement les mots de passe par défaut</li>
-<li>Désactiver le dépôt Enterprise pour éviter les erreurs de mise à jour</li>
+<li>Désactiver le dépôt enterprise pour éviter les erreurs de mise à jour</li>
 <li>Maintenir Proxmox à jour
 (<code>apt update &amp;&amp; apt upgrade</code>)</li>
-<li>Utiliser des clés SSH au lieu de mots de passe lorsque cela est
-possible</li>
-<li>Envisager la 2FA pour l'interface web Proxmox</li>
+<li>Utiliser des clés SSH au lieu de mots de passe lorsque possible</li>
+<li>Envisager l'authentification à deux facteurs (2FA) pour l'interface
+web Proxmox</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>La configuration initiale de Proxmox est terminée avec une
-configuration réseau fonctionnelle, prête pour le déploiement des VM. Le
-matériel s'avère capable de prendre en charge les services homelab
-prévus, y compris le déploiement LLM et les applications
-conteneurisées.</p>
-<p><strong>Enseignement clé :</strong> Le PC de petit format
-(ThinkCentre M920q) offre une excellente base de homelab avec une faible
-consommation d'énergie et des performances suffisantes pour plusieurs
-VM.</p>
-<p><em>Durée de la session : ~2 heures, y compris la documentation</em></p>
+configuration réseau fonctionnelle, prête pour le déploiement de VM. Le
+matériel se montre capable pour les services homelab prévus, y compris le
+déploiement LLM et les applications conteneurisées.</p>
+<p><strong>Apprentissage clé :</strong> Le PC petit format (ThinkCentre
+M920q) offre une excellente base homelab avec une faible consommation
+d'énergie et des performances suffisantes pour plusieurs VM.</p>
+<p><em>Durée de la session : ~2 heures, documentation comprise</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -560,7 +555,7 @@ VM.</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Liens Rapides</h4>
+                    <h4>Liens rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
                         <li><a href="/index.html#about">À propos</a></li>
@@ -570,7 +565,7 @@ VM.</p>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Se Connecter</h4>
+                    <h4>Se connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -592,7 +587,7 @@ VM.</p>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Retour en haut de page">
+    <button class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
