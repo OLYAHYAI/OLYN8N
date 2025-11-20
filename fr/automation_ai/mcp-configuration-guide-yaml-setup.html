@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guide de configuration Mcp (Modular Copilot Platform) avec YAML - Tutoriel technique et guide">
+    <meta name="description" content="Guide de Configuration Mcp Yaml - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Guide de configuration Mcp (Yaml) | Blog Technique d'Omar LYAHYAI</title>
+    <title>Guide de Configuration Mcp Yaml | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/automation_ai/mcp-configuration-guide-yaml-setup.html" class="lang-toggle" aria-label="Changer de langue">
-                        <span class="lang-current">EN</span>
+                    <a href="/fr/automation_ai/mcp-configuration-guide-yaml-setup.html" class="lang-toggle" aria-label="Changer de langue">
+                        <span class="lang-current">FR</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -58,21 +58,21 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="Article header">
+        <section class="article-header" role="region" aria-label="En-tête de l'article">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/automation_ai.html">Automatisation & IA</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Guide de configuration Mcp (Yaml)</span>
+                        <span>Guide de Configuration Mcp Yaml</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Guide de configuration Mcp (Yaml)</h1>
+                <h1 class="article-title">Guide de Configuration Mcp Yaml</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -122,11 +122,11 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="mcp-configuration-guide-yaml-setup-and-configuration">Guide de configuration MCP : Installation et configuration YAML</h1>
+<h1 id="mcp-configuration-guide-yaml-setup-and-configuration">Guide de Configuration MCP : Configuration et Mise en Place YAML</h1>
 <h2 id="what-is-mcp">Qu'est-ce que MCP ?</h2>
-<p>La <strong>Modular Copilot Platform (MCP)</strong> est un framework permettant de déployer et de gérer des assistants IA dotés de capacités modulaires. Il vous permet de créer des workflows IA personnalisés avec des outils et des intégrations spécialisés.</p>
-<h2 id="basic-yaml-configuration">Configuration YAML de base</h2>
-<h3 id="minimal-configuration">Configuration minimale</h3>
+<p>La <strong>Modular Copilot Platform (MCP)</strong> est un framework de déploiement et de gestion d'assistants IA doté de capacités modulaires. Il vous permet de créer des flux de travail IA personnalisés avec des outils et des intégrations spécialisés.</p>
+<h2 id="basic-yaml-configuration">Configuration YAML de Base</h2>
+<h3 id="minimal-configuration">Configuration Minimale</h3>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mcp-config.yml</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;1.0&quot;</span></span>
@@ -144,24 +144,26 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> filesystem</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> web_search</span></span></code></pre></div>
-<h3 id="configuration-breakdown">Analyse de la configuration</h3>
-<p><strong>Paramètres du serveur :</strong></p>
+<h3 id="configuration-breakdown">Analyse de la Configuration</h3>
+<p><strong>Paramètres du Serveur :</strong></p>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">server</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">host</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;0.0.0.0&quot;</span><span class="co">        # Écouter sur toutes les interfaces</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="dv">5000</span><span class="co">             # Port de l&#39;API</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">workers</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span><span class="co">             # Nombre de processus worker</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">timeout</span><span class="kw">:</span><span class="at"> </span><span class="dv">120</span><span class="co">           # Délai d&#39;attente de la requête (secondes)</span></span></code></pre></div>
-<p><strong>Configuration du modèle :</strong></p>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">host</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;0.0.0.0&quot;</span><span class="co">        # Listen on all interfaces</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="dv">5000</span><span class="co">             # API port</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">workers</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span><span class="co">             # Number of worker processes</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">timeout</span><span class="kw">:</span><span class="at"> </span><span class="dv">120</span><span class="co">           # Request timeout (seconds)</span></span>
+</code></pre></div>
+<p><strong>Configuration du Modèle :</strong></p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">models</span><span class="kw">:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;code-assistant&quot;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">provider</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;ollama&quot;</span><span class="co">    # Options : ollama, openai, anthropic</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">provider</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;ollama&quot;</span><span class="co">    # Options: ollama, openai, anthropic</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">model</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;codellama:7b&quot;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">temperature</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.3</span><span class="co">      # Inférieur = plus déterministe</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">temperature</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.3</span><span class="co">      # Lower = more deterministic</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">max_tokens</span><span class="kw">:</span><span class="at"> </span><span class="dv">2048</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">context_window</span><span class="kw">:</span><span class="at"> </span><span class="dv">4096</span></span></code></pre></div>
-<p><strong>Outils et capacités :</strong></p>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">context_window</span><span class="kw">:</span><span class="at"> </span><span class="dv">4096</span></span>
+</code></pre></div>
+<p><strong>Outils et Capacités :</strong></p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;filesystem&quot;</span></span>
@@ -176,7 +178,8 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">api_key</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;${SEARCH_API_KEY}&quot;</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;code_execution&quot;</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">enabled</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">        # Désactivé pour la sécurité</span></span></code></pre></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">enabled</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">        # Disabled for security</span></span>
+</code></pre></div>
 <h2 id="docker-deployment">Déploiement Docker</h2>
 <h3 id="docker-compose.yml">docker-compose.yml</h3>
 <div class="sourceCode" id="cb5"><pre
@@ -209,21 +212,21 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="fu">volumes</span><span class="kw">:</span></span>
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ollama_data</span><span class="kw">:</span></span></code></pre></div>
-<h3 id="deployment-commands">Commandes de déploiement</h3>
+<h3 id="deployment-commands">Commandes de Déploiement</h3>
 <div class="sourceCode" id="cb6"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Démarrer les services</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start services</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher les logs</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># View logs</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> logs <span class="at">-f</span> mcp</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester l&#39;API</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Test API</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://localhost:5000/health</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Télécharger le modèle</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull model</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec ollama ollama pull mistral:7b</span></code></pre></div>
-<h2 id="advanced-configuration">Configuration avancée</h2>
-<h3 id="multi-model-setup">Configuration multi-modèles</h3>
+<h2 id="advanced-configuration">Configuration Avancée</h2>
+<h3 id="multi-model-setup">Configuration Multi-Modèles</h3>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">models</span><span class="kw">:</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;general&quot;</span></span>
@@ -241,7 +244,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">model</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;gpt-4&quot;</span></span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">api_key</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;${OPENAI_API_KEY}&quot;</span></span>
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">use_case</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;creative_writing&quot;</span></span></code></pre></div>
-<h3 id="custom-tool-configuration">Configuration d'outil personnalisé</h3>
+<h3 id="custom-tool-configuration">Configuration d'Outil Personnalisé</h3>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;obsidian_integration&quot;</span></span>
@@ -256,7 +259,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;http://n8n:5678/webhook/mcp&quot;</span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">headers</span><span class="kw">:</span></span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">Authorization</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Bearer ${N8N_TOKEN}&quot;</span></span></code></pre></div>
-<h3 id="environment-variables">Variables d'environnement</h3>
+<h3 id="environment-variables">Variables d'Environnement</h3>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .env file</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="va">MCP_LOG_LEVEL</span><span class="op">=</span>INFO</span>
@@ -264,10 +267,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="va">OPENAI_API_KEY</span><span class="op">=</span>sk-...</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="va">SEARCH_API_KEY</span><span class="op">=</span>...</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="va">N8N_TOKEN</span><span class="op">=</span>...</span></code></pre></div>
-<h2 id="integration-examples">Exemples d'intégration</h2>
-<h3 id="with-n8n">Avec N8N</h3>
+<h2 id="integration-examples">Exemples d'Intégration</h2>
+<h3 id="with-n8n">Avec n8n</h3>
 <div class="sourceCode" id="cb10"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Nœud de requête HTTP N8N</span></span>
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// n8n HTTP Request Node</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>{</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;method&quot;</span><span class="op">:</span> <span class="st">&quot;POST&quot;</span><span class="op">,</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;url&quot;</span><span class="op">:</span> <span class="st">&quot;http://mcp:5000/api/chat&quot;</span><span class="op">,</span></span>
@@ -283,7 +286,7 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h3 id="with-obsidian">Avec Obsidian</h3>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Intégration de plugin Obsidian</span></span>
+class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Obsidian plugin integration</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">queryMCP</span>(prompt<span class="op">:</span> <span class="dt">string</span>) {</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">&#39;http://localhost:5000/api/chat&#39;</span><span class="op">,</span> {</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    method<span class="op">:</span> <span class="st">&#39;POST&#39;</span><span class="op">,</span></span>
@@ -296,7 +299,7 @@ class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb11
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="cf">await</span> response<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h2 id="security-best-practices">Meilleures pratiques de sécurité</h2>
+<h2 id="security-best-practices">Meilleures Pratiques de Sécurité</h2>
 <h3 id="authentication">1. Authentification</h3>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">server</span><span class="kw">:</span></span>
@@ -305,14 +308,15 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb12-1"><a href=
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;bearer&quot;</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">tokens</span><span class="kw">:</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;${MCP_API_TOKEN}&quot;</span></span></code></pre></div>
-<h3 id="rate-limiting">2. Limitation du débit (Rate Limiting)</h3>
+<h3 id="rate-limiting">2. Limitation de Débit (Rate Limiting)</h3>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">server</span><span class="kw">:</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">rate_limit</span><span class="kw">:</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">enabled</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">requests_per_minute</span><span class="kw">:</span><span class="at"> </span><span class="dv">60</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">burst</span><span class="kw">:</span><span class="at"> </span><span class="dv">10</span></span></code></pre></div>
-<h3 id="tool-restrictions">3. Restrictions des outils</h3>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">burst</span><span class="kw">:</span><span class="at"> </span><span class="dv">10</span></span>
+</code></pre></div>
+<h3 id="tool-restrictions">3. Restrictions d'Outils</h3>
 <div class="sourceCode" id="cb14"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;filesystem&quot;</span></span>
@@ -320,35 +324,35 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href=
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">security</span><span class="kw">:</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">read_only</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">allowed_extensions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;.md&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;.txt&quot;</span><span class="kw">]</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">max_file_size</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;10MB&quot;</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">max_file_size</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;10MB&quot;</span></span></code></pre></div>
 <h2 id="troubleshooting">Dépannage</h2>
-<h3 id="common-issues">Problèmes courants</h3>
+<h3 id="common-issues">Problèmes Fréquents</h3>
 <p><strong>MCP ne démarre pas :</strong></p>
 <div class="sourceCode" id="cb15"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les logs</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check logs</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs mcp-server</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Valider la configuration</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec mcp-server python <span class="at">-c</span> <span class="st">&quot;import yaml; yaml.safe_load(open(&#39;/app/config/mcp-config.yml&#39;))&quot;</span></span></code></pre></div>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Validate config</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec mcp-server python <span class="at">-c</span> <span class="st">&quot;import yaml; yaml.safe_load(open(&#39;/app/config/mcp-config.yml&#39;))&quot;</span></span>
+</code></pre></div>
 <p><strong>Modèle non chargé :</strong></p>
 <div class="sourceCode" id="cb16"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Télécharger le modèle manuellement</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull model manually</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec ollama ollama pull mistral:7b</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les modèles disponibles</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check available models</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec ollama ollama list</span></code></pre></div>
 <p><strong>Connexion refusée :</strong></p>
 <div class="sourceCode" id="cb17"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier si les services sont en cours d&#39;exécution</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if services are running</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester la connectivité</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test connectivity</span></span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://localhost:5000/health</span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> http://localhost:11434/api/version</span></code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
-<p>MCP offre un framework flexible pour l'intégration de l'IA. Une configuration YAML appropriée est essentielle pour un déploiement fiable. Commencez par la configuration de base, puis ajoutez progressivement des outils et des modèles selon vos besoins.</p>
-<p><strong>Points clés à retenir :</strong> - Utiliser des variables d'environnement pour les secrets - Commencer par une configuration minimale - Tester chaque outil avant de l'activer - Surveiller l'utilisation des ressources - Conserver les configurations sous contrôle de version</p>
+<p>MCP offre un framework flexible pour l'intégration de l'IA. Une configuration YAML appropriée est essentielle pour un déploiement fiable. Commencez par la configuration de base, puis ajoutez progressivement des outils et des modèles si nécessaire.</p>
+<p><strong>Points Clés :</strong> - Utilisez des variables d'environnement pour les secrets - Commencez par une configuration minimale - Testez chaque outil avant de l'activer - Surveillez l'utilisation des ressources - Conservez les configurations sous contrôle de version</p>
 <p><em>Pour plus d'informations : <a
 href="https://github.com/modularcopilot/mcp">MCP GitHub</a></em>
 <!-- Touched: Wed Nov 19 13:33:27 +01 2025 -->
@@ -367,11 +371,11 @@ href="https://github.com/modularcopilot/mcp">MCP GitHub</a></em>
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en Formation | Passionné de cybersécurité</p>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Liens rapides</h4>
+                    <h4>Liens Rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
                         <li><a href="/index.html#about">À propos</a></li>
@@ -398,12 +402,12 @@ href="https://github.com/modularcopilot/mcp">MCP GitHub</a></em>
 
             <div class="footer-bottom">
                 <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
-                <p>Conçu avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
             </div>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Retour en haut">
+    <button class="back-to-top" aria-label="Retour en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 
