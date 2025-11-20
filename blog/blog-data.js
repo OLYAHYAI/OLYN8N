@@ -1,114 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "id": "ssl-certificate-configuration-prompt-securing-homelab",
+            "title": "Ssl Certificate Configuration Prompt Securing Homelab",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+            "url": "/en/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
         },
         {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "id": "ssl-certificate-configuration-prompt-securing-homelab",
+            "title": "Ssl Certificate Configuration Prompt Securing Homelab",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+            "url": "/fr/infrastructure/ssl-certificate-configuration-prompt-securing-homelab.html"
         },
         {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
+            "title": "Network Architecture Prompt Dns Tls Reverse Proxies",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+            "url": "/en/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
         },
         {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "id": "network-architecture-prompt-dns-tls-reverse-proxies",
+            "title": "Network Architecture Prompt Dns Tls Reverse Proxies",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+            "url": "/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html"
         },
         {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "id": "network-consciousness-vlan-learning-journey",
+            "title": "Network Consciousness Vlan Learning Journey",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
+            "url": "/en/infrastructure/network-consciousness-vlan-learning-journey.html"
         },
         {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "id": "network-consciousness-vlan-learning-journey",
+            "title": "Network Consciousness Vlan Learning Journey",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
+            "url": "/fr/infrastructure/network-consciousness-vlan-learning-journey.html"
         },
         {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
+            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+            "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html"
+            "url": "/en/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
         },
         {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
+            "id": "tracing-my-homelab-journey-roadmap-self-hosted-services",
+            "title": "Tracing My Homelab Journey Roadmap Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html"
+            "url": "/fr/infrastructure/tracing-my-homelab-journey-roadmap-self-hosted-services.html"
         },
         {
-            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
-            "title": "Building A Secure Lab: Kali Linux And Pfsense Deployment",
+            "id": "n8n-automation-roadmap-llm-enhanced-publishing",
+            "title": "N8n Automation Roadmap Llm Enhanced Publishing",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
+            "url": "/en/infrastructure/n8n-automation-roadmap-llm-enhanced-publishing.html"
         },
         {
-            "id": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
-            "title": "Building A Secure Lab: Kali Linux And Pfsense Deployment",
+            "id": "n8n-automation-roadmap-llm-enhanced-publishing",
+            "title": "N8n Automation Roadmap Llm Enhanced Publishing",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
+            "url": "/fr/infrastructure/n8n-automation-roadmap-llm-enhanced-publishing.html"
         }
     ],
     "categories": {
