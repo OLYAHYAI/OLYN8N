@@ -1,5 +1,5 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-20T23:17:56.201Z",
+  "lastUpdated": "2025-11-20T23:26:42.544Z",
   "totalArticles": 10,
   "categories": {
     "infrastructure": {
@@ -7,10 +7,212 @@ var ARTICLE_INDEX={
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "proxmox-vm-maintenance-routine-complete-guide",
+            "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "vm-disk-expansion-guide-proxmox-linux",
+            "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "a-roadmap-to-self-hosted-services",
+            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "proxmox-vm-maintenance-routine-complete-guide",
+            "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "vm-disk-expansion-guide-proxmox-linux",
+            "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "a-roadmap-to-self-hosted-services",
+            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 10
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -27,212 +229,10 @@ var ARTICLE_INDEX={
       "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt",
       "articles": {
-        "en": [
-          {
-            "id": "troubleshooting-pfsense-web-interface-access",
-            "title": "Troubleshooting Pfsense Web Interface Access",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "troubleshooting-pfsense-web-interface-access",
-            "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-            "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
-            "title": "Securing N8n Workflows Deep Dive Dns Tls",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-            "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "setting-up-secure-reverse-proxy-https",
-            "title": "Setting Up Secure Reverse Proxy Https",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "setting-up-secure-reverse-proxy-https",
-            "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-            "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "building-secure-homelab-network-vlans-architecture",
-            "title": "Building Secure Homelab Network Vlans Architecture",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-secure-homelab-network-vlans-architecture",
-            "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-            "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "troubleshooting-pfsense-web-interface-access",
-            "title": "Troubleshooting Pfsense Web Interface Access",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "troubleshooting-pfsense-web-interface-access",
-            "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-            "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
-            "title": "Securing N8n Workflows Deep Dive Dns Tls",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-            "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "setting-up-secure-reverse-proxy-https",
-            "title": "Setting Up Secure Reverse Proxy Https",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "setting-up-secure-reverse-proxy-https",
-            "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-            "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "building-secure-homelab-network-vlans-architecture",
-            "title": "Building Secure Homelab Network Vlans Architecture",
-            "description": "",
-            "excerpt": "",
-            "category": "network_security",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "network_security"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-secure-homelab-network-vlans-architecture",
-            "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
-            "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 10
+      "total": 0
     },
     "remote_access": {
       "name": "Remote Access",
@@ -271,200 +271,200 @@ var ARTICLE_INDEX={
   },
   "articles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting Pfsense Web Interface Access",
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting Pfsense Web Interface Access",
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
-      "title": "Securing N8n Workflows Deep Dive Dns Tls",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
-      "title": "Securing N8n Workflows Deep Dive Dns Tls",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
-      "title": "Setting Up Secure Reverse Proxy Https",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
-      "title": "Setting Up Secure Reverse Proxy Https",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-secure-homelab-network-vlans-architecture",
-      "title": "Building Secure Homelab Network Vlans Architecture",
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-secure-homelab-network-vlans-architecture",
-      "title": "Building Secure Homelab Network Vlans Architecture",
-      "description": "",
-      "excerpt": "",
-      "category": "network_security",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "network_security"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -474,9 +474,9 @@ var ARTICLE_INDEX={
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 10,
+      "en": 5,
+      "fr": 5,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -490,9 +490,9 @@ var ARTICLE_INDEX={
     },
     "network_security": {
       "name": "Network Security",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt"
     },
@@ -523,200 +523,200 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting Pfsense Web Interface Access",
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting Pfsense Web Interface Access",
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
-      "title": "Securing N8n Workflows Deep Dive Dns Tls",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "securing-n8n-workflows-deep-dive-dns-tls",
-      "title": "Securing N8n Workflows Deep Dive Dns Tls",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
-      "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
-      "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
-      "title": "Setting Up Secure Reverse Proxy Https",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "setting-up-secure-reverse-proxy-https",
-      "title": "Setting Up Secure Reverse Proxy Https",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "setting-up-secure-reverse-proxy-https",
-      "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-      "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-secure-homelab-network-vlans-architecture",
-      "title": "Building Secure Homelab Network Vlans Architecture",
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-secure-homelab-network-vlans-architecture",
-      "title": "Building Secure Homelab Network Vlans Architecture",
-      "description": "",
-      "excerpt": "",
-      "category": "network_security",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "network_security"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-homelab-network-vlans-architecture",
-      "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,20 +725,20 @@ var ARTICLE_INDEX={
   ],
   "featuredArticles": [
     {
-      "id": "troubleshooting-pfsense-web-interface-access",
-      "title": "Troubleshooting Pfsense Web Interface Access",
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
       "description": "",
       "excerpt": "",
-      "category": "network_security",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "network_security"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "troubleshooting-pfsense-web-interface-access",
-      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +747,16 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/network_security/troubleshooting-pfsense-web-interface-access": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "fr/network_security/troubleshooting-pfsense-web-interface-access": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
-      "en/network_security/securing-n8n-workflows-deep-dive-dns-tls": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "fr/network_security/securing-n8n-workflows-deep-dive-dns-tls": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
-      "en/network_security/ssl-certificate-saga-local-dns-nginx-homelab": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
-      "en/network_security/setting-up-secure-reverse-proxy-https": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
-      "fr/network_security/setting-up-secure-reverse-proxy-https": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
-      "en/network_security/building-secure-homelab-network-vlans-architecture": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
-      "fr/network_security/building-secure-homelab-network-vlans-architecture": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html"
+      "en/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "en/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "fr/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "en/infrastructure/a-roadmap-to-self-hosted-services": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +786,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-20T23:17:56.201Z",
+  "generatedAt": "2025-11-20T23:26:42.587Z",
   "version": "1.0"
 };

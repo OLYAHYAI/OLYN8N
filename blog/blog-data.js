@@ -1,114 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "troubleshooting-pfsense-web-interface-access",
-            "title": "Troubleshooting Pfsense Web Interface Access",
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../en/network_security/troubleshooting-pfsense-web-interface-access.html"
+            "url": "../en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
         },
         {
-            "id": "troubleshooting-pfsense-web-interface-access",
-            "title": "Troubleshooting Pfsense Web Interface Access",
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../fr/network_security/troubleshooting-pfsense-web-interface-access.html"
+            "url": "../fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
         },
         {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
-            "title": "Securing N8n Workflows Deep Dive Dns Tls",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html"
+            "url": "../en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "securing-n8n-workflows-deep-dive-dns-tls",
-            "title": "Securing N8n Workflows Deep Dive Dns Tls",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html"
+            "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html"
+            "url": "../en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
         },
         {
-            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
-            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html"
+            "url": "../fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
         },
         {
-            "id": "setting-up-secure-reverse-proxy-https",
-            "title": "Setting Up Secure Reverse Proxy Https",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../en/network_security/setting-up-secure-reverse-proxy-https.html"
+            "url": "../en/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "setting-up-secure-reverse-proxy-https",
-            "title": "Setting Up Secure Reverse Proxy Https",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../fr/network_security/setting-up-secure-reverse-proxy-https.html"
+            "url": "../fr/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "building-secure-homelab-network-vlans-architecture",
-            "title": "Building Secure Homelab Network Vlans Architecture",
+            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../en/network_security/building-secure-homelab-network-vlans-architecture.html"
+            "url": "../fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
         },
         {
-            "id": "building-secure-homelab-network-vlans-architecture",
-            "title": "Building Secure Homelab Network Vlans Architecture",
+            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
             "excerpt": "",
-            "category": "network_security",
+            "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
-                "network_security"
+                "infrastructure"
             ],
-            "url": "../fr/network_security/building-secure-homelab-network-vlans-architecture.html"
+            "url": "../en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
         }
     ],
     "categories": {
