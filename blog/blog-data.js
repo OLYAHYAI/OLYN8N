@@ -1,26 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "docker-networking-troubleshooting-container-communication",
-            "title": "Docker Networking Troubleshooting Container Communication",
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
+            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
             "excerpt": "",
-            "category": "docker_services",
+            "category": "automation_ai",
             "date": "2025-11-20",
             "tags": [
-                "docker_services"
+                "automation_ai"
             ],
-            "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html"
+            "url": "../en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html"
         },
         {
-            "id": "docker-networking-troubleshooting-container-communication",
-            "title": "Docker Networking Troubleshooting Container Communication",
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
+            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
             "excerpt": "",
-            "category": "docker_services",
+            "category": "automation_ai",
             "date": "2025-11-20",
             "tags": [
-                "docker_services"
+                "automation_ai"
             ],
-            "url": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html"
+            "url": "../fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html"
+        },
+        {
+            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "excerpt": "",
+            "category": "automation_ai",
+            "date": "2025-11-20",
+            "tags": [
+                "automation_ai"
+            ],
+            "url": "../en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
+        },
+        {
+            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "excerpt": "",
+            "category": "automation_ai",
+            "date": "2025-11-20",
+            "tags": [
+                "automation_ai"
+            ],
+            "url": "../fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
+        },
+        {
+            "id": "multi-agent-ai-collaboration-building-portfolio-website",
+            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+            "excerpt": "",
+            "category": "automation_ai",
+            "date": "2025-11-20",
+            "tags": [
+                "automation_ai"
+            ],
+            "url": "../en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html"
+        },
+        {
+            "id": "multi-agent-ai-collaboration-building-portfolio-website",
+            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+            "excerpt": "",
+            "category": "automation_ai",
+            "date": "2025-11-20",
+            "tags": [
+                "automation_ai"
+            ],
+            "url": "../fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html"
+        },
+        {
+            "id": "mcp-configuration-guide-yaml-setup",
+            "title": "Mcp Configuration Guide Yaml Setup",
+            "excerpt": "",
+            "category": "automation_ai",
+            "date": "2025-11-20",
+            "tags": [
+                "automation_ai"
+            ],
+            "url": "../en/automation_ai/mcp-configuration-guide-yaml-setup.html"
+        },
+        {
+            "id": "mcp-configuration-guide-yaml-setup",
+            "title": "Mcp Configuration Guide Yaml Setup",
+            "excerpt": "",
+            "category": "automation_ai",
+            "date": "2025-11-20",
+            "tags": [
+                "automation_ai"
+            ],
+            "url": "../fr/automation_ai/mcp-configuration-guide-yaml-setup.html"
+        },
+        {
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Obsidian Auto Sync To Github Website",
+            "excerpt": "",
+            "category": "automation_ai",
+            "date": "2025-11-20",
+            "tags": [
+                "automation_ai"
+            ],
+            "url": "../en/automation_ai/obsidian-auto-sync-to-github-website.html"
+        },
+        {
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Obsidian Auto Sync To Github Website",
+            "excerpt": "",
+            "category": "automation_ai",
+            "date": "2025-11-20",
+            "tags": [
+                "automation_ai"
+            ],
+            "url": "../fr/automation_ai/obsidian-auto-sync-to-github-website.html"
         }
     ],
     "categories": {
