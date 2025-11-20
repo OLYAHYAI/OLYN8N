@@ -1,70 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "certifications",
-            "title": "Google Cybersecurity Professional Certificate",
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting Pfsense Web Interface Access",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-20",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "../en/reference/certifications.html"
+            "url": "../en/network_security/troubleshooting-pfsense-web-interface-access.html"
         },
         {
-            "id": "certifications",
-            "title": "Google Cybersecurity Professional Certificate",
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting Pfsense Web Interface Access",
             "excerpt": "",
-            "category": "reference",
+            "category": "network_security",
             "date": "2025-11-20",
             "tags": [
-                "reference"
+                "network_security"
             ],
-            "url": "../fr/reference/certifications.html"
+            "url": "../fr/network_security/troubleshooting-pfsense-web-interface-access.html"
         },
         {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing N8n Workflows Deep Dive Dns Tls",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "network_security",
             "date": "2025-11-20",
             "tags": [
-                "infrastructure"
+                "network_security"
             ],
-            "url": "../en/infrastructure/proxmox-ve-initial-setup-session-notes.html"
+            "url": "../en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html"
         },
         {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing N8n Workflows Deep Dive Dns Tls",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "network_security",
             "date": "2025-11-20",
             "tags": [
-                "infrastructure"
+                "network_security"
             ],
-            "url": "../fr/infrastructure/proxmox-ve-initial-setup-session-notes.html"
+            "url": "../fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html"
         },
         {
-            "id": "getting-proxmox-pfsense-back-online-network-rescue",
-            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "network_security",
             "date": "2025-11-20",
             "tags": [
-                "infrastructure"
+                "network_security"
             ],
-            "url": "../en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
+            "url": "../en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html"
         },
         {
-            "id": "getting-proxmox-pfsense-back-online-network-rescue",
-            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "network_security",
             "date": "2025-11-20",
             "tags": [
-                "infrastructure"
+                "network_security"
             ],
-            "url": "../fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
+            "url": "../fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html"
+        },
+        {
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "Setting Up Secure Reverse Proxy Https",
+            "excerpt": "",
+            "category": "network_security",
+            "date": "2025-11-20",
+            "tags": [
+                "network_security"
+            ],
+            "url": "../en/network_security/setting-up-secure-reverse-proxy-https.html"
+        },
+        {
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "Setting Up Secure Reverse Proxy Https",
+            "excerpt": "",
+            "category": "network_security",
+            "date": "2025-11-20",
+            "tags": [
+                "network_security"
+            ],
+            "url": "../fr/network_security/setting-up-secure-reverse-proxy-https.html"
+        },
+        {
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building Secure Homelab Network Vlans Architecture",
+            "excerpt": "",
+            "category": "network_security",
+            "date": "2025-11-20",
+            "tags": [
+                "network_security"
+            ],
+            "url": "../en/network_security/building-secure-homelab-network-vlans-architecture.html"
+        },
+        {
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building Secure Homelab Network Vlans Architecture",
+            "excerpt": "",
+            "category": "network_security",
+            "date": "2025-11-20",
+            "tags": [
+                "network_security"
+            ],
+            "url": "../fr/network_security/building-secure-homelab-network-vlans-architecture.html"
         }
     ],
     "categories": {

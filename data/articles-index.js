@@ -1,98 +1,16 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-20T22:59:22.723Z",
-  "totalArticles": 6,
+  "lastUpdated": "2025-11-20T23:13:00.430Z",
+  "totalArticles": 10,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
-        "en": [
-          {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "proxmox-ve-initial-setup-session-notes",
-            "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "getting-proxmox-pfsense-back-online-network-rescue",
-            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "getting-proxmox-pfsense-back-online-network-rescue",
-            "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-            "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "proxmox-ve-initial-setup-session-notes",
-            "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "getting-proxmox-pfsense-back-online-network-rescue",
-            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "getting-proxmox-pfsense-back-online-network-rescue",
-            "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-            "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 4
+      "total": 0
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -109,10 +27,212 @@ var ARTICLE_INDEX={
       "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting Pfsense Web Interface Access",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "troubleshooting-pfsense-web-interface-access",
+            "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+            "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing N8n Workflows Deep Dive Dns Tls",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+            "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "Setting Up Secure Reverse Proxy Https",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "setting-up-secure-reverse-proxy-https",
+            "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+            "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building Secure Homelab Network Vlans Architecture",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-homelab-network-vlans-architecture",
+            "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+            "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "troubleshooting-pfsense-web-interface-access",
+            "title": "Troubleshooting Pfsense Web Interface Access",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "troubleshooting-pfsense-web-interface-access",
+            "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+            "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "securing-n8n-workflows-deep-dive-dns-tls",
+            "title": "Securing N8n Workflows Deep Dive Dns Tls",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+            "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+            "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "setting-up-secure-reverse-proxy-https",
+            "title": "Setting Up Secure Reverse Proxy Https",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "setting-up-secure-reverse-proxy-https",
+            "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+            "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-homelab-network-vlans-architecture",
+            "title": "Building Secure Homelab Network Vlans Architecture",
+            "description": "",
+            "excerpt": "",
+            "category": "network_security",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "network_security"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-homelab-network-vlans-architecture",
+            "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+            "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 10
     },
     "remote_access": {
       "name": "Remote Access",
@@ -129,52 +249,10 @@ var ARTICLE_INDEX={
       "description": "Quick guides configuration reference",
       "icon": "fas fa-book",
       "articles": {
-        "en": [
-          {
-            "id": "certifications",
-            "title": "Google Cybersecurity Professional Certificate",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "certifications",
-            "url": "/en/reference/certifications.html",
-            "filePath": "/en/reference/certifications.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "certifications",
-            "title": "Google Cybersecurity Professional Certificate",
-            "description": "",
-            "excerpt": "",
-            "category": "reference",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "reference"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "certifications",
-            "url": "/fr/reference/certifications.html",
-            "filePath": "/fr/reference/certifications.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 2
+      "total": 0
     },
     "docker_services": {
       "name": "Docker Services",
@@ -188,125 +266,205 @@ var ARTICLE_INDEX={
     }
   },
   "languages": {
-    "en": 3,
-    "fr": 3
+    "en": 5,
+    "fr": 5
   },
   "articles": [
     {
-      "id": "certifications",
-      "title": "Google Cybersecurity Professional Certificate",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting Pfsense Web Interface Access",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/en/reference/certifications.html",
-      "filePath": "/en/reference/certifications.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "certifications",
-      "title": "Google Cybersecurity Professional Certificate",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting Pfsense Web Interface Access",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/fr/reference/certifications.html",
-      "filePath": "/fr/reference/certifications.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
+      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "title": "Securing N8n Workflows Deep Dive Dns Tls",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": true,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+      "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "getting-proxmox-pfsense-back-online-network-rescue",
-      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "title": "Securing N8n Workflows Deep Dive Dns Tls",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "network_security",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+      "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
-      "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-      "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "getting-proxmox-pfsense-back-online-network-rescue",
-      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
-      "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-      "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "setting-up-secure-reverse-proxy-https",
+      "title": "Setting Up Secure Reverse Proxy Https",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "setting-up-secure-reverse-proxy-https",
+      "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "setting-up-secure-reverse-proxy-https",
+      "title": "Setting Up Secure Reverse Proxy Https",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "setting-up-secure-reverse-proxy-https",
+      "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-secure-homelab-network-vlans-architecture",
+      "title": "Building Secure Homelab Network Vlans Architecture",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-secure-homelab-network-vlans-architecture",
+      "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-secure-homelab-network-vlans-architecture",
+      "title": "Building Secure Homelab Network Vlans Architecture",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-secure-homelab-network-vlans-architecture",
+      "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -316,9 +474,9 @@ var ARTICLE_INDEX={
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 4,
-      "en": 2,
-      "fr": 2,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -332,9 +490,9 @@ var ARTICLE_INDEX={
     },
     "network_security": {
       "name": "Network Security",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 10,
+      "en": 5,
+      "fr": 5,
       "description": "Firewall SSL/TLS reverse proxies security",
       "icon": "fas fa-shield-alt"
     },
@@ -348,9 +506,9 @@ var ARTICLE_INDEX={
     },
     "reference": {
       "name": "Reference",
-      "total": 2,
-      "en": 1,
-      "fr": 1,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "Quick guides configuration reference",
       "icon": "fas fa-book"
     },
@@ -365,120 +523,200 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "certifications",
-      "title": "Google Cybersecurity Professional Certificate",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting Pfsense Web Interface Access",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/en/reference/certifications.html",
-      "filePath": "/en/reference/certifications.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "certifications",
-      "title": "Google Cybersecurity Professional Certificate",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting Pfsense Web Interface Access",
       "description": "",
       "excerpt": "",
-      "category": "reference",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "reference"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/fr/reference/certifications.html",
-      "filePath": "/fr/reference/certifications.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
+      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "title": "Securing N8n Workflows Deep Dive Dns Tls",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": true,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+      "url": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "filePath": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "getting-proxmox-pfsense-back-online-network-rescue",
-      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+      "id": "securing-n8n-workflows-deep-dive-dns-tls",
+      "title": "Securing N8n Workflows Deep Dive Dns Tls",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "network_security",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "securing-n8n-workflows-deep-dive-dns-tls",
+      "url": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "filePath": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
-      "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-      "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "url": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "filePath": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "getting-proxmox-pfsense-back-online-network-rescue",
-      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+      "id": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "title": "Ssl Certificate Saga Local Dns Nginx Homelab",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "network_security",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
-      "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-      "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "slug": "ssl-certificate-saga-local-dns-nginx-homelab",
+      "url": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "filePath": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "setting-up-secure-reverse-proxy-https",
+      "title": "Setting Up Secure Reverse Proxy Https",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "setting-up-secure-reverse-proxy-https",
+      "url": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "filePath": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "setting-up-secure-reverse-proxy-https",
+      "title": "Setting Up Secure Reverse Proxy Https",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "setting-up-secure-reverse-proxy-https",
+      "url": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "filePath": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-secure-homelab-network-vlans-architecture",
+      "title": "Building Secure Homelab Network Vlans Architecture",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-secure-homelab-network-vlans-architecture",
+      "url": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "filePath": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-secure-homelab-network-vlans-architecture",
+      "title": "Building Secure Homelab Network Vlans Architecture",
+      "description": "",
+      "excerpt": "",
+      "category": "network_security",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "network_security"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-secure-homelab-network-vlans-architecture",
+      "url": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "filePath": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -487,40 +725,20 @@ var ARTICLE_INDEX={
   ],
   "featuredArticles": [
     {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
+      "id": "troubleshooting-pfsense-web-interface-access",
+      "title": "Troubleshooting Pfsense Web Interface Access",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "network_security",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "infrastructure"
+        "network_security"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": true,
-      "status": "published"
-    },
-    {
-      "id": "certifications",
-      "title": "Google Cybersecurity Professional Certificate",
-      "description": "",
-      "excerpt": "",
-      "category": "reference",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "reference"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "certifications",
-      "url": "/en/reference/certifications.html",
-      "filePath": "/en/reference/certifications.html",
+      "slug": "troubleshooting-pfsense-web-interface-access",
+      "url": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "filePath": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -529,12 +747,16 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/reference/certifications": "/en/reference/certifications.html",
-      "fr/reference/certifications": "/fr/reference/certifications.html",
-      "en/infrastructure/proxmox-ve-initial-setup-session-notes": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "fr/infrastructure/proxmox-ve-initial-setup-session-notes": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
-      "fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
+      "en/network_security/troubleshooting-pfsense-web-interface-access": "/en/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "fr/network_security/troubleshooting-pfsense-web-interface-access": "/fr/network_security/troubleshooting-pfsense-web-interface-access.html",
+      "en/network_security/securing-n8n-workflows-deep-dive-dns-tls": "/en/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "fr/network_security/securing-n8n-workflows-deep-dive-dns-tls": "/fr/network_security/securing-n8n-workflows-deep-dive-dns-tls.html",
+      "en/network_security/ssl-certificate-saga-local-dns-nginx-homelab": "/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab": "/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html",
+      "en/network_security/setting-up-secure-reverse-proxy-https": "/en/network_security/setting-up-secure-reverse-proxy-https.html",
+      "fr/network_security/setting-up-secure-reverse-proxy-https": "/fr/network_security/setting-up-secure-reverse-proxy-https.html",
+      "en/network_security/building-secure-homelab-network-vlans-architecture": "/en/network_security/building-secure-homelab-network-vlans-architecture.html",
+      "fr/network_security/building-secure-homelab-network-vlans-architecture": "/fr/network_security/building-secure-homelab-network-vlans-architecture.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -564,6 +786,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-20T22:59:22.725Z",
+  "generatedAt": "2025-11-20T23:13:00.430Z",
   "version": "1.0"
 };
