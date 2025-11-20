@@ -1,114 +1,26 @@
 const blogData = {
     "articles": [
         {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+            "url": "../en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-20",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
-        },
-        {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
-        },
-        {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
-        },
-        {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
-        },
-        {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
-        },
-        {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/roadmap-infrastructure.html"
-        },
-        {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/roadmap-infrastructure.html"
-        },
-        {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/proxmox-ve-initial-setup-session-notes.html"
-        },
-        {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-20",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/proxmox-ve-initial-setup-session-notes.html"
+            "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         }
     ],
     "categories": {

@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-11-20T23:52:38.914Z",
-  "totalArticles": 10,
+  "lastUpdated": "2025-11-20T23:56:38.491Z",
+  "totalArticles": 2,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
@@ -9,8 +9,8 @@
       "articles": {
         "en": [
           {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -20,99 +20,19 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "proxmox-vm-maintenance-routine-complete-guide",
-            "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-            "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "vm-disk-expansion-guide-proxmox-linux",
-            "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-            "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "url": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-            "filePath": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "roadmap-infrastructure",
-            "url": "/en/infrastructure/roadmap-infrastructure.html",
-            "filePath": "/en/infrastructure/roadmap-infrastructure.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "proxmox-ve-initial-setup-session-notes",
-            "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
             "status": "published"
           }
         ],
         "fr": [
           {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -122,89 +42,9 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "proxmox-vm-maintenance-routine-complete-guide",
-            "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-            "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "vm-disk-expansion-guide-proxmox-linux",
-            "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-            "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "url": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-            "filePath": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "roadmap-infrastructure",
-            "url": "/fr/infrastructure/roadmap-infrastructure.html",
-            "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "proxmox-ve-initial-setup-session-notes",
-            "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -212,7 +52,7 @@
           }
         ]
       },
-      "total": 10
+      "total": 2
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -266,13 +106,13 @@
     }
   },
   "languages": {
-    "en": 5,
-    "fr": 5
+    "en": 1,
+    "fr": 1
   },
   "articles": [
     {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -282,17 +122,17 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -302,169 +142,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "vm-disk-expansion-guide-proxmox-linux",
-      "title": "Vm Disk Expansion Guide Proxmox Linux",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "vm-disk-expansion-guide-proxmox-linux",
-      "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "vm-disk-expansion-guide-proxmox-linux",
-      "title": "Vm Disk Expansion Guide Proxmox Linux",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "vm-disk-expansion-guide-proxmox-linux",
-      "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "url": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "filePath": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "url": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "filePath": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/fr/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/en/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/en/infrastructure/roadmap-infrastructure.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -474,9 +154,9 @@
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -523,8 +203,8 @@
   },
   "recentArticles": [
     {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -534,17 +214,17 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -554,169 +234,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "vm-disk-expansion-guide-proxmox-linux",
-      "title": "Vm Disk Expansion Guide Proxmox Linux",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "vm-disk-expansion-guide-proxmox-linux",
-      "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "vm-disk-expansion-guide-proxmox-linux",
-      "title": "Vm Disk Expansion Guide Proxmox Linux",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "vm-disk-expansion-guide-proxmox-linux",
-      "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "url": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "filePath": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "url": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "filePath": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/fr/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/en/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/en/infrastructure/roadmap-infrastructure.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,8 +245,8 @@
   ],
   "featuredArticles": [
     {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -736,9 +256,9 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +267,8 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "en/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "fr/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "fr/infrastructure/roadmap-infrastructure": "/fr/infrastructure/roadmap-infrastructure.html",
-      "en/infrastructure/roadmap-infrastructure": "/en/infrastructure/roadmap-infrastructure.html",
-      "en/infrastructure/proxmox-ve-initial-setup-session-notes": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "fr/infrastructure/proxmox-ve-initial-setup-session-notes": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html"
+      "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +298,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-20T23:52:38.915Z",
+  "generatedAt": "2025-11-20T23:56:38.492Z",
   "version": "1.0"
 }
