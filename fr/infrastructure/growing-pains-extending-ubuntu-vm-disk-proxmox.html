@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Difficultés rencontrées lors de l'extension du disque d'une VM Ubuntu sur Proxmox - Tutoriel et guide technique">
+    <meta name="description" content="Difficultés d'extension du disque d'une VM Ubuntu sur Proxmox - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Difficultés lors de l'extension du disque d'une VM Ubuntu sur Proxmox | Blog Technique d'Omar LYAHYAI</title>
+    <title>Difficultés d'extension du disque d'une VM Ubuntu sur Proxmox | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html" class="lang-toggle" aria-label="Changer de langue">
+                    <a href="/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html" class="lang-toggle" aria-label="Changer de langue">
                         <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -58,7 +58,7 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="En-tête de l'article">
+        <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
                     <nav class="breadcrumb" aria-label="Fil d'Ariane">
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Difficultés lors de l'extension du disque d'une VM Ubuntu sur Proxmox</span>
+                        <span>Difficultés d'extension du disque d'une VM Ubuntu sur Proxmox</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Difficultés lors de l'extension du disque d'une VM Ubuntu sur Proxmox</h1>
+                <h1 class="article-title">Difficultés d'extension du disque d'une VM Ubuntu sur Proxmox</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -95,7 +95,7 @@
             </div>
         </section>
 
-        <section class="article-content" role="region" aria-label="Contenu de l'article">
+        <section class="article-content" role="region" aria-label="Article content">
             <div class="container">
                 <div class="article-body">
                     <!-- 
@@ -123,250 +123,254 @@ The workflow will:
 - Preserve images and links
 -->
 <h1
-id="growing-pains-extending-the-disk-of-my-ubuntu-vm-on-proxmox">Difficultés : Extension du disque de ma VM Ubuntu sur Proxmox</h1>
+id="growing-pains-extending-the-disk-of-my-ubuntu-vm-on-proxmox">Difficultés : Étendre le disque de ma VM Ubuntu sur Proxmox</h1>
 <h2 id="the-problem">Le Problème</h2>
 <p>Vous avez augmenté la taille du disque dans Proxmox (de 32 Go à 100 Go), mais Ubuntu n'affiche toujours que 32 Go disponibles lorsque vous exécutez <code>df -h</code>. Le disque a été redimensionné au niveau de l'hyperviseur, mais le système d'exploitation n'a pas encore reconnu le nouvel espace.</p>
-<p>Il s'agit d'un scénario courant dans la gestion d'un homelab, et comprendre la solution appropriée démontre une compétence en matière d'infrastructure.</p>
-<h2 id="understanding-the-layers">Comprendre les Couches</h2>
+<p>Ceci est un scénario courant dans la gestion de homelab, et comprendre la résolution appropriée démontre une compétence en infrastructure.</p>
+<h2 id="understanding-the-layers">Comprendre les couches</h2>
 <p>Lors du redimensionnement des disques de VM, vous travaillez avec trois couches distinctes :</p>
-<pre><code>Layer 1: Hypervisor (Proxmox)
+<pre><code>Couche 1: Hyperviseur (Proxmox)
    ↓ Le redimensionnement du disque se produit ici (32 Go → 100 Go)
-Layer 2: Table de partition
+Couche 2: Table de partitions
    ↓ La partition doit être étendue
-Layer 3: Système de fichiers
+Couche 3: Système de fichiers
    ↓ Le système de fichiers doit être étendu pour remplir la partition</code></pre>
 <p><strong>Chaque couche doit être mise à jour séparément.</strong></p>
-<h2 id="initial-situation">Situation Initiale</h2>
-<h3 id="before-resize">Avant le Redimensionnement :</h3>
+<h2 id="initial-situation">Situation initiale</h2>
+<h3 id="before-resize">Avant le redimensionnement :</h3>
 <ul>
 <li>Proxmox affiche : Disque de 32 Go</li>
 <li>Ubuntu affiche : 32 Go disponibles sur <code>/</code></li>
 </ul>
-<h3 id="after-proxmox-resize">Après le Redimensionnement Proxmox :</h3>
+<h3 id="after-proxmox-resize">Après le redimensionnement dans Proxmox :</h3>
 <ul>
 <li>Proxmox affiche : Disque de 100 Go ✓</li>
 <li>Ubuntu affiche : 32 Go disponibles sur <code>/</code> ❌</li>
 </ul>
-<p><strong>Écart</strong>: 68 Go d'espace non alloué</p>
-<h2 id="step-by-step-resolution">Résolution Étape par Étape</h2>
-<h3 id="step-1-verify-the-new-disk-size">Étape 1 : Vérifier la Nouvelle Taille du Disque</h3>
+<p><strong>Écart</strong> : 68 Go d'espace non alloué</p>
+<h2 id="step-by-step-resolution">Résolution étape par étape</h2>
+<h3 id="step-1-verify-the-new-disk-size">Étape 1 : Vérifier la nouvelle taille du disque</h3>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check disk and partition layout</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le disque et la disposition des partitions</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lsblk</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Example output:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de sortie :</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">NAME</span>   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">sda</span>      8:0    0  100G  0 disk           <span class="co"># ✓ Disk shows 100G</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">sda</span>      8:0    0  100G  0 disk           <span class="co"># ✓ Le disque affiche 100 Go</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">├─sda1</span>   8:1    0    1M  0 part           <span class="co"># EFI/BIOS boot</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">└─sda2</span>   8:2    0   32G  0 part /         <span class="co"># ❌ Partition still 32G</span></span></code></pre></div>
-<p><strong>Observation Clé</strong>: - <code>sda</code> (disque) affiche 100 Go ✓ - <code>sda2</code> (partition) affiche 32 Go ❌ - Espace non alloué : 68 Go (100 Go - 32 Go)</p>
-<h3 id="step-2-install-required-tools">Étape 2 : Installer les Outils Nécessaires</h3>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">└─sda2</span>   8:2    0   32G  0 part /         <span class="co"># ❌ La partition est toujours à 32 Go</span></span></code></pre></div>
+<p><strong>Observation clé</strong> : - <code>sda</code> (disque) affiche
+100 Go ✓ - <code>sda2</code> (partition) affiche 32 Go ❌ - Espace non alloué :
+68 Go (100 Go - 32 Go)</p>
+<h3 id="step-2-install-required-tools">Étape 2 : Installer les outils nécessaires</h3>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install cloud-guest-utils (provides growpart)</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer cloud-guest-utils (fournit growpart)</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install cloud-guest-utils <span class="at">-y</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternative: Install parted (if growpart unavailable)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternative : Installer parted (si growpart n'est pas disponible)</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install parted <span class="at">-y</span></span></code></pre></div>
-<h3 id="step-3-extend-the-partition">Étape 3 : Étendre la Partition</h3>
+<h3 id="step-3-extend-the-partition">Étape 3 : Étendre la partition</h3>
 <h4 id="using-growpart-recommended">Utilisation de growpart (Recommandé) :</h4>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend partition 2 on /dev/sda to fill available space</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Étendre la partition 2 sur /dev/sda pour remplir l'espace disponible</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> growpart /dev/sda 2</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sortie attendue :</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># CHANGED: partition=2 start=2048 old: size=67106816 end=67108864 new: size=209713119 end=209715167</span></span></code></pre></div>
 <h4 id="using-parted-alternative">Utilisation de parted (Alternative) :</h4>
 <div class="sourceCode" id="cb5"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Launch parted</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lancer parted</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> parted /dev/sda</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Inside parted:</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">parted</span><span class="kw">)</span> <span class="ex">print</span>                    <span class="co"># Show current layout</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">parted</span><span class="kw">)</span> <span class="ex">resizepart</span> 2 100%        <span class="co"># Resize partition 2 to 100% of disk</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">parted</span><span class="kw">)</span> <span class="ex">quit</span>                     <span class="co"># Exit parted</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">parted</span><span class="kw">)</span> <span class="ex">print</span>                    <span class="co"># Afficher la disposition actuelle</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">parted</span><span class="kw">)</span> <span class="ex">resizepart</span> 2 100%        <span class="co"># Redimensionner la partition 2 à 100 % du disque</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">parted</span><span class="kw">)</span> <span class="ex">quit</span>                     <span class="co"># Quitter parted</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ex">lsblk</span></span></code></pre></div>
-<h3 id="step-4-extend-the-filesystem">Étape 4 : Étendre le Système de Fichiers</h3>
-<p>La partition est maintenant plus grande, mais le système de fichiers pense toujours qu'il ne fait que 32 Go. Nous devons étendre le système de fichiers pour remplir la partition.</p>
-<h4 id="for-ext4-filesystems-most-common">Pour les Systèmes de Fichiers ext4 (Le plus courant) :</h4>
+<h3 id="step-4-extend-the-filesystem">Étape 4 : Étendre le système de fichiers</h3>
+<p>La partition est maintenant plus grande, mais le système de fichiers pense toujours qu'elle fait 32 Go. Nous devons étendre le système de fichiers pour qu'il remplisse la partition.</p>
+<h4 id="for-ext4-filesystems-most-common">Pour les systèmes de fichiers ext4 (Le plus courant) :</h4>
 <div class="sourceCode" id="cb6"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Resize ext4 filesystem on partition 2</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Redimensionner le système de fichiers ext4 sur la partition 2</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/sda2</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sortie attendue :</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># resize2fs 1.46.5 (30-Dec-2021)</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Filesystem at /dev/sda2 is mounted on /; on-line resizing required</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># old_desc_blocks = 4, new_desc_blocks = 13</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># The filesystem on /dev/sda2 is now 26214139 (4k) blocks long.</span></span></code></pre></div>
-<h4 id="for-xfs-filesystems">Pour les Systèmes de Fichiers XFS :</h4>
+<h4 id="for-xfs-filesystems">Pour les systèmes de fichiers XFS :</h4>
 <div class="sourceCode" id="cb7"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Resize XFS filesystem mounted on /</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Redimensionner le système de fichiers XFS monté sur /</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> xfs_growfs /</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or specify the device</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ou spécifier le périphérique</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> xfs_growfs /dev/sda2</span></code></pre></div>
 <h4 id="for-lvm-logical-volumes">Pour les Volumes Logiques LVM :</h4>
-<p>Si vous utilisez LVM (vérifiez avec <code>lsblk</code>) :</p>
+<p>Si vous utilisez LVM (vérifier avec <code>lsblk</code>) :</p>
 <div class="sourceCode" id="cb8"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend physical volume</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Étendre le volume physique</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pvresize /dev/sda2</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend logical volume (replace vg_name/lv_name with your actual names)</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Étendre le volume logique (remplacer vg_name/lv_name par vos noms réels)</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> lvextend <span class="at">-l</span> +100%FREE /dev/vg_name/lv_name</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Resize filesystem</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/vg_name/lv_name  <span class="co"># for ext4</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> xfs_growfs /  <span class="co"># for XFS</span></span></code></pre></div>
-<h3 id="step-5-verify-the-changes">Étape 5 : Vérifier les Changements</h3>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Redimensionner le système de fichiers</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/vg_name/lv_name  <span class="co"># pour ext4</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ou</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> xfs_growfs /  <span class="co"># pour XFS</span></span></code></pre></div>
+<h3 id="step-5-verify-the-changes">Étape 5 : Vérifier les modifications</h3>
 <div class="sourceCode" id="cb9"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check disk usage</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'utilisation du disque</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected output:</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sortie attendue :</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Filesystem      Size  Used Avail Use% Mounted on</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># /dev/sda2        98G   15G   79G  16% /          # ✓ Now shows ~100G!</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># /dev/sda2        98G   15G   79G  16% /          # ✓ Affiche maintenant ~100 Go !</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify with lsblk</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier avec lsblk</span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="ex">lsblk</span></span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Should show:</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Devrait afficher :</span></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># sda      8:0    0  100G  0 disk</span></span>
 <span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># ├─sda1   8:1    0    1M  0 part</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># └─sda2   8:2    0  100G  0 part /         # ✓ Partition now 100G</span></span></code></pre></div>
-<h2 id="understanding-the-commands">Comprendre les Commandes</h2>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># └─sda2   8:2    0  100G  0 part /         # ✓ Partition maintenant à 100 Go</span></span></code></pre></div>
+<h2 id="understanding-the-commands">Comprendre les commandes</h2>
 <h3 id="growpart"><code>growpart</code></h3>
 <ul>
-<li><strong>Objectif</strong>: Étend la partition pour remplir l'espace disque disponible</li>
-<li><strong>Sûr</strong>: Non destructif, préserve les données existantes</li>
-<li><strong>Utilisation</strong>:
+<li><strong>Objectif</strong> : Étendre la partition pour remplir l'espace disque disponible</li>
+<li><strong>Sûr</strong> : Non destructif, préserve les données existantes</li>
+<li><strong>Usage</strong> :
 <code>growpart &lt;device&gt; &lt;partition-number&gt;</code></li>
-<li><strong>Example</strong>: <code>growpart /dev/sda 2</code></li>
+<li><strong>Exemple</strong> : <code>growpart /dev/sda 2</code></li>
 </ul>
 <h3 id="resize2fs"><code>resize2fs</code></h3>
 <ul>
-<li><strong>Objectif</strong>: Étend les systèmes de fichiers ext2/ext3/ext4</li>
-<li><strong>En ligne</strong>: Fonctionne sur les systèmes de fichiers montés</li>
-<li><strong>Utilisation</strong>:
+<li><strong>Objectif</strong> : Étendre les systèmes de fichiers ext2/ext3/ext4</li>
+<li><strong>En ligne</strong> : Fonctionne sur les systèmes de fichiers montés</li>
+<li><strong>Usage</strong> :
 <code>resize2fs &lt;partition-device&gt;</code></li>
-<li><strong>Example</strong>: <code>resize2fs /dev/sda2</code></li>
+<li><strong>Exemple</strong> : <code>resize2fs /dev/sda2</code></li>
 </ul>
 <h3 id="xfs_growfs"><code>xfs_growfs</code></h3>
 <ul>
-<li><strong>Objectif</strong>: Étend les systèmes de fichiers XFS</li>
-<li><strong>Point de Montage</strong>: Nécessite le point de montage du système de fichiers (pas le périphérique)</li>
-<li><strong>Utilisation</strong>:
+<li><strong>Objectif</strong> : Étendre les systèmes de fichiers XFS</li>
+<li><strong>Point de montage</strong> : Nécessite le point de montage du système de fichiers (pas le périphérique)</li>
+<li><strong>Usage</strong> :
 <code>xfs_growfs &lt;mount-point&gt;</code></li>
-<li><strong>Example</strong>: <code>xfs_growfs /</code></li>
+<li><strong>Exemple</strong> : <code>xfs_growfs /</code></li>
 </ul>
-<h2 id="common-scenarios-and-solutions">Scénarios Courants et Solutions</h2>
-<h3 id="scenario-1-uefigpt-partition-table">Scénario 1 : Table de Partition UEFI/GPT</h3>
+<h2 id="common-scenarios-and-solutions">Scénarios courants et solutions</h2>
+<h3 id="scenario-1-uefigpt-partition-table">Scénario 1 : Table de partitions UEFI/GPT</h3>
 <div class="sourceCode" id="cb10"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check partition table type</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le type de table de partitions</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> parted /dev/sda print</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If GPT, growpart works automatically</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Si GPT, growpart fonctionne automatiquement</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> growpart /dev/sda 2</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/sda2</span></code></pre></div>
-<h3 id="scenario-2-mbrmsdos-partition-table">Scénario 2 : Table de Partition MBR/MSDOS</h3>
+<h3 id="scenario-2-mbrmsdos-partition-table">Scénario 2 : Table de partitions MBR/MSDOS</h3>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify partition table</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier la table de partitions</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> fdisk <span class="at">-l</span> /dev/sda</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use parted for MBR tables</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Utiliser parted pour les tables MBR</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> parted /dev/sda resizepart 2 100%</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/sda2</span></code></pre></div>
-<h3 id="scenario-3-multiple-partitions">Scénario 3 : Partitions Multiples</h3>
+<h3 id="scenario-3-multiple-partitions">Scénario 3 : Partitions multiples</h3>
 <div class="sourceCode" id="cb12"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify which partition to extend</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Identifier la partition à étendre</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lsblk</span> <span class="at">-f</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend the correct partition (usually root /)</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Étendre la bonne partition (généralement la racine /)</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> growpart /dev/sda <span class="op">&lt;</span>partition-number<span class="op">&gt;</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/sda<span class="op">&lt;</span>partition-number<span class="op">&gt;</span></span></code></pre></div>
 <h3 id="scenario-4-lvm-with-thin-provisioning">Scénario 4 : LVM avec Thin Provisioning</h3>
 <div class="sourceCode" id="cb13"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend physical volume</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Étendre le volume physique</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pvresize /dev/sda2</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check volume groups</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les groupes de volumes</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vgdisplay</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend logical volume</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Étendre le volume logique</span></span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> lvextend <span class="at">-l</span> +100%FREE /dev/ubuntu-vg/ubuntu-lv</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Resize filesystem</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/ubuntu-vg/ubuntu-lv  <span class="co"># for ext4</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> xfs_growfs /  <span class="co"># for XFS</span></span></code></pre></div>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Redimensionner le système de fichiers</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/ubuntu-vg/ubuntu-lv</span></code></pre></div>
 <h2 id="troubleshooting">Dépannage</h2>
-<h3 id="error-growpart-command-not-found">Erreur : « growpart: command not found »</h3>
+<h3 id="error-growpart-command-not-found">Erreur : “growpart: command not
+found”</h3>
 <div class="sourceCode" id="cb14"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install cloud-guest-utils</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer cloud-guest-utils</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install cloud-guest-utils <span class="at">-y</span></span></code></pre></div>
-<h3 id="error-resize2fs-bad-magic-number">Erreur : « resize2fs: Bad magic number »</h3>
-<p><strong>Cause</strong>: La partition n'est pas ext2/ext3/ext4</p>
-<p><strong>Solution</strong>: Vérifiez le type de système de fichiers et utilisez l'outil approprié</p>
+<h3 id="error-resize2fs-bad-magic-number">Erreur : “resize2fs: Bad magic
+number”</h3>
+<p><strong>Cause</strong> : La partition n'est pas ext2/ext3/ext4</p>
+<p><strong>Solution</strong> : Vérifiez le type de système de fichiers et utilisez l'outil approprié</p>
 <div class="sourceCode" id="cb15"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check filesystem type</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le type de système de fichiers</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lsblk</span> <span class="at">-f</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># For XFS:</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour XFS :</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> xfs_growfs /</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># For btrfs:</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour btrfs :</span></span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> btrfs filesystem resize max /</span></code></pre></div>
-<h3 id="error-the-filesystem-is-already-x-blocks-long">Erreur : « The filesystem is already X blocks long »</h3>
-<p><strong>Cause</strong>: Le système de fichiers est déjà étendu (le redimensionnement de la partition a peut-être échoué)</p>
-<p><strong>Solution</strong>: Vérifiez que la partition a bien été étendue</p>
+<h3 id="error-the-filesystem-is-already-x-blocks-long">Erreur : “The
+filesystem is already X blocks long” (Le système de fichiers fait déjà X blocs de long)</h3>
+<p><strong>Cause</strong> : Le système de fichiers est déjà étendu (le redimensionnement de la partition a peut-être échoué)</p>
+<p><strong>Solution</strong> : Vérifiez si la partition a réellement été étendue</p>
 <div class="sourceCode" id="cb16"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check partition size</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier la taille de la partition</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> parted /dev/sda print</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If partition is still small, retry growpart</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Si la partition est toujours petite, essayez growpart à nouveau</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> growpart /dev/sda 2</span></code></pre></div>
-<h3 id="warning-partition-x-is-being-used">Avertissement : « Partition X is being used »</h3>
-<p><strong>Cause</strong>: La partition est montée (normal pour la partition root)</p>
-<p><strong>Solution</strong>: Ceci est attendu et sans danger. Les opérations de redimensionnement fonctionnent en ligne pour ext4 et XFS.</p>
+<h3 id="warning-partition-x-is-being-used">Avertissement : “Partition X
+is being used” (La partition X est en cours d'utilisation)</h3>
+<p><strong>Cause</strong> : La partition est montée (normal pour la partition racine)</p>
+<p><strong>Solution</strong> : C'est normal et sans danger. Les opérations de redimensionnement fonctionnent en ligne pour ext4 et XFS.</p>
 <div class="sourceCode" id="cb17"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Continue with resize - it&#39;s safe</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Continuer le redimensionnement - c'est sûr</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/sda2</span></code></pre></div>
-<h2 id="automation-with-scripts">Automatisation avec des Scripts</h2>
-<h3 id="automated-resize-script">Script de Redimensionnement Automatisé</h3>
+<h2 id="automation-with-scripts">Automatisation avec des scripts</h2>
+<h3 id="automated-resize-script">Script de redimensionnement automatisé</h3>
 <div class="sourceCode" id="cb18"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># resize-vm-disk.sh</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Automatically extends partition and filesystem after Proxmox resize</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Étend automatiquement la partition et le système de fichiers après le redimensionnement Proxmox</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-e</span>  <span class="co"># Exit on error</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-e</span>  <span class="co"># Quitter en cas d'erreur</span></span>
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="va">DISK</span><span class="op">=</span><span class="st">&quot;/dev/sda&quot;</span></span>
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="va">PARTITION</span><span class="op">=</span><span class="st">&quot;2&quot;</span></span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Starting disk resize process...&quot;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Démarrage du processus de redimensionnement du disque...&quot;</span></span>
 <span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required tools if needed</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer les outils nécessaires si besoin</span></span>
 <span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="ot">! </span><span class="bu">command</span> <span class="at">-v</span> growpart <span class="op">&amp;&gt;</span> /dev/null<span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Installing cloud-guest-utils...&quot;</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Installation de cloud-guest-utils...&quot;</span></span>
 <span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    <span class="ex">apt</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt</span> install <span class="at">-y</span> cloud-guest-utils</span>
 <span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
 <span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Show current state</span></span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Current disk layout:&quot;</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher l'état actuel</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Disposition actuelle du disque :&quot;</span></span>
 <span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="ex">lsblk</span> <span class="va">$DISK</span></span>
 <span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend partition</span></span>
-<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Extending partition </span><span class="va">${PARTITION}</span><span class="st">...&quot;</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Étendre la partition</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Extension de la partition </span><span class="va">${PARTITION}</span><span class="st">...&quot;</span></span>
 <span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="ex">growpart</span> <span class="va">$DISK</span> <span class="va">$PARTITION</span></span>
 <span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Detect filesystem type</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Détecter le type de système de fichiers</span></span>
 <span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="va">FS_TYPE</span><span class="op">=</span><span class="va">$(</span><span class="ex">lsblk</span> <span class="at">-no</span> FSTYPE <span class="va">${DISK}${PARTITION})</span></span>
 <span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend filesystem based on type</span></span>
-<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Extending </span><span class="va">$FS_TYPE</span><span class="st"> filesystem...&quot;</span></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Étendre le système de fichiers en fonction du type</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Extension du système de fichiers </span><span class="va">$FS_TYPE</span><span class="st">...&quot;</span></span>
 <span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="cf">case</span> <span class="va">$FS_TYPE</span> <span class="kw">in</span></span>
 <span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    <span class="ss">ext4</span><span class="kw">|</span><span class="ss">ext3</span><span class="kw">|</span><span class="ss">ext2</span><span class="kw">)</span></span>
 <span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>        <span class="ex">resize2fs</span> <span class="va">${DISK}${PARTITION}</span></span>
@@ -375,13 +379,13 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href=
 <span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>        <span class="ex">xfs_growfs</span> /</span>
 <span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">;;</span></span>
 <span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>    <span class="pp">*</span><span class="kw">)</span></span>
-<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Unsupported filesystem: </span><span class="va">$FS_TYPE</span><span class="st">&quot;</span></span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Système de fichiers non supporté : </span><span class="va">$FS_TYPE</span><span class="st">&quot;</span></span>
 <span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>        <span class="bu">exit</span> 1</span>
 <span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">;;</span></span>
 <span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a><span class="cf">esac</span></span>
 <span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Show final state</span></span>
-<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Final disk layout:&quot;</span></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher l'état final</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Disposition finale du disque :&quot;</span></span>
 <span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a><span class="ex">lsblk</span> <span class="va">$DISK</span></span>
 <span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span> /</span></code></pre></div>
 <h3 id="usage">Utilisation :</h3>
@@ -389,31 +393,31 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href=
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x resize-vm-disk.sh</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ./resize-vm-disk.sh</span></code></pre></div>
 <h2 id="best-practices">Meilleures Pratiques</h2>
-<h3 id="plan-for-growth">1. Planifier la Croissance</h3>
+<h3 id="plan-for-growth">1. Planifier la croissance</h3>
 <p>Lors de la création de VMs : - Commencez avec une taille raisonnable - Utilisez le thin provisioning lorsque cela est possible - Documentez les tailles de disque dans votre inventaire homelab</p>
-<h3 id="backup-before-resizing">2. Sauvegarder Avant le Redimensionnement</h3>
+<h3 id="backup-before-resizing">2. Sauvegarder avant de redimensionner</h3>
 <div class="sourceCode" id="cb20"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Take Proxmox snapshot before resize</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># In Proxmox UI: VM → Snapshots → Take Snapshot</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prendre un instantané Proxmox avant le redimensionnement</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Dans l'interface utilisateur Proxmox : VM → Instantanés → Prendre un instantané</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or use command line</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> snapshot <span class="op">&lt;</span>vmid<span class="op">&gt;</span> pre-resize <span class="at">--description</span> <span class="st">&quot;Before disk resize&quot;</span></span></code></pre></div>
-<h3 id="verify-free-space-on-host">3. Vérifier l'Espace Libre sur l'Hôte</h3>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ou utiliser la ligne de commande</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> snapshot <span class="op">&lt;vmid<span class="op">&gt;</span> pre-resize <span class="at">--description</span> <span class="st">&quot;Avant le redimensionnement du disque&quot;</span></span></code></pre></div>
+<h3 id="verify-free-space-on-host">3. Vérifier l'espace libre sur l'hôte</h3>
 <div class="sourceCode" id="cb21"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before resizing, check Proxmox host has space</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Avant de redimensionner, vérifiez que l'hôte Proxmox dispose d'espace</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check storage pool</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le pool de stockage</span></span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pvesm</span> status</span></code></pre></div>
-<h3 id="use-cloud-init-images">4. Utiliser les Images Cloud-Init</h3>
-<p>Les images Cloud incluent souvent l'expansion automatique du disque :</p>
+<h3 id="use-cloud-init-images">4. Utiliser des images Cloud-Init</h3>
+<p>Les images Cloud incluent souvent une extension automatique du disque :</p>
 <div class="sourceCode" id="cb22"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example cloud-init config</span></span>
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de configuration cloud-init</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">growpart</span><span class="kw">:</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mode</span><span class="kw">:</span><span class="at"> auto</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">devices</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&#39;/&#39;</span><span class="kw">]</span></span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ignore_growroot_disabled</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
-<h2 id="understanding-disk-types-in-proxmox">Comprendre les Types de Disques dans Proxmox</h2>
+<h2 id="understanding-disk-types-in-proxmox">Comprendre les types de disques dans Proxmox</h2>
 <h3 id="scsi-vs-virtio-vs-sata">SCSI vs VirtIO vs SATA</h3>
 <p>Différents contrôleurs de disque affectent les noms des périphériques :</p>
 <ul>
@@ -426,26 +430,28 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb22-1"><a href=
 </ul>
 <p><strong>Ajustez les commandes en conséquence :</strong></p>
 <div class="sourceCode" id="cb23"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For VirtIO disks:</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour les disques VirtIO :</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> growpart /dev/vda 1</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/vda1</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># For SCSI/SATA disks:</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour les disques SCSI/SATA :</span></span>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> growpart /dev/sda 2</span>
 <span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> resize2fs /dev/sda2</span></code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 <p>L'extension des disques de VM après un redimensionnement Proxmox est un processus en trois étapes :</p>
 <ol type="1">
-<li><strong>Niveau Proxmox</strong>: Redimensionner le disque virtuel (fait via l'interface utilisateur)</li>
-<li><strong>Niveau Partition</strong>: Étendre la partition avec <code>growpart</code></li>
-<li><strong>Niveau Système de Fichiers</strong>: Étendre le système de fichiers avec <code>resize2fs</code> ou <code>xfs_growfs</code></li>
+<li><strong>Niveau Proxmox</strong> : Redimensionner le disque virtuel (effectué via l'interface utilisateur)</li>
+<li><strong>Niveau Partition</strong> : Étendre la partition avec
+<code>growpart</code></li>
+<li><strong>Niveau Système de Fichiers</strong> : Étendre le système de fichiers avec
+<code>resize2fs</code> ou <code>xfs_growfs</code></li>
 </ol>
 <p>Ce processus est : - ✅ <strong>Non destructif</strong> : Aucune perte de données
-- ✅ <strong>En ligne</strong> : Fonctionne sur les systèmes de fichiers montés
-- ✅ <strong>Réversible</strong> : Les snapshots offrent un filet de sécurité
-- ✅ <strong>Automatisable</strong> : Peut être scripté pour la cohérence</p>
-<p>Comprendre ce processus est essentiel pour la gestion d'un homelab et démontre des compétences adéquates en administration d'infrastructure.</p>
-<p><em>Conseil de pro : Utilisez le thin provisioning dans Proxmox pour permettre une croissance flexible du disque sans pré-allouer la totalité de l'espace disque sur l'hôte.</em></p>
+- ✅ <strong>En ligne</strong> : Fonctionne sur les systèmes de fichiers montés - ✅
+<strong>Réversible</strong> : Les instantanés offrent un filet de sécurité - ✅
+<strong>Automatisable</strong> : Peut être scripté pour la cohérence</p>
+<p>Comprendre ce processus est essentiel pour la gestion de homelab et démontre des compétences adéquates en administration d'infrastructure.</p>
+<p><em>Astuce de pro : Utilisez le thin provisioning dans Proxmox pour permettre une croissance flexible du disque sans pré-allouer l'espace disque complet sur l'hôte.</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -459,11 +465,11 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href=
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Liens Rapides</h4>
+                    <h4>Liens rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
                         <li><a href="/index.html#about">À propos</a></li>
@@ -473,7 +479,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href=
                 </div>
 
                 <div class="footer-social">
-                    <h4>Réseaux Sociaux</h4>
+                    <h4>Me Contacter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -495,7 +501,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href=
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Retour en haut">
+    <button class="back-to-top" aria-label="Retour en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 

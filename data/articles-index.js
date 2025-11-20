@@ -1,6 +1,6 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-20T23:36:21.896Z",
-  "totalArticles": 8,
+  "lastUpdated": "2025-11-20T23:46:53.696Z",
+  "totalArticles": 10,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
@@ -9,8 +9,8 @@ var ARTICLE_INDEX={
       "articles": {
         "en": [
           {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -20,17 +20,17 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
             "status": "published"
           },
           {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
+            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -40,17 +40,17 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "a-roadmap-to-self-hosted-services",
-            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-            "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "slug": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+            "url": "/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
+            "filePath": "/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
+            "id": "hdd-ssd-health-monitoring-analysis-guide",
+            "title": "Hdd Ssd Health Monitoring Analysis Guide",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -60,17 +60,17 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-            "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-            "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+            "slug": "hdd-ssd-health-monitoring-analysis-guide",
+            "url": "/en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+            "filePath": "/en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
+            "id": "getting-proxmox-pfsense-back-online-network-rescue",
+            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -80,9 +80,29 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-            "url": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-            "filePath": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
+            "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+            "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+            "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+            "url": "/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+            "filePath": "/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -91,8 +111,8 @@ var ARTICLE_INDEX={
         ],
         "fr": [
           {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -102,17 +122,17 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
+            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -122,17 +142,17 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "a-roadmap-to-self-hosted-services",
-            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-            "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "slug": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+            "url": "/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
+            "filePath": "/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
+            "id": "hdd-ssd-health-monitoring-analysis-guide",
+            "title": "Hdd Ssd Health Monitoring Analysis Guide",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -142,17 +162,17 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-            "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-            "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+            "slug": "hdd-ssd-health-monitoring-analysis-guide",
+            "url": "/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+            "filePath": "/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
+            "id": "getting-proxmox-pfsense-back-online-network-rescue",
+            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -162,9 +182,29 @@ var ARTICLE_INDEX={
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-            "url": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-            "filePath": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
+            "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+            "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+            "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+            "url": "/fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+            "filePath": "/fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -172,7 +212,7 @@ var ARTICLE_INDEX={
           }
         ]
       },
-      "total": 8
+      "total": 10
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -226,13 +266,33 @@ var ARTICLE_INDEX={
     }
   },
   "languages": {
-    "en": 4,
-    "fr": 4
+    "en": 5,
+    "fr": 5
   },
   "articles": [
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -242,37 +302,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
+      "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+      "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -282,17 +322,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+      "url": "/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
+      "filePath": "/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
+      "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+      "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -302,37 +342,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+      "url": "/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
+      "filePath": "/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
+      "id": "hdd-ssd-health-monitoring-analysis-guide",
+      "title": "Hdd Ssd Health Monitoring Analysis Guide",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -342,37 +362,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+      "slug": "hdd-ssd-health-monitoring-analysis-guide",
+      "url": "/en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+      "filePath": "/en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "url": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "filePath": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
+      "id": "hdd-ssd-health-monitoring-analysis-guide",
+      "title": "Hdd Ssd Health Monitoring Analysis Guide",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -382,9 +382,89 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "url": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "filePath": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
+      "slug": "hdd-ssd-health-monitoring-analysis-guide",
+      "url": "/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+      "filePath": "/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "getting-proxmox-pfsense-back-online-network-rescue",
+      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+      "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "getting-proxmox-pfsense-back-online-network-rescue",
+      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+      "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+      "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+      "url": "/fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+      "filePath": "/fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+      "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+      "url": "/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+      "filePath": "/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -394,9 +474,9 @@ var ARTICLE_INDEX={
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 8,
-      "en": 4,
-      "fr": 4,
+      "total": 10,
+      "en": 5,
+      "fr": 5,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -443,8 +523,28 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -454,37 +554,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
+      "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+      "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -494,17 +574,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+      "url": "/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
+      "filePath": "/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
+      "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+      "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -514,37 +594,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "growing-pains-extending-ubuntu-vm-disk-proxmox",
+      "url": "/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
+      "filePath": "/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
+      "id": "hdd-ssd-health-monitoring-analysis-guide",
+      "title": "Hdd Ssd Health Monitoring Analysis Guide",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -554,37 +614,17 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
+      "slug": "hdd-ssd-health-monitoring-analysis-guide",
+      "url": "/en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+      "filePath": "/en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "url": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "filePath": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
+      "id": "hdd-ssd-health-monitoring-analysis-guide",
+      "title": "Hdd Ssd Health Monitoring Analysis Guide",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -594,9 +634,89 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "url": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "filePath": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
+      "slug": "hdd-ssd-health-monitoring-analysis-guide",
+      "url": "/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+      "filePath": "/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "getting-proxmox-pfsense-back-online-network-rescue",
+      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+      "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "getting-proxmox-pfsense-back-online-network-rescue",
+      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+      "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+      "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+      "url": "/fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+      "filePath": "/fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+      "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
+      "url": "/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+      "filePath": "/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -605,8 +725,8 @@ var ARTICLE_INDEX={
   ],
   "featuredArticles": [
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -616,9 +736,9 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -627,14 +747,16 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "en/infrastructure/a-roadmap-to-self-hosted-services": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
+      "fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox": "/en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
+      "fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox": "/fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html",
+      "en/infrastructure/hdd-ssd-health-monitoring-analysis-guide": "/en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+      "fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide": "/fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html",
+      "en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry": "/fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html",
+      "en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry": "/en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -664,6 +786,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-20T23:36:21.897Z",
+  "generatedAt": "2025-11-20T23:46:53.700Z",
   "version": "1.0"
 };
