@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Architecture réseau rapide DNS TLS et Proxies Inverses - Tutoriel et guide technique">
+    <meta name="description" content="Schéma d'architecture réseau : DNS, TLS et Reverse Proxies - Tutoriel et guide technique">
     <meta name="keywords" content="homelab, cybersecurity, tutorial">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Architecture réseau rapide DNS TLS et Proxies Inverses | Blog Technique d'Omar LYAHYAI</title>
+    <title>Architecture Réseau : DNS, TLS et Reverse Proxies | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -34,13 +34,13 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
                 <ul class="nav-menu">
                     <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
-                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À Propos</a></li>
                     <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
                     <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
                     <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html" class="lang-toggle" aria-label="Change language">
+                    <a href="/fr/infrastructure/network-architecture-prompt-dns-tls-reverse-proxies.html" class="lang-toggle" aria-label="Changer de langue">
                         <span class="lang-current">FR</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -58,21 +58,21 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="Article header">
+        <section class="article-header" role="region" aria-label="En-tête de l'article">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Architecture réseau rapide DNS TLS et Proxies Inverses</span>
+                        <span>Architecture Réseau : DNS, TLS et Reverse Proxies</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Architecture réseau rapide DNS TLS et Proxies Inverses</h1>
+                <h1 class="article-title">Architecture Réseau : DNS, TLS et Reverse Proxies</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -95,7 +95,7 @@
             </div>
         </section>
 
-        <section class="article-content" role="region" aria-label="Article content">
+        <section class="article-content" role="region" aria-label="Contenu de l'article">
             <div class="container">
                 <div class="article-body">
                     <!-- 
@@ -122,11 +122,12 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="network-architecture-prompt-dns-tls-and-reverse-proxies">Architecture
-Réseau Rapide : DNS, TLS et Proxies Inverses</h1>
+<h1 id="network-architecture-prompt-dns-tls-and-reverse-proxies">Schéma
+d'architecture réseau : DNS, TLS et Reverse Proxies</h1>
 <h2 id="purpose">Objectif</h2>
-<p>Ce guide de référence fournit des modèles d'architecture pour la mise en œuvre d'un accès réseau sécurisé dans les environnements homelab, en utilisant le DNS, les certificats TLS et les proxies inverses.</p>
-<h2 id="architecture-pattern-secure-internal-services">Modèle d'Architecture : Services Internes Sécurisés</h2>
+<p>Ce guide de référence présente des modèles architecturaux pour la mise en œuvre
+d'un accès réseau sécurisé dans les environnements homelab, en utilisant le DNS, les certificats TLS et les reverse proxies.</p>
+<h2 id="architecture-pattern-secure-internal-services">Modèle Architectural : Services Internes Sécurisés</h2>
 <h3 id="layer-1-network-segmentation">Couche 1 : Segmentation Réseau</h3>
 <pre><code>Internet → WAN → pfSense → LAN (Internal Services)
                      ↓
@@ -143,40 +144,41 @@ Internal: proxmox.lab.local → 192.168.1.100 (Reverse Proxy)</code></pre>
 <p><strong>Option B : DNS Local Uniquement</strong></p>
 <pre><code>All Clients: proxmox.local → 192.168.1.100 (pfSense DNS Resolver)</code></pre>
 <h3 id="layer-3-tls-termination">Couche 3 : Terminaison TLS</h3>
-<p><strong>Proxy Inverse (Nginx Proxy Manager)</strong></p>
+<p><strong>Reverse Proxy (Nginx Proxy Manager)</strong></p>
 <pre><code>Client (HTTPS) → Nginx Proxy Manager → Backend (HTTP/HTTPS)
               ↓
       Let&#39;s Encrypt or Self-Signed Cert</code></pre>
-<h2 id="implementation-checklist">Liste de Contrôle d'Implémentation</h2>
+<h2 id="implementation-checklist">Liste de vérification de l'implémentation</h2>
 <h3 id="dns-configuration">Configuration DNS</h3>
 <p><strong>pfSense DNS Resolver:</strong></p>
 <pre><code>Services → DNS Resolver → Host Overrides
 - proxmox.lab → 192.168.1.100
 - n8n.lab → 192.168.1.100
 - db.lab → 192.168.1.100</code></pre>
-<h3 id="reverse-proxy-setup">Configuration du Proxy Inverse</h3>
+<h3 id="reverse-proxy-setup">Configuration du Reverse Proxy</h3>
 <p><strong>Nginx Proxy Manager:</strong></p>
 <pre><code>Proxy Hosts:
 1. proxmox.lab → https://192.168.1.10:8006
 2. n8n.lab → http://192.168.1.20:5678 (WebSockets: ON)
 3. db.lab → http://192.168.1.30:5432</code></pre>
 <h3 id="ssl-certificate-options">Options de Certificats SSL</h3>
-<p><strong>Option 1 : Let’s Encrypt (Défi DNS)</strong> - Nécessite un
-domaine public - Utilise l'API Cloudflare - Renouvellement automatique tous les 90 jours</p>
-<p><strong>Option 2 : Auto-Signé (mkcert)</strong> - Installation d'une AC locale requise - Aucune dépendance externe - Renouvellement manuel</p>
-<p><strong>Option 3 : Certificat d'Origine Cloudflare</strong> - Certificats gratuits valides 15 ans - Uniquement pour les domaines sous proxy Cloudflare - Approuvé par
-l'edge Cloudflare</p>
+<p><strong>Option 1 : Let’s Encrypt (DNS Challenge)</strong> - Nécessite
+un domaine public - Utilise l'API Cloudflare - Renouvellement automatique tous les 90 jours</p>
+<p><strong>Option 2 : Auto-Signé (mkcert)</strong> - Installation
+d'une CA locale requise - Aucune dépendance externe - Renouvellement manuel</p>
+<p><strong>Option 3 : Certificat d'Origine Cloudflare</strong> - Certificats
+gratuits de 15 ans - Uniquement pour les domaines sous proxy Cloudflare - Approuvé par l'edge Cloudflare</p>
 <h2 id="security-layers">Couches de Sécurité</h2>
 <h3 id="network-layer">1. Couche Réseau</h3>
 <ul>
 <li>Règles de pare-feu pfSense</li>
 <li>Segmentation VLAN</li>
-<li>Restrictions de port</li>
+<li>Restrictions de ports</li>
 </ul>
 <h3 id="transport-layer">2. Couche Transport</h3>
 <ul>
 <li>Chiffrement TLS 1.3</li>
-<li>Suites de chiffrement fortes</li>
+<li>Suites de chiffrement robustes</li>
 <li>HTTP Strict Transport Security (HSTS)</li>
 </ul>
 <h3 id="application-layer">3. Couche Application</h3>
@@ -220,7 +222,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 <th>Cas d'Usage</th>
 <th>DNS</th>
 <th>Certificat</th>
-<th>Proxy Inverse</th>
+<th>Reverse Proxy</th>
 </tr>
 </thead>
 <tbody>
@@ -250,21 +252,22 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 </tr>
 </tbody>
 </table>
-<h2 id="best-practices">Bonnes Pratiques</h2>
+<h2 id="best-practices">Meilleures Pratiques</h2>
 <ol type="1">
 <li><strong>Toujours utiliser HTTPS</strong> pour les interfaces web</li>
-<li><strong>Mettre en œuvre une défense en profondeur</strong> (pare-feu + proxy +
+<li><strong>Mettre en œuvre la défense en profondeur</strong> (pare-feu + proxy +
 auth)</li>
-<li><strong>Utiliser des mots de passe forts</strong> ou une authentification par clé</li>
+<li><strong>Utiliser des mots de passe forts</strong> ou l'authentification par clé</li>
 <li><strong>Surveiller les journaux d'accès</strong> régulièrement</li>
 <li><strong>Maintenir les certificats à jour</strong> (renouvellement automatique)</li>
-<li><strong>Documenter votre architecture</strong> à l'aide de schémas</li>
+<li><strong>Documenter votre architecture</strong> dans des diagrammes</li>
 <li><strong>Tester les procédures de reprise après sinistre</strong></li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
-<p>Une architecture réseau appropriée avec DNS, TLS et des proxies inverses crée une infrastructure homelab sécurisée et gérable. Choisissez les modèles en fonction de vos exigences de sécurité et de vos besoins d'accès.</p>
-<p><em>Pour une mise en œuvre détaillée, consultez les articles connexes sur Nginx Proxy
-Manager et la configuration de pfSense.</em></p>
+<p>Une architecture réseau appropriée intégrant le DNS, le TLS et les reverse proxies
+permet de créer une infrastructure homelab sécurisée et gérable. Choisissez les modèles en fonction de vos exigences de sécurité et de vos besoins d'accès.</p>
+<p><em>Pour une implémentation détaillée, consultez les articles connexes sur Nginx Proxy
+Manager et la configuration pfSense.</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -285,14 +288,14 @@ Manager et la configuration de pfSense.</em></p>
                     <h4>Liens Rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
-                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#about">À Propos</a></li>
                         <li><a href="/index.html#projects">Projets</a></li>
                         <li><a href="/blog/index.html">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Se Connecter</h4>
+                    <h4>Connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -314,7 +317,7 @@ Manager et la configuration de pfSense.</em></p>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Retour en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 

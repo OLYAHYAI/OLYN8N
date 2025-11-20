@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-19T23:42:07.763Z",
+  "lastUpdated": "2025-11-20T00:02:13.142Z",
   "totalArticles": 10,
   "categories": {
     "infrastructure": {
@@ -9,13 +9,33 @@
       "articles": {
         "en": [
           {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "proxmox-vm-maintenance-routine-complete-guide",
+            "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
             "id": "building-secure-lab-kali-linux-pfsense-deployment",
             "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
             "language": "en",
-            "date": "2025-11-19",
+            "date": "2025-11-20",
             "tags": [
               "infrastructure"
             ],
@@ -25,7 +45,27 @@
             "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
             "wordCount": 1000,
             "readingTime": 5,
-            "featured": true,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "vm-disk-expansion-guide-proxmox-linux",
+            "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
             "status": "published"
           },
           {
@@ -35,7 +75,7 @@
             "excerpt": "",
             "category": "infrastructure",
             "language": "en",
-            "date": "2025-11-19",
+            "date": "2025-11-20",
             "tags": [
               "infrastructure"
             ],
@@ -55,7 +95,7 @@
             "excerpt": "",
             "category": "infrastructure",
             "language": "en",
-            "date": "2025-11-19",
+            "date": "2025-11-20",
             "tags": [
               "infrastructure"
             ],
@@ -67,49 +107,29 @@
             "readingTime": 5,
             "featured": false,
             "status": "published"
-          },
-          {
-            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-            "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-            "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-            "url": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-            "filePath": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
           }
         ],
         "fr": [
+          {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "proxmox-vm-maintenance-routine-complete-guide",
+            "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
           {
             "id": "building-secure-lab-kali-linux-pfsense-deployment",
             "title": "Building Secure Lab Kali Linux Pfsense Deployment",
@@ -117,7 +137,7 @@
             "excerpt": "",
             "category": "infrastructure",
             "language": "fr",
-            "date": "2025-11-19",
+            "date": "2025-11-20",
             "tags": [
               "infrastructure"
             ],
@@ -131,13 +151,33 @@
             "status": "published"
           },
           {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "vm-disk-expansion-guide-proxmox-linux",
+            "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
             "id": "a-roadmap-to-self-hosted-services",
             "title": "A Roadmap To Self Hosted Services",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
             "language": "fr",
-            "date": "2025-11-19",
+            "date": "2025-11-20",
             "tags": [
               "infrastructure"
             ],
@@ -157,7 +197,7 @@
             "excerpt": "",
             "category": "infrastructure",
             "language": "fr",
-            "date": "2025-11-19",
+            "date": "2025-11-20",
             "tags": [
               "infrastructure"
             ],
@@ -165,46 +205,6 @@
             "slug": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
             "url": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
             "filePath": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-            "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-            "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-19",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-            "url": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-            "filePath": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -271,13 +271,53 @@
   },
   "articles": [
     {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
       "id": "building-secure-lab-kali-linux-pfsense-deployment",
       "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
       "language": "en",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -287,7 +327,7 @@
       "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": true,
+      "featured": false,
       "status": "published"
     },
     {
@@ -297,7 +337,7 @@
       "excerpt": "",
       "category": "infrastructure",
       "language": "fr",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -311,13 +351,53 @@
       "status": "published"
     },
     {
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
       "id": "a-roadmap-to-self-hosted-services",
       "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
       "language": "en",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -337,7 +417,7 @@
       "excerpt": "",
       "category": "infrastructure",
       "language": "fr",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -357,7 +437,7 @@
       "excerpt": "",
       "category": "infrastructure",
       "language": "fr",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -377,7 +457,7 @@
       "excerpt": "",
       "category": "infrastructure",
       "language": "en",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -385,86 +465,6 @@
       "slug": "building-a-secure-lab-kali-linux-and-pfsense-deployment",
       "url": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
       "filePath": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "url": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "filePath": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "url": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "filePath": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -523,13 +523,53 @@
   },
   "recentArticles": [
     {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
       "id": "building-secure-lab-kali-linux-pfsense-deployment",
       "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
       "language": "en",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -539,7 +579,7 @@
       "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": true,
+      "featured": false,
       "status": "published"
     },
     {
@@ -549,7 +589,7 @@
       "excerpt": "",
       "category": "infrastructure",
       "language": "fr",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -563,13 +603,53 @@
       "status": "published"
     },
     {
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-20",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
       "id": "a-roadmap-to-self-hosted-services",
       "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
       "language": "en",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -589,7 +669,7 @@
       "excerpt": "",
       "category": "infrastructure",
       "language": "fr",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -609,7 +689,7 @@
       "excerpt": "",
       "category": "infrastructure",
       "language": "fr",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -629,7 +709,7 @@
       "excerpt": "",
       "category": "infrastructure",
       "language": "en",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
@@ -641,104 +721,24 @@
       "readingTime": 5,
       "featured": false,
       "status": "published"
-    },
-    {
-      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "url": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "filePath": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
-      "url": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "filePath": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "url": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "filePath": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-19",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
-      "url": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "filePath": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
     }
   ],
   "featuredArticles": [
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
       "language": "en",
-      "date": "2025-11-19",
+      "date": "2025-11-20",
       "tags": [
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +747,16 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
+      "en/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "en/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "fr/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
       "en/infrastructure/a-roadmap-to-self-hosted-services": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
       "fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment": "/fr/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
-      "en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html",
-      "fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration": "/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration": "/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html",
-      "en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration": "/en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html",
-      "fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration": "/fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
+      "en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment": "/en/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +786,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-19T23:42:07.764Z",
+  "generatedAt": "2025-11-20T00:02:13.144Z",
   "version": "1.0"
 }
