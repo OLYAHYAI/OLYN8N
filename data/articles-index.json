@@ -1,118 +1,48 @@
 {
-  "lastUpdated": "2025-11-20T22:09:12.318Z",
-  "totalArticles": 10,
+  "lastUpdated": "2025-11-20T22:59:22.723Z",
+  "totalArticles": 6,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
-        "en": [],
-        "fr": []
-      },
-      "total": 0
-    },
-    "automation_ai": {
-      "name": "Automation & AI",
-      "description": "AI workflows automation scripts MCP integration",
-      "icon": "fas fa-robot",
-      "articles": {
         "en": [
           {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "id": "proxmox-ve-initial-setup-session-notes",
+            "title": "Proxmox Ve Initial Setup Session Notes",
             "description": "",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "language": "en",
             "date": "2025-11-20",
             "tags": [
-              "automation_ai"
+              "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-            "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-            "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "slug": "proxmox-ve-initial-setup-session-notes",
+            "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+            "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
             "status": "published"
           },
           {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "id": "getting-proxmox-pfsense-back-online-network-rescue",
+            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
             "description": "",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "language": "en",
             "date": "2025-11-20",
             "tags": [
-              "automation_ai"
+              "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-            "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-            "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-            "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Mcp Configuration Guide Yaml Setup",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "mcp-configuration-guide-yaml-setup",
-            "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-            "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto Sync To Github Website",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "en",
-            "date": "2025-11-20",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "obsidian-auto-sync-to-github-website",
-            "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-            "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+            "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+            "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+            "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -121,100 +51,40 @@
         ],
         "fr": [
           {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "id": "proxmox-ve-initial-setup-session-notes",
+            "title": "Proxmox Ve Initial Setup Session Notes",
             "description": "",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "language": "fr",
             "date": "2025-11-20",
             "tags": [
-              "automation_ai"
+              "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-            "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-            "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "slug": "proxmox-ve-initial-setup-session-notes",
+            "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+            "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "id": "getting-proxmox-pfsense-back-online-network-rescue",
+            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
             "description": "",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "language": "fr",
             "date": "2025-11-20",
             "tags": [
-              "automation_ai"
+              "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-            "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-            "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-            "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Mcp Configuration Guide Yaml Setup",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "mcp-configuration-guide-yaml-setup",
-            "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-            "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto Sync To Github Website",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "fr",
-            "date": "2025-11-20",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "obsidian-auto-sync-to-github-website",
-            "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
-            "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+            "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+            "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+            "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -222,7 +92,17 @@
           }
         ]
       },
-      "total": 10
+      "total": 4
+    },
+    "automation_ai": {
+      "name": "Automation & AI",
+      "description": "AI workflows automation scripts MCP integration",
+      "icon": "fas fa-robot",
+      "articles": {
+        "en": [],
+        "fr": []
+      },
+      "total": 0
     },
     "network_security": {
       "name": "Network Security",
@@ -249,10 +129,52 @@
       "description": "Quick guides configuration reference",
       "icon": "fas fa-book",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "certifications",
+            "title": "Google Cybersecurity Professional Certificate",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "en",
+            "date": "2025-11-20",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "certifications",
+            "url": "/en/reference/certifications.html",
+            "filePath": "/en/reference/certifications.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "certifications",
+            "title": "Google Cybersecurity Professional Certificate",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "fr",
+            "date": "2025-11-20",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "certifications",
+            "url": "/fr/reference/certifications.html",
+            "filePath": "/fr/reference/certifications.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 2
     },
     "docker_services": {
       "name": "Docker Services",
@@ -266,205 +188,125 @@
     }
   },
   "languages": {
-    "en": 5,
-    "fr": 5
+    "en": 3,
+    "fr": 3
   },
   "articles": [
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "reference",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "certifications",
+      "url": "/en/reference/certifications.html",
+      "filePath": "/en/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "reference",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "certifications",
+      "url": "/fr/reference/certifications.html",
+      "filePath": "/fr/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": false,
+      "featured": true,
       "status": "published"
     },
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+      "id": "getting-proxmox-pfsense-back-online-network-rescue",
+      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-      "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+      "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+      "id": "getting-proxmox-pfsense-back-online-network-rescue",
+      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-      "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Mcp Configuration Guide Yaml Setup",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "mcp-configuration-guide-yaml-setup",
-      "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Mcp Configuration Guide Yaml Setup",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "mcp-configuration-guide-yaml-setup",
-      "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "obsidian-auto-sync-to-github-website",
-      "title": "Obsidian Auto Sync To Github Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "obsidian-auto-sync-to-github-website",
-      "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "obsidian-auto-sync-to-github-website",
-      "title": "Obsidian Auto Sync To Github Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "obsidian-auto-sync-to-github-website",
-      "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+      "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -474,17 +316,17 @@
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 4,
+      "en": 2,
+      "fr": 2,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
     "automation_ai": {
       "name": "Automation & AI",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "AI workflows automation scripts MCP integration",
       "icon": "fas fa-robot"
     },
@@ -506,9 +348,9 @@
     },
     "reference": {
       "name": "Reference",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "Quick guides configuration reference",
       "icon": "fas fa-book"
     },
@@ -523,200 +365,120 @@
   },
   "recentArticles": [
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "reference",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "certifications",
+      "url": "/en/reference/certifications.html",
+      "filePath": "/en/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "reference",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "certifications",
+      "url": "/fr/reference/certifications.html",
+      "filePath": "/fr/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": false,
+      "featured": true,
       "status": "published"
     },
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+      "id": "getting-proxmox-pfsense-back-online-network-rescue",
+      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-      "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+      "url": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "filePath": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+      "id": "getting-proxmox-pfsense-back-online-network-rescue",
+      "title": "Getting Proxmox Pfsense Back Online Network Rescue",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-      "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Mcp Configuration Guide Yaml Setup",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "mcp-configuration-guide-yaml-setup",
-      "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Mcp Configuration Guide Yaml Setup",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "mcp-configuration-guide-yaml-setup",
-      "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "obsidian-auto-sync-to-github-website",
-      "title": "Obsidian Auto Sync To Github Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-20",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "obsidian-auto-sync-to-github-website",
-      "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "obsidian-auto-sync-to-github-website",
-      "title": "Obsidian Auto Sync To Github Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-20",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "obsidian-auto-sync-to-github-website",
-      "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "slug": "getting-proxmox-pfsense-back-online-network-rescue",
+      "url": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "filePath": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,20 +487,40 @@
   ],
   "featuredArticles": [
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-20",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
+      "description": "",
+      "excerpt": "",
+      "category": "reference",
+      "language": "en",
+      "date": "2025-11-20",
+      "tags": [
+        "reference"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "certifications",
+      "url": "/en/reference/certifications.html",
+      "filePath": "/en/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +529,12 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "en/automation_ai/mcp-configuration-guide-yaml-setup": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "fr/automation_ai/mcp-configuration-guide-yaml-setup": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "en/automation_ai/obsidian-auto-sync-to-github-website": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "fr/automation_ai/obsidian-auto-sync-to-github-website": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html"
+      "en/reference/certifications": "/en/reference/certifications.html",
+      "fr/reference/certifications": "/fr/reference/certifications.html",
+      "en/infrastructure/proxmox-ve-initial-setup-session-notes": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "fr/infrastructure/proxmox-ve-initial-setup-session-notes": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue": "/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html",
+      "fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue": "/fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +564,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-20T22:09:12.321Z",
+  "generatedAt": "2025-11-20T22:59:22.725Z",
   "version": "1.0"
 }
