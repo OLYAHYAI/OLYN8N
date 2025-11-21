@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +61,7 @@
         <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
@@ -123,15 +123,15 @@ The workflow will:
 -->
 <h1 id="homelab-overview">Aperçu du Homelab</h1>
 <p>Vous gérez votre homelab en utilisant Proxmox avec des machines virtuelles (VM) pour Ubuntu,
-Kali, et pfSense. Vos objectifs principaux incluent l'auto-hébergement de vos services,
-l'automatisation des flux de travail, et la connexion sécurisée de l'ensemble avec
+Kali, et pfSense. Vos principaux objectifs incluent l'hébergement de vos propres services,
+l'automatisation des flux de travail et la connexion sécurisée de l'ensemble avec
 Twingate.</p>
 <h1 id="obsidian-setup">Configuration d'Obsidian</h1>
 <ul>
-<li>Obsidian est auto-hébergé via CouchDB.</li>
+<li>Obsidian est auto-hébergé en utilisant CouchDB.</li>
 <li>Vous l'exécuterez sur la VM Ubuntu et vous vous y connecterez en utilisant
 <strong>Obsidian LiveSync</strong>.</li>
-<li>L'accès à distance sécurisé est géré via <strong>Twingate</strong>.</li>
+<li>L'accès distant sécurisé est géré via <strong>Twingate</strong>.</li>
 </ul>
 <h1 id="step-by-step-setup-plan">Plan de configuration étape par étape</h1>
 <h2 id="phase-1-server-preparation">Phase 1 : Préparation du serveur</h2>
@@ -146,8 +146,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/obsidian-sync ~/n8n <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ~/obsidian-sync</span></code></pre></div></li>
 </ol>
-<h2 id="phase-2-deploy-couchdb-for-obsidian-sync">Phase 2 : Déploiement
-CouchDB pour la synchronisation Obsidian</h2>
+<h2 id="phase-2-deploy-couchdb-for-obsidian-sync">Phase 2 : Déployer
+CouchDB pour la synchronisation d'Obsidian</h2>
 <ol type="1">
 <li><p>Créer le fichier docker-compose.yml :</p>
 <div class="sourceCode" id="cb4"><pre
@@ -175,13 +175,13 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="
 <li><p>Dans Obsidian, installez le plugin <em>Self-Hosted LiveSync</em> et
 connectez-vous à CouchDB.</p></li>
 </ol>
-<h2 id="phase-3-install-and-configure-n8n">Phase 3 : Installation et
-configuration de n8n</h2>
+<h2 id="phase-3-install-and-configure-n8n">Phase 3 : Installer et
+configurer N8N</h2>
 <ol type="1">
 <li><p>Se déplacer vers le répertoire <strong>n8n</strong> :</p>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/n8n</span></code></pre></div></li>
-<li><p>Créer le fichier docker-compose.yml :</p>
+<li><p>Créer docker-compose.yml :</p>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3&#39;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
@@ -200,26 +200,27 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 <li><p>Ouvrir <strong>n8n</strong> dans votre navigateur :
 <code>http://&lt;server-ip&gt;:5678</code></p></li>
 </ol>
-<h2 id="phase-4-automate-backups-with-n8n">Phase 4 : Automatiser les
-sauvegardes avec n8n</h2>
+<h2 id="phase-4-automate-backups-with-n8n">Phase 4 : Automatiser les sauvegardes
+avec N8N</h2>
 <ol type="1">
 <li>Créer un répertoire de sauvegarde : <code>/backups/obsidian</code></li>
-<li>Dans n8n, créez un nouveau workflow :
+<li>Dans N8N, créer un nouveau workflow (flux de travail) :
 <ul>
 <li><p><strong>Déclencheur :</strong> Nœud Cron (Hebdomadaire le dimanche)</p></li>
-<li><p><strong>Nœud de Commande :</strong></p>
+<li><p><strong>Nœud de commande :</strong></p>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> czf /backups/obsidian_<span class="va">$(</span><span class="fu">date</span> +%F<span class="va">)</span>.tar.gz /path/to/obsidian-vault</span></code></pre></div></li>
-<li><p><strong>Nœud de Notification (Optionnel) :</strong> Envoyer un message via
+<li><p><strong>Nœud de notification (Optionnel) :</strong> Envoyer un message via
 l'API Telegram ou Discord.</p></li>
 </ul></li>
 </ol>
-<h2 id="phase-5-remote-access-and-security">Phase 5 : Accès à distance et
+<h2 id="phase-5-remote-access-and-security">Phase 5 : Accès distant et
 sécurité</h2>
 <ol type="1">
 <li>Installer et lier votre serveur à votre compte Twingate.</li>
-<li>Accéder à vos tableaux de bord n8n et CouchDB à distance de manière sécurisée.</li>
-<li>Configurer des tunnels HTTPS si nécessaire (étape facultative utilisant Pinggy ou
+<li>Accéder à vos tableaux de bord N8N et CouchDB à distance de manière
+sécurisée.</li>
+<li>Mettre en place des tunnels HTTPS si nécessaire (étape optionnelle utilisant Pinggy ou
 Cloudflare Tunnel).</li>
 </ol>
 <h1 id="weekend-action-plan">Plan d'action du week-end</h1>
@@ -227,18 +228,18 @@ Cloudflare Tunnel).</li>
 <ul>
 <li>Maintenance Proxmox et mises à jour Ubuntu.</li>
 <li>Installer Docker et déployer CouchDB.</li>
-<li>Tester la connexion CouchDB avec l'application de bureau Obsidian.</li>
+<li>Tester la connexion CouchDB avec l'application Obsidian pour ordinateur de bureau.</li>
 </ul>
 <h3 id="sunday">Dimanche</h3>
 <ul>
-<li>Déployer n8n et créer votre première automatisation de sauvegarde.</li>
-<li>Configurer Twingate pour un accès externe sécurisé.</li>
-<li>Documenter votre configuration directement dans Obsidian.</li>
+<li>Déployer N8N et créer votre première automatisation de sauvegarde.</li>
+<li>Configurer Twingate pour un accès sécurisé externe.</li>
+<li>Documenter votre installation directement dans Obsidian.</li>
 </ul>
 <h1 id="end-goal">Objectif final</h1>
 <p>D'ici lundi, vous aurez : - Un système de synchronisation Obsidian auto-hébergé
-(CouchDB) - L'automatisation n8n pour les sauvegardes hebdomadaires - Un workflow
-sécurisé à distance utilisant Twingate —</p>
+(CouchDB) - Une automatisation N8N pour les sauvegardes hebdomadaires - Un flux de travail distant sécurisé
+utilisant Twingate —</p>
                 </div>
 
                 <div class="article-navigation">
@@ -252,7 +253,7 @@ sécurisé à distance utilisant Twingate —</p>
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en formation | Passionné de cybersécurité</p>
+                    <p>Pentester en formation | Passionné de Cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
@@ -266,7 +267,7 @@ sécurisé à distance utilisant Twingate —</p>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Se connecter</h4>
+                    <h4>Connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -283,12 +284,12 @@ sécurisé à distance utilisant Twingate —</p>
 
             <div class="footer-bottom">
                 <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
-                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+                <p>Conçu avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
             </div>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Retour en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 
