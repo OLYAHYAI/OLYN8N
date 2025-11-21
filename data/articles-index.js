@@ -1,6 +1,6 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-21T00:45:56.891Z",
-  "totalArticles": 10,
+  "lastUpdated": "2025-11-21T00:58:39.415Z",
+  "totalArticles": 2,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
@@ -8,66 +8,6 @@ var ARTICLE_INDEX={
       "icon": "fas fa-server",
       "articles": {
         "en": [
-          {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "proxmox-vm-maintenance-routine-complete-guide",
-            "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-            "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-            "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "url": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-            "filePath": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
           {
             "id": "roadmap-infrastructure",
             "title": "Roadmap Infrastructure",
@@ -85,91 +25,11 @@ var ARTICLE_INDEX={
             "filePath": "/en/infrastructure/roadmap-infrastructure.html",
             "wordCount": 1000,
             "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "proxmox-ve-initial-setup-session-notes",
-            "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
+            "featured": true,
             "status": "published"
           }
         ],
         "fr": [
-          {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "proxmox-vm-maintenance-routine-complete-guide",
-            "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-            "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-            "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "url": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-            "filePath": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
           {
             "id": "roadmap-infrastructure",
             "title": "Roadmap Infrastructure",
@@ -189,30 +49,10 @@ var ARTICLE_INDEX={
             "readingTime": 5,
             "featured": false,
             "status": "published"
-          },
-          {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "proxmox-ve-initial-setup-session-notes",
-            "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
           }
         ]
       },
-      "total": 10
+      "total": 2
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -266,130 +106,10 @@ var ARTICLE_INDEX={
     }
   },
   "languages": {
-    "en": 5,
-    "fr": 5
+    "en": 1,
+    "fr": 1
   },
   "articles": [
-    {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": true,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "url": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "filePath": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "url": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "filePath": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
     {
       "id": "roadmap-infrastructure",
       "title": "Roadmap Infrastructure",
@@ -427,56 +147,16 @@ var ARTICLE_INDEX={
       "filePath": "/en/infrastructure/roadmap-infrastructure.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
+      "featured": true,
       "status": "published"
     }
   ],
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -523,126 +203,6 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": true,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "url": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "filePath": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-      "url": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "filePath": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
       "id": "roadmap-infrastructure",
       "title": "Roadmap Infrastructure",
       "description": "",
@@ -679,54 +239,14 @@ var ARTICLE_INDEX={
       "filePath": "/en/infrastructure/roadmap-infrastructure.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "proxmox-ve-initial-setup-session-notes",
-      "title": "Proxmox Ve Initial Setup Session Notes",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "proxmox-ve-initial-setup-session-notes",
-      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
+      "featured": true,
       "status": "published"
     }
   ],
   "featuredArticles": [
     {
-      "id": "proxmox-vm-maintenance-routine-complete-guide",
-      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "id": "roadmap-infrastructure",
+      "title": "Roadmap Infrastructure",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -736,9 +256,9 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "proxmox-vm-maintenance-routine-complete-guide",
-      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "slug": "roadmap-infrastructure",
+      "url": "/en/infrastructure/roadmap-infrastructure.html",
+      "filePath": "/en/infrastructure/roadmap-infrastructure.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +267,8 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications": "/fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
-      "en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications": "/en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html",
       "fr/infrastructure/roadmap-infrastructure": "/fr/infrastructure/roadmap-infrastructure.html",
-      "en/infrastructure/roadmap-infrastructure": "/en/infrastructure/roadmap-infrastructure.html",
-      "en/infrastructure/proxmox-ve-initial-setup-session-notes": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
-      "fr/infrastructure/proxmox-ve-initial-setup-session-notes": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html"
+      "en/infrastructure/roadmap-infrastructure": "/en/infrastructure/roadmap-infrastructure.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +298,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-21T00:45:56.893Z",
+  "generatedAt": "2025-11-21T00:58:39.416Z",
   "version": "1.0"
 };
