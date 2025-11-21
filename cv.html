@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV - Omar LYAHYAI - Master 2 Cybersécurité</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Mise en page A4 pour impression */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: #020617; /* très sombre, style portfolio */
+      color: #e5e7eb;
+    }
+
+    #print-btn {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      padding: 8px 16px;
+      background: #0ea5e9;
+      color: #0b1120;
+      border: none;
+      border-radius: 999px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.6);
+      z-index: 1000;
+    }
+
+    #print-btn:hover {
+      background: #38bdf8;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      background: #020617;
+      display: flex;
+      box-shadow: 0 0 0 1px #111827;
+    }
+
+    .left {
+      width: 32%;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      padding: 24mm 10mm 20mm 14mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #e5e7eb;
+    }
+
+    .right {
+      width: 68%;
+      padding: 20mm 18mm 18mm 16mm;
+      background: linear-gradient(135deg, #020617, #020617 40%, #020617 100%);
+      color: #e5e7eb;
+    }
+
+    .photo-wrapper {
+      width: 70mm;
+      height: 70mm;
+      border-radius: 999px;
+      padding: 4px;
+      background: linear-gradient(135deg, #0ea5e9, #22c55e, #6366f1);
+      margin-bottom: 10mm;
+    }
+
+    .photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      border-radius: 999px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .name {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 4mm;
+    }
+
+    .role {
+      text-align: center;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #38bdf8;
+      margin-bottom: 10mm;
+    }
+
+    .section-title-side {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #9ca3af;
+      margin: 10mm 0 3mm;
+      border-top: 1px solid #1f2937;
+      padding-top: 3mm;
+      width: 100%;
+    }
+
+    .side-block {
+      width: 100%;
+      font-size: 10px;
+      line-height: 1.5;
+      color: #d1d5db;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      margin: 2px 4px 2px 0;
+      font-size: 9px;
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .contact-line {
+      font-size: 10px;
+      margin-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-label {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+    }
+
+    .contact-value {
+      font-size: 10px;
+      color: #e5e7eb;
+      word-break: break-all;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 8mm;
+    }
+
+    .section-title-main {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: #9ca3af;
+      border-bottom: 1px solid #1f2937;
+      padding-bottom: 2mm;
+      margin-bottom: 3mm;
+    }
+
+    .paragraph {
+      font-size: 10px;
+      line-height: 1.6;
+      color: #e5e7eb;
+    }
+
+    .experience-item {
+      margin-bottom: 4mm;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 10px;
+      margin-bottom: 1mm;
+    }
+
+    .exp-title {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .exp-meta {
+      font-size: 9px;
+      color: #9ca3af;
+      text-align: right;
+    }
+
+    .exp-bullets {
+      margin: 0;
+      padding-left: 3mm;
+      list-style: disc;
+      font-size: 9.5px;
+      color: #d1d5db;
+    }
+
+    .exp-bullets li {
+      margin-bottom: 1mm;
+    }
+
+    .two-cols {
+      display: flex;
+      gap: 10mm;
+      font-size: 9.5px;
+    }
+
+    .two-cols > div {
+      flex: 1;
+    }
+
+    .pill-row {
+      font-size: 9px;
+      line-height: 1.6;
+    }
+
+    .pill-row span {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      margin: 2px 4px 2px 0;
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      #print-btn {
+        display: none;
+      }
+      .page {
+        box-shadow: none;
+      }
+    }
+
+    /* Mode responsive minimal pour affichage mobile (consultation) */
+    @media screen and (max-width: 900px) {
+      .page {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+      }
+      .left,
+      .right {
+        width: 100%;
+        padding: 16px 20px;
+      }
+      .left {
+        align-items: flex-start;
+      }
+      .photo-wrapper {
+        margin-bottom: 12px;
+      }
+      .name,
+      .role {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button id="print-btn" onclick="window.print()">
+    Imprimer / Exporter en PDF
+  </button>
+
+  <div class="page">
+    <!-- Colonne gauche -->
+    <aside class="left">
+      <div class="photo-wrapper">
+        <!-- Assure-toi que PROFILE.jpg est dans le même dossier -->
+        <img src="PROFILE.jpg" alt="Photo de profil - Omar LYAHYAI" />
+      </div>
+
+      <div class="name">
+        Omar<br />
+        LYAHYAI
+      </div>
+      <div class="role">
+        Administrateur systèmes &amp; réseaux<br />
+        Candidat Master 2 Cybersécurité
+      </div>
+
+      <div class="section-title-side">Contact</div>
+      <div class="side-block">
+        <div class="contact-line">
+          <span class="contact-label">Localisation</span>
+          <span class="contact-value">Tanger-Assilah, Maroc</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">Téléphone</span>
+          <span class="contact-value">06 56 59 95 81</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">E-mail</span>
+          <span class="contact-value">omar_lyahyai@hotmail.fr</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">
+            <a href="https://www.linkedin.com/in/lyahyai-omar" target="_blank">
+              linkedin.com/in/lyahyai-omar
+            </a>
+          </span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">Portfolio</span>
+          <span class="contact-value">
+            <a href="https://portfolio.olyhome.site" target="_blank">
+              portfolio.olyhome.site
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <div class="section-title-side">Profil</div>
+      <div class="side-block">
+        Administrateur systèmes et réseaux avec plus de 6 ans
+        d'expérience en exploitation, supervision et sécurisation
+        d'infrastructures hybrides au sein d'environnements critiques.
+        Spécialisé dans l'automatisation, le monitoring avancé et la
+        sécurisation des flux réseau (VPN IPSEC, firewalls, segmentation).
+      </div>
+
+      <div class="section-title-side">Savoir-être</div>
+      <div class="side-block">
+        <div class="pill-row">
+          <span>Communication</span>
+          <span>Esprit d'équipe</span>
+          <span>Autonomie</span>
+          <span>Adaptabilité</span>
+          <span>Gestion du stress</span>
+          <span>Résolution de problèmes</span>
+          <span>Proactivité</span>
+        </div>
+      </div>
+
+      <div class="section-title-side">Langues</div>
+      <div class="side-block">
+        <div><strong>Français</strong> — Bilingue</div>
+        <div><strong>Anglais</strong> — Niveau opérationnel</div>
+        <div><strong>Espagnol</strong> — Niveau moyen</div>
+      </div>
+
+      <div class="section-title-side">Centres d'intérêt</div>
+      <div class="side-block">
+        <div class="pill-row">
+          <span>Cybersécurité</span>
+          <span>Homelab &amp; virtualisation</span>
+          <span>Automatisation</span>
+          <span>IA appliquée à la sécurité</span>
+          <span>Ju-Jitsu</span>
+          <span>Bricolage</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Colonne droite -->
+    <main class="right">
+      <section class="section">
+        <h2 class="section-title-main">Profil &amp; objectif</h2>
+        <p class="paragraph">
+          Administrateur systèmes et réseaux expérimenté dans la gestion
+          d'environnements hétérogènes (Windows, Linux, AS400, virtualisation)
+          et la sécurisation opérationnelle des infrastructures de production.
+        </p>
+        <p class="paragraph">
+          Fort d'une pratique quotidienne de l'automatisation, du monitoring et
+          de la gestion d'incidents N2/N3, je développe en parallèle un homelab
+          orienté cybersécurité et IA pour expérimenter architectures
+          sécurisées, détection de menaces et réponse à incident.
+        </p>
+        <p class="paragraph">
+          Mon objectif est d'intégrer directement un Master 2 en cybersécurité
+          afin de consolider les fondements théoriques du domaine et d'évoluer
+          vers des fonctions d'ingénieur sécurité, SOC ou architecture
+          sécurisée.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title-main">Compétences techniques</h2>
+        <div class="two-cols">
+          <div>
+            <strong style="font-size:10px;">Cybersécurité &amp; Réseau</strong>
+            <div class="pill-row">
+              <span>VPN IPSEC (FortiGate)</span>
+              <span>Firewalls &amp; filtrage</span>
+              <span>Sécurité réseau</span>
+              <span>Analyse d'incidents N2/N3</span>
+              <span>LAN/WAN</span>
+              <span>Cisco switches/routers</span>
+            </div>
+          </div>
+          <div>
+            <strong style="font-size:10px;">Systèmes &amp; Virtualisation</strong>
+            <div class="pill-row">
+              <span>Linux</span>
+              <span>Windows &amp; Windows Server</span>
+              <span>Unix / IBM OS/400</span>
+              <span>VMware</span>
+              <span>Hyper-V</span>
+              <span>Proxmox VE</span>
+              <span>Veeam Backup</span>
+              <span>MIMIX</span>
+            </div>
+          </div>
+        </div>
+        <div style="height:3mm;"></div>
+        <div class="two-cols">
+          <div>
+            <strong style="font-size:10px;">Supervision &amp; Automatisation</strong>
+            <div class="pill-row">
+              <span>Zabbix</span>
+              <span>System Center Operations Manager</span>
+              <span>SMA Opcon</span>
+              <span>Bash</span>
+              <span>PowerShell</span>
+              <span>Python</span>
+              <span>Automatisation de jobs</span>
+            </div>
+          </div>
+          <div>
+            <strong style="font-size:10px;">Téléphonie &amp; CRM</strong>
+            <div class="pill-row">
+              <span>Asterisk</span>
+              <span>VOX CRM</span>
+              <span>Goautodial</span>
+              <span>PhingooCRM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title-main">Expériences professionnelles</h2>
+
+        <div class="experience-item">
+          <div class="exp-header">
+            <div class="exp-title">
+              Administrateur système et réseau – Groupe VILAVI
+            </div>
+            <div class="exp-meta">Tanger | Avril 2019 – Aujourd'hui</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>
+              Gestion de l'infrastructure de production et de projets
+              transverses en lien avec les équipes internes et prestataires
+              externes dans un contexte fortement contraint en disponibilité et
+              sécurité.
+            </li>
+            <li>
+              Administration de l'ordonnanceur SMA Opcon pour automatiser et
+              centraliser les traitements récurrents sur les environnements
+              Windows, Linux, AS400, Informatica, EDI et ODI, avec
+              industrialisation des rapports de production.
+            </li>
+            <li>
+              Mise en production de workflows, jobs et batchs (Informatica,
+              ODI), support aux équipes de développement, data et métiers lors
+              des POC et déploiements.
+            </li>
+            <li>
+              Rédaction et mise à jour de la documentation d'exploitation
+              (DAT, DEX, DIN, PMEP, MODOP) et contribution à l'amélioration
+              continue des procédures.
+            </li>
+            <li>
+              Traitement d'incidents d'exploitation et de production N2/N3,
+              suivi du plan de production et participation à la planification
+              des opérations critiques.
+            </li>
+            <li>
+              Administration des environnements systèmes (Windows, Windows
+              Server, Unix), gestion de la virtualisation VMware/Hyper-V et
+              opérations de sauvegarde/restauration (Veeam, MIMIX).
+            </li>
+            <li>
+              Suivi des incidents réseaux et télécoms, escalade opérateurs et
+              administration de tunnels VPN IPSEC site-à-site sur FortiGate,
+              ainsi que de l'infrastructure réseau Cisco.
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-header">
+            <div class="exp-title">
+              Technicien réseau et système – KONTACTEL
+            </div>
+            <div class="exp-meta">Tanger | Sept. 2018 – Déc. 2018</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>
+              Gestion d'un parc de plus de 200 postes de travail dans un
+              environnement de centre de contact.
+            </li>
+            <li>
+              Installation et configuration de serveurs physiques et
+              virtualisés pour la téléphonie et les opérations CRM.
+            </li>
+            <li>
+              Administration d'Asterisk supportant plus de 500 appels
+              quotidiens et intégration de solutions CRM call center (VOX
+              CRM, Goautodial, PhingooCRM).
+            </li>
+            <li>
+              Maintenance des équipements réseau (Wi-Fi, imprimantes,
+              photocopieurs) et diagnostic des incidents.
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-header">
+            <div class="exp-title">
+              Technicien réseau et infrastructure – STM
+            </div>
+            <div class="exp-meta">Tanger | Août 2017 – Sept. 2017</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>
+              Conception et déploiement de solutions de câblage (fibre
+              optique et cuivre) pour des infrastructures réseau.
+            </li>
+            <li>
+              Interventions sur des réseaux WAN afin d'optimiser
+              performances et fiabilité.
+            </li>
+            <li>
+              Diagnostic et résolution de dysfonctionnements réseau,
+              amélioration des parcours de câbles pour une meilleure
+              efficacité.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title-main">Projets &amp; homelab cybersécurité</h2>
+        <p class="paragraph">
+          Mise en place d'un homelab basé sur Proxmox VE (Lenovo ThinkCentre
+          M920q) hébergeant plusieurs machines virtuelles et conteneurs pour
+          simuler des environnements d'entreprise.
+        </p>
+        <p class="paragraph">
+          Création de segments réseau isolés pour tester des scénarios de
+          réponse à incident, la segmentation, le durcissement de services et
+          l'analyse de comportement.
+        </p>
+        <p class="paragraph">
+          Intégration de Zabbix pour le monitoring temps réel, utilisation de
+          Docker pour simuler des architectures microservices et mise en place
+          d'Active Directory/DNS pour expérimenter sur les politiques de
+          sécurité et les modèles d'authentification.
+        </p>
+        <p class="paragraph">
+          Usage de n8n pour automatiser le traitement de logs et
+          l'orchestration de réponses (approche SOAR artisanale), ainsi que
+          d'outils IA/LLM pour l'analyse de menaces, le triage d'alertes et
+          l'assistance à l'investigation.
+        </p>
+        <p class="paragraph">
+          Portfolio détaillé des projets et labs :
+          <a href="https://portfolio.olyhome.site" target="_blank">
+            https://portfolio.olyhome.site
+          </a>
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title-main">Formation &amp; certifications</h2>
+        <div class="experience-item">
+          <div class="exp-header">
+            <div class="exp-title">
+              Licence professionnelle – Sécurité et administration des réseaux
+              d'entreprise
+            </div>
+            <div class="exp-meta">
+              SUPTEM - BMHS / Univ. de Saint-Quentin-en-Yvelines | 2015–2018
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-header">
+            <div class="exp-title">Baccalauréat</div>
+            <div class="exp-meta">Lycée Al Hadifa – Tanger | 2014–2015</div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-header">
+            <div class="exp-title">Certifications</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Google Cyber Security Certificate (2025)</li>
+            <li>Fortinet NSE 1 Network Security Associate</li>
+            <li>Fortinet NSE 2 Network Security Associate</li>
+            <li>Cisco Certified Network Associate (CCNA)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // JS minimal : tout est géré par le bouton print() au-dessus
+    // Tu peux ajouter ici un switch thème clair/sombre si besoin
+  </script>
+</body>
+</html>
