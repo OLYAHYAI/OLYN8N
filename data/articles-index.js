@@ -1,6 +1,6 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-21T01:45:08.740Z",
-  "totalArticles": 2,
+  "lastUpdated": "2025-11-21T01:59:07.633Z",
+  "totalArticles": 10,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
@@ -8,6 +8,66 @@ var ARTICLE_INDEX={
       "icon": "fas fa-server",
       "articles": {
         "en": [
+          {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "proxmox-vm-maintenance-routine-complete-guide",
+            "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "vm-disk-expansion-guide-proxmox-linux",
+            "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
           {
             "id": "a-roadmap-to-self-hosted-services",
             "title": "A Roadmap To Self Hosted Services",
@@ -25,11 +85,91 @@ var ARTICLE_INDEX={
             "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
             "wordCount": 1000,
             "readingTime": 5,
-            "featured": true,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
             "status": "published"
           }
         ],
         "fr": [
+          {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "proxmox-vm-maintenance-routine-complete-guide",
+            "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "vm-disk-expansion-guide-proxmox-linux",
+            "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
           {
             "id": "a-roadmap-to-self-hosted-services",
             "title": "A Roadmap To Self Hosted Services",
@@ -49,10 +189,30 @@ var ARTICLE_INDEX={
             "readingTime": 5,
             "featured": false,
             "status": "published"
+          },
+          {
+            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "description": "",
+            "excerpt": "",
+            "category": "infrastructure",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "infrastructure"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+            "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
           }
         ]
       },
-      "total": 2
+      "total": 10
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -106,10 +266,130 @@ var ARTICLE_INDEX={
     }
   },
   "languages": {
-    "en": 1,
-    "fr": 1
+    "en": 5,
+    "fr": 5
   },
   "articles": [
+    {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
     {
       "id": "a-roadmap-to-self-hosted-services",
       "title": "A Roadmap To Self Hosted Services",
@@ -127,7 +407,7 @@ var ARTICLE_INDEX={
       "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": true,
+      "featured": false,
       "status": "published"
     },
     {
@@ -149,14 +429,54 @@ var ARTICLE_INDEX={
       "readingTime": 5,
       "featured": false,
       "status": "published"
+    },
+    {
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
     }
   ],
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 2,
-      "en": 1,
-      "fr": 1,
+      "total": 10,
+      "en": 5,
+      "fr": 5,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -203,6 +523,126 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "vm-disk-expansion-guide-proxmox-linux",
+      "title": "Vm Disk Expansion Guide Proxmox Linux",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "vm-disk-expansion-guide-proxmox-linux",
+      "url": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "filePath": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
       "id": "a-roadmap-to-self-hosted-services",
       "title": "A Roadmap To Self Hosted Services",
       "description": "",
@@ -219,7 +659,7 @@ var ARTICLE_INDEX={
       "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
-      "featured": true,
+      "featured": false,
       "status": "published"
     },
     {
@@ -241,12 +681,30 @@ var ARTICLE_INDEX={
       "readingTime": 5,
       "featured": false,
       "status": "published"
-    }
-  ],
-  "featuredArticles": [
+    },
     {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -256,9 +714,31 @@ var ARTICLE_INDEX={
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
+      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    }
+  ],
+  "featuredArticles": [
+    {
+      "id": "proxmox-vm-maintenance-routine-complete-guide",
+      "title": "Proxmox Vm Maintenance Routine Complete Guide",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-vm-maintenance-routine-complete-guide",
+      "url": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "filePath": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -267,8 +747,16 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
+      "en/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
+      "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "en/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
+      "fr/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
       "en/infrastructure/a-roadmap-to-self-hosted-services": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html"
+      "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -298,6 +786,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-21T01:45:08.741Z",
+  "generatedAt": "2025-11-21T01:59:07.635Z",
   "version": "1.0"
 };
