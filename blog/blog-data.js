@@ -1,114 +1,48 @@
 const blogData = {
     "articles": [
         {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
-                "automation_ai"
+                "infrastructure"
             ],
-            "url": "../en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html"
+            "url": "../en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
-                "automation_ai"
+                "infrastructure"
             ],
-            "url": "../fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html"
+            "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
-                "automation_ai"
+                "infrastructure"
             ],
-            "url": "../en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
+            "url": "../en/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
-                "automation_ai"
+                "infrastructure"
             ],
-            "url": "../fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html"
-        },
-        {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-            "excerpt": "",
-            "category": "automation_ai",
-            "date": "2025-11-21",
-            "tags": [
-                "automation_ai"
-            ],
-            "url": "../en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html"
-        },
-        {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-            "excerpt": "",
-            "category": "automation_ai",
-            "date": "2025-11-21",
-            "tags": [
-                "automation_ai"
-            ],
-            "url": "../fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html"
-        },
-        {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Mcp Configuration Guide Yaml Setup",
-            "excerpt": "",
-            "category": "automation_ai",
-            "date": "2025-11-21",
-            "tags": [
-                "automation_ai"
-            ],
-            "url": "../en/automation_ai/mcp-configuration-guide-yaml-setup.html"
-        },
-        {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Mcp Configuration Guide Yaml Setup",
-            "excerpt": "",
-            "category": "automation_ai",
-            "date": "2025-11-21",
-            "tags": [
-                "automation_ai"
-            ],
-            "url": "../fr/automation_ai/mcp-configuration-guide-yaml-setup.html"
-        },
-        {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto Sync To Github Website",
-            "excerpt": "",
-            "category": "automation_ai",
-            "date": "2025-11-21",
-            "tags": [
-                "automation_ai"
-            ],
-            "url": "../en/automation_ai/obsidian-auto-sync-to-github-website.html"
-        },
-        {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto Sync To Github Website",
-            "excerpt": "",
-            "category": "automation_ai",
-            "date": "2025-11-21",
-            "tags": [
-                "automation_ai"
-            ],
-            "url": "../fr/automation_ai/obsidian-auto-sync-to-github-website.html"
+            "url": "../fr/infrastructure/a-roadmap-to-self-hosted-services.html"
         }
     ],
     "categories": {

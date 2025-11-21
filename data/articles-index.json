@@ -1,118 +1,48 @@
 {
-  "lastUpdated": "2025-11-21T00:07:02.230Z",
-  "totalArticles": 10,
+  "lastUpdated": "2025-11-21T00:22:05.701Z",
+  "totalArticles": 4,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
-        "en": [],
-        "fr": []
-      },
-      "total": 0
-    },
-    "automation_ai": {
-      "name": "Automation & AI",
-      "description": "AI workflows automation scripts MCP integration",
-      "icon": "fas fa-robot",
-      "articles": {
         "en": [
           {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "description": "",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "language": "en",
             "date": "2025-11-21",
             "tags": [
-              "automation_ai"
+              "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-            "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-            "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
             "status": "published"
           },
           {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "description": "",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "language": "en",
             "date": "2025-11-21",
             "tags": [
-              "automation_ai"
+              "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-            "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-            "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-            "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Mcp Configuration Guide Yaml Setup",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "mcp-configuration-guide-yaml-setup",
-            "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-            "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto Sync To Github Website",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "obsidian-auto-sync-to-github-website",
-            "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-            "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+            "slug": "a-roadmap-to-self-hosted-services",
+            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -121,100 +51,40 @@
         ],
         "fr": [
           {
-            "id": "quest-fluid-notes-obsidian-livesync-configuration",
-            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "description": "",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "language": "fr",
             "date": "2025-11-21",
             "tags": [
-              "automation_ai"
+              "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-            "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-            "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+            "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "description": "",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "infrastructure",
             "language": "fr",
             "date": "2025-11-21",
             "tags": [
-              "automation_ai"
+              "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-            "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-            "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "multi-agent-ai-collaboration-building-portfolio-website",
-            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-            "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-            "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "mcp-configuration-guide-yaml-setup",
-            "title": "Mcp Configuration Guide Yaml Setup",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "mcp-configuration-guide-yaml-setup",
-            "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-            "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "obsidian-auto-sync-to-github-website",
-            "title": "Obsidian Auto Sync To Github Website",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "obsidian-auto-sync-to-github-website",
-            "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
-            "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+            "slug": "a-roadmap-to-self-hosted-services",
+            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -222,7 +92,17 @@
           }
         ]
       },
-      "total": 10
+      "total": 4
+    },
+    "automation_ai": {
+      "name": "Automation & AI",
+      "description": "AI workflows automation scripts MCP integration",
+      "icon": "fas fa-robot",
+      "articles": {
+        "en": [],
+        "fr": []
+      },
+      "total": 0
     },
     "network_security": {
       "name": "Network Security",
@@ -266,205 +146,85 @@
     }
   },
   "languages": {
-    "en": 5,
-    "fr": 5
+    "en": 2,
+    "fr": 2
   },
   "articles": [
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-      "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-      "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Mcp Configuration Guide Yaml Setup",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "mcp-configuration-guide-yaml-setup",
-      "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Mcp Configuration Guide Yaml Setup",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "mcp-configuration-guide-yaml-setup",
-      "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "obsidian-auto-sync-to-github-website",
-      "title": "Obsidian Auto Sync To Github Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "obsidian-auto-sync-to-github-website",
-      "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "obsidian-auto-sync-to-github-website",
-      "title": "Obsidian Auto Sync To Github Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "obsidian-auto-sync-to-github-website",
-      "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -474,17 +234,17 @@
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 4,
+      "en": 2,
+      "fr": 2,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
     "automation_ai": {
       "name": "Automation & AI",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "AI workflows automation scripts MCP integration",
       "icon": "fas fa-robot"
     },
@@ -523,200 +283,80 @@
   },
   "recentArticles": [
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "id": "a-roadmap-to-self-hosted-services",
+      "title": "A Roadmap To Self Hosted Services",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "fr",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
-      "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-      "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "multi-agent-ai-collaboration-building-portfolio-website",
-      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
-      "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Mcp Configuration Guide Yaml Setup",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "mcp-configuration-guide-yaml-setup",
-      "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "mcp-configuration-guide-yaml-setup",
-      "title": "Mcp Configuration Guide Yaml Setup",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "mcp-configuration-guide-yaml-setup",
-      "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "obsidian-auto-sync-to-github-website",
-      "title": "Obsidian Auto Sync To Github Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "obsidian-auto-sync-to-github-website",
-      "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "obsidian-auto-sync-to-github-website",
-      "title": "Obsidian Auto Sync To Github Website",
-      "description": "",
-      "excerpt": "",
-      "category": "automation_ai",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "automation_ai"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "obsidian-auto-sync-to-github-website",
-      "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "slug": "a-roadmap-to-self-hosted-services",
+      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -725,20 +365,20 @@
   ],
   "featuredArticles": [
     {
-      "id": "quest-fluid-notes-obsidian-livesync-configuration",
-      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "id": "building-secure-lab-kali-linux-pfsense-deployment",
+      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "infrastructure",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
-      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
+      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -747,16 +387,10 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
-      "en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
-      "en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
-      "en/automation_ai/mcp-configuration-guide-yaml-setup": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "fr/automation_ai/mcp-configuration-guide-yaml-setup": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
-      "en/automation_ai/obsidian-auto-sync-to-github-website": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
-      "fr/automation_ai/obsidian-auto-sync-to-github-website": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html"
+      "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "en/infrastructure/a-roadmap-to-self-hosted-services": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +420,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-21T00:07:02.230Z",
+  "generatedAt": "2025-11-21T00:22:05.702Z",
   "version": "1.0"
 }
