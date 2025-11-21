@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html" class="lang-toggle" aria-label="Change language">
-                        <span class="lang-current">EN</span>
+                    <a href="/fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">FR</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -129,13 +129,14 @@ The workflow will:
 <ul>
 <li>CPU : Intel i5-8500T</li>
 <li>RAM : 16 Go</li>
-<li>Main Disk : 512 GB SSD</li>
-<li>Secondary Disk : 250 GB HDD</li>
+<li>Primary Disk : SSD 512 Go</li>
+<li>Secondary Disk : HDD 250 Go</li>
 </ul></li>
 <li><strong>Proxmox Server IP Address</strong> : 10.10.10.254</li>
 </ul>
 <hr />
-<h2 id="connexion-à-linterface-web-proxmox">1. ✅ Connecting to the Proxmox Web Interface</h2>
+<h2 id="connexion-à-linterface-web-proxmox">1. ✅ Connecting to the
+Proxmox Web Interface</h2>
 <ul>
 <li>Access via browser at <code>https://10.10.10.254:8006</code></li>
 <li>Credentials : root
@@ -146,7 +147,8 @@ The workflow will:
 </ul></li>
 </ul>
 <hr />
-<h2 id="connexion-ethernet-entre-routeur-et-serveur">2. 🔌 Ethernet Connection Between Router and Server</h2>
+<h2 id="connexion-ethernet-entre-routeur-et-serveur">2. 🔌 Ethernet
+Connection Between Router and Server</h2>
 <ul>
 <li>Direct connection via Ethernet cable</li>
 <li>Manual IP configuration :
@@ -158,7 +160,8 @@ The workflow will:
 <li>Objective : direct communication between the two machines</li>
 </ul>
 <hr />
-<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Command Line Wi-Fi Verification</h2>
+<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Wi-Fi
+Verification via Command Line</h2>
 <ul>
 <li>Commands used :
 <ul>
@@ -169,9 +172,10 @@ The workflow will:
 </ul></li>
 </ul>
 <hr />
-<h2 id="changement-dadresse-ip-du-serveur-proxmox">4. 🌐 Changing the Proxmox Server IP Address</h2>
+<h2 id="changement-dadresse-ip-du-serveur-proxmox">4. 🌐 Changing
+the Proxmox Server IP Address</h2>
 <ul>
-<li><p>File modified : <code>/etc/network/interfaces</code></p></li>
+<li><p>Modified file : <code>/etc/network/interfaces</code></p></li>
 <li><p>Configuration example :</p>
 <pre><code>auto vmbr0
 iface vmbr0 inet static
@@ -185,7 +189,8 @@ iface vmbr0 inet static
 <code>systemctl restart networking</code></p></li>
 </ul>
 <hr />
-<h2 id="utilisation-dune-image-iso-depuis-le-laptop">5. 📦 Using an ISO Image from the Laptop</h2>
+<h2 id="utilisation-dune-image-iso-depuis-le-laptop">5. 📦 Using
+an ISO Image from the Laptop</h2>
 <ul>
 <li>Methods :
 <ul>
@@ -197,7 +202,8 @@ iface vmbr0 inet static
 <li>Objective : create a VM with a customized ISO image</li>
 </ul>
 <hr />
-<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Choosing LLMs suitable for the machine</h2>
+<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Choosing LLMs
+adapted to the machine</h2>
 <ul>
 <li>Recommended models :
 <ul>
@@ -213,7 +219,8 @@ iface vmbr0 inet static
 </ul></li>
 </ul>
 <hr />
-<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installing Docker + MCP + LLM</h2>
+<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installation of Docker +
+MCP + LLM</h2>
 <ul>
 <li><p>Docker :</p>
 <div class="sourceCode" id="cb2"><pre
@@ -226,24 +233,27 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div></li>
 </ul>
 <hr />
-<h2 id="outils-de-prise-de-notes-recommandés">8. 📝 Recommended Note-Taking Tools</h2>
+<h2 id="outils-de-prise-de-notes-recommandés">8. 📝 Recommended
+Note-Taking Tools</h2>
 <ul>
 <li><strong>Obsidian</strong> : local, markdown, links between notes</li>
 <li><strong>Joplin</strong> : open-source, synchronizable</li>
 <li><strong>Logseq / Trilium</strong> : Docker possible</li>
 <li><strong>Notion</strong> : cloud, project management</li>
-<li><strong>Markdown + Git</strong> : technical note versioning</li>
+<li><strong>Markdown + Git</strong> : technical notes versioning</li>
 </ul>
 <hr />
-<h2 id="choix-dun-os-pour-gérer-le-réseau">9. 🔐 Choosing an OS for Network Management</h2>
+<h2 id="choix-dun-os-pour-gérer-le-réseau">9. 🔐 Choosing an OS for
+Network Management</h2>
 <ul>
 <li><strong>pfSense</strong> : firewall, VPN, DHCP, DNS, VLAN</li>
 <li><strong>OPNsense</strong> : modern alternative</li>
-<li><strong>VyOS</strong> : Advanced CLI</li>
+<li><strong>VyOS</strong> : advanced CLI</li>
 <li><strong>Ubuntu Server</strong> : customizable with network tools</li>
 </ul>
 <hr />
-<h2 id="surveillance-et-limitation-du-trafic-avec-pfsense">10. 📊 Traffic Monitoring and Limiting with pfSense</h2>
+<h2 id="surveillance-et-limitation-du-trafic-avec-pfsense">10. 📊
+Traffic Monitoring and Shaping with pfSense</h2>
 <ul>
 <li><strong>Monitoring</strong> :
 <ul>
@@ -251,7 +261,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <li>Packet Capture</li>
 <li>IDS/IPS (Snort, Suricata)</li>
 </ul></li>
-<li><strong>Limiting</strong> :
+<li><strong>Shaping</strong> :
 <ul>
 <li>Traffic Shaping (pipes, queues)</li>
 <li>Firewall Rules</li>
@@ -259,13 +269,14 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 </ul></li>
 </ul>
 <hr />
-<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Utilizing a Hard Drive HDD (250 GB)</h2>
+<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Utilizing a
+Hard Drive (HDD 250 GB)</h2>
 <ul>
 <li><p><strong>Recommended Usage</strong> :</p>
 <ul>
 <li>Backups</li>
 <li>Logs</li>
-<li>ISOs / LLM templates</li>
+<li>ISO / LLM templates</li>
 </ul></li>
 <li><p><strong>Formatting</strong> :</p>
 <div class="sourceCode" id="cb5"><pre
@@ -286,7 +297,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <h2 id="fin-de-session">🔚 End of Session</h2>
 <ul>
 <li>All steps are ready to be documented in Obsidian.</li>
-<li>Proxmox server IP address : <code>10.10.10.254</code></li>
+<li>Proxmox Server IP Address : <code>10.10.10.254</code></li>
 </ul>
                 </div>
 
