@@ -1,5 +1,5 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-21T00:58:39.415Z",
+  "lastUpdated": "2025-11-21T01:16:05.928Z",
   "totalArticles": 2,
   "categories": {
     "infrastructure": {
@@ -7,22 +7,32 @@ var ARTICLE_INDEX={
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
+        "en": [],
+        "fr": []
+      },
+      "total": 0
+    },
+    "automation_ai": {
+      "name": "Automation & AI",
+      "description": "AI workflows automation scripts MCP integration",
+      "icon": "fas fa-robot",
+      "articles": {
         "en": [
           {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
+            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
             "description": "",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "automation_ai",
             "language": "en",
             "date": "2025-11-21",
             "tags": [
-              "infrastructure"
+              "automation_ai"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "roadmap-infrastructure",
-            "url": "/en/infrastructure/roadmap-infrastructure.html",
-            "filePath": "/en/infrastructure/roadmap-infrastructure.html",
+            "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "url": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+            "filePath": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": true,
@@ -31,20 +41,20 @@ var ARTICLE_INDEX={
         ],
         "fr": [
           {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
+            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
             "description": "",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "automation_ai",
             "language": "fr",
             "date": "2025-11-21",
             "tags": [
-              "infrastructure"
+              "automation_ai"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "roadmap-infrastructure",
-            "url": "/fr/infrastructure/roadmap-infrastructure.html",
-            "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
+            "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "url": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+            "filePath": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -53,16 +63,6 @@ var ARTICLE_INDEX={
         ]
       },
       "total": 2
-    },
-    "automation_ai": {
-      "name": "Automation & AI",
-      "description": "AI workflows automation scripts MCP integration",
-      "icon": "fas fa-robot",
-      "articles": {
-        "en": [],
-        "fr": []
-      },
-      "total": 0
     },
     "network_security": {
       "name": "Network Security",
@@ -111,60 +111,60 @@ var ARTICLE_INDEX={
   },
   "articles": [
     {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
+      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/fr/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
+      "category": "automation_ai",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "infrastructure"
+        "automation_ai"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/en/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/en/infrastructure/roadmap-infrastructure.html",
+      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "url": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "filePath": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "url": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "filePath": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
       "status": "published"
     }
   ],
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 2,
-      "en": 1,
-      "fr": 1,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
     "automation_ai": {
       "name": "Automation & AI",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "AI workflows automation scripts MCP integration",
       "icon": "fas fa-robot"
     },
@@ -203,62 +203,62 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
+      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/fr/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
+      "category": "automation_ai",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "infrastructure"
+        "automation_ai"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/en/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/en/infrastructure/roadmap-infrastructure.html",
+      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "url": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "filePath": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "url": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "filePath": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
       "status": "published"
     }
   ],
   "featuredArticles": [
     {
-      "id": "roadmap-infrastructure",
-      "title": "Roadmap Infrastructure",
+      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "automation_ai",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "infrastructure"
+        "automation_ai"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "roadmap-infrastructure",
-      "url": "/en/infrastructure/roadmap-infrastructure.html",
-      "filePath": "/en/infrastructure/roadmap-infrastructure.html",
+      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
+      "url": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "filePath": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -267,8 +267,8 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "fr/infrastructure/roadmap-infrastructure": "/fr/infrastructure/roadmap-infrastructure.html",
-      "en/infrastructure/roadmap-infrastructure": "/en/infrastructure/roadmap-infrastructure.html"
+      "en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -298,6 +298,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-21T00:58:39.416Z",
+  "generatedAt": "2025-11-21T01:16:05.929Z",
   "version": "1.0"
 };
