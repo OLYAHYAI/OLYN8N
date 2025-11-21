@@ -21,6 +21,94 @@ const blogData = {
                 "docker_services"
             ],
             "url": "../fr/docker_services/docker-networking-troubleshooting-container-communication.html"
+        },
+        {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+        },
+        {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+        },
+        {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+        },
+        {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+        },
+        {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
+        },
+        {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
+        },
+        {
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/a-roadmap-to-self-hosted-services.html"
+        },
+        {
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/a-roadmap-to-self-hosted-services.html"
         }
     ],
     "categories": {
