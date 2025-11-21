@@ -1,26 +1,26 @@
 const blogData = {
     "articles": [
         {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
+            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "automation_ai",
             "date": "2025-11-21",
             "tags": [
-                "infrastructure"
+                "automation_ai"
             ],
-            "url": "../fr/infrastructure/roadmap-infrastructure.html"
+            "url": "../en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html"
         },
         {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
+            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
+            "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "automation_ai",
             "date": "2025-11-21",
             "tags": [
-                "infrastructure"
+                "automation_ai"
             ],
-            "url": "../en/infrastructure/roadmap-infrastructure.html"
+            "url": "../fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html"
         }
     ],
     "categories": {
