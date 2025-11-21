@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sauvetage réseau : Remettre Proxmox et pfSense en ligne - Tutoriel et guide technique">
+    <meta name="description" content="Récupérer Proxmox et pfSense en Ligne : Sauvetage Réseau - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Sauvetage réseau : Remettre Proxmox et pfSense en ligne | Blog Technique Omar LYAHYAI</title>
+    <title>Récupérer Proxmox et pfSense en Ligne : Sauvetage Réseau | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html" class="lang-toggle" aria-label="Changer la langue">
+                    <a href="/en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html" class="lang-toggle" aria-label="Changer de langue">
                         <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -61,18 +61,18 @@
         <section class="article-header" role="region" aria-label="En-tête de l'article">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Chemin de navigation">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Sauvetage réseau : Remettre Proxmox et pfSense en ligne</span>
+                        <span>Récupérer Proxmox et pfSense en Ligne : Sauvetage Réseau</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Sauvetage réseau : Remettre Proxmox et pfSense en ligne</h1>
+                <h1 class="article-title">Récupérer Proxmox et pfSense en Ligne : Sauvetage Réseau</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -122,25 +122,20 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="my-network-rescue-getting-proxmox-and-pfsense-back-online">Sauvetage
-réseau : Remettre Proxmox et pfSense en ligne</h1>
+<h1 id="my-network-rescue-getting-proxmox-and-pfsense-back-online">Mon
+Sauvetage Réseau : Remettre Proxmox et pfSense en Ligne</h1>
 <h2 id="the-problem">Le Problème</h2>
-<p>Après avoir changé l'adresse IP de mon serveur Proxmox, l'interface web (UI) est devenue
-complètement inaccessible. C'est un scénario courant lors de la reconfiguration
-des réseaux homelab, et comprendre le processus de résolution est crucial
-pour tout administrateur d'infrastructure.</p>
+<p>Après avoir changé l'adresse IP de mon serveur Proxmox, l'interface web est devenue totalement inaccessible. C'est un scénario courant lors de la reconfiguration des réseaux homelab, et comprendre le processus de résolution est essentiel pour tout administrateur d'infrastructure.</p>
 <h2 id="initial-symptoms">Symptômes Initiaux</h2>
 <ul>
 <li>❌ Interface web Proxmox inaccessible à la nouvelle IP</li>
 <li>❌ Impossible de pinguer le serveur Proxmox depuis le réseau</li>
-<li>❌ Connexions SSH expirées (timeout)</li>
-<li>❌ VMs en cours d'exécution mais incapables de communiquer</li>
+<li>❌ Les connexions SSH expirent</li>
+<li>❌ Les VMs fonctionnent mais sont incapables de communiquer</li>
 </ul>
 <h2 id="root-cause-analysis">Analyse de la Cause Profonde</h2>
-<p>Lors de la modification de la configuration réseau sur Proxmox, plusieurs services et
-configurations doivent être mis à jour simultanément. En oublier un seul
-peut entraîner une perte complète de connectivité.</p>
-<h2 id="network-architecture-goal">Objectif de l'Architecture Réseau</h2>
+<p>Lors de la modification de la configuration réseau sur Proxmox, plusieurs services et configurations doivent être mis à jour simultanément. En omettre un seul peut entraîner une perte totale de connectivité.</p>
+<h2 id="network-architecture-goal">Objectif d'Architecture Réseau</h2>
 <h3 id="target-configuration">Configuration Cible :</h3>
 <pre><code>Internet
     ↓
@@ -155,10 +150,10 @@ pfSense VM
 Internal VMs (192.168.1.x)</code></pre>
 <h3 id="key-principles">Principes Clés :</h3>
 <ul>
-<li><strong>Proxmox</strong> : Pont vers le réseau externe (vmbr0)</li>
-<li><strong>pfSense WAN</strong> : Même réseau que Proxmox pour l'accès à Internet</li>
-<li><strong>pfSense LAN</strong> : Réseau interne séparé pour l'isolation des VMs</li>
-<li><strong>Autres VMs</strong> : Connectées à vmbr1, derrière le pare-feu pfSense</li>
+<li><strong>Proxmox</strong>: Pont vers le réseau externe (vmbr0)</li>
+<li><strong>pfSense WAN</strong>: Même réseau que Proxmox pour l'accès Internet</li>
+<li><strong>pfSense LAN</strong>: Réseau interne séparé pour l'isolation des VM</li>
+<li><strong>Other VMs</strong>: Connectées à vmbr1, derrière le pare-feu pfSense</li>
 </ul>
 <h2 id="resolution-steps">Étapes de Résolution</h2>
 <h3 id="step-1-verify-network-interfaces">Étape 1 : Vérifier les Interfaces Réseau</h3>
@@ -250,19 +245,19 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 <span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># No IP address - this is for VMs only</span></span></code></pre></div>
 <h3 id="important-configuration-notes">Notes de Configuration Importantes :</h3>
 <ol type="1">
-<li><strong>Interface Physique</strong> (<code>enp3s0</code>) :
+<li><strong>Interface Physique</strong> (<code>enp3s0</code>):
 <ul>
-<li>Définie sur <code>inet manual</code></li>
-<li>Aucune adresse IP assignée directement</li>
+<li>Configurée sur <code>inet manual</code></li>
+<li>Aucune adresse IP attribuée directement</li>
 <li>Utilisée par le pont (<code>vmbr0</code>)</li>
 </ul></li>
-<li><strong>Pont de Gestion</strong> (<code>vmbr0</code>) :
+<li><strong>Pont de Gestion</strong> (<code>vmbr0</code>):
 <ul>
-<li>Possède l'adresse IP pour l'accès web à Proxmox</li>
+<li>Possède une adresse IP pour l'accès web Proxmox</li>
 <li>Connecté à l'interface physique</li>
 <li>Fournit l'accès Internet au WAN de pfSense</li>
 </ul></li>
-<li><strong>Pont Interne</strong> (<code>vmbr1</code>) :
+<li><strong>Pont Interne</strong> (<code>vmbr1</code>):
 <ul>
 <li>Aucune adresse IP (<code>inet manual</code>)</li>
 <li>Non connecté à l'interface physique
@@ -272,24 +267,22 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 </ul></li>
 </ol>
 <h2 id="pfsense-network-configuration">Configuration Réseau pfSense</h2>
-<h3 id="interface-assignments-in-proxmox">Assignation des Interfaces dans
-Proxmox</h3>
+<h3 id="interface-assignments-in-proxmox">Attributions d'Interfaces dans Proxmox</h3>
 <p>Lors de la création/configuration de la VM pfSense :</p>
 <h4 id="wan-interface">Interface WAN :</h4>
 <ul>
-<li><strong>Pont (Bridge)</strong> : vmbr0</li>
-<li><strong>Objectif</strong> : Accès Internet</li>
-<li><strong>Assignation IP</strong> : Statique (192.168.11.253) ou DHCP depuis
+<li><strong>Pont</strong>: vmbr0</li>
+<li><strong>Objectif</strong>: Accès Internet</li>
+<li><strong>Attribution IP</strong>: Statique (192.168.11.253) ou DHCP depuis
 le routeur</li>
 </ul>
 <h4 id="lan-interface">Interface LAN :</h4>
 <ul>
-<li><strong>Pont (Bridge)</strong> : vmbr1</li>
-<li><strong>Objectif</strong> : Réseau interne des VMs</li>
-<li><strong>Assignation IP</strong> : Statique (192.168.1.1/24 typique)</li>
+<li><strong>Pont</strong>: vmbr1</li>
+<li><strong>Objectif</strong>: Réseau VM interne</li>
+<li><strong>Attribution IP</strong>: Statique (192.168.1.1/24 typique)</li>
 </ul>
-<h3 id="pfsense-interface-configuration">Configuration de l'Interface
-pfSense</h3>
+<h3 id="pfsense-interface-configuration">Configuration d'Interface pfSense</h3>
 <p>Accéder à la console pfSense dans Proxmox :</p>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Option 1) Assign Interfaces</span></span>
@@ -305,24 +298,26 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 <h2 id="network-separation-best-practices">Bonnes Pratiques de Séparation Réseau</h2>
 <h3 id="why-separate-wan-and-lan">Pourquoi Séparer WAN et LAN ?</h3>
 <ol type="1">
-<li><strong>Isolation de Sécurité</strong> : Les VMs internes sont protégées par
+<li><strong>Isolation de Sécurité</strong>: Les VMs internes sont protégées par
 le pare-feu pfSense</li>
-<li><strong>Contrôle Réseau</strong> : pfSense gère DHCP, DNS et le routage
+<li><strong>Contrôle Réseau</strong>: pfSense gère le DHCP, le DNS et le routage
 pour le réseau interne</li>
-<li><strong>Gestion du Trafic</strong> : Application de règles de pare-feu et
-de mise en forme du trafic (traffic shaping)</li>
-<li><strong>Support VLAN</strong> : Ajout facile de VLANs pour la
+<li><strong>Gestion du Trafic</strong>: Application de règles de pare-feu et
+de mise en forme du trafic</li>
+<li><strong>Support VLAN</strong>: Ajouter facilement des VLANs pour la
 segmentation réseau</li>
 </ol>
-<h3 id="critical-rules">Règles Critiques :</h3>
+<h3 id="critical-rules">Règles Cruciales :</h3>
 <ul>
 <li>❌ <strong>NE JAMAIS</strong> utiliser le même pont pour WAN et LAN</li>
-<li>✓ <strong>TOUJOURS</strong> assigner WAN à vmbr0 (connectivité externe)</li>
-<li>✓ <strong>TOUJOURS</strong> assigner LAN à vmbr1 (isolation interne)</li>
-<li>✓ <strong>TOUJOURS</strong> connecter les autres VMs à vmbr1 (derrière le
-pare-feu)</li>
+<li>✓ <strong>TOUJOURS</strong> attribuer le WAN à vmbr0 (connectivité
+externe)</li>
+<li>✓ <strong>TOUJOURS</strong> attribuer le LAN à vmbr1 (isolation
+interne)</li>
+<li>✓ <strong>TOUJOURS</strong> connecter les autres VMs à vmbr1 (derrière
+le pare-feu)</li>
 </ul>
-<h3 id="example-vm-network-configuration">Exemple de Configuration Réseau VM :</h3>
+<h3 id="example-vm-network-configuration">Exemple de Configuration Réseau de VM :</h3>
 <pre><code>VM: Ubuntu Server
 ├── Network Device
 │   ├── Bridge: vmbr1
@@ -351,7 +346,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># From pfSense console</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Diagnostics → Ping</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Target: 8.8.8.8 (verify internet connectivity)</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Source: WAN interface</span></span></code></pre></div>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Source: WAN interface</span></span>
+</code></pre></div>
 <h3 id="test-pfsense-lan">Tester le LAN de pfSense</h3>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From a VM on vmbr1</span></span>
@@ -362,14 +358,14 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href=
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Test internet access through pfSense</span></span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> 8.8.8.8</span></code></pre></div>
-<h2 id="troubleshooting-checklist">Liste de Contrôle du Dépannage</h2>
-<h3 id="proxmox-not-accessible">Proxmox Non Accessible :</h3>
+<h2 id="troubleshooting-checklist">Liste de Contrôle de Dépannage</h2>
+<h3 id="proxmox-not-accessible">Proxmox Inaccessible :</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Vérifier la syntaxe de
-<code>/etc/network/interfaces</code></label></li>
+<li><label><input type="checkbox" />Vérifier la
+syntaxe de <code>/etc/network/interfaces</code></label></li>
 <li><label><input type="checkbox" />Vérifier que l'interface est UP :
 <code>ip link show</code></label></li>
-<li><label><input type="checkbox" />Vérifier l'adresse IP assignée :
+<li><label><input type="checkbox" />Vérifier que l'adresse IP est attribuée :
 <code>ip addr show vmbr0</code></label></li>
 <li><label><input type="checkbox" />Vérifier la route par défaut :
 <code>ip route show</code></label></li>
@@ -377,25 +373,24 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href=
 <code>systemctl restart networking</code></label></li>
 <li><label><input type="checkbox" />Redémarrer pveproxy :
 <code>systemctl restart pveproxy</code></label></li>
-<li><label><input type="checkbox" />Vérifier les règles du pare-feu :
+<li><label><input type="checkbox" />Vérifier les règles de pare-feu :
 <code>iptables -L -n</code></label></li>
 </ul>
-<h3 id="pfsense-wan-not-working">pfSense WAN Ne Fonctionne Pas :</h3>
+<h3 id="pfsense-wan-not-working">Le WAN de pfSense ne Fonctionne Pas :</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Vérifier que l'interface WAN est assignée à
+<li><label><input type="checkbox" />Vérifier que l'interface WAN est attribuée à
 vmbr0</label></li>
 <li><label><input type="checkbox" />Vérifier que l'adresse IP WAN est dans le
 bon sous-réseau</label></li>
-<li><label><input type="checkbox" />Vérifier que la passerelle est joignable :
+<li><label><input type="checkbox" />Vérifier que la passerelle est atteignable :
 <code>ping 192.168.11.1</code></label></li>
 <li><label><input type="checkbox" />Vérifier que l'interface WAN de pfSense est
 activée</label></li>
 <li><label><input type="checkbox" />Examiner les règles de pare-feu WAN de
 pfSense</label></li>
-<li><label><input type="checkbox" />Vérifier les règles de NAT sortant
-(outbound)</label></li>
+<li><label><input type="checkbox" />Vérifier les règles NAT sortantes</label></li>
 </ul>
-<h3 id="internal-vms-no-internet">VMs Internes Sans Internet :</h3>
+<h3 id="internal-vms-no-internet">Les VMs Internes n'ont Pas d'Internet :</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" />Vérifier que les VMs sont connectées à
 vmbr1</label></li>
@@ -408,7 +403,7 @@ pfSense</label></li>
 <li><label><input type="checkbox" />Vérifier que le NAT de pfSense est
 activé</label></li>
 <li><label><input type="checkbox" />Examiner les règles de pare-feu LAN de
-pfSense (devraient autoriser le trafic sortant)</label></li>
+pfSense (devrait autoriser le trafic sortant)</label></li>
 </ul>
 <h2 id="prevention-for-future-changes">Prévention pour les Changements Futurs</h2>
 <h3 id="document-current-configuration">1. Documenter la Configuration Actuelle</h3>
@@ -431,66 +426,58 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href=
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># If working, make permanent</span></span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co"># If not, restore from backup</span></span></code></pre></div>
-<h3 id="keep-console-access">3. Garder l'Accès Console</h3>
+<h3 id="keep-console-access">3. Conserver l'Accès Console</h3>
 <ul>
-<li>Toujours disposer d'un accès physique/IPMI au serveur</li>
-<li>Ne pas effectuer de modifications réseau à distance sans solution de
-repli</li>
+<li>Toujours avoir un accès physique/IPMI au serveur</li>
+<li>Ne pas effectuer de changements réseau à distance sans solution de repli</li>
 <li>Utiliser la console Proxmox pour les VMs, pas seulement SSH</li>
 </ul>
 <h3 id="use-configuration-management">4. Utiliser la Gestion de Configuration</h3>
-<p>Envisager d'utiliser :
-- Ansible pour la configuration automatisée
-- Git pour le contrôle de version des configurations
-- Documentation dans Obsidian/wiki</p>
+<p>Envisager d'utiliser : - Ansible pour la configuration automatisée - Git pour
+le contrôle de version des configurations - Documentation dans Obsidian/wiki</p>
 <h2 id="lessons-learned">Leçons Apprises</h2>
-<h3 id="what-went-wrong">Ce qui n'a pas Fonctionné :</h3>
+<h3 id="what-went-wrong">Ce qui a Mal Tourné :</h3>
 <ol type="1">
-<li><strong>Configuration Incomplète</strong> : Changement d'IP sans mise à jour
+<li><strong>Configuration Incomplète</strong>: Changement d'IP sans mise à jour
 de la passerelle</li>
-<li><strong>Dépendances des Services</strong> : Oubli de redémarrer pveproxy après
+<li><strong>Dépendances de Services</strong>: Ne pas avoir redémarré pveproxy après
 les changements réseau</li>
-<li><strong>État de l'Interface</strong> : L'interface physique n'a pas été
+<li><strong>État de l'Interface</strong>: L'interface physique n'a pas été
 activée correctement</li>
 </ol>
 <h3 id="what-worked">Ce qui a Fonctionné :</h3>
 <ol type="1">
-<li><strong>Débogage Systématique</strong> : Vérification des interfaces → services
-→ routage</li>
-<li><strong>Configuration Correcte des Ponts</strong> : Ponts séparés pour
-WAN/LAN</li>
-<li><strong>Documentation</strong> : Avoir des configurations de référence
-enregistrées a réduit le temps de récupération</li>
+<li><strong>Débogage Systématique</strong>: Vérifier interfaces → services →
+routage</li>
+<li><strong>Configuration de Pont Correcte</strong>: Ponts séparés pour WAN/LAN</li>
+<li><strong>Documentation</strong>: Avoir des configurations de référence a
+réduit le temps de récupération</li>
 </ol>
 <h3 id="best-practices-going-forward">Meilleures Pratiques pour l'Avenir :</h3>
 <ol type="1">
-<li><strong>Planifier les Changements</strong> : Documenter la configuration
-prévue avant d'apporter des modifications</li>
-<li><strong>Tester par Étapes</strong> : Faire un changement à la fois, vérifier
-avant de continuer</li>
-<li><strong>Garder des Sauvegardes</strong> : Toujours avoir des sauvegardes de
+<li><strong>Planifier les Changements</strong>: Documenter la configuration prévue
+avant d'effectuer des modifications</li>
+<li><strong>Tester de Manière Incrémentielle</strong>: Effectuer un changement à
+la fois, vérifier avant de continuer</li>
+<li><strong>Conserver les Sauvegardes</strong>: Toujours avoir des sauvegardes de
 configuration avant les changements majeurs</li>
-<li><strong>Utiliser les Outils Appropriés</strong> : <code>ifreload</code> au lieu
+<li><strong>Utiliser les Outils Appropriés</strong>: <code>ifreload</code> au lieu
 de redémarrages complets lorsque cela est possible</li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
-<p>Les problèmes de configuration réseau dans Proxmox peuvent sembler intimidants, mais
-un dépannage systématique résout la plupart des problèmes rapidement. Les leçons clés :</p>
+<p>Les problèmes de configuration réseau dans Proxmox peuvent sembler intimidants, mais un dépannage systématique résout la plupart des problèmes rapidement. Les leçons clés :</p>
 <ul>
-<li><strong>Comprendre l'architecture des ponts</strong> : Interface physique
+<li><strong>Comprendre l'architecture des ponts</strong>: Interface physique
 → vmbr0 (externe) + vmbr1 (interne)</li>
-<li><strong>Séparer WAN et LAN</strong> : pfSense nécessite des réseaux distincts
-pour une fonction de pare-feu correcte</li>
-<li><strong>Dépendances des services</strong> : Les changements réseau exigent le
-redémarrage des services</li>
-<li><strong>La documentation fait gagner du temps</strong> : Les configurations
+<li><strong>Séparer WAN et LAN</strong>: pfSense nécessite des réseaux
+distincts pour un bon fonctionnement du pare-feu</li>
+<li><strong>Dépendances de services</strong>: Les changements réseau nécessitent
+des redémarrages de services</li>
+<li><strong>La documentation fait gagner du temps</strong>: Les configurations
 sauvegardées accélèrent la récupération</li>
 </ul>
-<p>Cette expérience a renforcé l'importance de comprendre les
-fondamentaux de l'infrastructure. Lorsque les choses ne fonctionnent plus, le débogage systématique
-et une connaissance appropriée de l'architecture mènent à une résolution rapide.</p>
-<p><em>Prochaine étape : J'utiliserai Ansible pour gérer la configuration réseau
-de Proxmox et éviter entièrement les erreurs manuelles.</em></p>
+<p>Cette expérience a renforcé l'importance de comprendre les fondamentaux de l'infrastructure. Lorsque les choses ne fonctionnent plus, le débogage systématique et une connaissance approfondie de l'architecture mènent à une résolution rapide.</p>
+<p><em>Prochaine étape : J'utiliserai Ansible pour gérer la configuration réseau de Proxmox et éviter entièrement les erreurs manuelles.</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -518,7 +505,7 @@ de Proxmox et éviter entièrement les erreurs manuelles.</em></p>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connecter</h4>
+                    <h4>Se Connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
