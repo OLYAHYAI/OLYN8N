@@ -1,0 +1,791 @@
+var ARTICLE_INDEX={
+  "lastUpdated": "2025-11-21T00:07:02.230Z",
+  "totalArticles": 10,
+  "categories": {
+    "infrastructure": {
+      "name": "Infrastructure",
+      "description": "Proxmox VE virtualization system administration",
+      "icon": "fas fa-server",
+      "articles": {
+        "en": [],
+        "fr": []
+      },
+      "total": 0
+    },
+    "automation_ai": {
+      "name": "Automation & AI",
+      "description": "AI workflows automation scripts MCP integration",
+      "icon": "fas fa-robot",
+      "articles": {
+        "en": [
+          {
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
+            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+            "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          },
+          {
+            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+            "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "multi-agent-ai-collaboration-building-portfolio-website",
+            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+            "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+            "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "mcp-configuration-guide-yaml-setup",
+            "title": "Mcp Configuration Guide Yaml Setup",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "mcp-configuration-guide-yaml-setup",
+            "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
+            "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Obsidian Auto Sync To Github Website",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "obsidian-auto-sync-to-github-website",
+            "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+            "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "quest-fluid-notes-obsidian-livesync-configuration",
+            "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+            "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+            "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+            "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "multi-agent-ai-collaboration-building-portfolio-website",
+            "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+            "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+            "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "mcp-configuration-guide-yaml-setup",
+            "title": "Mcp Configuration Guide Yaml Setup",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "mcp-configuration-guide-yaml-setup",
+            "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
+            "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          },
+          {
+            "id": "obsidian-auto-sync-to-github-website",
+            "title": "Obsidian Auto Sync To Github Website",
+            "description": "",
+            "excerpt": "",
+            "category": "automation_ai",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "automation_ai"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "obsidian-auto-sync-to-github-website",
+            "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+            "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
+      },
+      "total": 10
+    },
+    "network_security": {
+      "name": "Network Security",
+      "description": "Firewall SSL/TLS reverse proxies security",
+      "icon": "fas fa-shield-alt",
+      "articles": {
+        "en": [],
+        "fr": []
+      },
+      "total": 0
+    },
+    "remote_access": {
+      "name": "Remote Access",
+      "description": "VPN tunneling remote desktop secure access",
+      "icon": "fas fa-network-wired",
+      "articles": {
+        "en": [],
+        "fr": []
+      },
+      "total": 0
+    },
+    "reference": {
+      "name": "Reference",
+      "description": "Quick guides configuration reference",
+      "icon": "fas fa-book",
+      "articles": {
+        "en": [],
+        "fr": []
+      },
+      "total": 0
+    },
+    "docker_services": {
+      "name": "Docker Services",
+      "description": "Container orchestration Docker Compose",
+      "icon": "fab fa-docker",
+      "articles": {
+        "en": [],
+        "fr": []
+      },
+      "total": 0
+    }
+  },
+  "languages": {
+    "en": 5,
+    "fr": 5
+  },
+  "articles": [
+    {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "multi-agent-ai-collaboration-building-portfolio-website",
+      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+      "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "multi-agent-ai-collaboration-building-portfolio-website",
+      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+      "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "mcp-configuration-guide-yaml-setup",
+      "title": "Mcp Configuration Guide Yaml Setup",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "mcp-configuration-guide-yaml-setup",
+      "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "mcp-configuration-guide-yaml-setup",
+      "title": "Mcp Configuration Guide Yaml Setup",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "mcp-configuration-guide-yaml-setup",
+      "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Obsidian Auto Sync To Github Website",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Obsidian Auto Sync To Github Website",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    }
+  ],
+  "categoryStats": {
+    "infrastructure": {
+      "name": "Infrastructure",
+      "total": 0,
+      "en": 0,
+      "fr": 0,
+      "description": "Proxmox VE virtualization system administration",
+      "icon": "fas fa-server"
+    },
+    "automation_ai": {
+      "name": "Automation & AI",
+      "total": 10,
+      "en": 5,
+      "fr": 5,
+      "description": "AI workflows automation scripts MCP integration",
+      "icon": "fas fa-robot"
+    },
+    "network_security": {
+      "name": "Network Security",
+      "total": 0,
+      "en": 0,
+      "fr": 0,
+      "description": "Firewall SSL/TLS reverse proxies security",
+      "icon": "fas fa-shield-alt"
+    },
+    "remote_access": {
+      "name": "Remote Access",
+      "total": 0,
+      "en": 0,
+      "fr": 0,
+      "description": "VPN tunneling remote desktop secure access",
+      "icon": "fas fa-network-wired"
+    },
+    "reference": {
+      "name": "Reference",
+      "total": 0,
+      "en": 0,
+      "fr": 0,
+      "description": "Quick guides configuration reference",
+      "icon": "fas fa-book"
+    },
+    "docker_services": {
+      "name": "Docker Services",
+      "total": 0,
+      "en": 0,
+      "fr": 0,
+      "description": "Container orchestration Docker Compose",
+      "icon": "fab fa-docker"
+    }
+  },
+  "recentArticles": [
+    {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "url": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "filePath": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "title": "Ai Powered Workflow Mcp Docker N8n Obsidian",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "ai-powered-workflow-mcp-docker-n8n-obsidian",
+      "url": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "filePath": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "multi-agent-ai-collaboration-building-portfolio-website",
+      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+      "url": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "filePath": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "multi-agent-ai-collaboration-building-portfolio-website",
+      "title": "Multi Agent Ai Collaboration Building Portfolio Website",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "multi-agent-ai-collaboration-building-portfolio-website",
+      "url": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "filePath": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "mcp-configuration-guide-yaml-setup",
+      "title": "Mcp Configuration Guide Yaml Setup",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "mcp-configuration-guide-yaml-setup",
+      "url": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "filePath": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "mcp-configuration-guide-yaml-setup",
+      "title": "Mcp Configuration Guide Yaml Setup",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "mcp-configuration-guide-yaml-setup",
+      "url": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "filePath": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Obsidian Auto Sync To Github Website",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "obsidian-auto-sync-to-github-website",
+      "title": "Obsidian Auto Sync To Github Website",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "obsidian-auto-sync-to-github-website",
+      "url": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "filePath": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    }
+  ],
+  "featuredArticles": [
+    {
+      "id": "quest-fluid-notes-obsidian-livesync-configuration",
+      "title": "Quest Fluid Notes Obsidian Livesync Configuration",
+      "description": "",
+      "excerpt": "",
+      "category": "automation_ai",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "automation_ai"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "quest-fluid-notes-obsidian-livesync-configuration",
+      "url": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "filePath": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": true,
+      "status": "published"
+    }
+  ],
+  "hrefMappings": {
+    "articleHrefs": {
+      "en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration": "/en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration": "/fr/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html",
+      "en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian": "/en/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian": "/fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html",
+      "en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website": "/en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website": "/fr/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html",
+      "en/automation_ai/mcp-configuration-guide-yaml-setup": "/en/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "fr/automation_ai/mcp-configuration-guide-yaml-setup": "/fr/automation_ai/mcp-configuration-guide-yaml-setup.html",
+      "en/automation_ai/obsidian-auto-sync-to-github-website": "/en/automation_ai/obsidian-auto-sync-to-github-website.html",
+      "fr/automation_ai/obsidian-auto-sync-to-github-website": "/fr/automation_ai/obsidian-auto-sync-to-github-website.html"
+    },
+    "categoryHrefs": {
+      "infrastructure": {
+        "en": "/blog/infrastructure.html",
+        "fr": "/blog/infrastructure-fr.html"
+      },
+      "automation_ai": {
+        "en": "/blog/automation_ai.html",
+        "fr": "/blog/automation_ai-fr.html"
+      },
+      "network_security": {
+        "en": "/blog/network_security.html",
+        "fr": "/blog/network_security-fr.html"
+      },
+      "remote_access": {
+        "en": "/blog/remote_access.html",
+        "fr": "/blog/remote_access-fr.html"
+      },
+      "reference": {
+        "en": "/blog/reference.html",
+        "fr": "/blog/reference-fr.html"
+      },
+      "docker_services": {
+        "en": "/blog/docker_services.html",
+        "fr": "/blog/docker_services-fr.html"
+      }
+    },
+    "languageSwitching": {}
+  },
+  "generatedAt": "2025-11-21T00:07:02.230Z",
+  "version": "1.0"
+};

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Déploiement d'un Laboratoire Sécurisé Kali Linux et Pfsense - Tutoriel et guide technique">
+    <meta name="description" content="Construction d'un laboratoire sécurisé Déploiement de Kali Linux et Pfsense - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Déploiement d'un Laboratoire Sécurisé Kali Linux et Pfsense | Blog Technique d'Omar LYAHYAI</title>
+    <title>Construction d'un Laboratoire Sécurisé : Déploiement de Kali Linux et Pfsense | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -34,13 +34,13 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Ouvrir/Fermer la navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
                 <ul class="nav-menu">
                     <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
-                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À Propos</a></li>
                     <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
                     <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
                     <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
@@ -58,21 +58,21 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="En-tête de l'article">
+        <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Déploiement d'un Laboratoire Sécurisé Kali Linux et Pfsense</span>
+                        <span>Construction d'un Laboratoire Sécurisé : Déploiement de Kali Linux et Pfsense</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Déploiement d'un Laboratoire Sécurisé Kali Linux et Pfsense</h1>
+                <h1 class="article-title">Construction d'un Laboratoire Sécurisé : Déploiement de Kali Linux et Pfsense</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -125,7 +125,7 @@ The workflow will:
 <h1
 id="building-a-secure-lab-kali-linux-and-pfsense-deployment">Construction d'un Laboratoire Sécurisé : Déploiement de Kali Linux et pfSense</h1>
 <h2 id="project-overview">Aperçu du Projet</h2>
-<p>La création d'un laboratoire de sécurité et de tests d'intrusion dédié est essentielle pour tout professionnel de la sécurité en devenir. Cet article documente le déploiement complet d'un environnement homelab sécurisé comprenant Kali Linux et pfSense fonctionnant sur Proxmox VE.</p>
+<p>Créer un laboratoire de sécurité et de tests d'intrusion dédié est essentiel pour tout professionnel de la sécurité en herbe. Cet article documente le déploiement complet d'un environnement homelab sécurisé comprenant Kali Linux et pfSense, tous deux fonctionnant sur Proxmox VE.</p>
 <h2 id="lab-architecture">Architecture du Laboratoire</h2>
 <pre><code>Proxmox Host
 ├── pfSense VM (Firewall/Router)
@@ -138,17 +138,17 @@ id="building-a-secure-lab-kali-linux-and-pfsense-deployment">Construction d'un L
 <h2 id="kali-linux-vm-installation">Installation de la VM Kali Linux</h2>
 <h3 id="vm-specifications">Spécifications de la VM</h3>
 <p><strong>Configuration Matérielle :</strong> - <strong>BIOS</strong>:
-SeaBIOS (suite à des problèmes de compatibilité OVMF) - <strong>Disque</strong>: 80 Go
-(Contrôleur SCSI VirtIO unique) - <strong>CPU</strong>: 4 cœurs -
-<strong>RAM</strong>: 8 Go - <strong>Réseau</strong>: VirtIO (connecté
-à vmbr1) - <strong>Ordre de Démarrage</strong>: Disque en premier, CD-ROM en second</p>
-<h3 id="why-these-specs">Justification des Spécifications</h3>
-<p><strong>Taille du Disque (80 Go)</strong>: - Installation de base Kali : ~20 Go
-- Outils et base de données d'exploits : ~15 Go - Espace de travail et fichiers de projet : ~20 Go
-- Instantanés (snapshots) de VM et mises à jour : ~25 Go</p>
+SeaBIOS (après problèmes de compatibilité OVMF) - <strong>Disque</strong>: 80 GB
+(VirtIO SCSI Single controller) - <strong>CPU</strong>: 4 cœurs -
+<strong>RAM</strong>: 8 GB - <strong>Réseau</strong>: VirtIO (connecté
+à vmbr1) - <strong>Ordre de Démarrage</strong>: Disque d'abord, CD-ROM ensuite</p>
+<h3 id="why-these-specs">Justification de ces Spécifications</h3>
+<p><strong>Taille du Disque (80 Go)</strong>: - Installation de base de Kali : ~20 GB
+- Base de données d'outils et d'exploits : ~15 GB - Espace de travail et fichiers de projet : ~20
+GB - Snapshots de VM et mises à jour : ~25 GB</p>
 <p><strong>CPU (4 cœurs)</strong>: - Balayage et exploitation parallèles
-- Cassage de mot de passe efficace - Performance d'interface graphique fluide - Support des outils multithreadés</p>
-<p><strong>RAM (8 Go)</strong>: - Fonctionnement confortable de l'interface graphique - Plusieurs VM pour des scénarios de laboratoire - Développement d'exploits en mémoire - Outils basés sur navigateur (Burp Suite)</p>
+- Cassage de mots de passe efficace - Performance fluide de l'interface graphique (GUI) - Support des outils multithreadés</p>
+<p><strong>RAM (8 Go)</strong>: - Fonctionnement confortable de l'interface graphique - Multiples VMs pour les scénarios de laboratoire - Développement d'exploits en mémoire - Outils basés sur navigateur (Burp Suite)</p>
 <h3 id="creating-the-vm-in-proxmox">Création de la VM dans Proxmox</h3>
 <h4 id="step-1-download-kali-linux-iso">Étape 1 : Téléchargement de l'ISO de Kali Linux</h4>
 <div class="sourceCode" id="cb2"><pre
@@ -161,70 +161,70 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier la somme de contrôle</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://cdimage.kali.org/kali-2024.4/SHA256SUMS</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">sha256sum</span> <span class="at">-c</span> SHA256SUMS <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="kw">|</span> <span class="fu">grep</span> kali-linux-2024.4-installer-amd64.iso</span></code></pre></div>
-<h4 id="step-2-create-vm-via-proxmox-ui">Étape 2 : Création de la VM via l'Interface Utilisateur de Proxmox</h4>
+<h4 id="step-2-create-vm-via-proxmox-ui">Étape 2 : Création de la VM via l'interface utilisateur de Proxmox</h4>
 <ol type="1">
 <li><strong>Général</strong>:
 <ul>
 <li>VM ID: 101 (ou votre préférence)</li>
-<li>Nom : kali-pentest</li>
-<li>Démarrer au boot : Non (démarrage manuel pour le travail en laboratoire)</li>
+<li>Nom: kali-pentest</li>
+<li>Démarrer au boot : Non (démarrage manuel pour le travail de laboratoire)</li>
 </ul></li>
 <li><strong>OS</strong>:
 <ul>
-<li>Image ISO : kali-linux-2024.4-installer-amd64.iso</li>
-<li>Type d'OS Invité : Linux</li>
-<li>Version : Noyau 6.x - 2.6</li>
+<li>ISO Image: kali-linux-2024.4-installer-amd64.iso</li>
+<li>Type d'OS Invité: Linux</li>
+<li>Version: 6.x - 2.6 Kernel</li>
 </ul></li>
 <li><strong>Système</strong>:
 <ul>
 <li>BIOS: SeaBIOS</li>
-<li>Machine : i440fx (ou q35 pour un meilleur support matériel)</li>
-<li>Contrôleur SCSI : VirtIO SCSI unique</li>
+<li>Machine: i440fx (or q35 for better hardware support)</li>
+<li>Contrôleur SCSI: VirtIO SCSI Single</li>
 <li>Agent Qemu : ✓ (activer après l'installation de l'OS)</li>
 </ul></li>
 <li><strong>Disques</strong>:
 <ul>
-<li>Bus/Périphérique : SCSI</li>
-<li>Stockage : local-lvm</li>
-<li>Taille du disque : 80 Go</li>
-<li>Cache : Write back (pour de meilleures performances)</li>
+<li>Bus/Device: SCSI</li>
+<li>Storage: local-lvm</li>
+<li>Taille du disque: 80 GB</li>
+<li>Cache: Write back (pour de meilleures performances)</li>
 <li>Discard : ✓ (pour le thin provisioning)</li>
 <li>Émulation SSD : ✓ (si l'hôte utilise un SSD)</li>
 </ul></li>
 <li><strong>CPU</strong>:
 <ul>
-<li>Sockets : 1</li>
-<li>Cœurs : 4</li>
-<li>Type : host (ou kvm64 pour la compatibilité)</li>
+<li>Sockets: 1</li>
+<li>Cœurs: 4</li>
+<li>Type: host (or kvm64 for compatibility)</li>
 </ul></li>
 <li><strong>Mémoire</strong>:
 <ul>
-<li>Mémoire : 8192 Mo</li>
-<li>Minimum : 4096 Mo (ballooning)</li>
+<li>Mémoire: 8192 MB</li>
+<li>Minimum: 4096 MB (ballooning)</li>
 </ul></li>
 <li><strong>Réseau</strong>:
 <ul>
-<li>Pont : vmbr1 (réseau de labo isolé)</li>
-<li>Modèle : VirtIO (paravirtualisé)</li>
+<li>Bridge: vmbr1 (réseau de laboratoire isolé)</li>
+<li>Model: VirtIO (paravirtualized)</li>
 <li>Pare-feu : Désactivé (pfSense s'en chargera)</li>
 </ul></li>
 </ol>
-<h4 id="step-3-install-kali-linux">Étape 3 : Installer Kali Linux</h4>
+<h4 id="step-3-install-kali-linux">Étape 3 : Installation de Kali Linux</h4>
 <ol type="1">
 <li>Démarrer la VM et ouvrir la console</li>
 <li>Démarrer à partir de l'installateur</li>
-<li>Sélectionner <strong>Graphical Install</strong> (Installation Graphique)</li>
+<li>Sélectionner l'<strong>Installation Graphique</strong></li>
 <li>Langue, Localisation, Clavier : Vos préférences</li>
 <li>Configuration Réseau :
 <ul>
 <li>Configurer automatiquement via DHCP (pfSense fournira l'adresse)</li>
-<li>Nom d'hôte : kali-pentest</li>
-<li>Domaine : lab.local</li>
+<li>Nom d'hôte: kali-pentest</li>
+<li>Domain: lab.local</li>
 </ul></li>
 <li>Configuration Utilisateur :
 <ul>
-<li>Nom complet : Testeur d'intrusion</li>
-<li>Nom d'utilisateur : pentest</li>
+<li>Nom complet: Penetration Tester</li>
+<li>Username: pentest</li>
 <li>Mot de passe : <strong>Mot de passe fort requis</strong></li>
 </ul></li>
 <li>Partitionnement :
@@ -236,10 +236,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <li>Sélection de Logiciels :
 <ul>
 <li>✓ Bureau Kali par défaut (XFCE recommandé pour la performance)</li>
-<li>✓ Top 10 des outils de sécurité</li>
+<li>✓ Les 10 meilleurs outils de sécurité</li>
 <li>✓ Grande collection d'outils (si l'espace disque le permet)</li>
 </ul></li>
-<li>Chargeur de Démarrage GRUB :
+<li>GRUB Bootloader:
 <ul>
 <li>Installer sur : /dev/sda</li>
 <li>Continuer</li>
@@ -247,16 +247,16 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <li>Redémarrer et se connecter</li>
 </ol>
 <h3 id="post-installation-configuration">Configuration Post-Installation</h3>
-<h4 id="update-system">Mise à Jour du Système</h4>
+<h4 id="update-system">Mise à jour du Système</h4>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mise à jour complète du système</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt full-upgrade <span class="at">-y</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Mise à jour de la liste des paquets Kali</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Mettre à jour la liste des paquets Kali</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer des outils supplémentaires</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer des outils additionnels</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="at">-y</span> <span class="dt">\</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    vim <span class="dt">\</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    git <span class="dt">\</span></span>
@@ -267,22 +267,22 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    nmap <span class="dt">\</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    wireshark <span class="dt">\</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    metasploit-framework</span></code></pre></div>
-<h4 id="install-proxmox-guest-agent">Installer l'Agent Invité Proxmox</h4>
+<h4 id="install-proxmox-guest-agent">Installation de l'Agent Invité Proxmox</h4>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer qemu-guest-agent</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install qemu-guest-agent</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install qemu-guest-agent <span class="at">-y</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Activer et démarrer le service</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable qemu-guest-agent</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start qemu-guest-agent</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Dans l'interface Proxmox : VM → Options → Agent Invité QEMU → Activer</span></span></code></pre></div>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Dans l'interface Proxmox : VM → Options → QEMU Guest Agent → Activer</span></span></code></pre></div>
 <h2 id="pfsense-vm-installation">Installation de la VM pfSense</h2>
 <h3 id="vm-specifications-1">Spécifications de la VM</h3>
 <p><strong>Configuration Matérielle :</strong> - <strong>BIOS</strong>:
-SeaBIOS - <strong>Disque</strong>: 20 Go (suffisant pour pfSense +
-paquets) - <strong>CPU</strong>: 2 cœurs (adéquat pour un petit laboratoire) -
-<strong>RAM</strong>: 4 Go (2 Go minimum, 4 Go confortable) -
+SeaBIOS - <strong>Disque</strong>: 20 GB (suffisant pour pfSense +
+packages) - <strong>CPU</strong>: 2 cœurs (adéquat pour un petit laboratoire) -
+<strong>RAM</strong>: 4 GB (2 GB minimum, 4 GB confortable) -
 <strong>Interfaces Réseau</strong>: - vtnet0 (WAN) → vmbr0 - vtnet1
 (LAN) → vmbr1</p>
 <h3 id="creating-virtual-bridge-vmbr1">Création du Pont Virtuel
@@ -318,62 +318,62 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraire</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> pfSense-CE-2.7.2-RELEASE-amd64.iso.gz</span></code></pre></div>
-<h4 id="create-vm-via-proxmox-ui">Créer la VM via l'Interface Utilisateur de Proxmox</h4>
+<h4 id="create-vm-via-proxmox-ui">Création de la VM via l'interface utilisateur de Proxmox</h4>
 <ol type="1">
 <li><strong>Général</strong>:
 <ul>
 <li>VM ID: 100</li>
-<li>Nom : pfsense-firewall</li>
+<li>Name: pfsense-firewall</li>
 <li>Démarrer au boot : Oui (infrastructure critique)</li>
 </ul></li>
 <li><strong>OS</strong>:
 <ul>
-<li>Image ISO : pfSense-CE-2.7.2-RELEASE-amd64.iso</li>
-<li>Type d'OS Invité : Autre</li>
+<li>ISO Image: pfSense-CE-2.7.2-RELEASE-amd64.iso</li>
+<li>Type d'OS Invité: Other</li>
 </ul></li>
 <li><strong>Système</strong>:
 <ul>
 <li>BIOS: SeaBIOS</li>
-<li>Contrôleur SCSI : VirtIO SCSI</li>
+<li>SCSI Controller: VirtIO SCSI</li>
 </ul></li>
 <li><strong>Disques</strong>:
 <ul>
-<li>Bus/Périphérique : SCSI</li>
-<li>Taille du disque : 20 Go</li>
-<li>Cache : Write back</li>
+<li>Bus/Device: SCSI</li>
+<li>Taille du disque: 20 GB</li>
+<li>Cache: Write back</li>
 </ul></li>
 <li><strong>CPU</strong>:
 <ul>
-<li>Cœurs : 2</li>
+<li>Cœurs: 2</li>
 </ul></li>
 <li><strong>Mémoire</strong>:
 <ul>
-<li>Mémoire : 4096 Mo</li>
+<li>Mémoire: 4096 MB</li>
 </ul></li>
 <li><strong>Réseau</strong>:
 <ul>
 <li><strong>Première Interface</strong> (WAN):
 <ul>
-<li>Pont : vmbr0</li>
-<li>Modèle : VirtIO</li>
+<li>Bridge: vmbr0</li>
+<li>Model: VirtIO</li>
 </ul></li>
-<li>Après la création, <strong>ajouter une seconde interface</strong> (LAN):
+<li>Après la création, <strong>ajouter la deuxième interface</strong> (LAN):
 <ul>
 <li>Matériel → Ajouter → Périphérique Réseau</li>
-<li>Pont : vmbr1</li>
-<li>Modèle : VirtIO</li>
+<li>Bridge: vmbr1</li>
+<li>Model: VirtIO</li>
 </ul></li>
 </ul></li>
 </ol>
-<h4 id="install-pfsense">Installer pfSense</h4>
+<h4 id="install-pfsense">Installation de pfSense</h4>
 <ol type="1">
 <li>Démarrer la VM et ouvrir la console</li>
-<li>Accepter l'avis de droit d'auteur</li>
-<li>Installer pfSense : Sélectionner <strong>Install</strong> (Installer)</li>
-<li>Clavier : Auto (ZFS)</li>
-<li>Partitionnement : <strong>Stripe</strong> (disque unique)</li>
-<li>Sélectionner le disque : <code>da0</code> (20 Go)</li>
-<li>Confirmer : Oui</li>
+<li>Accepter la notice de copyright</li>
+<li>Installer pfSense: Sélectionner <strong>Install</strong></li>
+<li>Keymap: Auto (ZFS)</li>
+<li>Partitionnement: <strong>Stripe</strong> (disque unique)</li>
+<li>Sélectionner le disque: <code>da0</code> (20GB)</li>
+<li>Confirmer: Yes</li>
 <li>L'installation est terminée</li>
 <li>Redémarrer</li>
 </ol>
@@ -385,7 +385,7 @@ Enter the WAN interface name: vtnet0
 Enter the LAN interface name: vtnet1
 
 Proceed? y</code></pre>
-<p>Définir l'adresse IP du LAN :</p>
+<p>Définir l'adresse IP LAN :</p>
 <pre><code>Set interface(s) IP address
 Select interface: 2 (LAN)
 
@@ -401,7 +401,7 @@ Enter end IP: 192.168.1.250</code></pre>
 <h4 id="access-pfsense-web-interface">Accéder à l'Interface Web de pfSense</h4>
 <p>Depuis la VM Kali ou une autre VM sur vmbr1 :</p>
 <div class="sourceCode" id="cb9"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtenir un bail DHCP de pfSense</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtenir le bail DHCP de pfSense</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dhclient</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'IP</span></span>
@@ -411,8 +411,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="ex">https://192.168.1.1</span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Identifiants par défaut :</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Nom d'utilisateur : admin</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Mot de passe : pfsense</span></span></code></pre></div>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Username: admin</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Password: pfsense</span></span></code></pre></div>
 <h2 id="lab-network-configuration">Configuration du Réseau du Laboratoire</h2>
 <h3 id="network-diagram">Diagramme Réseau</h3>
 <pre><code>Internet
@@ -425,16 +425,16 @@ pfSense WAN (192.168.11.253)
    ↓
 pfSense LAN (192.168.1.1)
    ↓
-vmbr1 (Réseau de Labo Interne)
+vmbr1 (Internal Lab Network)
    ├── Kali Linux (192.168.1.10)
    ├── Ubuntu Server (192.168.1.20)
    └── Target VMs (192.168.1.50-100)</code></pre>
-<h3 id="configure-kali-network">Configurer le Réseau Kali</h3>
+<h3 id="configure-kali-network">Configuration du Réseau Kali</h3>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Éditer la configuration réseau</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/network/interfaces</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter une IP statique (optionnel, DHCP fonctionne aussi)</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter une IP statique (optionnel, le DHCP fonctionne aussi)</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">auto</span> eth0</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="ex">iface</span> eth0 inet static</span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="ex">address</span> 192.168.1.10</span>
@@ -447,38 +447,38 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href=
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Ou utiliser le gestionnaire de réseau</span></span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nmtui</span></code></pre></div>
-<h2 id="taking-snapshots">Prise d'Instantanés (Snapshots)</h2>
-<h3 id="why-snapshot">Pourquoi un Instantané ?</h3>
+<h2 id="taking-snapshots">Prise de Snapshots</h2>
+<h3 id="why-snapshot">Pourquoi faire un Snapshot ?</h3>
 <ul>
-<li><strong>Expérimentation sûre</strong>: Revenir en arrière après les tests</li>
-<li><strong>Sauvegardes de configuration</strong>: Avant les changements majeurs</li>
-<li><strong>Récupération rapide</strong>: Restaurer après un échec</li>
+<li><strong>Expérimentation sécurisée</strong>: Revenir en arrière après les tests</li>
+<li><strong>Sauvegardes de configuration</strong>: Avant des changements majeurs</li>
+<li><strong>Récupération rapide</strong>: Annuler des échecs</li>
 </ul>
-<h3 id="create-snapshot-via-proxmox-ui">Créer un Instantané via l'Interface Utilisateur de Proxmox</h3>
+<h3 id="create-snapshot-via-proxmox-ui">Créer un Snapshot via l'Interface Proxmox</h3>
 <ol type="1">
 <li>Sélectionner la VM (Kali ou pfSense)</li>
-<li>Aller à l'onglet <strong>Instantanés</strong></li>
-<li>Cliquer sur <strong>Prendre un instantané</strong></li>
-<li>Nom : <code>post-install-clean</code> ou
+<li>Aller à l'onglet <strong>Snapshots</strong></li>
+<li>Cliquer sur <strong>Take Snapshot</strong></li>
+<li>Nom: <code>post-install-clean</code> ou
 <code>working-config</code></li>
-<li>Description : « Installation fraîche, entièrement mise à jour »</li>
-<li>Inclure la RAM : Non (instantané plus petit)</li>
+<li>Description: « Installation fraîche, entièrement mise à jour »</li>
+<li>Inclure la RAM : Non (snapshot plus petit)</li>
 </ol>
-<h3 id="create-snapshot-via-cli">Créer un Instantané via CLI</h3>
+<h3 id="create-snapshot-via-cli">Créer un Snapshot via la CLI</h3>
 <div class="sourceCode" id="cb12"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instantané de la VM Kali (ID 101)</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Snapshot de la VM Kali (ID 101)</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> snapshot 101 post-install <span class="at">--description</span> <span class="st">&quot;Clean Kali install after updates&quot;</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Instantané de la VM pfSense (ID 100)</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Snapshot de la VM pfSense (ID 100)</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> snapshot 100 baseline-config <span class="at">--description</span> <span class="st">&quot;Working pfSense configuration&quot;</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Lister les instantanés</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Lister les snapshots</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> listsnapshot 101</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Revenir à l'instantané</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Revenir au snapshot</span></span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> rollback 101 post-install</span></code></pre></div>
 <h2 id="testing-the-lab">Test du Laboratoire</h2>
-<h3 id="verify-network-connectivity">Vérifier la Connectivité Réseau</h3>
+<h3 id="verify-network-connectivity">Vérification de la Connectivité Réseau</h3>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Depuis la VM Kali :</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -492,10 +492,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href=
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="ex">nslookup</span> google.com</span></code></pre></div>
 <h3 id="basic-penetration-testing">Tests d'Intrusion de Base</h3>
 <div class="sourceCode" id="cb14"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Balayer le réseau interne</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scanner le réseau interne</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nmap</span> <span class="at">-sn</span> 192.168.1.0/24</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Balayer pfSense</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Scanner pfSense</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">nmap</span> <span class="at">-sV</span> <span class="at">-p</span> 1-1000 192.168.1.1</span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester le balayage de vulnérabilité</span></span>
@@ -506,11 +506,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href=
 <li>✅ Un environnement de tests d'intrusion isolé</li>
 <li>✅ Une segmentation réseau appropriée avec pfSense</li>
 <li>✅ Un poste de travail Kali Linux entièrement fonctionnel</li>
-<li>✅ Un filet de sécurité basé sur des instantanés (snapshots)</li>
+<li>✅ Un filet de sécurité basé sur des snapshots</li>
 <li>✅ Une architecture évolutive pour des VMs supplémentaires</li>
 </ul>
-<p>Ce laboratoire sert de base pour : - Tester des outils de sécurité -
-Développer des exploits - Effectuer des tests d'intrusion réseau - Préparer des certifications (OSCP, CEH, etc.)</p>
+<p>Ce laboratoire sert de base pour : - Le test d'outils de sécurité - Le développement d'exploits - Les tests d'intrusion réseau - L'étude pour les certifications (OSCP, CEH, etc.)</p>
 <p><em>Prochaines étapes : Déployer des VMs vulnérables (Metasploitable, DVWA) et configurer pfSense avec IDS/IPS (Suricata/Snort).</em></p>
                 </div>
 
@@ -532,7 +531,7 @@ Développer des exploits - Effectuer des tests d'intrusion réseau - Préparer d
                     <h4>Liens Rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
-                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#about">À Propos</a></li>
                         <li><a href="/index.html#projects">Projets</a></li>
                         <li><a href="/blog/index.html">Blog</a></li>
                     </ul>
@@ -561,7 +560,7 @@ Développer des exploits - Effectuer des tests d'intrusion réseau - Préparer d
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>
 

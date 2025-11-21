@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Une feuille de route pour les services auto-hébergés - Tutoriel et guide technique">
+    <meta name="description" content="Une feuille de route vers les services auto-hébergés - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Une feuille de route pour les services auto-hébergés | Blog technique d'Omar LYAHYAI</title>
+    <title>Une feuille de route vers les services auto-hébergés | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/infrastructure/a-roadmap-to-self-hosted-services.html" class="lang-toggle" aria-label="Changer la langue">
-                        <span class="lang-current">FR</span>
+                    <a href="/en/infrastructure/a-roadmap-to-self-hosted-services.html" class="lang-toggle" aria-label="Changer la langue">
+                        <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -58,21 +58,21 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="En-tête de l'article">
+        <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Une feuille de route pour les services auto-hébergés</span>
+                        <span>Une feuille de route vers les services auto-hébergés</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Une feuille de route pour les services auto-hébergés</h1>
+                <h1 class="article-title">Une feuille de route vers les services auto-hébergés</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -95,7 +95,7 @@
             </div>
         </section>
 
-        <section class="article-content" role="region" aria-label="Contenu de l'article">
+        <section class="article-content" role="region" aria-label="Article content">
             <div class="container">
                 <div class="article-body">
                     <!-- 
@@ -123,19 +123,19 @@ The workflow will:
 - Preserve images and links
 -->
 <h1 id="homelab-overview">Aperçu du Homelab</h1>
-<p>Vous gérez votre homelab en utilisant Proxmox avec des machines virtuelles (VM) pour Ubuntu,
-Kali Linux, et pfSense. Vos principaux objectifs incluent l'hébergement de vos propres services,
-l'automatisation des flux de travail, et la connexion sécurisée de l'ensemble avec
+<p>Vous gérez votre homelab à l'aide de Proxmox avec des VM pour Ubuntu,
+Kali, et pfSense. Vos principaux objectifs incluent l'hébergement de vos propres services,
+l'automatisation des workflows et la connexion sécurisée de l'ensemble avec
 Twingate.</p>
 <h1 id="obsidian-setup">Configuration d'Obsidian</h1>
 <ul>
-<li>Obsidian est auto-hébergé en utilisant CouchDB.</li>
+<li>Obsidian est auto-hébergé à l'aide de CouchDB.</li>
 <li>Vous l'exécuterez sur la VM Ubuntu et vous vous y connecterez en utilisant
 <strong>Obsidian LiveSync</strong>.</li>
 <li>L'accès à distance sécurisé est géré via <strong>Twingate</strong>.</li>
 </ul>
 <h1 id="step-by-step-setup-plan">Plan de configuration étape par étape</h1>
-<h2 id="phase-1-server-preparation">Phase 1 : Préparation du serveur</h2>
+<h2 id="phase-1-server-preparation">Phase 1 : Préparation du Serveur</h2>
 <ol type="1">
 <li><p>Mettre à jour et sécuriser la VM Ubuntu :</p>
 <div class="sourceCode" id="cb1"><pre
@@ -147,8 +147,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/obsidian-sync ~/n8n <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ~/obsidian-sync</span></code></pre></div></li>
 </ol>
-<h2 id="phase-2-deploy-couchdb-for-obsidian-sync">Phase 2 : Déployer
-CouchDB pour la synchronisation Obsidian</h2>
+<h2 id="phase-2-deploy-couchdb-for-obsidian-sync">Phase 2 : Déploiement
+CouchDB pour la Synchronisation Obsidian</h2>
 <ol type="1">
 <li><p>Créer le fichier docker-compose.yml :</p>
 <div class="sourceCode" id="cb4"><pre
@@ -171,18 +171,18 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose up <span class="at">-d</span></span></code></pre></div></li>
 <li><p>Ouvrir le tableau de bord CouchDB :
 <code>http://&lt;ip&gt;:5984/_utils</code></p></li>
-<li><p>Se connecter avec vos identifiants et créer la base de données
+<li><p>Connectez-vous en utilisant vos identifiants et créez la base de données
 <strong>obsidian</strong>.</p></li>
-<li><p>Dans Obsidian, installer le plugin <em>Self-Hosted LiveSync</em> et
-se connecter à CouchDB.</p></li>
+<li><p>Dans Obsidian, installez le plugin <em>Self-Hosted LiveSync</em> et
+connectez-vous à CouchDB.</p></li>
 </ol>
-<h2 id="phase-3-install-and-configure-n8n">Phase 3 : Installer et
-configurer n8n</h2>
+<h2 id="phase-3-install-and-configure-n8n">Phase 3 : Installation et
+configuration de n8n</h2>
 <ol type="1">
 <li><p>Se déplacer vers le répertoire <strong>n8n</strong> :</p>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/n8n</span></code></pre></div></li>
-<li><p>Créer le docker-compose.yml :</p>
+<li><p>Créer docker-compose.yml :</p>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3&#39;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
@@ -195,7 +195,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./data:/home/node/.n8n</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span></code></pre></div></li>
-<li><p>Démarrer n8n :</p>
+<li><p>Exécuter n8n :</p>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose up <span class="at">-d</span></span></code></pre></div></li>
 <li><p>Ouvrir <strong>n8n</strong> dans votre navigateur :
@@ -207,8 +207,8 @@ avec n8n</h2>
 <li>Créer un répertoire de sauvegarde : <code>/backups/obsidian</code></li>
 <li>Dans n8n, créer un nouveau workflow :
 <ul>
-<li><p><strong>Déclencheur (Trigger):</strong> Nœud Cron (Hebdomadaire le dimanche)</p></li>
-<li><p><strong>Nœud de Commande (Command Node):</strong></p>
+<li><p><strong>Déclencheur :</strong> Nœud Cron (Hebdomadaire le dimanche)</p></li>
+<li><p><strong>Nœud de Commande :</strong></p>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> czf /backups/obsidian_<span class="va">$(</span><span class="fu">date</span> +%F<span class="va">)</span>.tar.gz /path/to/obsidian-vault</span></code></pre></div></li>
 <li><p><strong>Nœud de Notification (Optionnel) :</strong> Envoyer un message via
@@ -216,20 +216,19 @@ l'API Telegram ou Discord.</p></li>
 </ul></li>
 </ol>
 <h2 id="phase-5-remote-access-and-security">Phase 5 : Accès à distance et
-sécurité</h2>
+Sécurité</h2>
 <ol type="1">
 <li>Installer et lier votre serveur à votre compte Twingate.</li>
-<li>Accéder à vos tableaux de bord n8n et CouchDB à distance de manière
-sécurisée.</li>
-<li>Configurer des tunnels HTTPS si nécessaire (étape optionnelle utilisant Pinggy ou
+<li>Accéder à vos tableaux de bord n8n et CouchDB à distance de manière sécurisée.</li>
+<li>Configurer des tunnels HTTPS si nécessaire (étape facultative utilisant Pinggy ou
 Cloudflare Tunnel).</li>
 </ol>
 <h1 id="weekend-action-plan">Plan d'action du week-end</h1>
 <h3 id="saturday">Samedi</h3>
 <ul>
 <li>Maintenance Proxmox et mises à jour Ubuntu.</li>
-<li>Installer Docker &amp; déployer CouchDB.</li>
-<li>Tester la connexion CouchDB avec Obsidian (version de bureau).</li>
+<li>Installer Docker et déployer CouchDB.</li>
+<li>Tester la connexion CouchDB avec Obsidian desktop.</li>
 </ul>
 <h3 id="sunday">Dimanche</h3>
 <ul>
@@ -237,10 +236,9 @@ Cloudflare Tunnel).</li>
 <li>Configurer Twingate pour un accès externe sécurisé.</li>
 <li>Documenter votre configuration directement dans Obsidian.</li>
 </ul>
-<h1 id="end-goal">Objectif final</h1>
+<h1 id="end-goal">Objectif Final</h1>
 <p>D'ici lundi, vous aurez : - Un système de synchronisation Obsidian auto-hébergé
-(CouchDB) - Une automatisation n8n pour les sauvegardes hebdomadaires - Un flux de travail à distance sécurisé
-utilisant Twingate —</p>
+(CouchDB) - Une automatisation n8n pour les sauvegardes hebdomadaires - Un workflow distant sécurisé utilisant Twingate —</p>
                 </div>
 
                 <div class="article-navigation">
@@ -254,7 +252,7 @@ utilisant Twingate —</p>
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
@@ -268,7 +266,7 @@ utilisant Twingate —</p>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Me Contacter</h4>
+                    <h4>Connexion</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -290,7 +288,7 @@ utilisant Twingate —</p>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Retour en haut">
+    <button class="back-to-top" aria-label="Retour en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 
