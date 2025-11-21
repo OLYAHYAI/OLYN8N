@@ -1,48 +1,26 @@
 const blogData = {
     "articles": [
         {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "id": "certifications",
+            "title": "Google Cybersecurity Professional Certificate",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "reference",
             "date": "2025-11-21",
             "tags": [
-                "infrastructure"
+                "reference"
             ],
-            "url": "../en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+            "url": "../en/reference/certifications.html"
         },
         {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "id": "certifications",
+            "title": "Google Cybersecurity Professional Certificate",
             "excerpt": "",
-            "category": "infrastructure",
+            "category": "reference",
             "date": "2025-11-21",
             "tags": [
-                "infrastructure"
+                "reference"
             ],
-            "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
-        },
-        {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/a-roadmap-to-self-hosted-services.html"
-        },
-        {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/a-roadmap-to-self-hosted-services.html"
+            "url": "../fr/reference/certifications.html"
         }
     ],
     "categories": {

@@ -1,98 +1,16 @@
 var ARTICLE_INDEX={
-  "lastUpdated": "2025-11-21T00:22:05.701Z",
-  "totalArticles": 4,
+  "lastUpdated": "2025-11-21T00:34:38.782Z",
+  "totalArticles": 2,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server",
       "articles": {
-        "en": [
-          {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          },
-          {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "a-roadmap-to-self-hosted-services",
-            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-            "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "a-roadmap-to-self-hosted-services",
-            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-            "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 4
+      "total": 0
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -129,10 +47,52 @@ var ARTICLE_INDEX={
       "description": "Quick guides configuration reference",
       "icon": "fas fa-book",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "certifications",
+            "title": "Google Cybersecurity Professional Certificate",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "certifications",
+            "url": "/en/reference/certifications.html",
+            "filePath": "/en/reference/certifications.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "certifications",
+            "title": "Google Cybersecurity Professional Certificate",
+            "description": "",
+            "excerpt": "",
+            "category": "reference",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "reference"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "certifications",
+            "url": "/fr/reference/certifications.html",
+            "filePath": "/fr/reference/certifications.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 2
     },
     "docker_services": {
       "name": "Docker Services",
@@ -146,85 +106,45 @@ var ARTICLE_INDEX={
     }
   },
   "languages": {
-    "en": 2,
-    "fr": 2
+    "en": 1,
+    "fr": 1
   },
   "articles": [
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "slug": "certifications",
+      "url": "/en/reference/certifications.html",
+      "filePath": "/en/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "fr",
       "date": "2025-11-21",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "certifications",
+      "url": "/fr/reference/certifications.html",
+      "filePath": "/fr/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -234,9 +154,9 @@ var ARTICLE_INDEX={
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 4,
-      "en": 2,
-      "fr": 2,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -266,9 +186,9 @@ var ARTICLE_INDEX={
     },
     "reference": {
       "name": "Reference",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "Quick guides configuration reference",
       "icon": "fas fa-book"
     },
@@ -283,80 +203,40 @@ var ARTICLE_INDEX={
   },
   "recentArticles": [
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "slug": "certifications",
+      "url": "/en/reference/certifications.html",
+      "filePath": "/en/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "fr",
       "date": "2025-11-21",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "certifications",
+      "url": "/fr/reference/certifications.html",
+      "filePath": "/fr/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -365,20 +245,20 @@ var ARTICLE_INDEX={
   ],
   "featuredArticles": [
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+      "id": "certifications",
+      "title": "Google Cybersecurity Professional Certificate",
       "description": "",
       "excerpt": "",
-      "category": "infrastructure",
+      "category": "reference",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "infrastructure"
+        "reference"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
+      "slug": "certifications",
+      "url": "/en/reference/certifications.html",
+      "filePath": "/en/reference/certifications.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -387,10 +267,8 @@ var ARTICLE_INDEX={
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "en/infrastructure/a-roadmap-to-self-hosted-services": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html"
+      "en/reference/certifications": "/en/reference/certifications.html",
+      "fr/reference/certifications": "/fr/reference/certifications.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -420,6 +298,6 @@ var ARTICLE_INDEX={
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-21T00:22:05.702Z",
+  "generatedAt": "2025-11-21T00:34:38.789Z",
   "version": "1.0"
 };
