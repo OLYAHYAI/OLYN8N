@@ -1,92 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+            "url": "../en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "proxmox-vm-maintenance-routine-complete-guide",
-            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+            "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
+            "url": "../en/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "vm-disk-expansion-guide-proxmox-linux",
-            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
+            "url": "../fr/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/roadmap-infrastructure.html"
+            "url": "../fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         },
         {
-            "id": "roadmap-infrastructure",
-            "title": "Roadmap Infrastructure",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/roadmap-infrastructure.html"
+            "url": "../en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         },
         {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
+            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
+            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/proxmox-ve-initial-setup-session-notes.html"
+            "url": "../en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
         },
         {
-            "id": "proxmox-ve-initial-setup-session-notes",
-            "title": "Proxmox Ve Initial Setup Session Notes",
+            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
+            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/proxmox-ve-initial-setup-session-notes.html"
+            "url": "../fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
+        },
+        {
+            "id": "getting-proxmox-pfsense-back-online-network-rescue",
+            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
+        },
+        {
+            "id": "getting-proxmox-pfsense-back-online-network-rescue",
+            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
         }
     ],
     "categories": {
