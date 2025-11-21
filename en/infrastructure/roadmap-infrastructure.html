@@ -81,7 +81,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="far fa-clock"></i>
-                        <span>5 min read</span>
+                        <span>5 min min read</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-folder"></i>
@@ -223,7 +223,7 @@ The workflow will:
 <!-- 
 NAMING CONVENTION:
 - For English articles: your-article-title.md
-- For French articles: your-article-title-fr.md
+- For French articles:  your-article-title-fr.md
 
 The workflow will automatically:
 - Detect language from filename
@@ -262,12 +262,16 @@ Homelab</h1>
 <h2 id="projet-réseau-sécurisé-et-segmenté-avec-pfsense">Project: Secure and Segmented Network with pfSense</h2>
 <hr />
 <h2 id="vision-du-projet">🎯 Project Vision</h2>
-<p>To build a professional, secure, and scalable homelab network infrastructure based on pfSense, enabling segmentation via VLANs, blocking malicious content, advanced network monitoring, and hosting self-hosted services.</p>
-<p><strong>Guiding Principles</strong>: - <strong>Security First</strong>: Defense in depth (firewall + IDS + DNS filtering) - <strong>Scalability</strong>: Modular architecture prepared for growth - <strong>Performance</strong>: Optimized hardware, continuous monitoring - <strong>Controlled Cost</strong>: Balance between investment and functionality</p>
+<p>To build a professional, secure, and scalable homelab network infrastructure based on pfSense, enabling VLAN segmentation, blocking malicious content, advanced network monitoring, and self-hosted services.</p>
+<p><strong>Guiding Principles</strong>: - <strong>Security
+First</strong>: Defense in Depth (firewall + IDS + DNS filtering) -
+<strong>Scalability</strong>: Modular architecture prepared for growth -
+<strong>Performance</strong>: Optimized hardware, continuous monitoring -
+<strong>Cost Control</strong>: Balance between investment and functionality</p>
 <hr />
 <h2 id="phase-1-fondations-terminée">✅ Phase 1: Foundations (Completed)</h2>
 <p><strong>Duration</strong>: 2 weeks (November 2025) <strong>Budget Invested</strong>: 112€</p>
-<h3 id="infrastructure-de-base">Base Infrastructure</h3>
+<h3 id="infrastructure-de-base">Basic Infrastructure</h3>
 <h4 id="matériel-déployé">Hardware Deployed</h4>
 <ul>
 <li>✅ <strong>Mini PC Zotac ZBOX CI337 nano</strong> (85€)
@@ -279,8 +283,8 @@ Homelab</h1>
 <li>✅ <strong>Access Point Afoundry EW1200</strong> (27€)
 <ul>
 <li>WiFi AC1200 dual-band (2.4 + 5 GHz)</li>
-<li>Native VLAN 802.1Q support</li>
-<li>Multiple SSIDs (up to 8)</li>
+<li>Native 802.1Q VLAN support</li>
+<li>Multiple SSID (up to 8)</li>
 </ul></li>
 </ul>
 <h4 id="logiciels-et-services">Software and Services</h4>
@@ -293,9 +297,10 @@ Homelab</h1>
 </ul></li>
 <li>✅ <strong>Installed Security Packages</strong>
 <ul>
-<li><strong>pfBlockerNG-devel</strong>: DNS Blocking (DNSBL) + IP filtering</li>
+<li><strong>pfBlockerNG-devel</strong>: DNS Blocking (DNSBL) + IP
+filtering</li>
 <li><strong>Suricata</strong>: IDS/IPS with ET Open rules</li>
-<li><strong>WireGuard</strong>: Modern VPN (ready for configuration)</li>
+<li><strong>WireGuard</strong>: Modern VPN (ready to configure)</li>
 <li><strong>ACME</strong>: Automatic Let’s Encrypt certificates</li>
 <li><strong>ntopng</strong>: Real-time network monitoring</li>
 <li><strong>iftop</strong>: Bandwidth monitoring</li>
@@ -303,15 +308,18 @@ Homelab</h1>
 </ul>
 <h4 id="architecture-réseau">Network Architecture</h4>
 <ul>
-<li>✅ <strong>Simple topology in place</strong>: Internet → ISP Box → pfSense (WAN+LAN) → EW1200 AP → WiFi Clients</li>
+<li>✅ <strong>Simple topology in place</strong>: Internet → ISP Box →
+pfSense (WAN+LAN) → EW1200 AP → WiFi Clients</li>
 </ul>
-<p>text - ✅ <strong>Preliminary segmentation</strong>: 1 VLAN (Main LAN) - ✅ <strong>Active services</strong>: DHCP, DNS, Firewall, AdBlock, IDS</p>
-<h4 id="sécurité-implémentée">Security Implemented</h4>
+<p>text - ✅ <strong>Preliminary segmentation</strong>: 1 VLAN (Main LAN) - ✅ <strong>Active Services</strong>: DHCP, DNS, Firewall,
+AdBlock, IDS</p>
+<h4 id="sécurité-implémentée">Implemented Security</h4>
 <ul>
-<li><p>✅ <strong>Active advertising blocking</strong> (pfBlockerNG DNSBL)</p></li>
+<li><p>✅ <strong>Active advertising blocking</strong> (pfBlockerNG
+DNSBL)</p></li>
 <li><p>500k+ domains blocked (ads, trackers, malware)</p></li>
-<li><p>Daily automatic updates</p></li>
-<li><p>Blocking rate: 20-40% DNS queries</p></li>
+<li><p>Daily automatic update</p></li>
+<li><p>Blocking rate: 20-40% DNS requests</p></li>
 <li><p>✅ <strong>Suricata IDS on WAN</strong></p></li>
 <li><p>Inline IPS mode (active blocking)</p></li>
 <li><p>ET Open rules activated</p></li>
@@ -322,86 +330,109 @@ Homelab</h1>
 <h4 id="documentation">Documentation</h4>
 <ul>
 <li>✅ <strong>Guides written</strong>:</li>
-<li>Part 1: pfSense installation and initial configuration</li>
-<li>Part 2: WiFi AP and pfBlockerNG deployment</li>
+<li>Part 1: pfSense Installation and Initial Configuration</li>
+<li>Part 2: WiFi AP Deployment and pfBlockerNG</li>
 <li>Roadmap (this document)</li>
 </ul>
 <hr />
-<h2 id="phase-2-segmentation-réseau-court-terme">🚀 Phase 2: Network Segmentation (Short Term)</h2>
+<h2 id="phase-2-segmentation-réseau-court-terme">🚀 Phase 2:
+Network Segmentation (Short Term)</h2>
 <p><strong>Estimated Duration</strong>: 3-4 weeks <strong>Estimated Budget</strong>: 80-150€</p>
 <h3 id="objectifs">Objectives</h3>
-<p>Implement a multi-segment VLAN architecture to isolate different types of traffic: - <strong>VLAN 10 (LAN)</strong>: Main network (laptops, smartphones) - <strong>VLAN 30 (IoT)</strong>: Isolated connected devices (smart home, cameras) - <strong>VLAN 99 (Guest)</strong>: Guests without LAN access - <strong>VLAN 50 (Management)</strong>: Network equipment admin access</p>
+<p>Implement a multi-segment VLAN architecture to isolate different types of traffic: - <strong>VLAN 10 (LAN)</strong>: Main network (laptops, smartphones) - <strong>VLAN 30 (IoT)</strong>: Isolated connected devices (smart home, cameras) - <strong>VLAN 99 (Guest)</strong>: Guests without LAN access - <strong>VLAN 50 (Management)</strong>: Admin access for network equipment</p>
 <h3 id="matériel-nécessaire">Required Hardware</h3>
 <h4 id="switch-manageable-8-ports">8-Port Managed Switch</h4>
-<p><strong>Recommended Models</strong>: - TP-Link TL-SG108E (40-50€) - Budget - Netgear GS308T (60-80€) - Intermediate - UniFi Switch Flex Mini (70-90€) - Prosumer</p>
-<p><strong>Required Features</strong>: - 802.1Q VLAN tagging support - Port-based VLANs - Web management interface - Fanless (silent)</p>
+<p><strong>Recommended Models</strong>: - TP-Link TL-SG108E (40-50€) - Budget - Netgear GS308T (60-80€) - Mid-range - UniFi Switch Flex Mini (70-90€) - Prosumer</p>
+<p><strong>Required Features</strong>: - 802.1Q VLAN
+tagging support - Port-based VLANs - Web management interface - Fanless
+(silent)</p>
 <h3 id="configuration-réseau">Network Configuration</h3>
 <h4 id="pfsense-vlans">pfSense VLANs</h4>
-<p><strong>Interfaces &gt; Assignments &gt; VLANs</strong>: VLAN 10 (LAN): Existing main network VLAN 30 (IoT): [Subnet IoT]/24 VLAN 99 (Guest): [Subnet Guest]/24 VLAN 50 (Mgmt): [Subnet Management]/24</p>
+<p><strong>Interfaces &gt; Assignments &gt; VLANs</strong>: VLAN 10
+(LAN): Existing main network VLAN 30 (IoT): [Subnet IoT]/24 VLAN 99
+(Guest): [Subnet Guest]/24 VLAN 50 (Mgmt): [Subnet Management]/24</p>
 <p>text</p>
-<p><strong>DHCP Services</strong> per VLAN: - Distinct IP pools - DNS = pfSense (pfBlockerNG filtering for all) - DHCP Lease: 24h (LAN), 2h (Guest)</p>
+<p><strong>DHCP Services</strong> per VLAN: - Distinct IP pools - DNS =
+pfSense (pfBlockerNG filtering for all) - DHCP Lease: 24h (LAN), 2h
+(Guest)</p>
 <h4 id="ew1200-multiple-ssid">EW1200 Multiple SSID</h4>
-<p><strong>Segmented WiFi Configuration</strong>: SSID: Homelab_Principal → VLAN 10 (WPA2-PSK) SSID: Homelab_IoT → VLAN 30 (WPA2-PSK) SSID: Homelab_Guest → VLAN 99 (WPA2-PSK, AP Isolation)</p>
+<p><strong>Segmented WiFi Configuration</strong>: SSID: Homelab_Principal
+→ VLAN 10 (WPA2-PSK) SSID: Homelab_IoT → VLAN 30 (WPA2-PSK) SSID:
+Homelab_Guest → VLAN 99 (WPA2-PSK, AP Isolation)</p>
 <p>text</p>
-<p><strong>Security per VLAN</strong>: - VLAN 30 (IoT): Client Isolation activated - VLAN 99 (Guest): No inter-VLAN access</p>
+<p><strong>Security per VLAN</strong>: - VLAN 30 (IoT): Client Isolation
+enabled - VLAN 99 (Guest): No inter-VLAN access</p>
 <h4 id="règles-firewall-par-vlan">Firewall Rules per VLAN</h4>
-<p><strong>VLAN 10 (LAN)</strong>: Full Internet access + inter-VLAN mgmt <strong>VLAN 30 (IoT)</strong>: - Internet: Allow ports 80/443 only - Inter-VLAN: Block (except LAN for device control) - IoT cloud destinations: Explicit Whitelist</p>
-<p><strong>VLAN 99 (Guest)</strong>: - Internet: Allow - Inter-VLAN: Block ALL - Session time: 4 hours (Optional Captive Portal)</p>
-<p><strong>VLAN 50 (Management)</strong>: - Admin access to network equipment only - No Internet access (except updates)</p>
+<p><strong>VLAN 10 (LAN)</strong>: Full Internet access + inter-VLAN
+mgmt <strong>VLAN 30 (IoT)</strong>: - Internet: Allow ports 80/443
+only - Inter-VLAN: Block (except LAN for device control) - IoT cloud Destinations: Explicit Whitelist</p>
+<p><strong>VLAN 99 (Guest)</strong>: - Internet: Allow - Inter-VLAN:
+Block ALL - Session time: 4 hours (Optional Captive Portal)</p>
+<p><strong>VLAN 50 (Management)</strong>: - Admin access to network
+equipment only - No Internet access (except for updates)</p>
 <h3 id="livrables-phase-2">Phase 2 Deliverables</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Managed switch installed and cabled</label></li>
+<li><label><input type="checkbox" />Managed switch installed and wired</label></li>
 <li><label><input type="checkbox" />VLANs created on pfSense and switch</label></li>
 <li><label><input type="checkbox" />Multiple SSIDs configured on EW1200</label></li>
 <li><label><input type="checkbox" />Inter-VLAN firewall rules tested</label></li>
 <li><label><input type="checkbox" />VLAN architecture documentation updated</label></li>
 </ul>
 <hr />
-<h2 id="phase-3-infrastructure-rack-court-terme">🏗️ Phase 3: Rack Infrastructure (Short Term)</h2>
+<h2 id="phase-3-infrastructure-rack-court-terme">🏗️ Phase 3:
+Rack Infrastructure (Short Term)</h2>
 <p><strong>Estimated Duration</strong>: 1-2 weeks <strong>Estimated Budget</strong>: 70-150€</p>
 <h3 id="objectifs-1">Objectives</h3>
 <p>Organize the infrastructure in a professional rack to improve cabling, cooling, and scalability.</p>
 <h3 id="matériel-à-acquérir">Hardware to Acquire</h3>
 <h4 id="rack-mini-serveur">Mini Server Rack</h4>
-<p><strong>Recommended Size</strong>: 9U or 12U (19 inch standard)</p>
-<p><strong>Tangier Options</strong>: - Avito.ma used: 250-400 dh (23-36€) - iris.ma new: 990 dh (90€) - DIY wood: 100-200 dh (9-18€)</p>
-<p><strong>Selection Criteria</strong>: - Depth: 400-600mm (sufficient for mini PC) - Ventilation: Side perforations - Doors: Front (glass/mesh) + removable rear - Casters: Mobility (optional)</p>
-<h4 id="multiprise-rack-parafoudre">Rack Surge Protector Power Strip</h4>
-<p><strong>Options</strong>: - 19” 1U rack power strip - 8 outlets (600-900 dh / 54-81€) - Standard 8-10 outlet surge protector power strip (150-300 dh / 14-27€)</p>
-<p><strong>Mandatory Protection</strong>: - Integrated surge protector (overvoltage protection) - Switch with indicator light - Minimum 2-3m cable</p>
+<p><strong>Recommended Size</strong>: 9U or 12U (standard 19
+inches)</p>
+<p><strong>Tanger Options</strong>: - Avito.ma used: 250-400 dh
+(23-36€) - iris.ma new: 990 dh (90€) - DIY wood: 100-200 dh (9-18€)</p>
+<p><strong>Selection Criteria</strong>: - Depth: 400-600mm
+(sufficient for mini PC) - Ventilation: Side perforations - Doors:
+Front (glass/grille) + removable rear - Casters: Mobility
+(optional)</p>
+<h4 id="multiprise-rack-parafoudre">Rack Power Strip Surge Protector</h4>
+<p><strong>Options</strong>: - 19” 1U rack power strip - 8 outlets
+(600-900 dh / 54-81€) - Standard surge protector power strip 8-10 outlets
+(150-300 dh / 14-27€)</p>
+<p><strong>Mandatory Protection</strong>: - Integrated surge protector
+(overvoltage protection) - Switch with indicator light - Minimum 2-3m cable</p>
 <h4 id="accessoires-rack">Rack Accessories</h4>
 <ul>
-<li><strong>1U fixed shelves</strong> (x2-3): 50-150 dh/piece
+<li><strong>1U Fixed Shelves</strong> (x2-3): 50-150 dh/piece
 <ul>
-<li>For placing mini PC pfSense and EW1200</li>
+<li>To place pfSense mini PC and EW1200</li>
 </ul></li>
-<li><strong>8-port patch panel</strong> (optional): 100-200 dh
+<li><strong>8-Port Patch Panel</strong> (optional): 100-200 dh
 <ul>
 <li>Organizing Ethernet cables</li>
 </ul></li>
-<li><strong>Cable pass-throughs</strong> (x2): 30-80 dh/piece
+<li><strong>Cable Pass-throughs</strong> (x2): 30-80 dh/piece
 <ul>
 <li>Clean cable management</li>
 </ul></li>
-<li><strong>1U blanking panels</strong> (x2-3): 20-50 dh/piece
+<li><strong>1U Blank Panels</strong> (x2-3): 20-50 dh/piece
 <ul>
 <li>Aesthetics + optimized airflow</li>
 </ul></li>
 </ul>
 <h3 id="organisation-rack-9u-cible">Target 9U Rack Organization</h3>
-<p>┌─────────────────────────┐ │ 1U - 8 outlet power strip│ ← At the top (easy cabling) ├─────────────────────────┤ │ 1U - 8p patch panel│ ← Patch panel (optional) ├─────────────────────────┤ │ 1U - Shelf: pfSense │ ← Zotac ZBOX CI337 ├─────────────────────────┤ │ 1U - Shelf: EW1200 │ ← WiFi Access Point ├─────────────────────────┤ │ 1U - Managed Switch │ ← TP-Link or Netgear ├─────────────────────────┤ │ 2U - Expansion space │ ← Future server/NAS ├─────────────────────────┤ │ 2U - Proxmox / Docker │ ← Phase 4 └─────────────────────────┘</p>
+<p>┌─────────────────────────┐ │ 1U - 8-outlet Power Strip│ ← Top (easy cabling) ├─────────────────────────┤ │ 1U - 8p Patch Panel │ ← Patch panel (optional) ├─────────────────────────┤ │ 1U - Shelf: pfSense │ ← Zotac ZBOX CI337 ├─────────────────────────┤ │ 1U - Shelf: EW1200 │ ← WiFi Access Point ├─────────────────────────┤ │ 1U - Managed Switch │ ← TP-Link or Netgear ├─────────────────────────┤ │ 2U - Expansion Space │ ← Future server/NAS ├─────────────────────────┤ │ 2U - Proxmox / Docker │ ← Phase 4 └─────────────────────────┘</p>
 <p>text</p>
 <h3 id="livrables-phase-3">Phase 3 Deliverables</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />9U rack acquired (Avito Tangier or new)</label></li>
+<li><label><input type="checkbox" />9U Rack acquired (Avito Tangier or new)</label></li>
 <li><label><input type="checkbox" />8-outlet surge protector power strip installed</label></li>
 <li><label><input type="checkbox" />Equipment mounted on rack shelves</label></li>
-<li><label><input type="checkbox" />Cabling organized (Velcro, cable pass-throughs)</label></li>
+<li><label><input type="checkbox" />Cabling organized (velcro, cable pass-throughs)</label></li>
 <li><label><input type="checkbox" />Cables and ports labeled</label></li>
 <li><label><input type="checkbox" />Photo documentation of completed rack</label></li>
 </ul>
 <hr />
-<h2 id="phase-4-services-auto-hébergés-moyen-terme">🔐 Phase 4: Self-Hosted Services (Medium Term)</h2>
+<h2 id="phase-4-services-auto-hébergés-moyen-terme">🔐 Phase 4: Self-Hosted Services (Mid Term)</h2>
 <p><strong>Estimated Duration</strong>: 4-6 weeks <strong>Estimated Budget</strong>: 0-200€ (depending on existing hardware)</p>
 <h3 id="objectifs-2">Objectives</h3>
 <p>Deploy secure self-hosted services behind pfSense, accessible locally and remotely via VPN.</p>
@@ -409,83 +440,98 @@ Homelab</h1>
 <h4 id="option-a-réutiliser-serveur-proxmox-existant">Option A: Reuse Existing Proxmox Server</h4>
 <p><strong>Proxmox Network Migration</strong>: - Reconfigure Proxmox network interfaces to new subnet - Integrate Proxmox into VLAN 10 (LAN) or VLAN 50 (Management) - Test VMs/Containers connectivity after migration</p>
 <h4 id="option-b-serveur-docker-dédié">Option B: Dedicated Docker Server</h4>
-<p><strong>Additional Mini PC</strong> (used): - Beelink, Intel NUC, or similar (100-200€) - Docker + Docker Compose - Light containerized services</p>
+<p><strong>Additional Mini PC</strong> (used): - Beelink, Intel NUC, or similar (100-200€) - Docker + Docker Compose - Lightweight containerized services</p>
 <h3 id="services-à-déployer">Services to Deploy</h3>
 <h4 id="gestion-réseau-et-monitoring">Network Management and Monitoring</h4>
 <ul>
-<li><strong>Uptime Kuma</strong>: Service uptime monitoring</li>
-<li><strong>Grafana + Prometheus</strong>: Metrics dashboards</li>
-<li><strong>LibreNMS</strong>: Network equipment SNMP monitoring</li>
+<li><strong>Uptime Kuma</strong>: Monitoring uptime services</li>
+<li><strong>Grafana + Prometheus</strong>: Metrics Dashboards</li>
+<li><strong>LibreNMS</strong>: SNMP monitoring of network equipment</li>
 <li><strong>Netdata</strong>: Real-time server monitoring</li>
 </ul>
 <h4 id="productivité-et-collaboration">Productivity and Collaboration</h4>
 <ul>
-<li><strong>Nextcloud</strong>: Personal cloud (files, calendar, contacts)</li>
-<li><strong>OnlyOffice ou Collabora</strong>: Online office suite</li>
+<li><strong>Nextcloud</strong>: Personal Cloud (files, calendar,
+contacts)</li>
+<li><strong>OnlyOffice or Collabora</strong>: Online office suite</li>
 <li><strong>Bookstack</strong>: Internal Wiki/documentation</li>
 <li><strong>Vaultwarden</strong>: Password manager (Bitwarden)</li>
 </ul>
 <h4 id="multimédia">Multimedia</h4>
 <ul>
-<li><strong>Jellyfin ou Plex</strong>: Media server (movies, series, music)</li>
-<li><strong>Photoprism</strong>: Intelligent photo gallery</li>
+<li><strong>Jellyfin or Plex</strong>: Media server (movies, series,
+music)</li>
+<li><strong>Photoprism</strong>: Smart photo gallery</li>
 <li><strong>Audiobookshelf</strong>: Audiobook library</li>
 </ul>
 <h4 id="automatisation-et-iot">Automation and IoT</h4>
 <ul>
-<li><strong>Home Assistant</strong>: Centralized home automation (IoT VLAN)</li>
+<li><strong>Home Assistant</strong>: Centralized Home Automation (IoT
+VLAN)</li>
 <li><strong>Node-RED</strong>: Workflow automations</li>
-<li><strong>Mosquitto MQTT</strong>: IoT Broker</li>
+<li><strong>Mosquitto MQTT</strong>: Broker IoT</li>
 </ul>
 <h4 id="reverse-proxy-et-sécurité">Reverse Proxy and Security</h4>
 <ul>
-<li><strong>Nginx Proxy Manager</strong>: Reverse proxy + automatic SSL</li>
+<li><strong>Nginx Proxy Manager</strong>: Reverse proxy + Automatic SSL</li>
 <li><strong>Authelia ou Authentik</strong>: SSO (Single Sign-On)</li>
 <li><strong>Fail2Ban</strong>: Brute-force protection</li>
 </ul>
 <h3 id="accès-sécurisé">Secure Access</h3>
 <h4 id="wireguard-vpn">WireGuard VPN</h4>
-<p><strong>Road Warrior Configuration</strong>: - Mobile clients (laptop, smartphone) - Secure access to internal services from the Internet - Split tunneling (only LAN traffic via VPN)</p>
-<p><strong>Configuration</strong>: VPN &gt; WireGuard &gt; Tunnels &gt; Add Listen Port: 51820 Tunnel Address: [Subnet VPN]/24 Peers: Laptop, Smartphone, Tablette</p>
+<p><strong>Road Warrior Configuration</strong>: - Nomadic clients (laptop, smartphone) - Secure access to internal services from the Internet - Split tunneling (only LAN traffic via VPN)</p>
+<p><strong>Configuration</strong>: VPN &gt; WireGuard &gt; Tunnels &gt;
+Add Listen Port: 51820 Tunnel Address: [Subnet VPN]/24 Peers: Laptop,
+Smartphone, Tablet</p>
 <p>text</p>
-<p><strong>WireGuard Firewall Rules</strong>: - Allow WireGuard → LAN services - Block WireGuard → VLAN IoT (except Home Assistant) - Allow WireGuard → Internet (optional)</p>
+<p><strong>WireGuard Firewall Rules</strong>: - Allow WireGuard → LAN
+services - Block WireGuard → VLAN IoT (except Home Assistant) - Allow
+WireGuard → Internet (optional)</p>
 <h3 id="livrables-phase-4">Phase 4 Deliverables</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" />Proxmox migrated to new subnet</label></li>
 <li><label><input type="checkbox" />5-8 containerized services deployed</label></li>
 <li><label><input type="checkbox" />Reverse proxy configured (internal HTTPS)</label></li>
 <li><label><input type="checkbox" />WireGuard VPN operational</label></li>
-<li><label><input type="checkbox" />Remote access tested from 4G/external</label></li>
+<li><label><input type="checkbox" />Remote access tested from 4G/external network</label></li>
 <li><label><input type="checkbox" />Automatic service backup (Proxmox Backup Server)</label></li>
 </ul>
 <hr />
-<h2 id="phase-5-monitoring-avancé-moyen-terme">📊 Phase 5: Advanced Monitoring (Medium Term)</h2>
+<h2 id="phase-5-monitoring-avancé-moyen-terme">📊 Phase 5: Advanced
+Monitoring (Mid Term)</h2>
 <p><strong>Estimated Duration</strong>: 2-3 weeks <strong>Estimated Budget</strong>: 0-50€</p>
 <h3 id="objectifs-3">Objectives</h3>
 <p>Implement a complete monitoring stack with centralized dashboards, automatic alerts, and performance metrics.</p>
-<h3 id="stack-monitoring">Monitoring Stack</h3>
+<h3 id="stack-monitoring">Stack Monitoring</h3>
 <h4 id="grafana-prometheus">Grafana + Prometheus</h4>
-<p><strong>Metrics Collected</strong>: - <strong>pfSense</strong>: CPU, RAM, WAN/LAN throughput, firewall states - <strong>Servers</strong>: Uptime, CPU, RAM, disk, network - <strong>Services</strong>: Availability, response time - <strong>Network</strong>: Latency, packet loss, bandwidth</p>
-<p><strong>Pre-configured Dashboards</strong>: - pfSense Dashboard (community template) - Node Exporter Dashboard (Linux servers) - Docker Containers Dashboard</p>
+<p><strong>Metrics Collected</strong>: - <strong>pfSense</strong>:
+CPU, RAM, WAN/LAN throughput, firewall states - <strong>Servers</strong>: Uptime, CPU, RAM, disk, network - <strong>Services</strong>: Availability, response time - <strong>Network</strong>: Latency, packet loss, bandwidth</p>
+<p><strong>Preconfigured Dashboards</strong>: - pfSense Dashboard
+(community template) - Node Exporter Dashboard (Linux servers) - Docker
+Containers Dashboard</p>
 <h4 id="loki-promtail">Loki + Promtail</h4>
-<p><strong>Centralized Log Aggregation</strong>: - pfSense logs (firewall, Suricata IDS, pfBlockerNG) - Linux server logs (syslog, auth, kernel) - Docker container logs</p>
-<p><strong>Search and Analysis</strong>: - LogQL query language - Time filters - Event correlation</p>
+<p><strong>Centralized Log Aggregation</strong>: - pfSense logs
+(firewall, Suricata IDS, pfBlockerNG) - Linux server logs (syslog, auth, kernel) - Docker container logs</p>
+<p><strong>Search and Analysis</strong>: - Query language LogQL - Time
+filters - Event correlation</p>
 <h4 id="alerting">Alerting</h4>
-<p><strong>Alertmanager + Ntfy.sh</strong>: - Slack/Discord/Email alerts - Mobile push notifications - Configurable thresholds (CPU >80%, disk >90%, service down)</p>
+<p><strong>Alertmanager + Ntfy.sh</strong>: - Slack/Discord/Email alerts - Mobile push notifications - Configurable thresholds (CPU &gt;80%, disk &gt;90%, service down)</p>
 <h3 id="livrables-phase-5">Phase 5 Deliverables</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" />Grafana operational with 5+ dashboards</label></li>
 <li><label><input type="checkbox" />Prometheus scraping pfSense + servers</label></li>
 <li><label><input type="checkbox" />Loki collecting pfSense + Docker logs</label></li>
 <li><label><input type="checkbox" />10+ alerts configured and tested</label></li>
-<li><label><input type="checkbox" />Custom dashboards documented</label></li>
+<li><label><input type="checkbox" />Documentation of custom dashboards</label></li>
 </ul>
 <hr />
-<h2 id="phase-6-haute-disponibilité-long-terme">🌐 Phase 6: High Availability (Long Term)</h2>
+<h2 id="phase-6-haute-disponibilité-long-terme">🌐 Phase 6: High
+Availability (Long Term)</h2>
 <p><strong>Estimated Duration</strong>: 4-6 weeks <strong>Estimated Budget</strong>: 150-300€</p>
 <h3 id="objectifs-4">Objectives</h3>
 <p>Implement redundancy on critical components to eliminate SPOF (Single Point of Failure).</p>
-<h3 id="pfsense-haute-disponibilité-carp">pfSense High Availability (CARP)</h3>
+<h3 id="pfsense-haute-disponibilité-carp">pfSense High Availability
+(CARP)</h3>
 <h4 id="matériel-nécessaire-1">Required Hardware</h4>
 <ul>
 <li><strong>Second mini PC</strong> identical or similar (100-200€)
@@ -494,61 +540,69 @@ Homelab</h1>
 <li>Minimum 2x Ethernet NICs</li>
 </ul></li>
 </ul>
-<h4 id="configuration-carp">CARP Configuration</h4>
-<p><strong>Operation</strong>: - 2 pfSense devices in master/backup - Virtual IP (VIP) shared via CARP - Real-time configuration synchronization (xmlrpc) - Automatic failover &lt;2 seconds</p>
-<p><strong>HA Architecture</strong>: Internet → ISP Box → [pfSense VIP] ↓ ┌──────┴──────┐ pfSense1 pfSense2 (Master) (Backup) └──────┬──────┘ Switch</p>
+<h4 id="configuration-carp">Configuration CARP</h4>
+<p><strong>Operation</strong>: - 2 pfSense devices in master/backup configuration - Virtual IP (VIP) shared via CARP - Real-time config synchronization (xmlrpc) - Automatic failover &lt;2 seconds</p>
+<p><strong>HA Architecture</strong>: Internet → ISP Box → [pfSense VIP]
+↓ ┌──────┴──────┐ pfSense1 pfSense2 (Master) (Backup) └──────┬──────┘
+Switch</p>
 <p>text</p>
 <h3 id="switch-manageable-redondant">Redundant Managed Switch</h3>
-<p><strong>Switch Stacking</strong> or <strong>LACP</strong>: - 2x switches with port aggregation - Redundant link between switches (stack or LAG) - Redundant uplink to pfSense (LACP)</p>
+<p><strong>Stacked switches</strong> or <strong>LACP</strong>: - 2x
+switches with port aggregation - Redundant link between switches (stack
+or LAG) - Redundant uplink to pfSense (LACP)</p>
 <h3 id="stockage-redondant">Redundant Storage</h3>
-<p><strong>NAS with RAID</strong>: - Synology, QNAP, or TrueNAS (DIY) - Minimum RAID 1 (2 mirror disks) - 3-2-1 Backup: 3 copies, 2 media, 1 off-site</p>
+<p><strong>NAS with RAID</strong>: - Synology, QNAP, or TrueNAS (DIY) -
+Minimum RAID 1 (2 mirrored disks) - 3-2-1 Backup: 3 copies, 2 media types, 1 off-site</p>
 <h3 id="ups-onduleur">UPS (Uninterruptible Power Supply)</h3>
-<p><strong>Recommended Model</strong>: 600-1000VA - Power outage protection - 10-20 minutes autonomy (clean shutdown) - USB monitoring via NUT (Network UPS Tools)</p>
+<p><strong>Recommended Model</strong>: 600-1000VA - Power outage
+protection - 10-20 minutes autonomy (graceful shutdown) - USB monitoring via NUT (Network UPS Tools)</p>
 <p><strong>Budget</strong>: 80-150€</p>
 <h3 id="livrables-phase-6">Phase 6 Deliverables</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Second pfSense deployed in CARP</label></li>
-<li><label><input type="checkbox" />Failover tested (primary unplugging)</label></li>
+<li><label><input type="checkbox" />Second pfSense deployed using CARP</label></li>
+<li><label><input type="checkbox" />Failover tested (primary unplugged)</label></li>
 <li><label><input type="checkbox" />Switches in redundancy</label></li>
 <li><label><input type="checkbox" />NAS with RAID operational</label></li>
 <li><label><input type="checkbox" />UPS installed with NUT monitoring</label></li>
 <li><label><input type="checkbox" />Documented Disaster Recovery Plan (DRP)</label></li>
 </ul>
 <hr />
-<h2 id="phase-7-optimisations-avancées-long-terme">🚀 Phase 7: Advanced Optimizations (Long Term)</h2>
+<h2 id="phase-7-optimisations-avancées-long-terme">🚀 Phase 7:
+Advanced Optimizations (Long Term)</h2>
 <p><strong>Estimated Duration</strong>: Ongoing <strong>Estimated Budget</strong>: Variable</p>
-<h3 id="objectifs-5">Objectives</h3>
-<p>Implement redundancy on critical components to eliminate SPOF (Single Point of Failure).</p>
 <h3 id="sécurité-avancée">Advanced Security</h3>
 <h4 id="authentification-multi-facteurs-mfa">Multi-Factor Authentication (MFA)</h4>
 <ul>
 <li><strong>pfSense WebGUI</strong>: 2FA Authentication (TOTP)</li>
-<li><strong>Services</strong>: SSO with Authelia/Authentik + mandatory 2FA</li>
+<li><strong>Services</strong>: SSO with Authelia/Authentik + mandatory
+2FA</li>
 <li><strong>VPN WireGuard</strong>: Certificates + pre-shared keys</li>
 </ul>
 <h4 id="certificate-authority-interne">Internal Certificate Authority</h4>
 <ul>
-<li><strong>Step-CA</strong> or <strong>Homebrew OpenSSL CA</strong></li>
-<li>Locally signed internal SSL certificates</li>
+<li><strong>Step-CA</strong> or <strong>Homemade OpenSSL CA</strong></li>
+<li>Internally signed SSL certificates</li>
 <li>Revocation of compromised certificates</li>
 </ul>
 <h4 id="threat-intelligence">Threat Intelligence</h4>
 <ul>
-<li><strong>IP reputation Feeds</strong> in pfBlockerNG</li>
+<li><strong>IP reputation feeds</strong> in pfBlockerNG</li>
 <li><strong>GeoIP blocking</strong>: Block irrelevant countries</li>
-<li><strong>CrowdSec</strong>: Community-driven threat intel</li>
+<li><strong>CrowdSec</strong>: Threat intel community-driven</li>
 </ul>
 <h3 id="performance">Performance</h3>
 <h4 id="offloading-matériel">Hardware Offloading</h4>
 <ul>
 <li><strong>Netmap</strong> for Suricata (if CPU bottleneck)</li>
-<li><strong>Hardware offloading</strong> activated after Suricata validation</li>
-<li><strong>Multi-queue NIC</strong> if hardware upgrade</li>
+<li><strong>Hardware offloading</strong> enabled after Suricata
+validation</li>
+<li><strong>Multi-queue NIC</strong> if hardware upgrade occurs</li>
 </ul>
-<h4 id="cache-dns">DNS Cache</h4>
+<h4 id="cache-dns">Cache DNS</h4>
 <ul>
 <li><strong>Optimized Unbound cache</strong>: TTL, prefetch</li>
-<li><strong>DNS over TLS (DoT)</strong> towards upstream (Cloudflare, Quad9)</li>
+<li><strong>DNS over TLS (DoT)</strong> to upstream (Cloudflare,
+Quad9)</li>
 </ul>
 <h4 id="qos-quality-of-service">QoS (Quality of Service)</h4>
 <ul>
@@ -560,22 +614,22 @@ Homelab</h1>
 <h4 id="infrastructure-as-code-iac">Infrastructure as Code (IaC)</h4>
 <ul>
 <li><strong>Ansible playbooks</strong>: Automatic server configuration</li>
-<li><strong>Terraform</strong>: Proxmox VM Provisioning</li>
-<li><strong>Git</strong>: Configuration Versioning</li>
+<li><strong>Terraform</strong>: Proxmox VM provisioning</li>
+<li><strong>Git</strong>: Versioning configurations</li>
 </ul>
 <h4 id="cicd-pipeline">CI/CD Pipeline</h4>
 <ul>
-<li><strong>Gitea ou GitLab</strong>: Internal Git server</li>
-<li><strong>Drone CI</strong>: Automatic Build/Test/Deploy</li>
-<li><strong>Watchtower</strong>: Automatic Docker container update</li>
+<li><strong>Gitea or GitLab</strong>: Internal Git server</li>
+<li><strong>Drone CI</strong>: Automatic Build/test/deploy</li>
+<li><strong>Watchtower</strong>: Auto-update containers Docker</li>
 </ul>
 <h3 id="livrables-phase-7">Phase 7 Deliverables</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />2FA activated on all critical services</label></li>
+<li><label><input type="checkbox" />2FA enabled on all critical services</label></li>
 <li><label><input type="checkbox" />Internal CA operational</label></li>
 <li><label><input type="checkbox" />QoS configured and tested</label></li>
 <li><label><input type="checkbox" />Ansible playbooks for 5+ services</label></li>
-<li><label><input type="checkbox" />CI/CD pipeline functional</label></li>
+<li><label><input type="checkbox" />Functional CI/CD pipeline</label></li>
 </ul>
 <hr />
 <h2 id="métriques-de-succès">📈 Success Metrics</h2>
@@ -583,7 +637,8 @@ Homelab</h1>
 <h4 id="disponibilité">Availability</h4>
 <ul>
 <li><strong>pfSense Uptime</strong>: &gt;99.5% (target: 99.9%)</li>
-<li><strong>Critical Services Uptime</strong>: &gt;99% (Nextcloud, VPN)</li>
+<li><strong>Critical Services Uptime</strong>: &gt;99% (Nextcloud,
+VPN)</li>
 <li><strong>MTTR (Mean Time To Repair)</strong>: &lt;1 hour</li>
 </ul>
 <h4 id="performance-1">Performance</h4>
@@ -591,20 +646,21 @@ Homelab</h1>
 <li><strong>WAN Latency</strong>: &lt;30ms (to 8.8.8.8)</li>
 <li><strong>LAN Latency</strong>: &lt;5ms (WiFi to pfSense)</li>
 <li><strong>5GHz WiFi Throughput</strong>: &gt;300 Mbps actual</li>
-<li><strong>Ad Blocking</strong>: &gt;20% DNS queries</li>
+<li><strong>Ad Blocking</strong>: &gt;20% DNS requests</li>
 </ul>
 <h4 id="sécurité">Security</h4>
 <ul>
 <li><strong>Blocked intrusion attempts</strong>: Suricata Monitoring</li>
 <li><strong>Updates</strong>: &lt;7 days after release</li>
 <li><strong>Tested Backups</strong>: Monthly restore test</li>
-<li><strong>Vulnerabilities</strong>: 0 critical unpatched >30 days</li>
+<li><strong>Vulnerabilities</strong>: 0 critical unpatched &gt;30 days</li>
 </ul>
 <h3 id="kpis-opérationnels">Operational KPIs</h3>
 <h4 id="coûts">Costs</h4>
 <ul>
 <li><strong>Electricity OPEX</strong>: &lt;10€/month</li>
-<li><strong>Hardware ROI</strong>: &lt;2 years vs equivalent cloud solutions</li>
+<li><strong>Hardware ROI</strong>: &lt;2 years vs equivalent cloud
+solutions</li>
 <li><strong>Annual Budget</strong>: &lt;200€ (maintenance + upgrades)</li>
 </ul>
 <h4 id="productivité">Productivity</h4>
@@ -650,60 +706,82 @@ Homelab</h1>
 </ul>
 <p><strong>Legend</strong>: ✅ Acquired | 🔄 In Progress | ⏳ Planned</p>
 <hr />
-<h2 id="budget-prévisionnel-global">💰 Global Forecast Budget</h2>
-<h3 id="dépenses-réalisées-phase-1">Expenditures Realized (Phase 1)</h3>
-<p>Zotac ZBOX CI337 nano: 85€ Afoundry EW1200: 27€ Total Phase 1: 112€</p>
+<h2 id="budget-prévisionnel-global">💰 Global Provisional Budget</h2>
+<h3 id="dépenses-réalisées-phase-1">Expenditures Incurred (Phase 1)</h3>
+<p>Zotac ZBOX CI337 nano: 85€ Afoundry EW1200: 27€ Total Phase 1:
+112€</p>
 <p>text</p>
 <h3 id="dépenses-prévues-court-terme-phases-2-3">Planned Short Term Expenditures (Phases 2-3)</h3>
-<p>8p managed switch: 40-80€ 9U Rack: 25-40€ Surge protector power strip: 15-30€ Rack accessories: 10-30€ Total Short Term: 90-180€</p>
+<p>Switch manageable 8p: 40-80€ Rack 9U: 25-40€ Multiprise parafoudre:
+15-30€ Accessoires rack: 10-30€ Total Court Terme: 90-180€</p>
 <p>text</p>
-<h3 id="dépenses-prévues-moyen-terme-phases-4-5">Planned Medium Term Expenditures (Phases 4-5)</h3>
-<p>Mini PC server (opt): 0-200€ Storage disks: 50-100€ Total Medium Term: 50-300€</p>
+<h3 id="dépenses-prévues-moyen-terme-phases-4-5">Planned Mid Term Expenditures (Phases 4-5)</h3>
+<p>Mini PC server (opt): 0-200€ Storage disks: 50-100€ Mid Term Total:
+50-300€</p>
 <p>text</p>
 <h3 id="dépenses-prévues-long-terme-phases-6-7">Planned Long Term Expenditures (Phases 6-7)</h3>
-<p>Second pfSense (HA): 100-200€ NAS/RAID Disks: 150-400€ UPS: 80-150€ Total Long Term: 330-750€</p>
+<p>Second pfSense (HA): 100-200€ NAS/RAID Disks: 150-400€ UPS
+(Uninterruptible Power Supply): 80-150€ Long Term Total: 330-750€</p>
 <p>text</p>
 <h3 id="budget-total-projet-3-ans">Total Project Budget (3 Years)</h3>
-<p>Minimum (basic): 252€ (Minimal Phase 1+2+3) Medium (complete): 642€ (Complete Phases 1-5) Maximum (HA + pro): 1,492€ (All phases maximal)</p>
+<p>Minimum (basic): 252€ (Phase 1+2+3 minimal) Average (complete): 642€
+(Phases 1-5 complete) Maximum (HA + pro): 1,492€ (All phases maximum)</p>
 <p>text</p>
-<p><strong>Average monthly cost over 3 years</strong>: 7-41€/month depending on ambition</p>
-<p><strong>Equivalent Cloud Comparison</strong>: - Managed Firewall: 20-50€/month - VPN: 10€/month - Cloud storage 1TB: 10€/month - VPS servers: 20-50€/month - <strong>Total cloud</strong>: 60-120€/month = <strong>2,160-4,320€ over 3 years</strong></p>
-<p><strong>Homelab ROI</strong>: 3-10x cheaper than cloud over 3 years</p>
+<p><strong>Average monthly cost over 3 years</strong>: 7-41€/month
+depending on ambition</p>
+<p><strong>Equivalent Cloud Comparison</strong>: - Managed Firewall:
+20-50€/month - VPN: 10€/month - 1TB Cloud storage: 10€/month - VPS
+Servers: 20-50€/month - <strong>Total cloud</strong>: 60-120€/month =
+<strong>2,160-4,320€ over 3 years</strong></p>
+<p><strong>Homelab ROI</strong>: 3-10x cheaper than cloud over 3
+years</p>
 <hr />
 <h2 id="timeline-récapitulatif">📅 Timeline Summary</h2>
-<p>Nov 2025 ━━━━━━━━━━━━━━━━━━━━━━━━━━ Phase 1 ✅ │ └─ pfSense Installation └─ EW1200 Deployment └─ pfBlockerNG Configuration</p>
-<p>Dec 2025 ━━━━━━━━━━━━━━━━━━━━━━━━━━ Phase 2 🔄 │ └─ Managed switch └─ Multi-segment VLANs └─ Multiple WiFi SSIDs</p>
-<p>Jan 2026 ━━━━━━━━━━━━━━━━━━━━━━━━━━ Phase 3 ⏳ │ └─ 9U Rack + accessories └─ Physical organization └─ Cable management</p>
-<p>Feb-Mar 2026 ━━━━━━━━━━━━━━━━━━━━━━ Phase 4 ⏳ │ └─ Proxmox Migration └─ Containerized services └─ WireGuard VPN</p>
-<p>Apr-May 2026 ━━━━━━━━━━━━━━━━━━━━━━ Phase 5 ⏳ │ └─ Monitoring stack └─ Grafana dashboards └─ Automated alerting</p>
-<p>Jun-Sep 2026 ━━━━━━━━━━━━━━━━━━━━━━ Phase 6 ⏳ │ └─ pfSense HA (CARP) └─ NAS RAID └─ UPS</p>
-<p>Oct 2026+ ━━━━━━━━━━━━━━━━━━━━━━━━━ Phase 7 ⏳ │ └─ Continuous optimizations └─ Advanced security └─ IaC Automation</p>
+<p>Nov 2025 ━━━━━━━━━━━━━━━━━━━━━━━━━━ Phase 1 ✅ │ └─ pfSense
+Installation └─ EW1200 Deployment └─ pfBlockerNG Configuration</p>
+<p>Dec 2025 ━━━━━━━━━━━━━━━━━━━━━━━━━━ Phase 2 🔄 │ └─ Managed Switch └─ Multi-segment VLANs └─ Multiple WiFi SSIDs</p>
+<p>Jan 2026 ━━━━━━━━━━━━━━━━━━━━━━━━━━ Phase 3 ⏳ │ └─ 9U Rack +
+accessories └─ Physical organization └─ Cable management</p>
+<p>Feb-Mar 2026 ━━━━━━━━━━━━━━━━━━━━━━ Phase 4 ⏳ │ └─ Proxmox
+Migration └─ Containerized Services └─ WireGuard VPN</p>
+<p>Apr-May 2026 ━━━━━━━━━━━━━━━━━━━━━━ Phase 5 ⏳ │ └─ Monitoring Stack
+└─ Grafana dashboards └─ Automated Alerting</p>
+<p>Jun-Sep 2026 ━━━━━━━━━━━━━━━━━━━━━━ Phase 6 ⏳ │ └─ pfSense HA (CARP)
+└─ RAID NAS └─ UPS (Uninterruptible Power Supply)</p>
+<p>Oct 2026+ ━━━━━━━━━━━━━━━━━━━━━━━━━ Phase 7 ⏳ │ └─ Continuous
+Optimizations └─ Advanced Security └─ IaC Automation</p>
 <p>text</p>
 <hr />
-<h2 id="objectifs-projet-vision-3-ans">🎯 Project Objectives (3-Year Vision)</h2>
+<h2 id="objectifs-projet-vision-3-ans">🎯 Project Goals (3-Year
+Vision)</h2>
 <h3 id="technique">Technical</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />99.9% uptime infrastructure (with HA)</label></li>
-<li><label><input type="checkbox" />15+ operational self-hosted services</label></li>
-<li><label><input type="checkbox" />4 segmented and secured VLANs</label></li>
-<li><label><input type="checkbox" />Centralized monitoring with 20+ dashboards</label></li>
+<li><label><input type="checkbox" />99.9% uptime Infrastructure (with
+HA)</label></li>
+<li><label><input type="checkbox" />15+ operational self-hosted
+services</label></li>
+<li><label><input type="checkbox" />4 segmented and secure VLANs</label></li>
+<li><label><input type="checkbox" />Centralized monitoring with 20+
+dashboards</label></li>
 <li><label><input type="checkbox" />Automated backups 3-2-1 compliant</label></li>
 <li><label><input type="checkbox" />0 data breach over 3 years</label></li>
 </ul>
 <h3 id="apprentissage">Learning</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Advanced pfSense/FreeBSD mastery</label></li>
+<li><label><input type="checkbox" />Advanced mastery of pfSense/FreeBSD</label></li>
 <li><label><input type="checkbox" />Professional networking skills</label></li>
 <li><label><input type="checkbox" />Docker/Kubernetes expertise</label></li>
 <li><label><input type="checkbox" />IaC skills (Ansible/Terraform)</label></li>
-<li><label><input type="checkbox" />Network/security certification (CCNA/CompTIA)</label></li>
+<li><label><input type="checkbox" />Network/Security Certification (CCNA/CompTIA)</label></li>
 </ul>
 <h3 id="communauté">Community</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" />Public documentation (GitHub/Blog)</label></li>
-<li><label><input type="checkbox" />Open-source contributions (pfSense, tools)</label></li>
+<li><label><input type="checkbox" />Contributions open-source (pfSense,
+tools)</label></li>
 <li><label><input type="checkbox" />YouTube tutorials/technical articles</label></li>
-<li><label><input type="checkbox" />Homelab community help (Reddit, forums)</label></li>
+<li><label><input type="checkbox" />Homelab community support (Reddit,
+forums)</label></li>
 </ul>
 <hr />
 <h2 id="ressources-et-références">🔗 Resources and References</h2>
@@ -737,71 +815,94 @@ Selfhosted</a></li>
 <h2 id="notes-et-leçons-apprises">📝 Notes and Lessons Learned</h2>
 <h3 id="succès">Successes</h3>
 <ul>
-<li>✅ <strong>Budget controlled</strong>: Used hardware + mini PC = optimal cost</li>
-<li>✅ <strong>pfBlockerNG remarkable</strong>: Blocks 30%+ queries without complex configuration</li>
-<li>✅ <strong>EW1200 excellent choice</strong>: Native VLAN + powerful dual-band</li>
-<li>✅ <strong>Diligent documentation</strong>: Huge time saver for troubleshooting</li>
+<li>✅ <strong>Budget controlled</strong>: Used hardware + mini PC =
+optimal cost</li>
+<li>✅ <strong>Outstanding pfBlockerNG</strong>: Blocks 30%+ requests
+without complex configuration</li>
+<li>✅ <strong>EW1200 excellent choice</strong>: Native VLAN +
+high-performance dual-band</li>
+<li>✅ <strong>Diligent documentation</strong>: Huge time saver for
+troubleshooting</li>
 </ul>
 <h3 id="défis-rencontrés">Challenges Encountered</h3>
 <ul>
-<li>⚠️ <strong>Realtek NICs</strong>: Unstable generic driver → Solution: realtek-re-kmod</li>
-<li>⚠️ <strong>Intel CNVi WiFi</strong>: Not usable FreeBSD → Fallback: external AP</li>
-<li>⚠️ <strong>Firewall rules</strong>: Initial WAN blocking → Solution: Temporarily disable blockpriv</li>
+<li>⚠️ <strong>Realtek Cards</strong>: Unstable generic driver →
+Solution: realtek-re-kmod</li>
+<li>⚠️ <strong>Intel CNVi WiFi</strong>: Not usable on FreeBSD →
+Fallback: External AP</li>
+<li>⚠️ <strong>Firewall Rules</strong>: Initial WAN blocking → Solution:
+Temporarily disable blockpriv</li>
 </ul>
 <h3 id="à-améliorer">Areas for Improvement</h3>
 <ul>
-<li>🔧 <strong>Regular backup</strong>: Automate weekly config snapshots</li>
-<li>🔧 <strong>Failover tests</strong>: Simulate failures regularly</li>
-<li>🔧 <strong>Live documentation</strong>: Internal Wiki (BookStack) instead of static Markdown</li>
+<li>🔧 <strong>Regular Backup</strong>: Automate weekly config
+snapshots</li>
+<li>🔧 <strong>Failover Tests</strong>: Simulate failures regularly</li>
+<li>🔧 <strong>Live Documentation</strong>: Internal Wiki (BookStack)
+instead of static Markdown</li>
 </ul>
 <hr />
-<h2 id="innovation-et-projets-futurs">🚀 Innovation and Future Projects</h2>
-<h3 id="court-terme-6-mois">Short Term (6 months)</h3>
+<h2 id="innovation-et-projets-futurs">🚀 Innovation and Future
+Projects</h2>
+<h3 id="court-terme-6-mois">Short Term (6 Months)</h3>
 <ul>
 <li><strong>Guest Captive Portal</strong>: Styled login page for guests</li>
-<li><strong>Secondary Pi-hole DNS</strong>: DNS redundancy with list synchronization</li>
+<li><strong>Secondary Pi-hole DNS</strong>: DNS redundancy with list
+synchronization</li>
 <li><strong>Tailscale mesh VPN</strong>: WireGuard alternative/complement</li>
 </ul>
-<h3 id="moyen-terme-1-2-ans">Medium Term (1-2 years)</h3>
+<h3 id="moyen-terme-1-2-ans">Mid Term (1-2 Years)</h3>
 <ul>
-<li><strong>Kubernetes cluster</strong>: Docker → K3s/MicroK8s Migration</li>
+<li><strong>Kubernetes cluster</strong>: Migration Docker →
+K3s/MicroK8s</li>
 <li><strong>GitOps</strong>: ArgoCD for automated deployments</li>
-<li><strong>Observability</strong>: Traces (Tempo), metrics (Prometheus), logs (Loki)</li>
+<li><strong>Observability</strong>: Traces (Tempo), metrics
+(Prometheus), logs (Loki)</li>
 <li><strong>Homelab YouTube/Blog</strong>: Community experience sharing</li>
 </ul>
-<h3 id="long-terme-2-3-ans">Long Term (2-3 years)</h3>
+<h3 id="long-terme-2-3-ans">Long Term (2-3 Years)</h3>
 <ul>
-<li><strong>Multi-site VPN</strong>: Connect homelab to a remote site (family/friends)</li>
+<li><strong>Multi-site VPN</strong>: Connect homelab to a remote site
+(family/friends)</li>
 <li><strong>Edge computing</strong>: Raspberry Pi edge nodes</li>
-<li><strong>AI/ML services</strong>: Local LLMs (Ollama), image recognition</li>
+<li><strong>AI/ML services</strong>: Local LLMs (Ollama), image
+recognition</li>
 <li><strong>Ham Radio integration</strong>: APRS, Meshtastic, LoRa</li>
 </ul>
 <hr />
-<h2 id="checklist-maintenance-régulière">✅ Regular Maintenance Checklist</h2>
+<h2 id="checklist-maintenance-régulière">✅ Regular Maintenance
+Checklist</h2>
 <h3 id="quotidien-5-min">Daily (5 min)</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Check Grafana dashboards (uptime, alerts)</label></li>
-<li><label><input type="checkbox" />Consult pfBlockerNG Reports (detected threats)</label></li>
+<li><label><input type="checkbox" />Check Grafana dashboards (uptime,
+alerts)</label></li>
+<li><label><input type="checkbox" />Consult pfBlockerNG Reports
+(detected threats)</label></li>
 </ul>
 <h3 id="hebdomadaire-20-min">Weekly (20 min)</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" />Check for available pfSense updates</label></li>
 <li><label><input type="checkbox" />Consult Suricata logs (IDS alerts)</label></li>
 <li><label><input type="checkbox" />Check server disk space</label></li>
-<li><label><input type="checkbox" />Test backup restoration (1 random service)</label></li>
+<li><label><input type="checkbox" />Test backup restoration (1 random
+service)</label></li>
 </ul>
 <h3 id="mensuel-1-2h">Monthly (1-2h)</h3>
 <ul>
-<li><label><input type="checkbox" />Update pfSense (after reading changelog)</label></li>
+<li><label><input type="checkbox" />Update pfSense (after reading
+changelog)</label></li>
 <li><label><input type="checkbox" />Update pfSense packages</label></li>
 <li><label><input type="checkbox" />Update EW1200 firmware if available</label></li>
-<li><label><input type="checkbox" />Review firewall rules (optimize/clean up)</label></li>
+<li><label><input type="checkbox" />Review firewall rules
+(optimize/clean up)</label></li>
 <li><label><input type="checkbox" />Test failover (if HA deployed)</label></li>
 <li><label><input type="checkbox" />Security audit (Nmap vulnerability scan &lt;!– NAMING CONVENTION:</label></li>
 <li>For English articles: your-article-title.md</li>
 <li>For French articles: your-article-title-fr.md</li>
 </ul>
-<p>The workflow will automatically: - Detect language from filename - Generate title from filename - Add current date - Clean YAML for Pandoc processing –&gt;</p>
+<p>The workflow will automatically: - Detect language from filename -
+Generate title from filename - Add current date - Clean YAML for Pandoc
+processing –&gt;</p>
                 </div>
 
                 <div class="article-navigation">

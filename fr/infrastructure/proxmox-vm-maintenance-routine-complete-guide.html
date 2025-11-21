@@ -25,7 +25,7 @@
     <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -58,10 +58,10 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="En-tête de l'article">
+        <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
@@ -122,16 +122,16 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="proxmox-vm-maintenance-routine">Routine de Maintenance des VM Proxmox</h1>
+<h1 id="proxmox-vm-maintenance-routine">Routine de maintenance des VM Proxmox</h1>
 <p><strong>Tags:</strong> #proxmox #virtualization #maintenance
 #automation</p>
-<h2 id="quick-reference">Référence Rapide</h2>
+<h2 id="quick-reference">Référence rapide</h2>
 <table>
 <thead>
 <tr>
 <th>Tâche</th>
 <th>Fréquence</th>
-<th>Commande</th>
+<th>Command</th>
 </tr>
 </thead>
 <tbody>
@@ -141,7 +141,7 @@ The workflow will:
 <td><code>df -h /</code></td>
 </tr>
 <tr>
-<td>Vérifier l'utilisation du thin pool</td>
+<td>Vérifier l'utilisation du pool thin</td>
 <td>Hebdomadaire</td>
 <td><code>lvs pve/data</code></td>
 </tr>
@@ -157,33 +157,33 @@ The workflow will:
 </tr>
 <tr>
 <td>Vérification des sauvegardes</td>
-<td>Mensuelle</td>
+<td>Mensuel</td>
 <td>Check <code>/var/lib/vz/dump/</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="storage-health-checks">Vérifications de l'état du Stockage</h2>
-<h3 id="monitor-host-storage">Surveiller le Stockage Hôte</h3>
+<h2 id="storage-health-checks">Contrôles de l'état du stockage</h2>
+<h3 id="monitor-host-storage">Surveiller le stockage hôte</h3>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'utilisation du système de fichiers racine (à maintenir sous 90 %)</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'utilisation du système de fichiers racine (maintenir sous 90%)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span> /</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Cible : Maintenir l'utilisation sous 85-90 %</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Niveau d'alerte : 90 % et plus</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Critique : 95 % et plus</span></span></code></pre></div>
-<h3 id="monitor-lvm-thin-pool">Surveiller le Thin Pool LVM</h3>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Objectif : Maintenir l'utilisation sous 85-90%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Niveau d'alerte : 90%+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Critique : 95%+</span></span></code></pre></div>
+<h3 id="monitor-lvm-thin-pool">Surveiller le pool LVM Thin</h3>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'utilisation des données du thin pool</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'utilisation des données du pool thin</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lvs</span> pve/data</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Cible : Maintenir data% sous 80 %</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Niveau d'alerte : 80 % et plus</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Critique : 90 % et plus</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Objectif : Maintenir le pourcentage de données sous 80%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Niveau d'alerte : 80%+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Critique : 90%+</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Vue complète avec tous les volumes</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">lvs</span> <span class="at">-a</span> <span class="kw">|</span> <span class="fu">grep</span> data</span></code></pre></div>
-<h3 id="storage-expansion-if-needed">Extension du Stockage (Si Nécessaire)</h3>
+<h3 id="storage-expansion-if-needed">Extension du stockage (si nécessaire)</h3>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'espace disponible dans le groupe de volumes</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">vgdisplay</span> pve <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-i</span> free</span>
@@ -192,44 +192,44 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">lvextend</span> <span class="at">-l</span> +100%FREE /dev/pve/root</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">resize2fs</span> /dev/pve/root</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'expansion</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'extension</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span> /</span></code></pre></div>
 <hr />
-<h2 id="snapshot-management-strategy">Stratégie de Gestion des Snapshots</h2>
-<h3 id="golden-rule">⚠️ Règle d'Or</h3>
-<p><strong>Maintenir un maximum de 1 à 2 snapshots par VM à tout moment</strong></p>
+<h2 id="snapshot-management-strategy">Stratégie de gestion des snapshots</h2>
+<h3 id="golden-rule">⚠️ Règle d'or</h3>
+<p><strong>Garder un maximum de 1 à 2 snapshots par VM à tout moment</strong></p>
 <h3 id="snapshot-types">Types de Snapshots</h3>
-<h4 id="golden-snapshot-keep-one">1. Snapshot Doré (À Conserver)</h4>
+<h4 id="golden-snapshot-keep-one">1. Snapshot Golden (En garder un)</h4>
 <ul>
 <li>Créé après une configuration majeure réussie</li>
 <li>Représente un état stable et fonctionnel</li>
 <li>Mettre à jour rarement (trimestriellement ou après des changements majeurs)</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un snapshot doré</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer le snapshot golden</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> snapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span> golden-working-state</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Mettre à jour le snapshot doré (supprimer l'ancien, créer le nouveau)</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Mettre à jour le golden (supprimer l'ancien, créer le nouveau)</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> delsnapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span> golden-working-state</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> snapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span> golden-working-state</span></code></pre></div>
-<h4 id="pre-change-snapshot-temporary">2. Snapshot Pré-Changement
+<h4 id="pre-change-snapshot-temporary">2. Snapshot pré-changement
 (Temporaire)</h4>
 <ul>
-<li>Créé avant des opérations risquées</li>
-<li><strong>À supprimer dans les 24-48 heures</strong></li>
-<li>Ne jamais en conserver plus d'un</li>
+<li>Créé avant les opérations risquées</li>
+<li><strong>Supprimer dans les 24-48 heures</strong></li>
+<li>Ne jamais en garder plus d'un</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Avant un changement risqué</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> snapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span> pre-change-<span class="va">$(</span><span class="fu">date</span> +%Y%m%d<span class="va">)</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Après un changement réussi (SUPPRIMEZ-LE !)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Après un changement réussi (LE SUPPRIMER !)</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> delsnapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span> pre-change-20251030</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Si le changement a échoué (rollback puis suppression)</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> rollback <span class="op">&lt;</span>VMID<span class="op">&gt;</span> pre-change-20251030</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> delsnapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span> pre-change-20251030</span></code></pre></div>
-<h3 id="list-and-clean-snapshots">Lister et Nettoyer les Snapshots</h3>
+<h3 id="list-and-clean-snapshots">Lister et nettoyer les snapshots</h3>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lister tous les snapshots pour une VM</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> listsnapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span></span>
@@ -242,40 +242,38 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="ex">qm</span> delsnapshot 100 <span class="va">$snap</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div>
 <hr />
-<h2 id="vm-performance-optimization">Optimisation des Performances des VM</h2>
-<h3 id="disk-configuration">Configuration du Disque</h3>
+<h2 id="vm-performance-optimization">Optimisation des performances des VM</h2>
+<h3 id="disk-configuration">Configuration des disques</h3>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Paramètres de disque optimaux pour la VM 100</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> set 100 <span class="at">-scsi0</span> local-lvm:vm-100-disk-0,cache=writeback,iothread=1</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Modes de Cache (par ordre de vitesse) :</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Modes de cache (par ordre de vitesse) :</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - writeback (le plus rapide, recommandé)</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - writethrough (équilibré)</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - directsync (le plus lent, à éviter sauf nécessité)</span></span></code></pre></div>
-<h3 id="check-vm-disk-performance-inside-vm">Vérifier les Performances Disque de la VM
-(À l'intérieur de la VM)</h3>
+<h3 id="check-vm-disk-performance-inside-vm">Vérifier les performances du disque VM à l'intérieur de la VM</h3>
 <div class="sourceCode" id="cb8"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># À l'intérieur de la VM, vérifier l'E/S disque</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># À l'intérieur de la VM, vérifier l'I/O disque</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">iostat</span> <span class="at">-x</span> 1 10</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Surveiller :</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - %util > 80 % = goulot d'étranglement disque</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - await > 50ms = réponses lentes</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - iowait% élevé = problèmes d'E/S</span></span></code></pre></div>
-<h3 id="memory-and-swap-check-inside-vm">Vérification de la Mémoire et du Swap (À l'intérieur
-de la VM)</h3>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - %util &gt; 80% = goulot d'étranglement disque</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - await &gt; 50ms = réponses lentes</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - iowait% élevé = problèmes d'I/O</span></span></code></pre></div>
+<h3 id="memory-and-swap-check-inside-vm">Vérification de la mémoire et du swap (à l'intérieur de la VM)</h3>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'utilisation de la mémoire</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">free</span> <span class="at">-h</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Surveiller le swapping (devrait être 0)</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Surveiller le swapping (doit être 0)</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">vmstat</span> 1</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Regarder les colonnes 'si' et 'so' - elles devraient être à 0</span></span></code></pre></div>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Regarder les colonnes 'si' et 'so' - elles doivent être à 0</span></span></code></pre></div>
 <hr />
-<h2 id="lvm-thin-pool-protection">Protection du Thin Pool LVM</h2>
-<h3 id="enable-auto-extension">Activer l'Auto-Extension</h3>
-<p>Empêche le thin pool de se remplir et de faire planter les VM.</p>
+<h2 id="lvm-thin-pool-protection">Protection du pool LVM Thin</h2>
+<h3 id="enable-auto-extension">Activer l'auto-extension</h3>
+<p>Empêche le pool thin de se remplir et de faire crasher les VM.</p>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarder la configuration</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /etc/lvm/lvm.conf /etc/lvm/lvm.conf.backup</span>
@@ -286,68 +284,67 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href=
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les paramètres</span></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> thin_pool_autoextend /etc/lvm/lvm.conf</span></code></pre></div>
-<p><strong>Sortie attendue :</strong></p>
+<p><strong>Sortie attendue:</strong></p>
 <pre><code>thin_pool_autoextend_threshold = 80
 thin_pool_autoextend_percent = 20</code></pre>
 <hr />
-<h2 id="backup-strategy">Stratégie de Sauvegarde</h2>
-<h3 id="why-backups-snapshots">Pourquoi les Sauvegardes > Snapshots</h3>
+<h2 id="backup-strategy">Stratégie de sauvegarde</h2>
+<h3 id="why-backups-snapshots">Pourquoi les Sauvegardes &gt; Snapshots</h3>
 <ul>
-<li>Les snapshots ne sont <strong>PAS des sauvegardes</strong></li>
+<li>Les snapshots ne sont <strong>PAS</strong> des sauvegardes</li>
 <li>Les snapshots résident sur le même stockage (point de défaillance unique)</li>
 <li>Les sauvegardes peuvent être restaurées n'importe où</li>
-<li>Les sauvegardes survivent aux pannes matérielles</li>
+<li>Les sauvegardes survivent à la défaillance matérielle</li>
 </ul>
-<h3 id="setup-automated-backups">Configurer des Sauvegardes Automatisées</h3>
-<h4 id="via-web-ui">Via l'Interface Web :</h4>
+<h3 id="setup-automated-backups">Mise en place des sauvegardes automatisées</h3>
+<h4 id="via-web-ui">Via l'interface Web :</h4>
 <ol type="1">
-<li>Datacenter → Sauvegarde → Ajouter</li>
+<li>Datacenter → Sauvegarde (Backup) → Ajouter</li>
 <li>Configurer :
 <ul>
-<li>Planification : Quotidien à 2h du matin</li>
-<li>Mode de sélection : Inclure les VM sélectionnées</li>
-<li>Conservation : Quotidien : 3, Hebdomadaire : 2, Mensuel : 1</li>
-<li>Compression : ZSTD</li>
-<li>Mode : Snapshot</li>
+<li>Planification : Quotidienne à 2h00</li>
+<li>Mode de sélection : Inclure les VMs sélectionnées</li>
+<li>Garder : Quotidien : 3, Hebdomadaire : 2, Mensuel : 1</li>
+<li>Compression: ZSTD</li>
+<li>Mode: Snapshot</li>
 </ul></li>
 </ol>
-<h4 id="via-cli">Via la CLI :</h4>
+<h4 id="via-cli">Via CLI:</h4>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarde manuelle</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">vzdump</span> <span class="op">&lt;</span>VMID<span class="op">&gt;</span> --mode snapshot <span class="at">--compress</span> zstd <span class="at">--storage</span> local</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarde vers un stockage externe (recommandé)</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ex">vzdump</span> <span class="op">&lt;</span>VMID<span class="op">&gt;</span> --storage backup-storage <span class="at">--compress</span> zstd</span></code></pre></div>
-<h3 id="backup-retention-strategy">Stratégie de Rétention des Sauvegardes</h3>
-<pre><code>Quotidien :   Conserver 3 (aujourd'hui, hier, il y a 2 jours)
-Hebdomadaire :  Conserver 2 (les 2 dernières semaines)
-Mensuel : Conserver 1 (le mois dernier)</code></pre>
+<h3 id="backup-retention-strategy">Stratégie de rétention des sauvegardes</h3>
+<pre><code>Quotidienne:   Garder 3 (aujourd'hui, hier, il y a 2 jours)
+Hebdomadaire:  Garder 2 (les 2 dernières semaines)
+Mensuelle: Garder 1 (le dernier mois)</code></pre>
 <hr />
-<h2 id="emergency-troubleshooting">Dépannage d'Urgence</h2>
-<h3 id="vm-freezing-checklist">Liste de Contrôle en cas de Blocage de VM</h3>
-<h4 id="check-host-storage-most-common">1. Vérifier le Stockage Hôte (Le plus
-courant)</h4>
+<h2 id="emergency-troubleshooting">Dépannage d'urgence</h2>
+<h3 id="vm-freezing-checklist">Liste de contrôle en cas de gel de VM</h3>
+<h4 id="check-host-storage-most-common">1. Vérifier le stockage hôte (le plus courant)</h4>
 <div class="sourceCode" id="cb14"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span> /</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Si &gt; 90 %, étendre ou nettoyer immédiatement</span></span></code></pre></div>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Si &gt; 90%, étendre ou nettoyer immédiatement</span></span></code></pre></div>
 <h4 id="check-thin-pool">2. Vérifier le Thin Pool</h4>
 <div class="sourceCode" id="cb15"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lvs</span> pve/data</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Si data% &gt; 80 %, supprimer les anciens snapshots</span></span></code></pre></div>
-<h4 id="check-vm-disk-cache">3. Vérifier le Cache Disque de la VM</h4>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Si % data &gt; 80%, supprimer les anciens snapshots</span></span></code></pre></div>
+<h4 id="check-vm-disk-cache">3. Vérifier le cache disque de la VM</h4>
 <div class="sourceCode" id="cb16"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> config <span class="op">&lt;</span>VMID<span class="op">&gt;</span> <span class="kw">|</span> <span class="fu">grep</span> cache</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Devrait être : cache=writeback</span></span></code></pre></div>
-<h4 id="inside-vm-check-io">4. À l'intérieur de la VM : Vérifier l'E/S</h4>
+<h4 id="inside-vm-check-io">4. À l'intérieur de la VM : Vérifier l'I/O</h4>
 <div class="sourceCode" id="cb17"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">iostat</span> <span class="at">-x</span> 1</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Rechercher un %util élevé ou des temps d'attente (await) longs</span></span></code></pre></div>
-<h4 id="inside-vm-check-memory">5. À l'intérieur de la VM : Vérifier la Mémoire</h4>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Rechercher un %util ou des temps d'attente élevés</span></span></code></pre></div>
+<h4 id="inside-vm-check-memory">5. À l'intérieur de la VM : Vérifier la mémoire</h4>
 <div class="sourceCode" id="cb18"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">free</span> <span class="at">-h</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">vmstat</span> 1</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le swapping (colonnes si/so)</span></span></code></pre></div>
-<h3 id="quick-cleanup-commands">Commandes de Nettoyage Rapide</h3>
+<h3 id="quick-cleanup-commands">Commandes de nettoyage rapide</h3>
 <div class="sourceCode" id="cb19"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nettoyage hôte</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> clean</span>
@@ -358,36 +355,36 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href=
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Trouver les plus gros consommateurs d'espace</span></span>
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-h</span> / <span class="at">--max-depth</span><span class="op">=</span>3 <span class="dv">2</span><span class="op">&gt;</span>/dev/null <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-h</span> <span class="kw">|</span> <span class="fu">tail</span> <span class="at">-20</span></span>
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les anciens noyaux (garder le courant + 1)</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les anciens noyaux (garder l'actuel + 1)</span></span>
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="ex">dpkg</span> <span class="at">--list</span> <span class="kw">|</span> <span class="fu">grep</span> linux-image</span>
 <span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> remove linux-image-X.X.X-X-pve</span></code></pre></div>
 <hr />
-<h2 id="automation-scripts">Scripts d'Automatisation</h2>
-<h3 id="weekly-health-check-script">Script Hebdomadaire de Vérification de Santé</h3>
+<h2 id="automation-scripts">Scripts d'automatisation</h2>
+<h3 id="weekly-health-check-script">Script de contrôle de santé hebdomadaire</h3>
 <div class="sourceCode" id="cb20"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrer sous : /root/proxmox-health-check.sh</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Save as: /root/proxmox-health-check.sh</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;=== Proxmox Health Check - </span><span class="va">$(</span><span class="fu">date</span><span class="va">)</span><span class="st"> ===&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le stockage racine</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Stockage Racine :&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Root Storage:&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span> / <span class="kw">|</span> <span class="fu">grep</span> mapper <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier le thin pool</span></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Utilisation du Thin Pool :&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Thin Pool Usage:&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
 <span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="ex">lvs</span> pve/data <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
 <span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Lister les snapshots pour chaque VM</span></span>
 <span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> vmid <span class="kw">in</span> <span class="va">$(</span><span class="ex">qm</span> list <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;NR&gt;1 {print $1}&#39;</span><span class="va">)</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Snapshots de la VM </span><span class="va">$vmid</span><span class="st">:&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;VM </span><span class="va">$vmid</span><span class="st"> snapshots:&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
 <span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">qm</span> listsnapshot <span class="va">$vmid</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
 <span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
 <span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Alerte si stockage > 85 %</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Alerte si stockage &gt; 85%</span></span>
 <span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="va">USAGE</span><span class="op">=</span><span class="va">$(</span><span class="fu">df</span> / <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;NR==2 {print $5}&#39;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s/%//&#39;</span><span class="va">)</span></span>
 <span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$USAGE</span> <span class="ot">-gt</span> 85 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;⚠️  AVERTISSEMENT : Stockage racine à </span><span class="va">${USAGE}</span><span class="st">%&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;⚠️  WARNING: Root storage at </span><span class="va">${USAGE}</span><span class="st">%&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span>
 <span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
 <span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;===================================&quot;</span> <span class="kw">|</span> <span class="fu">tee</span> <span class="at">-a</span> /var/log/proxmox-health.log</span></code></pre></div>
@@ -395,13 +392,13 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href=
 <div class="sourceCode" id="cb21"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x /root/proxmox-health-check.sh</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter à crontab (chaque dimanche à 8h)</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter à crontab (tous les dimanches à 8h)</span></span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">crontab</span> <span class="at">-e</span></span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter cette ligne :</span></span>
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="ex">0</span> 8 <span class="pp">*</span> <span class="pp">*</span> 0 /root/proxmox-health-check.sh</span></code></pre></div>
 <hr />
-<h2 id="monitoring-thresholds">Seuils de Surveillance</h2>
-<h3 id="set-alerts-when">Définir des Alertes Lorsque :</h3>
+<h2 id="monitoring-thresholds">Seuils de surveillance</h2>
+<h3 id="set-alerts-when">Définir des alertes lorsque :</h3>
 <table>
 <thead>
 <tr>
@@ -419,25 +416,25 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href=
 <td>Étendre ou nettoyer</td>
 </tr>
 <tr>
-<td>Données du Thin Pool</td>
+<td>Données Thin Pool</td>
 <td>75%</td>
 <td>85%</td>
 <td>Supprimer les snapshots</td>
 </tr>
 <tr>
-<td>Méta du Thin Pool</td>
+<td>Méta Thin Pool</td>
 <td>75%</td>
 <td>85%</td>
 <td>Alerter l'administrateur</td>
 </tr>
 <tr>
-<td>Attente E/S Disque VM</td>
+<td>VM Disk I/O Wait</td>
 <td>20%</td>
 <td>40%</td>
-<td>Vérifier le mode de cache</td>
+<td>Vérifier le mode cache</td>
 </tr>
 <tr>
-<td>Compte de Snapshots</td>
+<td>Nombre de Snapshots</td>
 <td>3 par VM</td>
 <td>5 par VM</td>
 <td>Nettoyer immédiatement</td>
@@ -445,44 +442,44 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href=
 </tbody>
 </table>
 <hr />
-<h2 id="lessons-learned">Leçons Apprises</h2>
-<h3 id="root-cause-of-previous-freezing">Cause Profonde des Blocages Précédents</h3>
+<h2 id="lessons-learned">Leçons apprises</h2>
+<h3 id="root-cause-of-previous-freezing">Cause racine du gel précédent</h3>
 <ol type="1">
-<li>✅ <strong>Système de fichiers racine rempli à 100 %</strong> - cause principale</li>
-<li>✅ <strong>Mode de cache : directsync</strong> - E/S lentes</li>
-<li>✅ <strong>Chaîne de snapshots</strong> - inefficacité de l'espace</li>
-<li>✅ <strong>Absence d'auto-extension du thin pool</strong> - risque de saturation</li>
+<li>✅ <strong>Système de fichiers racine rempli à 100%</strong> - cause principale</li>
+<li>✅ <strong>Mode cache : directsync</strong> - I/O lent</li>
+<li>✅ <strong>Chaîne de snapshots</strong> - inefficacité d'espace</li>
+<li>✅ <strong>Pas d'auto-extension du thin pool</strong> - risque de saturation</li>
 </ol>
-<h3 id="solutions-applied">Solutions Appliquées</h3>
+<h3 id="solutions-applied">Solutions appliquées</h3>
 <ol type="1">
-<li>✅ Extension du root de 96Go → 112Go</li>
+<li>✅ Extension de la racine de 96Go → 112Go</li>
 <li>✅ Changement du cache : directsync → writeback</li>
-<li>✅ Suppression de la chaîne de snapshots inutiles</li>
+<li>✅ Suppression de la chaîne de snapshots inutile</li>
 <li>✅ Activation de l'auto-extension du thin pool</li>
 <li>✅ Établissement d'une stratégie de gestion des snapshots</li>
 </ol>
-<h3 id="prevention-strategy">Stratégie de Prévention</h3>
+<h3 id="prevention-strategy">Stratégie de prévention</h3>
 <ul>
 <li>Surveiller le stockage hebdomadairement</li>
 <li>Ne jamais dépasser 2 snapshots par VM</li>
 <li>Utiliser des sauvegardes, pas des snapshots, pour la sécurité</li>
-<li>Activer les alertes à 85 % d'utilisation du stockage</li>
+<li>Activer les alertes à 85% d'utilisation du stockage</li>
 </ul>
 <hr />
-<h2 id="quick-commands-reference">Référence Rapide des Commandes</h2>
+<h2 id="quick-commands-reference">Référence des commandes rapides</h2>
 <div class="sourceCode" id="cb22"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stockage</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span> /                                    <span class="co"># Vérifier le stockage racine</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="ex">lvs</span> pve/data                              <span class="co"># Vérifier le thin pool</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="ex">vgdisplay</span> pve <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-i</span> free              <span class="co"># Vérifier l'espace libre dans le VG</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">lvextend</span> <span class="at">-l</span> +100%FREE /dev/pve/root       <span class="co"># Étendre le root</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">lvextend</span> <span class="at">-l</span> +100%FREE /dev/pve/root       <span class="co"># Étendre la racine</span></span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="ex">resize2fs</span> /dev/pve/root                   <span class="co"># Redimensionner le système de fichiers</span></span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Snapshots</span></span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> listsnapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span>                    <span class="co"># Lister les snapshots</span></span>
 <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> snapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>                 <span class="co"># Créer un snapshot</span></span>
 <span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> delsnapshot <span class="op">&lt;</span>VMID<span class="op">&gt;</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>              <span class="co"># Supprimer un snapshot</span></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> rollback <span class="op">&lt;</span>VMID<span class="op">&gt;</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>                 <span class="co"># Revenir à un snapshot</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> rollback <span class="op">&lt;</span>VMID<span class="op">&gt;</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>                 <span class="co"># Rollback vers le snapshot</span></span>
 <span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Gestion des VM</span></span>
 <span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> start <span class="op">&lt;</span>VMID<span class="op">&gt;</span>                           <span class="co"># Démarrer la VM</span></span>
@@ -491,18 +488,16 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href=
 <span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="ex">qm</span> set <span class="op">&lt;</span>VMID<span class="op">&gt;</span> -<span class="op">&lt;</span>option<span class="op">&gt;</span> <span class="op">&lt;</span>value<span class="op">&gt;</span>           <span class="co"># Modifier la configuration de la VM</span></span>
 <span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Performance</span></span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="ex">iostat</span> <span class="at">-x</span> 1                               <span class="co"># Surveiller l'E/S disque</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="ex">iostat</span> <span class="at">-x</span> 1                               <span class="co"># Surveiller l'I/O disque</span></span>
 <span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a><span class="fu">free</span> <span class="at">-h</span>                                   <span class="co"># Vérifier la mémoire</span></span>
 <span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a><span class="fu">vmstat</span> 1                                  <span class="co"># Statistiques système</span></span>
 <span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Nettoyage</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Cleanup</span></span>
 <span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> clean                                 <span class="co"># Nettoyer le cache des paquets</span></span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="ex">journalctl</span> <span class="at">--vacuum-time</span><span class="op">=</span>7d               <span class="co"># Nettoyer les anciens journaux</span></span>
-<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sh</span> /var/lib/vz/<span class="pp">*</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-h</span>            <span class="co"># Trouver les gros fichiers</span></span>
-</code></pre></div>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="ex">journalctl</span> <span class="at">--vacuum-time</span><span class="op">=</span>7d               <span class="co"># Nettoyer les anciens logs</span></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sh</span> /var/lib/vz/<span class="pp">*</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-h</span>            <span class="co"># Trouver les gros fichiers</span></span></code></pre></div>
 <hr />
-<p><strong>Dernière Mise à Jour</strong>: 2025-10-30 <strong>Statut</strong>: ✅
-Testé et Fonctionnel <strong>Prochaine Révision</strong>: Vérifications de santé hebdomadaires planifiées</p>
+<p><strong>Dernière mise à jour</strong>: 2025-10-30 <strong>Statut</strong>: ✅ Testé et fonctionnel <strong>Prochaine révision</strong>: Contrôles de santé hebdomadaires planifiés</p>
                 </div>
 
                 <div class="article-navigation">
@@ -516,11 +511,11 @@ Testé et Fonctionnel <strong>Prochaine Révision</strong>: Vérifications de sa
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Liens Rapides</h4>
+                    <h4>Liens rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
                         <li><a href="/index.html#about">À propos</a></li>
@@ -530,7 +525,7 @@ Testé et Fonctionnel <strong>Prochaine Révision</strong>: Vérifications de sa
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connecter</h4>
+                    <h4>Connexion</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -547,12 +542,12 @@ Testé et Fonctionnel <strong>Prochaine Révision</strong>: Vérifications de sa
 
             <div class="footer-bottom">
                 <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
-                <p>Conçu avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
             </div>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Retour en haut de page">
+    <button class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 

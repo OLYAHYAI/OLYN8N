@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Part 1 – Installation and Configuration of pfSense on Zotac Zbox Ci337 Nano - Technical tutorial and guide">
+    <meta name="description" content="Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano - Technical tutorial and guide">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Part 1 – Installation and Configuration of pfSense on Zotac Zbox Ci337 Nano | Omar LYAHYAI Technical Blog</title>
+    <title>Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano | Omar LYAHYAI Technical Blog</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Part 1 – Installation and Configuration of pfSense on Zotac Zbox Ci337 Nano</span>
+                        <span>Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Part 1 – Installation and Configuration of pfSense on Zotac Zbox Ci337 Nano</h1>
+                <h1 class="article-title">Part 1 – Installation and Configuration of pfSense on Zotac ZBOX CI337 Nano</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -81,7 +81,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="far fa-clock"></i>
-                        <span>5 min read</span>
+                        <span>5 min min read</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-folder"></i>
@@ -204,9 +204,9 @@ Installation and Initial Configuration</h2>
 <h2 id="contexte-du-projet">1. Project Context</h2>
 <h3 id="objectifs">1.1 Objectives</h3>
 <p>We undertook the installation of a dedicated firewall solution for a
-homelab environment, aiming to establish a segmented and secured network
-infrastructure. This first phase consists of deploying pfSense as a
-dedicated security appliance, distinct from the existing virtualization
+homelab environment, aiming to set up a segmented and secure network
+infrastructure. This first phase involves deploying pfSense as a
+dedicated security appliance, separate from the existing virtualization
 infrastructure.</p>
 <h3 id="matériel-utilisé">1.2 Hardware Used</h3>
 <p><strong>Mini PC</strong>: Zotac ZBOX CI337 nano</p>
@@ -227,16 +227,16 @@ disabled)</li>
 <h2 id="installation-du-système-dexploitation">2. Operating System
 Installation</h2>
 <h3 id="préparation">2.1 Preparation</h3>
-<p>We downloaded pfSense 2.8.1 Community Edition from the official Netgate
-website. The ISO image was burned onto a bootable USB drive to proceed
-with the installation on the target system.</p>
+<p>We downloaded pfSense 2.8.1 Community Edition from the official
+Netgate website. The ISO image was burned onto a bootable USB drive to
+proceed with the installation on the target system.</p>
 <h3 id="configuration-bios">2.2 BIOS Configuration</h3>
 <p>Before installation, we configured the Zotac ZBOX BIOS with the
 following settings:</p>
 <ul>
 <li><strong>Secure Boot</strong>: Disabled</li>
 <li><strong>Boot Mode</strong>: Pure UEFI</li>
-<li><strong>Boot Order</strong>: USB drive priority</li>
+<li><strong>Boot Order</strong>: USB key prioritized</li>
 </ul>
 <h3 id="processus-dinstallation">2.3 Installation Process</h3>
 <p>We booted the system on the USB installation drive and followed the
@@ -248,58 +248,58 @@ pfSense CE license</li>
 pfSense”</li>
 <li><strong>Keyboard Layout</strong>: Configuration to French AZERTY
 (optional)</li>
-<li><strong>Partitioning</strong>: Choosing “Auto (ZFS)” for a modern
-and performant installation</li>
+<li><strong>Partitioning</strong>: Choice of “Auto (ZFS)” for a modern and
+high-performance installation</li>
 <li><strong>RAID Configuration</strong>: Selection of “Stripe” (no
 redundancy - single disk)</li>
-<li><strong>Installation Medium</strong>: Selection of the 128 GB SSD
-as the installation medium</li>
-<li><strong>Confirmation</strong>: Validating the formatting and
-starting the installation</li>
+<li><strong>Installation Media</strong>: Selection of the 128 GB SSD as
+the installation medium</li>
+<li><strong>Confirmation</strong>: Validation of formatting and launching
+the installation</li>
 </ol>
-<p>The installation proceeded without incident, and the system restarted
-automatically upon completion.</p>
+<p>The installation proceeded without incident, and the system rebooted
+automatically once completed.</p>
 <hr />
 <h2 id="configuration-initiale-des-interfaces-réseau">3. Initial Network
 Interface Configuration</h2>
 <h3 id="assignation-des-interfaces">3.1 Interface Assignment</h3>
-<p>Upon first boot, we accessed the pfSense console menu to proceed with
-network interface assignment.</p>
+<p>Upon first boot, we accessed the pfSense console menu to assign the
+network interfaces.</p>
 <p><strong>Menu Option 1</strong>: Assign Interfaces</p>
 <p>We configured the interfaces as follows:</p>
 <ul>
-<li><strong>WAN (re1)</strong>: Interface connected to the main
-router (Internet box)</li>
+<li><strong>WAN (re1)</strong>: Interface connected to the main router
+(ISP box)</li>
 <li><strong>LAN (re0)</strong>: Interface for the internal network</li>
 </ul>
 <h3 id="configuration-ip-temporaire-du-wan">3.2 Temporary WAN IP
 Configuration</h3>
-<p>As part of our homelab setup, we chose a temporary architecture
-allowing access to the WebGUI via the WAN interface, while finalizing
-the configuration before deployment into production.</p>
+<p>In the context of our homelab configuration, we opted for a temporary
+architecture allowing access to the WebGUI via the WAN interface, while
+finalizing the configuration before deployment.</p>
 <p><strong>Menu Option 2</strong>: Set interface(s) IP address</p>
 <p><strong>WAN Configuration</strong>:</p>
 <ul>
 <li><strong>Mode</strong>: Static IP (non-DHCP)</li>
-<li><strong>IPv4 Address</strong>: Fixed IP within the existing
-network subnet</li>
+<li><strong>IPv4 Address</strong>: Fixed IP within the existing network
+subnet</li>
 <li><strong>Subnet Mask</strong>: /24</li>
-<li><strong>Gateway</strong>: Main router address</li>
+<li><strong>Gateway</strong>: Address of the main router</li>
 </ul>
 <p><strong>LAN Configuration</strong>:</p>
 <ul>
 <li><strong>IPv4 Address</strong>: Dedicated subnet for the future
 internal network</li>
 <li><strong>Subnet Mask</strong>: /24</li>
-<li><strong>DHCP Server</strong>: Enabled with a defined range</li>
+<li><strong>DHCP Server</strong>: Enabled with defined range</li>
 </ul>
 <hr />
 <h2 id="accès-à-linterface-web">4. Accessing the Web Interface</h2>
 <h3 id="problématique-initiale">4.1 Initial Issue</h3>
 <p>During the first attempt to access the WebGUI, we encountered a
-common issue: the automatic pfSense rules blocked access from the WAN
-interface due to the “Block Private Networks” protection being enabled
-by default.</p>
+common problem: pfSense's automatic rules blocked access from the WAN
+interface due to the default "Block Private Networks" protection being
+enabled.</p>
 <h3 id="résolution-via-configuration-manuelle">4.2 Resolution via
 Manual Configuration</h3>
 <p>We resolved this limitation by directly editing the configuration
@@ -331,8 +331,8 @@ Administrator Password</h3>
 password.</p>
 <p><strong>Navigation</strong>: System &gt; User Manager &gt; Users &gt;
 admin</p>
-<p>We set a strong password meeting complexity requirements.</p>
-<h3 id="activation-de-ssh-optionnel">5.2 Enabling SSH
+<p>We defined a strong password meeting complexity criteria.</p>
+<h3 id="activation-de-ssh-optionnel">5.2 SSH Activation
 (Optional)</h3>
 <p>To facilitate remote maintenance, we enabled SSH access.</p>
 <p><strong>Navigation</strong>: System &gt; Advanced &gt; Admin
@@ -344,27 +344,28 @@ Access</p>
 <h2 id="installation-des-drivers-critiques">6. Installation of Critical
 Drivers</h2>
 <h3 id="problématique-des-cartes-realtek">6.1 Realtek Card Issue</h3>
-<p>Although detected by FreeBSD, Realtek network cards require a specific
-driver to ensure optimal stability. The generic driver can lead to
-disconnections or performance loss.</p>
+<p>Although Realtek network cards are detected by FreeBSD, they require a
+specific driver to ensure optimal stability. The generic driver can lead
+to disconnections or performance losses.</p>
 <h3 id="installation-de-realtek-re-kmod">6.2 Installation of
 realtek-re-kmod</h3>
-<p>We proceeded to install the <code>realtek-re-kmod</code> package via
-the Diagnostics &gt; Command Prompt interface:</p>
+<p>We proceeded with the installation of the
+<code>realtek-re-kmod</code> package via the Diagnostics &gt; Command
+Prompt interface:</p>
 <p>Installation of the optimized Realtek driver pkg install
 realtek-re-kmod</p>
-<p>Immediate loading of the module kldload if_re</p>
-<p>Configuring automatic loading on boot echo
+<p>Immediate module loading kldload if_re</p>
+<p>Configuration of automatic loading on startup echo
 ‘if_re_load=“YES”’ &gt;&gt; /boot/loader.conf.local</p>
-<p>Verification of loading kldstat | grep if_re</p>
+<p>Loading verification kldstat | grep if_re</p>
 <p>text</p>
 <p>We then restarted the system via <strong>Diagnostics &gt;
 Reboot</strong> to permanently apply the changes.</p>
 <h3 id="vérification-post-installation">6.3 Post-Installation
 Verification</h3>
-<p>After rebooting, we verified the status of the network interfaces:</p>
-<p>Interface status verification ifconfig re0 ifconfig re1</p>
-<p>Error statistics verification netstat -i</p>
+<p>After rebooting, we checked the status of the network interfaces:</p>
+<p>Checking interface status ifconfig re0 ifconfig re1</p>
+<p>Checking error statistics netstat -i</p>
 <p>text</p>
 <p><strong>Results Obtained</strong>:</p>
 <ul>
@@ -372,14 +373,14 @@ Verification</h3>
 connected)</li>
 <li><strong>re1 (WAN)</strong>: Status “active”, speed 1000baseT
 full-duplex</li>
-<li><strong>Interface Errors (Ierrs/Oerrs)</strong>: 0 on both
+<li><strong>Interface errors (Ierrs/Oerrs)</strong>: 0 on both
 interfaces</li>
-<li><strong>MSI-X Interrupts</strong>: Enabled and
-functional</li>
+<li><strong>MSI-X Interrupts</strong>: Enabled and functional</li>
 </ul>
 <p>The hardware configuration is validated as perfectly operational.</p>
 <hr />
-<h2 id="vérification-du-matériel-wifi">7. WiFi Hardware Verification</h2>
+<h2 id="vérification-du-matériel-wifi">7. WiFi Hardware
+Verification</h2>
 <h3 id="identification-de-la-carte">7.1 Card Identification</h3>
 <p>We proceeded with the full identification of the installed network
 hardware:</p>
@@ -393,23 +394,23 @@ hardware:</p>
 <li><strong>Ethernet 2</strong>: Realtek PCIe GbE (re1)</li>
 </ul>
 <h3 id="limitations-freebsd">7.2 FreeBSD Limitations</h3>
-<p>Although detected by the system, the Intel AX101 WiFi card is
+<p>The Intel AX101 WiFi card, although detected by the system, is
 <strong>not usable</strong> under pfSense/FreeBSD for the following
 reasons:</p>
 <ul>
-<li>`iwlwifi` driver removed from recent pfSense versions</li>
+<li><code>iwlwifi</code> driver removed from recent pfSense versions</li>
 <li>Experimental support only in client mode (no AP mode)</li>
 <li>Limited performance even if functional</li>
 </ul>
 <p><strong>Technical Decision</strong>: We decided to use a dedicated
-external WiFi access point which will be connected to the pfSense LAN
+external WiFi access point that will be connected to the pfSense LAN
 port, offering better performance and centralized management.</p>
 <hr />
 <h2 id="installation-des-packages-essentiels">8. Installation of
 Essential Packages</h2>
 <h3 id="mise-à-jour-du-système">8.1 System Update</h3>
-<p>Before installing third-party packages, we checked for available
-system updates via <strong>System &gt; Update</strong>.</p>
+<p>Before installing third-party packages, we checked for available system
+updates via <strong>System &gt; Update</strong>.</p>
 <h3 id="installation-des-packages-de-sécurité">8.2 Installation of
 Security Packages</h3>
 <p><strong>Navigation</strong>: System &gt; Package Manager &gt;
@@ -426,7 +427,7 @@ Blocking)</p>
 <ul>
 <li>Intrusion Detection and Prevention System</li>
 <li>Inline IPS mode on the WAN interface</li>
-<li>ET Open rules (Emerging Threats)</li>
+<li>ET Open Rules (Emerging Threats)</li>
 </ul>
 <p><strong>3. WireGuard</strong> (Modern VPN)</p>
 <ul>
@@ -436,13 +437,13 @@ Blocking)</p>
 </ul>
 <p><strong>4. ACME</strong> (Automatic SSL Certificates)</p>
 <ul>
-<li>Let’s Encrypt Integration</li>
+<li>Let’s Encrypt integration</li>
 <li>Automatic certificate renewal</li>
 </ul>
 <p><strong>5. ntopng</strong> (Network Monitoring)</p>
 <ul>
 <li>Real-time traffic analysis</li>
-<li>Detailed statistics per host/protocol</li>
+<li>Detailed statistics by host/protocol</li>
 </ul>
 <p><strong>6. iftop</strong> (Bandwidth Monitoring)</p>
 <ul>
@@ -460,19 +461,18 @@ hardware offloads to ensure complete packet inspection.</p>
 <li>Hardware TCP Segmentation Offloading</li>
 <li>Hardware Large Receive Offloading</li>
 </ul>
-<p><strong>System reboot required</strong> after this
-modification.</p>
+<p><strong>System restart required</strong> after this modification.</p>
 <hr />
 <h2 id="état-de-la-configuration-actuelle">9. Current Configuration
 Status</h2>
 <h3 id="architecture-réseau-temporaire">9.1 Temporary Network
 Architecture</h3>
 <p>Internet ↓ Main Box/Router ↓ [WAN - re1] pfSense ZBOX [LAN -
-re0] ↓ (Not connected - future expansion)</p>
+re0] ↓ (Not Connected - future expansion)</p>
 <p>text</p>
 <h3 id="services-actifs">9.2 Active Services</h3>
 <ul>
-<li>✅ pfSense Firewall operational</li>
+<li>✅ pfSense firewall operational</li>
 <li>✅ Realtek drivers installed and validated</li>
 <li>✅ WebGUI access functional</li>
 <li>✅ SSH enabled for remote maintenance</li>
@@ -480,7 +480,7 @@ re0] ↓ (Not connected - future expansion)</p>
 </ul>
 <h3 id="prochaines-étapes-partie-2">9.3 Next Steps (Part
 2)</h3>
-<p>The rest of the configuration will include:</p>
+<p>The continuation of the configuration will include:</p>
 <ol type="1">
 <li>Detailed configuration of pfBlockerNG-devel</li>
 <li>Setting up Suricata IDS/IPS</li>
@@ -504,7 +504,7 @@ default)</li>
 </ul>
 <h3 id="surveillance-système">10.2 System Monitoring</h3>
 <p>Useful commands for monitoring:</p>
-<p>CPU and memory load top</p>
+<p>CPU and Memory load top</p>
 <p>Real-time CPU frequency sysctl dev.cpu | grep freq</p>
 <p>Interface status ifconfig -a</p>
 <p>Network statistics netstat -i</p>
@@ -519,20 +519,20 @@ Restore</p>
 </ul>
 <hr />
 <h2 id="conclusion-de-la-partie-1">Conclusion of Part 1</h2>
-<p>We successfully deployed a pfSense 2.8.1 instance on a Zotac ZBOX
-CI337 nano mini PC. The system is now operational with:</p>
+<p>We have successfully deployed a pfSense 2.8.1 instance on a Zotac
+ZBOX CI337 nano mini PC. The system is now operational with:</p>
 <ul>
 <li>Two fully functional Gigabit Ethernet interfaces</li>
 <li>Optimized hardware drivers (Realtek)</li>
 <li>Security package suite installed</li>
-<li>Secured base configuration</li>
+<li>Secured basic configuration</li>
 </ul>
 <p>The current architecture allows access and configuration via the web
-interface, while preserving the possibility of migrating to a segmented
-production architecture using VLANs. Hardware validation confirms the
+interface, while retaining the possibility of migrating to a segmented
+production architecture with VLANs. Hardware validation confirms the
 absence of network errors and optimal performance on both Ethernet
 interfaces.</p>
-<p><strong>Total Investment</strong>: 85€ for the hardware<br />
+<p><strong>Total Investment</strong>: 85€ for hardware<br />
 <strong>Installation Time</strong>: ~2 hours (installation +
 configuration + optimizations)<br />
 <strong>Status</strong>: ✅ Operational and ready for advanced
