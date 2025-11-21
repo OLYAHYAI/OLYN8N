@@ -1,6 +1,94 @@
 const blogData = {
     "articles": [
         {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+        },
+        {
+            "id": "proxmox-vm-maintenance-routine-complete-guide",
+            "title": "Proxmox Vm Maintenance Routine Complete Guide",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html"
+        },
+        {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+        },
+        {
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
+        },
+        {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
+        },
+        {
+            "id": "vm-disk-expansion-guide-proxmox-linux",
+            "title": "Vm Disk Expansion Guide Proxmox Linux",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html"
+        },
+        {
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../en/infrastructure/a-roadmap-to-self-hosted-services.html"
+        },
+        {
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
+            "excerpt": "",
+            "category": "infrastructure",
+            "date": "2025-11-21",
+            "tags": [
+                "infrastructure"
+            ],
+            "url": "../fr/infrastructure/a-roadmap-to-self-hosted-services.html"
+        },
+        {
             "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
             "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
             "excerpt": "",
@@ -21,94 +109,6 @@ const blogData = {
                 "infrastructure"
             ],
             "url": "../en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
-        },
-        {
-            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
-            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html"
-        },
-        {
-            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
-            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html"
-        },
-        {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
-        },
-        {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
-        },
-        {
-            "id": "hdd-ssd-health-monitoring-analysis-guide",
-            "title": "Hdd Ssd Health Monitoring Analysis Guide",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html"
-        },
-        {
-            "id": "hdd-ssd-health-monitoring-analysis-guide",
-            "title": "Hdd Ssd Health Monitoring Analysis Guide",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html"
-        },
-        {
-            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
-            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
-        },
-        {
-            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
-            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
-            "excerpt": "",
-            "category": "infrastructure",
-            "date": "2025-11-21",
-            "tags": [
-                "infrastructure"
-            ],
-            "url": "../en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
         }
     ],
     "categories": {
