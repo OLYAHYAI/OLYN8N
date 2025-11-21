@@ -1,114 +1,114 @@
 const blogData = {
     "articles": [
         {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+            "url": "../en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "building-secure-lab-kali-linux-pfsense-deployment",
+            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+            "url": "../fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html"
         },
         {
-            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
-            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html"
+            "url": "../en/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "growing-pains-extending-ubuntu-vm-disk-proxmox",
-            "title": "Growing Pains Extending Ubuntu Vm Disk Proxmox",
+            "id": "a-roadmap-to-self-hosted-services",
+            "title": "A Roadmap To Self Hosted Services",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/growing-pains-extending-ubuntu-vm-disk-proxmox.html"
+            "url": "../fr/infrastructure/a-roadmap-to-self-hosted-services.html"
         },
         {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
+            "url": "../fr/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         },
         {
-            "id": "partie-3-migration-r-seau-pfblockerng-avanc-et-complications",
-            "title": "Partie 3 – Migration Réseau, Pfblockerng Avancé Et Complications",
+            "id": "building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration",
+            "title": "Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/partie-3-migration-r-seau-pfblockerng-avanc-et-complications.html"
+            "url": "../en/infrastructure/building-the-homelab-foundation-proxmox-ve-installation-and-initial-configuration.html"
         },
         {
-            "id": "hdd-ssd-health-monitoring-analysis-guide",
-            "title": "Hdd Ssd Health Monitoring Analysis Guide",
+            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
+            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html"
+            "url": "../en/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
         },
         {
-            "id": "hdd-ssd-health-monitoring-analysis-guide",
-            "title": "Hdd Ssd Health Monitoring Analysis Guide",
+            "id": "building-my-pentester-portfolio-website-a-multi-agent-collaboration",
+            "title": "Building My Pentester Portfolio Website A Multi Agent Collaboration",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/hdd-ssd-health-monitoring-analysis-guide.html"
+            "url": "../fr/infrastructure/building-my-pentester-portfolio-website-a-multi-agent-collaboration.html"
         },
         {
-            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
-            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+            "id": "getting-proxmox-pfsense-back-online-network-rescue",
+            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../fr/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
+            "url": "../en/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
         },
         {
-            "id": "partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry",
-            "title": "Partie 2 – Configuration Avancée Pfsense Et Du Point D'acces Afoundry",
+            "id": "getting-proxmox-pfsense-back-online-network-rescue",
+            "title": "Getting Proxmox Pfsense Back Online Network Rescue",
             "excerpt": "",
             "category": "infrastructure",
             "date": "2025-11-21",
             "tags": [
                 "infrastructure"
             ],
-            "url": "../en/infrastructure/partie-2-configuration-avanc-e-pfsense-et-du-point-d-acces-afoundry.html"
+            "url": "../fr/infrastructure/getting-proxmox-pfsense-back-online-network-rescue.html"
         }
     ],
     "categories": {
