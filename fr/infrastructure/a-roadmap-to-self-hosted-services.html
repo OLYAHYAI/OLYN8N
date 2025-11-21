@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Feuille de route pour les services auto-hébergés | Blog Technique d'Omar LYAHYAI</title>
+    <title>Feuille de route pour les services auto-hébergés | Blog technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/en/infrastructure/a-roadmap-to-self-hosted-services.html" class="lang-toggle" aria-label="Changer de langue">
+                    <a href="/en/infrastructure/a-roadmap-to-self-hosted-services.html" class="lang-toggle" aria-label="Changer la langue">
                         <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -61,7 +61,7 @@
         <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
@@ -100,7 +100,6 @@
                 <div class="article-body">
                     <!-- 
 TEMPLATE - Press Alt+E to apply
-
 UPDATE THESE FIELDS:
 - title: "Your Title" (KEEP QUOTES)
 - date: "YYYY-MM-DD" (KEEP QUOTES)
@@ -122,17 +121,17 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="homelab-overview">Aperçu du Homelab</h1>
-<p>Vous gérez votre homelab en utilisant Proxmox avec des machines virtuelles (VMs) pour Ubuntu,
-Kali Linux et pfSense. Vos objectifs principaux incluent l'hébergement de vos propres services,
-l'automatisation des flux de travail et la connexion sécurisée de l'ensemble avec
+<h1 id="homelab-overview">Présentation du Homelab</h1>
+<p>Vous gérez votre homelab en utilisant Proxmox avec des machines virtuelles pour Ubuntu,
+Kali, et pfSense. Vos objectifs principaux incluent l'hébergement de vos propres services,
+l'automatisation des flux de travail, et la connexion sécurisée de l'ensemble avec
 Twingate.</p>
 <h1 id="obsidian-setup">Configuration d'Obsidian</h1>
 <ul>
 <li>Obsidian est auto-hébergé en utilisant CouchDB.</li>
 <li>Vous l'exécuterez sur la VM Ubuntu et vous vous y connecterez en utilisant
 <strong>Obsidian LiveSync</strong>.</li>
-<li>L'accès distant sécurisé est géré via <strong>Twingate</strong>.</li>
+<li>L'accès à distance sécurisé est géré via <strong>Twingate</strong>.</li>
 </ul>
 <h1 id="step-by-step-setup-plan">Plan de configuration étape par étape</h1>
 <h2 id="phase-1-server-preparation">Phase 1 : Préparation du serveur</h2>
@@ -173,7 +172,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="
 <code>http://&lt;ip&gt;:5984/_utils</code></p></li>
 <li><p>Connectez-vous avec vos identifiants et créez la base de données
 <strong>obsidian</strong>.</p></li>
-<li><p>Dans Obsidian, installez l'extension <em>Self-Hosted LiveSync</em> et
+<li><p>Dans Obsidian, installez le plugin <em>Self-Hosted LiveSync</em> et
 connectez-vous à CouchDB.</p></li>
 </ol>
 <h2 id="phase-3-install-and-configure-n8n">Phase 3 : Installation et
@@ -205,7 +204,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 avec n8n</h2>
 <ol type="1">
 <li>Créer un répertoire de sauvegarde : <code>/backups/obsidian</code></li>
-<li>Dans n8n, créer un nouveau workflow :
+<li>Dans n8n, créez un nouveau flux de travail (workflow) :
 <ul>
 <li><p><strong>Déclencheur :</strong> Nœud Cron (Hebdomadaire le dimanche)</p></li>
 <li><p><strong>Nœud de Commande :</strong></p>
@@ -215,15 +214,15 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 l'API Telegram ou Discord.</p></li>
 </ul></li>
 </ol>
-<h2 id="phase-5-remote-access-and-security">Phase 5 : Accès distant et
+<h2 id="phase-5-remote-access-and-security">Phase 5 : Accès à distance et
 sécurité</h2>
 <ol type="1">
-<li>Installer et lier votre serveur à votre compte Twingate.</li>
-<li>Accéder à vos tableaux de bord n8n et CouchDB à distance et de manière sécurisée.</li>
-<li>Configurer des tunnels HTTPS si nécessaire (étape optionnelle utilisant Pinggy ou
+<li>Installez et liez votre serveur à votre compte Twingate.</li>
+<li>Accédez à vos tableaux de bord n8n et CouchDB à distance de manière sécurisée.</li>
+<li>Configurez des tunnels HTTPS si nécessaire (étape optionnelle utilisant Pinggy ou
 Cloudflare Tunnel).</li>
 </ol>
-<h1 id="weekend-action-plan">Plan d'Action du Week-end</h1>
+<h1 id="weekend-action-plan">Plan d'action du week-end</h1>
 <h3 id="saturday">Samedi</h3>
 <ul>
 <li>Maintenance Proxmox et mises à jour Ubuntu.</li>
@@ -238,8 +237,7 @@ Cloudflare Tunnel).</li>
 </ul>
 <h1 id="end-goal">Objectif Final</h1>
 <p>D'ici lundi, vous aurez : - Un système de synchronisation Obsidian auto-hébergé
-(CouchDB) - Une automatisation n8n pour les sauvegardes hebdomadaires - Un flux de travail distant sécurisé
-utilisant Twingate —</p>
+(CouchDB) - Une automatisation n8n pour les sauvegardes hebdomadaires - Un flux de travail à distance sécurisé utilisant Twingate —</p>
                 </div>
 
                 <div class="article-navigation">
@@ -253,7 +251,7 @@ utilisant Twingate —</p>
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                    <p>Pentester en formation | Passionné de Cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
@@ -267,7 +265,7 @@ utilisant Twingate —</p>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connectez-vous</h4>
+                    <h4>Se connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -289,7 +287,7 @@ utilisant Twingate —</p>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>
 
