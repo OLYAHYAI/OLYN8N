@@ -81,7 +81,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="far fa-clock"></i>
-                        <span>5 min min read</span>
+                        <span>5 min read</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-folder"></i>
@@ -129,8 +129,8 @@ The workflow will:
 <ul>
 <li>CPU : Intel i5-8500T</li>
 <li>RAM : 16 Go</li>
-<li>Primary Disk : 512 GB SSD</li>
-<li>Secondary Disk : 250 GB HDD</li>
+<li>Primary Drive : SSD 512 Go</li>
+<li>Secondary Drive : HDD 250 Go</li>
 </ul></li>
 <li><strong>Proxmox Server IP Address</strong> : 10.10.10.254</li>
 </ul>
@@ -142,13 +142,13 @@ Proxmox Web Interface</h2>
 <li>Credentials : root
 <ul>
 <li>User : <code>root</code></li>
-<li>Domain : <code>pam</code></li>
+<li>Realm : <code>pam</code></li>
 <li>Password : set during installation</li>
 </ul></li>
 </ul>
 <hr />
 <h2 id="connexion-ethernet-entre-routeur-et-serveur">2. 🔌 Ethernet
-Connection Between Router and Server</h2>
+Connection between Router and Server</h2>
 <ul>
 <li>Direct connection via Ethernet cable</li>
 <li>Manual IP configuration :
@@ -157,23 +157,23 @@ Connection Between Router and Server</h2>
 <li>PC2 : <code>192.168.1.254</code></li>
 <li>Netmask : <code>255.255.255.0</code></li>
 </ul></li>
-<li>Objective : direct communication between the two machines</li>
+<li>Goal: direct communication between the two machines</li>
 </ul>
 <hr />
-<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Checking
-Wi-Fi using the Command Line</h2>
+<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Command Line
+Wi-Fi Verification</h2>
 <ul>
 <li>Commands used :
 <ul>
-<li><code>ip a</code> → network interface list</li>
+<li><code>ip a</code> → list network interfaces</li>
 <li><code>lspci | grep -i network</code> → detect network cards</li>
 <li><code>iw dev</code> → Wi-Fi interfaces</li>
 <li><code>lsusb</code> → USB devices (Wi-Fi dongle)</li>
 </ul></li>
 </ul>
 <hr />
-<h2 id="changement-dadresse-ip-du-serveur-proxmox">4. 🌐 Changing
-the Proxmox Server IP Address</h2>
+<h2 id="changement-dadresse-ip-du-serveur-proxmox">4. 🌐 Changing the
+Proxmox Server IP Address</h2>
 <ul>
 <li><p>File modified : <code>/etc/network/interfaces</code></p></li>
 <li><p>Configuration example :</p>
@@ -190,7 +190,7 @@ iface vmbr0 inet static
 </ul>
 <hr />
 <h2 id="utilisation-dune-image-iso-depuis-le-laptop">5. 📦 Using an
-ISO image from the laptop</h2>
+ISO Image from the Laptop</h2>
 <ul>
 <li>Methods :
 <ul>
@@ -199,11 +199,11 @@ ISO image from the laptop</h2>
 <li>SCP :
 <code>scp fichier.iso root@10.10.10.254:/var/lib/vz/template/iso/</code></li>
 </ul></li>
-<li>Objective : creating a VM with a customized ISO image</li>
+<li>Goal: create a VM with a customized ISO image</li>
 </ul>
 <hr />
-<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Choosing LLMs
-suitable for the machine</h2>
+<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Choosing LLMs suitable
+for the machine</h2>
 <ul>
 <li>Recommended models :
 <ul>
@@ -219,8 +219,8 @@ suitable for the machine</h2>
 </ul></li>
 </ul>
 <hr />
-<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installation of
-Docker + MCP + LLM</h2>
+<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installing Docker +
+MCP + LLM</h2>
 <ul>
 <li><p>Docker :</p>
 <div class="sourceCode" id="cb2"><pre
@@ -233,11 +233,11 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div></li>
 </ul>
 <hr />
-<h2 id="outils-de-prise-de-notes-recommandés">8. 📝 Recommended
-Note-Taking Tools</h2>
+<h2 id="outils-de-prise-de-notes-recommandés">8. 📝 Recommended Note-Taking
+Tools</h2>
 <ul>
 <li><strong>Obsidian</strong> : local, markdown, links between notes</li>
-<li><strong>Joplin</strong> : open-source, synchronizable</li>
+<li><strong>Joplin</strong> : open-source, syncable</li>
 <li><strong>Logseq / Trilium</strong> : Docker possible</li>
 <li><strong>Notion</strong> : cloud, project management</li>
 <li><strong>Markdown + Git</strong> : version control for technical
@@ -254,8 +254,8 @@ Network Management</h2>
 tools</li>
 </ul>
 <hr />
-<h2 id="surveillance-et-limitation-du-trafic-avec-pfsense">10. 📊
-Traffic Monitoring and Limiting with pfSense</h2>
+<h2 id="surveillance-et-limitation-du-trafic-avec-pfsense">10. 📊 Traffic
+Monitoring and Limiting with pfSense</h2>
 <ul>
 <li><strong>Monitoring</strong> :
 <ul>
@@ -271,8 +271,8 @@ Traffic Monitoring and Limiting with pfSense</h2>
 </ul></li>
 </ul>
 <hr />
-<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Using a Hard
-Disk Drive (250 GB HDD)</h2>
+<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Using a Hard Drive
+HDD (250 GB)</h2>
 <ul>
 <li><p><strong>Recommended usage</strong> :</p>
 <ul>
@@ -299,7 +299,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <h2 id="fin-de-session">🔚 End of Session</h2>
 <ul>
 <li>All steps are ready to be documented in Obsidian.</li>
-<li>Proxmox Server IP Address : <code>10.10.10.254</code></li>
+<li>Proxmox server IP address : <code>10.10.10.254</code></li>
 </ul>
                 </div>
 
