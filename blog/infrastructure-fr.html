@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Articles Automatisation & IA - Omar LYAHYAI | Déploiement MCP, automatisation des flux, intégration IA, outils de productivité">
-    <meta name="keywords" content="automatisation, IA, MCP, flux, n8n, productivité">
+    <meta name="description" content="Articles Infrastructure - Omar LYAHYAI | Proxmox VE, virtualisation, administration système, guides de configuration matériel">
+    <meta name="keywords" content="infrastructure, proxmox, virtualisation, administration système, homelab">
     <meta name="author" content="Omar LYAHYAI">
     
-    <title>Automatisation & IA - Blog Technique | Omar LYAHYAI</title>
+    <title>Infrastructure - Blog Technique | Omar LYAHYAI</title>
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/styles.css">
@@ -55,10 +55,10 @@
                 </ul>
                 
                 <div class="nav-actions">
-                    <a href="automation_ai.html" class="lang-toggle" aria-label="Switch language">
-                        <span class="lang-current">EN</span>
+                    <button class="lang-toggle" aria-label="Switch language">
+                        <span class="lang-current">FR</span>
                         <i class="fas fa-globe"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -70,12 +70,12 @@
         <section class="category-header" role="region" aria-label="Category introduction">
             <div class="container">
                 <div class="category-icon-large">
-                    <i class="fas fa-robot"></i>
+                    <i class="fas fa-server"></i>
                 </div>
-                <h1 class="section-title">Automatisation & IA</h1>
+                <h1 class="section-title">Infrastructure</h1>
                 <p class="category-description">
-                    Déploiement MCP, automatisation des flux, intégration IA et outils de productivité. 
-                    Découvrez comment tirer parti de l'intelligence artificielle et de l'automatisation pour améliorer votre expérience homelab.
+                    Proxmox VE, virtualisation, administration système et guides de configuration matériel. 
+                    Apprenez à construire et maintenir une infrastructure homelab robuste de A à Z.
                 </p>
                 <div class="category-stats-header">
                     <div class="stat-item">
@@ -83,12 +83,12 @@
                         <div class="stat-label">Articles</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Outils d'Automatisation</div>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Sujets Couvrts</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Exemples de Flux</div>
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Exemples de Code</div>
                     </div>
                 </div>
                 <!-- Language Filters -->
@@ -99,7 +99,7 @@
                 </div>
                 <div class="blog-search">
                     <div class="search-container">
-                        <input type="text" id="categorySearch" placeholder="Rechercher articles d'automatisation & IA..." class="search-input">
+                        <input type="text" id="categorySearch" placeholder="Rechercher articles d'infrastructure..." class="search-input">
                         <button class="search-btn">
                             <i class="fas fa-search"></i>
                         </button>
@@ -112,140 +112,135 @@
         <section class="category-articles" role="region" aria-label="Category articles">
             <div class="container">
                 <div class="category-articles-grid">
-                    <!-- French Article -->
-                    <article class="article-excerpt french-article" data-lang="fr">
-                        <div class="article-excerpt-header">
-                            <div>
-                                <h3>Mon Flux de Travail Alimenté par l'IA : Intégration de MCP, Docker et N8N pour Obsidian</h3>
-                                <div class="article-excerpt-date">25 octobre 2025</div>
-                                <span class="language-indicator fr">FR</span>
-                            </div>
-                        </div>
-                        <p>
-                            Comment j'ai automatisé mon flux de travail de documentation en utilisant des outils alimentés par l'IA, 
-                            la conteneurisation et l'automatisation des flux de travail pour une productivité améliorée.
-                        </p>
-                        <div class="blog-tags">
-                            <span class="tag">MCP</span>
-                            <span class="tag">N8N</span>
-                            <span class="tag">IA</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                        <a href="../fr/automation_ai/ai-powered-workflow-mcp-docker-n8n-obsidian.html" class="read-more-link">
-                            Lire Plus <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </article>
-                    
-                    <!-- French Article -->
-                    <article class="article-excerpt french-article" data-lang="fr">
-                        <div class="article-excerpt-header">
-                            <div>
-                                <h3>Guide de Configuration MCP : Configuration et Paramétrage YAML</h3>
-                                <div class="article-excerpt-date">23 octobre 2025</div>
-                                <span class="language-indicator fr">FR</span>
-                            </div>
-                        </div>
-                        <p>
-                            Guide complet pour configurer la plateforme Modulaire Copilot en utilisant des fichiers YAML 
-                            pour l'automatisation des flux de travail alimentés par l'IA.
-                        </p>
-                        <div class="blog-tags">
-                            <span class="tag">MCP</span>
-                            <span class="tag">YAML</span>
-                            <span class="tag">Configuration</span>
-                        </div>
-                        <a href="../fr/automation_ai/mcp-configuration-guide-yaml-setup.html" class="read-more-link">
-                            Lire Plus <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </article>
-                    
                     <!-- English Article -->
                     <article class="article-excerpt english-article" data-lang="en">
                         <div class="article-excerpt-header">
                             <div>
-                                <h3>MCP Configuration Guide: YAML Setup and Configuration</h3>
-                                <div class="article-excerpt-date">October 23, 2025</div>
+                                <h3>Building the Homelab Foundation: Proxmox VE Installation and Initial Configuration</h3>
+                                <div class="article-excerpt-date">October 22, 2025</div>
                                 <span class="language-indicator en">EN</span>
                             </div>
                         </div>
                         <p>
-                            Complete guide to configuring the Modular Copilot Platform using YAML files 
-                            for AI-powered workflow automation.
+                            Complete guide to setting up Proxmox VE for virtualization, including network configuration, 
+                            storage setup, and initial VM deployment. Learn how to create a solid foundation for your homelab.
                         </p>
                         <div class="blog-tags">
-                            <span class="tag">MCP</span>
-                            <span class="tag">YAML</span>
-                            <span class="tag">Configuration</span>
+                            <span class="tag">Proxmox</span>
+                            <span class="tag">Virtualization</span>
+                            <span class="tag">Homelab</span>
+                        </div>
+                        <a href="../en/infrastructure/building-homelab-foundation-proxmox.html" class="read-more-link">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <!-- French Article -->
+                    <article class="article-excerpt french-article" data-lang="fr">
+                        <div class="article-excerpt-header">
+                            <div>
+                                <h3>Configuration Lab Homelab : Proxmox et Réseau</h3>
+                                <div class="article-excerpt-date">October 22, 2025</div>
+                                <span class="language-indicator fr">FR</span>
+                            </div>
+                        </div>
+                        <p>
+                            Configuration Proxmox et pfSense. Session complète sur la mise en place de l'infrastructure de laboratoire 
+                            avec virtualisation et configuration réseau avancée.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">Proxmox</span>
+                            <span class="tag">pfSense</span>
+                            <span class="tag">Réseau</span>
                         </div>
                          <span class="coming-soon">Bientôt Disponible</span>
                     </article>
                     
-                    <!-- English Article -->
-                    <article class="article-excerpt english-article" data-lang="en">
+                    <!-- French Article -->
+                    <article class="article-excerpt french-article" data-lang="fr">
                         <div class="article-excerpt-header">
                             <div>
-                                <h3>My AI Companion: Deploying the Modular Copilot Platform (MCP) Server</h3>
+                                <h3>Déploiement d'un Lab Sécurisé : Kali Linux et pfSense</h3>
+                                <div class="article-excerpt-date">October 23, 2025</div>
+                                <span class="language-indicator fr">FR</span>
+                            </div>
+                        </div>
+                        <p>
+                            Building a Secure Lab: Kali Linux and pfSense Deployment. Guide complet pour créer un environnement 
+                            de test de sécurité isolé avec Kali Linux et pare-feu pfSense.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">Kali Linux</span>
+                            <span class="tag">pfSense</span>
+                            <span class="tag">Sécurité</span>
+                        </div>
+                         <a href="../articles/infrastructure/building-a-secure-lab-kali-linux-and-pfsense-deployment.html" class="read-more-link">
+                             Lire Plus <i class="fas fa-arrow-right"></i>
+                         </a>
+                    </article>
+                    
+                    <!-- French Article -->
+                    <article class="article-excerpt french-article" data-lang="fr">
+                        <div class="article-excerpt-header">
+                            <div>
+                                <h3>Mini Processus : Étendre une Partition après Resize Proxmox</h3>
                                 <div class="article-excerpt-date">October 20, 2025</div>
-                                <span class="language-indicator en">EN</span>
+                                <span class="language-indicator fr">FR</span>
                             </div>
                         </div>
                         <p>
-                            Step-by-step deployment guide for MCP server, including Docker setup, 
-                            configuration, and integration with existing workflows.
+                            Growing Pains: Extending the Disk of My Ubuntu VM on Proxmox. Guide complet pour étendre l'espace 
+                            disque sur les VM Ubuntu dans Proxmox, incluant la configuration VM et l'expansion du système de fichiers.
                         </p>
                         <div class="blog-tags">
-                            <span class="tag">MCP</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Deployment</span>
+                            <span class="tag">Proxmox</span>
+                            <span class="tag">Ubuntu</span>
+                            <span class="tag">Stockage</span>
                         </div>
-                        <a href="../en/automation_ai/multi-agent-ai-collaboration-building-portfolio-website.html" class="read-more-link">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
+                         <span class="coming-soon">Bientôt Disponible</span>
                     </article>
                     
-                    <!-- English Article -->
-                    <article class="article-excerpt english-article" data-lang="en">
+                    <!-- French Article -->
+                    <article class="article-excerpt french-article" data-lang="fr">
                         <div class="article-excerpt-header">
                             <div>
-                                <h3>The Quest for Fluid Notes: My Obsidian LiveSync Configuration and Triumphs</h3>
-                                <div class="article-excerpt-date">October 18, 2025</div>
-                                <span class="language-indicator en">EN</span>
+                                <h3>Journal Technique – 2025-10-22</h3>
+                                <div class="article-excerpt-date">October 22, 2025</div>
+                                <span class="language-indicator fr">FR</span>
                             </div>
                         </div>
                         <p>
-                            Complete guide to setting up Obsidian LiveSync for real-time note synchronization 
-                            across multiple devices with conflict resolution.
+                            My AI and Kali Adventures: LLM Testing and Proxmox Debugging. Documentation de mon parcours de test 
+                            de Large Language Models sur matériel local tout en dépannant les problèmes de virtualisation Proxmox.
                         </p>
                         <div class="blog-tags">
-                            <span class="tag">Obsidian</span>
-                            <span class="tag">LiveSync</span>
-                            <span class="tag">Synchronization</span>
+                            <span class="tag">IA</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">Proxmox</span>
+                            <span class="tag">Kali</span>
                         </div>
-                        <a href="../en/automation_ai/quest-fluid-notes-obsidian-livesync-configuration.html" class="read-more-link">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
+                         <span class="coming-soon">Bientôt Disponible</span>
                     </article>
                     
-                    <!-- English Article -->
-                    <article class="article-excerpt english-article" data-lang="en">
+                    <!-- French Article -->
+                    <article class="article-excerpt french-article" data-lang="fr">
                         <div class="article-excerpt-header">
                             <div>
-                                <h3>My AI-Powered Workflow: Integration of MCP, Docker and N8N for Obsidian</h3>
-                                <div class="article-excerpt-date">October 25, 2025</div>
-                                <span class="language-indicator en">EN</span>
+                                <h3>Configuration Proxmox et pfSense</h3>
+                                <div class="article-excerpt-date">October 15, 2025</div>
+                                <span class="language-indicator fr">FR</span>
                             </div>
                         </div>
                         <p>
-                            How I automated my documentation workflow using AI-powered tools, containerization, 
-                            and workflow automation for enhanced productivity.
+                            My Network Rescue: Getting Proxmox and pfSense Back Online. Guide de dépannage pour récupérer 
+                            l'infrastructure réseau lorsque Proxmox et pfSense perdent leur connectivité.
                         </p>
                         <div class="blog-tags">
-                            <span class="tag">MCP</span>
-                            <span class="tag">N8N</span>
-                            <span class="tag">AI</span>
-                            <span class="tag">Docker</span>
+                            <span class="tag">Proxmox</span>
+                            <span class="tag">pfSense</span>
+                            <span class="tag">Dépannage</span>
                         </div>
-                         <span class="coming-soon">Coming Soon</span>
+                         <span class="coming-soon">Bientôt Disponible</span>
                     </article>
                 </div>
             </div>
@@ -254,10 +249,26 @@
         <!-- Related Categories -->
         <section class="related-categories section" role="region" aria-label="Related categories">
             <div class="container">
-                <h2 class="section-title">Catéries Connexes</h2>
+                <h2 class="section-title">Catégories Connexes</h2>
                 <p class="section-subtitle">Explorez plus de contenu technique</p>
                 
                 <div class="categories-grid">
+                    <article class="category-card" data-category="network_security">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Sécurité Réseau</h3>
+                            <p>Configuration pare-feu, SSL/TLS, reverse proxies et meilleures pratiques de sécurité.</p>
+                            <div class="category-stats">
+                                <span class="article-count">4 articles</span>
+                                <span class="category-link">
+                                    <a href="network_security-fr.html">Voir Tout <i class="fas fa-arrow-right"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    
                     <article class="category-card" data-category="docker_services">
                         <div class="category-icon">
                             <i class="fab fa-docker"></i>
@@ -269,22 +280,6 @@
                                 <span class="article-count">3 articles</span>
                                 <span class="category-link">
                                     <a href="docker_services-fr.html">Voir Tout <i class="fas fa-arrow-right"></i></a>
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="category-card" data-category="reference">
-                        <div class="category-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="category-content">
-                            <h3>Référence</h3>
-                            <p>URLs essentielles, invites de configuration, feuilles de route et guides de référence rapide.</p>
-                            <div class="category-stats">
-                                <span class="article-count">3 articles</span>
-                                <span class="category-link">
-                                    <a href="reference-fr.html">Voir Tout <i class="fas fa-arrow-right"></i></a>
                                 </span>
                             </div>
                         </div>
