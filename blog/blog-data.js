@@ -1,26 +1,26 @@
 const blogData = {
     "articles": [
         {
-            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "docker_services",
             "date": "2025-11-21",
             "tags": [
-                "automation_ai"
+                "docker_services"
             ],
-            "url": "../en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html"
+            "url": "../en/docker_services/docker-networking-troubleshooting-container-communication.html"
         },
         {
-            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
             "excerpt": "",
-            "category": "automation_ai",
+            "category": "docker_services",
             "date": "2025-11-21",
             "tags": [
-                "automation_ai"
+                "docker_services"
             ],
-            "url": "../fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html"
+            "url": "../fr/docker_services/docker-networking-troubleshooting-container-communication.html"
         }
     ],
     "categories": {
