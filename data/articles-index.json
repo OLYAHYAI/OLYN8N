@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-21T01:16:05.928Z",
+  "lastUpdated": "2025-11-21T01:25:14.297Z",
   "totalArticles": 2,
   "categories": {
     "infrastructure": {
@@ -17,52 +17,10 @@
       "description": "AI workflows automation scripts MCP integration",
       "icon": "fas fa-robot",
       "articles": {
-        "en": [
-          {
-            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "url": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-            "filePath": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": true,
-            "status": "published"
-          }
-        ],
-        "fr": [
-          {
-            "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
-            "description": "",
-            "excerpt": "",
-            "category": "automation_ai",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "automation_ai"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-            "url": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-            "filePath": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          }
-        ]
+        "en": [],
+        "fr": []
       },
-      "total": 2
+      "total": 0
     },
     "network_security": {
       "name": "Network Security",
@@ -99,10 +57,52 @@
       "description": "Container orchestration Docker Compose",
       "icon": "fab fa-docker",
       "articles": {
-        "en": [],
-        "fr": []
+        "en": [
+          {
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
+            "description": "",
+            "excerpt": "",
+            "category": "docker_services",
+            "language": "en",
+            "date": "2025-11-21",
+            "tags": [
+              "docker_services"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": true,
+            "status": "published"
+          }
+        ],
+        "fr": [
+          {
+            "id": "docker-networking-troubleshooting-container-communication",
+            "title": "Docker Networking Troubleshooting Container Communication",
+            "description": "",
+            "excerpt": "",
+            "category": "docker_services",
+            "language": "fr",
+            "date": "2025-11-21",
+            "tags": [
+              "docker_services"
+            ],
+            "author": "Omar LYAHYAI",
+            "slug": "docker-networking-troubleshooting-container-communication",
+            "url": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
+            "filePath": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
+            "wordCount": 1000,
+            "readingTime": 5,
+            "featured": false,
+            "status": "published"
+          }
+        ]
       },
-      "total": 0
+      "total": 2
     }
   },
   "languages": {
@@ -111,40 +111,40 @@
   },
   "articles": [
     {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "docker_services",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "docker_services",
       "language": "fr",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -162,9 +162,9 @@
     },
     "automation_ai": {
       "name": "Automation & AI",
-      "total": 2,
-      "en": 1,
-      "fr": 1,
+      "total": 0,
+      "en": 0,
+      "fr": 0,
       "description": "AI workflows automation scripts MCP integration",
       "icon": "fas fa-robot"
     },
@@ -194,49 +194,49 @@
     },
     "docker_services": {
       "name": "Docker Services",
-      "total": 0,
-      "en": 0,
-      "fr": 0,
+      "total": 2,
+      "en": 1,
+      "fr": 1,
       "description": "Container orchestration Docker Compose",
       "icon": "fab fa-docker"
     }
   },
   "recentArticles": [
     {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "docker_services",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
       "status": "published"
     },
     {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "docker_services",
       "language": "fr",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -245,20 +245,20 @@
   ],
   "featuredArticles": [
     {
-      "id": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "title": "Ai Kali Adventures Llm Testing Proxmox Debugging",
+      "id": "docker-networking-troubleshooting-container-communication",
+      "title": "Docker Networking Troubleshooting Container Communication",
       "description": "",
       "excerpt": "",
-      "category": "automation_ai",
+      "category": "docker_services",
       "language": "en",
       "date": "2025-11-21",
       "tags": [
-        "automation_ai"
+        "docker_services"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "ai-kali-adventures-llm-testing-proxmox-debugging",
-      "url": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "filePath": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
+      "slug": "docker-networking-troubleshooting-container-communication",
+      "url": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "filePath": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": true,
@@ -267,8 +267,8 @@
   ],
   "hrefMappings": {
     "articleHrefs": {
-      "en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging": "/en/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html",
-      "fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging": "/fr/automation_ai/ai-kali-adventures-llm-testing-proxmox-debugging.html"
+      "en/docker_services/docker-networking-troubleshooting-container-communication": "/en/docker_services/docker-networking-troubleshooting-container-communication.html",
+      "fr/docker_services/docker-networking-troubleshooting-container-communication": "/fr/docker_services/docker-networking-troubleshooting-container-communication.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -298,6 +298,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-21T01:16:05.929Z",
+  "generatedAt": "2025-11-21T01:25:14.298Z",
   "version": "1.0"
 }
