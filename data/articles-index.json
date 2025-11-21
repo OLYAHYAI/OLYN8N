@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-11-21T01:59:07.633Z",
-  "totalArticles": 10,
+  "lastUpdated": "2025-11-21T02:08:04.418Z",
+  "totalArticles": 8,
   "categories": {
     "infrastructure": {
       "name": "Infrastructure",
@@ -29,26 +29,6 @@
             "status": "published"
           },
           {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "en",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-            "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
             "id": "vm-disk-expansion-guide-proxmox-linux",
             "title": "Vm Disk Expansion Guide Proxmox Linux",
             "description": "",
@@ -69,8 +49,8 @@
             "status": "published"
           },
           {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
+            "id": "roadmap-infrastructure",
+            "title": "Roadmap Infrastructure",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -80,17 +60,17 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "a-roadmap-to-self-hosted-services",
-            "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-            "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "slug": "roadmap-infrastructure",
+            "url": "/en/infrastructure/roadmap-infrastructure.html",
+            "filePath": "/en/infrastructure/roadmap-infrastructure.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "proxmox-ve-initial-setup-session-notes",
+            "title": "Proxmox Ve Initial Setup Session Notes",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -100,9 +80,9 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-            "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "slug": "proxmox-ve-initial-setup-session-notes",
+            "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+            "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -131,26 +111,6 @@
             "status": "published"
           },
           {
-            "id": "building-secure-lab-kali-linux-pfsense-deployment",
-            "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-            "description": "",
-            "excerpt": "",
-            "category": "infrastructure",
-            "language": "fr",
-            "date": "2025-11-21",
-            "tags": [
-              "infrastructure"
-            ],
-            "author": "Omar LYAHYAI",
-            "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-            "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-            "wordCount": 1000,
-            "readingTime": 5,
-            "featured": false,
-            "status": "published"
-          },
-          {
             "id": "vm-disk-expansion-guide-proxmox-linux",
             "title": "Vm Disk Expansion Guide Proxmox Linux",
             "description": "",
@@ -171,8 +131,8 @@
             "status": "published"
           },
           {
-            "id": "a-roadmap-to-self-hosted-services",
-            "title": "A Roadmap To Self Hosted Services",
+            "id": "roadmap-infrastructure",
+            "title": "Roadmap Infrastructure",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -182,17 +142,17 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "a-roadmap-to-self-hosted-services",
-            "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-            "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+            "slug": "roadmap-infrastructure",
+            "url": "/fr/infrastructure/roadmap-infrastructure.html",
+            "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
             "status": "published"
           },
           {
-            "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+            "id": "proxmox-ve-initial-setup-session-notes",
+            "title": "Proxmox Ve Initial Setup Session Notes",
             "description": "",
             "excerpt": "",
             "category": "infrastructure",
@@ -202,9 +162,9 @@
               "infrastructure"
             ],
             "author": "Omar LYAHYAI",
-            "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-            "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-            "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+            "slug": "proxmox-ve-initial-setup-session-notes",
+            "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+            "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
             "wordCount": 1000,
             "readingTime": 5,
             "featured": false,
@@ -212,7 +172,7 @@
           }
         ]
       },
-      "total": 10
+      "total": 8
     },
     "automation_ai": {
       "name": "Automation & AI",
@@ -266,8 +226,8 @@
     }
   },
   "languages": {
-    "en": 5,
-    "fr": 5
+    "en": 4,
+    "fr": 4
   },
   "articles": [
     {
@@ -305,46 +265,6 @@
       "slug": "proxmox-vm-maintenance-routine-complete-guide",
       "url": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "filePath": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -391,28 +311,8 @@
       "status": "published"
     },
     {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
+      "id": "roadmap-infrastructure",
+      "title": "Roadmap Infrastructure",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -422,37 +322,17 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "roadmap-infrastructure",
+      "url": "/fr/infrastructure/roadmap-infrastructure.html",
+      "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "id": "roadmap-infrastructure",
+      "title": "Roadmap Infrastructure",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -462,9 +342,49 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "slug": "roadmap-infrastructure",
+      "url": "/en/infrastructure/roadmap-infrastructure.html",
+      "filePath": "/en/infrastructure/roadmap-infrastructure.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -474,9 +394,9 @@
   "categoryStats": {
     "infrastructure": {
       "name": "Infrastructure",
-      "total": 10,
-      "en": 5,
-      "fr": 5,
+      "total": 8,
+      "en": 4,
+      "fr": 4,
       "description": "Proxmox VE virtualization system administration",
       "icon": "fas fa-server"
     },
@@ -563,46 +483,6 @@
       "status": "published"
     },
     {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "building-secure-lab-kali-linux-pfsense-deployment",
-      "title": "Building Secure Lab Kali Linux Pfsense Deployment",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "building-secure-lab-kali-linux-pfsense-deployment",
-      "url": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "filePath": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
       "id": "vm-disk-expansion-guide-proxmox-linux",
       "title": "Vm Disk Expansion Guide Proxmox Linux",
       "description": "",
@@ -643,28 +523,8 @@
       "status": "published"
     },
     {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "en",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "a-roadmap-to-self-hosted-services",
-      "title": "A Roadmap To Self Hosted Services",
+      "id": "roadmap-infrastructure",
+      "title": "Roadmap Infrastructure",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -674,37 +534,17 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "a-roadmap-to-self-hosted-services",
-      "url": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "filePath": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
+      "slug": "roadmap-infrastructure",
+      "url": "/fr/infrastructure/roadmap-infrastructure.html",
+      "filePath": "/fr/infrastructure/roadmap-infrastructure.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
       "status": "published"
     },
     {
-      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
-      "description": "",
-      "excerpt": "",
-      "category": "infrastructure",
-      "language": "fr",
-      "date": "2025-11-21",
-      "tags": [
-        "infrastructure"
-      ],
-      "author": "Omar LYAHYAI",
-      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "url": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "filePath": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "wordCount": 1000,
-      "readingTime": 5,
-      "featured": false,
-      "status": "published"
-    },
-    {
-      "id": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "title": "Partie 1 – Installation Et Configuration De Pfsense Sur Zotac Zbox Ci337 Nano",
+      "id": "roadmap-infrastructure",
+      "title": "Roadmap Infrastructure",
       "description": "",
       "excerpt": "",
       "category": "infrastructure",
@@ -714,9 +554,49 @@
         "infrastructure"
       ],
       "author": "Omar LYAHYAI",
-      "slug": "partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano",
-      "url": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "filePath": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
+      "slug": "roadmap-infrastructure",
+      "url": "/en/infrastructure/roadmap-infrastructure.html",
+      "filePath": "/en/infrastructure/roadmap-infrastructure.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "en",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "wordCount": 1000,
+      "readingTime": 5,
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "proxmox-ve-initial-setup-session-notes",
+      "title": "Proxmox Ve Initial Setup Session Notes",
+      "description": "",
+      "excerpt": "",
+      "category": "infrastructure",
+      "language": "fr",
+      "date": "2025-11-21",
+      "tags": [
+        "infrastructure"
+      ],
+      "author": "Omar LYAHYAI",
+      "slug": "proxmox-ve-initial-setup-session-notes",
+      "url": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "filePath": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html",
       "wordCount": 1000,
       "readingTime": 5,
       "featured": false,
@@ -749,14 +629,12 @@
     "articleHrefs": {
       "en/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/en/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
       "fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide": "/fr/infrastructure/proxmox-vm-maintenance-routine-complete-guide.html",
-      "en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/en/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
-      "fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment": "/fr/infrastructure/building-secure-lab-kali-linux-pfsense-deployment.html",
       "en/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/en/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
       "fr/infrastructure/vm-disk-expansion-guide-proxmox-linux": "/fr/infrastructure/vm-disk-expansion-guide-proxmox-linux.html",
-      "en/infrastructure/a-roadmap-to-self-hosted-services": "/en/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "fr/infrastructure/a-roadmap-to-self-hosted-services": "/fr/infrastructure/a-roadmap-to-self-hosted-services.html",
-      "fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/fr/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html",
-      "en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano": "/en/infrastructure/partie-1-installation-et-configuration-de-pfsense-sur-zotac-zbox-ci337-nano.html"
+      "fr/infrastructure/roadmap-infrastructure": "/fr/infrastructure/roadmap-infrastructure.html",
+      "en/infrastructure/roadmap-infrastructure": "/en/infrastructure/roadmap-infrastructure.html",
+      "en/infrastructure/proxmox-ve-initial-setup-session-notes": "/en/infrastructure/proxmox-ve-initial-setup-session-notes.html",
+      "fr/infrastructure/proxmox-ve-initial-setup-session-notes": "/fr/infrastructure/proxmox-ve-initial-setup-session-notes.html"
     },
     "categoryHrefs": {
       "infrastructure": {
@@ -786,6 +664,6 @@
     },
     "languageSwitching": {}
   },
-  "generatedAt": "2025-11-21T01:59:07.635Z",
+  "generatedAt": "2025-11-21T02:08:04.420Z",
   "version": "1.0"
 }
