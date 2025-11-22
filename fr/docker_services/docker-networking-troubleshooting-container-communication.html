@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dépannage réseau Docker : communication des conteneurs - Tutoriel et guide technique">
+    <meta name="description" content="Dépannage réseau Docker : Communication entre conteneurs - Tutoriel et guide technique">
     <meta name="keywords" content="homelab">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Dépannage réseau Docker : communication des conteneurs | Blog Technique d'Omar LYAHYAI</title>
+    <title>Dépannage Réseau Docker : Communication Entre Conteneurs | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Navigation principale">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Afficher/Masquer la navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/en/docker_services/docker-networking-troubleshooting-container-communication.html" class="lang-toggle" aria-label="Changer la langue">
+                    <a href="/docker_services/docker-networking-troubleshooting-container-communication.html" class="lang-toggle" aria-label="Changer la langue">
                         <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/docker_services.html">Services Docker</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Dépannage réseau Docker : communication des conteneurs</span>
+                        <span>Dépannage Réseau Docker : Communication Entre Conteneurs</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Dépannage réseau Docker : communication des conteneurs</h1>
+                <h1 class="article-title">Dépannage Réseau Docker : Communication Entre Conteneurs</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -124,24 +124,22 @@ The workflow will:
 -->
 <h1
 id="docker-networking-troubleshooting-container-communication-and-port-conflicts">Dépannage
-réseau Docker : communication des conteneurs et conflits de
-ports</h1>
-<h2 id="common-docker-networking-challenges">Défis courants du réseau
+Réseau Docker : Communication Entre Conteneurs et Conflits de Ports</h1>
+<h2 id="common-docker-networking-challenges">Défis Courants du Réseau
 Docker</h2>
-<p>Lors du déploiement de conteneurs Docker dans un environnement homelab,
-les problèmes réseau figurent parmi les difficultés les plus fréquemment
-rencontrées. Ce guide présente des approches de dépannage systématiques
-pour la communication des conteneurs, les conflits de ports et les
-permissions des volumes.</p>
-<h2 id="key-takeaways">Points Clés à Retenir</h2>
-<p>Les problèmes réseau Docker se répartissent généralement en trois
-catégories : 1.
-<strong>Isolation Réseau</strong> - Les conteneurs sur des réseaux
-différents ne peuvent pas communiquer 2. <strong>Conflits de
-Ports</strong> - Plusieurs services tentent d'utiliser les mêmes ports
-3. <strong>Problèmes de Permissions</strong> - Montages de volumes avec
-propriété incorrecte</p>
-<p>Tous sont facilement résolus grâce à une configuration appropriée et
+<p>Lors du déploiement de conteneurs Docker dans un environnement
+homelab, les problèmes de réseau comptent parmi les difficultés les
+plus fréquemment rencontrées. Ce guide couvre des approches de
+dépannage systématiques pour la communication entre conteneurs, les
+conflits de ports et les permissions de volumes.</p>
+<h2 id="key-takeaways">Points Clés</h2>
+<p>Les problèmes de réseau Docker se répartissent généralement en
+trois catégories : 1. <strong>Isolation du Réseau</strong> - Les
+conteneurs sur des réseaux différents ne peuvent pas communiquer 2.
+<strong>Conflits de Ports</strong> - Plusieurs services tentent
+d'utiliser les mêmes ports 3. <strong>Problèmes de Permissions</strong>
+- Montages de volumes avec une propriété (ownership) incorrecte</p>
+<p>Tous sont facilement résolus avec une configuration appropriée et
 des commandes de diagnostic.</p>
 <p><em>Pour un guide de dépannage complet avec exemples et solutions,
 consultez la documentation complète.</em></p>
@@ -172,7 +170,7 @@ consultez la documentation complète.</em></p>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Se Connecter</h4>
+                    <h4>Connexion</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -194,7 +192,7 @@ consultez la documentation complète.</em></p>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Retour en haut">
+    <button class="back-to-top" aria-label="Retour en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 
