@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tracer mon parcours Homelab : une feuille de route vers des services auto-hébergés - Tutoriel et guide technique">
+    <meta name="description" content="Maîtrisez votre homelab avec Proxmox, pfSense, et l'automatisation auto-hébergée (n8n). Mettez en œuvre une sécurité zéro-confiance avec Twingate.">
     <meta name="keywords" content="homelab">
-    <meta name="author" content="Omar LYAHYAI">
+    <meta name="author" content="OLYAHYAI">
 
-    <title>Tracer mon parcours Homelab : une feuille de route vers des services auto-hébergés | Blog Technique d'Omar LYAHYAI</title>
+    <title>Feuille de Route de Mon Homelab : Services Auto-Hébergés | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -25,7 +25,7 @@
     <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -34,13 +34,13 @@
                     </a>
                 </div>
 
-                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span class="hamburger"></span>
                 </button>
 
                 <ul class="nav-menu">
                     <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
-                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À Propos</a></li>
                     <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
                     <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
                     <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html" class="lang-toggle" aria-label="Changer de langue">
-                        <span class="lang-current">FR</span>
+                    <a href="/en/reference/tracing-my-homelab-journey-roadmap-self-hosted-services.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -58,30 +58,30 @@
     </header>
 
     <main id="main-content">
-        <section class="article-header" role="region" aria-label="En-tête de l'article">
+        <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/reference.html">Référence</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Tracer mon parcours Homelab : une feuille de route vers des services auto-hébergés</span>
+                        <span>Feuille de Route de Mon Homelab : Services Auto-Hébergés</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Tracer mon parcours Homelab : une feuille de route vers des services auto-hébergés</h1>
+                <h1 class="article-title">Feuille de Route de Mon Homelab : Services Auto-Hébergés</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
                         <i class="far fa-calendar"></i>
-                        <span>2025-10-24</span>
+                        <span>2025-11-19</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="far fa-clock"></i>
-                        <span>Lecture de 7 min</span>
+                        <span>5 min de lecture</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-folder"></i>
@@ -98,40 +98,64 @@
         <section class="article-content" role="region" aria-label="Article content">
             <div class="container">
                 <div class="article-body">
-                    <h1 id="homelab-overview">Aperçu du Homelab</h1>
-<p>Vous gérez votre homelab en utilisant Proxmox avec des machines virtuelles pour Ubuntu,
-Kali, et pfSense. Vos objectifs principaux incluent l'hébergement de vos propres services,
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1 id="homelab-overview">Aperçu du Homelab</h1>
+<p>Vous gérez votre homelab en utilisant Proxmox avec des machines virtuelles (VM) pour Ubuntu,
+Kali Linux et pfSense. Vos objectifs principaux incluent l'hébergement de vos propres services,
 l'automatisation des flux de travail, et la connexion sécurisée de l'ensemble avec
 Twingate.</p>
-<h2 id="infrastructure-components">Composants de l'infrastructure</h2>
+<h2 id="infrastructure-components">Composants d'Infrastructure</h2>
 <h3 id="proxmox-ve-hypervisor">Proxmox VE (Hyperviseur)</h3>
 <ul>
-<li><strong>Objectif</strong>: Plateforme de virtualisation pour tous
-les services</li>
-<li><strong>Matériel</strong>: Serveur dédié ou station de travail
+<li><strong>Objectif</strong> : Plateforme de virtualisation pour tous les
+services</li>
+<li><strong>Matériel</strong> : Serveur dédié ou station de travail
 puissante</li>
-<li><strong>VMs Hébergées</strong>:
+<li><strong>VMs Hébergées</strong> :
 <ul>
 <li>Ubuntu Server (services principaux)</li>
 <li>Kali Linux (tests d'intrusion)</li>
 <li>pfSense (pare-feu et routage)</li>
 </ul></li>
 </ul>
-<h3 id="ubuntu-vm-services-host">VM Ubuntu (Hôte des services)</h3>
+<h3 id="ubuntu-vm-services-host">VM Ubuntu (Hôte des Services)</h3>
 <ul>
-<li><strong>Rôle</strong>: Serveur d'applications principal</li>
-<li><strong>Services</strong>:
+<li><strong>Rôle</strong> : Serveur d'applications principal</li>
+<li><strong>Services</strong> :
 <ul>
 <li>Synchronisation Obsidian (CouchDB)</li>
 <li>Plateforme d'automatisation N8N</li>
 <li>Conteneurs Docker</li>
-<li>Serveurs de base de données</li>
+<li>Serveurs de bases de données</li>
 </ul></li>
 </ul>
 <h3 id="pfsense-vm-network-security">VM pfSense (Sécurité Réseau)</h3>
 <ul>
-<li><strong>Rôle</strong>: Pare-feu et passerelle réseau</li>
-<li><strong>Fonctionnalités</strong>:
+<li><strong>Rôle</strong> : Pare-feu et passerelle réseau</li>
+<li><strong>Fonctionnalités</strong> :
 <ul>
 <li>Gestion des VLAN</li>
 <li>Serveur VPN</li>
@@ -139,32 +163,30 @@ puissante</li>
 <li>Surveillance du trafic</li>
 </ul></li>
 </ul>
-<h3 id="twingate-secure-remote-access">Twingate (Accès distant
-sécurisé)</h3>
+<h3 id="twingate-secure-remote-access">Twingate (Accès Distant
+Sécurisé)</h3>
 <ul>
-<li><strong>Objectif</strong>: Accès réseau Zero-Trust</li>
-<li><strong>Avantages</strong>: Accès distant sécurisé sans exposition de
+<li><strong>Objectif</strong> : Accès réseau zéro-confiance (Zero-trust)</li>
+<li><strong>Avantages</strong> : Accès distant sécurisé sans exposition des
 ports</li>
 </ul>
 <h2 id="obsidian-setup">Configuration d'Obsidian</h2>
 <h3 id="self-hosted-sync-solution">Solution de Synchronisation Auto-Hébergée</h3>
 <ul>
-<li>Obsidian est auto-hébergé à l'aide de CouchDB</li>
+<li>Obsidian est auto-hébergé en utilisant CouchDB</li>
 <li>Fonctionne sur la VM Ubuntu</li>
-<li>Connecté en utilisant le plugin <strong>Obsidian LiveSync</strong></li>
-<li>Accès distant sécurisé géré via <strong>Twingate</strong></li>
+<li>Connecté via le plugin <strong>Obsidian LiveSync</strong></li>
+<li>Accès distant sécurisé géré par <strong>Twingate</strong></li>
 </ul>
 <h3 id="why-self-host-obsidian-sync">Pourquoi auto-héberger la synchronisation Obsidian ?</h3>
 <ol type="1">
-<li><strong>Souveraineté des Données</strong>: Contrôle total sur vos notes</li>
-<li><strong>Confidentialité</strong>: Aucun accès tiers aux informations
-sensibles</li>
-<li><strong>Coût</strong>: Alternative gratuite à l'abonnement Obsidian Sync</li>
-<li><strong>Apprentissage</strong>: Expérience pratique de la gestion de bases
-de données</li>
+<li><strong>Souveraineté des Données</strong> : Contrôle total sur vos notes</li>
+<li><strong>Confidentialité</strong> : Aucun accès tiers aux informations sensibles</li>
+<li><strong>Coût</strong> : Alternative gratuite à l'abonnement Obsidian Sync</li>
+<li><strong>Apprentissage</strong> : Expérience pratique de la gestion de base de données</li>
 </ol>
-<h2 id="step-by-step-setup-plan">Plan de configuration étape par étape</h2>
-<h3 id="phase-1-server-preparation">Phase 1 : Préparation du serveur</h3>
+<h2 id="step-by-step-setup-plan">Plan de Configuration Étape par Étape</h2>
+<h3 id="phase-1-server-preparation">Phase 1 : Préparation du Serveur</h3>
 <h4 id="update-and-secure-ubuntu-vm">1. Mettre à jour et sécuriser la VM Ubuntu</h4>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># System updates</span></span>
@@ -195,14 +217,14 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify installation</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> <span class="at">--version</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> <span class="at">--version</span></span></code></pre></div>
-<h4 id="create-service-directories">3. Créer les répertoires de services</h4>
+<h4 id="create-service-directories">3. Créer les Répertoires de Services</h4>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create organized directory structure</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/services/<span class="dt">{obsidian-sync</span><span class="op">,</span><span class="dt">n8n</span><span class="op">,</span><span class="dt">backups}</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/services</span></code></pre></div>
-<h3 id="phase-2-deploy-couchdb-for-obsidian-sync">Phase 2 : Déployer
-CouchDB pour la synchronisation Obsidian</h3>
-<h4 id="create-docker-compose-configuration">1. Créer la configuration Docker Compose</h4>
+<h3 id="phase-2-deploy-couchdb-for-obsidian-sync">Phase 2 : Déploiement
+de CouchDB pour la Synchronisation Obsidian</h3>
+<h4 id="create-docker-compose-configuration">1. Créer la Configuration Docker Compose</h4>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/services/obsidian-sync</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> docker-compose.yml</span></code></pre></div>
@@ -240,9 +262,9 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <ol type="1">
 <li>Ouvrir le tableau de bord CouchDB :
 <code>http://&lt;ubuntu-vm-ip&gt;:5984/_utils</code></li>
-<li>Connectez-vous avec les identifiants de docker-compose.yml</li>
+<li>Se connecter avec les identifiants de docker-compose.yml</li>
 <li>Créer une base de données nommée <strong>obsidian</strong></li>
-<li>Activer CORS si l'accès se fait depuis différentes origines</li>
+<li>Activer CORS si l'accès se fait depuis des origines différentes</li>
 </ol>
 <h4 id="connect-obsidian-desktop">4. Connecter l'application de bureau Obsidian</h4>
 <ol type="1">
@@ -250,16 +272,17 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 Obsidian</li>
 <li>Configurer les paramètres du plugin :
 <ul>
-<li><strong>Remote Database URL</strong>:
+<li><strong>URL de la base de données distante</strong> :
 <code>http://&lt;ubuntu-vm-ip&gt;:5984/obsidian</code></li>
-<li><strong>Username</strong>: <code>admin</code></li>
-<li><strong>Password</strong>: Votre mot de passe CouchDB</li>
+<li><strong>Nom d'utilisateur</strong> : <code>admin</code></li>
+<li><strong>Mot de passe</strong> : Votre mot de passe CouchDB</li>
 </ul></li>
 <li>Initialiser la synchronisation et tester</li>
 </ol>
-<h3 id="phase-3-install-and-configure-n8n">Phase 3 : Installer et
-configurer N8N</h3>
-<h4 id="create-n8n-directory-and-configuration">1. Créer le répertoire et la configuration N8N</h4>
+<h3 id="phase-3-install-and-configure-n8n">Phase 3 : Installation et
+Configuration de N8N</h3>
+<h4 id="create-n8n-directory-and-configuration">1. Créer le Répertoire N8N
+et la Configuration</h4>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/services/n8n</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> docker-compose.yml</span></code></pre></div>
@@ -296,30 +319,30 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check status</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs <span class="at">-f</span> n8n-automation</span></code></pre></div>
-<h4 id="access-n8n-interface">3. Accéder à l'interface N8N</h4>
+<h4 id="access-n8n-interface">3. Accéder à l'Interface N8N</h4>
 <ul>
 <li>Naviguer vers : <code>http://&lt;ubuntu-vm-ip&gt;:5678</code></li>
-<li>Connectez-vous avec les identifiants de docker-compose.yml</li>
+<li>Se connecter avec les identifiants de docker-compose.yml</li>
 <li>Compléter l'assistant de configuration initial</li>
 </ul>
-<h3 id="phase-4-automate-backups-with-n8n">Phase 4 : Automatiser les sauvegardes
-avec N8N</h3>
+<h3 id="phase-4-automate-backups-with-n8n">Phase 4 : Automatiser les
+Sauvegardes avec N8N</h3>
 <h4 id="backup-strategy">Stratégie de Sauvegarde</h4>
 <ol type="1">
-<li><strong>Sauvegardes Quotidiennes</strong>: Coffre Obsidian et données CouchDB</li>
-<li><strong>Sauvegardes Hebdomadaires</strong>: Configuration complète du système</li>
-<li><strong>Archives Mensuelles</strong>: Stockage à long terme</li>
+<li><strong>Sauvegardes Quotidiennes</strong> : Coffre-fort Obsidian et données CouchDB</li>
+<li><strong>Sauvegardes Hebdomadaires</strong> : Configuration complète du système</li>
+<li><strong>Archives Mensuelles</strong> : Stockage à long terme</li>
 </ol>
-<h4 id="create-backup-workflow-in-n8n">Créer le flux de travail de sauvegarde dans
-N8N</h4>
-<h5 id="workflow-components">Composants du flux de travail :</h5>
+<h4 id="create-backup-workflow-in-n8n">Créer le Flux de Travail de
+Sauvegarde dans N8N</h4>
+<h5 id="workflow-components">Composants du Flux de Travail :</h5>
 <ol type="1">
-<li><p><strong>Déclencheur Planifié</strong> (Cron Node)</p>
+<li><p><strong>Déclencheur Programmé</strong> (Nœud Cron)</p>
 <ul>
-<li><strong>Calendrier</strong>: Tous les dimanches à 2h00 du matin</li>
-<li><strong>Expression</strong>: <code>0 2 * * 0</code></li>
+<li><strong>Programme</strong> : Chaque dimanche à 2h00</li>
+<li><strong>Expression</strong> : <code>0 2 * * 0</code></li>
 </ul></li>
-<li><p><strong>Créer la Sauvegarde</strong> (Execute Command Node)</p>
+<li><p><strong>Créer la Sauvegarde</strong> (Nœud d'Exécution de Commande)</p>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">BACKUP_DIR</span><span class="op">=</span><span class="st">&quot;/backups/obsidian&quot;</span></span>
@@ -338,7 +361,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href=
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">$BACKUP_DIR</span> <span class="at">-name</span> <span class="st">&quot;*.tar.gz&quot;</span> <span class="at">-mtime</span> +28 <span class="at">-delete</span></span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Backup completed: </span><span class="va">$DATE</span><span class="st">&quot;</span></span></code></pre></div></li>
-<li><p><strong>Vérifier la Sauvegarde</strong> (Execute Command Node)</p>
+<li><p><strong>Vérifier la Sauvegarde</strong> (Nœud d'Exécution de Commande)</p>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if backup file exists and has reasonable size</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="va">LATEST_BACKUP</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="at">-t</span> /backups/obsidian/<span class="pp">*</span>.tar.gz <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span><span class="va">)</span></span>
@@ -351,23 +374,23 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href=
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;Backup failed or too small!&quot;</span></span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">exit</span> 1</span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div></li>
-<li><p><strong>Envoyer la Notification</strong> (HTTP Request Node or
+<li><p><strong>Envoyer la Notification</strong> (Nœud Requête HTTP ou
 Telegram)</p>
 <ul>
 <li>En cas de succès : “✅ Sauvegarde terminée avec succès”</li>
-<li>En cas d'échec : “❌ Sauvegarde échouée ! Veuillez vérifier les logs”</li>
+<li>En cas d'échec : “❌ Échec de la sauvegarde ! Veuillez vérifier les journaux”</li>
 </ul></li>
 </ol>
-<h3 id="phase-5-remote-access-and-security">Phase 5 : Accès distant et
+<h3 id="phase-5-remote-access-and-security">Phase 5 : Accès Distant et
 Sécurité</h3>
 <h4 id="install-twingate">Installer Twingate</h4>
 <ol type="1">
-<li><strong>Créer un compte Twingate</strong>
+<li><strong>Créer un Compte Twingate</strong>
 <ul>
-<li>Inscrivez-vous sur <a href="https://www.twingate.com">twingate.com</a></li>
+<li>S'inscrire sur <a href="https://www.twingate.com">twingate.com</a></li>
 <li>Créer un nouveau réseau</li>
 </ul></li>
-<li><strong>Déployer le connecteur Twingate</strong></li>
+<li><strong>Déployer le Connecteur Twingate</strong></li>
 </ol>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and install Twingate connector</span></span>
@@ -376,7 +399,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure connector</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> twingate-connector setup</span></code></pre></div>
 <ol start="3" type="1">
-<li><strong>Configurer les ressources</strong>
+<li><strong>Configurer les Ressources</strong>
 <ul>
 <li>Ajouter les services de la VM Ubuntu</li>
 <li>Ajouter l'interface web Proxmox</li>
@@ -384,7 +407,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href=
 </ul></li>
 </ol>
 <h4 id="alternative-cloudflare-tunnel">Alternative : Tunnel Cloudflare</h4>
-<p>Pour un accès HTTPS sans redirection de port :</p>
+<p>Pour l'accès HTTPS sans redirection de port :</p>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install cloudflared</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb</span>
@@ -408,71 +431,62 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href=
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">hostname</span><span class="kw">:</span><span class="at"> couchdb.yourdomain.com</span></span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">service</span><span class="kw">:</span><span class="at"> http://localhost:5984</span></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">service</span><span class="kw">:</span><span class="at"> http_status:404</span></span></code></pre></div>
-<h2 id="weekend-action-plan">Plan d'action du week-end</h2>
-<h3 id="saturday-schedule">Programme du samedi</h3>
+<h2 id="weekend-action-plan">Plan d'Action du Week-end</h2>
+<h3 id="saturday-schedule">Programme du Samedi</h3>
 <h4 id="morning-2-3-hours">Matin (2-3 heures)</h4>
 <ul class="task-list">
 <li><label><input type="checkbox" />Maintenance et mises à jour Proxmox</label></li>
-<li><label><input type="checkbox" />Mises à jour du système de la VM
-Ubuntu</label></li>
-<li><label><input type="checkbox" />Installer Docker et Docker
+<li><label><input type="checkbox" />Mises à jour système de la VM Ubuntu</label></li>
+<li><label><input type="checkbox" />Installation de Docker et Docker
 Compose</label></li>
-<li><label><input type="checkbox" />Créer les répertoires de
+<li><label><input type="checkbox" />Création des répertoires de
 services</label></li>
 </ul>
 <h4 id="afternoon-2-3-hours">Après-midi (2-3 heures)</h4>
 <ul class="task-list">
-<li><label><input type="checkbox" />Déployer le conteneur CouchDB</label></li>
-<li><label><input type="checkbox" />Configurer la base de données
-CouchDB</label></li>
-<li><label><input type="checkbox" />Tester la connexion CouchDB depuis le
+<li><label><input type="checkbox" />Déploiement du conteneur CouchDB</label></li>
+<li><label><input type="checkbox" />Configuration de la base de données CouchDB</label></li>
+<li><label><input type="checkbox" />Test de la connexion CouchDB depuis le
 navigateur</label></li>
-<li><label><input type="checkbox" />Installer le plugin Obsidian LiveSync</label></li>
+<li><label><input type="checkbox" />Installation du plugin Obsidian LiveSync</label></li>
 </ul>
 <h4 id="evening-1-2-hours">Soir (1-2 heures)</h4>
 <ul class="task-list">
-<li><label><input type="checkbox" />Connecter l'application de bureau Obsidian à
-CouchDB</label></li>
-<li><label><input type="checkbox" />Tester la fonctionnalité de
-synchronisation</label></li>
+<li><label><input type="checkbox" />Connecter l'application de bureau Obsidian à CouchDB</label></li>
+<li><label><input type="checkbox" />Tester la fonctionnalité de synchronisation</label></li>
 <li><label><input type="checkbox" />Documenter les étapes de configuration dans
 Obsidian</label></li>
 </ul>
-<h3 id="sunday-schedule">Programme du dimanche</h3>
+<h3 id="sunday-schedule">Programme du Dimanche</h3>
 <h4 id="morning-2-3-hours-1">Matin (2-3 heures)</h4>
 <ul class="task-list">
-<li><label><input type="checkbox" />Déployer le conteneur N8N</label></li>
-<li><label><input type="checkbox" />Configurer l'authentification de base
-N8N</label></li>
-<li><label><input type="checkbox" />Explorer l'interface et les modèles
-N8N</label></li>
+<li><label><input type="checkbox" />Déploiement du conteneur N8N</label></li>
+<li><label><input type="checkbox" />Configuration de l'authentification de base N8N</label></li>
+<li><label><input type="checkbox" />Exploration de l'interface et des modèles N8N</label></li>
 </ul>
 <h4 id="afternoon-2-3-hours-1">Après-midi (2-3 heures)</h4>
 <ul class="task-list">
-<li><label><input type="checkbox" />Créer le premier flux de travail
-d'automatisation des sauvegardes</label></li>
-<li><label><input type="checkbox" />Tester la sauvegarde manuellement</label></li>
-<li><label><input type="checkbox" />Établir le calendrier de sauvegarde</label></li>
+<li><label><input type="checkbox" />Création du premier flux de travail d'automatisation de sauvegarde</label></li>
+<li><label><input type="checkbox" />Test manuel de la sauvegarde</label></li>
+<li><label><input type="checkbox" />Configuration du programme de sauvegarde</label></li>
 </ul>
 <h4 id="evening-1-2-hours-1">Soir (1-2 heures)</h4>
 <ul class="task-list">
-<li><label><input type="checkbox" />Installer et configurer
-Twingate</label></li>
-<li><label><input type="checkbox" />Tester l'accès distant depuis
-téléphone/ordinateur portable</label></li>
-<li><label><input type="checkbox" />Documenter l'intégralité de la configuration
-dans Obsidian</label></li>
+<li><label><input type="checkbox" />Installation et configuration de Twingate</label></li>
+<li><label><input type="checkbox" />Test de l'accès distant depuis téléphone/ordinateur portable</label></li>
+<li><label><input type="checkbox" />Documenter l'intégralité de la configuration dans
+Obsidian</label></li>
 </ul>
-<h2 id="end-goal-complete-self-hosted-environment">Objectif final : un environnement
-auto-hébergé complet</h2>
+<h2 id="end-goal-complete-self-hosted-environment">Objectif Final :
+Environnement Auto-Hébergé Complet</h2>
 <p>D'ici lundi, vous aurez :</p>
 <h3 id="infrastructure">✅ Infrastructure</h3>
 <ul>
-<li>Hyperviseur Proxmox avec des machines virtuelles organisées</li>
+<li>Hyperviseur Proxmox avec VMs organisées</li>
 <li>Réseau sécurisé avec pare-feu pfSense</li>
-<li>Architecture de service basée sur Docker</li>
+<li>Architecture de services basée sur Docker</li>
 </ul>
-<h3 id="core-services">✅ Services de base</h3>
+<h3 id="core-services">✅ Services Clés</h3>
 <ul>
 <li>Synchronisation Obsidian auto-hébergée (CouchDB)</li>
 <li>Plateforme d'automatisation N8N</li>
@@ -486,12 +500,12 @@ auto-hébergé complet</h2>
 </ul>
 <h3 id="automation">✅ Automatisation</h3>
 <ul>
-<li>Automatisation des sauvegardes hebdomadaires</li>
+<li>Automatisation de la sauvegarde hebdomadaire</li>
 <li>Système de notification pour la surveillance</li>
-<li>Base de flux de travail pour les projets futurs</li>
+<li>Fondation de flux de travail pour les projets futurs</li>
 </ul>
-<h2 id="next-steps-and-future-enhancements">Prochaines étapes et améliorations
-futures</h2>
+<h2 id="next-steps-and-future-enhancements">Prochaines Étapes et Futures
+Améliorations</h2>
 <h3 id="short-term-1-2-weeks">Court Terme (1-2 semaines)</h3>
 <ul>
 <li>Ajouter un proxy inverse (Nginx Proxy Manager)</li>
@@ -500,8 +514,8 @@ futures</h2>
 </ul>
 <h3 id="medium-term-1-2-months">Moyen Terme (1-2 mois)</h3>
 <ul>
-<li>Ajouter davantage de flux de travail d'automatisation</li>
-<li>Mettre en œuvre l'agrégation de logs (Loki + Grafana)</li>
+<li>Ajouter plus de flux de travail d'automatisation</li>
+<li>Mettre en œuvre l'agrégation de journaux (Loki + Grafana)</li>
 <li>Créer un plan de reprise après sinistre</li>
 </ul>
 <h3 id="long-term-3-6-months">Long Terme (3-6 mois)</h3>
@@ -511,8 +525,13 @@ futures</h2>
 <li>Créer une documentation complète</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
-<p>Cette feuille de route offre un chemin clair depuis la configuration initiale jusqu'à un environnement homelab auto-hébergé et entièrement fonctionnel. En suivant cette approche par étapes, vous construirez une base solide pour l'automatisation, la sécurité et l'apprentissage continu.</p>
-<p>La clé du succès est un progrès constant et incrémentiel. Commencez par les bases, assurez-vous que chaque composant fonctionne correctement, puis ajoutez progressivement de la complexité. Documentez tout dans Obsidian et n'hésitez pas à expérimenter et à apprendre des échecs.</p>
+<p>Cette feuille de route offre un chemin clair, de la configuration initiale à un
+environnement homelab auto-hébergé entièrement fonctionnel. En adoptant cette approche
+progressive, vous construirez une base solide pour l'automatisation, la sécurité et
+l'apprentissage continu.</p>
+<p>La clé du succès est un progrès constant et progressif. Commencez par les bases, assurez-vous
+que chaque composant fonctionne correctement, puis ajoutez progressivement de la complexité.
+Documentez tout dans Obsidian, et n'hésitez pas à expérimenter et à apprendre de vos échecs.</p>
 <p><em>Votre parcours homelab est un marathon, pas un sprint. Profitez du processus !</em></p>
                 </div>
 
@@ -527,21 +546,21 @@ futures</h2>
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en formation | Passionné de cybersécurité</p>
+                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
                     <h4>Liens Rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
-                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#about">À Propos</a></li>
                         <li><a href="/index.html#projects">Projets</a></li>
                         <li><a href="/blog/index.html">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connect</h4>
+                    <h4>Se Connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -557,13 +576,13 @@ futures</h2>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Omar LYAHYAI. Tous droits réservés.</p>
-                <p>Construit avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
+                <p>&copy; 2025 OLYAHYAI. Tous droits réservés.</p>
+                <p>Conçu avec <i class="fas fa-heart"></i> et <i class="fas fa-terminal"></i></p>
             </div>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Retour en haut de page">
+    <button class="back-to-top" aria-label="Retour en haut">
         <i class="fas fa-chevron-up"></i>
     </button>
 

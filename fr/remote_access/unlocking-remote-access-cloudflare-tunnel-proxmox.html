@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sécurisez l'accès à Proxmox à distance en utilisant Cloudflare Tunnel et Zero Trust. Éliminez la redirection de ports ; mettez en œuvre une gestion robuste et non exposée immédiatement. (159 ch...">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>Déverrouiller l'Accès à Distance Proxmox via Cloudflare Tunnel | Blog Technique d'Omar LYAHYAI</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/en/remote_access/unlocking-remote-access-cloudflare-tunnel-proxmox.html" class="lang-toggle" aria-label="Changer de langue">
+                        <span class="lang-current">EN</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                        <a href="/index.html">Accueil</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/remote_access.html">Accès à Distance</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>Déverrouiller l'Accès à Distance Proxmox via Cloudflare Tunnel</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">Déverrouiller l'Accès à Distance Proxmox via Cloudflare Tunnel</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>5 min de lecture</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Accès à Distance</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1
+id="unlocking-remote-access-my-journey-with-cloudflare-tunnel-and-proxmox">Déverrouiller
+l'Accès à Distance : Mon Expérience avec Cloudflare Tunnel et Proxmox</h1>
+<h2 id="project-goal">Objectif du Projet</h2>
+<p>Établir un accès à distance sécurisé à l'interface web de Proxmox VE via un sous-domaine public
+(<code>proxmox.olyhome.site</code>) en utilisant Cloudflare Tunnel,
+éliminant ainsi le besoin d'exposer des ports directement sur Internet.</p>
+<h2 id="why-cloudflare-tunnel">Pourquoi Cloudflare Tunnel ?</h2>
+<h3 id="traditional-remote-access-problems">Problèmes de l'Accès à Distance Traditionnel</h3>
+<p><strong>Approche par Redirection de Ports :</strong> - ❌ Expose les services
+directement à Internet - ❌ Nécessite une IP statique ou un DNS dynamique - ❌
+Vulnérable aux attaques par balayage de ports - ❌ Gestion complexe du pare-feu</p>
+<p><strong>Avantages de Cloudflare Tunnel :</strong> - ✅ Aucun port exposé
+sur le pare-feu - ✅ Protection DDoS intégrée - ✅ Certificats SSL gratuits -
+✅ Fonctionne avec des IP dynamiques - ✅ Contrôle d'accès via Cloudflare Zero
+Trust</p>
+<h2 id="infrastructure-overview">Aperçu de l'Infrastructure</h2>
+<pre><code>Utilisateurs Internet
+    ↓
+Cloudflare Edge Network
+    ↓
+Cloudflare Tunnel (cloudflared)
+    ↓
+Proxmox Host (192.168.11.254:8006)</code></pre>
+<h2 id="setup-process">Processus de Configuration</h2>
+<h3 id="step-1-prerequisites">Étape 1 : Prérequis</h3>
+<p><strong>Exigences :</strong> - Nom de domaine (par exemple, olyhome.site) -
+Compte Cloudflare (le niveau gratuit est suffisant) - Proxmox VE installé et
+accessible sur le LAN - Système Linux pour exécuter cloudflared</p>
+<h3 id="step-2-configure-domain-in-cloudflare">Étape 2 : Configurer le Domaine dans Cloudflare</h3>
+<ol type="1">
+<li><strong>Ajouter le Site à Cloudflare :</strong>
+<ul>
+<li>Connectez-vous au tableau de bord Cloudflare</li>
+<li>Cliquez sur « Add a Site » (Ajouter un site)</li>
+<li>Entrez le domaine : <code>olyhome.site</code></li>
+<li>Choisissez le plan Gratuit</li>
+</ul></li>
+<li><strong>Mettre à Jour les Serveurs de Noms :</strong>
+<ul>
+<li>Copiez les serveurs de noms Cloudflare</li>
+<li>Mettez à jour chez votre bureau d'enregistrement de domaine (Hostinger, Namecheap, etc.)</li>
+<li>Attendez la propagation (jusqu'à 24 heures)</li>
+</ul></li>
+</ol>
+<h3 id="step-3-create-cloudflare-tunnel">Étape 3 : Créer un Tunnel Cloudflare</h3>
+<p><strong>Via le Tableau de Bord Cloudflare :</strong></p>
+<ol type="1">
+<li>Naviguez vers <strong>Zero Trust</strong> → <strong>Access</strong> →
+<strong>Tunnels</strong></li>
+<li>Cliquez sur <strong>« Create a tunnel »</strong> (Créer un tunnel)</li>
+<li>Sélectionnez <strong>Cloudflared</strong></li>
+<li>Nom du tunnel : <code>proxmox-tunnel</code></li>
+<li>Cliquez sur <strong>Save tunnel</strong> (Enregistrer le tunnel)</li>
+</ol>
+<p><strong>Copiez le jeton du tunnel</strong> – nécessaire pour l'installation de cloudflared.</p>
+<h3 id="step-4-install-cloudflared-on-proxmox-host">Étape 4 : Installer
+cloudflared sur l'Hôte Proxmox</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download cloudflared</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> cloudflared-linux-amd64.deb</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify installation</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">cloudflared</span> <span class="at">--version</span></span></code></pre></div>
+<h3 id="step-5-configure-tunnel">Étape 5 : Configurer le Tunnel</h3>
+<p><strong>Créer le fichier de configuration :</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create config directory</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> /etc/cloudflared</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create config file</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/cloudflared/config.yml</span></code></pre></div>
+<p><strong>Configuration (<code>config.yml</code>) :</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tunnel</span><span class="kw">:</span><span class="at"> &lt;TUNNEL_ID&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">credentials-file</span><span class="kw">:</span><span class="at"> /etc/cloudflared/&lt;TUNNEL_ID&gt;.json</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ingress</span><span class="kw">:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">hostname</span><span class="kw">:</span><span class="at"> proxmox.olyhome.site</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">service</span><span class="kw">:</span><span class="at"> https://localhost:8006</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">originRequest</span><span class="kw">:</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">noTLSVerify</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # Required for self-signed Proxmox cert</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">service</span><span class="kw">:</span><span class="at"> http_status:404</span></span>
