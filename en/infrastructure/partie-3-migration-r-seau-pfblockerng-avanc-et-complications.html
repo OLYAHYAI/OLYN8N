@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Part 3 – Network Migration, Advanced Pfblockerng, and Complications - Technical tutorial and guide">
-    <meta name="keywords" content="homelab">
+    <meta name="description" content="Step-by-step guide on using the technical blog template. Optimize categorization (infra, security, AI) and the publication workflow.">
+    <meta name="keywords" content="Infrastructure, Network-Security, Automation, Workflow, Publication, Documentation">
     <meta name="author" content="OLYAHYAI">
 
     <title>Part 3 – Network Migration, Advanced Pfblockerng, and Complications | Omar LYAHYAI Technical Blog</title>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-tags"></i>
-                        <span>homelab</span>
+                        <span>Infrastructure, Network-Security, Automation, Workflow, Publication, Documentation</span>
                     </div>
                 </div>
             </div>
@@ -221,32 +221,6 @@ The workflow will:
 - Preserve images and links
 -->
 <!-- 
-TEMPLATE USAGE:
-1. Press Alt+E in Obsidian to apply this template
-2. Update the frontmatter:
-   - title: "Your article title (keep quotes)"
-   - date: "Update if needed (YYYY-MM-DD format)"
-   - category: infrastructure | network_security | automation_ai | reference | docker_services | remote_access
-   - status: published (ready for website) | draft (work in progress)
-   - language: en (English) | fr (French) - workflow will detect but you can specify
-   - tags: Comma-separated relevant tags
-   - description: "Short summary (keep quotes if contains special chars)"
-
-3. Write your content below
-
-IMPORTANT:
-- Keep all quotes around text values with special characters
-- Date format must be "YYYY-MM-DD" with quotes
-- Status must be "published" for workflow to generate HTML
-- Language will be auto-detected from content but you can set it manually
-
-WORKFLOW BEHAVIOR:
-- Detects language from content (overrides if wrong in large files >5000 chars)
-- Generates bilingual versions (EN + FR)
-- Creates HTML with full navigation
-- Preserves images and links
--->
-<!-- 
 NAMING CONVENTION:
 - For English articles: your-article-title.md
 - For French articles:  your-article-title-fr.md
@@ -262,16 +236,16 @@ The workflow will automatically:
 <p>This part describes the complete migration of the Proxmox/VMs network
 infrastructure to the pfSense subnet, the advanced configuration of
 IP/DNS filtering using pfBlockerNG, the management of technical
-complications, and the solutions found for each issue, keeping all
+complications, and the solutions found for each problem, while keeping all
 real IP addresses masked.</p>
 <hr />
-<h2 id="étapes-réalisées">Steps Completed</h2>
+<h2 id="étapes-réalisées">Steps Performed</h2>
 <h3 id="sauvegarde-et-préparation">1. Backup and Preparation</h3>
 <ul>
-<li>Manual backup of the pfSense configuration file
-<code>.xml</code> before any migration.</li>
+<li>Manual backup of the pfSense <code>.xml</code> configuration file
+before any migration.</li>
 <li>Inventory and documentation of existing IP addresses.</li>
-<li>Stopping critical services on VMs (e.g., N8N) before network
+<li>Stopping critical services on the VMs (e.g., n8n) before network
 modification.</li>
 </ul>
 <hr />
@@ -280,104 +254,103 @@ Configuration</h3>
 <ul>
 <li><strong>IP Blocking (Inbound Only):</strong>
 <ul>
-<li>pfBlockerNG enabled only on the WAN interface, Block action.</li>
-<li>Addition of a PRI1 list set with 9 recognized sources (FeodoTracker,
-CINSArmy, ET, ISC, Spamhaus, Blocklist.de, URLhaus…).</li>
-<li>Issue: Automatic creation of rules on LAN → network blocking.</li>
-<li><strong>Solution:</strong> Deletion of LAN/outbound in the
-general configuration, manual deletion of rules on LAN. Only rules on WAN (inbound) are kept.</li>
+<li>Activating pfBlockerNG only on the WAN interface, Block action.</li>
+<li>Adding a PRI1 set with 9 recognized sources (FeodoTracker,
+CINSArmy, ET, ISC, Spamhaus, Blocklist.de, URLhaus...).</li>
+<li>Problem: automatic creation of rules on LAN → network blockage.</li>
+<li><strong>Solution:</strong> Removal of LAN/outbound in the general
+config, manual deletion of rules on LAN. Only rules on WAN (inbound) are
+kept.</li>
 </ul></li>
 <li><strong>GeoIP Blocking:</strong>
 <ul>
-<li>Disabled for all countries; decision to analyze logs for several
-days before implementing any geo-localized blocking.</li>
+<li>Disabled for all countries, decision to analyze logs for several
+days before applying any geolocated blocking.</li>
 </ul></li>
 </ul>
 <hr />
 <h3 id="mise-en-place-dnsbl-retours-dexpérience">3. DNSBL Implementation
-&amp; Lessons Learned</h3>
+&amp; Feedback</h3>
 <ul>
-<li><strong>Issue: Choosing DNSBL VIP IP</strong>
+<li><strong>Problem: choice of DNSBL VIP IP</strong>
 <ul>
-<li>Attempting to use several IPs within the LAN subnet was rejected by
-pfBlockerNG (“Address must be in an isolated Range”).</li>
+<li>Attempted with several IPs in the LAN subnet rejected by pfBlockerNG
+(“Address must be in an isolated Range”).</li>
 <li>Attempt with an IP outside /24 (failure: not routed).</li>
-<li><strong>Temporary Solution:</strong> Using 127.0.0.1
-(loopback) as DNSBL VIP → accepted by pfBlockerNG and functional in
-this context.</li>
+<li><strong>Temporary solution:</strong> Using 127.0.0.1 (loopback) as
+the DNSBL VIP → accepted by pfBlockerNG and functional in this
+context.</li>
 </ul></li>
 <li><strong>Configured DNSBL Groups:</strong>
 <ul>
 <li>Ads_Basic (StevenBlack hosts)</li>
-<li>Ads_EasyList (compatible format only, not the original easyprivacy.txt
-file)</li>
+<li>Ads_EasyList (compatible format only, not the original
+easyprivacy.txt)</li>
 <li>Malware (URLhaus)</li>
 <li>Phishing (Phishing Army)</li>
 </ul></li>
-<li><strong>Issue with DNSBL Whitelist:</strong>
+<li><strong>DNSBL Whitelist Problem:</strong>
 <ul>
-<li>Impossible to find the standard “global” whitelist.</li>
-<li><strong>Troubleshooting:</strong> Adding exceptions (Microsoft, Ubuntu,
-Docker, Cloudflare…) directly into each group via the
-“Custom Domain Whitelist” section.</li>
+<li>Unable to find the classic “global” whitelist.</li>
+<li><strong>Troubleshooting:</strong> Added exceptions (Microsoft,
+Ubuntu, Docker, Cloudflare…) directly into each group via the “Custom
+Domain Whitelist” section.</li>
 </ul></li>
 </ul>
 <hr />
-<h3 id="migration-proxmox-vms-vers-le-nouveau-lan">4. Proxmox + VMs
-Migration to the New LAN</h3>
+<h3 id="migration-proxmox-vms-vers-le-nouveau-lan">4. Migration of Proxmox
++ VMs to the New LAN</h3>
 <ul>
 <li><strong>Step-by-step Orchestration:</strong>
 <ol type="1">
 <li>Migration of the Proxmox host first (modification of
 interfaces/bridge/gateway/dns).</li>
-<li>Reconnection via the new IP, checking Web access.</li>
+<li>Reconnection via new IP, check Web access.</li>
 <li>Successive migration of VMs. For Ubuntu VMs using Netplan, switch
-to DHCP4 (then static assignment via pfSense mapping for
-production).</li>
+to DHCP4 (then static assignment via pfSense mapping for production).</li>
 </ol></li>
 <li><strong>Main Tests:</strong>
 <ul>
-<li>Ping pfSense gateway</li>
+<li>Ping gateway pfSense</li>
 <li>Test DNS, external resolution, apt update, docker pull…</li>
-<li>Verify that all pfBlockerNG rules do not block Linux repos,
-Docker, or npm.</li>
+<li>Validate that all pfBlockerNG rules do not block Linux repos, Docker,
+or npm.</li>
 </ul></li>
 </ul>
 <hr />
-<h3 id="cas-particulier-n8n-docker-cloudflare-tunnel">5. Special Case:
-N8N / Docker / Cloudflare Tunnel</h3>
+<h3 id="cas-particulier-n8n-docker-cloudflare-tunnel">5. Special Case
+n8n / Docker / Cloudflare Tunnel</h3>
 <ul>
-<li><strong>Issue 1: N8N inaccessible after migration</strong>
+<li><strong>Problem 1: n8n inaccessible after migration</strong>
 <ul>
-<li>Origin: Docker N8N bound by default on 443 and a domain name,
-not listening on 0.0.0.0, nor on HTTP on 5678.</li>
+<li>Cause: Docker n8n binds by default on 443 and a domain name, does not
+listen on 0.0.0.0, nor on HTTP on 5678.</li>
 <li><strong>Solution:</strong> Reworking the
-<code>docker-compose.yml</code> to force binding on 0.0.0.0:5678,
-dropping SSL on the Docker side (managed by Cloudflare), safe reboot via
-<code>docker-compose down/up</code> (data maintained via Docker
+<code>docker-compose.yml</code> to force the bind on 0.0.0.0:5678,
+abandoning SSL on the Docker side (managed by Cloudflare), safe reboot
+via <code>docker-compose down/up</code> (data preserved via Docker
 volume).</li>
 </ul></li>
-<li><strong>Issue 2: Cloudflare Tunnel</strong>
+<li><strong>Problem 2: Cloudflare Tunnel</strong>
 <ul>
-<li>Origin: Tunnel pointed to outdated IP/port, and the tunnel was
+<li>Cause: tunnel pointed to an obsolete IP/port, and the tunnel was
 still configured for HTTPS.</li>
-<li><strong>Solution:</strong> Modification of the Tunnel config to
-HTTP, new VM IP, deactivation of unnecessary noTLSVerify.</li>
+<li><strong>Solution:</strong> Modification of the Tunnel config for
+HTTP, new VM IP, disabling unnecessary noTLSVerify.</li>
 </ul></li>
 </ul>
 <hr />
-<h3 id="tests-post-migration">6. Post-migration Tests</h3>
+<h3 id="tests-post-migration">6. Post-Migration Tests</h3>
 <ul>
-<li><strong>Accessibility</strong>:
+<li><strong>Accessibility</strong> :
 <ul>
-<li>LAN access to all services (N8N, Proxmox, pfSense WebGUI,
-AP).</li>
-<li>External access to N8N via Cloudflare Tunnel.</li>
+<li>LAN access to all services (n8n, Proxmox, pfSense WebGUI, AP).</li>
+<li>External n8n access via Cloudflare Tunnel.</li>
 </ul></li>
-<li><strong>pfBlockerNG Blocking</strong>:
+<li><strong>pfBlockerNG Blocking</strong> :
 <ul>
-<li>Logs/alerts, blocked DNS queries (approx. 35% average), no critical
-false positives (thanks to incremental whitelist).</li>
+<li>Logs/alerts, blocked DNS queries (~35% average), no critical false
+positives (thanks to incremental whitelist).</li>
 <li>Ping/DNS/network tests OK for all VMs and LAN hosts.</li>
 </ul></li>
 </ul>
@@ -403,8 +376,8 @@ false positives (thanks to incremental whitelist).</li>
 <td>Removal of Outbound LAN, rules manually deleted</td>
 </tr>
 <tr>
-<td>DNSBL VIP refused in LAN /24</td>
-<td>“isolated range” error, block page ping KO</td>
+<td>DNSBL VIP rejected in LAN /24</td>
+<td>“isolated range” error, block page ping failed</td>
 <td>VIP set to 127.0.0.1 (temporary, functional)</td>
 </tr>
 <tr>
@@ -415,49 +388,47 @@ false positives (thanks to incremental whitelist).</li>
 <tr>
 <td>No global DNSBL whitelist</td>
 <td>Inability to whitelist worldwide</td>
-<td>Whitelists added in each group</td>
+<td>Whitelists added to each group</td>
 </tr>
 <tr>
-<td>N8N / Docker not accessible</td>
+<td>n8n / Docker inaccessible</td>
 <td>No container listening on 5678</td>
-<td>Ports fixed, HTTP enabled, local SSL disabled</td>
+<td>ports fixed, HTTP enabled, SSL disabled locally</td>
 </tr>
 <tr>
 <td>Cloudflare Tunnel not routed</td>
-<td>HTTPS KO, incorrect internal destination</td>
+<td>HTTPS fail, incorrect internal destination</td>
 <td>Set to HTTP, update target URL/IP in tunnel dashboard</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="schéma-technique-masqué">Technical Diagram (Masked)</h2>
-<p>[Internet] – [Box/ISP] – [pfSense][LAN] – [EW1200 AP] ==Wifi==
+<h2 id="schéma-technique-masqué">Technical Diagram (masked)</h2>
+<p>[Internet] – [ISP/Box] – [pfSense][LAN] – [EW1200 AP] ==Wifi==
 [Clients]</p>
-<p>[Proxmox Host]–[VMs: N8N, others]</p>
+<p>[Proxmox Host]–[VMs: n8n, others]</p>
 <p>[Cloudflare Tunnel]</p>
 <p>text</p>
 <hr />
 <h2 id="metrics-post-migration">Post-Migration Metrics</h2>
 <ul>
-<li>Blocked DNS query rate: ≈ 35%</li>
-<li>No noticeable downtime (&gt;15 min) on critical services</li>
-<li>pfBlockerNG IPv4: ~30k to 50k active blocked IPs</li>
+<li>DNS Query Block Rate: ≈ 35%</li>
+<li>No notable downtime (&gt;15 min) on critical services</li>
+<li>pfBlockerNG IPv4: ~30 to 50k active blocked IPs</li>
 <li>Total time (Part 3): ≈ 3-4h</li>
-<li>No false positives blocking production (only
-ads/trackers)</li>
+<li>No false positives blocking production (only ads/trackers)</li>
 </ul>
 <hr />
 <h2 id="prochaines-étapes-proposées">Proposed Next Steps</h2>
 <ul>
 <li>Daily monitoring of pfBlockerNG logs</li>
-<li>Long-term validation of load/latency</li>
-<li>Documentation of upcoming migrations (VLAN, IOT/Prod
-segmentation)</li>
-<li>Expanding the use of monitoring (Grafana, Prometheus, etc.)</li>
+<li>Long-term load/latency validation</li>
+<li>Documentation of upcoming migrations (VLAN, IOT/Prod segmentation)</li>
+<li>Extend monitoring usage (Grafana, Prometheus, etc.)</li>
 </ul>
 <hr />
-<p><em>Written in Markdown format, part 3 of the customized homelab project
-pfSense/Proxmox/Cloudflare, IPs and credentials intentionally
+<p><em>Written in Markdown format, part 3 of the personalized
+pfsense/proxmox/cloudflare homelab project, IPs and credentials voluntarily
 masked.</em></p>
                 </div>
 
@@ -518,3 +489,4 @@ masked.</em></p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
+---

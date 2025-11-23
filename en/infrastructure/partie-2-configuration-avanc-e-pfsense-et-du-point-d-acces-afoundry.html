@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Part 2 – Advanced pfSense And Afoundry Access Point Configuration - Technical tutorial and guide">
-    <meta name="keywords" content="homelab">
+    <meta name="description" content="Guide to using the technical article writing template (YAML/Markdown). Optimize metadata (title, tags, description) for the publication workflow...">
+    <meta name="keywords" content="Technical-Writing, Markdown, YAML, Workflow, Metadata, Automation, Publication">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Part 2 – Advanced pfSense And Afoundry Access Point Configuration | Omar LYAHYAI Technical Blog</title>
+    <title>Part 2 – Advanced pfSense and Afoundry Access Point Configuration | Omar LYAHYAI Technical Blog</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/infrastructure.html">Infrastructure</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Part 2 – Advanced pfSense And Afoundry Access Point Configuration</span>
+                        <span>Part 2 – Advanced pfSense and Afoundry Access Point Configuration</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Part 2 – Advanced pfSense And Afoundry Access Point Configuration</h1>
+                <h1 class="article-title">Part 2 – Advanced pfSense and Afoundry Access Point Configuration</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-tags"></i>
-                        <span>homelab</span>
+                        <span>Technical-Writing, Markdown, YAML, Workflow, Metadata, Automation, Publication</span>
                     </div>
                 </div>
             </div>
@@ -260,42 +260,47 @@ The workflow will automatically:
 <h2 id="partie-2-configuration-avancée-et-access-point-wifi">Part 2:
 Advanced Configuration and WiFi Access Point</h2>
 <hr />
-<h2 id="contexte-de-la-partie-2">1. Context of Part 2</h2>
-<h3 id="rappel-architecture-partie-1">1.1 Architecture Recap Part 1</h3>
-<p>Following Part 1, we had a functional pfSense infrastructure with: - pfSense 2.8.1 installed and operational -
-Optimized Realtek drivers (realtek-re-kmod) - Security packages installed (pfBlockerNG, Suricata, WireGuard, ACME, ntopng) - Temporary access via WAN interface for initial configuration</p>
-<h3 id="objectifs-partie-2">1.2 Goals for Part 2</h3>
-<p>This second phase aims to: 1. Deploy a professional WiFi access point (Afoundry EW1200) 2. Migrate to the final network architecture with LAN segmentation 3. Configure pfBlockerNG to block advertisements and malware 4. Optimize dual-band WiFi performance 5. Secure the complete infrastructure</p>
+<h2 id="contexte-de-la-partie-2">1. Context for Part 2</h2>
+<h3 id="rappel-architecture-partie-1">1.1 Recap of Part 1 Architecture</h3>
+<p>At the end of Part 1, we had a functional pfSense infrastructure with: - pfSense 2.8.1 installed and operational - Optimized Realtek Drivers (realtek-re-kmod) - Security packages installed (pfBlockerNG, Suricata, WireGuard, ACME, ntopng) - Temporary access via WAN interface for initial configuration</p>
+<h3 id="objectifs-partie-2">1.2 Objectives for Part 2</h3>
+<p>This second phase aims to: 1. Deploy a professional WiFi access point (Afoundry EW1200) 2. Migrate to the final network architecture with LAN segmentation 3. Configure pfBlockerNG for ad and malware blocking 4. Optimize dual-band WiFi performance 5. Secure the entire infrastructure</p>
 <hr />
 <h2 id="matériel-ajouté">2. Added Hardware</h2>
-<h3 id="access-point-afoundry-ew1200">2.1 Afoundry EW1200 Access Point</h3>
+<h3 id="access-point-afoundry-ew1200">2.1 Access Point Afoundry
+EW1200</h3>
 <p><strong>Specifications</strong>: - <strong>Model</strong>: Afoundry
 EW1200 - <strong>WiFi</strong>: Dual-band AC1200 (300 Mbps @ 2.4GHz +
 867 Mbps @ 5GHz) - <strong>VLAN Support</strong>: Native 802.1Q (up to
-8 SSIDs) - <strong>Power Supply</strong>: PoE 802.3af/at or power
-adapter - <strong>Interfaces</strong>: 1x Gigabit Ethernet RJ45 -
-<strong>Mode</strong>: True Access Point (no router/NAT functionality)</p>
+8 SSIDs) - <strong>Power</strong>: PoE 802.3af/at or AC adapter -
+<strong>Interfaces</strong>: 1x Gigabit Ethernet RJ45 - <strong>Mode</strong>: True Access Point (no router/NAT)</p>
 <p><strong>Acquisition Cost</strong>: 300 Moroccan Dirhams (~€27)</p>
-<h3 id="avantages-par-rapport-à-un-routeur-converti">2.2 Advantages Over
-a Converted Router</h3>
-<p>Unlike repurposed ADSL routers (TD-W8960N), the EW1200 offers: - Native VLAN support for future network segmentation - 5 GHz WiFi (802.11ac) for better performance - Dedicated Access Point mode without needing to disable NAT/DHCP configuration - Multiple SSIDs for separated WiFi networks (LAN/IoT/Guest) - Stable performance in a professional environment</p>
+<h3 id="avantages-par-rapport-à-un-routeur-converti">2.2 Advantages
+Compared to a Converted Router</h3>
+<p>Unlike converted ADSL routers (TD-W8960N), the EW1200 offers: - Native VLAN support for future network segmentation - 5 GHz WiFi (802.11ac) for better performance - Dedicated Access Point Mode with no NAT/DHCP configuration to disable - Multiple SSIDs for separate WiFi networks (LAN/IoT/Guest) - Stable performance in a professional environment</p>
 <hr />
 <h2 id="installation-de-laccess-point">3. Access Point Installation</h2>
-<h3 id="phase-de-configuration-initiale">3.1 Initial Configuration Phase</h3>
-<p>We proceeded with an isolated configuration of the EW1200 before integrating it into pfSense.</p>
+<h3 id="phase-de-configuration-initiale">3.1 Initial Configuration
+Phase</h3>
+<p>We performed an isolated configuration of the EW1200 before
+integrating it with pfSense.</p>
 <p><strong>Step 1: Direct connection laptop → EW1200</strong></p>
-<p>We temporarily configured the laptop with a static IP within the AP's default subnet: Laptop IP: AP Default Subnet Mask: /24 Gateway: AP Default IP</p>
+<p>We temporarily configured the laptop with a static IP in the AP's
+default subnet: Laptop IP: AP default Subnet Mask: /24 Gateway: AP default IP</p>
 <p>text</p>
 <p><strong>Web interface access</strong>: Manufacturer's default IP</p>
 <p><strong>Step 2: AP Network Configuration</strong></p>
-<p>We reconfigured the EW1200's IP address to integrate it into the pfSense LAN network: IP Address Mode: Static IP IP Address: [Fixed IP in pfSense LAN subnet] Subnet Mask: /24 Default Gateway: [pfSense LAN IP] Primary DNS: [pfSense LAN IP]</p>
+<p>We reconfigured the IP address of the EW1200 to integrate it into
+the pfSense LAN network: IP Address Mode: Static IP IP Address: [Static IP in pfSense LAN subnet] Subnet Mask: /24 Default Gateway: [pfSense LAN IP] Primary DNS: [pfSense LAN IP]</p>
 <p>text</p>
-<p>After saving, the AP restarts and becomes accessible on its new address.</p>
+<p>After saving, the AP restarts and becomes accessible at its new
+address.</p>
 <p><strong>Step 3: Dual-band WiFi Configuration</strong></p>
 <p><strong>2.4 GHz Band</strong> (maximum range): Enable Wireless: ✓
 SSID: Homelab_2G Channel: Auto (recommended channels: 1, 6, 11) Channel
 Width: 20 MHz (better range) Transmit Power: High Security Mode:
-WPA2-PSK Encryption: AES Password: [Secure password min 12 characters]</p>
+WPA2-PSK Encryption: AES Password: [Secure password min 12
+characters]</p>
 <p>text</p>
 <p><strong>5 GHz Band</strong> (maximum performance): Enable
 Wireless: ✓ SSID: Homelab_5G Channel: Auto (recommended channels: 36, 40,
@@ -303,79 +308,98 @@ Wireless: ✓ SSID: Homelab_5G Channel: Auto (recommended channels: 36, 40,
 Mode: WPA2-PSK Encryption: AES Password: [Same password as 2.4 GHz]</p>
 <p>text</p>
 <p><strong>Step 4: Access Point Mode</strong></p>
-<p>We verified that the EW1200 is configured in pure Access Point mode: Operation Mode: Access Point (AP Mode) DHCP Server: Disabled NAT: Disabled Firewall: Disabled</p>
+<p>We verified that the EW1200 is configured in pure Access Point mode:
+Operation Mode: Access Point (AP Mode) DHCP Server: Disabled NAT: Disabled Firewall: Disabled</p>
 <p>text</p>
-<h3 id="intégration-à-linfrastructure-pfsense">3.2 Integration into the
-pfSense Infrastructure</h3>
-<p><strong>Physical Cabling</strong>: pfSense [LAN Interface] ─── Ethernet
-Cable ─── [LAN Port] EW1200</p>
+<h3 id="intégration-à-linfrastructure-pfsense">3.2 Integration into
+the pfSense Infrastructure</h3>
+<p><strong>Physical Cabling</strong>: pfSense [LAN Interface] ───
+Ethernet Cable ─── [LAN Port] EW1200</p>
 <p>text</p>
-<p><strong>Important</strong>: Exclusive use of the access point's LAN port, not the WAN/DSL port.</p>
-<p><strong>pfSense Interface Verification</strong>:</p>
-<p>We checked the LAN interface status via <strong>Status &gt;
+<p><strong>Important</strong>: Exclusive use of the access point's LAN
+port, not the WAN/DSL port.</p>
+<p><strong>pfSense interface verification</strong>:</p>
+<p>We checked the status of the LAN interface via <strong>Status &gt;
 Interfaces</strong>: Interface: LAN (re0) Status: active (UP) IPv4
 Address: [pfSense LAN IP]/24 Link: 1000baseT full-duplex</p>
 <p>text</p>
 <hr />
 <h2 id="tests-et-validation">4. Tests and Validation</h2>
 <h3 id="connectivité-wifi">4.1 WiFi Connectivity</h3>
-<p><strong>Test 1: Client connection</strong></p>
-<p>We connected several devices to the WiFi networks: - Laptop → Homelab_5G - Smartphone → Homelab_2G - Tablet → Homelab_5G</p>
-<p>All clients automatically obtained an IP address via the pfSense DHCP server.</p>
-<p><strong>Test 2: Addressing Verification</strong></p>
+<p><strong>Test 1: Client Connection</strong></p>
+<p>We connected several devices to the WiFi networks: - Laptop →
+Homelab_5G - Smartphone → Homelab_2G - Tablet → Homelab_5G</p>
+<p>All clients automatically obtained an IP address via the pfSense
+DHCP server.</p>
+<p><strong>Test 2: Address Verification</strong></p>
 <p>Verification command on clients: Windows ipconfig</p>
 <p>Linux/Mac ifconfig ip addr show</p>
 <p>text</p>
-<p>Expected results: IPv4 Address: [pfSense LAN DHCP Range] Subnet Mask: 255.255.255.0 Default Gateway: [pfSense LAN IP] DNS Servers: [pfSense LAN IP]</p>
+<p>Expected Results: IPv4 Address: [pfSense LAN DHCP Range] Subnet
+Mask: 255.255.255.0 Default Gateway: [pfSense LAN IP] DNS Servers: [pfSense LAN IP]</p>
 <p>text</p>
 <p><strong>Test 3: Latency and Performance</strong></p>
-<p>Connectivity tests from WiFi clients: Ping pfSense (expected latency &lt; 5ms) ping [pfSense LAN IP]</p>
-<p>Ping access point (expected latency &lt; 2ms) ping [EW1200 IP]</p>
+<p>Connectivity tests from WiFi clients: Ping pfSense (latency &lt; 5ms
+expected) ping [IP LAN pfSense]</p>
+<p>Ping access point (latency &lt; 2ms expected) ping [IP EW1200]</p>
 <p>Ping Internet ping 8.8.8.8</p>
 <p>DNS Resolution ping google.com</p>
 <p>text</p>
-<h3 id="vérifications-pfsense">4.2 pfSense Checks</h3>
+<h3 id="vérifications-pfsense">4.2 pfSense Verifications</h3>
 <p><strong>Active DHCP Leases</strong>:</p>
-<p>Via <strong>Status &gt; DHCP Leases</strong>, we verified the presence of all WiFi clients with their MAC addresses, hostnames, and lease duration.</p>
+<p>Via <strong>Status &gt; DHCP Leases</strong>, we verified the
+presence of all WiFi clients with their MAC addresses, hostnames, and
+lease duration.</p>
 <p><strong>Connection States</strong>:</p>
-<p>Via <strong>Diagnostics &gt; States</strong>, we confirmed the active connections of the WiFi clients (filtered by LAN subnet).</p>
+<p>Via <strong>Diagnostics &gt; States</strong>, we confirmed active
+connections for WiFi clients (filtering by LAN subnet).</p>
 <p><strong>LAN Interface Statistics</strong>:</p>
 <p>Console command to check the interface: ifconfig re0</p>
 <p>text</p>
-<p>Verifications performed: - Status: active - Speed: 1000baseT
-full-duplex - Errors (Ierrs/Oerrs): 0 - MSI-X Interrupts: functional</p>
+<p>Checks performed: - Status: active - Speed: 1000baseT full-duplex -
+Errors (Ierrs/Oerrs): 0 - MSI-X Interrupts: functional</p>
 <hr />
 <h2 id="configuration-pfblockerng-adblock-intégré">5. pfBlockerNG
 Configuration (Integrated AdBlock)</h2>
-<h3 id="introduction-au-blocage-dns">5.1 Introduction to DNS Blocking</h3>
-<p>pfBlockerNG is the <strong>native</strong> pfSense solution for blocking advertisements, trackers, and malware. It works via <strong>DNSBL (DNS Blocklist)</strong>, intercepting DNS queries destined for malicious domains before they reach the Internet.</p>
-<p><strong>Advantages vs. External Solutions</strong>: - No need for a separate Pi-hole or AdBlock server - Native integration with DNS Resolver (Unbound) - Network-level blocking (all clients automatically protected) - No modifications needed on clients - HTTPS support (no man-in-the-middle)</p>
-<h3 id="configuration-initiale-dnsbl">5.2 Initial DNSBL Configuration</h3>
+<h3 id="introduction-au-blocage-dns">5.1 Introduction to DNS
+Blocking</h3>
+<p>pfBlockerNG is the <strong>native</strong> pfSense solution for
+blocking ads, trackers, and malware. It works via <strong>DNSBL (DNS
+Blocklist)</strong>, intercepting DNS requests to malicious domains
+before they reach the Internet.</p>
+<p><strong>Advantages vs. external solutions</strong>: - No need for a
+separate Pi-hole or AdBlock server - Native integration with DNS Resolver
+(Unbound) - Network-level blocking (all clients automatically protected)
+- No modification needed on clients - HTTPS support (no man-in-the-middle)</p>
+<h3 id="configuration-initiale-dnsbl">5.2 Initial DNSBL
+Configuration</h3>
 <p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt; DNSBL</p>
 <p><strong>DNSBL Activation</strong>: ☑ Enable DNSBL DNSBL Mode: Unbound
 mode (recommended) DNSBL VIP: [Automatically created virtual IP]</p>
 <p>text</p>
-<p><strong>Unbound Mode</strong>: Integration with the pfSense DNS Resolver for transparent query inspection.</p>
+<p><strong>Unbound Mode</strong>: Integration with the pfSense DNS
+Resolver for transparent request inspection.</p>
 <p><strong>Advanced Settings</strong>: DNSBL Blocking Mode: Unbound
 Python Mode Enable Logging: ✓ (for blocked traffic analysis) SafeSearch:
 ✓ (forces SafeSearch on search engines) Python: ✓ Enable (required for
 certain features)</p>
 <p>text</p>
 <p>Save configuration.</p>
-<h3 id="activation-des-listes-de-blocage">5.3 Activating Blocklists</h3>
+<h3 id="activation-des-listes-de-blocage">5.3 Activation of Block
+Lists</h3>
 <p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt; Feeds</p>
 <p>pfBlockerNG offers pre-configured lists of malicious domains and IPs.</p>
-<p><strong>Categories Activated</strong>:</p>
+<p><strong>Categories activated</strong>:</p>
 <p><strong>1. Ads (Advertisements)</strong>: - Steven Black - EasyList -
 Energized Basic</p>
 <p><strong>2. Malicious (Malware and threats)</strong>: - URLhaus
 Malware - Phishing Army - Threat Intel</p>
 <p><strong>3. Tracking (Trackers and analytics)</strong>: - EasyPrivacy -
 Disconnect Tracking</p>
-<p><strong>4. Social (Social networks - optional)</strong>: - Facebook
+<p><strong>4. Social (Social Networks - optional)</strong>: - Facebook
 - Twitter/X - TikTok (depending on user needs)</p>
-<p><strong>Configuration for each feed</strong>: State: ON Action: Unbound
-Update Frequency: Once a day (via CRON)</p>
+<p><strong>Configuration for each feed</strong>: State: ON Action:
+Unbound Update Frequency: Once a day (via CRON)</p>
 <p>text</p>
 <h3 id="création-de-listes-personnalisées">5.4 Creating Custom Lists</h3>
 <p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt; DNSBL
@@ -386,75 +410,78 @@ Custom_Blocklist Description: Custom domains to block DNSBL: ON Custom
 Domain List: [Manual domains to block]</p>
 <p>text</p>
 <p><strong>Example custom domains</strong>: doubleclick.net
-googleadservices.com facebook.com (if social network blocking
+googleadservices.com facebook.com (if social network blocking is
 desired)</p>
 <p>text</p>
 <h3 id="mise-à-jour-et-activation">5.5 Update and Activation</h3>
 <p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt;
 Update</p>
-<p>Launching the first list synchronization: Click on “Run” → Reload
-ALL</p>
+<p>Launching the first list synchronization: Click “Run” → Reload ALL</p>
 <p>text</p>
-<p>This operation downloads all activated lists and loads them into Unbound. Duration: 2-5 minutes depending on the number of lists.</p>
-<p><strong>Log Verification</strong>:</p>
-<p>Logs confirm the download and parsing of each list with the number of blocked domains.</p>
+<p>This operation downloads all activated lists and loads them into
+Unbound. Duration: 2-5 minutes depending on the number of lists.</p>
+<p><strong>Log verification</strong>:</p>
+<p>Logs confirm the download and parsing of each list with the number
+of blocked domains.</p>
 <h3 id="configuration-automatique-cron">5.6 Automatic Configuration
 (CRON)</h3>
 <p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt; General
 &gt; CRON Settings</p>
-<p>Configuration of automatic updates: Update Frequency: Once a day
-Update Hour: 03:00 (off-peak hours) Force Update on Reload: ✓</p>
+<p>Configuring automatic updates: Update Frequency: Once a day Update
+Hour: 03:00 (off-peak hours) Force Update on Reload: ✓</p>
 <p>text</p>
-<p>pfBlockerNG will update the lists daily without manual intervention.</p>
+<p>pfBlockerNG will update the lists daily without manual
+intervention.</p>
 <hr />
 <h2 id="optimisations-wifi">6. WiFi Optimizations</h2>
 <h3 id="positionnement-physique-de-lap">6.1 AP Physical Placement</h3>
-<p><strong>Optimal placement</strong>: - <strong>Height</strong>: 2-2.5
+<p><strong>Optimal Placement</strong>: - <strong>Height</strong>: 2-2.5
 meters from the floor (wall or ceiling mounting) -
 <strong>Centralization</strong>: In the center of the desired coverage
-area - <strong>Avoid</strong>: Reinforced concrete walls, microwaves,
-baby monitors, metal enclosures</p>
+area - <strong>Avoid</strong>: Reinforced concrete walls, microwaves, baby
+monitors, metal enclosures</p>
 <p><strong>Antenna Orientation</strong> (if external): - Vertical for
 omnidirectional horizontal propagation</p>
 <h3 id="optimisations-5-ghz">6.2 5 GHz Optimizations</h3>
 <p><strong>EW1200 Advanced Settings</strong>: Channel Width: 80 MHz
-(better throughput vs 40 MHz) Beamforming: Enable (focus signal towards
+(better throughput vs 40 MHz) Beamforming: Enable (focus signal toward
 clients) LDPC: Enable (advanced error correction) Short GI: Enable
-(reduced guard interval, +10% throughput) Legacy Rates: Disable (force
+(reduced guard interval, +10% throughput) Legacy Rates: Disable (forces
 802.11ac minimum)</p>
 <p>text</p>
 <h3 id="optimisations-2.4-ghz">6.3 2.4 GHz Optimizations</h3>
 <p><strong>Maximum Range Settings</strong>: Channel Width: 20 MHz
 (better range than 40 MHz) Transmit Power: 100% (maximum power) Channel:
-Fixed to 1, 6, or 11 (prevents overlapping) Legacy Support: 802.11n
-minimum (no b/g)</p>
+Fixed to 1, 6, or 11 (avoids overlapping) Legacy Support: 802.11n minimum
+(no b/g)</p>
 <p>text</p>
 <h3 id="sécurité-wifi-renforcée">6.4 Enhanced WiFi Security</h3>
 <p><strong>Encryption Settings</strong>: WPA Version: WPA2-PSK only (no
-WPA/WPA2 mixed) Encryption: AES exclusively (never TKIP) Group Key
-Rekey: 3600 seconds PMF (Protected Management Frames): Enable if
-available WPS: Disable (known security flaw)</p>
+WPA/WPA2 mixed) Encryption: AES exclusively (never TKIP) Group Key Rekey:
+3600 seconds PMF (Protected Management Frames): Enable if available WPS:
+Disable (known security flaw)</p>
 <p>text</p>
 <h3 id="fonctionnalités-avancées">6.5 Advanced Features</h3>
-<p><strong>Fast Roaming</strong> (if multiple future APs): 802.11r (Fast
-Transition): Enable 802.11k (Radio Resource Management): Enable 802.11v
-(BSS Transition Management): Enable</p>
+<p><strong>Fast Roaming</strong> (if future multiple APs): 802.11r
+(Fast Transition): Enable 802.11k (Radio Resource Management): Enable
+802.11v (BSS Transition Management): Enable</p>
 <p>text</p>
 <p><strong>Client Isolation</strong>: AP Isolation: Disable (allows
 inter-client communication)</p>
 <p>text</p>
-<p>Activation only for Guest/IoT networks in future VLAN architecture.</p>
+<p>Activation only for Guest/IoT networks in future VLAN
+architecture.</p>
 <hr />
 <h2 id="surveillance-et-maintenance">7. Monitoring and Maintenance</h2>
 <h3 id="monitoring-pfblockerng">7.1 pfBlockerNG Monitoring</h3>
 <p><strong>Navigation</strong>: Firewall &gt; pfBlockerNG &gt;
 Reports</p>
 <p><strong>Available Statistics</strong>: - Top blocked domains (most
-frequent advertisements) - Clients generating the most blocked queries -
-Temporal trends (peak hours) - Percentage of blocked vs. total
-queries</p>
+frequent advertisements) - Clients generating the most blocked requests -
+Temporal trends (peak hours) - Percentage of blocked vs. total requests</p>
 <p><strong>Recommended Alerts</strong>:</p>
-<p>Configuration of email alerts if the number of blocked domains is abnormal (potential malware).</p>
+<p>Configure email alerts if the number of blocked domains is abnormal
+(potential malware).</p>
 <h3 id="monitoring-wifi-via-ntopng">7.2 WiFi Monitoring via ntopng</h3>
 <p><strong>Navigation</strong>: Diagnostics &gt; ntopng</p>
 <p><strong>Monitored Metrics</strong>: - Bandwidth used per WiFi client -
@@ -462,38 +489,42 @@ Top talkers (highest consuming clients) - Protocols used (HTTP, HTTPS,
 DNS, etc.) - Abnormal throughput alerts</p>
 <h3 id="logs-système">7.3 System Logs</h3>
 <p><strong>Critical Logs to Monitor</strong>:</p>
-<p><strong>System &gt; Logs &gt; System</strong>: - Unexpected
-restarts - Kernel errors</p>
+<p><strong>System &gt; Logs &gt; System</strong>: - Unexpected restarts -
+Kernel errors</p>
 <p><strong>System &gt; Logs &gt; Firewall</strong>: - Blocked connection
 attempts - Port scans</p>
-<p><strong>Services &gt; DNS Resolver &gt; Logs</strong>: - DNS queries
+<p><strong>Services &gt; DNS Resolver &gt; Logs</strong>: - DNS requests
 blocked by pfBlockerNG - DNS resolution errors</p>
 <h3 id="commandes-de-diagnostic">7.4 Diagnostic Commands</h3>
 <p><strong>Via Diagnostics &gt; Command Prompt</strong>:</p>
 <p>pfBlockerNG Status pfctl -t pfB_PRI1_v4 -T show</p>
-<p>Blocked DNS statistics pfctl -s rules | grep DNSBL</p>
+<p>Blocked DNS Statistics pfctl -s rules | grep DNSBL</p>
 <p>WiFi DHCP Clients cat /var/dhcpd/var/db/dhcpd.leases | grep lease</p>
 <p>WiFi Performance (via AP - SSH connection if available) iwinfo wlan0
 info</p>
 <p>text</p>
 <hr />
 <h2 id="sauvegardes-et-documentation">8. Backups and Documentation</h2>
-<h3 id="sauvegarde-configuration-pfsense">8.1 pfSense Configuration Backup</h3>
+<h3 id="sauvegarde-configuration-pfsense">8.1 pfSense Configuration
+Backup</h3>
 <p><strong>Recommended Automation</strong>:</p>
 <p><strong>Navigation</strong>: Diagnostics &gt; Backup &amp;
 Restore</p>
 <p><strong>Automatic Backup Configuration</strong>: ☑ Enable Automatic
 Configuration Backups Backup Count: 30 (last 30 configurations)</p>
 <p>text</p>
-<p><strong>Manual Backup</strong>: - Performed after each major modification - Format: XML - Storage: External cloud backup + local</p>
-<h3 id="sauvegarde-configuration-ew1200">8.2 EW1200 Configuration Backup</h3>
+<p><strong>Manual Backup</strong>: - Performed after each major
+modification - Format: XML - Storage: External cloud backup + local</p>
+<h3 id="sauvegarde-configuration-ew1200">8.2 EW1200 Configuration
+Backup</h3>
 <p><strong>Via AP web interface</strong>:</p>
-<p>Exporting the complete configuration in proprietary format. Storage identical to pfSense backups.</p>
+<p>Export the complete configuration in the proprietary format. Storage
+identical to pfSense backups.</p>
 <h3 id="documentation-réseau">8.3 Network Documentation</h3>
 <p><strong>Maintained Files</strong>: -
 <strong>network_diagram.md</strong>: Complete architecture diagram -
 <strong>ip_allocation.md</strong>: Static IP allocation table -
-<strong>wifi_config.md</strong>: WiFi parameters (SSID, channels,
+<strong>wifi_config.md</strong>: WiFi settings (SSID, channels,
 security) - <strong>changelog.md</strong>: Configuration modification
 history</p>
 <hr />
@@ -511,49 +542,49 @@ Smartphones │ │ - Tablets │ │ - IoT (pfBlockerNG protected)│
 └─────────────────────────────┘</p>
 <p>text</p>
 <h3 id="flux-de-trafic">9.2 Traffic Flow</h3>
-<p><strong>Web Navigation from WiFi client</strong>: WiFi Client → DNS
+<p><strong>Web Browsing from WiFi client</strong>: WiFi Client → DNS
 Request → pfSense (Unbound)</p>
 <p>pfSense → pfBlockerNG DNSBL Check</p>
 <p>If domain blocked: Return VIP IP (block page)</p>
-<p>If domain legitimate: Forward to upstream DNS</p>
+<p>If legitimate domain: Forward to upstream DNS</p>
 <p>DNS Resolution → Return IP to client</p>
 <p>Client → HTTP/HTTPS Request → pfSense Firewall</p>
 <p>pfSense → Suricata IPS Inspection</p>
 <p>Authorized Traffic → Forward to WAN → Internet</p>
 <p>text</p>
 <hr />
-<h2 id="performances-et-statistiques">10. Performance and Statistics</h2>
-<h3 id="métriques-obtenues">10.1 Achieved Metrics</h3>
-<p><strong>WiFi Latency</strong> (ping to pfSense): - 2.4 GHz: 2-5 ms - 5
-GHz: 1-3 ms</p>
+<h2 id="performances-et-statistiques">10. Performance and
+Statistics</h2>
+<h3 id="métriques-obtenues">10.1 Metrics Obtained</h3>
+<p><strong>WiFi Latency</strong> (ping to pfSense): - 2.4 GHz: 2-5 ms
+- 5 GHz: 1-3 ms</p>
 <p><strong>WiFi Throughput</strong> (iperf3 tests): - 2.4 GHz: 80-120
 Mbps actual - 5 GHz: 300-500 Mbps actual (depending on distance and
 obstacles)</p>
-<p><strong>Advertisement Blocking</strong>: - Blocked DNS queries:
-20-40% of total traffic - Unique blocked domains: 500k-1M+ depending on
-activated lists</p>
+<p><strong>Ad Blocking</strong>: - Blocked DNS requests: 20-40% of
+total traffic - Unique blocked domains: 500k-1M+ depending on activated
+lists</p>
 <p><strong>pfSense CPU Load</strong> (with Suricata + pfBlockerNG): -
-Idle: 10-20% - Standard web browsing: 25-35% - Saturated download:
-40-60%</p>
-<h3 id="consommation-électrique">10.2 Power Consumption</h3>
-<p><strong>Measurements Obtained</strong>: - pfSense Zotac CI337: 15-25W -
-EW1200 (via adapter): 10-12W - <strong>Total Infrastructure</strong>:
+Idle: 10-20% - Standard web browsing: 25-35% - Saturated download: 40-60%</p>
+<h3 id="consommation-électrique">10.2 Electrical Consumption</h3>
+<p><strong>Measurements Obtained</strong>: - pfSense Zotac CI337: 15-25W
+- EW1200 (via adapter): 10-12W - <strong>Total infrastructure</strong>:
 ~35-40W (24/7)</p>
-<p><strong>Annual electricity cost</strong> (at €0.15/kWh): 40W × 24h ×
+<p><strong>Annual Electrical Cost</strong> (at €0.15/kWh): 40W × 24h ×
 365d / 1000 × €0.15 = ~€52/year</p>
 <p>text</p>
 <hr />
 <h2 id="troubleshooting-courants">11. Common Troubleshooting</h2>
 <h3 id="problème-pas-daccès-internet-depuis-wifi">11.1 Problem: No
 Internet Access from WiFi</h3>
-<p><strong>Checks</strong>: 1. Do clients get the correct DHCP IP? 2. Is
-the gateway configured = pfSense IP? 3. Is DNS configured = pfSense IP?
-4. Does the LAN → Any firewall rule exist? 5. Is the pfSense WAN
-interface functional?</p>
+<p><strong>Checks</strong>: 1. Are clients getting the correct DHCP IP?
+2. Is the configured Gateway = pfSense IP? 3. Is the configured DNS =
+pfSense IP? 4. Does the LAN → Any firewall rule exist? 5. Is the pfSense
+WAN interface functional?</p>
 <p><strong>Typical Solution</strong>: - Check <strong>Firewall &gt;
 Rules &gt; LAN</strong> : “Default allow LAN to any” rule is active</p>
-<h3 id="problème-sites-légitimes-bloqués-par-pfblockerng">11.2 Problem:
-Legitimate Sites Blocked by pfBlockerNG</h3>
+<h3 id="problème-sites-légitimes-bloqués-par-pfblockerng">11.2
+Problem: Legitimate Sites Blocked by pfBlockerNG</h3>
 <p><strong>Diagnosis</strong>:</p>
 <p>Consult <strong>Firewall &gt; pfBlockerNG &gt; Reports</strong> to
 identify the blocked domain.</p>
@@ -562,24 +593,24 @@ identify the blocked domain.</p>
 overly aggressive feed 3. Create exception per client (IP alias)</p>
 <h3 id="problème-wifi-5-ghz-invisible">11.3 Problem: Invisible 5 GHz
 WiFi</h3>
-<p><strong>Common Causes</strong>: - DFS channel occupied (36-48 safe,
-52+ can be blocked) - Incorrect region configured (some channels
+<p><strong>Frequent Causes</strong>: - DFS Channel occupied (36-48 safe,
+52+ may be blocked) - Incorrectly configured region (some channels
 prohibited) - Client device incompatible with 802.11ac</p>
 <p><strong>Solutions</strong>: - Fix 5 GHz channel to 36 or 40 - Check
 region = Morocco or Europe - Test with another 5 GHz compatible client</p>
 <h3 id="problème-déconnexions-wifi-fréquentes">11.4 Problem: Frequent
 WiFi Disconnections</h3>
-<p><strong>Optimizations</strong>: 1. Reduce Transmit Power if too strong
-(paradoxically) 2. Fix channels (avoid Auto) 3. Disable Power Saving on
-clients 4. Firmware update EW1200 if available 5. Check for
-interferences (WiFi Analyzer app)</p>
+<p><strong>Optimizations</strong>: 1. Reduce Transmit Power if too
+strong (paradoxically) 2. Fix channels (avoid Auto) 3. Disable Power
+Saving on clients 4. EW1200 firmware update if available 5. Check for
+interference (WiFi Analyzer app)</p>
 <hr />
 <h2 id="sécurité-renforcée">12. Enhanced Security</h2>
 <h3 id="règles-firewall-strictes">12.1 Strict Firewall Rules</h3>
 <p><strong>Philosophy</strong>: Deny by default, allow
 explicitly.</p>
-<p><strong>Automatic Anti-lockout rule</strong>: - pfSense
-automatically creates a rule allowing WebGUI access from LAN</p>
+<p><strong>Automatic anti-lockout rule</strong>: - pfSense automatically
+creates a rule allowing WebGUI access from LAN</p>
 <p><strong>Custom Rules Created</strong>: LAN → pfSense (port 443/80):
 Allow (WebGUI)</p>
 <p>LAN → pfSense (port 53): Allow (DNS)</p>
@@ -589,38 +620,52 @@ Allow (WebGUI)</p>
 <h3 id="prévention-intrusions-suricata">12.2 Intrusion Prevention
 (Suricata)</h3>
 <p><strong>Minimum Active Configuration</strong>: - WAN Interface: IPS
-inline mode (blocks attacks) - ET Open Rules: Enabled (common signatures)
-- Logging: Enable for post-incident analysis</p>
-<p><strong>Categories Activated</strong>: - emerging-attack_response -
+inline mode (blocks attacks) - ET Open Rules: Activated (common
+signatures) - Logging: Enable for post-incident analysis</p>
+<p><strong>Categories activated</strong>: - emerging-attack_response -
 emerging-dos - emerging-exploit - emerging-malware - emerging-scan</p>
 <h3 id="mises-à-jour-automatiques">12.3 Automatic Updates</h3>
 <p><strong>pfSense</strong>: - Weekly check for update availability -
 Manual update after reading changelog</p>
-<p><strong>pfBlockerNG</strong>: - DNSBL Lists: Automatic daily update
-(03h) - IP Lists: Automatic daily update (03h)</p>
-<p><strong>Suricata</strong>: - ET Open Rules: Automatic daily update</p>
+<p><strong>pfBlockerNG</strong>: - DNSBL Lists: Daily automatic update
+(03h) - IP Lists: Daily automatic update (03h)</p>
+<p><strong>Suricata</strong>: - ET Open Rules: Daily automatic update</p>
 <hr />
-<h2 id="évolutions-futures-préparées">13. Prepared Future Evolutions</h2>
+<h2 id="évolutions-futures-préparées">13. Prepared Future
+Developments</h2>
 <h3 id="support-vlans-intégré">13.1 Integrated VLAN Support</h3>
-<p>The EW1200 natively supports 802.1Q VLANs, allowing for future
-segmentation: - VLAN 10: Primary LAN (existing) - VLAN 30: IoT (isolated
-connected objects) - VLAN 99: Guest (guests without LAN access)</p>
+<p>The EW1200 natively supports 802.1Q VLANs, allowing future
+segmentation: - VLAN 10: Main LAN (existing) - VLAN 30: IoT (isolated
+connected devices) - VLAN 99: Guest (guests without LAN access)</p>
 <p><strong>Future Configuration</strong>: Multiple SSIDs on EW1200 with
-VLAN tagging to a managed switch.</p>
+VLAN tagging towards managed switch.</p>
 <h3 id="haute-disponibilité-ha">13.2 High Availability (HA)</h3>
 <p><strong>CARP Preparation</strong> (Common Address Redundancy
 Protocol): - Future possibility to add a second pfSense in HA - Virtual
 IP shared between the two - Automatic failover if primary fails</p>
 <h3 id="vpn-site-to-site">13.3 Site-to-Site VPN</h3>
 <p><strong>WireGuard already installed</strong>: - Future configuration
-to connect remote sites - Or secure nomadic access (road warrior)</p>
+for connecting remote sites - Or secure remote access (road warrior)</p>
 <hr />
 <h2 id="conclusion-partie-2">Conclusion Part 2</h2>
-<p>We successfully deployed a professional WiFi infrastructure with a high-performance dual-band access point, integrated into pfSense. The advertisement and malware blocking system via pfBlockerNG is operational, automatically protecting all network clients without requiring individual configuration.</p>
-<p>The current architecture offers: - <strong>Enhanced security</strong>: pfSense Firewall + Suricata IDS + pfBlockerNG AdBlock - <strong>Optimal performance</strong>: Theoretical AC dual-band 1200 Mbps WiFi - <strong>Scalability</strong>: Native VLAN support for future segmentation - <strong>Stability</strong>: Optimized drivers, professional equipment - <strong>Complete monitoring</strong>: ntopng + centralized logs</p>
-<p><strong>Cumulative Total Investment</strong>: €85 (pfSense) + €27 (EW1200) = <strong>€112</strong> <strong>Part 2 Configuration Time</strong>: ~2-3 hours <strong>Status</strong>: ✅ Production-ready with advanced protection</p>
+<p>We successfully deployed a professional WiFi infrastructure with a
+high-performance dual-band access point, integrated with pfSense. The ad
+and malware blocking system via pfBlockerNG is operational, automatically
+protecting all network clients without individual configuration.</p>
+<p>The current architecture offers: - <strong>Enhanced Security</strong>:
+pfSense Firewall + Suricata IDS + pfBlockerNG AdBlock -
+<strong>Optimal Performance</strong>: Theoretical 1200 Mbps dual-band AC
+WiFi - <strong>Scalability</strong>: Native VLAN support for future
+segmentation - <strong>Stability</strong>: Optimized drivers,
+professional hardware - <strong>Comprehensive Monitoring</strong>: ntopng
++ centralized logs</p>
+<p><strong>Cumulative Total Investment</strong>: €85 (pfSense) + €27
+(EW1200) = <strong>€112</strong> <strong>Configuration Time for Part
+2</strong>: ~2-3 hours <strong>Status</strong>: ✅ Production-ready with
+advanced protection</p>
 <hr />
-<p><em>Document written as part of a homelab project for network segmentation and infrastructure security with integrated ad blocking.</em></p>
+<p><em>Document written as part of a homelab project for network
+segmentation and infrastructure security with integrated ad blocking.</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -680,3 +725,4 @@ to connect remote sites - Or secure nomadic access (road warrior)</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
+---

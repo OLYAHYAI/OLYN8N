@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Roadmap Infrastructure - Technical tutorial and guide">
-    <meta name="keywords" content="homelab">
+    <meta name="description" content="Maîtrisez l'infrastructure, la sécurité réseau et l'automatisation IT avec ce guide de référence complet. Solutions pratiques, bonnes pratiques et optimisati...">
+    <meta name="keywords" content="Infrastructure, Sécurité-réseau, Automatisation, Administration-système, Guide-technique, Référence, IT-Ops">
     <meta name="author" content="OLYAHYAI">
 
     <title>Roadmap Infrastructure | Omar LYAHYAI Technical Blog</title>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-tags"></i>
-                        <span>homelab</span>
+                        <span>Infrastructure, Sécurité-réseau, Automatisation, Administration-système, Guide-technique, Référence, IT-Ops</span>
                     </div>
                 </div>
             </div>
@@ -283,27 +283,15 @@ investi</strong>: 112€</p>
 <ul>
 <li>✅ <strong>Mini PC Zotac ZBOX CI337 nano</strong> (85€)
 <ul>
-<li>Intel N100, 8GB DDR5, 128GB NVMe</li>
+<li>Intel N100, 8GB DDR5, 128GB SSD</li>
 <li>2x Realtek GbE optimisés (realtek-re-kmod)</li>
 <li>pfSense 2.8.1 installé et opérationnel</li>
-<li>Rôle: Firewall/Router principal</li>
 </ul></li>
 <li>✅ <strong>Access Point Afoundry EW1200</strong> (27€)
 <ul>
 <li>WiFi AC1200 dual-band (2.4 + 5 GHz)</li>
 <li>Support VLAN 802.1Q natif</li>
-<li>Multiple SSID (jusqu'à 8)</li>
-<li>Connecté au LAN pfSense (réseau interne homelab)</li>
-</ul></li>
-</ul>
-<h4 id="architecture-segmentée">Architecture Segmentée WAN/LAN</h4>
-<ul>
-<li>✅ <strong>Séparation WAN/LAN complète</strong>
-<ul>
-<li><strong>WAN</strong>: Box ISP → pfSense (interface WAN)</li>
-<li><strong>LAN Homelab</strong>: pfSense (interface LAN) → Afoundry EW1200 → Clients</li>
-<li>Isolation totale du réseau homelab par rapport au réseau ISP</li>
-<li>Tout le trafic homelab passe par pfSense (filtrage, IDS, logs)</li>
+<li>Multiple SSID (jusqu’à 8)</li>
 </ul></li>
 </ul>
 <h4 id="logiciels-et-services">Logiciels et Services</h4>
@@ -327,27 +315,12 @@ filtering</li>
 </ul>
 <h4 id="architecture-réseau">Architecture Réseau</h4>
 <ul>
-<li>✅ <strong>Topologie segmentée en place</strong>:
-<pre>
-Internet ─→ Box ISP (WAN routeur)
-                │
-                ▼
-         pfSense Zotac N100
-         ┌──────┴──────┐
-         │ WAN        LAN │
-         │ (Box ISP)  (Homelab) │
-         └──────┬──────┘
-                │
-                ▼
-         Afoundry EW1200 (AP)
-                │
-                ▼
-         Clients WiFi Homelab
-</pre>
-</li>
-<li>✅ <strong>Segmentation réseau</strong>: WAN ISP isolé du LAN Homelab</li>
-<li>✅ <strong>Services actifs</strong>: DHCP, DNS, Firewall, AdBlock (pfBlockerNG), IDS (Suricata)</li>
+<li>✅ <strong>Topologie simple en place</strong>: Internet → Box ISP →
+pfSense (WAN+LAN) → EW1200 AP → Clients WiFi</li>
 </ul>
+<p>text - ✅ <strong>Segmentation préliminaire</strong>: 1 VLAN (LAN
+principal) - ✅ <strong>Services actifs</strong>: DHCP, DNS, Firewall,
+AdBlock, IDS</p>
 <h4 id="sécurité-implémentée">Sécurité Implémentée</h4>
 <ul>
 <li><p>✅ <strong>Blocage publicitaire actif</strong> (pfBlockerNG
