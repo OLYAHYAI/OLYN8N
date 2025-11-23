@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mise en place d'un flux de travail de documentation automatisé : les modifications Obsidian se synchronisent automatiquement via inotify et Git, déclenchant des actions GitHub pour un déploiement en direct en quelques minutes.">
-    <meta name="keywords" content="homelab">
+    <meta name="description" content="Automatiser le déploiement de la documentation Obsidian. Utiliser les observateurs de fichiers (inotify), systemd et les scripts Git pour synchroniser instantanément les notes sur GitHub et déclencher la mise à jour du site en direct...">
+    <meta name="keywords" content="Obsidian, Automation, Git, inotify, systemd, synchronization">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Synchronisation Automatique d'Obsidian vers un Site Web GitHub | Blog Technique d'Omar LYAHYAI</title>
+    <title>Synchronisation Automatique d'Obsidian Vers un Site Web GitHub | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/automation_ai.html">Automatisation & IA</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Synchronisation Automatique d'Obsidian vers un Site Web GitHub</span>
+                        <span>Synchronisation Automatique d'Obsidian Vers un Site Web GitHub</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Synchronisation Automatique d'Obsidian vers un Site Web GitHub</h1>
+                <h1 class="article-title">Synchronisation Automatique d'Obsidian Vers un Site Web GitHub</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -81,7 +81,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="far fa-clock"></i>
-                        <span>5 min de lecture</span>
+                        <span>Lecture de 5 min</span>
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-folder"></i>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-tags"></i>
-                        <span>homelab</span>
+                        <span>Obsidian, Automation, Git, inotify, systemd, synchronisation</span>
                     </div>
                 </div>
             </div>
@@ -117,19 +117,21 @@ CRITICAL RULES:
 ❌ DON'T: Remove quotes from title/date/description
 
 The workflow will:
-- Detect language automatically from your content
-- Generate English + French versions
-- Create full HTML with navigation
-- Preserve images and links
+- Détecter automatiquement la langue à partir de votre contenu
+- Générer les versions Anglaise + Française
+- Créer le HTML complet avec la navigation
+- Conserver les images et les liens
 -->
-<h1 id="mode-opératoire-obsidian-auto-sync-system">🔄 Mode Opératoire : Système d'Auto-Synchronisation Obsidian</h1>
+<h1 id="mode-opératoire-obsidian-auto-sync-system">🔄 Mode Opératoire :
+Système d'Auto-Synchronisation Obsidian</h1>
 <h2 id="overview">📋 Vue d'ensemble</h2>
-<p><strong>Objectif :</strong> Synchroniser automatiquement les modifications de la documentation Obsidian vers GitHub et déployer sur le site Web en direct.</p>
-<p><strong>Flux :</strong></p>
+<p><strong>Objectif:</strong> Synchroniser automatiquement les modifications de la documentation
+Obsidian vers GitHub et déployer sur le site web en direct.</p>
+<p><strong>Flux:</strong></p>
 <pre><code>Edit in Obsidian → Auto-detect (5s) → Git Commit → Push to GitHub → Jekyll Build → Live Website</code></pre>
-<p><strong>Temps total :</strong> ~2-3 minutes entre la modification et le déploiement en direct</p>
+<p><strong>Temps total:</strong> ~2-3 minutes entre la modification et le déploiement en direct</p>
 <hr />
-<h2 id="current-implementation-option-1-file-watcher-git">🎯 Implémentation Actuelle : Option 1 (Moniteur de Fichiers + Git)</h2>
+<h2 id="current-implementation-option-1-file-watcher-git">🎯 Implémentation Actuelle : Option 1 (Observateur de Fichiers + Git)</h2>
 <h3 id="system-architecture">Architecture du Système</h3>
 <pre><code>┌─────────────────┐
 │  Obsidian Edit  │
@@ -179,14 +181,18 @@ The workflow will:
 <h3 id="prerequisites">Prérequis</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="" />Système Linux Ubuntu/Debian</label></li>
-<li><label><input type="checkbox" checked="" />Git installé</label></li>
-<li><label><input type="checkbox" checked="" />Obsidian avec les coffres ProjectEN et ProjectFR_new</label></li>
-<li><label><input type="checkbox" checked="" />Compte GitHub (OLYAHYAI)</label></li>
-<li><label><input type="checkbox" checked="" />Dépôt : OLYAHYAI/Portfolio</label></li>
+<li><label><input type="checkbox" checked="" />Git
+installé</label></li>
+<li><label><input type="checkbox" checked="" />Obsidian avec les coffres (vaults) ProjectEN et ProjectFR_new</label></li>
+<li><label><input type="checkbox" checked="" />Compte GitHub
+(OLYAHYAI)</label></li>
+<li><label><input type="checkbox" checked="" />Dépôt :
+OLYAHYAI/Portfolio</label></li>
 </ul>
 <h3 id="step-1-git-authentication-one-time">Étape 1 : Authentification Git (UNE SEULE FOIS)</h3>
-<p><strong>Choisissez UNE méthode :</strong></p>
-<h4 id="option-a-github-cli-recommended">Option A : GitHub CLI (Recommandé)</h4>
+<p><strong>Choisir UNE méthode:</strong></p>
+<h4 id="option-a-github-cli-recommended">Option A : GitHub CLI
+(Recommandé)</h4>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div>
 <h4 id="option-b-ssh-key-most-secure">Option B : Clé SSH (La plus Sécurisée)</h4>
@@ -196,7 +202,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to: https://github.com/settings/keys</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/f4blox/Desktop/Gemini/opencode/openproject/OpenProject</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-url origin git@github.com:OLYAHYAI/Portfolio.git</span></code></pre></div>
-<h4 id="option-c-credential-helper">Option C : Aide d'Identification</h4>
+<h4 id="option-c-credential-helper">Option C : Assistant d'Identification (Credential Helper)</h4>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper store</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/f4blox/Desktop/Gemini/opencode/openproject/OpenProject</span>
@@ -209,27 +215,28 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start obsidian-github-sync</span></code></pre></div>
 <h3 id="step-3-enable-github-pages">Étape 3 : Activer GitHub Pages</h3>
 <ol type="1">
-<li>Visitez : https://github.com/OLYAHYAI/Portfolio/settings/pages</li>
+<li>Visiter : https://github.com/OLYAHYAI/Portfolio/settings/pages</li>
 <li>Source : main / (racine)</li>
 <li>Enregistrer</li>
 </ol>
 <hr />
 <h2 id="daily-operations">🔧 Opérations Quotidiennes</h2>
-<p><strong>Utilisation Normale :</strong> 1. Modifier dans Obsidian 2. Enregistrer (Ctrl+S) 3. Auto-synchronisation en 5 secondes 4. En direct en ~2 minutes</p>
-<p><strong>Synchronisation Manuelle :</strong></p>
+<p><strong>Utilisation Normale:</strong> 1. Modifier dans Obsidian 2. Enregistrer (Ctrl+S)
+3. Synchronisation automatique en 5 secondes 4. En direct en ~2 minutes</p>
+<p><strong>Synchronisation Manuelle:</strong></p>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/f4blox/Desktop/Gemini/opencode/scripts/sync-now.sh</span></span></code></pre></div>
-<p><strong>Surveillance :</strong></p>
+<p><strong>Surveillance:</strong></p>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl status obsidian-github-sync</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> journalctl <span class="at">-u</span> obsidian-github-sync <span class="at">-f</span></span></code></pre></div>
 <hr />
 <h2 id="future-options-documented">🔮 Options Futures (Documentées)</h2>
-<h3 id="option-2-mcp-n8n-ai-workflows">Option 2 : MCP + N8N (Flux de Travail IA)</h3>
+<h3 id="option-2-mcp-n8n-ai-workflows">Option 2 : MCP + n8n (Workflows d'IA)</h3>
 <ul>
-<li>Messages de commit pilotés par l'IA</li>
+<li>Messages de commit alimentés par l'IA</li>
 <li>Validation du contenu</li>
-<li>Intégration multi-services</li>
+<li>Intégration multiservice</li>
 <li>Configuration : 30-60 min</li>
 </ul>
 <h3 id="option-6-claude-content-enhancement">Option 6 : Claude + Amélioration du Contenu</h3>
@@ -242,7 +249,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 <li>Traduction automatique AN ↔︎ FR</li>
 <li>Configuration : 1-2 heures</li>
 </ul>
-<p><strong>Documentation :</strong>
+<p><strong>Documentation:</strong>
 <code>/opencode/conscience/updates/action-35-sync-options-analysis.md</code></p>
 <hr />
 <h2 id="resources">📚 Ressources</h2>
@@ -253,8 +260,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 <li>Dépôt : https://github.com/OLYAHYAI/Portfolio</li>
 </ul>
 <hr />
-<p><strong>Dernière mise à jour :</strong> 2025-10-29 <strong>Version :</strong>
-1.0 <strong>Statut :</strong> Prêt pour le déploiement
+<p><strong>Dernière Mise à Jour:</strong> 2025-10-29 <strong>Version:</strong>
+1.0 <strong>Statut:</strong> Prêt au déploiement
 <!-- Touched: Wed Nov 19 13:33:27 +01 2025 -->
 <!-- Touched: Wed Nov 19 14:03:35 +01 2025 -->
 <!-- Touched: Wed Nov 19 15:04:19 +01 2025 --></p>
@@ -285,7 +292,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connexion</h4>
+                    <h4>Se connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>

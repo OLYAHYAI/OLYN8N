@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration - Technical tutorial and guide">
-    <meta name="keywords" content="homelab">
+    <meta name="description" content="Initial configuration guide for the Proxmox server (web access, static IP, network interfaces) on a Lenovo ThinkCentre M920q.">
+    <meta name="keywords" content="Proxmox, Homelab, Configuration, Network, Linux, ThinkCentre, Server">
     <meta name="author" content="OLYAHYAI">
 
     <title>Building The Homelab Foundation: Proxmox Ve Installation And Initial Configuration | Omar LYAHYAI Technical Blog</title>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-tags"></i>
-                        <span>homelab</span>
+                        <span>Proxmox, Homelab, Configuration, Network, Linux, ThinkCentre, Server</span>
                     </div>
                 </div>
             </div>
@@ -129,50 +129,54 @@ The workflow will:
 <ul>
 <li>CPU : Intel i5-8500T</li>
 <li>RAM : 16 Go</li>
-<li>Primary Drive : 512 GB SSD</li>
-<li>Secondary Drive : 250 GB HDD</li>
+<li>Main Disk : SSD 512 Go</li>
+<li>Secondary Disk : HDD 250 Go</li>
 </ul></li>
 <li><strong>Proxmox Server IP Address</strong> : 10.10.10.254</li>
 </ul>
 <hr />
-<h2 id="connexion-à-linterface-web-proxmox">1. ✅ Connecting to the Proxmox Web Interface</h2>
+<h2 id="connexion-à-linterface-web-proxmox">1. ✅ Connecting to the
+Proxmox Web Interface</h2>
 <ul>
 <li>Access via browser at <code>https://10.10.10.254:8006</code></li>
 <li>Credentials : root
 <ul>
 <li>User : <code>root</code></li>
-<li>Domaine : <code>pam</code></li>
-<li>Password : set during installation</li>
+<li>Domain : <code>pam</code></li>
+<li>Password: defined during installation</li>
 </ul></li>
 </ul>
 <hr />
-<h2 id="connexion-ethernet-entre-routeur-et-serveur">2. 🔌 Ethernet Connection Between Router and Server</h2>
+<h2 id="connexion-ethernet-entre-routeur-et-serveur">2. 🔌 Ethernet
+Connection Between Router and Server</h2>
 <ul>
 <li>Direct connection via Ethernet cable</li>
-<li>Manual IP configuration:
+<li>Manual IP configuration :
 <ul>
 <li>PC1 : <code>192.168.1.1</code></li>
 <li>PC2 : <code>192.168.1.254</code></li>
 <li>Netmask : <code>255.255.255.0</code></li>
 </ul></li>
-<li>Goal : direct communication between the two machines</li>
+<li>Objective: direct communication between the two machines</li>
 </ul>
 <hr />
-<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Wi-Fi Check via Command Line</h2>
+<h2 id="vérification-du-wi-fi-en-ligne-de-commande">3. 📡 Checking
+Wi-Fi via Command Line</h2>
 <ul>
-<li>Commands used:
+<li>Commands used :
 <ul>
 <li><code>ip a</code> → list network interfaces</li>
 <li><code>lspci | grep -i network</code> → detect network cards</li>
 <li><code>iw dev</code> → Wi-Fi interfaces</li>
-<li><code>lsusb</code> → USB devices (Wi-Fi dongle)</li>
+<li><code>lsusb</code> → USB devices (Wi-Fi key)</li>
 </ul></li>
 </ul>
 <hr />
-<h2 id="changement-dadresse-ip-du-serveur-proxmox">4. 🌐 Changing the Proxmox Server IP Address</h2>
+<h2 id="changement-dadresse-ip-du-serveur-proxmox">4. 🌐 Changing
+the Proxmox Server IP Address</h2>
 <ul>
-<li><p>Modified file : <code>/etc/network/interfaces</code></p></li>
-<li><p>Configuration example:</p>
+<li><p>File modified : <code>/etc/network/interfaces</code></p></li>
+<li><p>Configuration example :</p>
 <pre><code>auto vmbr0
 iface vmbr0 inet static
     address 10.10.10.254
@@ -185,7 +189,8 @@ iface vmbr0 inet static
 <code>systemctl restart networking</code></p></li>
 </ul>
 <hr />
-<h2 id="utilisation-dune-image-iso-depuis-le-laptop">5. 📦 Using an ISO Image from the Laptop</h2>
+<h2 id="utilisation-dune-image-iso-depuis-le-laptop">5. 📦 Using
+an ISO image from the laptop</h2>
 <ul>
 <li>Methods :
 <ul>
@@ -194,18 +199,19 @@ iface vmbr0 inet static
 <li>SCP :
 <code>scp fichier.iso root@10.10.10.254:/var/lib/vz/template/iso/</code></li>
 </ul></li>
-<li>Goal : create a VM using a customized ISO image</li>
+<li>Objective: create a VM with a customized ISO image</li>
 </ul>
 <hr />
-<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Selecting LLMs adapted for the machine</h2>
+<h2 id="choix-de-llm-adaptés-à-la-machine">6. 🧠 Choosing LLMs
+suitable for the machine</h2>
 <ul>
-<li>Recommended Models :
+<li>Recommended models :
 <ul>
 <li>Mistral 7B Q4</li>
 <li>Phi-2</li>
 <li>Gemma 2B</li>
 </ul></li>
-<li>Compatible Tools :
+<li>Compatible tools :
 <ul>
 <li><code>Ollama</code></li>
 <li><code>llama.cpp</code></li>
@@ -213,7 +219,8 @@ iface vmbr0 inet static
 </ul></li>
 </ul>
 <hr />
-<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installing Docker + MCP + LLM</h2>
+<h2 id="installation-de-docker-mcp-llm">7. 🐳 Installation of Docker
++ MCP + LLM</h2>
 <ul>
 <li><p>Docker :</p>
 <div class="sourceCode" id="cb2"><pre
@@ -226,16 +233,19 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div></li>
 </ul>
 <hr />
-<h2 id="outils-de-prise-de-notes-recommandés">8. 📝 Recommended Note-Taking Tools</h2>
+<h2 id="outils-de-prise-de-notes-recommandés">8. 📝 Recommended
+Note-Taking Tools</h2>
 <ul>
 <li><strong>Obsidian</strong> : local, markdown, links between notes</li>
 <li><strong>Joplin</strong> : open-source, synchronizable</li>
-<li><strong>Logseq / Trilium</strong> : Docker deployable</li>
+<li><strong>Logseq / Trilium</strong> : Docker possible</li>
 <li><strong>Notion</strong> : cloud, project management</li>
-<li><strong>Markdown + Git</strong> : versioning technical notes</li>
+<li><strong>Markdown + Git</strong> : versioning of technical
+notes</li>
 </ul>
 <hr />
-<h2 id="choix-dun-os-pour-gérer-le-réseau">9. 🔐 Choosing an OS for Network Management</h2>
+<h2 id="choix-dun-os-pour-gérer-le-réseau">9. 🔐 Choosing an OS for
+Network Management</h2>
 <ul>
 <li><strong>pfSense</strong> : firewall, VPN, DHCP, DNS, VLAN</li>
 <li><strong>OPNsense</strong> : modern alternative</li>
@@ -243,7 +253,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <li><strong>Ubuntu Server</strong> : customizable with network tools</li>
 </ul>
 <hr />
-<h2 id="surveillance-et-limitation-du-trafic-avec-pfsense">10. 📊 Monitoring and Traffic Shaping with pfSense</h2>
+<h2 id="surveillance-et-limitation-du-trafic-avec-pfsense">10. 📊
+Monitoring and Limiting Traffic with pfSense</h2>
 <ul>
 <li><strong>Monitoring</strong> :
 <ul>
@@ -251,21 +262,22 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <li>Packet Capture</li>
 <li>IDS/IPS (Snort, Suricata)</li>
 </ul></li>
-<li><strong>Shaping/Limiting</strong> :
+<li><strong>Limiting</strong> :
 <ul>
 <li>Traffic Shaping (pipes, queues)</li>
-<li>Firewall Rules</li>
+<li>Firewall rules</li>
 <li>Proxy Squid + SquidGuard</li>
 </ul></li>
 </ul>
 <hr />
-<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Using a 250 GB HDD</h2>
+<h2 id="utilisation-dun-disque-dur-hdd-250-gb">11. 💾 Using a Hard
+Disk Drive (HDD, 250 GB)</h2>
 <ul>
 <li><p><strong>Recommended Usage</strong> :</p>
 <ul>
 <li>Backups</li>
 <li>Logs</li>
-<li>ISO / LLM templates</li>
+<li>ISO / LLM Models</li>
 </ul></li>
 <li><p><strong>Formatting</strong> :</p>
 <div class="sourceCode" id="cb5"><pre
@@ -283,7 +295,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 </ul></li>
 </ul>
 <hr />
-<h2 id="fin-de-session">🔚 Session End</h2>
+<h2 id="fin-de-session">🔚 End of Session</h2>
 <ul>
 <li>All steps are ready to be documented in Obsidian.</li>
 <li>Proxmox Server IP Address : <code>10.10.10.254</code></li>
@@ -347,3 +359,4 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
+---
