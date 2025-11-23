@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Saga des certificats Ssl Dns Local Nginx Homelab - Tutoriel et guide technique">
-    <meta name="keywords" content="homelab">
+    <meta name="description" content="Configurez un accès HTTPS sécurisé pour votre homelab en utilisant la résolution DNS locale Bind9, Nginx Proxy Manager et les certificats SSL Let's Encrypt pour les services internes.">
+    <meta name="keywords" content="homelab, HTTPS, SSL, Bind9, Nginx-Proxy-Manager, DNS, security">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Saga des certificats Ssl Dns Local Nginx Homelab | Blog Technique d'Omar LYAHYAI</title>
+    <title>La Saga du Certificat SSL DNS Local Nginx Homelab | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -25,7 +25,7 @@
     <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <div class="container">
                 <div class="nav-brand">
                     <a href="/index.html" class="logo">
@@ -40,7 +40,7 @@
 
                 <ul class="nav-menu">
                     <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
-                    <li><a href="/index.html#about" class="nav-link">À Propos</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
                     <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
                     <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
                     <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/fr/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html" class="lang-toggle" aria-label="Changer de langue">
-                        <span class="lang-current">FR</span>
+                    <a href="/en/network_security/ssl-certificate-saga-local-dns-nginx-homelab.html" class="lang-toggle" aria-label="Changer la langue">
+                        <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/network_security.html">Sécurité Réseau</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Saga des certificats Ssl Dns Local Nginx Homelab</span>
+                        <span>La Saga du Certificat SSL DNS Local Nginx Homelab</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Saga des certificats Ssl Dns Local Nginx Homelab</h1>
+                <h1 class="article-title">La Saga du Certificat SSL DNS Local Nginx Homelab</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-tags"></i>
-                        <span>homelab</span>
+                        <span>homelab, HTTPS, SSL, Bind9, Nginx-Proxy-Manager, DNS, security</span>
                     </div>
                 </div>
             </div>
@@ -126,14 +126,14 @@ The workflow will:
 <h2 id="project-goal">Objectif du Projet</h2>
 <p>Configurer un environnement local sécurisé avec : - Domaine public
 <code>olyhome.site</code> (acheté chez Hostinger) - Serveur DNS local
-(Bind9) pour gérer les sous-domaines internes - Nginx Proxy Manager (NPM) pour le
-proxy inverse - Sous-domaines locaux sécurisés par HTTPS (par exemple,
+(Bind9) pour gérer les sous-domaines internes - Nginx Proxy Manager (NPM) pour
+proxy inverse - Sous-domaines locaux sécurisés par HTTPS (par ex.,
 <code>proxmox.olyhome.site</code>, <code>n8n.olyhome.site</code>) -
 Sans exposer les services à Internet</p>
 <h2 id="architecture-overview">Aperçu de l'Architecture</h2>
-<pre><code>Local Network
+<pre><code>Réseau Local
     ↓
-Bind9 (Local DNS)
+Bind9 (DNS Local)
 ├── proxmox.olyhome.site → 192.168.11.100
 ├── n8n.olyhome.site → 192.168.11.100
 └── db.olyhome.site → 192.168.11.100
@@ -142,13 +142,14 @@ Nginx Proxy Manager (192.168.11.100)
 ├── proxmox.olyhome.site → https://192.168.11.254:8006
 ├── n8n.olyhome.site → http://192.168.1.20:5678
 └── db.olyhome.site → http://192.168.1.30:5432</code></pre>
-<h2 id="steps-completed">Étapes Réalisées</h2>
+<h2 id="steps-completed">Étapes Complétées</h2>
 <h3 id="step-1-bind9-configuration-local-dns">Étape 1 : Configuration de Bind9
 (DNS Local)</h3>
 <h4 id="why-bind9">Pourquoi Bind9 ?</h4>
-<p><strong>Cas d'utilisation:</strong> - Contrôler la résolution DNS pour le domaine
-local - Remplacer le DNS public par des adresses IP locales - Gérer le routage des
-sous-domaines internes - Aucune dépendance aux fournisseurs DNS externes</p>
+<p><strong>Cas d'Utilisation :</strong> - Contrôler la résolution DNS
+pour le domaine local - Remplacer le DNS public par des IPs locales - Gérer le
+routage des sous-domaines internes - Aucune dépendance vis-à-vis des
+fournisseurs DNS externes</p>
 <h4 id="installation">Installation</h4>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Bind9</span></span>
@@ -238,7 +239,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="
 <span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">dns_network</span><span class="kw">:</span></span>
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">driver</span><span class="kw">:</span><span class="at"> bridge</span></span></code></pre></div>
 <h4 id="conflict-resolution">Résolution des Conflits</h4>
-<p><strong>Problème:</strong> Le port 53 est déjà utilisé par
+<p><strong>Problème :</strong> Le port 53 est déjà utilisé par
 <code>systemd-resolved</code></p>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check what&#39;s using port 53</span></span>
