@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sécurisez vos services homelab (Proxmox, n8n) grâce à une configuration de proxy inverse centralisée. Utilisez Nginx Proxy Manager et Let's Encrypt pour l'automatisation HTTPS et les noms de domaine personnalisés...">
-    <meta name="keywords" content="Reverse-Proxy, Homelab, Nginx-Proxy-Manager, HTTPS, Lets-Encrypt, Security, pfSense">
+    <meta name="description" content="Sécurisez vos services homelab en utilisant Nginx Proxy Manager, Docker et Let's Encrypt. Centralisez la gestion SSL et accédez aux services via des domaines HTTPS personnalisés.">
+    <meta name="keywords" content="Reverse Proxy, Homelab, Nginx, HTTPS, Docker, pfSense, Let's Encrypt">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Configuration d'un Proxy Inverse Sécurisé Https | Blog Technique d'Omar LYAHYAI</title>
+    <title>Configuration d'un Proxy Inverse Sécurisé HTTPS | Omar LYAHYAI Technical Blog</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -40,7 +40,7 @@
 
                 <ul class="nav-menu">
                     <li><a href="/index.html#home" class="nav-link">Accueil</a></li>
-                    <li><a href="/index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="/index.html#about" class="nav-link">À Propos</a></li>
                     <li><a href="/index.html#projects" class="nav-link">Projets</a></li>
                     <li><a href="/index.html#skills" class="nav-link">Compétences</a></li>
                     <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
@@ -68,11 +68,11 @@
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/network_security.html">Sécurité Réseau</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Configuration d'un Proxy Inverse Sécurisé Https</span>
+                        <span>Configuration d'un Proxy Inverse Sécurisé HTTPS</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Configuration d'un Proxy Inverse Sécurisé Https</h1>
+                <h1 class="article-title">Configuration d'un Proxy Inverse Sécurisé HTTPS</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-tags"></i>
-                        <span>Reverse-Proxy, Homelab, Nginx-Proxy-Manager, HTTPS, Lets-Encrypt, Security, pfSense</span>
+                        <span>Reverse Proxy, Homelab, Nginx, HTTPS, Docker, pfSense, Let's Encrypt</span>
                     </div>
                 </div>
             </div>
@@ -124,26 +124,28 @@ The workflow will:
 -->
 <h1
 id="the-digital-guardian-of-my-homelab-setting-up-a-secure-reverse-proxy-with-https">Le
-Gardien Numérique de Mon Homelab : Configuration d'un Proxy Inverse Sécurisé avec
-HTTPS</h1>
+Gardien Numérique de Mon Homelab : Configuration d'un Proxy Inverse
+Sécurisé avec HTTPS</h1>
 <h2 id="goals">Objectifs</h2>
 <ul>
-<li>Accéder à tous vos services web internes (Proxmox, n8n, et bases de données)
-de manière sécurisée via des domaines HTTPS en utilisant un proxy inverse.</li>
-<li>Utiliser Let’s Encrypt pour des certificats SSL gratuits et automatisés.</li>
+<li>Accéder à tous vos services web internes (Proxmox, n8n, et bases de
+données) de manière sécurisée via des domaines HTTPS en utilisant un
+proxy inverse.</li>
+<li>Utiliser Let’s Encrypt pour des certificats SSL gratuits et
+automatisés.</li>
 </ul>
 <h2 id="why-use-a-reverse-proxy">Pourquoi Utiliser un Proxy Inverse ?</h2>
-<p>Un proxy inverse agit comme une passerelle centralisée vers vos services homelab,
-offrant plusieurs avantages cruciaux :</p>
+<p>Un proxy inverse agit comme une passerelle centralisée vers vos
+services homelab, offrant plusieurs avantages critiques :</p>
 <ul>
-<li><strong>Gestion Unifiée des Certificats SSL</strong> : Point unique pour la
-gestion des certificats</li>
-<li><strong>Couche de Sécurité</strong> : Protection contre l'exposition directe
-des services</li>
-<li><strong>Domaines Personnalisés</strong> : URL claires au lieu de combinaisons
-IP:PORT</li>
-<li><strong>Équilibrage de Charge</strong> : Distribuer le trafic sur plusieurs
-serveurs backend</li>
+<li><strong>Gestion SSL Unifiée</strong>: Point unique pour la gestion
+des certificats</li>
+<li><strong>Couche de Sécurité</strong>: Protection contre l'exposition
+directe des services</li>
+<li><strong>Domaines Personnalisés</strong>: URL claires au lieu de
+combinaisons IP:PORT</li>
+<li><strong>Équilibrage de Charge</strong>: Distribution du trafic sur
+plusieurs serveurs backend</li>
 </ul>
 <h2 id="architecture-overview">Aperçu de l'Architecture</h2>
 <pre><code>Internet/LAN
@@ -156,22 +158,24 @@ Nginx Proxy Manager (Reverse Proxy)
 ├── n8n (192.168.x.x:5678)
 ├── Databases (192.168.x.x:XXXX)
 └── Other Services</code></pre>
-<h2 id="step-1-deploy-reverse-proxy-vmcontainer">Étape 1 : Déploiement de la VM/Conteneur du Proxy Inverse</h2>
+<h2 id="step-1-deploy-reverse-proxy-vmcontainer">Étape 1 : Déploiement
+de la VM/Conteneur du Proxy Inverse</h2>
 <h3 id="option-a-lightweight-vm">Option A : VM Légère</h3>
 <ul>
-<li>Créer une nouvelle VM sur Proxmox (Debian/Ubuntu recommandé)</li>
-<li>Allouer des ressources minimales : 1 CPU, 2 Go de RAM, 10 Go de stockage</li>
-<li>Installer Docker et Docker Compose</li>
+<li>Créez une nouvelle VM sur Proxmox (Debian/Ubuntu recommandé)</li>
+<li>Allouez des ressources minimales : 1 CPU, 2 Go de RAM, 10 Go de
+stockage</li>
+<li>Installez Docker et Docker Compose</li>
 </ul>
 <h3 id="option-b-lxc-container-recommended">Option B : Conteneur LXC
 (Recommandé)</h3>
 <ul>
-<li>Utiliser les scripts d'assistance Proxmox pour un déploiement plus rapide</li>
+<li>Utilisez des scripts d'aide Proxmox pour un déploiement plus rapide</li>
 <li>Utilisation plus efficace des ressources</li>
 <li>Gestion plus facile</li>
 </ul>
-<h3 id="install-docker-and-docker-compose">Installer Docker et Docker
-Compose</h3>
+<h3 id="install-docker-and-docker-compose">Installation de Docker et
+Docker Compose</h3>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Update system</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade <span class="at">-y</span></span>
@@ -185,10 +189,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Add user to docker group</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-aG</span> docker <span class="va">$USER</span></span></code></pre></div>
-<h2 id="step-2-install-nginx-proxy-manager">Étape 2 : Installer Nginx Proxy
-Manager</h2>
+<h2 id="step-2-install-nginx-proxy-manager">Étape 2 : Installation de
+Nginx Proxy Manager</h2>
 <h3 id="docker-compose-configuration">Configuration Docker Compose</h3>
-<p>Créer <code>docker-compose.yml</code> :</p>
+<p>Créez <code>docker-compose.yml</code>:</p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3&#39;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
@@ -220,196 +224,215 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">MYSQL_PASSWORD</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;npm&#39;</span></span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./data/mysql:/var/lib/mysql</span></span></code></pre></div>
-<h3 id="launch-nginx-proxy-manager">Lancer Nginx Proxy Manager</h3>
+<h3 id="launch-nginx-proxy-manager">Lancement de Nginx Proxy Manager</h3>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span></code></pre></div>
-<h3 id="access-admin-ui">Accéder à l'Interface d'Administration</h3>
+<h3 id="access-admin-ui">Accès à l'Interface d'Administration</h3>
 <ul>
-<li>Naviguer vers : <code>http://&lt;proxy-vm-ip&gt;:81</code></li>
+<li>Naviguez vers : <code>http://&lt;proxy-vm-ip&gt;:81</code></li>
 <li>Identifiants par défaut :
 <ul>
-<li>E-mail : <code>admin@example.com</code></li>
+<li>Email : <code>admin@example.com</code></li>
 <li>Mot de passe : <code>changeme</code></li>
 </ul></li>
-<li>**Changez immédiatement ces identifiants après la première
-connexion !**</li>
+<li><strong>Changez immédiatement ces identifiants après la première
+connexion !</strong></li>
 </ul>
-<h2 id="step-3-configure-internal-dns">Étape 3 : Configurer le DNS Interne</h2>
-<h3 id="using-pfsense-dns-resolver">Utilisation du Résolveur DNS de pfSense</h3>
+<h2 id="step-3-configure-internal-dns">Étape 3 : Configuration du DNS
+Interne</h2>
+<h3 id="using-pfsense-dns-resolver">Utilisation du Résolveur DNS pfSense</h3>
 <ol type="1">
-<li>Naviguer vers **Services &gt; DNS Resolver**</li>
-<li>Activer le Résolveur DNS s'il ne l'est pas déjà</li>
-<li>Sous **Host Overrides**, ajouter des entrées :
+<li>Naviguez vers <strong>Services &gt; DNS Resolver</strong></li>
+<li>Activez le Résolveur DNS s'il n'est pas déjà activé</li>
+<li>Sous <strong>Host Overrides</strong>, ajoutez des entrées :
 <ul>
-<li>**Host** : <code>proxmox</code>,
-**Domain** : <code>lab</code>, **IP** :
+<li><strong>Host</strong>: <code>proxmox</code>,
+<strong>Domain</strong>: <code>lab</code>, <strong>IP</strong>:
 <code>&lt;proxy-ip&gt;</code></li>
-<li>**Host** : <code>n8n</code>, **Domain** :
-<code>lab</code>, **IP** :
+<li><strong>Host</strong>: <code>n8n</code>, <strong>Domain</strong>:
+<code>lab</code>, <strong>IP</strong>:
 <code>&lt;proxy-ip&gt;</code></li>
-<li>**Host** : <code>db</code>, **Domain** :
-<code>lab</code>, **IP** :
+<li><strong>Host</strong>: <code>db</code>, <strong>Domain</strong>:
+<code>lab</code>, <strong>IP</strong>:
 <code>&lt;proxy-ip&gt;</code></li>
 </ul></li>
 </ol>
 <h3 id="alternative-local-hosts-file">Alternative : Fichier Hosts Local</h3>
-<p>Pour les tests, modifiez votre fichier local <code>/etc/hosts</code> :</p>
+<p>Pour les tests, modifiez votre fichier local <code>/etc/hosts</code>:</p>
 <pre><code>&lt;proxy-ip&gt;  proxmox.lab
 &lt;proxy-ip&gt;  n8n.lab
 &lt;proxy-ip&gt;  db.lab</code></pre>
-<h2 id="step-4-add-services-as-proxy-hosts">Étape 4 : Ajouter les Services comme
-Hôtes Proxy</h2>
-<h3 id="in-nginx-proxy-manager-ui">Dans l'Interface Nginx Proxy Manager</h3>
+<h2 id="step-4-add-services-as-proxy-hosts">Étape 4 : Ajout des Services
+comme Hôtes Proxy</h2>
+<h3 id="in-nginx-proxy-manager-ui">Dans l'interface utilisateur de Nginx
+Proxy Manager</h3>
 <ol type="1">
-<li>Cliquer sur **« Proxy Hosts »** → **« Add Proxy
-Host »**</li>
-<li>**Onglet Détails** :
+<li>Cliquez sur <strong>“Proxy Hosts”</strong> → <strong>“Add Proxy
+Host”</strong></li>
+<li><strong>Onglet Détails</strong>:
 <ul>
-<li>**Domain Names** : <code>n8n.lab</code></li>
-<li>**Scheme** : <code>http</code></li>
-<li>**Forward Hostname/IP** :
+<li><strong>Domain Names</strong>: <code>n8n.lab</code></li>
+<li><strong>Scheme</strong>: <code>http</code></li>
+<li><strong>Forward Hostname/IP</strong>:
 <code>&lt;n8n-container-ip&gt;</code></li>
-<li>**Forward Port** : <code>5678</code></li>
-<li>**Block Common Exploits** : ✓</li>
-<li>**Websockets Support** : ✓ (important pour n8n)</li>
+<li><strong>Forward Port</strong>: <code>5678</code></li>
+<li><strong>Block Common Exploits</strong>: ✓</li>
+<li><strong>Websockets Support</strong>: ✓ (important pour n8n)</li>
 </ul></li>
-<li>Répéter pour les autres services :
+<li>Répétez pour les autres services :
 <ul>
-<li>Proxmox : Port <code>8006</code>, Scheme <code>https</code></li>
-<li>Databases : Port variable, Scheme <code>http</code></li>
+<li>Proxmox: Port <code>8006</code>, Scheme <code>https</code></li>
+<li>Databases: Port variable, Scheme <code>http</code></li>
 </ul></li>
 </ol>
-<h2 id="step-5-request-ssl-certificates">Étape 5 : Demander des Certificats SSL</h2>
-<h3 id="enable-lets-encrypt">Activer Let’s Encrypt</h3>
+<h2 id="step-5-request-ssl-certificates">Étape 5 : Demande de
+Certificats SSL</h2>
+<h3 id="enable-lets-encrypt">Activation de Let’s Encrypt</h3>
 <ol type="1">
-<li>Dans l'entrée Proxy Host, aller à l'**Onglet SSL**</li>
-<li>Sélectionner **« Request a new SSL Certificate »**</li>
+<li>Dans l'entrée Proxy Host, allez à l'<strong>Onglet SSL</strong></li>
+<li>Sélectionnez <strong>“Request a new SSL Certificate”</strong> (Demander un nouveau certificat SSL)</li>
 <li>Options :
 <ul>
-<li>**Force SSL** : ✓</li>
-<li>**HTTP/2 Support** : ✓</li>
-<li>**HSTS Enabled** : ✓ (recommandé)</li>
-<li>**Email for Let’s Encrypt** : Votre e-mail</li>
+<li><strong>Force SSL</strong>: ✓</li>
+<li><strong>HTTP/2 Support</strong>: ✓</li>
+<li><strong>HSTS Enabled</strong>: ✓ (recommandé)</li>
+<li><strong>Email for Let’s Encrypt</strong>: Votre adresse e-mail</li>
 </ul></li>
-<li>Cliquer sur **Save**</li>
+<li>Cliquez sur <strong>Save</strong></li>
 </ol>
 <p>Let’s Encrypt va automatiquement : - Générer le certificat SSL -
-Configurer HTTPS - Configurer le renouvellement automatique (tous les 90 jours)</p>
-<h3 id="dns-challenge-for-wildcard-certificates">Défi DNS (Pour les Certificats
-Wildcard)</h3>
-<p>Si vous possédez un domaine et souhaitez <code>*.yourdomain.com</code> :</p>
+Configurer HTTPS - Configurer le renouvellement automatique (tous les 90
+jours)</p>
+<h3 id="dns-challenge-for-wildcard-certificates">Défi DNS (Pour les
+Certificats Wildcard)</h3>
+<p>Si vous possédez un domaine et souhaitez <code>*.yourdomain.com</code>
+:</p>
 <ol type="1">
-<li>Utiliser la méthode de défi DNS</li>
-<li>Configurer les identifiants du fournisseur DNS dans NPM</li>
-<li>Demander le certificat wildcard : <code>*.yourdomain.com</code></li>
+<li>Utilisez la méthode du défi DNS</li>
+<li>Configurez les identifiants du fournisseur DNS dans NPM</li>
+<li>Demandez le certificat wildcard : <code>*.yourdomain.com</code></li>
 </ol>
-<h2 id="step-6-open-port-443-in-firewall">Étape 6 : Ouvrir le Port 443 dans le
-Pare-feu</h2>
+<h2 id="step-6-open-port-443-in-firewall">Étape 6 : Ouverture du Port 443
+dans le Pare-feu</h2>
 <h3 id="pfsense-configuration">Configuration pfSense</h3>
 <ol type="1">
-<li>Naviguer vers **Firewall &gt; NAT &gt; Port
-Forward**</li>
-<li>Créer la règle :
+<li>Naviguez vers <strong>Firewall &gt; NAT &gt; Port
+Forward</strong></li>
+<li>Créez la règle :
 <ul>
-<li>**Interface** : WAN</li>
-<li>**Protocol** : TCP</li>
-<li>**Destination Port Range** : 443</li>
-<li>**Redirect Target IP** :
+<li><strong>Interface</strong>: WAN</li>
+<li><strong>Protocol</strong>: TCP</li>
+<li><strong>Destination Port Range</strong>: 443</li>
+<li><strong>Redirect Target IP</strong>:
 <code>&lt;proxy-vm-ip&gt;</code></li>
-<li>**Redirect Target Port** : 443</li>
-<li>**Description** : Proxy Inverse HTTPS</li>
+<li><strong>Redirect Target Port</strong>: 443</li>
+<li><strong>Description</strong>: Reverse Proxy HTTPS</li>
 </ul></li>
-<li>Créer une règle de pare-feu correspondante si nécessaire</li>
+<li>Créez la règle de pare-feu correspondante si nécessaire</li>
 </ol>
 <h3 id="vmcontainer-firewall">Pare-feu VM/Conteneur</h3>
 <p>Si vous utilisez UFW :</p>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 80/tcp</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 443/tcp</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 81/tcp  <span class="co"># Interface Admin (restreindre au LAN uniquement !)</span></span></code></pre></div>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 81/tcp  <span class="co"># Admin UI (restrict to LAN only!)</span></span></code></pre></div>
 <h2 id="step-7-test-access">Étape 7 : Tester l'Accès</h2>
 <h3 id="internal-testing">Test Interne</h3>
 <p>Depuis votre LAN :</p>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-k</span> https://n8n.lab</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-k</span> https://proxmox.lab:8006</span></code></pre></div>
-<h3 id="browser-testing">Test Navigateur</h3>
+<h3 id="browser-testing">Test par Navigateur</h3>
 <ol type="1">
-<li>Ouvrir le navigateur</li>
-<li>Naviguer vers <code>https://n8n.lab</code></li>
-<li>Vérifier :
+<li>Ouvrez votre navigateur</li>
+<li>Naviguez vers <code>https://n8n.lab</code></li>
+<li>Vérifiez :
 <ul>
 <li>✅ Certificat SSL valide (cadenas vert)</li>
 <li>✅ Le service se charge correctement</li>
 <li>✅ Aucun avertissement de certificat</li>
 </ul></li>
 </ol>
-<h2 id="security-hardening">Renforcement de la Sécurité</h2>
-<h3 id="restrict-admin-ui-access">Restreindre l'Accès à l'Interface d'Administration</h3>
+<h2 id="security-hardening">Durcissement de la Sécurité</h2>
+<h3 id="restrict-admin-ui-access">Restreindre l'Accès à l'Interface
+d'Administration</h3>
 <ol type="1">
 <li><p>Dans Nginx Proxy Manager :</p>
 <ul>
-<li>**Access Lists** → Créer une nouvelle</li>
-<li>**Autorisation** : Nécessite un nom d'utilisateur/mot de passe</li>
+<li><strong>Access Lists</strong> → Créer une nouvelle liste</li>
+<li><strong>Authorization</strong>: Exiger un nom d'utilisateur/mot de
+passe</li>
 <li>Appliquer à l'hôte proxy de l'interface d'administration</li>
 </ul></li>
 <li><p>Règles de pare-feu :</p>
 <div class="sourceCode" id="cb8"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Autoriser l'interface d'administration uniquement depuis le LAN</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Allow admin UI only from LAN</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw deny 81/tcp</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow from 192.168.0.0/16 to any port 81</span></code></pre></div></li>
 </ol>
 <h3 id="enable-fail2ban">Activer Fail2Ban</h3>
-<p>Protéger contre les attaques par force brute :</p>
+<p>Protégez-vous contre les attaques par force brute :</p>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install fail2ban <span class="at">-y</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un filtre NPM</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create NPM filter</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/fail2ban/filter.d/npm.conf</span></code></pre></div>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode ini"><code class="sourceCode ini"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[Definition]</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">failregex </span><span class="ot">=</span><span class="st"> ^&lt;HOST&gt; .* &quot;(GET|POST|HEAD).*HTTP.*&quot; (4|5)\d\d</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">ignoreregex </span><span class="ot">=</span></span></code></pre></div>
 <h2 id="monitoring-and-maintenance">Surveillance et Maintenance</h2>
-<h3 id="check-certificate-expiry">Vérifier l'Expiration du Certificat</h3>
-<p>Nginx Proxy Manager renouvelle automatiquement les certificats 30 jours avant
-leur expiration.</p>
-<p>Vérifier dans l'interface : - **SSL Certificates** → Vérifier les dates d'expiration</p>
+<h3 id="check-certificate-expiry">Vérification de l'Expiration des
+Certificats</h3>
+<p>Nginx Proxy Manager renouvelle automatiquement les certificats 30
+jours avant leur expiration.</p>
+<p>Vérifiez dans l'interface utilisateur : - <strong>SSL
+Certificates</strong> → Vérifiez les dates d'expiration</p>
 <h3 id="log-monitoring">Surveillance des Journaux</h3>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher les journaux NPM</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View NPM logs</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs <span class="at">-f</span> nginx-proxy-manager</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Emplacement des journaux d'accès</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Access logs location</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ./data/logs</span></code></pre></div>
 <h3 id="performance-monitoring">Surveillance des Performances</h3>
-<p>Ajouter une surveillance avec : - Prometheus + Grafana - Uptime Kuma pour la disponibilité des services</p>
+<p>Ajoutez une surveillance avec : - Prometheus + Grafana - Uptime Kuma
+pour la disponibilité des services</p>
 <h2 id="common-issues-and-solutions">Problèmes Courants et Solutions</h2>
-<h3 id="issue-1-certificate-request-fails">Problème 1 : Échec de la Demande de Certificat</h3>
-<p>**Problème** : L'épreuve Let’s Encrypt échoue</p>
-<p>**Solution** : - Vérifier que le port 80 est accessible depuis internet - Check DNS resolution - Essayer l'épreuve HTTP au lieu du DNS</p>
-<h3 id="issue-2-websocket-connection-fails">Problème 2 : Échec de la Connexion WebSocket</h3>
-<p>**Problème** : Les fonctionnalités en temps réel ne fonctionnent pas (console n8n, Proxmox)</p>
-<p>**Solution** : - Activer le **Websockets Support** dans l'hôte proxy - Ajouter une configuration Nginx personnalisée :
-<code>nginx proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection "upgrade";</code></p>
-<h3 id="issue-3-proxmox-webui-access-denied">Problème 3 : Accès Refusé à l'Interface Web de Proxmox</h3>
-<p>**Problème** : Impossible d'accéder à Proxmox via le proxy</p>
-<p>**Solution** : - Définir le **Forward Scheme** sur <code>https</code> - Ajouter des en-têtes personnalisés :
+<h3 id="issue-1-certificate-request-fails">Problème 1 : Échec de la
+Demande de Certificat</h3>
+<p><strong>Problème</strong> : Le défi Let’s Encrypt échoue</p>
+<p><strong>Solution</strong> : - Vérifiez que le port 80 est accessible
+depuis Internet - Vérifiez la résolution DNS - Essayez le défi HTTP au
+lieu du défi DNS</p>
+<h3 id="issue-2-websocket-connection-fails">Problème 2 : Échec de la
+Connexion WebSocket</h3>
+<p><strong>Problème</strong> : Les fonctionnalités en temps réel ne
+fonctionnent pas (n8n, console Proxmox)</p>
+<p><strong>Solution</strong> : - Activez <strong>Websockets
+Support</strong> dans l'hôte proxy - Ajoutez une configuration Nginx
+personnalisée : <code>nginx proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection "upgrade";</code></p>
+<h3 id="issue-3-proxmox-webui-access-denied">Problème 3 : Accès au WebUI
+Proxmox Refusé</h3>
+<p><strong>Problème</strong> : Impossible d'accéder à Proxmox via le
+proxy</p>
+<p><strong>Solution</strong> : - Réglez le <strong>Forward Scheme</strong>
+sur <code>https</code> - Ajoutez des en-têtes personnalisés :
 <code>nginx proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr;</code></p>
 <h2 id="conclusion">Conclusion</h2>
 <p>La configuration d'un proxy inverse avec Nginx Proxy Manager offre un
-accès centralisé et sécurisé à tous vos services homelab. La combinaison de
-certificats SSL automatisés, de domaines personnalisés et d'une gestion unifiée
-crée une infrastructure professionnelle, à la fois sécurisée et facile à
-maintenir.</p>
-<p>Cette configuration sert de gardien numérique pour votre homelab, protégeant
-les services tout en offrant un accès pratique. Avec une configuration et un
-renforcement de la sécurité appropriés, vous pouvez exposer en toute sécurité
-certains services à Internet tout en maintenant une protection robuste contre
-les accès non autorisés.</p>
-<p><em>Rappel : La sécurité est un processus continu. Mettez régulièrement à
-jour votre proxy inverse, surveillez les journaux et examinez les modèles
-d'accès.</em></p>
+accès centralisé et sécurisé à tous vos services homelab. La
+combinaison de certificats SSL automatisés, de domaines personnalisés et
+d'une gestion unifiée crée une infrastructure professionnelle à la fois
+sécurisée et facile à maintenir.</p>
+<p>Cette configuration sert de gardien numérique à votre homelab,
+protégeant les services tout en offrant un accès pratique. Avec une
+configuration appropriée et un durcissement de la sécurité, vous pouvez
+exposer en toute sécurité certains services à Internet tout en
+maintenant une protection robuste contre les accès non autorisés.</p>
+<p><em>Rappel : La sécurité est un processus continu. Mettez
+régulièrement à jour votre proxy inverse, surveillez les journaux et
+examinez les modèles d'accès.</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -430,7 +453,7 @@ d'accès.</em></p>
                     <h4>Liens Rapides</h4>
                     <ul>
                         <li><a href="/index.html#home">Accueil</a></li>
-                        <li><a href="/index.html#about">À propos</a></li>
+                        <li><a href="/index.html#about">À Propos</a></li>
                         <li><a href="/index.html#projects">Projets</a></li>
                         <li><a href="/blog/index.html">Blog</a></li>
                     </ul>
@@ -459,7 +482,7 @@ d'accès.</em></p>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Retour en haut de page">
         <i class="fas fa-chevron-up"></i>
     </button>
 
