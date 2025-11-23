@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build a zero-touch content factory. This roadmap details N8N and LLM automation to transform Markdown articles into SEO-optimized, multilingual HTML websites.">
+    <meta name="keywords" content="homelab">
+    <meta name="author" content="OLYAHYAI">
+
+    <title>N8n Automation Roadmap Llm Enhanced Publishing | Omar LYAHYAI Technical Blog</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="dark-theme">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>OLYAHYAI</span>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="/index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="/index.html#about" class="nav-link">About</a></li>
+                    <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="/index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="/fr/reference/n8n-automation-roadmap-llm-enhanced-publishing.html" class="lang-toggle" aria-label="Change language">
+                        <span class="lang-current">FR</span>
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="article-header" role="region" aria-label="Article header">
+            <div class="container">
+                <div class="article-breadcrumb">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="/index.html">Home</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/index.html">Blog</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <a href="/blog/reference.html">Reference</a>
+                        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                        <span>N8n Automation Roadmap Llm Enhanced Publishing</span>
+                    </nav>
+                </div>
+
+                <h1 class="article-title">N8n Automation Roadmap Llm Enhanced Publishing</h1>
+
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>2025-11-19</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>5 min min read</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Reference</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="fas fa-tags"></i>
+                        <span>homelab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content" role="region" aria-label="Article content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 
+TEMPLATE - Press Alt+E to apply
+
+UPDATE THESE FIELDS:
+- title: "Your Title" (KEEP QUOTES)
+- date: "YYYY-MM-DD" (KEEP QUOTES)
+- category: infrastructure/network_security/automation_ai/reference
+- language: auto (let workflow detect) | en (force English) | fr (force French)
+- tags: single-keyword-only (NO COMMAS! Use one word or hyphenated)
+- description: "Short summary" (KEEP QUOTES)
+
+CRITICAL RULES:
+✅ DO: Keep quotes around title, date, description
+✅ DO: Use "auto" for language to let workflow detect from content
+✅ DO: Use single word for tags (homelab, pfsense, proxmox)
+❌ DON'T: Use commas in tags (breaks YAML!)
+❌ DON'T: Remove quotes from title/date/description
+
+The workflow will:
+- Detect language automatically from your content
+- Generate English + French versions
+- Create full HTML with navigation
+- Preserve images and links
+-->
+<h1 id="n8n-automation-roadmap---llm-enhanced-blog-publishing">🗺️ N8N
+Automation Roadmap - LLM-Enhanced Blog Publishing</h1>
+<p><strong>Project</strong>: Obsidian → N8N → Multilingual Website with
+AI Enhancement<br />
+<strong>Created</strong>: 2025-11-06<br />
+<strong>Status</strong>: Phase 1 Complete ✅ | Phase 2+ Planning 🎯</p>
+<hr />
+<h2 id="vision">📌 Vision</h2>
+<p>Build a fully automated blog publishing system that: - Converts
+Markdown articles to professionally designed HTML - Translates content
+automatically (EN ↔︎ FR) - Optimizes titles and content with LLM -
+Applies consistent styling (CSS/JS) - Requires ZERO manual
+intervention</p>
+<hr />
+<h2 id="current-state-phase-1---completed">🎯 Current State (Phase 1 -
+COMPLETED)</h2>
+<h3 id="what-works-now">What Works Now ✅</h3>
+<ul>
+<li>✅ Markdown file detection in Obsidian vault</li>
+<li>✅ YAML frontmatter parsing (title, date, category, status)</li>
+<li>✅ Markdown to HTML conversion (Pandoc)</li>
+<li>✅ Professional HTML template with:
+<ul>
+<li>Header with navigation</li>
+<li>Breadcrumb trail</li>
+<li>Article metadata (date, reading time, category, tags)</li>
+<li>Footer with social links</li>
+<li>Mobile-responsive design</li>
+</ul></li>
+<li>✅ Static CSS/JS integration (dark cybersecurity theme)</li>
+<li>✅ File output to
+<code>/website/en/[category]/[slug].html</code></li>
+</ul>
+<h3 id="current-workflow-11-nodes">Current Workflow (11 Nodes)</h3>
+<pre><code>1. Manual/Schedule Trigger
+2. Find Markdown Files (find command)
+3. Extract File Paths (Code JS)
+4. Read Binary Files
+5. Decode Binary to Text (Code JS)
+6. Extract YAML Frontmatter (Code JS)
+7. Validate Metadata (Code JS)
+8. IF - Check Validation
+9. Determine Output Path (Code JS)
+10. Generate HTML with Template (Code JS - WORKFLOW_FINAL_V2.js)
+11. Write HTML File (Execute Command)</code></pre>
+<h3 id="limitations">Limitations 🚧</h3>
+<ul>
+<li>❌ No automatic translation (only EN articles)</li>
+<li>❌ No LLM content optimization</li>
+<li>❌ No title enhancement</li>
+<li>❌ No SEO improvements</li>
+<li>❌ Manual CSS/JS updates needed</li>
+<li>❌ No content quality checks</li>
+</ul>
+<hr />
+<h2 id="phase-2-llm-translation-integration">🚀 Phase 2: LLM Translation
+Integration</h2>
+<p><strong>Goal</strong>: Automatically translate every article to
+French (EN → FR)</p>
+<h3 id="new-nodes-to-add-5-nodes">New Nodes to Add (5 nodes)</h3>
+<pre><code>12. Code: Prepare Translation Request
+    ├─&gt; Extract text content from HTML
+    ├─&gt; Build prompt with technical terms to preserve
+    └─&gt; Output: Clean text for translation
+
+13. OpenAI/Anthropic Node: Translate to French
+    ├─&gt; Model: GPT-4o or Claude Opus
+    ├─&gt; Input: English article text
+    ├─&gt; Prompt: &quot;Translate to French, keep technical terms unchanged&quot;
+    └─&gt; Output: French text
+
+14. Code: Generate French HTML
+    ├─&gt; Take translation output
+    ├─&gt; Apply same template as English
+    ├─&gt; Update language metadata (lang=&quot;fr&quot;)
+    └─&gt; Update breadcrumbs to French
+
+15. Execute Command: Write French HTML
+    └─&gt; Output: /website/fr/[category]/[slug].html
+
+16. Code: Update Language Map
+    ├─&gt; Create/update ARTICLE_LANGUAGE_MAP.json
+    ├─&gt; Link EN ↔ FR versions
+    └─&gt; Enable language switcher in navigation</code></pre>
+<h3 id="translation-strategy">Translation Strategy</h3>
+<p><strong>Approach: Text-Only Translation (Safest)</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Pseudo-code for Node 12</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> articleText <span class="op">=</span> <span class="fu">extractTextFromHTML</span>($json<span class="op">.</span><span class="at">fullHtmlDocument</span>)<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> translationPrompt <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="vs">Translate this technical blog article to French.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="vs">IMPORTANT RULES:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="vs">1. Keep all code blocks unchanged (bash, python, yaml, etc.)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="vs">2. Keep these technical terms in English:</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="vs">   - Proxmox, pfSense, Kali Linux, Docker, N8N, Pandoc</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="vs">   - All command names, file paths, URLs</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="vs">3. Translate naturally, not word-for-word</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="vs">4. Maintain the same tone (technical, professional)</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="vs">Article:</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="sc">${</span>articleText<span class="sc">}</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> { <span class="dt">prompt</span><span class="op">:</span> translationPrompt<span class="op">,</span> <span class="dt">text</span><span class="op">:</span> articleText }<span class="op">;</span></span></code></pre></div>
+<p><strong>LLM Model Selection:</strong> | Model | Cost/1M tokens |
+Quality | Speed | Recommendation | |——-|—————-|———|——-|—————-| | GPT-4o
+| $2.50 | ⭐⭐⭐⭐⭐ | Fast | Best choice | | Claude Opus | $15.00 |
+⭐⭐⭐⭐⭐ | Medium | Premium quality | | GPT-4o-mini | $0.15 | ⭐⭐⭐⭐
+| Very Fast | Budget option | | Local Mistral 7B | Free | ⭐⭐⭐ | Slow
+| Privacy-focused |</p>
+<p><strong>Recommended:</strong> GPT-4o (best balance of
+cost/quality/speed)</p>
+<h3 id="cost-estimation">Cost Estimation</h3>
+<ul>
+<li>Average article: 2000 words ≈ 3000 tokens</li>
+<li>GPT-4o cost: $0.015 per article</li>
+<li>100 articles: ~$1.50</li>
+<li>1000 articles: ~$15</li>
+</ul>
+<h3 id="expected-timeline">Expected Timeline</h3>
+<ul>
+<li><strong>Setup</strong>: 2-3 hours</li>
+<li><strong>Testing</strong>: 1-2 hours with sample articles</li>
+<li><strong>Full deployment</strong>: After testing 5-10 articles
+successfully</li>
+</ul>
+<hr />
+<h2 id="total-cost-estimation-all-phases">💰 Total Cost Estimation (All
+Phases)</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>LLM Calls</th>
+<th>Cost/Article</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 2: Translation</td>
+<td>1</td>
+<td>$0.015</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Phase 3: Title/SEO</td>
+<td>2</td>
+<td>$0.001</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Phase 4: Correction</td>
+<td>1</td>
+<td>$0.008</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td>Phase 5: FR→EN</td>
+<td>1</td>
+<td>$0.015</td>
+<td>If needed</td>
+</tr>
+<tr>
+<td>Phase 6: Related</td>
+<td>1</td>
+<td>$0.002</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td>2-6</td>
+<td><strong>$0.02-0.04</strong></td>
+<td><strong>Per article</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>For 100 articles:</strong> $2-4<br />
+<strong>For 1000 articles:</strong> $20-40</p>
+<p><strong>Annual cost (assuming 200 new articles/year):</strong>
+~$6-8</p>
+<hr />
+<h2 id="recommended-implementation-order">🎯 Recommended Implementation
+Order</h2>
+<h3 id="now-week-1-2-phase-2-only"><strong>NOW (Week 1-2): Phase 2
+Only</strong></h3>
+<p>Focus on translation ONLY. Get EN→FR working perfectly. - Add 5
+translation nodes - Test with 10 articles - Verify quality - Deploy if
+satisfied</p>
+<h3 id="later-month-2-phase-3"><strong>LATER (Month 2): Phase
+3</strong></h3>
+<p>Add title optimization once translation is stable.</p>
+<h3 id="future-month-3-phase-4-6"><strong>FUTURE (Month 3+): Phase
+4-6</strong></h3>
+<p>Advanced features once core workflow is rock solid.</p>
+<hr />
+<h2 id="potential-issues-mitigation">🚨 Potential Issues &amp;
+Mitigation</h2>
+<h3 id="issue-1-llm-hallucination-adding-false-info">Issue 1: LLM
+Hallucination (Adding False Info)</h3>
+<p><strong>Risk:</strong> LLM might add technical details that are
+wrong</p>
+<p><strong>Mitigation:</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// In correction prompt</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;CRITICAL: Do not add any new information.</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Only fix grammar and improve existing text<span class="op">.</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>If unsure<span class="op">,</span> leave text unchanged<span class="op">.</span><span class="st">&quot;</span></span></code></pre></div>
+<h3 id="issue-2-breaking-code-blocks">Issue 2: Breaking Code Blocks</h3>
+<p><strong>Risk:</strong> LLM might translate code or command names</p>
+<p><strong>Mitigation:</strong></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Pre-process: Extract code blocks</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> codeBlocks <span class="op">=</span> <span class="fu">extractCodeBlocks</span>(markdown)<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> textOnly <span class="op">=</span> <span class="fu">removeCodeBlocks</span>(markdown)<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Translate text only</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> translatedText <span class="op">=</span> <span class="cf">await</span> <span class="fu">translateWithLLM</span>(textOnly)<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">// Re-insert code blocks</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> finalMarkdown <span class="op">=</span> <span class="fu">insertCodeBlocks</span>(translatedText<span class="op">,</span> codeBlocks)<span class="op">;</span></span></code></pre></div>
+<h3 id="issue-3-high-llm-costs">Issue 3: High LLM Costs</h3>
+<p><strong>Risk:</strong> Processing 1000 articles = $40</p>
+<p><strong>Mitigation:</strong> - Use caching (only translate NEW
+articles) - Use cheaper models for simple tasks (GPT-4o-mini) - Make LLM
+steps optional (toggle on/off) - Batch process during off-peak hours</p>
+<hr />
+<h2 id="required-resources">📚 Required Resources</h2>
+<h3 id="n8n-nodesintegrations">N8N Nodes/Integrations</h3>
+<ul>
+<li>✅ Execute Command (already used)</li>
+<li>✅ Code (JavaScript) (already used)</li>
+<li>✅ Read/Write Binary Files (already used)</li>
+<li>⭐ <strong>NEW:</strong> OpenAI node (for GPT-4)</li>
+<li>⭐ <strong>NEW:</strong> Anthropic node (for Claude)</li>
+<li>Optional: HTTP Request (for custom LLM APIs)</li>
+</ul>
+<h3 id="external-services">External Services</h3>
+<ul>
+<li><strong>OpenAI API</strong> (GPT-4o, GPT-4o-mini)
+<ul>
+<li>Create account: https://platform.openai.com</li>
+<li>Cost: Pay-as-you-go (~$5 minimum)</li>
+</ul></li>
+<li><strong>Anthropic API</strong> (Claude Opus/Sonnet)
+<ul>
+<li>Create account: https://console.anthropic.com</li>
+<li>Cost: Pay-as-you-go (~$5 minimum)</li>
+</ul></li>
+<li><strong>Alternative:</strong> Local LLM (Ollama)
+<ul>
+<li>Free, but slower and lower quality</li>
+<li>Setup: <code>ollama pull mistral</code> or
+<code>ollama pull llama3</code></li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="final-thoughts">🎯 Final Thoughts</h2>
+<h3 id="whats-most-important-now">What’s Most Important NOW?</h3>
+<ol type="1">
+<li><strong>Translation (Phase 2)</strong> - This unlocks bilingual
+audience</li>
+<li>Keep workflow SIMPLE initially</li>
+<li>Test extensively before automation</li>
+<li>Measure quality before scaling</li>
+</ol>
+<h3 id="what-can-wait">What Can Wait?</h3>
+<ul>
+<li>Title optimization (nice-to-have)</li>
+<li>Content correction (only if quality issues persist)</li>
+<li>Advanced features (after 100+ articles)</li>
+</ul>
+<h3 id="key-philosophy">Key Philosophy</h3>
+<blockquote>
+<p>“Automate the repetitive, enhance the creative, preserve the
+authentic.”</p>
+</blockquote>
+<ul>
+<li>Let LLM handle: Translation, SEO, grammar</li>
+<li>Keep human control: Technical accuracy, content strategy, design
+decisions</li>
+<li>Maintain quality: Always review LLM output initially</li>
+</ul>
+<hr />
+<p><strong>This roadmap is a living document. Update it as the project
+evolves! 🌱</strong></p>
+<hr />
+<p><strong>Created by:</strong> OpenCode (Claude)<br />
+<strong>For:</strong> Omar LYAHYAI - N8N Automation Project<br />
+<strong>Last Updated:</strong> 2025-11-06<br />
+<strong>Status:</strong> Ready for Phase 2 Implementation 🚀</p>
+                </div>
+
+                <div class="article-navigation">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>OLYAHYAI</h3>
+                    <p>Pentester in Training | Cybersecurity Enthusiast</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#projects">Projects</a></li>
+                        <li><a href="/blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ma.linkedin.com/in/lyahyai-omar" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@olyahyai.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OLYAHYAI. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-terminal"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
