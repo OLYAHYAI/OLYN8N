@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sécurisez votre homelab avec SSL/TLS. Guide rapide pour implémenter Let's Encrypt, Cloudflare Origin, et les certificats auto-signés en utilisant les défis DNS.">
-    <meta name="keywords" content="homelab">
+    <meta name="description" content="Sécurisez les services de votre homelab à l'aide de SSL/TLS. Guide de référence couvrant Let's Encrypt (challenge DNS via Certbot), mkcert, et la comparaison des certificats publics et privés...">
+    <meta name="keywords" content="homelab, ssl, certificates, letsencrypt, network security, tls, certbot">
     <meta name="author" content="OLYAHYAI">
 
-    <title>Configuration des Certificats SSL : Sécuriser votre Homelab | Blog Technique d'Omar LYAHYAI</title>
+    <title>Guide de Configuration de Certificat SSL : Sécuriser son Homelab | Blog Technique d'Omar LYAHYAI</title>
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body class="dark-theme">
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -48,7 +48,7 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html" class="lang-toggle" aria-label="Changer de langue">
+                    <a href="/en/reference/ssl-certificate-configuration-prompt-securing-homelab.html" class="lang-toggle" aria-label="Change language">
                         <span class="lang-current">EN</span>
                         <i class="fas fa-globe"></i>
                     </a>
@@ -61,18 +61,18 @@
         <section class="article-header" role="region" aria-label="Article header">
             <div class="container">
                 <div class="article-breadcrumb">
-                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
                         <a href="/index.html">Accueil</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/index.html">Blog</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
                         <a href="/blog/reference.html">Référence</a>
                         <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                        <span>Configuration des Certificats SSL : Sécuriser votre Homelab</span>
+                        <span>Guide de Configuration de Certificat SSL : Sécuriser son Homelab</span>
                     </nav>
                 </div>
 
-                <h1 class="article-title">Configuration des Certificats SSL : Sécuriser votre Homelab</h1>
+                <h1 class="article-title">Guide de Configuration de Certificat SSL : Sécuriser son Homelab</h1>
 
                 <div class="article-meta">
                     <div class="article-meta-item">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="article-meta-item">
                         <i class="fas fa-tags"></i>
-                        <span>homelab</span>
+                        <span>homelab, ssl, certificates, letsencrypt, network security, tls, certbot</span>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,6 @@
                 <div class="article-body">
                     <!-- 
 TEMPLATE - Press Alt+E to apply
-
 UPDATE THESE FIELDS:
 - title: "Your Title" (KEEP QUOTES)
 - date: "YYYY-MM-DD" (KEEP QUOTES)
@@ -122,9 +121,11 @@ The workflow will:
 - Create full HTML with navigation
 - Preserve images and links
 -->
-<h1 id="ssl-certificate-configuration-prompt-securing-your-homelab">Configuration des Certificats SSL : Sécuriser votre Homelab</h1>
-<h2 id="overview">Vue d'ensemble</h2>
-<p>Cette référence fournit des modèles rapides pour implémenter des certificats SSL/TLS dans des environnements homelab, couvrant les autorités de certification publiques et privées.</p>
+<h1 id="ssl-certificate-configuration-prompt-securing-your-homelab">Guide
+de Configuration de Certificat SSL : Sécuriser son Homelab</h1>
+<h2 id="overview">Aperçu</h2>
+<p>Ce guide de référence fournit des modèles rapides pour la mise en œuvre de certificats SSL/TLS
+dans les environnements homelab, couvrant à la fois les autorités de certification publiques et privées.</p>
 <h2 id="certificate-types-comparison">Comparaison des types de certificats</h2>
 <table>
 <thead>
@@ -139,8 +140,8 @@ The workflow will:
 <tbody>
 <tr>
 <td>Let’s Encrypt</td>
-<td>Public</td>
-<td>90 jours (automatique)</td>
+<td>Publique</td>
+<td>90 jours (auto)</td>
 <td>Gratuit</td>
 <td>Domaines publics</td>
 </tr>
@@ -149,11 +150,11 @@ The workflow will:
 <td>Aucune</td>
 <td>Manuel</td>
 <td>Gratuit</td>
-<td>Test uniquement</td>
+<td>Tests seulement</td>
 </tr>
 <tr>
 <td>mkcert</td>
-<td>CA locale</td>
+<td>CA Locale</td>
 <td>Manuel</td>
 <td>Gratuit</td>
 <td>Services internes</td>
@@ -163,39 +164,39 @@ The workflow will:
 <td>Cloudflare</td>
 <td>15 ans</td>
 <td>Gratuit</td>
-<td>Sites mis en proxy CF</td>
+<td>Sites derrière CF</td>
 </tr>
 </tbody>
 </table>
 <h2 id="method-1-lets-encrypt-dns-challenge">Méthode 1 : Let’s Encrypt
-(Défi DNS)</h2>
+(Challenge DNS)</h2>
 <h3 id="when-to-use">Quand l'utiliser</h3>
 <ul>
 <li>Domaine public avec DNS Cloudflare</li>
-<li>Services derrière un pare-feu (pas de port 80 exposé)</li>
+<li>Services derrière un pare-feu (port 80 non exposé)</li>
 <li>Renouvellement automatique requis</li>
 </ul>
 <h3 id="configuration">Configuration</h3>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install certbot</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer certbot</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install certbot python3-certbot-dns-cloudflare</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Cloudflare credentials</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer les identifiants Cloudflare</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.secrets/cloudflare.ini</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode ini"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">dns_cloudflare_api_token </span><span class="ot">=</span><span class="st"> YOUR_CLOUDFLARE_API_TOKEN</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtain certificate</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtenir le certificat</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> certbot certonly <span class="dt">\</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--dns-cloudflare</span> <span class="dt">\</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--dns-cloudflare-credentials</span> ~/.secrets/cloudflare.ini <span class="dt">\</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> proxmox.yourdomain.com <span class="dt">\</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">&#39;*.yourdomain.com&#39;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Certificates saved to:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Certificats enregistrés dans :</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/letsencrypt/live/yourdomain.com/fullchain.pem</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/letsencrypt/live/yourdomain.com/privkey.pem</span></span></code></pre></div>
-<h2 id="method-2-mkcert-local-ca">Méthode 2 : mkcert (CA locale)</h2>
+<h2 id="method-2-mkcert-local-ca">Méthode 2 : mkcert (CA Locale)</h2>
 <h3 id="when-to-use-1">Quand l'utiliser</h3>
 <ul>
 <li>Services internes (LAN uniquement)</li>
@@ -204,132 +205,133 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 </ul>
 <h3 id="installation">Installation</h3>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install mkcert</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer mkcert</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install libnss3-tools</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-linux-amd64</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mv mkcert-v1.4.4-linux-amd64 /usr/local/bin/mkcert</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod +x /usr/local/bin/mkcert</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Install local CA</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer la CA locale</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">mkcert</span> <span class="at">-install</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate certificate</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Générer le certificat</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ex">mkcert</span> proxmox.lab <span class="st">&quot;*.lab.local&quot;</span> localhost 127.0.0.1 ::1</span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Output:</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># proxmox.lab+4.pem (certificate)</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># proxmox.lab+4-key.pem (private key)</span></span></code></pre></div>
-<h3 id="client-installation">Installation côté client</h3>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Sortie :</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># proxmox.lab+4.pem (certificat)</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># proxmox.lab+4-key.pem (clé privée)</span></span></code></pre></div>
+<h3 id="client-installation">Installation Client</h3>
 <div class="sourceCode" id="cb5"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Export CA certificate</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exporter le certificat CA</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">mkcert</span> <span class="at">-CAROOT</span><span class="va">)</span><span class="st">/rootCA.pem&quot;</span> ~/ca-cert.pem</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install on other devices:</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Windows: Import to Trusted Root Certification Authorities</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Linux: Copy to /usr/local/share/ca-certificates/</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Android: Settings → Security → Install from storage</span></span></code></pre></div>
-<h2 id="method-3-nginx-proxy-manager-integration">Méthode 3 : Intégration à Nginx Proxy Manager</h2>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installer sur d'autres appareils :</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Windows : Importer dans les Autorités de Certification Racines de Confiance</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Linux : Copier dans /usr/local/share/ca-certificates/</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Android : Paramètres → Sécurité → Installer depuis le stockage</span></span></code></pre></div>
+<h2 id="method-3-nginx-proxy-manager-integration">Méthode 3 : Intégration Nginx Proxy
+Manager</h2>
 <h3 id="lets-encrypt-via-npm">Let’s Encrypt via NPM</h3>
-<p><strong>Dans l'interface utilisateur NPM :</strong></p>
-<pre><code>Proxy Host → Onglet SSL
+<p><strong>Dans l'interface utilisateur de NPM :</strong></p>
+<pre><code>Proxy Host → SSL Tab
 - Demander un nouveau certificat SSL
-- Utiliser le Défi DNS
+- Utiliser le Challenge DNS
 - Fournisseur DNS : Cloudflare
-- Jeton API : [votre jeton]
+- Jeton API : [your token]
 - Forcer SSL : ON
 - HTTP/2 : ON
 - HSTS : ON</code></pre>
 <h3 id="custom-certificate-via-npm">Certificat Personnalisé via NPM</h3>
 <p><strong>Importer le certificat mkcert :</strong></p>
 <pre><code>Certificats SSL → Ajouter un Certificat SSL → Personnalisé
-- Clé de Certificat : Télécharger privkey.pem
-- Certificat : Télécharger fullchain.pem</code></pre>
-<h2 id="method-4-proxmox-acme">Méthode 4 : ACME Proxmox</h2>
+- Clé de Certificat : Upload privkey.pem
+- Certificat : Upload fullchain.pem</code></pre>
+<h2 id="method-4-proxmox-acme">Méthode 4 : Proxmox ACME</h2>
 <h3 id="setup-in-proxmox">Configuration dans Proxmox</h3>
-<pre><code>Centre de données → ACME
-1. Ajouter un compte : Let's Encrypt (Production)
-2. Ajouter un plugin de défi :
+<pre><code>Datacenter → ACME
+1. Ajouter un compte : Let&#39;s Encrypt (Production)
+2. Ajouter un plugin de challenge :
    - ID du Plugin : cloudflare
-   - API DNS : DNS Géré par Cloudflare
+   - API DNS : Cloudflare Managed DNS
    - CF_Token : [votre jeton API]
 
 Nœud → Système → Certificats
-1. Ajouter : Utilisation d'ACME
+1. Ajouter : Utiliser ACME
 2. Domaine : proxmox.yourdomain.com
-3. Type de Défi : DNS
+3. Type de Challenge : DNS
 4. Plugin : cloudflare
 5. Commander le Certificat Maintenant</code></pre>
-<h2 id="certificate-renewal-automation">Automatisation du Renouvellement de Certificats</h2>
+<h2 id="certificate-renewal-automation">Automatisation du Renouvellement de Certificat</h2>
 <h3 id="lets-encrypt-auto-renewal">Renouvellement Automatique Let’s Encrypt</h3>
 <div class="sourceCode" id="cb9"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test renewal</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester le renouvellement</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> certbot renew <span class="at">--dry-run</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Auto-renewal is configured via systemd timer</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Le renouvellement automatique est configuré via le timer systemd</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl status certbot.timer</span></code></pre></div>
 <h3 id="custom-renewal-script">Script de Renouvellement Personnalisé</h3>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># renew-certs.sh</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Renew Let&#39;s Encrypt</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Renouveler Let&#39;s Encrypt</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ex">certbot</span> renew <span class="at">--quiet</span></span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Reload services</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Recharger les services</span></span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> reload nginx</span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> reload pveproxy</span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Send notification</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Envoyer une notification</span></span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Certificates renewed successfully&quot;</span> <span class="kw">|</span> <span class="dt">\</span></span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="ex">mail</span> <span class="at">-s</span> <span class="st">&quot;Certificate Renewal&quot;</span> admin@example.com</span></code></pre></div>
 <h3 id="cron-job">Tâche Cron</h3>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to crontab</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajouter à crontab</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">crontab</span> <span class="at">-e</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run weekly</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Exécuter chaque semaine</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">0</span> 3 <span class="pp">*</span> <span class="pp">*</span> 0 /root/renew-certs.sh</span></code></pre></div>
 <h2 id="troubleshooting">Dépannage</h2>
-<h3 id="certificate-not-trusted">Certificat non fiable</h3>
-<p><strong>Problème :</strong> Le navigateur affiche l'avertissement « Non Sécurisé »</p>
+<h3 id="certificate-not-trusted">Certificat Non Reconnu</h3>
+<p><strong>Problème :</strong> Le navigateur affiche l'avertissement “Non sécurisé”</p>
 <p><strong>Solutions :</strong></p>
 <div class="sourceCode" id="cb12"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify certificate chain</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier la chaîne de certificats</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> s_client <span class="at">-connect</span> domain.com:443 <span class="at">-showcerts</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check CA installation (mkcert)</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l&#39;installation de la CA (mkcert)</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ex">mkcert</span> <span class="at">-CAROOT</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Reinstall CA</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Réinstaller la CA</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ex">mkcert</span> <span class="at">-uninstall</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="ex">mkcert</span> <span class="at">-install</span></span></code></pre></div>
-<h3 id="dns-challenge-fails">Le défi DNS échoue</h3>
+<h3 id="dns-challenge-fails">Échec du Challenge DNS</h3>
 <p><strong>Problème :</strong> Let’s Encrypt ne peut pas valider le domaine</p>
 <p><strong>Solutions :</strong></p>
 <div class="sourceCode" id="cb13"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify DNS propagation</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier la propagation DNS</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dig</span> _acme-challenge.yourdomain.com TXT</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check API token permissions</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Must have: Zone.DNS.Edit</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier les permissions du jeton API</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Doit avoir : Zone.DNS.Edit</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Test with verbose output</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester avec une sortie détaillée</span></span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="ex">certbot</span> certonly <span class="at">--dns-cloudflare</span> <span class="at">--dry-run</span> <span class="at">-v</span></span></code></pre></div>
 <h3 id="certificate-expired">Certificat Expiré</h3>
-<p><strong>Problème :</strong> Le service utilise un certificat expiré</p>
+<p><strong>Problème :</strong> Service utilisant un certificat expiré</p>
 <p><strong>Solutions :</strong></p>
 <div class="sourceCode" id="cb14"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check expiry date</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier la date d&#39;expiration</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> x509 <span class="at">-in</span> /path/to/cert.pem <span class="at">-noout</span> <span class="at">-dates</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Force renewal</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Forcer le renouvellement</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="ex">certbot</span> renew <span class="at">--force-renewal</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Reload service</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Recharger le service</span></span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> reload nginx</span></code></pre></div>
 <h2 id="security-best-practices">Meilleures Pratiques de Sécurité</h2>
 <h3 id="strong-configuration">1. Configuration Robuste</h3>
-<pre class="nginx"><code># Nginx SSL configuration
+<pre class="nginx"><code># Configuration SSL Nginx
 ssl_protocols TLSv1.2 TLSv1.3;
 ssl_ciphers HIGH:!aNULL:!MD5;
 ssl_prefer_server_ciphers on;
@@ -338,10 +340,10 @@ ssl_session_timeout 10m;
 add_header Strict-Transport-Security &quot;max-age=31536000&quot; always;</code></pre>
 <h3 id="certificate-monitoring">2. Surveillance des Certificats</h3>
 <div class="sourceCode" id="cb16"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Monitor expiry</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Surveiller l&#39;expiration</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> x509 <span class="at">-in</span> cert.pem <span class="at">-noout</span> <span class="at">-enddate</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Alert before expiry (30 days)</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Alerte avant expiration (30 jours)</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="va">EXPIRY</span><span class="op">=</span><span class="va">$(</span><span class="ex">openssl</span> x509 <span class="at">-enddate</span> <span class="at">-noout</span> <span class="at">-in</span> cert.pem <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span><span class="op">=</span> <span class="at">-f2</span><span class="va">)</span></span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="va">EXPIRY_EPOCH</span><span class="op">=</span><span class="va">$(</span><span class="fu">date</span> <span class="at">-d</span> <span class="st">&quot;</span><span class="va">$EXPIRY</span><span class="st">&quot;</span> +%s<span class="va">)</span></span>
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="va">NOW_EPOCH</span><span class="op">=</span><span class="va">$(</span><span class="fu">date</span> +%s<span class="va">)</span></span>
@@ -353,23 +355,28 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href=
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 <h3 id="regular-audits">3. Audits Réguliers</h3>
 <div class="sourceCode" id="cb17"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check all certificates</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier tous les certificats</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cert <span class="kw">in</span> /etc/letsencrypt/live/<span class="pp">*</span>/cert.pem<span class="kw">;</span> <span class="cf">do</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Certificate: </span><span class="va">$cert</span><span class="st">&quot;</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">openssl</span> x509 <span class="at">-in</span> <span class="st">&quot;</span><span class="va">$cert</span><span class="st">&quot;</span> <span class="at">-noout</span> <span class="at">-subject</span> <span class="at">-dates</span></span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;---&quot;</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div>
 <h2 id="quick-decision-guide">Guide de Décision Rapide</h2>
-<p><strong>Besoin d'un accès public ?</strong> → Utiliser Let’s Encrypt avec défi DNS</p>
-<p><strong>Seulement un accès interne ?</strong> → Utiliser mkcert pour une CA locale</p>
-<p><strong>Test/développement ?</strong> → Auto-signé acceptable (mais mkcert est préférable)</p>
-<p><strong>Utiliser Cloudflare ?</strong> → Certificat Cloudflare Origin ou Let’s Encrypt</p>
-<p><strong>Services multiples ?</strong> → Certificat Wildcard (<code>*.yourdomain.com</code>)</p>
+<p><strong>Besoin d'un accès public ?</strong> → Utiliser Let’s Encrypt avec le challenge DNS</p>
+<p><strong>Accès interne uniquement ?</strong> → Utiliser mkcert pour une CA locale</p>
+<p><strong>Tests/développement ?</strong> → Certificat Self-signed acceptable (mais mkcert est préférable)</p>
+<p><strong>Utilisation de Cloudflare ?</strong> → Certificat Cloudflare Origin ou Let’s Encrypt</p>
+<p><strong>Plusieurs services ?</strong> → Certificat Wildcard
+(<code>*.yourdomain.com</code>)</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Une configuration SSL/TLS appropriée est essentielle pour la sécurité du homelab. Choisissez la méthode de certificat en fonction de vos exigences d'accès et des capacités de votre infrastructure. Automatisez le renouvellement pour éviter les pannes liées à l'expiration.</p>
-<p><strong>Points Clés :</strong> - Toujours utiliser HTTPS pour les interfaces web - Automatiser le renouvellement des certificats - Surveiller l'expiration des certificats - Utiliser des configurations TLS robustes - Documenter votre infrastructure de certificats</p>
-<p><em>Pour les détails d'implémentation, consultez les articles connexes sur Nginx Proxy Manager et Cloudflare Tunnel.</em></p>
+<p>Une configuration SSL/TLS appropriée est essentielle pour la sécurité de votre homelab.
+Choisissez la méthode de certificat en fonction de vos exigences d'accès et des capacités de votre infrastructure.
+Automatisez le renouvellement pour éviter les pannes liées à l'expiration.</p>
+<p><strong>Points Clés :</strong> - Toujours utiliser HTTPS pour les interfaces web -
+Automatiser le renouvellement des certificats - Surveiller l'expiration des certificats -
+Utiliser des configurations TLS robustes - Documenter votre infrastructure de certificats</p>
+<p><em>Pour les détails d'implémentation, consultez les articles connexes sur Nginx Proxy
+Manager et Cloudflare Tunnel.</em></p>
                 </div>
 
                 <div class="article-navigation">
@@ -383,7 +390,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href=
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>OLYAHYAI</h3>
-                    <p>Pentester en Formation | Passionné de Cybersécurité</p>
+                    <p>Pentester en formation | Passionné de cybersécurité</p>
                 </div>
 
                 <div class="footer-links">
@@ -397,7 +404,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href=
                 </div>
 
                 <div class="footer-social">
-                    <h4>Connexion</h4>
+                    <h4>Connecter</h4>
                     <div class="social-links">
                         <a href="https://github.com/OLYAHYAI" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -419,7 +426,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href=
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Retour en haut">
+    <button class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
@@ -429,4 +436,4 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href=
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
-```
+---
